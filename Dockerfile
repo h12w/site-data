@@ -7,4 +7,5 @@ RUN cd $SITE        && \
     go get ./...    && \
     go install
 
+WORKDIR $SITE
 ENTRYPOINT [ "site" ]
