@@ -1,8 +1,9 @@
 FROM golang
 MAINTAINER Hǎiliàng Wáng <w@h12.me>
 
-COPY . /
 RUN go get github.com/hailiang/site/serve
-RUN go build -o site
+COPY . /site
+RUN cd /site
+RUN go build -o run
 
-ENTRYPOINT [ "site" ]
+ENTRYPOINT [ "/site/run" ]
