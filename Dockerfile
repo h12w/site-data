@@ -3,7 +3,7 @@ MAINTAINER Hǎiliàng Wáng <w@h12.me>
 
 RUN go get github.com/hailiang/site/serve
 COPY . /site
-RUN cd /site
-RUN go build -o run
+RUN cd /site && \
+    go build -o run
 
 ENTRYPOINT [ "/site/run" ]
