@@ -2,20 +2,20 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Articles on h12.me</title>
-    <link>https://h12.me/article/</link>
+    <link>http://h12.me/article/</link>
     <description>Recent content in Articles on h12.me</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <copyright>Copyright (c) 2012-2014, Hǎiliàng Wáng; all rights reserved.</copyright>
+    <copyright>Copyright (c) 2012-2015, Hǎiliàng Wáng; all rights reserved.</copyright>
     <lastBuildDate>Wed, 18 Feb 2015 17:23:24 +0000</lastBuildDate>
-    <atom:link href="https://h12.me/article/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://h12.me/article/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>A Developer&#39;s Guide to Password Management</title>
-      <link>https://h12.me/article/password_management/</link>
+      <link>http://h12.me/article/password_management/</link>
       <pubDate>Wed, 18 Feb 2015 17:23:24 +0000</pubDate>
       
-      <guid>https://h12.me/article/password_management/</guid>
+      <guid>http://h12.me/article/password_management/</guid>
       <description>
 
 &lt;p&gt;This article is intended to be a comprehensive recipe to password management,
@@ -242,10 +242,10 @@ and protect your PGP key pair and master pass phrase.&lt;/p&gt;
     
     <item>
       <title>A Brief Note on Scientific Web Surfing</title>
-      <link>https://h12.me/article/scientific_web_surfing/</link>
+      <link>http://h12.me/article/scientific_web_surfing/</link>
       <pubDate>Sat, 14 Feb 2015 09:30:55 +0000</pubDate>
       
-      <guid>https://h12.me/article/scientific_web_surfing/</guid>
+      <guid>http://h12.me/article/scientific_web_surfing/</guid>
       <description>
 
 &lt;p&gt;&lt;em&gt;Knowledge is power. Information is liberating. &amp;mdash; by Kofi Annan.&lt;/em&gt;&lt;/p&gt;
@@ -432,10 +432,10 @@ scp ignore.list root@192.168.1.1:/etc/shadowsocks/ignore.list
     
     <item>
       <title>Learning Haskell the Hard Way</title>
-      <link>https://h12.me/article/learn_haskell/</link>
+      <link>http://h12.me/article/learn_haskell/</link>
       <pubDate>Sat, 26 Jul 2014 08:12:39 +0000</pubDate>
       
-      <guid>https://h12.me/article/learn_haskell/</guid>
+      <guid>http://h12.me/article/learn_haskell/</guid>
       <description>
 
 &lt;p&gt;When I was reading the &lt;a href=&#34;http://www.haskell.org/haskellwiki/Learning_Haskell&#34;&gt;collection&lt;/a&gt; of learning resources on Haskell and tried to find a good start, I quickly realized that
@@ -1026,10 +1026,10 @@ algebraic datatype, so the pattern matching rule is different.&lt;/li&gt;
     
     <item>
       <title>How to Achieve a Perfect PageSpeed Insights Score</title>
-      <link>https://h12.me/article/pagespeed_insights/</link>
+      <link>http://h12.me/article/pagespeed_insights/</link>
       <pubDate>Thu, 24 Jul 2014 03:42:01 +0000</pubDate>
       
-      <guid>https://h12.me/article/pagespeed_insights/</guid>
+      <guid>http://h12.me/article/pagespeed_insights/</guid>
       <description>
 
 &lt;h2 id=&#34;indtroduction:919a68b12dcbd06a0bdd7b43f8ef2907&#34;&gt;Indtroduction&lt;/h2&gt;
@@ -1142,10 +1142,10 @@ PageSpeed Insights can help a lot.&lt;/p&gt;
     
     <item>
       <title>Finding Optimal Typographic Scale</title>
-      <link>https://h12.me/article/optimal_font_scale/</link>
+      <link>http://h12.me/article/optimal_font_scale/</link>
       <pubDate>Sat, 05 Jul 2014 15:03:04 +0000</pubDate>
       
-      <guid>https://h12.me/article/optimal_font_scale/</guid>
+      <guid>http://h12.me/article/optimal_font_scale/</guid>
       <description>
 
 &lt;p&gt;During the construction of this site, there are many important design decisions

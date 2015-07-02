@@ -2,20 +2,20 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Gae on h12.me</title>
-    <link>https://h12.me/tags/gae/</link>
+    <link>http://h12.me/tags/gae/</link>
     <description>Recent content in Gae on h12.me</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <copyright>Copyright (c) 2012-2014, Hǎiliàng Wáng; all rights reserved.</copyright>
+    <copyright>Copyright (c) 2012-2015, Hǎiliàng Wáng; all rights reserved.</copyright>
     <lastBuildDate>Mon, 19 Jan 2015 09:32:04 +0000</lastBuildDate>
-    <atom:link href="https://h12.me/tags/gae/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://h12.me/tags/gae/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>How to configure a custom domain name in GAE?</title>
-      <link>https://h12.me/note/gae_custom_domain/</link>
+      <link>http://h12.me/note/gae_custom_domain/</link>
       <pubDate>Mon, 19 Jan 2015 09:32:04 +0000</pubDate>
       
-      <guid>https://h12.me/note/gae_custom_domain/</guid>
+      <guid>http://h12.me/note/gae_custom_domain/</guid>
       <description>&lt;p&gt;Steps:&lt;/p&gt;
 
 &lt;ol&gt;
@@ -39,10 +39,10 @@ the custom domain in the Developer Console.&lt;/li&gt;
     
     <item>
       <title>Deploying GAE through a Proxy</title>
-      <link>https://h12.me/note/gae_deploy_via_proxy/</link>
+      <link>http://h12.me/note/gae_deploy_via_proxy/</link>
       <pubDate>Sun, 21 Dec 2014 07:58:34 +0000</pubDate>
       
-      <guid>https://h12.me/note/gae_deploy_via_proxy/</guid>
+      <guid>http://h12.me/note/gae_deploy_via_proxy/</guid>
       <description>&lt;p&gt;A quick note:&lt;/p&gt;
 
 &lt;ol&gt;

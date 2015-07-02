@@ -2,20 +2,20 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Touchpad on h12.me</title>
-    <link>https://h12.me/tags/touchpad/</link>
+    <link>http://h12.me/tags/touchpad/</link>
     <description>Recent content in Touchpad on h12.me</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <copyright>Copyright (c) 2012-2014, Hǎiliàng Wáng; all rights reserved.</copyright>
+    <copyright>Copyright (c) 2012-2015, Hǎiliàng Wáng; all rights reserved.</copyright>
     <lastBuildDate>Tue, 10 Jun 2014 23:00:24 +0000</lastBuildDate>
-    <atom:link href="https://h12.me/tags/touchpad/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://h12.me/tags/touchpad/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>How to Disable the Touchpad in Linux?</title>
-      <link>https://h12.me/note/disable_touchpad/</link>
+      <link>http://h12.me/note/disable_touchpad/</link>
       <pubDate>Tue, 10 Jun 2014 23:00:24 +0000</pubDate>
       
-      <guid>https://h12.me/note/disable_touchpad/</guid>
+      <guid>http://h12.me/note/disable_touchpad/</guid>
       <description>&lt;p&gt;Have you ever been annoyed by accidentally touching the touchpad on your laptop
 when you are typing?&lt;/p&gt;
 

@@ -2,20 +2,20 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Go Get on h12.me</title>
-    <link>https://h12.me/tags/go-get/</link>
+    <link>http://h12.me/tags/go-get/</link>
     <description>Recent content in Go Get on h12.me</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <copyright>Copyright (c) 2012-2014, Hǎiliàng Wáng; all rights reserved.</copyright>
+    <copyright>Copyright (c) 2012-2015, Hǎiliàng Wáng; all rights reserved.</copyright>
     <lastBuildDate>Wed, 06 May 2015 12:01:11 +0800</lastBuildDate>
-    <atom:link href="https://h12.me/tags/go-get/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://h12.me/tags/go-get/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>How to &#34;go get&#34; Behind a Proxy</title>
-      <link>https://h12.me/note/go_get_behind_proxy/</link>
+      <link>http://h12.me/note/go_get_behind_proxy/</link>
       <pubDate>Wed, 06 May 2015 12:01:11 +0800</pubDate>
       
-      <guid>https://h12.me/note/go_get_behind_proxy/</guid>
+      <guid>http://h12.me/note/go_get_behind_proxy/</guid>
       <description>
 
 &lt;h2 id=&#34;proxy-for-go-get:e490f2aac2393f2512d8fa1fe826c975&#34;&gt;Proxy for &amp;ldquo;go get&amp;rdquo;&lt;/h2&gt;

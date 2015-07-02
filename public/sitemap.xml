@@ -2,233 +2,228 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://h12.me/</loc>
+    <loc>http://h12.me/</loc>
     <lastmod>2015-06-30T12:43:19+08:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://h12.me/note/phonetic_notations/</loc>
+    <loc>http://h12.me/note/phonetic_notations/</loc>
     <lastmod>2015-06-30T12:43:19+08:00</lastmod>
   </url>
   
   <url>
-    <loc>https://h12.me/note/go_design/</loc>
+    <loc>http://h12.me/note/go_design/</loc>
     <lastmod>2015-06-29T16:34:59+08:00</lastmod>
   </url>
   
   <url>
-    <loc>https://h12.me/note/what_go_cannot_do/</loc>
+    <loc>http://h12.me/note/what_go_cannot_do/</loc>
     <lastmod>2015-06-16T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://h12.me/note/ebook_tools/</loc>
+    <loc>http://h12.me/note/ebook_tools/</loc>
     <lastmod>2015-06-04T14:19:38+08:00</lastmod>
   </url>
   
   <url>
-    <loc>https://h12.me/note/go_get_behind_proxy/</loc>
+    <loc>http://h12.me/note/go_get_behind_proxy/</loc>
     <lastmod>2015-05-06T12:01:11+08:00</lastmod>
   </url>
   
   <url>
-    <loc>https://h12.me/note/tips_on_ssh/</loc>
+    <loc>http://h12.me/note/tips_on_ssh/</loc>
     <lastmod>2015-04-28T10:59:02+08:00</lastmod>
   </url>
   
   <url>
-    <loc>https://h12.me/note/generate_xsd_from_xml/</loc>
+    <loc>http://h12.me/note/generate_xsd_from_xml/</loc>
     <lastmod>2015-04-23T15:41:12+08:00</lastmod>
   </url>
   
   <url>
-    <loc>https://h12.me/article/password_management/</loc>
+    <loc>http://h12.me/article/password_management/</loc>
     <lastmod>2015-02-18T17:23:24+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://h12.me/article/scientific_web_surfing/</loc>
+    <loc>http://h12.me/article/scientific_web_surfing/</loc>
     <lastmod>2015-02-14T09:30:55+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://h12.me/note/go_build_failure/</loc>
+    <loc>http://h12.me/note/go_build_failure/</loc>
     <lastmod>2015-01-29T03:55:08+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://h12.me/note/gae_custom_domain/</loc>
+    <loc>http://h12.me/note/gae_custom_domain/</loc>
     <lastmod>2015-01-19T09:32:04+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://h12.me/note/install_ca_android/</loc>
+    <loc>http://h12.me/note/install_ca_android/</loc>
     <lastmod>2015-01-17T18:13:09+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://h12.me/note/gae_deploy_via_proxy/</loc>
+    <loc>http://h12.me/note/gae_deploy_via_proxy/</loc>
     <lastmod>2014-12-21T07:58:34+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://h12.me/note/new_domain_h12/</loc>
+    <loc>http://h12.me/note/new_domain_h12/</loc>
     <lastmod>2014-12-16T09:43:40+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://h12.me/note/parser_combinator_links/</loc>
+    <loc>http://h12.me/note/parser_combinator_links/</loc>
     <lastmod>2014-08-04T15:12:55+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://h12.me/note/hyphen_res/</loc>
+    <loc>http://h12.me/note/hyphen_res/</loc>
     <lastmod>2014-07-30T08:29:57+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://h12.me/article/learn_haskell/</loc>
+    <loc>http://h12.me/article/learn_haskell/</loc>
     <lastmod>2014-07-26T08:12:39+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://h12.me/note/301_redirect/</loc>
+    <loc>http://h12.me/note/301_redirect/</loc>
     <lastmod>2014-07-25T03:39:05+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://h12.me/article/pagespeed_insights/</loc>
+    <loc>http://h12.me/article/pagespeed_insights/</loc>
     <lastmod>2014-07-24T03:42:01+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://h12.me/note/ci_overview/</loc>
+    <loc>http://h12.me/note/ci_overview/</loc>
     <lastmod>2014-07-17T14:54:26+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://h12.me/note/install_scp/</loc>
+    <loc>http://h12.me/note/install_scp/</loc>
     <lastmod>2014-07-17T03:19:18+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://h12.me/note/install_susy/</loc>
+    <loc>http://h12.me/note/install_susy/</loc>
     <lastmod>2014-07-17T02:29:57+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://h12.me/note/web_design_site/</loc>
+    <loc>http://h12.me/note/web_design_site/</loc>
     <lastmod>2014-07-10T04:04:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://h12.me/note/ugly_font/</loc>
+    <loc>http://h12.me/note/ugly_font/</loc>
     <lastmod>2014-07-09T05:42:42+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://h12.me/note/serve_static/</loc>
+    <loc>http://h12.me/note/serve_static/</loc>
     <lastmod>2014-07-06T06:39:27+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://h12.me/article/optimal_font_scale/</loc>
+    <loc>http://h12.me/article/optimal_font_scale/</loc>
     <lastmod>2014-07-05T15:03:04+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://h12.me/note/site_test/</loc>
+    <loc>http://h12.me/note/site_test/</loc>
     <lastmod>2014-07-03T06:21:58+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://h12.me/note/narrow_fonts/</loc>
+    <loc>http://h12.me/note/narrow_fonts/</loc>
     <lastmod>2014-07-01T08:39:42+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://h12.me/note/font_links/</loc>
+    <loc>http://h12.me/note/font_links/</loc>
     <lastmod>2014-06-22T14:09:45+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://h12.me/note/searchable_meta_data/</loc>
+    <loc>http://h12.me/note/searchable_meta_data/</loc>
     <lastmod>2014-06-22T12:34:02+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://h12.me/note/htc_upgrade/</loc>
+    <loc>http://h12.me/note/htc_upgrade/</loc>
     <lastmod>2014-06-11T12:24:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://h12.me/note/disable_touchpad/</loc>
+    <loc>http://h12.me/note/disable_touchpad/</loc>
     <lastmod>2014-06-10T23:00:24+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://h12.me/project/getgo/</loc>
+    <loc>http://h12.me/project/getgo/</loc>
     <lastmod>2014-06-02T01:21:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://h12.me/project/gspec/</loc>
+    <loc>http://h12.me/project/gspec/</loc>
     <lastmod>2014-05-28T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://h12.me/project/html_query/</loc>
+    <loc>http://h12.me/project/html_query/</loc>
     <lastmod>2014-01-20T01:49:08+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://h12.me/project/cwrap/</loc>
+    <loc>http://h12.me/project/cwrap/</loc>
     <lastmod>2014-01-01T01:30:04+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://h12.me/project/socks/</loc>
+    <loc>http://h12.me/project/socks/</loc>
     <lastmod>2012-08-01T23:57:54+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://h12.me/test/height_test/</loc>
+    <loc>http://h12.me/test/height_test/</loc>
     <lastmod>2014-07-10T03:06:35+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://h12.me/test/size_test/</loc>
+    <loc>http://h12.me/test/size_test/</loc>
     <lastmod>2014-07-10T03:06:35+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://h12.me/test/lorem/</loc>
+    <loc>http://h12.me/test/lorem/</loc>
     <lastmod>2014-07-05T03:37:53+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://h12.me/404/</loc>
-    <lastmod>2014-07-06T02:44:19+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://h12.me/search/</loc>
+    <loc>http://h12.me/search/</loc>
     <lastmod>2014-07-05T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://h12.me/resume/</loc>
+    <loc>http://h12.me/resume/</loc>
     <lastmod>2014-07-02T14:36:53+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://h12.me/bsd/</loc>
+    <loc>http://h12.me/bsd/</loc>
     <lastmod>2014-06-30T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://h12.me/about/</loc>
+    <loc>http://h12.me/about/</loc>
     <lastmod>2014-05-29T11:01:21+00:00</lastmod>
   </url>
   

@@ -2,20 +2,20 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Socks Protocol on h12.me</title>
-    <link>https://h12.me/tags/socks-protocol/</link>
+    <link>http://h12.me/tags/socks-protocol/</link>
     <description>Recent content in Socks Protocol on h12.me</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <copyright>Copyright (c) 2012-2014, Hǎiliàng Wáng; all rights reserved.</copyright>
+    <copyright>Copyright (c) 2012-2015, Hǎiliàng Wáng; all rights reserved.</copyright>
     <lastBuildDate>Wed, 01 Aug 2012 23:57:54 +0000</lastBuildDate>
-    <atom:link href="https://h12.me/tags/socks-protocol/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://h12.me/tags/socks-protocol/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>SOCKS: a SOCKS Proxy Package for Go</title>
-      <link>https://h12.me/project/socks/</link>
+      <link>http://h12.me/project/socks/</link>
       <pubDate>Wed, 01 Aug 2012 23:57:54 +0000</pubDate>
       
-      <guid>https://h12.me/project/socks/</guid>
+      <guid>http://h12.me/project/socks/</guid>
       <description>
 
 &lt;p&gt;&lt;a href=&#34;https://godoc.org/h12.me/socks&#34;&gt;&lt;img src=&#34;https://godoc.org/h12.me/socks?status.svg&#34; alt=&#34;GoDoc&#34; /&gt;

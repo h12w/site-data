@@ -2,20 +2,20 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Openpgp on h12.me</title>
-    <link>https://h12.me/tags/openpgp/</link>
+    <link>http://h12.me/tags/openpgp/</link>
     <description>Recent content in Openpgp on h12.me</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <copyright>Copyright (c) 2012-2014, Hǎiliàng Wáng; all rights reserved.</copyright>
+    <copyright>Copyright (c) 2012-2015, Hǎiliàng Wáng; all rights reserved.</copyright>
     <lastBuildDate>Wed, 18 Feb 2015 17:23:24 +0000</lastBuildDate>
-    <atom:link href="https://h12.me/tags/openpgp/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://h12.me/tags/openpgp/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>A Developer&#39;s Guide to Password Management</title>
-      <link>https://h12.me/article/password_management/</link>
+      <link>http://h12.me/article/password_management/</link>
       <pubDate>Wed, 18 Feb 2015 17:23:24 +0000</pubDate>
       
-      <guid>https://h12.me/article/password_management/</guid>
+      <guid>http://h12.me/article/password_management/</guid>
       <description>
 
 &lt;p&gt;This article is intended to be a comprehensive recipe to password management,

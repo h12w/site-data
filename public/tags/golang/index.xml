@@ -2,20 +2,20 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Golang on h12.me</title>
-    <link>https://h12.me/tags/golang/</link>
+    <link>http://h12.me/tags/golang/</link>
     <description>Recent content in Golang on h12.me</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <copyright>Copyright (c) 2012-2014, Hǎiliàng Wáng; all rights reserved.</copyright>
+    <copyright>Copyright (c) 2012-2015, Hǎiliàng Wáng; all rights reserved.</copyright>
     <lastBuildDate>Mon, 29 Jun 2015 16:34:59 +0800</lastBuildDate>
-    <atom:link href="https://h12.me/tags/golang/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://h12.me/tags/golang/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Notes on the Design of Go</title>
-      <link>https://h12.me/note/go_design/</link>
+      <link>http://h12.me/note/go_design/</link>
       <pubDate>Mon, 29 Jun 2015 16:34:59 +0800</pubDate>
       
-      <guid>https://h12.me/note/go_design/</guid>
+      <guid>http://h12.me/note/go_design/</guid>
       <description>
 
 &lt;h3 id=&#34;refusing-new-features:7dee003ea8460b8c44d861f1c60e603b&#34;&gt;Refusing new features&lt;/h3&gt;
@@ -105,10 +105,10 @@ e.g. v, ok := &amp;lt;-ch.&lt;/li&gt;
     
     <item>
       <title>What Go cannot Do</title>
-      <link>https://h12.me/note/what_go_cannot_do/</link>
+      <link>http://h12.me/note/what_go_cannot_do/</link>
       <pubDate>Tue, 16 Jun 2015 00:00:00 +0000</pubDate>
       
-      <guid>https://h12.me/note/what_go_cannot_do/</guid>
+      <guid>http://h12.me/note/what_go_cannot_do/</guid>
       <description>
 
 &lt;p&gt;This is a list about the corner cases that Go cannot do, and their work arounds.&lt;/p&gt;
@@ -182,10 +182,10 @@ if v.Kind() == reflect.String {
     
     <item>
       <title>How to &#34;go get&#34; Behind a Proxy</title>
-      <link>https://h12.me/note/go_get_behind_proxy/</link>
+      <link>http://h12.me/note/go_get_behind_proxy/</link>
       <pubDate>Wed, 06 May 2015 12:01:11 +0800</pubDate>
       
-      <guid>https://h12.me/note/go_get_behind_proxy/</guid>
+      <guid>http://h12.me/note/go_get_behind_proxy/</guid>
       <description>
 
 &lt;h2 id=&#34;proxy-for-go-get:e490f2aac2393f2512d8fa1fe826c975&#34;&gt;Proxy for &amp;ldquo;go get&amp;rdquo;&lt;/h2&gt;
@@ -215,10 +215,10 @@ passwd = ...
     
     <item>
       <title>Go 1.4.1 Build Failure and Solution</title>
-      <link>https://h12.me/note/go_build_failure/</link>
+      <link>http://h12.me/note/go_build_failure/</link>
       <pubDate>Thu, 29 Jan 2015 03:55:08 +0000</pubDate>
       
-      <guid>https://h12.me/note/go_build_failure/</guid>
+      <guid>http://h12.me/note/go_build_failure/</guid>
       <description>&lt;p&gt;Today I tried to build Go 1.4.1 from source but it failed with this error:&lt;/p&gt;
 
 &lt;pre&gt;&lt;code&gt;    go/src/liblink/anames9.c:6:29: fatal error: ../cmd/9l/9.out.h: No such file or directory
@@ -236,10 +236,10 @@ you would have to figure it out yourself if no one ever mentioned it (&lt;a href
     
     <item>
       <title>Deploying GAE through a Proxy</title>
-      <link>https://h12.me/note/gae_deploy_via_proxy/</link>
+      <link>http://h12.me/note/gae_deploy_via_proxy/</link>
       <pubDate>Sun, 21 Dec 2014 07:58:34 +0000</pubDate>
       
-      <guid>https://h12.me/note/gae_deploy_via_proxy/</guid>
+      <guid>http://h12.me/note/gae_deploy_via_proxy/</guid>
       <description>&lt;p&gt;A quick note:&lt;/p&gt;
 
 &lt;ol&gt;
@@ -262,10 +262,10 @@ make sure the proxy is safe before this step).&lt;/p&gt;&lt;/li&gt;
     
     <item>
       <title>A Shorter Domain Name</title>
-      <link>https://h12.me/note/new_domain_h12/</link>
+      <link>http://h12.me/note/new_domain_h12/</link>
       <pubDate>Tue, 16 Dec 2014 09:43:40 +0000</pubDate>
       
-      <guid>https://h12.me/note/new_domain_h12/</guid>
+      <guid>http://h12.me/note/new_domain_h12/</guid>
       <description>&lt;p&gt;This year, I decided not to renewal the previous domain name (hailiang.ws) last
 year, but to register a shorter one. There are two reasons:&lt;/p&gt;
 
@@ -284,10 +284,10 @@ website.&lt;/p&gt;
     
     <item>
       <title>About 301 Moved Permanently</title>
-      <link>https://h12.me/note/301_redirect/</link>
+      <link>http://h12.me/note/301_redirect/</link>
       <pubDate>Fri, 25 Jul 2014 03:39:05 +0000</pubDate>
       
-      <guid>https://h12.me/note/301_redirect/</guid>
+      <guid>http://h12.me/note/301_redirect/</guid>
       <description>&lt;p&gt;When building a website, there is one inevitable thing:
 &lt;a href=&#34;http://en.wikipedia.org/wiki/HTTP_301&#34;&gt;301 permanent redirection&lt;/a&gt;. The cases
 that have to involve 301 includes:&lt;/p&gt;
@@ -313,10 +313,10 @@ or not, so the root path needs no redirection.&lt;/p&gt;
     
     <item>
       <title>Serving Static Pages on App Engine with Go</title>
-      <link>https://h12.me/note/serve_static/</link>
+      <link>http://h12.me/note/serve_static/</link>
       <pubDate>Sun, 06 Jul 2014 06:39:27 +0000</pubDate>
       
-      <guid>https://h12.me/note/serve_static/</guid>
+      <guid>http://h12.me/note/serve_static/</guid>
       <description>&lt;p&gt;It is straightforward to serve static pages with &lt;a href=&#34;http://golang.org/pkg/net/http/&#34;&gt;Go&lt;/a&gt;
 or &lt;a href=&#34;https://developers.google.com/appengine/docs/go/config/appconfig&#34;&gt;config file&lt;/a&gt;
 on App Engine, but how to serve static pages on App Engine with Go?&lt;/p&gt;
@@ -351,10 +351,10 @@ Go again (source:
     
     <item>
       <title>Getgo: a concurrent, simple and extensible web scraping framework</title>
-      <link>https://h12.me/project/getgo/</link>
+      <link>http://h12.me/project/getgo/</link>
       <pubDate>Mon, 02 Jun 2014 01:21:00 +0000</pubDate>
       
-      <guid>https://h12.me/project/getgo/</guid>
+      <guid>http://h12.me/project/getgo/</guid>
       <description>
 
 &lt;p&gt;&lt;a href=&#34;https://godoc.org/github.com/hailiang/getgo&#34;&gt;&lt;img src=&#34;https://godoc.org/github.com/hailiang/getgo?status.png&#34; alt=&#34;GoDoc&#34; /&gt;
@@ -490,10 +490,10 @@ interface. An io.Reader is provided to be decoded by the encoding/json package.&
     
     <item>
       <title>GSpec: a productive Go test framework</title>
-      <link>https://h12.me/project/gspec/</link>
+      <link>http://h12.me/project/gspec/</link>
       <pubDate>Wed, 28 May 2014 00:00:00 +0000</pubDate>
       
-      <guid>https://h12.me/project/gspec/</guid>
+      <guid>http://h12.me/project/gspec/</guid>
       <description>
 
 &lt;p&gt;&lt;a href=&#34;https://travis-ci.org/hailiang/gspec&#34;&gt;&lt;img src=&#34;https://travis-ci.org/hailiang/gspec.png?branch=master&#34; alt=&#34;Build Status&#34; /&gt;
@@ -617,10 +617,10 @@ func TestAll(t *testing.T) {
     
     <item>
       <title>html-query: a fluent and functional approach to querying HTML DOM</title>
-      <link>https://h12.me/project/html_query/</link>
+      <link>http://h12.me/project/html_query/</link>
       <pubDate>Mon, 20 Jan 2014 01:49:08 +0000</pubDate>
       
-      <guid>https://h12.me/project/html_query/</guid>
+      <guid>http://h12.me/project/html_query/</guid>
       <description>
 
 &lt;p&gt;html-query is a Go package that provides a fluent and functional interface for
@@ -736,10 +736,10 @@ try &lt;a href=&#34;https://github.com/PuerkitoBio/goquery&#34;&gt;goquery&lt;/a
     
     <item>
       <title>Cwrap: wraps C libraries in Go</title>
-      <link>https://h12.me/project/cwrap/</link>
+      <link>http://h12.me/project/cwrap/</link>
       <pubDate>Wed, 01 Jan 2014 01:30:04 +0000</pubDate>
       
-      <guid>https://h12.me/project/cwrap/</guid>
+      <guid>http://h12.me/project/cwrap/</guid>
       <description>
 
 &lt;p&gt;Cwrap is a Go wrapper generator for C libraries.&lt;/p&gt;
@@ -839,10 +839,10 @@ try &lt;a href=&#34;https://github.com/PuerkitoBio/goquery&#34;&gt;goquery&lt;/a
     
     <item>
       <title>SOCKS: a SOCKS Proxy Package for Go</title>
-      <link>https://h12.me/project/socks/</link>
+      <link>http://h12.me/project/socks/</link>
       <pubDate>Wed, 01 Aug 2012 23:57:54 +0000</pubDate>
       
-      <guid>https://h12.me/project/socks/</guid>
+      <guid>http://h12.me/project/socks/</guid>
       <description>
 
 &lt;p&gt;&lt;a href=&#34;https://godoc.org/h12.me/socks&#34;&gt;&lt;img src=&#34;https://godoc.org/h12.me/socks?status.svg&#34; alt=&#34;GoDoc&#34; /&gt;

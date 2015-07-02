@@ -2,20 +2,20 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Html Dom on h12.me</title>
-    <link>https://h12.me/tags/html-dom/</link>
+    <link>http://h12.me/tags/html-dom/</link>
     <description>Recent content in Html Dom on h12.me</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <copyright>Copyright (c) 2012-2014, Hǎiliàng Wáng; all rights reserved.</copyright>
+    <copyright>Copyright (c) 2012-2015, Hǎiliàng Wáng; all rights reserved.</copyright>
     <lastBuildDate>Mon, 20 Jan 2014 01:49:08 +0000</lastBuildDate>
-    <atom:link href="https://h12.me/tags/html-dom/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://h12.me/tags/html-dom/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>html-query: a fluent and functional approach to querying HTML DOM</title>
-      <link>https://h12.me/project/html_query/</link>
+      <link>http://h12.me/project/html_query/</link>
       <pubDate>Mon, 20 Jan 2014 01:49:08 +0000</pubDate>
       
-      <guid>https://h12.me/project/html_query/</guid>
+      <guid>http://h12.me/project/html_query/</guid>
       <description>
 
 &lt;p&gt;html-query is a Go package that provides a fluent and functional interface for

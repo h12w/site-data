@@ -2,20 +2,20 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Redirection on h12.me</title>
-    <link>https://h12.me/tags/redirection/</link>
+    <link>http://h12.me/tags/redirection/</link>
     <description>Recent content in Redirection on h12.me</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <copyright>Copyright (c) 2012-2014, Hǎiliàng Wáng; all rights reserved.</copyright>
+    <copyright>Copyright (c) 2012-2015, Hǎiliàng Wáng; all rights reserved.</copyright>
     <lastBuildDate>Fri, 25 Jul 2014 03:39:05 +0000</lastBuildDate>
-    <atom:link href="https://h12.me/tags/redirection/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://h12.me/tags/redirection/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>About 301 Moved Permanently</title>
-      <link>https://h12.me/note/301_redirect/</link>
+      <link>http://h12.me/note/301_redirect/</link>
       <pubDate>Fri, 25 Jul 2014 03:39:05 +0000</pubDate>
       
-      <guid>https://h12.me/note/301_redirect/</guid>
+      <guid>http://h12.me/note/301_redirect/</guid>
       <description>&lt;p&gt;When building a website, there is one inevitable thing:
 &lt;a href=&#34;http://en.wikipedia.org/wiki/HTTP_301&#34;&gt;301 permanent redirection&lt;/a&gt;. The cases
 that have to involve 301 includes:&lt;/p&gt;

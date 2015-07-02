@@ -2,20 +2,20 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Compass on h12.me</title>
-    <link>https://h12.me/tags/compass/</link>
+    <link>http://h12.me/tags/compass/</link>
     <description>Recent content in Compass on h12.me</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <copyright>Copyright (c) 2012-2014, Hǎiliàng Wáng; all rights reserved.</copyright>
+    <copyright>Copyright (c) 2012-2015, Hǎiliàng Wáng; all rights reserved.</copyright>
     <lastBuildDate>Thu, 17 Jul 2014 02:29:57 +0000</lastBuildDate>
-    <atom:link href="https://h12.me/tags/compass/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://h12.me/tags/compass/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Installing Susy</title>
-      <link>https://h12.me/note/install_susy/</link>
+      <link>http://h12.me/note/install_susy/</link>
       <pubDate>Thu, 17 Jul 2014 02:29:57 +0000</pubDate>
       
-      <guid>https://h12.me/note/install_susy/</guid>
+      <guid>http://h12.me/note/install_susy/</guid>
       <description>&lt;p&gt;The script:&lt;/p&gt;
 
 &lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;sudo apt-get install ruby

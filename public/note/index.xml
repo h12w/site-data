@@ -2,20 +2,20 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Notes on h12.me</title>
-    <link>https://h12.me/note/</link>
+    <link>http://h12.me/note/</link>
     <description>Recent content in Notes on h12.me</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <copyright>Copyright (c) 2012-2014, Hǎiliàng Wáng; all rights reserved.</copyright>
+    <copyright>Copyright (c) 2012-2015, Hǎiliàng Wáng; all rights reserved.</copyright>
     <lastBuildDate>Tue, 30 Jun 2015 12:43:19 +0800</lastBuildDate>
-    <atom:link href="https://h12.me/note/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://h12.me/note/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Phonetic Notations</title>
-      <link>https://h12.me/note/phonetic_notations/</link>
+      <link>http://h12.me/note/phonetic_notations/</link>
       <pubDate>Tue, 30 Jun 2015 12:43:19 +0800</pubDate>
       
-      <guid>https://h12.me/note/phonetic_notations/</guid>
+      <guid>http://h12.me/note/phonetic_notations/</guid>
       <description>
 
 &lt;h2 id=&#34;google-dictionary:f89be48f7c6192a3d480a930835745a7&#34;&gt;Google Dictionary&lt;/h2&gt;
@@ -30,10 +30,10 @@ cat, pay, care, father, arm, let, see, here, city, my, pot, no, caught, war, for
     
     <item>
       <title>Notes on the Design of Go</title>
-      <link>https://h12.me/note/go_design/</link>
+      <link>http://h12.me/note/go_design/</link>
       <pubDate>Mon, 29 Jun 2015 16:34:59 +0800</pubDate>
       
-      <guid>https://h12.me/note/go_design/</guid>
+      <guid>http://h12.me/note/go_design/</guid>
       <description>
 
 &lt;h3 id=&#34;refusing-new-features:7dee003ea8460b8c44d861f1c60e603b&#34;&gt;Refusing new features&lt;/h3&gt;
@@ -123,10 +123,10 @@ e.g. v, ok := &amp;lt;-ch.&lt;/li&gt;
     
     <item>
       <title>What Go cannot Do</title>
-      <link>https://h12.me/note/what_go_cannot_do/</link>
+      <link>http://h12.me/note/what_go_cannot_do/</link>
       <pubDate>Tue, 16 Jun 2015 00:00:00 +0000</pubDate>
       
-      <guid>https://h12.me/note/what_go_cannot_do/</guid>
+      <guid>http://h12.me/note/what_go_cannot_do/</guid>
       <description>
 
 &lt;p&gt;This is a list about the corner cases that Go cannot do, and their work arounds.&lt;/p&gt;
@@ -200,10 +200,10 @@ if v.Kind() == reflect.String {
     
     <item>
       <title>Ebook Manipulation Tools</title>
-      <link>https://h12.me/note/ebook_tools/</link>
+      <link>http://h12.me/note/ebook_tools/</link>
       <pubDate>Thu, 04 Jun 2015 14:19:38 +0800</pubDate>
       
-      <guid>https://h12.me/note/ebook_tools/</guid>
+      <guid>http://h12.me/note/ebook_tools/</guid>
       <description>&lt;ul&gt;
 &lt;li&gt;Ebook manager: &lt;a href=&#34;http://calibre-ebook.com/&#34;&gt;Calibre&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;Kindle PDF optimizer: &lt;a href=&#34;http://www.willus.com/k2pdfopt/&#34;&gt;k2pdfopt&lt;/a&gt;&lt;/li&gt;
@@ -215,10 +215,10 @@ if v.Kind() == reflect.String {
     
     <item>
       <title>How to &#34;go get&#34; Behind a Proxy</title>
-      <link>https://h12.me/note/go_get_behind_proxy/</link>
+      <link>http://h12.me/note/go_get_behind_proxy/</link>
       <pubDate>Wed, 06 May 2015 12:01:11 +0800</pubDate>
       
-      <guid>https://h12.me/note/go_get_behind_proxy/</guid>
+      <guid>http://h12.me/note/go_get_behind_proxy/</guid>
       <description>
 
 &lt;h2 id=&#34;proxy-for-go-get:e490f2aac2393f2512d8fa1fe826c975&#34;&gt;Proxy for &amp;ldquo;go get&amp;rdquo;&lt;/h2&gt;
@@ -248,10 +248,10 @@ passwd = ...
     
     <item>
       <title>Tips on SSH</title>
-      <link>https://h12.me/note/tips_on_ssh/</link>
+      <link>http://h12.me/note/tips_on_ssh/</link>
       <pubDate>Tue, 28 Apr 2015 10:59:02 +0800</pubDate>
       
-      <guid>https://h12.me/note/tips_on_ssh/</guid>
+      <guid>http://h12.me/note/tips_on_ssh/</guid>
       <description>
 
 &lt;h2 id=&#34;generate-ssh-keys:1f1c4e8b5b8b665e71e6a80f55c5a955&#34;&gt;Generate SSH keys&lt;/h2&gt;
@@ -268,10 +268,10 @@ passwd = ...
     
     <item>
       <title>How to Generate XSD Schema from XML?</title>
-      <link>https://h12.me/note/generate_xsd_from_xml/</link>
+      <link>http://h12.me/note/generate_xsd_from_xml/</link>
       <pubDate>Thu, 23 Apr 2015 15:41:12 +0800</pubDate>
       
-      <guid>https://h12.me/note/generate_xsd_from_xml/</guid>
+      <guid>http://h12.me/note/generate_xsd_from_xml/</guid>
       <description>&lt;p&gt;&lt;a href=&#34;http://archive.apache.org/dist/xmlbeans/binaries&#34;&gt;Apache XMLBeans&lt;/a&gt; is an old tool but still functioning. Download and uncompress the latest binary release, then run inst2xsd under bin folder (needs JDK).&lt;/p&gt;
 
 &lt;pre&gt;&lt;code&gt;inst2xsd xxx.xml
@@ -281,10 +281,10 @@ passwd = ...
     
     <item>
       <title>Go 1.4.1 Build Failure and Solution</title>
-      <link>https://h12.me/note/go_build_failure/</link>
+      <link>http://h12.me/note/go_build_failure/</link>
       <pubDate>Thu, 29 Jan 2015 03:55:08 +0000</pubDate>
       
-      <guid>https://h12.me/note/go_build_failure/</guid>
+      <guid>http://h12.me/note/go_build_failure/</guid>
       <description>&lt;p&gt;Today I tried to build Go 1.4.1 from source but it failed with this error:&lt;/p&gt;
 
 &lt;pre&gt;&lt;code&gt;    go/src/liblink/anames9.c:6:29: fatal error: ../cmd/9l/9.out.h: No such file or directory
@@ -302,10 +302,10 @@ you would have to figure it out yourself if no one ever mentioned it (&lt;a href
     
     <item>
       <title>How to configure a custom domain name in GAE?</title>
-      <link>https://h12.me/note/gae_custom_domain/</link>
+      <link>http://h12.me/note/gae_custom_domain/</link>
       <pubDate>Mon, 19 Jan 2015 09:32:04 +0000</pubDate>
       
-      <guid>https://h12.me/note/gae_custom_domain/</guid>
+      <guid>http://h12.me/note/gae_custom_domain/</guid>
       <description>&lt;p&gt;Steps:&lt;/p&gt;
 
 &lt;ol&gt;
@@ -329,20 +329,20 @@ the custom domain in the Developer Console.&lt;/li&gt;
     
     <item>
       <title>How to install a self-signed CA Certificate to Android 4.4</title>
-      <link>https://h12.me/note/install_ca_android/</link>
+      <link>http://h12.me/note/install_ca_android/</link>
       <pubDate>Sat, 17 Jan 2015 18:13:09 +0000</pubDate>
       
-      <guid>https://h12.me/note/install_ca_android/</guid>
+      <guid>http://h12.me/note/install_ca_android/</guid>
       <description>&lt;p&gt;See this blog &lt;a href=&#34;https://samhobbs.co.uk/2013/12/remove-network-may-be-monitored-by-an-unknown-third-party-in-android-4-4-kitkat&#34;&gt;&lt;em&gt;Remove &amp;ldquo;Network May Be Monitored by an Unknown Third Party&amp;rdquo; in Android 4.4 KitKat&lt;/em&gt;&lt;/a&gt;.&lt;/p&gt;
 </description>
     </item>
     
     <item>
       <title>Deploying GAE through a Proxy</title>
-      <link>https://h12.me/note/gae_deploy_via_proxy/</link>
+      <link>http://h12.me/note/gae_deploy_via_proxy/</link>
       <pubDate>Sun, 21 Dec 2014 07:58:34 +0000</pubDate>
       
-      <guid>https://h12.me/note/gae_deploy_via_proxy/</guid>
+      <guid>http://h12.me/note/gae_deploy_via_proxy/</guid>
       <description>&lt;p&gt;A quick note:&lt;/p&gt;
 
 &lt;ol&gt;
@@ -365,10 +365,10 @@ make sure the proxy is safe before this step).&lt;/p&gt;&lt;/li&gt;
     
     <item>
       <title>A Shorter Domain Name</title>
-      <link>https://h12.me/note/new_domain_h12/</link>
+      <link>http://h12.me/note/new_domain_h12/</link>
       <pubDate>Tue, 16 Dec 2014 09:43:40 +0000</pubDate>
       
-      <guid>https://h12.me/note/new_domain_h12/</guid>
+      <guid>http://h12.me/note/new_domain_h12/</guid>
       <description>&lt;p&gt;This year, I decided not to renewal the previous domain name (hailiang.ws) last
 year, but to register a shorter one. There are two reasons:&lt;/p&gt;
 
@@ -387,10 +387,10 @@ website.&lt;/p&gt;
     
     <item>
       <title>Learning Resources on Parser Combinator</title>
-      <link>https://h12.me/note/parser_combinator_links/</link>
+      <link>http://h12.me/note/parser_combinator_links/</link>
       <pubDate>Mon, 04 Aug 2014 15:12:55 +0000</pubDate>
       
-      <guid>https://h12.me/note/parser_combinator_links/</guid>
+      <guid>http://h12.me/note/parser_combinator_links/</guid>
       <description>&lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;http://eprints.nottingham.ac.uk/237/&#34;&gt;&lt;em&gt;Monadic Parser Combinators&lt;/em&gt;&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;http://legacy.cs.uu.nl/daan/pubs.html#parsec&#34;&gt;&lt;em&gt;Parsec: Direct Style Monadic Parser Combinators for the Real World&lt;/em&gt;&lt;/a&gt;&lt;/li&gt;
@@ -401,10 +401,10 @@ website.&lt;/p&gt;
     
     <item>
       <title>Resources on Offline Hyphenation</title>
-      <link>https://h12.me/note/hyphen_res/</link>
+      <link>http://h12.me/note/hyphen_res/</link>
       <pubDate>Wed, 30 Jul 2014 08:29:57 +0000</pubDate>
       
-      <guid>https://h12.me/note/hyphen_res/</guid>
+      <guid>http://h12.me/note/hyphen_res/</guid>
       <description>&lt;p&gt;&lt;a href=&#34;http://caniuse.com/css-hyphens&#34;&gt;CSS hyphenation&lt;/a&gt; is supported by latest version
 of Firefox, Safari &amp;amp; IE. However, Chrome does not support it. Though
 &lt;a href=&#34;https://code.google.com/p/hyphenator/&#34;&gt;Hyphenator.js&lt;/a&gt; can solve this problem,
@@ -427,10 +427,10 @@ dictionary file&lt;/li&gt;
     
     <item>
       <title>About 301 Moved Permanently</title>
-      <link>https://h12.me/note/301_redirect/</link>
+      <link>http://h12.me/note/301_redirect/</link>
       <pubDate>Fri, 25 Jul 2014 03:39:05 +0000</pubDate>
       
-      <guid>https://h12.me/note/301_redirect/</guid>
+      <guid>http://h12.me/note/301_redirect/</guid>
       <description>&lt;p&gt;When building a website, there is one inevitable thing:
 &lt;a href=&#34;http://en.wikipedia.org/wiki/HTTP_301&#34;&gt;301 permanent redirection&lt;/a&gt;. The cases
 that have to involve 301 includes:&lt;/p&gt;

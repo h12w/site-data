@@ -2,20 +2,20 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Design on h12.me</title>
-    <link>https://h12.me/tags/design/</link>
+    <link>http://h12.me/tags/design/</link>
     <description>Recent content in Design on h12.me</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <copyright>Copyright (c) 2012-2014, Hǎiliàng Wáng; all rights reserved.</copyright>
+    <copyright>Copyright (c) 2012-2015, Hǎiliàng Wáng; all rights reserved.</copyright>
     <lastBuildDate>Mon, 29 Jun 2015 16:34:59 +0800</lastBuildDate>
-    <atom:link href="https://h12.me/tags/design/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://h12.me/tags/design/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Notes on the Design of Go</title>
-      <link>https://h12.me/note/go_design/</link>
+      <link>http://h12.me/note/go_design/</link>
       <pubDate>Mon, 29 Jun 2015 16:34:59 +0800</pubDate>
       
-      <guid>https://h12.me/note/go_design/</guid>
+      <guid>http://h12.me/note/go_design/</guid>
       <description>
 
 &lt;h3 id=&#34;refusing-new-features:7dee003ea8460b8c44d861f1c60e603b&#34;&gt;Refusing new features&lt;/h3&gt;
@@ -105,10 +105,10 @@ e.g. v, ok := &amp;lt;-ch.&lt;/li&gt;
     
     <item>
       <title>A List of URLs about Web Design</title>
-      <link>https://h12.me/note/web_design_site/</link>
+      <link>http://h12.me/note/web_design_site/</link>
       <pubDate>Thu, 10 Jul 2014 04:04:00 +0000</pubDate>
       
-      <guid>https://h12.me/note/web_design_site/</guid>
+      <guid>http://h12.me/note/web_design_site/</guid>
       <description>&lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;http://webtypography.net/&#34;&gt;The Elements of Typographic Style Applied to the Web&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;http://www.smashingmagazine.com/&#34;&gt;Smashing Magazine&lt;/a&gt;&lt;/li&gt;

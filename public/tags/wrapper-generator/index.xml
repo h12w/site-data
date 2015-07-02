@@ -2,20 +2,20 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Wrapper Generator on h12.me</title>
-    <link>https://h12.me/tags/wrapper-generator/</link>
+    <link>http://h12.me/tags/wrapper-generator/</link>
     <description>Recent content in Wrapper Generator on h12.me</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <copyright>Copyright (c) 2012-2014, Hǎiliàng Wáng; all rights reserved.</copyright>
+    <copyright>Copyright (c) 2012-2015, Hǎiliàng Wáng; all rights reserved.</copyright>
     <lastBuildDate>Wed, 01 Jan 2014 01:30:04 +0000</lastBuildDate>
-    <atom:link href="https://h12.me/tags/wrapper-generator/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://h12.me/tags/wrapper-generator/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Cwrap: wraps C libraries in Go</title>
-      <link>https://h12.me/project/cwrap/</link>
+      <link>http://h12.me/project/cwrap/</link>
       <pubDate>Wed, 01 Jan 2014 01:30:04 +0000</pubDate>
       
-      <guid>https://h12.me/project/cwrap/</guid>
+      <guid>http://h12.me/project/cwrap/</guid>
       <description>
 
 &lt;p&gt;Cwrap is a Go wrapper generator for C libraries.&lt;/p&gt;

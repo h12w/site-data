@@ -2,20 +2,20 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Testing on h12.me</title>
-    <link>https://h12.me/tags/testing/</link>
+    <link>http://h12.me/tags/testing/</link>
     <description>Recent content in Testing on h12.me</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <copyright>Copyright (c) 2012-2014, Hǎiliàng Wáng; all rights reserved.</copyright>
+    <copyright>Copyright (c) 2012-2015, Hǎiliàng Wáng; all rights reserved.</copyright>
     <lastBuildDate>Thu, 03 Jul 2014 06:21:58 +0000</lastBuildDate>
-    <atom:link href="https://h12.me/tags/testing/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://h12.me/tags/testing/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>A List of Website Testing Services</title>
-      <link>https://h12.me/note/site_test/</link>
+      <link>http://h12.me/note/site_test/</link>
       <pubDate>Thu, 03 Jul 2014 06:21:58 +0000</pubDate>
       
-      <guid>https://h12.me/note/site_test/</guid>
+      <guid>http://h12.me/note/site_test/</guid>
       <description>&lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;http://validator.w3.org/&#34;&gt;The W3C Markup Validation Service&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;http://developers.google.com/speed/pagespeed/insights/&#34;&gt;Google PageSpeed Insights&lt;/a&gt;&lt;/li&gt;

@@ -2,20 +2,20 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tests on h12.me</title>
-    <link>https://h12.me/test/</link>
+    <link>http://h12.me/test/</link>
     <description>Recent content in Tests on h12.me</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <copyright>Copyright (c) 2012-2014, Hǎiliàng Wáng; all rights reserved.</copyright>
+    <copyright>Copyright (c) 2012-2015, Hǎiliàng Wáng; all rights reserved.</copyright>
     <lastBuildDate>Thu, 10 Jul 2014 03:06:35 +0000</lastBuildDate>
-    <atom:link href="https://h12.me/test/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://h12.me/test/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Font size test for body copy</title>
-      <link>https://h12.me/test/size_test/</link>
+      <link>http://h12.me/test/size_test/</link>
       <pubDate>Thu, 10 Jul 2014 03:06:35 +0000</pubDate>
       
-      <guid>https://h12.me/test/size_test/</guid>
+      <guid>http://h12.me/test/size_test/</guid>
       <description>
 
 &lt;h3 id=&#34;24px:e3fc5624ad76fb2d25cbcb9b122d6b22&#34;&gt;24px&lt;/h3&gt;
@@ -74,10 +74,10 @@
     
     <item>
       <title>Line height test for body copy</title>
-      <link>https://h12.me/test/height_test/</link>
+      <link>http://h12.me/test/height_test/</link>
       <pubDate>Thu, 10 Jul 2014 03:06:35 +0000</pubDate>
       
-      <guid>https://h12.me/test/height_test/</guid>
+      <guid>http://h12.me/test/height_test/</guid>
       <description>
 
 &lt;h3 id=&#34;1-7:d32dd3b582c271f323b4baadc2adf037&#34;&gt;1.7&lt;/h3&gt;
@@ -128,10 +128,10 @@
     
     <item>
       <title>Lorem ipsum</title>
-      <link>https://h12.me/test/lorem/</link>
+      <link>http://h12.me/test/lorem/</link>
       <pubDate>Sat, 05 Jul 2014 03:37:53 +0000</pubDate>
       
-      <guid>https://h12.me/test/lorem/</guid>
+      <guid>http://h12.me/test/lorem/</guid>
       <description>
 
 &lt;p&gt;Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim.&lt;/p&gt;

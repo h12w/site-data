@@ -2,20 +2,20 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Scraping on h12.me</title>
-    <link>https://h12.me/tags/scraping/</link>
+    <link>http://h12.me/tags/scraping/</link>
     <description>Recent content in Scraping on h12.me</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <copyright>Copyright (c) 2012-2014, Hǎiliàng Wáng; all rights reserved.</copyright>
+    <copyright>Copyright (c) 2012-2015, Hǎiliàng Wáng; all rights reserved.</copyright>
     <lastBuildDate>Mon, 02 Jun 2014 01:21:00 +0000</lastBuildDate>
-    <atom:link href="https://h12.me/tags/scraping/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://h12.me/tags/scraping/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Getgo: a concurrent, simple and extensible web scraping framework</title>
-      <link>https://h12.me/project/getgo/</link>
+      <link>http://h12.me/project/getgo/</link>
       <pubDate>Mon, 02 Jun 2014 01:21:00 +0000</pubDate>
       
-      <guid>https://h12.me/project/getgo/</guid>
+      <guid>http://h12.me/project/getgo/</guid>
       <description>
 
 &lt;p&gt;&lt;a href=&#34;https://godoc.org/github.com/hailiang/getgo&#34;&gt;&lt;img src=&#34;https://godoc.org/github.com/hailiang/getgo?status.png&#34; alt=&#34;GoDoc&#34; /&gt;

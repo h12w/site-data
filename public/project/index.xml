@@ -2,20 +2,20 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Projects on h12.me</title>
-    <link>https://h12.me/project/</link>
+    <link>http://h12.me/project/</link>
     <description>Recent content in Projects on h12.me</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <copyright>Copyright (c) 2012-2014, Hǎiliàng Wáng; all rights reserved.</copyright>
+    <copyright>Copyright (c) 2012-2015, Hǎiliàng Wáng; all rights reserved.</copyright>
     <lastBuildDate>Mon, 02 Jun 2014 01:21:00 +0000</lastBuildDate>
-    <atom:link href="https://h12.me/project/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://h12.me/project/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Getgo: a concurrent, simple and extensible web scraping framework</title>
-      <link>https://h12.me/project/getgo/</link>
+      <link>http://h12.me/project/getgo/</link>
       <pubDate>Mon, 02 Jun 2014 01:21:00 +0000</pubDate>
       
-      <guid>https://h12.me/project/getgo/</guid>
+      <guid>http://h12.me/project/getgo/</guid>
       <description>
 
 &lt;p&gt;&lt;a href=&#34;https://godoc.org/github.com/hailiang/getgo&#34;&gt;&lt;img src=&#34;https://godoc.org/github.com/hailiang/getgo?status.png&#34; alt=&#34;GoDoc&#34; /&gt;
@@ -151,10 +151,10 @@ interface. An io.Reader is provided to be decoded by the encoding/json package.&
     
     <item>
       <title>GSpec: a productive Go test framework</title>
-      <link>https://h12.me/project/gspec/</link>
+      <link>http://h12.me/project/gspec/</link>
       <pubDate>Wed, 28 May 2014 00:00:00 +0000</pubDate>
       
-      <guid>https://h12.me/project/gspec/</guid>
+      <guid>http://h12.me/project/gspec/</guid>
       <description>
 
 &lt;p&gt;&lt;a href=&#34;https://travis-ci.org/hailiang/gspec&#34;&gt;&lt;img src=&#34;https://travis-ci.org/hailiang/gspec.png?branch=master&#34; alt=&#34;Build Status&#34; /&gt;
@@ -278,10 +278,10 @@ func TestAll(t *testing.T) {
     
     <item>
       <title>html-query: a fluent and functional approach to querying HTML DOM</title>
-      <link>https://h12.me/project/html_query/</link>
+      <link>http://h12.me/project/html_query/</link>
       <pubDate>Mon, 20 Jan 2014 01:49:08 +0000</pubDate>
       
-      <guid>https://h12.me/project/html_query/</guid>
+      <guid>http://h12.me/project/html_query/</guid>
       <description>
 
 &lt;p&gt;html-query is a Go package that provides a fluent and functional interface for
@@ -397,10 +397,10 @@ try &lt;a href=&#34;https://github.com/PuerkitoBio/goquery&#34;&gt;goquery&lt;/a
     
     <item>
       <title>Cwrap: wraps C libraries in Go</title>
-      <link>https://h12.me/project/cwrap/</link>
+      <link>http://h12.me/project/cwrap/</link>
       <pubDate>Wed, 01 Jan 2014 01:30:04 +0000</pubDate>
       
-      <guid>https://h12.me/project/cwrap/</guid>
+      <guid>http://h12.me/project/cwrap/</guid>
       <description>
 
 &lt;p&gt;Cwrap is a Go wrapper generator for C libraries.&lt;/p&gt;
@@ -500,10 +500,10 @@ try &lt;a href=&#34;https://github.com/PuerkitoBio/goquery&#34;&gt;goquery&lt;/a
     
     <item>
       <title>SOCKS: a SOCKS Proxy Package for Go</title>
-      <link>https://h12.me/project/socks/</link>
+      <link>http://h12.me/project/socks/</link>
       <pubDate>Wed, 01 Aug 2012 23:57:54 +0000</pubDate>
       
-      <guid>https://h12.me/project/socks/</guid>
+      <guid>http://h12.me/project/socks/</guid>
       <description>
 
 &lt;p&gt;&lt;a href=&#34;https://godoc.org/h12.me/socks&#34;&gt;&lt;img src=&#34;https://godoc.org/h12.me/socks?status.svg&#34; alt=&#34;GoDoc&#34; /&gt;

@@ -2,20 +2,20 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Ssh on h12.me</title>
-    <link>https://h12.me/tags/ssh/</link>
+    <link>http://h12.me/tags/ssh/</link>
     <description>Recent content in Ssh on h12.me</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <copyright>Copyright (c) 2012-2014, Hǎiliàng Wáng; all rights reserved.</copyright>
+    <copyright>Copyright (c) 2012-2015, Hǎiliàng Wáng; all rights reserved.</copyright>
     <lastBuildDate>Tue, 28 Apr 2015 10:59:02 +0800</lastBuildDate>
-    <atom:link href="https://h12.me/tags/ssh/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://h12.me/tags/ssh/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Tips on SSH</title>
-      <link>https://h12.me/note/tips_on_ssh/</link>
+      <link>http://h12.me/note/tips_on_ssh/</link>
       <pubDate>Tue, 28 Apr 2015 10:59:02 +0800</pubDate>
       
-      <guid>https://h12.me/note/tips_on_ssh/</guid>
+      <guid>http://h12.me/note/tips_on_ssh/</guid>
       <description>
 
 &lt;h2 id=&#34;generate-ssh-keys:1f1c4e8b5b8b665e71e6a80f55c5a955&#34;&gt;Generate SSH keys&lt;/h2&gt;

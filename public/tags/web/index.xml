@@ -2,20 +2,20 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Web on h12.me</title>
-    <link>https://h12.me/tags/web/</link>
+    <link>http://h12.me/tags/web/</link>
     <description>Recent content in Web on h12.me</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <copyright>Copyright (c) 2012-2014, Hǎiliàng Wáng; all rights reserved.</copyright>
+    <copyright>Copyright (c) 2012-2015, Hǎiliàng Wáng; all rights reserved.</copyright>
     <lastBuildDate>Sat, 14 Feb 2015 09:30:55 +0000</lastBuildDate>
-    <atom:link href="https://h12.me/tags/web/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://h12.me/tags/web/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>A Brief Note on Scientific Web Surfing</title>
-      <link>https://h12.me/article/scientific_web_surfing/</link>
+      <link>http://h12.me/article/scientific_web_surfing/</link>
       <pubDate>Sat, 14 Feb 2015 09:30:55 +0000</pubDate>
       
-      <guid>https://h12.me/article/scientific_web_surfing/</guid>
+      <guid>http://h12.me/article/scientific_web_surfing/</guid>
       <description>
 
 &lt;p&gt;&lt;em&gt;Knowledge is power. Information is liberating. &amp;mdash; by Kofi Annan.&lt;/em&gt;&lt;/p&gt;
@@ -202,10 +202,10 @@ scp ignore.list root@192.168.1.1:/etc/shadowsocks/ignore.list
     
     <item>
       <title>Deploying GAE through a Proxy</title>
-      <link>https://h12.me/note/gae_deploy_via_proxy/</link>
+      <link>http://h12.me/note/gae_deploy_via_proxy/</link>
       <pubDate>Sun, 21 Dec 2014 07:58:34 +0000</pubDate>
       
-      <guid>https://h12.me/note/gae_deploy_via_proxy/</guid>
+      <guid>http://h12.me/note/gae_deploy_via_proxy/</guid>
       <description>&lt;p&gt;A quick note:&lt;/p&gt;
 
 &lt;ol&gt;
@@ -228,10 +228,10 @@ make sure the proxy is safe before this step).&lt;/p&gt;&lt;/li&gt;
     
     <item>
       <title>A Shorter Domain Name</title>
-      <link>https://h12.me/note/new_domain_h12/</link>
+      <link>http://h12.me/note/new_domain_h12/</link>
       <pubDate>Tue, 16 Dec 2014 09:43:40 +0000</pubDate>
       
-      <guid>https://h12.me/note/new_domain_h12/</guid>
+      <guid>http://h12.me/note/new_domain_h12/</guid>
       <description>&lt;p&gt;This year, I decided not to renewal the previous domain name (hailiang.ws) last
 year, but to register a shorter one. There are two reasons:&lt;/p&gt;
 
@@ -250,10 +250,10 @@ website.&lt;/p&gt;
     
     <item>
       <title>Resources on Offline Hyphenation</title>
-      <link>https://h12.me/note/hyphen_res/</link>
+      <link>http://h12.me/note/hyphen_res/</link>
       <pubDate>Wed, 30 Jul 2014 08:29:57 +0000</pubDate>
       
-      <guid>https://h12.me/note/hyphen_res/</guid>
+      <guid>http://h12.me/note/hyphen_res/</guid>
       <description>&lt;p&gt;&lt;a href=&#34;http://caniuse.com/css-hyphens&#34;&gt;CSS hyphenation&lt;/a&gt; is supported by latest version
 of Firefox, Safari &amp;amp; IE. However, Chrome does not support it. Though
 &lt;a href=&#34;https://code.google.com/p/hyphenator/&#34;&gt;Hyphenator.js&lt;/a&gt; can solve this problem,
@@ -276,10 +276,10 @@ dictionary file&lt;/li&gt;
     
     <item>
       <title>About 301 Moved Permanently</title>
-      <link>https://h12.me/note/301_redirect/</link>
+      <link>http://h12.me/note/301_redirect/</link>
       <pubDate>Fri, 25 Jul 2014 03:39:05 +0000</pubDate>
       
-      <guid>https://h12.me/note/301_redirect/</guid>
+      <guid>http://h12.me/note/301_redirect/</guid>
       <description>&lt;p&gt;When building a website, there is one inevitable thing:
 &lt;a href=&#34;http://en.wikipedia.org/wiki/HTTP_301&#34;&gt;301 permanent redirection&lt;/a&gt;. The cases
 that have to involve 301 includes:&lt;/p&gt;
@@ -305,10 +305,10 @@ or not, so the root path needs no redirection.&lt;/p&gt;
     
     <item>
       <title>How to Achieve a Perfect PageSpeed Insights Score</title>
-      <link>https://h12.me/article/pagespeed_insights/</link>
+      <link>http://h12.me/article/pagespeed_insights/</link>
       <pubDate>Thu, 24 Jul 2014 03:42:01 +0000</pubDate>
       
-      <guid>https://h12.me/article/pagespeed_insights/</guid>
+      <guid>http://h12.me/article/pagespeed_insights/</guid>
       <description>
 
 &lt;h2 id=&#34;indtroduction:919a68b12dcbd06a0bdd7b43f8ef2907&#34;&gt;Indtroduction&lt;/h2&gt;
@@ -421,10 +421,10 @@ PageSpeed Insights can help a lot.&lt;/p&gt;
     
     <item>
       <title>Installing Susy</title>
-      <link>https://h12.me/note/install_susy/</link>
+      <link>http://h12.me/note/install_susy/</link>
       <pubDate>Thu, 17 Jul 2014 02:29:57 +0000</pubDate>
       
-      <guid>https://h12.me/note/install_susy/</guid>
+      <guid>http://h12.me/note/install_susy/</guid>
       <description>&lt;p&gt;The script:&lt;/p&gt;
 
 &lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;sudo apt-get install ruby
@@ -449,10 +449,10 @@ your location might help.&lt;/li&gt;
     
     <item>
       <title>A List of URLs about Web Design</title>
-      <link>https://h12.me/note/web_design_site/</link>
+      <link>http://h12.me/note/web_design_site/</link>
       <pubDate>Thu, 10 Jul 2014 04:04:00 +0000</pubDate>
       
-      <guid>https://h12.me/note/web_design_site/</guid>
+      <guid>http://h12.me/note/web_design_site/</guid>
       <description>&lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;http://webtypography.net/&#34;&gt;The Elements of Typographic Style Applied to the Web&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;http://www.smashingmagazine.com/&#34;&gt;Smashing Magazine&lt;/a&gt;&lt;/li&gt;
@@ -464,10 +464,10 @@ your location might help.&lt;/li&gt;
     
     <item>
       <title>Why My Web Font Looks Ugly on IE?</title>
-      <link>https://h12.me/note/ugly_font/</link>
+      <link>http://h12.me/note/ugly_font/</link>
       <pubDate>Wed, 09 Jul 2014 05:42:42 +0000</pubDate>
       
-      <guid>https://h12.me/note/ugly_font/</guid>
+      <guid>http://h12.me/note/ugly_font/</guid>
       <description>&lt;p&gt;Windows needs hand-tuned hinting which is missing in many web fonts. To solve this
 problem, there is a tool called &lt;a href=&#34;http://www.freetype.org/ttfautohint/index.html&#34;&gt;ttfautohint&lt;/a&gt;
 which can automatically add hinting to font files.&lt;/p&gt;
@@ -479,10 +479,10 @@ and an online tool called &lt;a href=&#34;http://fontie.flowyapps.com/&#34;&gt;F
     
     <item>
       <title>Serving Static Pages on App Engine with Go</title>
-      <link>https://h12.me/note/serve_static/</link>
+      <link>http://h12.me/note/serve_static/</link>
       <pubDate>Sun, 06 Jul 2014 06:39:27 +0000</pubDate>
       
-      <guid>https://h12.me/note/serve_static/</guid>
+      <guid>http://h12.me/note/serve_static/</guid>
       <description>&lt;p&gt;It is straightforward to serve static pages with &lt;a href=&#34;http://golang.org/pkg/net/http/&#34;&gt;Go&lt;/a&gt;
 or &lt;a href=&#34;https://developers.google.com/appengine/docs/go/config/appconfig&#34;&gt;config file&lt;/a&gt;
 on App Engine, but how to serve static pages on App Engine with Go?&lt;/p&gt;
@@ -517,10 +517,10 @@ Go again (source:
     
     <item>
       <title>Finding Optimal Typographic Scale</title>
-      <link>https://h12.me/article/optimal_font_scale/</link>
+      <link>http://h12.me/article/optimal_font_scale/</link>
       <pubDate>Sat, 05 Jul 2014 15:03:04 +0000</pubDate>
       
-      <guid>https://h12.me/article/optimal_font_scale/</guid>
+      <guid>http://h12.me/article/optimal_font_scale/</guid>
       <description>
 
 &lt;p&gt;During the construction of this site, there are many important design decisions
@@ -634,10 +634,10 @@ process or magic numbers, but only reasoning and computation.&lt;/p&gt;
     
     <item>
       <title>A List of Website Testing Services</title>
-      <link>https://h12.me/note/site_test/</link>
+      <link>http://h12.me/note/site_test/</link>
       <pubDate>Thu, 03 Jul 2014 06:21:58 +0000</pubDate>
       
-      <guid>https://h12.me/note/site_test/</guid>
+      <guid>http://h12.me/note/site_test/</guid>
       <description>&lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;http://validator.w3.org/&#34;&gt;The W3C Markup Validation Service&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;http://developers.google.com/speed/pagespeed/insights/&#34;&gt;Google PageSpeed Insights&lt;/a&gt;&lt;/li&gt;
@@ -650,10 +650,10 @@ process or magic numbers, but only reasoning and computation.&lt;/p&gt;
     
     <item>
       <title>A List of Narrow Fonts for Titles</title>
-      <link>https://h12.me/note/narrow_fonts/</link>
+      <link>http://h12.me/note/narrow_fonts/</link>
       <pubDate>Tue, 01 Jul 2014 08:39:42 +0000</pubDate>
       
-      <guid>https://h12.me/note/narrow_fonts/</guid>
+      <guid>http://h12.me/note/narrow_fonts/</guid>
       <description>&lt;ul&gt;
 &lt;li&gt;Economica&lt;/li&gt;
 &lt;li&gt;Fjalla One&lt;/li&gt;
@@ -673,10 +673,10 @@ process or magic numbers, but only reasoning and computation.&lt;/p&gt;
     
     <item>
       <title>Links about Font Choosing</title>
-      <link>https://h12.me/note/font_links/</link>
+      <link>http://h12.me/note/font_links/</link>
       <pubDate>Sun, 22 Jun 2014 14:09:45 +0000</pubDate>
       
-      <guid>https://h12.me/note/font_links/</guid>
+      <guid>http://h12.me/note/font_links/</guid>
       <description>&lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;http://www.snapily.com/blog/the-best-font-styles-for-blogging/&#34;&gt;The Best Font Styles for Blogging&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;http://www.bigbrandsystem.com/best-font-size/&#34;&gt;Size Doesn’t Matter, and What Does&lt;/a&gt;&lt;/li&gt;
@@ -688,10 +688,10 @@ process or magic numbers, but only reasoning and computation.&lt;/p&gt;
     
     <item>
       <title>Getgo: a concurrent, simple and extensible web scraping framework</title>
-      <link>https://h12.me/project/getgo/</link>
+      <link>http://h12.me/project/getgo/</link>
       <pubDate>Mon, 02 Jun 2014 01:21:00 +0000</pubDate>
       
-      <guid>https://h12.me/project/getgo/</guid>
+      <guid>http://h12.me/project/getgo/</guid>
       <description>
 
 &lt;p&gt;&lt;a href=&#34;https://godoc.org/github.com/hailiang/getgo&#34;&gt;&lt;img src=&#34;https://godoc.org/github.com/hailiang/getgo?status.png&#34; alt=&#34;GoDoc&#34; /&gt;

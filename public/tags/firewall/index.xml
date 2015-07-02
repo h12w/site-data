@@ -2,20 +2,20 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Firewall on h12.me</title>
-    <link>https://h12.me/tags/firewall/</link>
+    <link>http://h12.me/tags/firewall/</link>
     <description>Recent content in Firewall on h12.me</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <copyright>Copyright (c) 2012-2014, Hǎiliàng Wáng; all rights reserved.</copyright>
+    <copyright>Copyright (c) 2012-2015, Hǎiliàng Wáng; all rights reserved.</copyright>
     <lastBuildDate>Sat, 14 Feb 2015 09:30:55 +0000</lastBuildDate>
-    <atom:link href="https://h12.me/tags/firewall/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://h12.me/tags/firewall/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>A Brief Note on Scientific Web Surfing</title>
-      <link>https://h12.me/article/scientific_web_surfing/</link>
+      <link>http://h12.me/article/scientific_web_surfing/</link>
       <pubDate>Sat, 14 Feb 2015 09:30:55 +0000</pubDate>
       
-      <guid>https://h12.me/article/scientific_web_surfing/</guid>
+      <guid>http://h12.me/article/scientific_web_surfing/</guid>
       <description>
 
 &lt;p&gt;&lt;em&gt;Knowledge is power. Information is liberating. &amp;mdash; by Kofi Annan.&lt;/em&gt;&lt;/p&gt;

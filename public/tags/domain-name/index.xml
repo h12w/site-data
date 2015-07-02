@@ -2,20 +2,20 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Domain Name on h12.me</title>
-    <link>https://h12.me/tags/domain-name/</link>
+    <link>http://h12.me/tags/domain-name/</link>
     <description>Recent content in Domain Name on h12.me</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <copyright>Copyright (c) 2012-2014, Hǎiliàng Wáng; all rights reserved.</copyright>
+    <copyright>Copyright (c) 2012-2015, Hǎiliàng Wáng; all rights reserved.</copyright>
     <lastBuildDate>Tue, 16 Dec 2014 09:43:40 +0000</lastBuildDate>
-    <atom:link href="https://h12.me/tags/domain-name/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://h12.me/tags/domain-name/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>A Shorter Domain Name</title>
-      <link>https://h12.me/note/new_domain_h12/</link>
+      <link>http://h12.me/note/new_domain_h12/</link>
       <pubDate>Tue, 16 Dec 2014 09:43:40 +0000</pubDate>
       
-      <guid>https://h12.me/note/new_domain_h12/</guid>
+      <guid>http://h12.me/note/new_domain_h12/</guid>
       <description>&lt;p&gt;This year, I decided not to renewal the previous domain name (hailiang.ws) last
 year, but to register a shorter one. There are two reasons:&lt;/p&gt;
 
