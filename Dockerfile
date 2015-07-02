@@ -1,9 +1,10 @@
 FROM golang
 MAINTAINER Hǎiliàng Wáng <w@h12.me>
 
-COPY . /site
-RUN cd /site        && \
+ENV SITE /go/src/site
+COPY . $SITE
+RUN cd $SITE        && \
     go get ./...    && \
-    go build -o run
+    go install
 
-ENTRYPOINT [ "/site/run" ]
+ENTRYPOINT [ "site" ]
