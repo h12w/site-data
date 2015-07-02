@@ -1,0 +1,244 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Rsa on h12.me</title>
+    <link>https://h12.me/tags/rsa/</link>
+    <description>Recent content in Rsa on h12.me</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>Copyright (c) 2012-2014, Hǎiliàng Wáng; all rights reserved.</copyright>
+    <lastBuildDate>Wed, 18 Feb 2015 17:23:24 +0000</lastBuildDate>
+    <atom:link href="https://h12.me/tags/rsa/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>A Developer&#39;s Guide to Password Management</title>
+      <link>https://h12.me/article/password_management/</link>
+      <pubDate>Wed, 18 Feb 2015 17:23:24 +0000</pubDate>
+      
+      <guid>https://h12.me/article/password_management/</guid>
+      <description>
+
+&lt;p&gt;This article is intended to be a comprehensive recipe to password management,
+assuming:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;You are a developer&lt;/li&gt;
+&lt;li&gt;You have to manage dozens of passwords, ssh key pairs and possibly some secret
+documents&lt;/li&gt;
+&lt;li&gt;You want strong security on each of them&lt;/li&gt;
+&lt;li&gt;You do not want to forget any of them but do not either want to spend too much time memorizing them&lt;/li&gt;
+&lt;li&gt;You want to access your passwords from both your computers and mobile devices&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;The proposed solution includes:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;An unbreakable encryption standard (&lt;a href=&#34;http://en.wikipedia.org/wiki/Pretty_Good_Privacy&#34;&gt;OpenPGP&lt;/a&gt;)
+and its open source implementation (&lt;a href=&#34;https://gnupg.org&#34;&gt;GnuPG&lt;/a&gt;)&lt;/li&gt;
+&lt;li&gt;An open source password manager built on top of it (&lt;a href=&#34;http://www.passwordstore.org&#34;&gt;pass&lt;/a&gt;)&lt;/li&gt;
+&lt;li&gt;Memorizing one strong master pass phrase&lt;/li&gt;
+&lt;li&gt;A backup plan: do not put all your eggs in one basket&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;install-prerequisites:05f84c8567f6e5f08117e66d318cc61a&#34;&gt;Install Prerequisites&lt;/h2&gt;
+
+&lt;p&gt;On Linux:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://gnupg.org&#34;&gt;GnuPG&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://www.passwordstore.org&#34;&gt;pass&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;(Ubuntu)&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;sudo apt-get install gnupg
+sudo apt-get install pass
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;On Android:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;http://www.openkeychain.org&#34;&gt;OpenKeyChain&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/zeapo/Android-Password-Store&#34;&gt;Password Store&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;On iOS:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/rephorm/pass-ios&#34;&gt;Pass for iOS&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;preparing-pgp-keys:05f84c8567f6e5f08117e66d318cc61a&#34;&gt;Preparing PGP Keys&lt;/h2&gt;
+
+&lt;p&gt;If you are already a PGP user, skip this step, otherwise, you are going to generate:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;A master keypair (public/private keys)&lt;/li&gt;
+&lt;li&gt;A sub keypair for password encryption/decryption&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;gpg --gen-key
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;This command will generate a master keypair associated with your true identity (
+you may later want to use the PGP key pair for encrypted, digitally signed email).&lt;/p&gt;
+
+&lt;p&gt;Choose:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Kind: RSA and RSA&lt;/li&gt;
+&lt;li&gt;Bits: 4096&lt;/li&gt;
+&lt;li&gt;Expire: key does not expire&lt;/li&gt;
+&lt;li&gt;Real name: &amp;lt;real-name&amp;gt;&lt;/li&gt;
+&lt;li&gt;Email address: &amp;lt;email-address&amp;gt;&lt;/li&gt;
+&lt;li&gt;Comment: &amp;lt;comment&amp;gt;&lt;/li&gt;
+&lt;li&gt;Pass phrase: &amp;lt;master-pass-phrase&amp;gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;To make the process faster, you shouse increase the system randomness. Run in
+another terminal:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;sudo rngd -f -r /dev/urandom
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;When finished, a master key pair and an associated sub key pair will be created.
+To see a list of your keys, type:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;gpg --list-keys
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;You will see:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;pub   4096R/&amp;lt;master-key-id&amp;gt; &amp;lt;date&amp;gt;
+uid                  &amp;lt;real-name&amp;gt; &amp;lt;&amp;lt;email-address&amp;gt;&amp;gt;
+sub   4096R/&amp;lt;sub-key-id&amp;gt; &amp;lt;date&amp;gt; 
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;The &lt;code&gt;&amp;lt;sub-key-id&amp;gt;&lt;/code&gt; is the name of the key to encrypt/decrypt your stored passwords.&lt;/p&gt;
+
+&lt;p&gt;Optionally, you can strengthen it by changing the encryption preferences.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;gpg --edit-key &amp;lt;email-address&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;And type:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;setpref SHA512 SHA384 SHA256 SHA224 AES256 AES192 AES CAST5 ZLIB BZIP2 ZIP Uncompressed 
+save
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;intialize-a-pass-store:05f84c8567f6e5f08117e66d318cc61a&#34;&gt;Intialize a Pass Store&lt;/h2&gt;
+
+&lt;p&gt;A password store is simply a directory including encrypted files, and each of them
+contains a password (the first line) and extra information (rest of the file).&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;cd &amp;lt;pass-store&amp;gt;
+pass init &amp;lt;sub-key-id&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;password-management-tips:05f84c8567f6e5f08117e66d318cc61a&#34;&gt;Password Management Tips&lt;/h2&gt;
+
+&lt;h3 id=&#34;replace-existing-passwords-with-strong-ones:05f84c8567f6e5f08117e66d318cc61a&#34;&gt;Replace Existing Passwords with Strong Ones&lt;/h3&gt;
+
+&lt;p&gt;Generate a random password (15 characters):&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;pass generate &amp;lt;account-name&amp;gt; 15
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;An encrypted file &lt;account-name&gt;.gpg is created. In decrypted form, the first
+line is the generated password.&lt;/p&gt;
+
+&lt;p&gt;To add extra information like user name or URL for the service:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;pass edit &amp;lt;account-name&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Then you can update the password online accordingly.&lt;/p&gt;
+
+&lt;h3 id=&#34;put-a-password-into-clipboard-for-45-seconds:05f84c8567f6e5f08117e66d318cc61a&#34;&gt;Put a password into Clipboard for 45 seconds&lt;/h3&gt;
+
+&lt;pre&gt;&lt;code&gt;pass -c &amp;lt;account-name&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&#34;avoid-typing-master-passwords-repeatedly:05f84c8567f6e5f08117e66d318cc61a&#34;&gt;Avoid typing master passwords repeatedly&lt;/h3&gt;
+
+&lt;p&gt;Add configuration file &lt;code&gt;$HOME/.gnupg/gpg-agent.conf&lt;/code&gt; and remember the master
+password for 3600 seconds:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;pinentry-program /usr/bin/pinentry-gtk-2
+default-cache-ttl 3600
+max-cache-ttl 3600
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&#34;store-ssh-keys:05f84c8567f6e5f08117e66d318cc61a&#34;&gt;Store SSH keys&lt;/h3&gt;
+
+&lt;p&gt;Store SSH public key as the password in the pass store, and encrypt the private
+key in the rest of the file.&lt;/p&gt;
+
+&lt;p&gt;To change a Git remote from HTTPS to SSH:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;git remote set-url origin git@&amp;lt;domain-name&amp;gt;:&amp;lt;repo-path&amp;gt;.git
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;backup-plan:05f84c8567f6e5f08117e66d318cc61a&#34;&gt;Backup Plan&lt;/h2&gt;
+
+&lt;p&gt;Prepare for the following extreme case:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Both your laptop and cell phone containing the pass store and PGP keys are
+damaged or stolen.&lt;/li&gt;
+&lt;li&gt;But you can still remember the master pass phrase.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&#34;use-a-remote-git-repository-to-backup-the-password-store:05f84c8567f6e5f08117e66d318cc61a&#34;&gt;Use a remote Git repository to backup the password store&lt;/h3&gt;
+
+&lt;pre&gt;&lt;code&gt;cd &amp;lt;pass-store&amp;gt;
+pass git init
+pass git remote add origin &amp;lt;remote-git-url&amp;gt;
+pass git push
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&#34;backup-pgp-keys:05f84c8567f6e5f08117e66d318cc61a&#34;&gt;Backup PGP keys&lt;/h3&gt;
+
+&lt;p&gt;Export all the key pairs (including both master and sub keys):&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;gpg --export-secret-keys --armor &amp;lt;email-address&amp;gt;  &amp;gt;  &amp;lt;private-key-file&amp;gt;
+gpg --export             --armor &amp;lt;email-address&amp;gt;  &amp;gt;  &amp;lt;public-key-file&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Keep the files in a &lt;a href=&#34;https://www.google.com/search?q=PGP+key+backup&#34;&gt;safe, secret place&lt;/a&gt;!&lt;/p&gt;
+
+&lt;p&gt;To restore the keys from backup:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;gpg --import &amp;lt;private-key-file&amp;gt; &amp;lt;public-key-file&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;hide-pgp-master-private-key:05f84c8567f6e5f08117e66d318cc61a&#34;&gt;Hide PGP Master Private Key&lt;/h2&gt;
+
+&lt;p&gt;AFTER the full backup of your PGP keys, you can choose to delete the master
+private key on the device with the pass store, because only the sub key pair is
+needed for encryption/decryption. The deletion will not protect your pass store,
+but it will protect your identity associated with the master key.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;gpg --export-secret-subkeys &amp;lt;email-address&amp;gt;   &amp;gt;   subkeys
+gpg --delete-secret-key     &amp;lt;email-address&amp;gt;
+gpg   --import subkeys
+shred --remove subkeys
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;security-limitation:05f84c8567f6e5f08117e66d318cc61a&#34;&gt;Security Limitation&lt;/h2&gt;
+
+&lt;p&gt;PGP itself is secure and robust, but it all depends on how well you can preserve
+and protect your PGP key pair and master pass phrase.&lt;/p&gt;
+
+&lt;h2 id=&#34;references:05f84c8567f6e5f08117e66d318cc61a&#34;&gt;References&lt;/h2&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;a href=&#34;https://alexcabal.com/creating-the-perfect-gpg-keypair&#34;&gt;Creating the Perfect GPG Keypair&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://www.passwordstore.org&#34;&gt;Pass: the standard unix password manager&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

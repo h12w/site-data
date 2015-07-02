@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Build on h12.me</title>
+    <link>https://h12.me/tags/build/</link>
+    <description>Recent content in Build on h12.me</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>Copyright (c) 2012-2014, Hǎiliàng Wáng; all rights reserved.</copyright>
+    <lastBuildDate>Thu, 29 Jan 2015 03:55:08 +0000</lastBuildDate>
+    <atom:link href="https://h12.me/tags/build/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Go 1.4.1 Build Failure and Solution</title>
+      <link>https://h12.me/note/go_build_failure/</link>
+      <pubDate>Thu, 29 Jan 2015 03:55:08 +0000</pubDate>
+      
+      <guid>https://h12.me/note/go_build_failure/</guid>
+      <description>&lt;p&gt;Today I tried to build Go 1.4.1 from source but it failed with this error:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;    go/src/liblink/anames9.c:6:29: fatal error: ../cmd/9l/9.out.h: No such file or directory
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;At first I thought the building routine might have be changed so I opened and read
+&lt;a href=&#34;http://golang.org/doc/install/source&#34;&gt;&lt;em&gt;Installing Go from Source&lt;/em&gt;&lt;/a&gt; again, carefully,
+and found nothing special.&lt;/p&gt;
+
+&lt;p&gt;Then I searched for the error source and it turned out that I should deleted
+&lt;code&gt;anames*.c&lt;/code&gt;, manually. There is no document and no automatic cleaning script, and
+you would have to figure it out yourself if no one ever mentioned it (&lt;a href=&#34;https://groups.google.com/d/msg/golang-nuts/wQoQqXOnOTo/QbubO2UebpUJ&#34;&gt;source&lt;/a&gt;).&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

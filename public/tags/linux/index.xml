@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Linux on h12.me</title>
+    <link>https://h12.me/tags/linux/</link>
+    <description>Recent content in Linux on h12.me</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>Copyright (c) 2012-2014, Hǎiliàng Wáng; all rights reserved.</copyright>
+    <lastBuildDate>Thu, 17 Jul 2014 03:19:18 +0000</lastBuildDate>
+    <atom:link href="https://h12.me/tags/linux/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Installing Source Code Pro</title>
+      <link>https://h12.me/note/install_scp/</link>
+      <pubDate>Thu, 17 Jul 2014 03:19:18 +0000</pubDate>
+      
+      <guid>https://h12.me/note/install_scp/</guid>
+      <description>&lt;p&gt;&lt;em&gt;Source Code Pro&lt;/em&gt; is one of the best monospace fonts and it is &lt;a href=&#34;https://github.com/adobe/source-code-pro&#34;&gt;open sourced&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Here is the &lt;a href=&#34;https://github.com/hailiang/linux/blob/master/install_scp.sh&#34;&gt;script&lt;/a&gt; for installing it on Linux.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>How to Disable the Touchpad in Linux?</title>
+      <link>https://h12.me/note/disable_touchpad/</link>
+      <pubDate>Tue, 10 Jun 2014 23:00:24 +0000</pubDate>
+      
+      <guid>https://h12.me/note/disable_touchpad/</guid>
+      <description>&lt;p&gt;Have you ever been annoyed by accidentally touching the touchpad on your laptop
+when you are typing?&lt;/p&gt;
+
+&lt;p&gt;I am using a Linux laptop with both trackpoint and touchpad so the touchpad is
+just an annoying redundant thing. Here is the one-liner to disable it:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;xinput list | grep TouchPad | grep -Po &#39;id=\K([0-9]+)&#39; | xargs xinput disable
+&lt;/code&gt;&lt;/pre&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Proxy on h12.me</title>
+    <link>https://h12.me/tags/proxy/</link>
+    <description>Recent content in Proxy on h12.me</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>Copyright (c) 2012-2014, Hǎiliàng Wáng; all rights reserved.</copyright>
+    <lastBuildDate>Wed, 06 May 2015 12:01:11 +0800</lastBuildDate>
+    <atom:link href="https://h12.me/tags/proxy/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>How to &#34;go get&#34; Behind a Proxy</title>
+      <link>https://h12.me/note/go_get_behind_proxy/</link>
+      <pubDate>Wed, 06 May 2015 12:01:11 +0800</pubDate>
+      
+      <guid>https://h12.me/note/go_get_behind_proxy/</guid>
+      <description>
+
+&lt;h2 id=&#34;proxy-for-go-get:e490f2aac2393f2512d8fa1fe826c975&#34;&gt;Proxy for &amp;ldquo;go get&amp;rdquo;&lt;/h2&gt;
+
+&lt;pre&gt;&lt;code&gt;https_proxy=http://user:pass@proxy_host:port go get ...
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;proxy-for-git:e490f2aac2393f2512d8fa1fe826c975&#34;&gt;Proxy for Git&lt;/h2&gt;
+
+&lt;p&gt;In &lt;code&gt;$HOME/.gitconfig&lt;/code&gt;:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;[https]
+	proxy = proxy_url
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;proxy-for-mercurial:e490f2aac2393f2512d8fa1fe826c975&#34;&gt;Proxy for Mercurial&lt;/h2&gt;
+
+&lt;p&gt;In &lt;code&gt;$HOME/.hgrc&lt;/code&gt;:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;[http_proxy]
+host = host:port
+user = ...
+passwd = ...
+&lt;/code&gt;&lt;/pre&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Deploying GAE through a Proxy</title>
+      <link>https://h12.me/note/gae_deploy_via_proxy/</link>
+      <pubDate>Sun, 21 Dec 2014 07:58:34 +0000</pubDate>
+      
+      <guid>https://h12.me/note/gae_deploy_via_proxy/</guid>
+      <description>&lt;p&gt;A quick note:&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;p&gt;Set proxy&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;export HTTP_PROXY http://[host]:[port]
+export HTTPS_PROXY http://[host]:[port]
+&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Delete cacerts.txt under GAE SDK installation to disable SSL verification (
+make sure the proxy is safe before this step).&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Deploy.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;appcfg.py . --email=[address] --passin
+&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
+&lt;/ol&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

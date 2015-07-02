@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Automatic Deployment on h12.me</title>
+    <link>https://h12.me/tags/automatic-deployment/</link>
+    <description>Recent content in Automatic Deployment on h12.me</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>Copyright (c) 2012-2014, Hǎiliàng Wáng; all rights reserved.</copyright>
+    <lastBuildDate>Thu, 17 Jul 2014 14:54:26 +0000</lastBuildDate>
+    <atom:link href="https://h12.me/tags/automatic-deployment/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>An Overview of Continuous Integration Services</title>
+      <link>https://h12.me/note/ci_overview/</link>
+      <pubDate>Thu, 17 Jul 2014 14:54:26 +0000</pubDate>
+      
+      <guid>https://h12.me/note/ci_overview/</guid>
+      <description>
+
+&lt;p&gt;After reviewing many continuous integration services below, there is no doubt
+that Wercker is the winner. The Wercker Box (virtual container) is based on
+Ubuntu and any packages can be easily installed with &amp;ldquo;apt-get&amp;rdquo;. This flexibility
+basically allows running any test suites and deploying to any cloud platforms.
+Furthermore, a Wercker Box can inherit from another box and can be stored and
+published in Wercker directories as the starting point for any projects,
+increasing the performance significantly.&lt;/p&gt;
+
+&lt;h2 id=&#34;price:a76620099a0a46cdb5d632ea8ed57862&#34;&gt;Price&lt;/h2&gt;
+
+&lt;p&gt;Open source friendly:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://drone.io/&#34;&gt;Drone.io&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.shippable.com/&#34;&gt;Shippable&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://snap-ci.com/&#34;&gt;Snap&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://travis-ci.org/&#34;&gt;Travis-CI&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://wercker.com/&#34;&gt;Wercker&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Has free plan:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;http://www.cloudbees.com/&#34;&gt;CloudBees&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://codeship.io/&#34;&gt;Codeship&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://ship.io/&#34;&gt;Ship.io&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;No fee plan:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://circleci.com/&#34;&gt;CircleCI&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://hosted-ci.com/&#34;&gt;Hosted CI&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://semaphoreapp.com/&#34;&gt;Semaphore&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.solanolabs.com/&#34;&gt;Solano Labs&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.atlassian.com/software/bamboo&#34;&gt;Bamboo&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

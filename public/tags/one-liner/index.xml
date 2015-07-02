@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>One Liner on h12.me</title>
+    <link>https://h12.me/tags/one-liner/</link>
+    <description>Recent content in One Liner on h12.me</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>Copyright (c) 2012-2014, Hǎiliàng Wáng; all rights reserved.</copyright>
+    <lastBuildDate>Tue, 28 Apr 2015 10:59:02 +0800</lastBuildDate>
+    <atom:link href="https://h12.me/tags/one-liner/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Tips on SSH</title>
+      <link>https://h12.me/note/tips_on_ssh/</link>
+      <pubDate>Tue, 28 Apr 2015 10:59:02 +0800</pubDate>
+      
+      <guid>https://h12.me/note/tips_on_ssh/</guid>
+      <description>
+
+&lt;h2 id=&#34;generate-ssh-keys:1f1c4e8b5b8b665e71e6a80f55c5a955&#34;&gt;Generate SSH keys&lt;/h2&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;ssh-keygen -C w@h12.me
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;authorize-public-key-at-remote-server:1f1c4e8b5b8b665e71e6a80f55c5a955&#34;&gt;Authorize public key at remote server&lt;/h2&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;cat ~/.ssh/id_rsa.pub | ssh hailiang@remote-server &#39;mkdir -p .ssh; umask 077; cat &amp;gt;&amp;gt;.ssh/authorized_keys&#39;
+&lt;/code&gt;&lt;/pre&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>How to Disable the Touchpad in Linux?</title>
+      <link>https://h12.me/note/disable_touchpad/</link>
+      <pubDate>Tue, 10 Jun 2014 23:00:24 +0000</pubDate>
+      
+      <guid>https://h12.me/note/disable_touchpad/</guid>
+      <description>&lt;p&gt;Have you ever been annoyed by accidentally touching the touchpad on your laptop
+when you are typing?&lt;/p&gt;
+
+&lt;p&gt;I am using a Linux laptop with both trackpoint and touchpad so the touchpad is
+just an annoying redundant thing. Here is the one-liner to disable it:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;xinput list | grep TouchPad | grep -Po &#39;id=\K([0-9]+)&#39; | xargs xinput disable
+&lt;/code&gt;&lt;/pre&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

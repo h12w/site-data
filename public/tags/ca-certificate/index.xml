@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Ca Certificate on h12.me</title>
+    <link>https://h12.me/tags/ca-certificate/</link>
+    <description>Recent content in Ca Certificate on h12.me</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>Copyright (c) 2012-2014, Hǎiliàng Wáng; all rights reserved.</copyright>
+    <lastBuildDate>Sat, 17 Jan 2015 18:13:09 +0000</lastBuildDate>
+    <atom:link href="https://h12.me/tags/ca-certificate/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>How to install a self-signed CA Certificate to Android 4.4</title>
+      <link>https://h12.me/note/install_ca_android/</link>
+      <pubDate>Sat, 17 Jan 2015 18:13:09 +0000</pubDate>
+      
+      <guid>https://h12.me/note/install_ca_android/</guid>
+      <description>&lt;p&gt;See this blog &lt;a href=&#34;https://samhobbs.co.uk/2013/12/remove-network-may-be-monitored-by-an-unknown-third-party-in-android-4-4-kitkat&#34;&gt;&lt;em&gt;Remove &amp;ldquo;Network May Be Monitored by an Unknown Third Party&amp;rdquo; in Android 4.4 KitKat&lt;/em&gt;&lt;/a&gt;.&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

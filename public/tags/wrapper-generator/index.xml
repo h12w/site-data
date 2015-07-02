@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Wrapper Generator on h12.me</title>
+    <link>https://h12.me/tags/wrapper-generator/</link>
+    <description>Recent content in Wrapper Generator on h12.me</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>Copyright (c) 2012-2014, Hǎiliàng Wáng; all rights reserved.</copyright>
+    <lastBuildDate>Wed, 01 Jan 2014 01:30:04 +0000</lastBuildDate>
+    <atom:link href="https://h12.me/tags/wrapper-generator/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Cwrap: wraps C libraries in Go</title>
+      <link>https://h12.me/project/cwrap/</link>
+      <pubDate>Wed, 01 Jan 2014 01:30:04 +0000</pubDate>
+      
+      <guid>https://h12.me/project/cwrap/</guid>
+      <description>
+
+&lt;p&gt;Cwrap is a Go wrapper generator for C libraries.&lt;/p&gt;
+
+&lt;h2 id=&#34;features:21057ccf4628b2bc6e763170c8e0103a&#34;&gt;Features&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;No Cgo types exposed out of the wrapper package, and uses as less allocation/copy as possible.&lt;/li&gt;
+&lt;li&gt;C name prefix mapped to Go packages, and a wrapper package can import another wrapper package.&lt;/li&gt;
+&lt;li&gt;Follows Go naming conventions.&lt;/li&gt;
+&lt;li&gt;C union.&lt;/li&gt;
+&lt;li&gt;Use Go language features when possible:
+
+&lt;ul&gt;
+&lt;li&gt;string and bool.&lt;/li&gt;
+&lt;li&gt;Multiple return values.&lt;/li&gt;
+&lt;li&gt;Slice, slice of slice and slice of string.&lt;/li&gt;
+&lt;li&gt;struct with methods.&lt;/li&gt;
+&lt;li&gt;Go closures as callbacks.&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;Stay out of the way when you need to do it manually for specified declarations.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;usage:21057ccf4628b2bc6e763170c8e0103a&#34;&gt;Usage&lt;/h2&gt;
+
+&lt;p&gt;Cwrap itself is a Go package rather than an executable program. Just fill a cwrap.Package struct literal and call its Wrap method to generate your wrapper package under $GOPATH. Here is a simple example:&lt;/p&gt;
+
+&lt;p&gt;Say you want to generate a wrapper package for SDL2, and its header is at&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;/usr/local/include/SDL2/SDL2.h
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;So the cwrap.Package literal looks like:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-go&#34;&gt;var sdl = &amp;amp;Package{
+	PacName: &amp;quot;sdl&amp;quot;,
+	PacPath: &amp;quot;go-sdl&amp;quot;,
+	From: Header{
+		Dir:           &amp;quot;/usr/local/include/&amp;quot;,
+		File:          &amp;quot;SDL2/SDL.h&amp;quot;,
+		OtherCode:     &amp;quot;#define _SDL_main_h&amp;quot;,
+		NamePattern:   `\ASDL(.*)`,
+		Excluded:      []string{},
+		CgoDirectives: []string{&amp;quot;pkg-config: sdl2&amp;quot;},
+		BoolTypes:     []string{&amp;quot;SDL_bool&amp;quot;},
+	},
+	Included: []*Package{},
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Then just call&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-go&#34;&gt;err := sdl.Wrap()
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;examples:21057ccf4628b2bc6e763170c8e0103a&#34;&gt;Examples&lt;/h2&gt;
+
+&lt;p&gt;In the examples directory, there are C libraries that I have successfully applied Cwrap, including:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Cairo&lt;/li&gt;
+&lt;li&gt;GSL (GNU Scientific Library)&lt;/li&gt;
+&lt;li&gt;MuPDF&lt;/li&gt;
+&lt;li&gt;PLplot&lt;/li&gt;
+&lt;li&gt;SDL2 (Simple DirectMedia Layer)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;You are very welcome to submit examples you think useful to others.&lt;/p&gt;
+
+&lt;h2 id=&#34;applications:21057ccf4628b2bc6e763170c8e0103a&#34;&gt;Applications&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;gr: A minimal PDF viewer based on SDL2 and MuPDF (&lt;a href=&#34;https://github.com/hailiang/gr&#34;&gt;https://github.com/hailiang/gr&lt;/a&gt;)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;issue-report:21057ccf4628b2bc6e763170c8e0103a&#34;&gt;Issue Report&lt;/h2&gt;
+
+&lt;p&gt;Cwrap may not cover every possible case and fails to come up with a corrresonding Go type or convertion, then the generated code may not be able to compile. When this happens, do the following steps:&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;Comment out the failed function wrappers till it compiles.&lt;/li&gt;
+&lt;li&gt;Add the C names of these failed functions to the excluded list (Package.From.Excluded).&lt;/li&gt;
+&lt;li&gt;Submit the generator example to me. I cannot guarantee anything but I will try to fix critical issues.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h2 id=&#34;limitations:21057ccf4628b2bc6e763170c8e0103a&#34;&gt;Limitations&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;C variadic functions (&amp;hellip;) are not supported.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;acknowledgement:21057ccf4628b2bc6e763170c8e0103a&#34;&gt;Acknowledgement&lt;/h2&gt;
+
+&lt;p&gt;Cwrap uses gccxml (&lt;a href=&#34;http://gccxml.github.io&#34;&gt;http://gccxml.github.io&lt;/a&gt;) to parse C headers to an XML file. Thanks very much for their excellent work.&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

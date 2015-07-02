@@ -1,0 +1,823 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>h12.me</title>
+    <link>https://h12.me/</link>
+    <description>Recent content on h12.me</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>Copyright (c) 2012-2014, Hǎiliàng Wáng; all rights reserved.</copyright>
+    <lastBuildDate>Tue, 30 Jun 2015 12:43:19 +0800</lastBuildDate>
+    <atom:link href="https://h12.me/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Phonetic Notations</title>
+      <link>https://h12.me/note/phonetic_notations/</link>
+      <pubDate>Tue, 30 Jun 2015 12:43:19 +0800</pubDate>
+      
+      <guid>https://h12.me/note/phonetic_notations/</guid>
+      <description>
+
+&lt;h2 id=&#34;google-dictionary:f89be48f7c6192a3d480a930835745a7&#34;&gt;Google Dictionary&lt;/h2&gt;
+
+&lt;p&gt;Google dictionary uses a phonetic notation same as &lt;a href=&#34;http://en.wikipedia.org/wiki/Pronunciation_respelling_for_English&#34;&gt;NORD (New Oxford American Dictionary)&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;To figure out an unknown phonetic notation, the simple way is to look up a few words that you know how to pronounce:
+church, hat, which, judge, game, thing, ship, thin, this, yes, pleasure
+cat, pay, care, father, arm, let, see, here, city, my, pot, no, caught, war, force, boy, put, tour, boot, out, cut, word, item, rabbit, winner, pupil&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Notes on the Design of Go</title>
+      <link>https://h12.me/note/go_design/</link>
+      <pubDate>Mon, 29 Jun 2015 16:34:59 +0800</pubDate>
+      
+      <guid>https://h12.me/note/go_design/</guid>
+      <description>
+
+&lt;h3 id=&#34;refusing-new-features:7dee003ea8460b8c44d861f1c60e603b&#34;&gt;Refusing new features&lt;/h3&gt;
+
+&lt;p&gt;Avoid &lt;a href=&#34;https://en.wikipedia.org/wiki/Leaky_abstraction&#34;&gt;leaky abstraction&lt;/a&gt; as much as possible. If an abstraction is not solid enough, you’d rather not use them at all. Go is designed like this, the features are carefully selected. If a feature is not solid enough, it will not be allowed to enter Go.&lt;/p&gt;
+
+&lt;h3 id=&#34;no-implicit-string-concatenation:7dee003ea8460b8c44d861f1c60e603b&#34;&gt;No implicit string concatenation&lt;/h3&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://groups.google.com/d/msg/golang-nuts/S6a3bg65TBE/ikyNMzUSnXsJ&#34;&gt;Rob&lt;/a&gt;:
+That used to be in the language but was dropped when the semicolon insertion rules went in. You need the + to be able to span lines, and if you can&amp;rsquo;t span lines operatorless concatenation is close to pointless.&lt;/p&gt;
+
+&lt;h3 id=&#34;no-implicit-conversion:7dee003ea8460b8c44d861f1c60e603b&#34;&gt;No Implicit conversion&lt;/h3&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://groups.google.com/d/msg/golang-nuts/S6a3bg65TBE/ikyNMzUSnXsJ&#34;&gt;Rob&lt;/a&gt;:
+In any case the clarity of Go&amp;rsquo;s strictness is worth the occasional conversion. A huge class of bugs is simply gone, and a huge piece of tricky language in the specification never needed to be written.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://groups.google.com/d/msg/golang-nuts/S6a3bg65TBE/KUNfj8L4H4IJ&#34;&gt;Russ&lt;/a&gt;:
+Inserting automatic widening means giving up the &amp;ldquo;named types are not the same&amp;rdquo; rule, which makes it pretty much a non-starter.&lt;/p&gt;
+
+&lt;h3 id=&#34;octal-literal:7dee003ea8460b8c44d861f1c60e603b&#34;&gt;Octal literal&lt;/h3&gt;
+
+&lt;p&gt;Octal numeric system is rarely used, why does Go support them?&lt;/p&gt;
+
+&lt;p&gt;From Wikipedia “Octal”: Octal representation of non-ASCII bytes may be particularly handy with UTF-8, where any start byte has octal value \3nn and any continuation byte has octal value \2nn.&lt;/p&gt;
+
+&lt;h3 id=&#34;null-pointer-billion-dollar-mistake:7dee003ea8460b8c44d861f1c60e603b&#34;&gt;Null pointer (billion-dollar mistake)&lt;/h3&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://groups.google.com/d/msg/golang-nuts/Vxpuc37S8tQ/2zGB1QgjmbAJ&#34;&gt;Jonathan&lt;/a&gt;:
+in the eyes of the Go designers, who clearly don&amp;rsquo;t view it as a billion-dollar mistake, and in my eyes as well,
+ having spent days debugging (or failing to debug) race conditions, but rarely more than an hour per null-pointer bug).&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://groups.google.com/d/msg/golang-nuts/SskXyc9D5Sk/-EKHAIFBRXEJ&#34;&gt;rog&lt;/a&gt;:
+even in languages with no nil, such as Haskell, you can still get exceptions from using things that have an unexpected form. e.g. head [] that&amp;rsquo;s not too different from a nil pointer exception. so even if you go the non-nil route, you may still end up paying a good proportion of the &amp;ldquo;billion dollar&amp;rdquo; price.&lt;/p&gt;
+
+&lt;h3 id=&#34;return-errors-rather-than-exceptions:7dee003ea8460b8c44d861f1c60e603b&#34;&gt;Return errors rather than exceptions&lt;/h3&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://blogs.msdn.com/b/oldnewthing/archive/2005/01/14/352949.aspx&#34;&gt;Raymond Chen&lt;/a&gt;:
+It&amp;rsquo;s easy to write bad code, regardless of the error model. It&amp;rsquo;s hard to write good error-code-based code since you have to check every error code and think about what you should do when an error occurs. It&amp;rsquo;s really hard to write good exception-based code since you have to check every single line of code (indeed, every sub-expression) and think about what exceptions it might raise and how your code will react to it. (In C++ it&amp;rsquo;s not quite so bad because C++ exceptions are raised only at specific points during execution. In C#, exceptions can be raised at any time.)&lt;/p&gt;
+
+&lt;h3 id=&#34;nil-channel-always-blocks-both-send-and-receive:7dee003ea8460b8c44d861f1c60e603b&#34;&gt;Nil channel always blocks (both send and receive)&lt;/h3&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://groups.google.com/d/msg/golang-nuts/QltQ0nd9HvE/VvDhLO07Oq4J&#34;&gt;Rob&lt;/a&gt;:
+It&amp;rsquo;s for consistency with select. The semantics of a nil channel are
+the same regardless of how it is used. It&amp;rsquo;s useful that it blocks in a
+select, so that&amp;rsquo;s what it does outside a select.&lt;/p&gt;
+
+&lt;h3 id=&#34;reading-a-closed-channel-always-succeeds-with-zero-value:7dee003ea8460b8c44d861f1c60e603b&#34;&gt;Reading a closed channel always succeeds with zero value&lt;/h3&gt;
+
+&lt;ol&gt;
+&lt;li&gt;the read cannot block because then it will not be distinguishable with nil channel.&lt;/li&gt;
+&lt;li&gt;the read cannot panic because the writer close the channel to signal that it has been closed, not to panicking the reader.&lt;/li&gt;
+&lt;li&gt;Then the read has to return, which value to return? Since the channel has been closed, so the only possible value is a fake one &amp;ndash; default zero value. an additional result of type bool reporting whether the communication succeeded.
+e.g. v, ok := &amp;lt;-ch.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h3 id=&#34;writing-a-closed-channel-panics:7dee003ea8460b8c44d861f1c60e603b&#34;&gt;Writing a closed channel panics&lt;/h3&gt;
+
+&lt;p&gt;The channel should only be closed by the writer(not reader), so if a writer close the channel and then write it again, it should be a programming bug and panic is the right behavior.&lt;/p&gt;
+
+&lt;h3 id=&#34;full-qualified-package-name:7dee003ea8460b8c44d861f1c60e603b&#34;&gt;Full qualified package name&lt;/h3&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://groups.google.com/d/msg/golang-nuts/-tyo4o1uVTQ/FbDSkH9kq_oJ&#34;&gt;Rob&lt;/a&gt;:&lt;/p&gt;
+
+&lt;p&gt;Using . as an import name is part of the language and necessary in some cases to solve difficult naming issues but it&amp;rsquo;s not the intended style.  Package authors can depend on the fact that their code lives in its own name space.  If . becomes standard, then all packages in effect become a global name space and the style changes. Instead of&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;foo.New
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;the function must be called something like&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;foo.NewFoo
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;to avoid colliding with New from other packages.  And then what if Foo is itself a common name such as Buffer?  You rapidly end up in the Java space of very long names for everything.&lt;/p&gt;
+
+&lt;p&gt;This convention we have, using the package names always, is deliberate.  Yes, sometimes it makes for more typing but we believe in the long run it means less typing.&lt;/p&gt;
+
+&lt;h3 id=&#34;slice-type-is-a-builtin-type:7dee003ea8460b8c44d861f1c60e603b&#34;&gt;Slice type is a builtin type&lt;/h3&gt;
+
+&lt;p&gt;To support variadic arguments.&lt;/p&gt;
+
+&lt;h3 id=&#34;what-is-type-t-t:7dee003ea8460b8c44d861f1c60e603b&#34;&gt;What is &lt;code&gt;type T []T&lt;/code&gt;?&lt;/h3&gt;
+
+&lt;p&gt;?&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>What Go cannot Do</title>
+      <link>https://h12.me/note/what_go_cannot_do/</link>
+      <pubDate>Tue, 16 Jun 2015 00:00:00 +0000</pubDate>
+      
+      <guid>https://h12.me/note/what_go_cannot_do/</guid>
+      <description>
+
+&lt;p&gt;This is a list about the corner cases that Go cannot do, and their work arounds.&lt;/p&gt;
+
+&lt;h2 id=&#34;run-all-deferred-functions-of-other-goroutines-when-a-goroutine-panics:8b55f9ddc77541e5f8b431a4722abe5d&#34;&gt;Run all deferred functions of other goroutines when a goroutine panics&lt;/h2&gt;
+
+&lt;p&gt;Uncaught panicking of one goroutine will exit the program without executing deferred functions of other goroutines.&lt;/p&gt;
+
+&lt;p&gt;Workaround: this is the standard behavior, C++ with RAII also has the same problem. Persist your data in a way that crashing will not cause data integrity issue.&lt;/p&gt;
+
+&lt;h2 id=&#34;assigning-to-fields-with-short-declaration-notation:8b55f9ddc77541e5f8b431a4722abe5d&#34;&gt;Assigning to fields with short declaration notation&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Issue: &lt;a href=&#34;https://github.com/golang/go/issues/6842&#34;&gt;6842&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Status: Open &amp;amp; Unplanned&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;When it is useful:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-go&#34;&gt;if x.f, ok := f(); !ok {
+	...
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Workaround:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-go&#34;&gt;var ok bool
+if x.f, ok = f(); !ok {
+	...
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;accessing-unexported-fields-with-reflect-value-interface-method:8b55f9ddc77541e5f8b431a4722abe5d&#34;&gt;Accessing unexported fields with reflect.Value.Interface method&lt;/h2&gt;
+
+&lt;p&gt;When it is useful:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-go&#34;&gt;type S struct {
+   val string
+}
+
+...
+
+var s S
+
+reflect.Value(s).Fields(0).Interface()
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;The code will panics with message:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;reflect.Value.Interface: cannot return value obtained from unexported field or method
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Workaround:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-go&#34;&gt;v := reflect.Value(s).Fields(0)
+if v.Kind() == reflect.String {
+	s := v.String()
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;slice-of-array-literal:8b55f9ddc77541e5f8b431a4722abe5d&#34;&gt;Slice of array literal&lt;/h2&gt;
+
+&lt;p&gt;e.g.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-go&#34;&gt;[3]int{1, 2, 3}[:]
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Just use slice literal instead!&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Ebook Manipulation Tools</title>
+      <link>https://h12.me/note/ebook_tools/</link>
+      <pubDate>Thu, 04 Jun 2015 14:19:38 +0800</pubDate>
+      
+      <guid>https://h12.me/note/ebook_tools/</guid>
+      <description>&lt;ul&gt;
+&lt;li&gt;Ebook manager: &lt;a href=&#34;http://calibre-ebook.com/&#34;&gt;Calibre&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Kindle PDF optimizer: &lt;a href=&#34;http://www.willus.com/k2pdfopt/&#34;&gt;k2pdfopt&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;PDF Border Cropper &lt;a href=&#34;http://sourceforge.net/projects/briss/&#34;&gt;Briss&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;CHM File Extractor &lt;a href=&#34;https://github.com/dottedmag/archmage&#34;&gt;archmage&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>How to &#34;go get&#34; Behind a Proxy</title>
+      <link>https://h12.me/note/go_get_behind_proxy/</link>
+      <pubDate>Wed, 06 May 2015 12:01:11 +0800</pubDate>
+      
+      <guid>https://h12.me/note/go_get_behind_proxy/</guid>
+      <description>
+
+&lt;h2 id=&#34;proxy-for-go-get:e490f2aac2393f2512d8fa1fe826c975&#34;&gt;Proxy for &amp;ldquo;go get&amp;rdquo;&lt;/h2&gt;
+
+&lt;pre&gt;&lt;code&gt;https_proxy=http://user:pass@proxy_host:port go get ...
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;proxy-for-git:e490f2aac2393f2512d8fa1fe826c975&#34;&gt;Proxy for Git&lt;/h2&gt;
+
+&lt;p&gt;In &lt;code&gt;$HOME/.gitconfig&lt;/code&gt;:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;[https]
+	proxy = proxy_url
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;proxy-for-mercurial:e490f2aac2393f2512d8fa1fe826c975&#34;&gt;Proxy for Mercurial&lt;/h2&gt;
+
+&lt;p&gt;In &lt;code&gt;$HOME/.hgrc&lt;/code&gt;:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;[http_proxy]
+host = host:port
+user = ...
+passwd = ...
+&lt;/code&gt;&lt;/pre&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Tips on SSH</title>
+      <link>https://h12.me/note/tips_on_ssh/</link>
+      <pubDate>Tue, 28 Apr 2015 10:59:02 +0800</pubDate>
+      
+      <guid>https://h12.me/note/tips_on_ssh/</guid>
+      <description>
+
+&lt;h2 id=&#34;generate-ssh-keys:1f1c4e8b5b8b665e71e6a80f55c5a955&#34;&gt;Generate SSH keys&lt;/h2&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;ssh-keygen -C w@h12.me
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;authorize-public-key-at-remote-server:1f1c4e8b5b8b665e71e6a80f55c5a955&#34;&gt;Authorize public key at remote server&lt;/h2&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;cat ~/.ssh/id_rsa.pub | ssh hailiang@remote-server &#39;mkdir -p .ssh; umask 077; cat &amp;gt;&amp;gt;.ssh/authorized_keys&#39;
+&lt;/code&gt;&lt;/pre&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>How to Generate XSD Schema from XML?</title>
+      <link>https://h12.me/note/generate_xsd_from_xml/</link>
+      <pubDate>Thu, 23 Apr 2015 15:41:12 +0800</pubDate>
+      
+      <guid>https://h12.me/note/generate_xsd_from_xml/</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;http://archive.apache.org/dist/xmlbeans/binaries&#34;&gt;Apache XMLBeans&lt;/a&gt; is an old tool but still functioning. Download and uncompress the latest binary release, then run inst2xsd under bin folder (needs JDK).&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;inst2xsd xxx.xml
+&lt;/code&gt;&lt;/pre&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>A Developer&#39;s Guide to Password Management</title>
+      <link>https://h12.me/article/password_management/</link>
+      <pubDate>Wed, 18 Feb 2015 17:23:24 +0000</pubDate>
+      
+      <guid>https://h12.me/article/password_management/</guid>
+      <description>
+
+&lt;p&gt;This article is intended to be a comprehensive recipe to password management,
+assuming:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;You are a developer&lt;/li&gt;
+&lt;li&gt;You have to manage dozens of passwords, ssh key pairs and possibly some secret
+documents&lt;/li&gt;
+&lt;li&gt;You want strong security on each of them&lt;/li&gt;
+&lt;li&gt;You do not want to forget any of them but do not either want to spend too much time memorizing them&lt;/li&gt;
+&lt;li&gt;You want to access your passwords from both your computers and mobile devices&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;The proposed solution includes:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;An unbreakable encryption standard (&lt;a href=&#34;http://en.wikipedia.org/wiki/Pretty_Good_Privacy&#34;&gt;OpenPGP&lt;/a&gt;)
+and its open source implementation (&lt;a href=&#34;https://gnupg.org&#34;&gt;GnuPG&lt;/a&gt;)&lt;/li&gt;
+&lt;li&gt;An open source password manager built on top of it (&lt;a href=&#34;http://www.passwordstore.org&#34;&gt;pass&lt;/a&gt;)&lt;/li&gt;
+&lt;li&gt;Memorizing one strong master pass phrase&lt;/li&gt;
+&lt;li&gt;A backup plan: do not put all your eggs in one basket&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;install-prerequisites:05f84c8567f6e5f08117e66d318cc61a&#34;&gt;Install Prerequisites&lt;/h2&gt;
+
+&lt;p&gt;On Linux:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://gnupg.org&#34;&gt;GnuPG&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://www.passwordstore.org&#34;&gt;pass&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;(Ubuntu)&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;sudo apt-get install gnupg
+sudo apt-get install pass
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;On Android:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;http://www.openkeychain.org&#34;&gt;OpenKeyChain&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/zeapo/Android-Password-Store&#34;&gt;Password Store&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;On iOS:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/rephorm/pass-ios&#34;&gt;Pass for iOS&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;preparing-pgp-keys:05f84c8567f6e5f08117e66d318cc61a&#34;&gt;Preparing PGP Keys&lt;/h2&gt;
+
+&lt;p&gt;If you are already a PGP user, skip this step, otherwise, you are going to generate:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;A master keypair (public/private keys)&lt;/li&gt;
+&lt;li&gt;A sub keypair for password encryption/decryption&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;gpg --gen-key
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;This command will generate a master keypair associated with your true identity (
+you may later want to use the PGP key pair for encrypted, digitally signed email).&lt;/p&gt;
+
+&lt;p&gt;Choose:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Kind: RSA and RSA&lt;/li&gt;
+&lt;li&gt;Bits: 4096&lt;/li&gt;
+&lt;li&gt;Expire: key does not expire&lt;/li&gt;
+&lt;li&gt;Real name: &amp;lt;real-name&amp;gt;&lt;/li&gt;
+&lt;li&gt;Email address: &amp;lt;email-address&amp;gt;&lt;/li&gt;
+&lt;li&gt;Comment: &amp;lt;comment&amp;gt;&lt;/li&gt;
+&lt;li&gt;Pass phrase: &amp;lt;master-pass-phrase&amp;gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;To make the process faster, you shouse increase the system randomness. Run in
+another terminal:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;sudo rngd -f -r /dev/urandom
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;When finished, a master key pair and an associated sub key pair will be created.
+To see a list of your keys, type:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;gpg --list-keys
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;You will see:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;pub   4096R/&amp;lt;master-key-id&amp;gt; &amp;lt;date&amp;gt;
+uid                  &amp;lt;real-name&amp;gt; &amp;lt;&amp;lt;email-address&amp;gt;&amp;gt;
+sub   4096R/&amp;lt;sub-key-id&amp;gt; &amp;lt;date&amp;gt; 
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;The &lt;code&gt;&amp;lt;sub-key-id&amp;gt;&lt;/code&gt; is the name of the key to encrypt/decrypt your stored passwords.&lt;/p&gt;
+
+&lt;p&gt;Optionally, you can strengthen it by changing the encryption preferences.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;gpg --edit-key &amp;lt;email-address&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;And type:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;setpref SHA512 SHA384 SHA256 SHA224 AES256 AES192 AES CAST5 ZLIB BZIP2 ZIP Uncompressed 
+save
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;intialize-a-pass-store:05f84c8567f6e5f08117e66d318cc61a&#34;&gt;Intialize a Pass Store&lt;/h2&gt;
+
+&lt;p&gt;A password store is simply a directory including encrypted files, and each of them
+contains a password (the first line) and extra information (rest of the file).&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;cd &amp;lt;pass-store&amp;gt;
+pass init &amp;lt;sub-key-id&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;password-management-tips:05f84c8567f6e5f08117e66d318cc61a&#34;&gt;Password Management Tips&lt;/h2&gt;
+
+&lt;h3 id=&#34;replace-existing-passwords-with-strong-ones:05f84c8567f6e5f08117e66d318cc61a&#34;&gt;Replace Existing Passwords with Strong Ones&lt;/h3&gt;
+
+&lt;p&gt;Generate a random password (15 characters):&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;pass generate &amp;lt;account-name&amp;gt; 15
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;An encrypted file &lt;account-name&gt;.gpg is created. In decrypted form, the first
+line is the generated password.&lt;/p&gt;
+
+&lt;p&gt;To add extra information like user name or URL for the service:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;pass edit &amp;lt;account-name&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Then you can update the password online accordingly.&lt;/p&gt;
+
+&lt;h3 id=&#34;put-a-password-into-clipboard-for-45-seconds:05f84c8567f6e5f08117e66d318cc61a&#34;&gt;Put a password into Clipboard for 45 seconds&lt;/h3&gt;
+
+&lt;pre&gt;&lt;code&gt;pass -c &amp;lt;account-name&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&#34;avoid-typing-master-passwords-repeatedly:05f84c8567f6e5f08117e66d318cc61a&#34;&gt;Avoid typing master passwords repeatedly&lt;/h3&gt;
+
+&lt;p&gt;Add configuration file &lt;code&gt;$HOME/.gnupg/gpg-agent.conf&lt;/code&gt; and remember the master
+password for 3600 seconds:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;pinentry-program /usr/bin/pinentry-gtk-2
+default-cache-ttl 3600
+max-cache-ttl 3600
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&#34;store-ssh-keys:05f84c8567f6e5f08117e66d318cc61a&#34;&gt;Store SSH keys&lt;/h3&gt;
+
+&lt;p&gt;Store SSH public key as the password in the pass store, and encrypt the private
+key in the rest of the file.&lt;/p&gt;
+
+&lt;p&gt;To change a Git remote from HTTPS to SSH:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;git remote set-url origin git@&amp;lt;domain-name&amp;gt;:&amp;lt;repo-path&amp;gt;.git
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;backup-plan:05f84c8567f6e5f08117e66d318cc61a&#34;&gt;Backup Plan&lt;/h2&gt;
+
+&lt;p&gt;Prepare for the following extreme case:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Both your laptop and cell phone containing the pass store and PGP keys are
+damaged or stolen.&lt;/li&gt;
+&lt;li&gt;But you can still remember the master pass phrase.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&#34;use-a-remote-git-repository-to-backup-the-password-store:05f84c8567f6e5f08117e66d318cc61a&#34;&gt;Use a remote Git repository to backup the password store&lt;/h3&gt;
+
+&lt;pre&gt;&lt;code&gt;cd &amp;lt;pass-store&amp;gt;
+pass git init
+pass git remote add origin &amp;lt;remote-git-url&amp;gt;
+pass git push
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&#34;backup-pgp-keys:05f84c8567f6e5f08117e66d318cc61a&#34;&gt;Backup PGP keys&lt;/h3&gt;
+
+&lt;p&gt;Export all the key pairs (including both master and sub keys):&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;gpg --export-secret-keys --armor &amp;lt;email-address&amp;gt;  &amp;gt;  &amp;lt;private-key-file&amp;gt;
+gpg --export             --armor &amp;lt;email-address&amp;gt;  &amp;gt;  &amp;lt;public-key-file&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Keep the files in a &lt;a href=&#34;https://www.google.com/search?q=PGP+key+backup&#34;&gt;safe, secret place&lt;/a&gt;!&lt;/p&gt;
+
+&lt;p&gt;To restore the keys from backup:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;gpg --import &amp;lt;private-key-file&amp;gt; &amp;lt;public-key-file&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;hide-pgp-master-private-key:05f84c8567f6e5f08117e66d318cc61a&#34;&gt;Hide PGP Master Private Key&lt;/h2&gt;
+
+&lt;p&gt;AFTER the full backup of your PGP keys, you can choose to delete the master
+private key on the device with the pass store, because only the sub key pair is
+needed for encryption/decryption. The deletion will not protect your pass store,
+but it will protect your identity associated with the master key.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;gpg --export-secret-subkeys &amp;lt;email-address&amp;gt;   &amp;gt;   subkeys
+gpg --delete-secret-key     &amp;lt;email-address&amp;gt;
+gpg   --import subkeys
+shred --remove subkeys
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;security-limitation:05f84c8567f6e5f08117e66d318cc61a&#34;&gt;Security Limitation&lt;/h2&gt;
+
+&lt;p&gt;PGP itself is secure and robust, but it all depends on how well you can preserve
+and protect your PGP key pair and master pass phrase.&lt;/p&gt;
+
+&lt;h2 id=&#34;references:05f84c8567f6e5f08117e66d318cc61a&#34;&gt;References&lt;/h2&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;a href=&#34;https://alexcabal.com/creating-the-perfect-gpg-keypair&#34;&gt;Creating the Perfect GPG Keypair&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://www.passwordstore.org&#34;&gt;Pass: the standard unix password manager&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>A Brief Note on Scientific Web Surfing</title>
+      <link>https://h12.me/article/scientific_web_surfing/</link>
+      <pubDate>Sat, 14 Feb 2015 09:30:55 +0000</pubDate>
+      
+      <guid>https://h12.me/article/scientific_web_surfing/</guid>
+      <description>
+
+&lt;p&gt;&lt;em&gt;Knowledge is power. Information is liberating. &amp;mdash; by Kofi Annan.&lt;/em&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;vps:ea9e3bd770b9144f6a284e7574cdf713&#34;&gt;VPS&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;http://www.vultr.com/?ref=6837862&#34;&gt;Vultr&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.digitalocean.com/?refcode=56202ab61fb7&#34;&gt;DigitalOcean&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://bandwagonhost.com/aff.php?aff=2128&#34;&gt;BandwagonHOST&lt;/a&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Client Area -&amp;gt; Services -&amp;gt; Order New Services&lt;/li&gt;
+&lt;li&gt;64MB RAM is enough for running both ShadowSocks and pdnsd&lt;/li&gt;
+&lt;li&gt;Install Ubuntu LTS 32bit (x86, i686).&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;docker:ea9e3bd770b9144f6a284e7574cdf713&#34;&gt;Docker&lt;/h2&gt;
+
+&lt;p&gt;Install &lt;a href=&#34;https://docs.docker.com/installation/&#34;&gt;Docker&lt;/a&gt; on VPS.&lt;/p&gt;
+
+&lt;h2 id=&#34;remote-proxy:ea9e3bd770b9144f6a284e7574cdf713&#34;&gt;Remote Proxy&lt;/h2&gt;
+
+&lt;p&gt;Install &lt;a href=&#34;https://github.com/shadowsocks/shadowsocks-go/releases&#34;&gt;shadowsocks&lt;/a&gt;:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;docker run -d -p &amp;lt;port&amp;gt;:&amp;lt;port&amp;gt; h12w/shadowsocks -p &amp;lt;port&amp;gt; -k &amp;lt;password&amp;gt; -m aes-128-cfb -t 60
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;remote-dns-server:ea9e3bd770b9144f6a284e7574cdf713&#34;&gt;Remote DNS server&lt;/h2&gt;
+
+&lt;p&gt;Install &lt;a href=&#34;http://members.home.nl/p.a.rombouts/pdnsd/&#34;&gt;pdnsd&lt;/a&gt;:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;docker run -d -p [port]:53 -p [port]:53/udp h12w/pdnsd
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;To test the DNS server:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;dig @xxx.xxx.xxx.xxx -p xxxx www.linux.com
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;local-openwrt-router:ea9e3bd770b9144f6a284e7574cdf713&#34;&gt;Local OpenWrt Router&lt;/h2&gt;
+
+&lt;p&gt;Install &lt;a href=&#34;https://github.com/shadowsocks/openwrt-shadowsocks&#34;&gt;openwrt-shadowsocks&lt;/a&gt;
+on an &lt;a href=&#34;https://openwrt.org/&#34;&gt;OpenWrt&lt;/a&gt; router.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;opkg update
+opkg install ipset libopenssl resolveip iptables-mod-tproxy
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Check CPU version of the router:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;cat /proc/cpuinfo
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;From &lt;a href=&#34;http://sourceforge.net/projects/openwrt-dist/&#34;&gt;OpenWrt-Dist&lt;/a&gt;, download
+IPKs of the corresponding CPU:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;http://sourceforge.net/projects/openwrt-dist/files/shadowsocks-libev/&#34;&gt;shadowsocks-libev-spec&lt;/a&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;http://sourceforge.net/projects/openwrt-dist/files/luci-app/shadowsocks-spec/&#34;&gt;luci-shadowsocks&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://sourceforge.net/projects/openwrt-dist/files/chinadns/&#34;&gt;chinadns&lt;/a&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;http://sourceforge.net/projects/openwrt-dist/files/luci-app/chinadns/&#34;&gt;luci-chinadns&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Copy &lt;code&gt;*.ipk&lt;/code&gt; to router:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;scp *.ipk root@192.168.1.1:/tmp
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;And install:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;opkg install shadowsocks-libev-spec_xxx.ipk
+opkg install ChinaDNS_xxx.ipk
+/etc/init.d/shadowsocks enable
+/etc/init.d/chinadns enable
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;ShadowSocks configuration in &lt;code&gt;/etc/config/shadowsocks&lt;/code&gt;:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;config shadowsocks
+	...
+	option config_file &#39;/etc/shadowsocks/config.json&#39;
+	...
+	option tunnel_enable &#39;0&#39;
+	...
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;It refers to &lt;code&gt;/etc/shadowsocks/config.json&lt;/code&gt;:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;{
+    &amp;quot;server&amp;quot;:      &amp;quot;xxx.xxx.xxx.xxx&amp;quot;,
+    &amp;quot;server_port&amp;quot;: xxxx,
+    &amp;quot;local_port&amp;quot;:  xxxx,
+    &amp;quot;password&amp;quot;:    &amp;quot;xxxxxx&amp;quot;,
+    &amp;quot;method&amp;quot;:      &amp;quot;aes-128-cfb&amp;quot;,
+    &amp;quot;timeout&amp;quot;:     60
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;ChinaDNS configuration in &lt;code&gt;/etc/config/chinadns&lt;/code&gt;:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;config chinadns
+    ...
+    option chnroute &#39;/etc/shadowsocks/ignore.list&#39;
+    ...
+    option server &#39;[isp_dns],[private_pdnsd_dns]&#39;
+    ...
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Make sure &lt;code&gt;[private_pdnsd_dns]&lt;/code&gt; is the same IP:PORT as the remote pdnsd server.&lt;/p&gt;
+
+&lt;p&gt;ucitrack configuration in &lt;code&gt;/etc/config/ucitrack&lt;/code&gt;:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;config shadowsocks
+    option init &#39;shadowsocks&#39;
+
+config chinadns
+    option init &#39;chinadns&#39;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;DHCP configuration in &lt;code&gt;/etc/config/dhcp&lt;/code&gt;:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;config dnsmasq
+    list server &#39;127.0.0.1#5353&#39;
+    option noresolv &#39;1&#39;
+    option nohosts &#39;1&#39;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;redsocks2:ea9e3bd770b9144f6a284e7574cdf713&#34;&gt;RedSocks2&lt;/h2&gt;
+
+&lt;p&gt;Use RedSocks2 to bypass the proxy when the target site is reachable.&lt;/p&gt;
+
+&lt;p&gt;Download RedSocks2:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;http://sourceforge.net/projects/openwrt-dist/files/redsocks2/&#34;&gt;RedSocks2&lt;/a&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;http://sourceforge.net/projects/openwrt-dist/files/luci-app/redsocks2/&#34;&gt;luci-redsocks2&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Install RedSocks2:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;scp *.ipk root@192.168.1.1:/tmp
+opkg update
+opkg install xxx.ipk
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;RedSocks2 will take effect immediately.&lt;/p&gt;
+
+&lt;h2 id=&#34;upgrade-openwrt:ea9e3bd770b9144f6a284e7574cdf713&#34;&gt;Upgrade OpenWRT&lt;/h2&gt;
+
+&lt;p&gt;Download latest &lt;code&gt;*.ipk&lt;/code&gt; above.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;opkg update
+opkg upgrade ipset libopenssl resolveip iptables-mod-tproxy
+opkg install xxx.ipk
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Merge configuration files manually.&lt;/p&gt;
+
+&lt;p&gt;Update &lt;code&gt;ignore.list&lt;/code&gt;:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;wget -O- &#39;http://ftp.apnic.net/apnic/stats/apnic/delegated-apnic-latest&#39; | awk -F\| &#39;/CN\|ipv4/ { printf(&amp;quot;%s/%d\n&amp;quot;, $4, 32-log($5)/log(2)) }&#39; &amp;gt; ignore.list
+scp ignore.list root@192.168.1.1:/etc/shadowsocks/ignore.list
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;reboot
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;android-client:ea9e3bd770b9144f6a284e7574cdf713&#34;&gt;Android Client&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/shadowsocks/shadowsocks-android/releases&#34;&gt;shadowsocks-android&lt;/a&gt;.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Go 1.4.1 Build Failure and Solution</title>
+      <link>https://h12.me/note/go_build_failure/</link>
+      <pubDate>Thu, 29 Jan 2015 03:55:08 +0000</pubDate>
+      
+      <guid>https://h12.me/note/go_build_failure/</guid>
+      <description>&lt;p&gt;Today I tried to build Go 1.4.1 from source but it failed with this error:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;    go/src/liblink/anames9.c:6:29: fatal error: ../cmd/9l/9.out.h: No such file or directory
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;At first I thought the building routine might have be changed so I opened and read
+&lt;a href=&#34;http://golang.org/doc/install/source&#34;&gt;&lt;em&gt;Installing Go from Source&lt;/em&gt;&lt;/a&gt; again, carefully,
+and found nothing special.&lt;/p&gt;
+
+&lt;p&gt;Then I searched for the error source and it turned out that I should deleted
+&lt;code&gt;anames*.c&lt;/code&gt;, manually. There is no document and no automatic cleaning script, and
+you would have to figure it out yourself if no one ever mentioned it (&lt;a href=&#34;https://groups.google.com/d/msg/golang-nuts/wQoQqXOnOTo/QbubO2UebpUJ&#34;&gt;source&lt;/a&gt;).&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>How to configure a custom domain name in GAE?</title>
+      <link>https://h12.me/note/gae_custom_domain/</link>
+      <pubDate>Mon, 19 Jan 2015 09:32:04 +0000</pubDate>
+      
+      <guid>https://h12.me/note/gae_custom_domain/</guid>
+      <description>&lt;p&gt;Steps:&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;Visit &lt;a href=&#34;https://console.developers.google.com&#34;&gt;Developers Console&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;In your project: Compute -&amp;gt; App Engine -&amp;gt; Settings.&lt;/li&gt;
+&lt;li&gt;On the tab labelled CUSTOM DOMAINS, you can verify your domain and assign it
+and/or its subdomains to your GAE project.&lt;/li&gt;
+&lt;li&gt;Add the DNS settings provided by Google into the DNS server of your domain
+provider.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;Notes:&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;Only HTTP is supported, HTTPS is not.&lt;/li&gt;
+&lt;li&gt;It will not work if you only modify the DNS record without actually assigning
+the custom domain in the Developer Console.&lt;/li&gt;
+&lt;/ol&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>How to install a self-signed CA Certificate to Android 4.4</title>
+      <link>https://h12.me/note/install_ca_android/</link>
+      <pubDate>Sat, 17 Jan 2015 18:13:09 +0000</pubDate>
+      
+      <guid>https://h12.me/note/install_ca_android/</guid>
+      <description>&lt;p&gt;See this blog &lt;a href=&#34;https://samhobbs.co.uk/2013/12/remove-network-may-be-monitored-by-an-unknown-third-party-in-android-4-4-kitkat&#34;&gt;&lt;em&gt;Remove &amp;ldquo;Network May Be Monitored by an Unknown Third Party&amp;rdquo; in Android 4.4 KitKat&lt;/em&gt;&lt;/a&gt;.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Deploying GAE through a Proxy</title>
+      <link>https://h12.me/note/gae_deploy_via_proxy/</link>
+      <pubDate>Sun, 21 Dec 2014 07:58:34 +0000</pubDate>
+      
+      <guid>https://h12.me/note/gae_deploy_via_proxy/</guid>
+      <description>&lt;p&gt;A quick note:&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;p&gt;Set proxy&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;export HTTP_PROXY http://[host]:[port]
+export HTTPS_PROXY http://[host]:[port]
+&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Delete cacerts.txt under GAE SDK installation to disable SSL verification (
+make sure the proxy is safe before this step).&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Deploy.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;appcfg.py . --email=[address] --passin
+&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
+&lt;/ol&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>A Shorter Domain Name</title>
+      <link>https://h12.me/note/new_domain_h12/</link>
+      <pubDate>Tue, 16 Dec 2014 09:43:40 +0000</pubDate>
+      
+      <guid>https://h12.me/note/new_domain_h12/</guid>
+      <description>&lt;p&gt;This year, I decided not to renewal the previous domain name (hailiang.ws) last
+year, but to register a shorter one. There are two reasons:&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;Both the site URL and the email address will be cleaner.&lt;/li&gt;
+&lt;li&gt;A more friendly Go import path will be possible for my repositories on Github.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;After comparing various choices on major domain providers, I chose &lt;code&gt;h12.me&lt;/code&gt; as
+the new domain. It is the shortest but still meaningful domain that I can afford.
+&lt;code&gt;H&lt;/code&gt; is the initial letter of my given name, &lt;code&gt;12&lt;/code&gt; is simply the number of letters
+of my full name, and &lt;code&gt;.me&lt;/code&gt; is a top level domain quite suitable for a personal
+website.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Learning Resources on Parser Combinator</title>
+      <link>https://h12.me/note/parser_combinator_links/</link>
+      <pubDate>Mon, 04 Aug 2014 15:12:55 +0000</pubDate>
+      
+      <guid>https://h12.me/note/parser_combinator_links/</guid>
+      <description>&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;http://eprints.nottingham.ac.uk/237/&#34;&gt;&lt;em&gt;Monadic Parser Combinators&lt;/em&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://legacy.cs.uu.nl/daan/pubs.html#parsec&#34;&gt;&lt;em&gt;Parsec: Direct Style Monadic Parser Combinators for the Real World&lt;/em&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://www.cs.tufts.edu/~nr/cs257/archive/doaitse-swierstra/combinator-parsing-tutorial.pdf&#34;&gt;&lt;em&gt;Combinator Parsing: A Short Tutorial&lt;/em&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Gae on h12.me</title>
+    <link>https://h12.me/tags/gae/</link>
+    <description>Recent content in Gae on h12.me</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>Copyright (c) 2012-2014, Hǎiliàng Wáng; all rights reserved.</copyright>
+    <lastBuildDate>Mon, 19 Jan 2015 09:32:04 +0000</lastBuildDate>
+    <atom:link href="https://h12.me/tags/gae/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>How to configure a custom domain name in GAE?</title>
+      <link>https://h12.me/note/gae_custom_domain/</link>
+      <pubDate>Mon, 19 Jan 2015 09:32:04 +0000</pubDate>
+      
+      <guid>https://h12.me/note/gae_custom_domain/</guid>
+      <description>&lt;p&gt;Steps:&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;Visit &lt;a href=&#34;https://console.developers.google.com&#34;&gt;Developers Console&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;In your project: Compute -&amp;gt; App Engine -&amp;gt; Settings.&lt;/li&gt;
+&lt;li&gt;On the tab labelled CUSTOM DOMAINS, you can verify your domain and assign it
+and/or its subdomains to your GAE project.&lt;/li&gt;
+&lt;li&gt;Add the DNS settings provided by Google into the DNS server of your domain
+provider.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;Notes:&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;Only HTTP is supported, HTTPS is not.&lt;/li&gt;
+&lt;li&gt;It will not work if you only modify the DNS record without actually assigning
+the custom domain in the Developer Console.&lt;/li&gt;
+&lt;/ol&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Deploying GAE through a Proxy</title>
+      <link>https://h12.me/note/gae_deploy_via_proxy/</link>
+      <pubDate>Sun, 21 Dec 2014 07:58:34 +0000</pubDate>
+      
+      <guid>https://h12.me/note/gae_deploy_via_proxy/</guid>
+      <description>&lt;p&gt;A quick note:&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;p&gt;Set proxy&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;export HTTP_PROXY http://[host]:[port]
+export HTTPS_PROXY http://[host]:[port]
+&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Delete cacerts.txt under GAE SDK installation to disable SSL verification (
+make sure the proxy is safe before this step).&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Deploy.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;appcfg.py . --email=[address] --passin
+&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
+&lt;/ol&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>
