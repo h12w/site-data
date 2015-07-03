@@ -3,9 +3,8 @@ package main
 import (
 	"time"
 
-	"github.com/hailiang/site/serve"
 	"github.com/stretchr/graceful"
-	//"h12.me/site/serve"
+	"h12.me/site/serve"
 )
 
 func main() {
