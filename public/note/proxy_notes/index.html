@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title> Deploying GAE through a Proxy </title>
+        <title> A Comprehensive Note about Proxy Settings </title>
         <link rel="shortcut icon" href="/img/favicon.png" />
 
         <style>
@@ -70,9 +70,26 @@
 
         <main class="container">
             <article class="single">
-                <h1>Deploying GAE through a Proxy</h1>
+                <h1>A Comprehensive Note about Proxy Settings</h1>
                 <div class="article-body hyphenate">
-                <p>A quick note:</p>
+                
+
+<h2 id="git:c75aaf27ff78e6c7de91570c27fb0dfd">Git</h2>
+
+<pre><code class="language-bash">&gt; cat ~/.gitconfig
+[http]
+	proxy = socks5://[host]:[port]
+[https]
+	proxy = socks5://[host]:[port]
+</code></pre>
+
+<h2 id="curl-homebrew:c75aaf27ff78e6c7de91570c27fb0dfd">Curl (Homebrew)</h2>
+
+<pre><code class="language-bash">&gt; cat ~/.curlrc
+socks5 = &quot;[host]:[port]&quot;
+</code></pre>
+
+<h2 id="gae:c75aaf27ff78e6c7de91570c27fb0dfd">GAE</h2>
 
 <ol>
 <li><p>Set proxy</p>
@@ -92,7 +109,7 @@ make sure the proxy is safe before this step).</p></li>
 
                 </div>
                 <div>
-                    <div id="article-time">21 December 2014</div>
+                    <div id="article-time">8 July 2015</div>
                     <ul id="tags">
   
     <li><a href="/tags/gae">GAE</a> </li>

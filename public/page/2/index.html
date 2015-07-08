@@ -73,6 +73,21 @@
         
             <article class="frontpage">
                 <h1>
+                    <a href="http://h12.me/note/generate_xsd_from_xml/">How to Generate XSD Schema from XML?</a>
+                    <span class="line"></span>
+                </h1>
+                <span class="time">23 April 2015</span>
+                <div class="article-body hyphenate">
+                    <p><a href="http://archive.apache.org/dist/xmlbeans/binaries">Apache XMLBeans</a> is an old tool but still functioning. Download and uncompress the latest binary release, then run inst2xsd under bin folder (needs JDK).</p>
+
+<pre><code>inst2xsd xxx.xml
+</code></pre>
+
+                </div>
+            </article>
+        
+            <article class="frontpage">
+                <h1>
                     <a href="http://h12.me/article/password_management/">A Developer&#39;s Guide to Password Management</a>
                     <span class="line"></span>
                 </h1>
@@ -555,34 +570,6 @@ the custom domain in the Developer Console.</li>
                 <span class="time">17 January 2015</span>
                 <div class="article-body hyphenate">
                     <p>See this blog <a href="https://samhobbs.co.uk/2013/12/remove-network-may-be-monitored-by-an-unknown-third-party-in-android-4-4-kitkat"><em>Remove &ldquo;Network May Be Monitored by an Unknown Third Party&rdquo; in Android 4.4 KitKat</em></a>.</p>
-
-                </div>
-            </article>
-        
-            <article class="frontpage">
-                <h1>
-                    <a href="http://h12.me/note/gae_deploy_via_proxy/">Deploying GAE through a Proxy</a>
-                    <span class="line"></span>
-                </h1>
-                <span class="time">21 December 2014</span>
-                <div class="article-body hyphenate">
-                    <p>A quick note:</p>
-
-<ol>
-<li><p>Set proxy</p>
-
-<pre><code class="language-bash">export HTTP_PROXY http://[host]:[port]
-export HTTPS_PROXY http://[host]:[port]
-</code></pre></li>
-
-<li><p>Delete cacerts.txt under GAE SDK installation to disable SSL verification (
-make sure the proxy is safe before this step).</p></li>
-
-<li><p>Deploy.</p>
-
-<pre><code class="language-bash">appcfg.py . --email=[address] --passin
-</code></pre></li>
-</ol>
 
                 </div>
             </article>

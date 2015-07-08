@@ -7,8 +7,51 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>Copyright (c) 2012-2015, Hǎiliàng Wáng; all rights reserved.</copyright>
-    <lastBuildDate>Mon, 29 Jun 2015 16:34:59 +0800</lastBuildDate>
+    <lastBuildDate>Wed, 08 Jul 2015 07:58:34 +0000</lastBuildDate>
     <atom:link href="http://h12.me/tags/golang/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>A Comprehensive Note about Proxy Settings</title>
+      <link>http://h12.me/note/proxy_notes/</link>
+      <pubDate>Wed, 08 Jul 2015 07:58:34 +0000</pubDate>
+      
+      <guid>http://h12.me/note/proxy_notes/</guid>
+      <description>
+
+&lt;h2 id=&#34;git:c75aaf27ff78e6c7de91570c27fb0dfd&#34;&gt;Git&lt;/h2&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;&amp;gt; cat ~/.gitconfig
+[http]
+	proxy = socks5://[host]:[port]
+[https]
+	proxy = socks5://[host]:[port]
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;curl-homebrew:c75aaf27ff78e6c7de91570c27fb0dfd&#34;&gt;Curl (Homebrew)&lt;/h2&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;&amp;gt; cat ~/.curlrc
+socks5 = &amp;quot;[host]:[port]&amp;quot;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;gae:c75aaf27ff78e6c7de91570c27fb0dfd&#34;&gt;GAE&lt;/h2&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;p&gt;Set proxy&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;export HTTP_PROXY http://[host]:[port]
+export HTTPS_PROXY http://[host]:[port]
+&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Delete cacerts.txt under GAE SDK installation to disable SSL verification (
+make sure the proxy is safe before this step).&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Deploy.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;appcfg.py . --email=[address] --passin
+&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
+&lt;/ol&gt;
+</description>
+    </item>
     
     <item>
       <title>Notes on the Design of Go</title>
@@ -231,32 +274,6 @@ and found nothing special.&lt;/p&gt;
 &lt;p&gt;Then I searched for the error source and it turned out that I should deleted
 &lt;code&gt;anames*.c&lt;/code&gt;, manually. There is no document and no automatic cleaning script, and
 you would have to figure it out yourself if no one ever mentioned it (&lt;a href=&#34;https://groups.google.com/d/msg/golang-nuts/wQoQqXOnOTo/QbubO2UebpUJ&#34;&gt;source&lt;/a&gt;).&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Deploying GAE through a Proxy</title>
-      <link>http://h12.me/note/gae_deploy_via_proxy/</link>
-      <pubDate>Sun, 21 Dec 2014 07:58:34 +0000</pubDate>
-      
-      <guid>http://h12.me/note/gae_deploy_via_proxy/</guid>
-      <description>&lt;p&gt;A quick note:&lt;/p&gt;
-
-&lt;ol&gt;
-&lt;li&gt;&lt;p&gt;Set proxy&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;export HTTP_PROXY http://[host]:[port]
-export HTTPS_PROXY http://[host]:[port]
-&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;Delete cacerts.txt under GAE SDK installation to disable SSL verification (
-make sure the proxy is safe before this step).&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;Deploy.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;appcfg.py . --email=[address] --passin
-&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
-&lt;/ol&gt;
 </description>
     </item>
     

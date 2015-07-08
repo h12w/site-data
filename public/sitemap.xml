@@ -3,8 +3,13 @@
   
   <url>
     <loc>http://h12.me/</loc>
-    <lastmod>2015-06-30T12:43:19+08:00</lastmod>
+    <lastmod>2015-07-08T07:58:34+00:00</lastmod>
     <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://h12.me/note/proxy_notes/</loc>
+    <lastmod>2015-07-08T07:58:34+00:00</lastmod>
   </url>
   
   <url>
@@ -65,11 +70,6 @@
   <url>
     <loc>http://h12.me/note/install_ca_android/</loc>
     <lastmod>2015-01-17T18:13:09+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://h12.me/note/gae_deploy_via_proxy/</loc>
-    <lastmod>2014-12-21T07:58:34+00:00</lastmod>
   </url>
   
   <url>

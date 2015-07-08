@@ -7,8 +7,51 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>Copyright (c) 2012-2015, Hǎiliàng Wáng; all rights reserved.</copyright>
-    <lastBuildDate>Tue, 30 Jun 2015 12:43:19 +0800</lastBuildDate>
+    <lastBuildDate>Wed, 08 Jul 2015 07:58:34 +0000</lastBuildDate>
     <atom:link href="http://h12.me/note/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>A Comprehensive Note about Proxy Settings</title>
+      <link>http://h12.me/note/proxy_notes/</link>
+      <pubDate>Wed, 08 Jul 2015 07:58:34 +0000</pubDate>
+      
+      <guid>http://h12.me/note/proxy_notes/</guid>
+      <description>
+
+&lt;h2 id=&#34;git:c75aaf27ff78e6c7de91570c27fb0dfd&#34;&gt;Git&lt;/h2&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;&amp;gt; cat ~/.gitconfig
+[http]
+	proxy = socks5://[host]:[port]
+[https]
+	proxy = socks5://[host]:[port]
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;curl-homebrew:c75aaf27ff78e6c7de91570c27fb0dfd&#34;&gt;Curl (Homebrew)&lt;/h2&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;&amp;gt; cat ~/.curlrc
+socks5 = &amp;quot;[host]:[port]&amp;quot;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;gae:c75aaf27ff78e6c7de91570c27fb0dfd&#34;&gt;GAE&lt;/h2&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;p&gt;Set proxy&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;export HTTP_PROXY http://[host]:[port]
+export HTTPS_PROXY http://[host]:[port]
+&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Delete cacerts.txt under GAE SDK installation to disable SSL verification (
+make sure the proxy is safe before this step).&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Deploy.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;appcfg.py . --email=[address] --passin
+&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
+&lt;/ol&gt;
+</description>
+    </item>
     
     <item>
       <title>Phonetic Notations</title>
@@ -334,32 +377,6 @@ the custom domain in the Developer Console.&lt;/li&gt;
       
       <guid>http://h12.me/note/install_ca_android/</guid>
       <description>&lt;p&gt;See this blog &lt;a href=&#34;https://samhobbs.co.uk/2013/12/remove-network-may-be-monitored-by-an-unknown-third-party-in-android-4-4-kitkat&#34;&gt;&lt;em&gt;Remove &amp;ldquo;Network May Be Monitored by an Unknown Third Party&amp;rdquo; in Android 4.4 KitKat&lt;/em&gt;&lt;/a&gt;.&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Deploying GAE through a Proxy</title>
-      <link>http://h12.me/note/gae_deploy_via_proxy/</link>
-      <pubDate>Sun, 21 Dec 2014 07:58:34 +0000</pubDate>
-      
-      <guid>http://h12.me/note/gae_deploy_via_proxy/</guid>
-      <description>&lt;p&gt;A quick note:&lt;/p&gt;
-
-&lt;ol&gt;
-&lt;li&gt;&lt;p&gt;Set proxy&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;export HTTP_PROXY http://[host]:[port]
-export HTTPS_PROXY http://[host]:[port]
-&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;Delete cacerts.txt under GAE SDK installation to disable SSL verification (
-make sure the proxy is safe before this step).&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;Deploy.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;appcfg.py . --email=[address] --passin
-&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
-&lt;/ol&gt;
 </description>
     </item>
     

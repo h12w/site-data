@@ -73,6 +73,51 @@
         
             <article class="frontpage">
                 <h1>
+                    <a href="http://h12.me/note/proxy_notes/">A Comprehensive Note about Proxy Settings</a>
+                    <span class="line"></span>
+                </h1>
+                <span class="time">8 July 2015</span>
+                <div class="article-body hyphenate">
+                    
+
+<h2 id="git:c75aaf27ff78e6c7de91570c27fb0dfd">Git</h2>
+
+<pre><code class="language-bash">&gt; cat ~/.gitconfig
+[http]
+	proxy = socks5://[host]:[port]
+[https]
+	proxy = socks5://[host]:[port]
+</code></pre>
+
+<h2 id="curl-homebrew:c75aaf27ff78e6c7de91570c27fb0dfd">Curl (Homebrew)</h2>
+
+<pre><code class="language-bash">&gt; cat ~/.curlrc
+socks5 = &quot;[host]:[port]&quot;
+</code></pre>
+
+<h2 id="gae:c75aaf27ff78e6c7de91570c27fb0dfd">GAE</h2>
+
+<ol>
+<li><p>Set proxy</p>
+
+<pre><code class="language-bash">export HTTP_PROXY http://[host]:[port]
+export HTTPS_PROXY http://[host]:[port]
+</code></pre></li>
+
+<li><p>Delete cacerts.txt under GAE SDK installation to disable SSL verification (
+make sure the proxy is safe before this step).</p></li>
+
+<li><p>Deploy.</p>
+
+<pre><code class="language-bash">appcfg.py . --email=[address] --passin
+</code></pre></li>
+</ol>
+
+                </div>
+            </article>
+        
+            <article class="frontpage">
+                <h1>
                     <a href="http://h12.me/note/phonetic_notations/">Phonetic Notations</a>
                     <span class="line"></span>
                 </h1>
@@ -334,21 +379,6 @@ passwd = ...
 <h2 id="authorize-public-key-at-remote-server:1f1c4e8b5b8b665e71e6a80f55c5a955">Authorize public key at remote server</h2>
 
 <pre><code class="language-bash">cat ~/.ssh/id_rsa.pub | ssh hailiang@remote-server 'mkdir -p .ssh; umask 077; cat &gt;&gt;.ssh/authorized_keys'
-</code></pre>
-
-                </div>
-            </article>
-        
-            <article class="frontpage">
-                <h1>
-                    <a href="http://h12.me/note/generate_xsd_from_xml/">How to Generate XSD Schema from XML?</a>
-                    <span class="line"></span>
-                </h1>
-                <span class="time">23 April 2015</span>
-                <div class="article-body hyphenate">
-                    <p><a href="http://archive.apache.org/dist/xmlbeans/binaries">Apache XMLBeans</a> is an old tool but still functioning. Download and uncompress the latest binary release, then run inst2xsd under bin folder (needs JDK).</p>
-
-<pre><code>inst2xsd xxx.xml
 </code></pre>
 
                 </div>
