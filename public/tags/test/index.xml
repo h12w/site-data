@@ -18,9 +18,9 @@
       <guid>http://h12.me/project/gspec/</guid>
       <description>
 
-&lt;p&gt;&lt;a href=&#34;https://travis-ci.org/hailiang/gspec&#34;&gt;&lt;img src=&#34;https://travis-ci.org/hailiang/gspec.png?branch=master&#34; alt=&#34;Build Status&#34; /&gt;
+&lt;p&gt;&lt;a href=&#34;https://travis-ci.org/h12w/gspec&#34;&gt;&lt;img src=&#34;https://travis-ci.org/h12w/gspec.png?branch=master&#34; alt=&#34;Build Status&#34; /&gt;
 &lt;/a&gt;
-&lt;a href=&#34;https://coveralls.io/r/hailiang/gspec?branch=master&#34;&gt;&lt;img src=&#34;https://coveralls.io/repos/hailiang/gspec/badge.png?branch=master&#34; alt=&#34;Coverage Status&#34; /&gt;
+&lt;a href=&#34;https://coveralls.io/r/h12w/gspec?branch=master&#34;&gt;&lt;img src=&#34;https://coveralls.io/repos/h12w/gspec/badge.png?branch=master&#34; alt=&#34;Coverage Status&#34; /&gt;
 &lt;/a&gt;
 &lt;a href=&#34;https://godoc.org/h12.me/gspec&#34;&gt;&lt;img src=&#34;https://godoc.org/h12.me/gspec?status.png&#34; alt=&#34;GoDoc&#34; /&gt;
 &lt;/a&gt;&lt;/p&gt;

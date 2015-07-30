@@ -711,9 +711,9 @@ process or magic numbers, but only reasoning and computation.&lt;/p&gt;
       <guid>http://h12.me/project/getgo/</guid>
       <description>
 
-&lt;p&gt;&lt;a href=&#34;https://godoc.org/github.com/hailiang/getgo&#34;&gt;&lt;img src=&#34;https://godoc.org/github.com/hailiang/getgo?status.png&#34; alt=&#34;GoDoc&#34; /&gt;
+&lt;p&gt;&lt;a href=&#34;https://godoc.org/github.com/h12w/getgo&#34;&gt;&lt;img src=&#34;https://godoc.org/github.com/h12w/getgo?status.png&#34; alt=&#34;GoDoc&#34; /&gt;
 &lt;/a&gt;
-&lt;a href=&#34;https://travis-ci.org/hailiang/getgo&#34;&gt;&lt;img src=&#34;https://travis-ci.org/hailiang/getgo.svg?branch=master&#34; alt=&#34;Build Status&#34; /&gt;
+&lt;a href=&#34;https://travis-ci.org/h12w/getgo&#34;&gt;&lt;img src=&#34;https://travis-ci.org/h12w/getgo.svg?branch=master&#34; alt=&#34;Build Status&#34; /&gt;
 &lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;Getgo is a concurrent, simple and extensible web scraping framework written in &lt;a href=&#34;http://golang.org&#34;&gt;Go&lt;/a&gt;.&lt;/p&gt;
@@ -722,7 +722,7 @@ process or magic numbers, but only reasoning and computation.&lt;/p&gt;
 
 &lt;h3 id=&#34;get-getgo:36c27f8231c10e0173d2fc93d9342435&#34;&gt;Get Getgo&lt;/h3&gt;
 
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;go get -u github.com/hailiang/getgo
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;go get -u github.com/h12w/getgo
 &lt;/code&gt;&lt;/pre&gt;
 
 &lt;h3 id=&#34;define-a-task:36c27f8231c10e0173d2fc93d9342435&#34;&gt;Define a task&lt;/h3&gt;
