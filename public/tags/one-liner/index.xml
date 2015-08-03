@@ -7,8 +7,26 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>Copyright (c) 2012-2015, Hǎiliàng Wáng; all rights reserved.</copyright>
-    <lastBuildDate>Tue, 28 Apr 2015 10:59:02 +0800</lastBuildDate>
+    <lastBuildDate>Mon, 03 Aug 2015 16:55:49 +0800</lastBuildDate>
     <atom:link href="http://h12.me/tags/one-liner/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>How to Remove All Exited Docker Containers?</title>
+      <link>http://h12.me/note/remove_all_exited_docker_containers/</link>
+      <pubDate>Mon, 03 Aug 2015 16:55:49 +0800</pubDate>
+      
+      <guid>http://h12.me/note/remove_all_exited_docker_containers/</guid>
+      <description>&lt;p&gt;Fish:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-fish&#34;&gt;docker rm (docker ps --quiet --filter=status=exited)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Bash:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;docker rm $(docker ps --quiet --filter=status=exited)
+&lt;/code&gt;&lt;/pre&gt;
+</description>
+    </item>
     
     <item>
       <title>Tips on SSH</title>

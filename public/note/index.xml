@@ -7,8 +7,26 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>Copyright (c) 2012-2015, Hǎiliàng Wáng; all rights reserved.</copyright>
-    <lastBuildDate>Wed, 08 Jul 2015 07:58:34 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 03 Aug 2015 16:55:49 +0800</lastBuildDate>
     <atom:link href="http://h12.me/note/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>How to Remove All Exited Docker Containers?</title>
+      <link>http://h12.me/note/remove_all_exited_docker_containers/</link>
+      <pubDate>Mon, 03 Aug 2015 16:55:49 +0800</pubDate>
+      
+      <guid>http://h12.me/note/remove_all_exited_docker_containers/</guid>
+      <description>&lt;p&gt;Fish:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-fish&#34;&gt;docker rm (docker ps --quiet --filter=status=exited)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Bash:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;docker rm $(docker ps --quiet --filter=status=exited)
+&lt;/code&gt;&lt;/pre&gt;
+</description>
+    </item>
     
     <item>
       <title>A Comprehensive Note about Proxy Settings</title>
@@ -439,35 +457,6 @@ used by LibreOffice&lt;/li&gt;
 dictionary file&lt;/li&gt;
 &lt;li&gt;A test &lt;a href=&#34;http://clagnut.com/sandbox/softhyphen/&#34;&gt;page&lt;/a&gt; for soft hyphen&lt;/li&gt;
 &lt;/ul&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>About 301 Moved Permanently</title>
-      <link>http://h12.me/note/301_redirect/</link>
-      <pubDate>Fri, 25 Jul 2014 03:39:05 +0000</pubDate>
-      
-      <guid>http://h12.me/note/301_redirect/</guid>
-      <description>&lt;p&gt;When building a website, there is one inevitable thing:
-&lt;a href=&#34;http://en.wikipedia.org/wiki/HTTP_301&#34;&gt;301 permanent redirection&lt;/a&gt;. The cases
-that have to involve 301 includes:&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;Redirection from www subdomain to naked domain or vise versa.&lt;/li&gt;
-&lt;li&gt;Redirection from slashed pretty URL to unslashed URL or vise versa.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;301 is easy to implement with Go:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-go&#34;&gt;func redirect301(w http.ResponseWriter, url string) {
-    w.Header().Set(&amp;quot;Location&amp;quot;, url)
-    w.WriteHeader(http.StatusMovedPermanently)
-}
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;There is one more thing that needs attention: The root path of a domain always
-contains a slash (GET / in HTTP request), regardless the user enters the slash
-or not, so the root path needs no redirection.&lt;/p&gt;
 </description>
     </item>
     

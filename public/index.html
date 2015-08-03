@@ -73,6 +73,26 @@
         
             <article class="frontpage">
                 <h1>
+                    <a href="http://h12.me/note/remove_all_exited_docker_containers/">How to Remove All Exited Docker Containers?</a>
+                    <span class="line"></span>
+                </h1>
+                <span class="time">3 August 2015</span>
+                <div class="article-body hyphenate">
+                    <p>Fish:</p>
+
+<pre><code class="language-fish">docker rm (docker ps --quiet --filter=status=exited)
+</code></pre>
+
+<p>Bash:</p>
+
+<pre><code class="language-bash">docker rm $(docker ps --quiet --filter=status=exited)
+</code></pre>
+
+                </div>
+            </article>
+        
+            <article class="frontpage">
+                <h1>
                     <a href="http://h12.me/note/proxy_notes/">A Comprehensive Note about Proxy Settings</a>
                     <span class="line"></span>
                 </h1>
@@ -357,28 +377,6 @@ if v.Kind() == reflect.String {
 host = host:port
 user = ...
 passwd = ...
-</code></pre>
-
-                </div>
-            </article>
-        
-            <article class="frontpage">
-                <h1>
-                    <a href="http://h12.me/note/tips_on_ssh/">Tips on SSH</a>
-                    <span class="line"></span>
-                </h1>
-                <span class="time">28 April 2015</span>
-                <div class="article-body hyphenate">
-                    
-
-<h2 id="generate-ssh-keys:1f1c4e8b5b8b665e71e6a80f55c5a955">Generate SSH keys</h2>
-
-<pre><code class="language-bash">ssh-keygen -C w@h12.me
-</code></pre>
-
-<h2 id="authorize-public-key-at-remote-server:1f1c4e8b5b8b665e71e6a80f55c5a955">Authorize public key at remote server</h2>
-
-<pre><code class="language-bash">cat ~/.ssh/id_rsa.pub | ssh user@host 'mkdir -p .ssh; umask 077; cat &gt;&gt;.ssh/authorized_keys'
 </code></pre>
 
                 </div>

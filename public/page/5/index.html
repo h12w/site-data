@@ -73,6 +73,31 @@
         
             <article class="frontpage">
                 <h1>
+                    <a href="http://h12.me/note/narrow_fonts/">A List of Narrow Fonts for Titles</a>
+                    <span class="line"></span>
+                </h1>
+                <span class="time">1 July 2014</span>
+                <div class="article-body hyphenate">
+                    <ul>
+<li>Economica</li>
+<li>Fjalla One</li>
+<li>League Gothic</li>
+<li>Medula One</li>
+<li>Open Sans Condensed</li>
+<li>Oswald</li>
+<li>Pathway Gothic One</li>
+<li>PT Sans Narrow</li>
+<li>Rationale</li>
+<li>Six Caps</li>
+<li>Tulpen One</li>
+<li>Yanone Kaffeesatz</li>
+</ul>
+
+                </div>
+            </article>
+        
+            <article class="frontpage">
+                <h1>
                     <a href="http://h12.me/note/font_links/">Links about Font Choosing</a>
                     <span class="line"></span>
                 </h1>
@@ -397,127 +422,6 @@ func TestAll(t *testing.T) {
 
 <pre><code class="language-bash">go test -focus 1/1
 </code></pre>
-
-                </div>
-            </article>
-        
-            <article class="frontpage">
-                <h1>
-                    <a href="http://h12.me/project/html_query/">html-query: a fluent and functional approach to querying HTML DOM</a>
-                    <span class="line"></span>
-                </h1>
-                <span class="time">20 January 2014</span>
-                <div class="article-body hyphenate">
-                    
-
-<p>html-query is a Go package that provides a fluent and functional interface for
-querying HTML DOM. It is based on <a href="http://code.google.com/p/go.net/html">go.net/html</a>.</p>
-
-<h2 id="examples:c9c332b4cde328f092b2b6058a047b6b">Examples</h2>
-
-<ol>
-<li><p>A simple example (under &ldquo;examples&rdquo; directory)</p>
-
-<pre><code class="language-go">r := get(`http://blog.golang.org/index`)
-defer r.Close()
-root, err := query.Parse(r)
-checkError(err)
-root.Div(Id(&quot;content&quot;)).Children(Class(&quot;blogtitle&quot;)).For(func(item *query.Node) {
-    href := item.Ahref().Href()
-    date := item.Span(Class(&quot;date&quot;)).Text()
-    tags := item.Span(Class(&quot;tags&quot;)).Text()
-    // ......
-})
-</code></pre></li>
-
-<li><p>Generator of html-query (under &ldquo;gen&rdquo; directory)</p></li>
-</ol>
-
-<p>A large part of html-query is automatically generated from HTML spec. The
-spec is in HTML format, so the generator parses it using html-query itself.</p>
-
-<h2 id="design:c9c332b4cde328f092b2b6058a047b6b">Design</h2>
-
-<p>Here is a simple explanation of the design of html-query.</p>
-
-<h3 id="functional-query-expressions:c9c332b4cde328f092b2b6058a047b6b">Functional query expressions</h3>
-
-<p>All functional definitions are defined in html-query/expr package.</p>
-
-<ol>
-<li><p>Checker and checker composition<br />
-A checker is a function that accept and conditionally returns a *html.Node.</p>
-
-<pre><code class="language-go">type Checker func(*html.Node) *html.Node
-</code></pre>
-
-<p>Here are some checker examples:</p>
-
-<pre><code>Id(&quot;id1&quot;)
-Class(&quot;c1&quot;)
-Div
-Abbr
-H1
-H2
-</code></pre>
-
-<p>Checkers can be combined as boolean expressions:</p>
-
-<pre><code class="language-go">And(Id(&quot;id1&quot;), Class(&quot;c1&quot;))
-Or(Class(&quot;c1&quot;), Class(&quot;c2&quot;))
-And(Class(&quot;c1&quot;), Not(Class(&quot;c2&quot;)))
-</code></pre></li>
-
-<li><p>Checker builder<br />
-A checker builder is a function that returns a checker. &ldquo;Id&rdquo;, &ldquo;Class&rdquo;, &ldquo;And&rdquo;,
-&ldquo;Or&rdquo;, &ldquo;Not&rdquo; shown above are all checker builders. There are also some checker
-builder builder (function that returns a checker builder) defined in
-html-query when needed.</p></li>
-</ol>
-
-<h3 id="fluent-interface:c9c332b4cde328f092b2b6058a047b6b">Fluent interface</h3>
-
-<p>Fluent interface (<a href="http://en.wikipedia.org/wiki/Fluent_interface">http://en.wikipedia.org/wiki/Fluent_interface</a>) are defined in
-html-query package.</p>
-
-<ol>
-<li><p>Root node<br />
-Function Parse returns the root node of an html document.</p></li>
-
-<li><p>Node finder<br />
-Method Node.Find implements a BFS search for a node, e.g.</p>
-
-<pre><code class="language-go">node.Find(Div, Class(&quot;id1&quot;))
-</code></pre>
-
-<p>But usually you can write the short form:</p>
-
-<pre><code class="language-go">node.Div(Class(&quot;id1&quot;))
-</code></pre></li>
-
-<li><p>Attribute getter
-Method Node.Attr can be used to get the value (or a regular expression
-submatch of the value) of a node, e.g.</p>
-
-<pre><code class="language-go">node.Attr(&quot;Id&quot;)
-node.Attr(&quot;href&quot;, &quot;\(.*)&quot;)
-</code></pre>
-
-<p>But usually you can write the short form:</p>
-
-<pre><code class="language-go">node.Id()
-node.Href(&quot;\(.*)&quot;)
-</code></pre></li>
-
-<li><p>Node iterator<br />
-Method Node.Children and Node.Descendants each returns a node iterator
-(NodeIter). Method NodeIter.For can be used to loop through these nodes.</p></li>
-</ol>
-
-<h2 id="alternative:c9c332b4cde328f092b2b6058a047b6b">Alternative</h2>
-
-<p>If you prefer a jquery like DSL rather than functional way, you might want to
-try <a href="https://github.com/PuerkitoBio/goquery">goquery</a>.</p>
 
                 </div>
             </article>

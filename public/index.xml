@@ -7,8 +7,26 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>Copyright (c) 2012-2015, Hǎiliàng Wáng; all rights reserved.</copyright>
-    <lastBuildDate>Wed, 08 Jul 2015 07:58:34 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 03 Aug 2015 16:55:49 +0800</lastBuildDate>
     <atom:link href="http://h12.me/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>How to Remove All Exited Docker Containers?</title>
+      <link>http://h12.me/note/remove_all_exited_docker_containers/</link>
+      <pubDate>Mon, 03 Aug 2015 16:55:49 +0800</pubDate>
+      
+      <guid>http://h12.me/note/remove_all_exited_docker_containers/</guid>
+      <description>&lt;p&gt;Fish:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-fish&#34;&gt;docker rm (docker ps --quiet --filter=status=exited)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Bash:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;docker rm $(docker ps --quiet --filter=status=exited)
+&lt;/code&gt;&lt;/pre&gt;
+</description>
+    </item>
     
     <item>
       <title>A Comprehensive Note about Proxy Settings</title>
@@ -819,20 +837,6 @@ the new domain. It is the shortest but still meaningful domain that I can afford
 &lt;code&gt;H&lt;/code&gt; is the initial letter of my given name, &lt;code&gt;12&lt;/code&gt; is simply the number of letters
 of my full name, and &lt;code&gt;.me&lt;/code&gt; is a top level domain quite suitable for a personal
 website.&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Learning Resources on Parser Combinator</title>
-      <link>http://h12.me/note/parser_combinator_links/</link>
-      <pubDate>Mon, 04 Aug 2014 15:12:55 +0000</pubDate>
-      
-      <guid>http://h12.me/note/parser_combinator_links/</guid>
-      <description>&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;http://eprints.nottingham.ac.uk/237/&#34;&gt;&lt;em&gt;Monadic Parser Combinators&lt;/em&gt;&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;http://legacy.cs.uu.nl/daan/pubs.html#parsec&#34;&gt;&lt;em&gt;Parsec: Direct Style Monadic Parser Combinators for the Real World&lt;/em&gt;&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;http://www.cs.tufts.edu/~nr/cs257/archive/doaitse-swierstra/combinator-parsing-tutorial.pdf&#34;&gt;&lt;em&gt;Combinator Parsing: A Short Tutorial&lt;/em&gt;&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
 </description>
     </item>
     
