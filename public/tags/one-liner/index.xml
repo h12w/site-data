@@ -11,19 +11,13 @@
     <atom:link href="http://h12.me/tags/one-liner/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
-      <title>How to Remove All Exited Docker Containers?</title>
+      <title>How to Remove All Exited Containers &amp; Dangling Images for Docker?</title>
       <link>http://h12.me/note/remove_all_exited_docker_containers/</link>
       <pubDate>Mon, 03 Aug 2015 16:55:49 +0800</pubDate>
       
       <guid>http://h12.me/note/remove_all_exited_docker_containers/</guid>
-      <description>&lt;p&gt;Fish:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-fish&#34;&gt;docker rm (docker ps --quiet --filter=status=exited)
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Bash:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;docker rm $(docker ps --quiet --filter=status=exited)
+      <description>&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;docker ps --quiet --filter=status=exited | xargs docker rm
+docker images --no-trunc=true --filter=&amp;quot;dangling=true&amp;quot; --quiet=true | xargs docker rmi
 &lt;/code&gt;&lt;/pre&gt;
 </description>
     </item>

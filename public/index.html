@@ -73,19 +73,13 @@
         
             <article class="frontpage">
                 <h1>
-                    <a href="http://h12.me/note/remove_all_exited_docker_containers/">How to Remove All Exited Docker Containers?</a>
+                    <a href="http://h12.me/note/remove_all_exited_docker_containers/">How to Remove All Exited Containers &amp; Dangling Images for Docker?</a>
                     <span class="line"></span>
                 </h1>
                 <span class="time">3 August 2015</span>
                 <div class="article-body hyphenate">
-                    <p>Fish:</p>
-
-<pre><code class="language-fish">docker rm (docker ps --quiet --filter=status=exited)
-</code></pre>
-
-<p>Bash:</p>
-
-<pre><code class="language-bash">docker rm $(docker ps --quiet --filter=status=exited)
+                    <pre><code class="language-bash">docker ps --quiet --filter=status=exited | xargs docker rm
+docker images --no-trunc=true --filter=&quot;dangling=true&quot; --quiet=true | xargs docker rmi
 </code></pre>
 
                 </div>
