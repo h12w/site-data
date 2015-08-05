@@ -17,7 +17,9 @@
       
       <guid>http://h12.me/note/remove_all_exited_docker_containers/</guid>
       <description>&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;docker ps --quiet --filter=status=exited | xargs docker rm
-docker images --no-trunc=true --filter=&amp;quot;dangling=true&amp;quot; --quiet=true | xargs docker rmi
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;docker images --no-trunc=true --filter=&amp;quot;dangling=true&amp;quot; --quiet=true | xargs docker rmi
 &lt;/code&gt;&lt;/pre&gt;
 </description>
     </item>
