@@ -81,7 +81,12 @@
 
 <h2 id="authorize-public-key-at-remote-server:1f1c4e8b5b8b665e71e6a80f55c5a955">Authorize public key at remote server</h2>
 
-<pre><code class="language-bash">cat ~/.ssh/id_rsa.pub | ssh user@host 'mkdir -p .ssh; umask 077; cat &gt;&gt;.ssh/authorized_keys'
+<pre><code class="language-bash">ssh-copy-id user@host
+</code></pre>
+
+<p>On Mac OSX, <code>ssh-copy-id</code> should be installed first.</p>
+
+<pre><code class="language-bash">brew install ssh-copy-id
 </code></pre>
 
                 </div>
