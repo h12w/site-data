@@ -32,6 +32,11 @@
 
 &lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;brew install ssh-copy-id
 &lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;generate-pem:1f1c4e8b5b8b665e71e6a80f55c5a955&#34;&gt;Generate PEM&lt;/h2&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;ssh-keygen -f ~/.ssh/id_rsa -e -m pem &amp;gt; ~/.ssh/id_rsa.pem
+&lt;/code&gt;&lt;/pre&gt;
 </description>
     </item>
     
