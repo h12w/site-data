@@ -7,8 +7,47 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>Copyright (c) 2012-2015, Hǎiliàng Wáng; all rights reserved.</copyright>
-    <lastBuildDate>Sun, 31 Jan 2016 14:49:01 +0800</lastBuildDate>
+    <lastBuildDate>Sun, 31 Jan 2016 20:31:06 +0800</lastBuildDate>
     <atom:link href="http://h12.me/note/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Sending Email from Gmail using Golang</title>
+      <link>http://h12.me/note/send-email-from-gmail/</link>
+      <pubDate>Sun, 31 Jan 2016 20:31:06 +0800</pubDate>
+      
+      <guid>http://h12.me/note/send-email-from-gmail/</guid>
+      <description>&lt;ol&gt;
+&lt;li&gt;&lt;p&gt;Turn on &lt;a href=&#34;http://accounts.google.com/SmsAuthConfig&#34;&gt;&amp;ldquo;2-Step Verification&amp;rdquo;&lt;/a&gt; so
+that an &lt;a href=&#34;https://security.google.com/settings/security/apppasswords&#34;&gt;&amp;ldquo;App password&amp;rdquo;&lt;/a&gt; can be generated&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;code&gt;go get gopkg.in/gomail.v2&lt;/code&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Send your Email like the example below:&lt;/p&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-go&#34;&gt;package main
+
+import (
+	&amp;quot;gopkg.in/gomail.v2&amp;quot;
+)
+
+func main() {
+	m := gomail.NewMessage()
+	m.SetHeader(&amp;quot;From&amp;quot;, &amp;quot;from_address@gmail.com&amp;quot;)
+	m.SetAddressHeader(&amp;quot;To&amp;quot;, &amp;quot;to_adress@xxx&amp;quot;, &amp;quot;to_name&amp;quot;)
+	m.SetAddressHeader(&amp;quot;Cc&amp;quot;, &amp;quot;cc_adress@xxx&amp;quot;, &amp;quot;cc_name&amp;quot;)
+	m.SetHeader(&amp;quot;Subject&amp;quot;, &amp;quot;Hello! TEST!&amp;quot;)
+	m.SetBody(&amp;quot;text/html&amp;quot;, &amp;quot;Hello! &amp;lt;b&amp;gt;TEST&amp;lt;/b&amp;gt;!&amp;quot;)
+
+	d := gomail.NewPlainDialer(&amp;quot;smtp.gmail.com&amp;quot;, 587, &amp;quot;from_address@gmail.com&amp;quot;, &amp;quot;the App password&amp;quot;)
+
+	if err := d.DialAndSend(m); err != nil {
+		panic(err)
+	}
+}
+&lt;/code&gt;&lt;/pre&gt;
+</description>
+    </item>
     
     <item>
       <title>SSH Resources in Go</title>
@@ -444,20 +483,6 @@ the new domain. It is the shortest but still meaningful domain that I can afford
 &lt;code&gt;H&lt;/code&gt; is the initial letter of my given name, &lt;code&gt;12&lt;/code&gt; is simply the number of letters
 of my full name, and &lt;code&gt;.me&lt;/code&gt; is a top level domain quite suitable for a personal
 website.&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Learning Resources on Parser Combinator</title>
-      <link>http://h12.me/note/parser_combinator_links/</link>
-      <pubDate>Mon, 04 Aug 2014 15:12:55 +0000</pubDate>
-      
-      <guid>http://h12.me/note/parser_combinator_links/</guid>
-      <description>&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;http://eprints.nottingham.ac.uk/237/&#34;&gt;&lt;em&gt;Monadic Parser Combinators&lt;/em&gt;&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;http://legacy.cs.uu.nl/daan/pubs.html#parsec&#34;&gt;&lt;em&gt;Parsec: Direct Style Monadic Parser Combinators for the Real World&lt;/em&gt;&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;http://www.cs.tufts.edu/~nr/cs257/archive/doaitse-swierstra/combinator-parsing-tutorial.pdf&#34;&gt;&lt;em&gt;Combinator Parsing: A Short Tutorial&lt;/em&gt;&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
 </description>
     </item>
     

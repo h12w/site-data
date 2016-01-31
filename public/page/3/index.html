@@ -73,6 +73,35 @@
         
             <article class="frontpage">
                 <h1>
+                    <a href="http://h12.me/note/gae_custom_domain/">How to configure a custom domain name in GAE?</a>
+                    <span class="line"></span>
+                </h1>
+                <span class="time">19 January 2015</span>
+                <div class="article-body hyphenate">
+                    <p>Steps:</p>
+
+<ol>
+<li>Visit <a href="https://console.developers.google.com">Developers Console</a>.</li>
+<li>In your project: Compute -&gt; App Engine -&gt; Settings.</li>
+<li>On the tab labelled CUSTOM DOMAINS, you can verify your domain and assign it
+and/or its subdomains to your GAE project.</li>
+<li>Add the DNS settings provided by Google into the DNS server of your domain
+provider.</li>
+</ol>
+
+<p>Notes:</p>
+
+<ol>
+<li>Only HTTP is supported, HTTPS is not.</li>
+<li>It will not work if you only modify the DNS record without actually assigning
+the custom domain in the Developer Console.</li>
+</ol>
+
+                </div>
+            </article>
+        
+            <article class="frontpage">
+                <h1>
                     <a href="http://h12.me/note/install_ca_android/">How to install a self-signed CA Certificate to Android 4.4</a>
                     <span class="line"></span>
                 </h1>
@@ -774,124 +803,6 @@ that have to involve 301 includes:</p>
 <p>There is one more thing that needs attention: The root path of a domain always
 contains a slash (GET / in HTTP request), regardless the user enters the slash
 or not, so the root path needs no redirection.</p>
-
-                </div>
-            </article>
-        
-            <article class="frontpage">
-                <h1>
-                    <a href="http://h12.me/article/pagespeed_insights/">How to Achieve a Perfect PageSpeed Insights Score</a>
-                    <span class="line"></span>
-                </h1>
-                <span class="time">24 July 2014</span>
-                <div class="article-body hyphenate">
-                    
-
-<h2 id="indtroduction:919a68b12dcbd06a0bdd7b43f8ef2907">Indtroduction</h2>
-
-<p><a href="https://developers.google.com/speed/pagespeed/insights/">PageSpeed Insights</a> is
-an online tool by Google to measure the performance of an web page for mobile
-and desktop devices. It has a set of heuristic rules considering the
-network-independent aspects of page performance. Each rule has a weight and the
-total score ranges from 0 to 100 points. The desktop and mobile tests have the
-same set of rules for performance and mobile test has some extra rules
-about user experience.</p>
-
-<p>Though it might be too rigorous to require <sup>100</sup>&frasl;<sub>100</sub> score for a web site, it is a
-good way to learn those rules to actually achieve it, and it does have a
-significant improvement to the load time of my site (load time reduces from more
-than 1 sec to about 500 ms in the <a href="http://fpt.pingdom.com/">Pingdom Website Speed Test</a>).
-In the following section, I would like to share what I have learned by
-optimizing this website to achieve a <a href="https://developers.google.com/speed/pagespeed/insights/?url=http%3A%2F%2Fh12.me">perfect score</a>, rule by rule.</p>
-
-<h2 id="speed-rules:919a68b12dcbd06a0bdd7b43f8ef2907">Speed rules</h2>
-
-<h3 id="avoid-landing-page-redirects:919a68b12dcbd06a0bdd7b43f8ef2907">Avoid landing page redirects</h3>
-
-<p>The redirection to mobile version can be avoided by responsive design (CSS media
-queries).</p>
-
-<p>You cannot avoid redirections completely, e.g. I have a 301 redirection from www
-subdomain to the naked domain, but the naked domain does not have any further
-redirection.</p>
-
-<h3 id="eliminate-render-blocking-javascript-and-css-in-above-the-fold-content:919a68b12dcbd06a0bdd7b43f8ef2907">Eliminate render-blocking JavaScript and CSS in above-the-fold content</h3>
-
-<p>This might be the hardest rule to fully comply with.</p>
-
-<p>Firstly, you need to minimize and fully inline your CSS into HTML, and your CSS
-cannot be too large. (My CSS is 22kB after minimization). If you use web fonts,
-you should directly write the @font-face in your inlined CSS, rather than
-importing an external CSS.</p>
-
-<p>Secondly, you need to inline or asynchronously load all your scripts. The
-&ldquo;async&rdquo; attribute is not very useful because it cannot control the order of
-the execution of multiple scripts. I have found <a href="http://headjs.com/">HeadJS</a>
-to solve the problem. HeadJS is inlined into the HTML (3.7kB), and other scripts
-are loaded asychronously but executed in order.</p>
-
-<p>Finally, you have to make sure the delayed scripts will not affect the
-layout of above-the-fold content. You might have to make some trade off and cut
-off some functionality.</p>
-
-<h3 id="enable-compression-leverage-browser-caching-reduce-server-response-time:919a68b12dcbd06a0bdd7b43f8ef2907">Enable compression, Leverage browser caching &amp; Reduce server response time</h3>
-
-<p>Since I uses Google App Engine, the gzip compression should already been enabled
-by default, the expiration time for static resources are configurable via
-config.yaml and GAE responses fast enough.</p>
-
-<h3 id="minify-resources-html-css-and-javascript:919a68b12dcbd06a0bdd7b43f8ef2907">Minify Resources (HTML, CSS, and JavaScript)</h3>
-
-<p>The CSS is minified by Compass, and scripts imported are already minified. The
-HTML file is not minified but it seems not serious enough to trigger a test
-warning by PageSpeed.</p>
-
-<h3 id="optimize-images:919a68b12dcbd06a0bdd7b43f8ef2907">Optimize images</h3>
-
-<p>I use font icons in my site. When there has to be an image, use PNG compressed with
-<a href="http://optipng.sourceforge.net/">OptiPNG</a>.</p>
-
-<h3 id="reduce-the-size-of-the-above-the-fold-content:919a68b12dcbd06a0bdd7b43f8ef2907">Reduce the size of the above-the-fold content</h3>
-
-<p>It basically depends on your design and just remember the YAGNI principle.</p>
-
-<h2 id="user-experience-rules:919a68b12dcbd06a0bdd7b43f8ef2907">User experience rules</h2>
-
-<p>These rule only applies to mobile platforms.</p>
-
-<h3 id="avoid-plugins:919a68b12dcbd06a0bdd7b43f8ef2907">Avoid plugins</h3>
-
-<p>None of them on my site.</p>
-
-<h3 id="configure-the-viewport:919a68b12dcbd06a0bdd7b43f8ef2907">Configure the viewport</h3>
-
-<p>This is part of the responsive design.</p>
-
-<h3 id="size-content-to-viewport:919a68b12dcbd06a0bdd7b43f8ef2907">Size content to viewport</h3>
-
-<p>An important lesson: never write a URL directly in an article because URL does
-not wrap well and could overflow out of the viewport width. instead, give the
-URL a name composed of words.</p>
-
-<h3 id="size-tap-targets-appropriately-use-legible-font-sizes:919a68b12dcbd06a0bdd7b43f8ef2907">Size tap targets appropriately &amp; Use legible font sizes</h3>
-
-<p>I have written some lists of links in my notes, which makes those links close to
-each other. To make them separate enough to pass this rule, the line height cannot
-be too small, here is the minimal requirement from my tests (font-size/line-height):</p>
-
-<ul>
-<li>16px/28px</li>
-<li>17px/28px</li>
-<li>18px/29px</li>
-<li>19px/30px</li>
-<li>20px/30px</li>
-</ul>
-
-<h2 id="conclusion:919a68b12dcbd06a0bdd7b43f8ef2907">Conclusion</h2>
-
-<p>It is not rocket science to build a website with good performance. You just needs
-to tune and optimize every detail of your site patiently. In this process,
-PageSpeed Insights can help a lot.</p>
 
                 </div>
             </article>

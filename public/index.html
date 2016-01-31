@@ -73,6 +73,47 @@
         
             <article class="frontpage">
                 <h1>
+                    <a href="http://h12.me/note/send-email-from-gmail/">Sending Email from Gmail using Golang</a>
+                    <span class="line"></span>
+                </h1>
+                <span class="time">31 January 2016</span>
+                <div class="article-body hyphenate">
+                    <ol>
+<li><p>Turn on <a href="http://accounts.google.com/SmsAuthConfig">&ldquo;2-Step Verification&rdquo;</a> so
+that an <a href="https://security.google.com/settings/security/apppasswords">&ldquo;App password&rdquo;</a> can be generated</p></li>
+
+<li><p><code>go get gopkg.in/gomail.v2</code></p></li>
+
+<li><p>Send your Email like the example below:</p></li>
+</ol>
+
+<pre><code class="language-go">package main
+
+import (
+	&quot;gopkg.in/gomail.v2&quot;
+)
+
+func main() {
+	m := gomail.NewMessage()
+	m.SetHeader(&quot;From&quot;, &quot;from_address@gmail.com&quot;)
+	m.SetAddressHeader(&quot;To&quot;, &quot;to_adress@xxx&quot;, &quot;to_name&quot;)
+	m.SetAddressHeader(&quot;Cc&quot;, &quot;cc_adress@xxx&quot;, &quot;cc_name&quot;)
+	m.SetHeader(&quot;Subject&quot;, &quot;Hello! TEST!&quot;)
+	m.SetBody(&quot;text/html&quot;, &quot;Hello! &lt;b&gt;TEST&lt;/b&gt;!&quot;)
+
+	d := gomail.NewPlainDialer(&quot;smtp.gmail.com&quot;, 587, &quot;from_address@gmail.com&quot;, &quot;the App password&quot;)
+
+	if err := d.DialAndSend(m); err != nil {
+		panic(err)
+	}
+}
+</code></pre>
+
+                </div>
+            </article>
+        
+            <article class="frontpage">
+                <h1>
                     <a href="http://h12.me/note/go-ssh-resources/">SSH Resources in Go</a>
                     <span class="line"></span>
                 </h1>
@@ -344,24 +385,6 @@ if v.Kind() == reflect.String {
 </code></pre>
 
 <p>Just use slice literal instead!</p>
-
-                </div>
-            </article>
-        
-            <article class="frontpage">
-                <h1>
-                    <a href="http://h12.me/note/ebook_tools/">Ebook Manipulation Tools</a>
-                    <span class="line"></span>
-                </h1>
-                <span class="time">4 June 2015</span>
-                <div class="article-body hyphenate">
-                    <ul>
-<li>Ebook manager: <a href="http://calibre-ebook.com/">Calibre</a></li>
-<li>Kindle PDF optimizer: <a href="http://www.willus.com/k2pdfopt/">k2pdfopt</a></li>
-<li>PDF Border Cropper <a href="http://sourceforge.net/projects/briss/">Briss</a></li>
-<li>CHM File Extractor <a href="https://github.com/dottedmag/archmage">archmage</a></li>
-<li>PDF editing <a href="http://xournal.sourceforge.net">Xournal</a></li>
-</ul>
 
                 </div>
             </article>
