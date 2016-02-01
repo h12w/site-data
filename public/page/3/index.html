@@ -73,6 +73,29 @@
         
             <article class="frontpage">
                 <h1>
+                    <a href="http://h12.me/note/go_build_failure/">Go 1.4.1 Build Failure and Solution</a>
+                    <span class="line"></span>
+                </h1>
+                <span class="time">29 January 2015</span>
+                <div class="article-body hyphenate">
+                    <p>Today I tried to build Go 1.4.1 from source but it failed with this error:</p>
+
+<pre><code>    go/src/liblink/anames9.c:6:29: fatal error: ../cmd/9l/9.out.h: No such file or directory
+</code></pre>
+
+<p>At first I thought the building routine might have be changed so I opened and read
+<a href="http://golang.org/doc/install/source"><em>Installing Go from Source</em></a> again, carefully,
+and found nothing special.</p>
+
+<p>Then I searched for the error source and it turned out that I should deleted
+<code>anames*.c</code>, manually. There is no document and no automatic cleaning script, and
+you would have to figure it out yourself if no one ever mentioned it (<a href="https://groups.google.com/d/msg/golang-nuts/wQoQqXOnOTo/QbubO2UebpUJ">source</a>).</p>
+
+                </div>
+            </article>
+        
+            <article class="frontpage">
+                <h1>
                     <a href="http://h12.me/note/gae_custom_domain/">How to configure a custom domain name in GAE?</a>
                     <span class="line"></span>
                 </h1>
@@ -772,37 +795,6 @@ algebraic datatype, so the pattern matching rule is different.</li>
 <h2 id="modules:b9b074007e556aa28f8a3e7bb14cecf5">Modules</h2>
 
 <p><em>To be continued&hellip;</em></p>
-
-                </div>
-            </article>
-        
-            <article class="frontpage">
-                <h1>
-                    <a href="http://h12.me/note/301_redirect/">About 301 Moved Permanently</a>
-                    <span class="line"></span>
-                </h1>
-                <span class="time">25 July 2014</span>
-                <div class="article-body hyphenate">
-                    <p>When building a website, there is one inevitable thing:
-<a href="http://en.wikipedia.org/wiki/HTTP_301">301 permanent redirection</a>. The cases
-that have to involve 301 includes:</p>
-
-<ul>
-<li>Redirection from www subdomain to naked domain or vise versa.</li>
-<li>Redirection from slashed pretty URL to unslashed URL or vise versa.</li>
-</ul>
-
-<p>301 is easy to implement with Go:</p>
-
-<pre><code class="language-go">func redirect301(w http.ResponseWriter, url string) {
-    w.Header().Set(&quot;Location&quot;, url)
-    w.WriteHeader(http.StatusMovedPermanently)
-}
-</code></pre>
-
-<p>There is one more thing that needs attention: The root path of a domain always
-contains a slash (GET / in HTTP request), regardless the user enters the slash
-or not, so the root path needs no redirection.</p>
 
                 </div>
             </article>

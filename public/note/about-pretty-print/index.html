@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title> h12.me </title>
+        <title> About Pretty Printing </title>
         <link rel="shortcut icon" href="/img/favicon.png" />
 
         <style>
@@ -69,300 +69,36 @@
         </header>
 
         <main class="container">
-        
-        
-            <article class="frontpage">
-                <h1>
-                    <a href="http://h12.me/note/301_redirect/">About 301 Moved Permanently</a>
-                    <span class="line"></span>
-                </h1>
-                <span class="time">25 July 2014</span>
+            <article class="single">
+                <h1>About Pretty Printing</h1>
                 <div class="article-body hyphenate">
-                    <p>When building a website, there is one inevitable thing:
-<a href="http://en.wikipedia.org/wiki/HTTP_301">301 permanent redirection</a>. The cases
-that have to involve 301 includes:</p>
+                
 
-<ul>
-<li>Redirection from www subdomain to naked domain or vise versa.</li>
-<li>Redirection from slashed pretty URL to unslashed URL or vise versa.</li>
-</ul>
+<h2 id="json:1197732d8fa443c2a3177ffc1bd0267c">JSON</h2>
 
-<p>301 is easy to implement with Go:</p>
-
-<pre><code class="language-go">func redirect301(w http.ResponseWriter, url string) {
-    w.Header().Set(&quot;Location&quot;, url)
-    w.WriteHeader(http.StatusMovedPermanently)
-}
+<pre><code class="language-bash">cat xxx.json | jq .
 </code></pre>
 
-<p>There is one more thing that needs attention: The root path of a domain always
-contains a slash (GET / in HTTP request), regardless the user enters the slash
-or not, so the root path needs no redirection.</p>
+<h2 id="xml:1197732d8fa443c2a3177ffc1bd0267c">XML</h2>
 
-                </div>
-            </article>
-        
-            <article class="frontpage">
-                <h1>
-                    <a href="http://h12.me/article/pagespeed_insights/">How to Achieve a Perfect PageSpeed Insights Score</a>
-                    <span class="line"></span>
-                </h1>
-                <span class="time">24 July 2014</span>
-                <div class="article-body hyphenate">
-                    
-
-<h2 id="indtroduction:919a68b12dcbd06a0bdd7b43f8ef2907">Indtroduction</h2>
-
-<p><a href="https://developers.google.com/speed/pagespeed/insights/">PageSpeed Insights</a> is
-an online tool by Google to measure the performance of an web page for mobile
-and desktop devices. It has a set of heuristic rules considering the
-network-independent aspects of page performance. Each rule has a weight and the
-total score ranges from 0 to 100 points. The desktop and mobile tests have the
-same set of rules for performance and mobile test has some extra rules
-about user experience.</p>
-
-<p>Though it might be too rigorous to require <sup>100</sup>&frasl;<sub>100</sub> score for a web site, it is a
-good way to learn those rules to actually achieve it, and it does have a
-significant improvement to the load time of my site (load time reduces from more
-than 1 sec to about 500 ms in the <a href="http://fpt.pingdom.com/">Pingdom Website Speed Test</a>).
-In the following section, I would like to share what I have learned by
-optimizing this website to achieve a <a href="https://developers.google.com/speed/pagespeed/insights/?url=http%3A%2F%2Fh12.me">perfect score</a>, rule by rule.</p>
-
-<h2 id="speed-rules:919a68b12dcbd06a0bdd7b43f8ef2907">Speed rules</h2>
-
-<h3 id="avoid-landing-page-redirects:919a68b12dcbd06a0bdd7b43f8ef2907">Avoid landing page redirects</h3>
-
-<p>The redirection to mobile version can be avoided by responsive design (CSS media
-queries).</p>
-
-<p>You cannot avoid redirections completely, e.g. I have a 301 redirection from www
-subdomain to the naked domain, but the naked domain does not have any further
-redirection.</p>
-
-<h3 id="eliminate-render-blocking-javascript-and-css-in-above-the-fold-content:919a68b12dcbd06a0bdd7b43f8ef2907">Eliminate render-blocking JavaScript and CSS in above-the-fold content</h3>
-
-<p>This might be the hardest rule to fully comply with.</p>
-
-<p>Firstly, you need to minimize and fully inline your CSS into HTML, and your CSS
-cannot be too large. (My CSS is 22kB after minimization). If you use web fonts,
-you should directly write the @font-face in your inlined CSS, rather than
-importing an external CSS.</p>
-
-<p>Secondly, you need to inline or asynchronously load all your scripts. The
-&ldquo;async&rdquo; attribute is not very useful because it cannot control the order of
-the execution of multiple scripts. I have found <a href="http://headjs.com/">HeadJS</a>
-to solve the problem. HeadJS is inlined into the HTML (3.7kB), and other scripts
-are loaded asychronously but executed in order.</p>
-
-<p>Finally, you have to make sure the delayed scripts will not affect the
-layout of above-the-fold content. You might have to make some trade off and cut
-off some functionality.</p>
-
-<h3 id="enable-compression-leverage-browser-caching-reduce-server-response-time:919a68b12dcbd06a0bdd7b43f8ef2907">Enable compression, Leverage browser caching &amp; Reduce server response time</h3>
-
-<p>Since I uses Google App Engine, the gzip compression should already been enabled
-by default, the expiration time for static resources are configurable via
-config.yaml and GAE responses fast enough.</p>
-
-<h3 id="minify-resources-html-css-and-javascript:919a68b12dcbd06a0bdd7b43f8ef2907">Minify Resources (HTML, CSS, and JavaScript)</h3>
-
-<p>The CSS is minified by Compass, and scripts imported are already minified. The
-HTML file is not minified but it seems not serious enough to trigger a test
-warning by PageSpeed.</p>
-
-<h3 id="optimize-images:919a68b12dcbd06a0bdd7b43f8ef2907">Optimize images</h3>
-
-<p>I use font icons in my site. When there has to be an image, use PNG compressed with
-<a href="http://optipng.sourceforge.net/">OptiPNG</a>.</p>
-
-<h3 id="reduce-the-size-of-the-above-the-fold-content:919a68b12dcbd06a0bdd7b43f8ef2907">Reduce the size of the above-the-fold content</h3>
-
-<p>It basically depends on your design and just remember the YAGNI principle.</p>
-
-<h2 id="user-experience-rules:919a68b12dcbd06a0bdd7b43f8ef2907">User experience rules</h2>
-
-<p>These rule only applies to mobile platforms.</p>
-
-<h3 id="avoid-plugins:919a68b12dcbd06a0bdd7b43f8ef2907">Avoid plugins</h3>
-
-<p>None of them on my site.</p>
-
-<h3 id="configure-the-viewport:919a68b12dcbd06a0bdd7b43f8ef2907">Configure the viewport</h3>
-
-<p>This is part of the responsive design.</p>
-
-<h3 id="size-content-to-viewport:919a68b12dcbd06a0bdd7b43f8ef2907">Size content to viewport</h3>
-
-<p>An important lesson: never write a URL directly in an article because URL does
-not wrap well and could overflow out of the viewport width. instead, give the
-URL a name composed of words.</p>
-
-<h3 id="size-tap-targets-appropriately-use-legible-font-sizes:919a68b12dcbd06a0bdd7b43f8ef2907">Size tap targets appropriately &amp; Use legible font sizes</h3>
-
-<p>I have written some lists of links in my notes, which makes those links close to
-each other. To make them separate enough to pass this rule, the line height cannot
-be too small, here is the minimal requirement from my tests (font-size/line-height):</p>
-
-<ul>
-<li>16px/28px</li>
-<li>17px/28px</li>
-<li>18px/29px</li>
-<li>19px/30px</li>
-<li>20px/30px</li>
-</ul>
-
-<h2 id="conclusion:919a68b12dcbd06a0bdd7b43f8ef2907">Conclusion</h2>
-
-<p>It is not rocket science to build a website with good performance. You just needs
-to tune and optimize every detail of your site patiently. In this process,
-PageSpeed Insights can help a lot.</p>
-
-                </div>
-            </article>
-        
-            <article class="frontpage">
-                <h1>
-                    <a href="http://h12.me/note/ci_overview/">An Overview of Continuous Integration Services</a>
-                    <span class="line"></span>
-                </h1>
-                <span class="time">17 July 2014</span>
-                <div class="article-body hyphenate">
-                    
-
-<p>After reviewing many continuous integration services below, there is no doubt
-that Wercker is the winner. The Wercker Box (virtual container) is based on
-Ubuntu and any packages can be easily installed with &ldquo;apt-get&rdquo;. This flexibility
-basically allows running any test suites and deploying to any cloud platforms.
-Furthermore, a Wercker Box can inherit from another box and can be stored and
-published in Wercker directories as the starting point for any projects,
-increasing the performance significantly.</p>
-
-<h2 id="price:a76620099a0a46cdb5d632ea8ed57862">Price</h2>
-
-<p>Open source friendly:</p>
-
-<ul>
-<li><a href="https://drone.io/">Drone.io</a></li>
-<li><a href="https://www.shippable.com/">Shippable</a></li>
-<li><a href="https://snap-ci.com/">Snap</a></li>
-<li><a href="https://travis-ci.org/">Travis-CI</a></li>
-<li><a href="http://wercker.com/">Wercker</a></li>
-</ul>
-
-<p>Has free plan:</p>
-
-<ul>
-<li><a href="http://www.cloudbees.com/">CloudBees</a></li>
-<li><a href="https://codeship.io/">Codeship</a></li>
-<li><a href="https://ship.io/">Ship.io</a></li>
-</ul>
-
-<p>No fee plan:</p>
-
-<ul>
-<li><a href="https://circleci.com/">CircleCI</a></li>
-<li><a href="https://hosted-ci.com/">Hosted CI</a></li>
-<li><a href="https://semaphoreapp.com/">Semaphore</a></li>
-<li><a href="https://www.solanolabs.com/">Solano Labs</a></li>
-<li><a href="https://www.atlassian.com/software/bamboo">Bamboo</a></li>
-</ul>
-
-                </div>
-            </article>
-        
-            <article class="frontpage">
-                <h1>
-                    <a href="http://h12.me/note/install_scp/">Installing Source Code Pro</a>
-                    <span class="line"></span>
-                </h1>
-                <span class="time">17 July 2014</span>
-                <div class="article-body hyphenate">
-                    <p><em>Source Code Pro</em> is one of the best monospace fonts and it is <a href="https://github.com/adobe/source-code-pro">open sourced</a>.</p>
-
-<p>Here is the <a href="https://github.com/h12w/linux/blob/master/install_scp.sh">script</a> for installing it on Linux.</p>
-
-                </div>
-            </article>
-        
-            <article class="frontpage">
-                <h1>
-                    <a href="http://h12.me/note/install_susy/">Installing Susy</a>
-                    <span class="line"></span>
-                </h1>
-                <span class="time">17 July 2014</span>
-                <div class="article-body hyphenate">
-                    <p>The script:</p>
-
-<pre><code class="language-bash">sudo apt-get install ruby
-sudo apt-get install ruby-dev
-sudo gem install susy -V
-sudo gem install compass --pre -V
-sudo gem lnstall breakpoint -V
+<pre><code class="language-bash">cat xxx.xml | xmllint --format -
 </code></pre>
 
-<p>Notes:</p>
-
-<ul>
-<li>The current version of Susy uses a higher version of Sass than Compass, so the
-corresponding Compass version has to be a prerelease (&ndash;pre).</li>
-<li>The installing process is slow and it feels better to print it out (-V).</li>
-<li>You may have to run &ldquo;compass watch&rdquo; with sudo (<a href="https://github.com/Compass/compass/issues/1497">issue 1497</a>).</li>
-<li>An alternative <a href="https://ruby.taobao.org/">RubyGems source</a> that is close to
-your location might help.</li>
+                </div>
+                <div>
+                    <div id="article-time">1 February 2016</div>
+                    <ul id="tags">
+  
+    <li><a href="/tags/pretty-print">pretty print</a> </li>
+  
+    <li><a href="/tags/json">JSON</a> </li>
+  
+    <li><a href="/tags/xml">XML</a> </li>
+  
 </ul>
 
                 </div>
             </article>
-        
-            <article class="frontpage">
-                <h1>
-                    <a href="http://h12.me/note/web_design_site/">A List of URLs about Web Design</a>
-                    <span class="line"></span>
-                </h1>
-                <span class="time">10 July 2014</span>
-                <div class="article-body hyphenate">
-                    <ul>
-<li><a href="http://webtypography.net/">The Elements of Typographic Style Applied to the Web</a></li>
-<li><a href="http://www.smashingmagazine.com/">Smashing Magazine</a></li>
-<li><a href="http://trentwalton.com/">Trentwalton</a></li>
-<li><a href="http://www.inkwell.ie/">Inkwell</a></li>
-</ul>
-
-                </div>
-            </article>
-        
-            <article class="frontpage">
-                <h1>
-                    <a href="http://h12.me/note/ugly_font/">Why My Web Font Looks Ugly on IE?</a>
-                    <span class="line"></span>
-                </h1>
-                <span class="time">9 July 2014</span>
-                <div class="article-body hyphenate">
-                    <p>Windows needs hand-tuned hinting which is missing in many web fonts. To solve this
-problem, there is a tool called <a href="http://www.freetype.org/ttfautohint/index.html">ttfautohint</a>
-which can automatically add hinting to font files.</p>
-
-<p>There is a <a href="http://pixelsvsbytes.com/blog/2013/11/how-to-create-perfect-web-fonts-in-3-steps/">tutorial</a>,
-and an online tool called <a href="http://fontie.flowyapps.com/">Fontie</a>.</p>
-
-                </div>
-            </article>
-        
-        <nav class="pagination">
-            <span>- 4 -</span>
-            <ul>
-                <li>
-            
-                    <a href="/page/3">« Prev</a>
-            
-                </li>
-                <li>
-            
-                    <a href="/page/5">Next »</a>
-            
-                </li>
-            </ul>
-        </nav>
         </main>
         <footer id="site-footer">
             <hr>

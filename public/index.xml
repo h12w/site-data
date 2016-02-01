@@ -7,8 +7,28 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>Copyright (c) 2012-2015, Hǎiliàng Wáng; all rights reserved.</copyright>
-    <lastBuildDate>Sun, 31 Jan 2016 20:31:06 +0800</lastBuildDate>
+    <lastBuildDate>Mon, 01 Feb 2016 18:11:29 +0800</lastBuildDate>
     <atom:link href="http://h12.me/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>About Pretty Printing</title>
+      <link>http://h12.me/note/about-pretty-print/</link>
+      <pubDate>Mon, 01 Feb 2016 18:11:29 +0800</pubDate>
+      
+      <guid>http://h12.me/note/about-pretty-print/</guid>
+      <description>
+
+&lt;h2 id=&#34;json:1197732d8fa443c2a3177ffc1bd0267c&#34;&gt;JSON&lt;/h2&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;cat xxx.json | jq .
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;xml:1197732d8fa443c2a3177ffc1bd0267c&#34;&gt;XML&lt;/h2&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;cat xxx.xml | xmllint --format -
+&lt;/code&gt;&lt;/pre&gt;
+</description>
+    </item>
     
     <item>
       <title>Sending Email from Gmail using Go</title>
@@ -844,33 +864,6 @@ and found nothing special.&lt;/p&gt;
 &lt;p&gt;Then I searched for the error source and it turned out that I should deleted
 &lt;code&gt;anames*.c&lt;/code&gt;, manually. There is no document and no automatic cleaning script, and
 you would have to figure it out yourself if no one ever mentioned it (&lt;a href=&#34;https://groups.google.com/d/msg/golang-nuts/wQoQqXOnOTo/QbubO2UebpUJ&#34;&gt;source&lt;/a&gt;).&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>How to configure a custom domain name in GAE?</title>
-      <link>http://h12.me/note/gae_custom_domain/</link>
-      <pubDate>Mon, 19 Jan 2015 09:32:04 +0000</pubDate>
-      
-      <guid>http://h12.me/note/gae_custom_domain/</guid>
-      <description>&lt;p&gt;Steps:&lt;/p&gt;
-
-&lt;ol&gt;
-&lt;li&gt;Visit &lt;a href=&#34;https://console.developers.google.com&#34;&gt;Developers Console&lt;/a&gt;.&lt;/li&gt;
-&lt;li&gt;In your project: Compute -&amp;gt; App Engine -&amp;gt; Settings.&lt;/li&gt;
-&lt;li&gt;On the tab labelled CUSTOM DOMAINS, you can verify your domain and assign it
-and/or its subdomains to your GAE project.&lt;/li&gt;
-&lt;li&gt;Add the DNS settings provided by Google into the DNS server of your domain
-provider.&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;Notes:&lt;/p&gt;
-
-&lt;ol&gt;
-&lt;li&gt;Only HTTP is supported, HTTPS is not.&lt;/li&gt;
-&lt;li&gt;It will not work if you only modify the DNS record without actually assigning
-the custom domain in the Developer Console.&lt;/li&gt;
-&lt;/ol&gt;
 </description>
     </item>
     

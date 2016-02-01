@@ -73,6 +73,28 @@
         
             <article class="frontpage">
                 <h1>
+                    <a href="http://h12.me/note/about-pretty-print/">About Pretty Printing</a>
+                    <span class="line"></span>
+                </h1>
+                <span class="time">1 February 2016</span>
+                <div class="article-body hyphenate">
+                    
+
+<h2 id="json:1197732d8fa443c2a3177ffc1bd0267c">JSON</h2>
+
+<pre><code class="language-bash">cat xxx.json | jq .
+</code></pre>
+
+<h2 id="xml:1197732d8fa443c2a3177ffc1bd0267c">XML</h2>
+
+<pre><code class="language-bash">cat xxx.xml | xmllint --format -
+</code></pre>
+
+                </div>
+            </article>
+        
+            <article class="frontpage">
+                <h1>
                     <a href="http://h12.me/note/send-email-from-gmail/">Sending Email from Gmail using Go</a>
                     <span class="line"></span>
                 </h1>
@@ -306,85 +328,6 @@ e.g. v, ok := &lt;-ch.</li>
 <h3 id="what-is-type-t-t:7dee003ea8460b8c44d861f1c60e603b">What is <code>type T []T</code>?</h3>
 
 <p>?</p>
-
-                </div>
-            </article>
-        
-            <article class="frontpage">
-                <h1>
-                    <a href="http://h12.me/note/what_go_cannot_do/">What Go cannot Do</a>
-                    <span class="line"></span>
-                </h1>
-                <span class="time">16 June 2015</span>
-                <div class="article-body hyphenate">
-                    
-
-<p>This is a list about the corner cases that Go cannot do, and their work arounds.</p>
-
-<h2 id="run-all-deferred-functions-of-other-goroutines-when-a-goroutine-panics:8b55f9ddc77541e5f8b431a4722abe5d">Run all deferred functions of other goroutines when a goroutine panics</h2>
-
-<p>Uncaught panicking of one goroutine will exit the program without executing deferred functions of other goroutines.</p>
-
-<p>Workaround: this is the standard behavior, C++ with RAII also has the same problem. Persist your data in a way that crashing will not cause data integrity issue.</p>
-
-<h2 id="assigning-to-fields-with-short-declaration-notation:8b55f9ddc77541e5f8b431a4722abe5d">Assigning to fields with short declaration notation</h2>
-
-<ul>
-<li>Issue: <a href="https://github.com/golang/go/issues/6842">6842</a></li>
-<li>Status: Open &amp; Unplanned</li>
-</ul>
-
-<p>When it is useful:</p>
-
-<pre><code class="language-go">if x.f, ok := f(); !ok {
-	...
-}
-</code></pre>
-
-<p>Workaround:</p>
-
-<pre><code class="language-go">var ok bool
-if x.f, ok = f(); !ok {
-	...
-}
-</code></pre>
-
-<h2 id="accessing-unexported-fields-with-reflect-value-interface-method:8b55f9ddc77541e5f8b431a4722abe5d">Accessing unexported fields with reflect.Value.Interface method</h2>
-
-<p>When it is useful:</p>
-
-<pre><code class="language-go">type S struct {
-   val string
-}
-
-...
-
-var s S
-
-reflect.Value(s).Fields(0).Interface()
-</code></pre>
-
-<p>The code will panics with message:</p>
-
-<pre><code>reflect.Value.Interface: cannot return value obtained from unexported field or method
-</code></pre>
-
-<p>Workaround:</p>
-
-<pre><code class="language-go">v := reflect.Value(s).Fields(0)
-if v.Kind() == reflect.String {
-	s := v.String()
-}
-</code></pre>
-
-<h2 id="slice-of-array-literal:8b55f9ddc77541e5f8b431a4722abe5d">Slice of array literal</h2>
-
-<p>e.g.</p>
-
-<pre><code class="language-go">[3]int{1, 2, 3}[:]
-</code></pre>
-
-<p>Just use slice literal instead!</p>
 
                 </div>
             </article>
