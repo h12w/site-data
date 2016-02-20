@@ -12,13 +12,13 @@
     
     <item>
       <title>A Comprehensive Note about Proxy Settings</title>
-      <link>http://h12.me/note/proxy_notes/</link>
+      <link>http://h12.me/note/proxy-notes/</link>
       <pubDate>Wed, 08 Jul 2015 07:58:34 +0000</pubDate>
       
-      <guid>http://h12.me/note/proxy_notes/</guid>
+      <guid>http://h12.me/note/proxy-notes/</guid>
       <description>
 
-&lt;h2 id=&#34;git:c75aaf27ff78e6c7de91570c27fb0dfd&#34;&gt;Git&lt;/h2&gt;
+&lt;h2 id=&#34;git:98bdf1dc45f059ee4334ef1c195fb8bb&#34;&gt;Git&lt;/h2&gt;
 
 &lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;&amp;gt; cat ~/.gitconfig
 [http]
@@ -27,13 +27,13 @@
 	proxy = socks5://[host]:[port]
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h2 id=&#34;curl-homebrew:c75aaf27ff78e6c7de91570c27fb0dfd&#34;&gt;Curl (Homebrew)&lt;/h2&gt;
+&lt;h2 id=&#34;curl-homebrew:98bdf1dc45f059ee4334ef1c195fb8bb&#34;&gt;Curl (Homebrew)&lt;/h2&gt;
 
 &lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;&amp;gt; cat ~/.curlrc
 socks5 = &amp;quot;[host]:[port]&amp;quot;
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h2 id=&#34;gae:c75aaf27ff78e6c7de91570c27fb0dfd&#34;&gt;GAE&lt;/h2&gt;
+&lt;h2 id=&#34;gae:98bdf1dc45f059ee4334ef1c195fb8bb&#34;&gt;GAE&lt;/h2&gt;
 
 &lt;ol&gt;
 &lt;li&gt;&lt;p&gt;Set proxy&lt;/p&gt;
@@ -55,18 +55,18 @@ make sure the proxy is safe before this step).&lt;/p&gt;&lt;/li&gt;
     
     <item>
       <title>How to &#34;go get&#34; Behind a Proxy</title>
-      <link>http://h12.me/note/go_get_behind_proxy/</link>
+      <link>http://h12.me/note/go-get-behind-proxy/</link>
       <pubDate>Wed, 06 May 2015 12:01:11 +0800</pubDate>
       
-      <guid>http://h12.me/note/go_get_behind_proxy/</guid>
+      <guid>http://h12.me/note/go-get-behind-proxy/</guid>
       <description>
 
-&lt;h2 id=&#34;proxy-for-go-get:e490f2aac2393f2512d8fa1fe826c975&#34;&gt;Proxy for &amp;ldquo;go get&amp;rdquo;&lt;/h2&gt;
+&lt;h2 id=&#34;proxy-for-go-get:70e7a77773bb657f64cd08cb621ddcd5&#34;&gt;Proxy for &amp;ldquo;go get&amp;rdquo;&lt;/h2&gt;
 
 &lt;pre&gt;&lt;code&gt;https_proxy=http://user:pass@proxy_host:port go get ...
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h2 id=&#34;proxy-for-git:e490f2aac2393f2512d8fa1fe826c975&#34;&gt;Proxy for Git&lt;/h2&gt;
+&lt;h2 id=&#34;proxy-for-git:70e7a77773bb657f64cd08cb621ddcd5&#34;&gt;Proxy for Git&lt;/h2&gt;
 
 &lt;p&gt;In &lt;code&gt;$HOME/.gitconfig&lt;/code&gt;:&lt;/p&gt;
 
@@ -74,7 +74,7 @@ make sure the proxy is safe before this step).&lt;/p&gt;&lt;/li&gt;
 	proxy = proxy_url
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h2 id=&#34;proxy-for-mercurial:e490f2aac2393f2512d8fa1fe826c975&#34;&gt;Proxy for Mercurial&lt;/h2&gt;
+&lt;h2 id=&#34;proxy-for-mercurial:70e7a77773bb657f64cd08cb621ddcd5&#34;&gt;Proxy for Mercurial&lt;/h2&gt;
 
 &lt;p&gt;In &lt;code&gt;$HOME/.hgrc&lt;/code&gt;:&lt;/p&gt;
 

@@ -98,6 +98,110 @@ func main() {
     </item>
     
     <item>
+      <title>Aliyun OSS Go SDK</title>
+      <link>http://h12.me/project/aliyun-oss-go-sdk/</link>
+      <pubDate>Thu, 22 Oct 2015 15:32:58 +0800</pubDate>
+      
+      <guid>http://h12.me/project/aliyun-oss-go-sdk/</guid>
+      <description>
+
+&lt;p&gt;&lt;a href=&#34;https://drone.io/github.com/h12w/aliyun-oss-go-sdk/latest&#34;&gt;&lt;img src=&#34;https://drone.io/github.com/h12w/aliyun-oss-go-sdk/status.png&#34; alt=&#34;Build
+Status&#34; /&gt;
+&lt;/a&gt;
+&lt;a href=&#34;https://coveralls.io/github/h12w/aliyun-oss-go-sdk?branch=master&#34;&gt;&lt;img src=&#34;https://coveralls.io/repos/h12w/aliyun-oss-go-sdk/badge.svg?branch=master&amp;amp;service=github&#34; alt=&#34;Coverage
+Status&#34; /&gt;
+&lt;/a&gt;
+&lt;a href=&#34;https://godoc.org/github.com/aliyun/aliyun-oss-go-sdk/oss&#34;&gt;&lt;img src=&#34;https://godoc.org/github.com/aliyun/aliyun-oss-go-sdk/oss?status.svg&#34; alt=&#34;GoDoc&#34; /&gt;
+&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Aliyun OSS (Object Storage Service) Go SDK is a client SDK to access Aliyun OSS
+API, implemented in the Go programming language.&lt;/p&gt;
+
+&lt;h2 id=&#34;installation:f87687907588b3c94606277d316d7263&#34;&gt;Installation&lt;/h2&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;go get -u github.com/aliyun/aliyun-oss-go-sdk/oss
+go test -v -cover github.com/aliyun/aliyun-oss-go-sdk/oss
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;highlights:f87687907588b3c94606277d316d7263&#34;&gt;Highlights&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Complete set of Aliyun OSS API&lt;/li&gt;
+&lt;li&gt;Thouroughly tested
+
+&lt;ul&gt;
+&lt;li&gt;100% test coverage&lt;/li&gt;
+&lt;li&gt;intuitive table driven tests&lt;/li&gt;
+&lt;li&gt;full test suite completes within 2 seconds&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;Lint clean
+
+&lt;ul&gt;
+&lt;li&gt;golint&lt;/li&gt;
+&lt;li&gt;go fmt&lt;/li&gt;
+&lt;li&gt;goimports&lt;/li&gt;
+&lt;li&gt;go vet&lt;/li&gt;
+&lt;li&gt;race detector&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;Idiomatic &amp;amp; elegant
+
+&lt;ul&gt;
+&lt;li&gt;response is returned as a parsed object&lt;/li&gt;
+&lt;li&gt;error is returned as a Go error&lt;/li&gt;
+&lt;li&gt;named options for setting headers &amp;amp; parameters&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;Great extensibility
+
+&lt;ul&gt;
+&lt;li&gt;clean and orthogonal implementation&lt;/li&gt;
+&lt;li&gt;users can easily extend the SDK when a new API method is supported&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;No third party dependencies&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;documentation:f87687907588b3c94606277d316d7263&#34;&gt;Documentation&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;doc/overview.md&#34;&gt;Overview&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;doc/api-object.md&#34;&gt;API Object&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;doc/bucket.md&#34;&gt;Bucket&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;doc/object.md&#34;&gt;Object&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;doc/options.md&#34;&gt;Optional Headers and Parameters&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;doc/upload.md&#34;&gt;Multipart Upload&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;doc/cors.md&#34;&gt;Cross-Origin Resource Sharing (CORS)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;doc/lifecycle.md&#34;&gt;Object Lifecycle Management&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;doc/extend.md&#34;&gt;Extending the SDK&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;differences-with-python-sdk:f87687907588b3c94606277d316d7263&#34;&gt;Differences with Python SDK&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;HTTP header User-Agent, e.g. aliyun-sdk-go/0.1.1 (Linux/3.16.0-51-generic/x86_64;go1.5.1)&lt;/li&gt;
+&lt;li&gt;Go HTTP client does not support 100-Continue (will be supported after Go 1.6, see &lt;a href=&#34;https://github.com/golang/go/issues/3665&#34;&gt;https://github.com/golang/go/issues/3665&lt;/a&gt;)&lt;/li&gt;
+&lt;li&gt;HTTP header keys are automatically converted into canonical format, e.g.
+x-oss-acl becomes X-Oss-Acl&lt;/li&gt;
+&lt;li&gt;Go GET request does not have redundant &amp;ldquo;Content-Length: 0&amp;rdquo; header&lt;/li&gt;
+&lt;li&gt;Parameters will be omitted if the argument is not set&lt;/li&gt;
+&lt;li&gt;Go always sends URL parameters and headers in canonical order&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;author:f87687907588b3c94606277d316d7263&#34;&gt;Author&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/h12w&#34;&gt;Hǎiliàng Wáng&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;license:f87687907588b3c94606277d316d7263&#34;&gt;License&lt;/h2&gt;
+
+&lt;p&gt;licensed under the &lt;a href=&#34;https://www.apache.org/licenses/LICENSE-2.0.html&#34;&gt;Apache License 2.0&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;references:f87687907588b3c94606277d316d7263&#34;&gt;References&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://docs.aliyun.com/#/pub/oss&#34;&gt;OSS Document (Chinese)&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+    <item>
       <title>kpax: a modular &amp; idiomatic Kafka client in Go</title>
       <link>http://h12.me/project/kpax/</link>
       <pubDate>Thu, 23 Jul 2015 13:36:25 +0800</pubDate>
@@ -205,13 +309,13 @@ func main() {
     
     <item>
       <title>A Comprehensive Note about Proxy Settings</title>
-      <link>http://h12.me/note/proxy_notes/</link>
+      <link>http://h12.me/note/proxy-notes/</link>
       <pubDate>Wed, 08 Jul 2015 07:58:34 +0000</pubDate>
       
-      <guid>http://h12.me/note/proxy_notes/</guid>
+      <guid>http://h12.me/note/proxy-notes/</guid>
       <description>
 
-&lt;h2 id=&#34;git:c75aaf27ff78e6c7de91570c27fb0dfd&#34;&gt;Git&lt;/h2&gt;
+&lt;h2 id=&#34;git:98bdf1dc45f059ee4334ef1c195fb8bb&#34;&gt;Git&lt;/h2&gt;
 
 &lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;&amp;gt; cat ~/.gitconfig
 [http]
@@ -220,13 +324,13 @@ func main() {
 	proxy = socks5://[host]:[port]
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h2 id=&#34;curl-homebrew:c75aaf27ff78e6c7de91570c27fb0dfd&#34;&gt;Curl (Homebrew)&lt;/h2&gt;
+&lt;h2 id=&#34;curl-homebrew:98bdf1dc45f059ee4334ef1c195fb8bb&#34;&gt;Curl (Homebrew)&lt;/h2&gt;
 
 &lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;&amp;gt; cat ~/.curlrc
 socks5 = &amp;quot;[host]:[port]&amp;quot;
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h2 id=&#34;gae:c75aaf27ff78e6c7de91570c27fb0dfd&#34;&gt;GAE&lt;/h2&gt;
+&lt;h2 id=&#34;gae:98bdf1dc45f059ee4334ef1c195fb8bb&#34;&gt;GAE&lt;/h2&gt;
 
 &lt;ol&gt;
 &lt;li&gt;&lt;p&gt;Set proxy&lt;/p&gt;
@@ -248,22 +352,22 @@ make sure the proxy is safe before this step).&lt;/p&gt;&lt;/li&gt;
     
     <item>
       <title>Notes on the Design of Go</title>
-      <link>http://h12.me/note/go_design/</link>
+      <link>http://h12.me/note/go-design/</link>
       <pubDate>Mon, 29 Jun 2015 16:34:59 +0800</pubDate>
       
-      <guid>http://h12.me/note/go_design/</guid>
+      <guid>http://h12.me/note/go-design/</guid>
       <description>
 
-&lt;h3 id=&#34;refusing-new-features:7dee003ea8460b8c44d861f1c60e603b&#34;&gt;Refusing new features&lt;/h3&gt;
+&lt;h3 id=&#34;refusing-new-features:152b3ca9eaa5f9a2262d95ae2b1b15be&#34;&gt;Refusing new features&lt;/h3&gt;
 
 &lt;p&gt;Avoid &lt;a href=&#34;https://en.wikipedia.org/wiki/Leaky_abstraction&#34;&gt;leaky abstraction&lt;/a&gt; as much as possible. If an abstraction is not solid enough, you’d rather not use them at all. Go is designed like this, the features are carefully selected. If a feature is not solid enough, it will not be allowed to enter Go.&lt;/p&gt;
 
-&lt;h3 id=&#34;no-implicit-string-concatenation:7dee003ea8460b8c44d861f1c60e603b&#34;&gt;No implicit string concatenation&lt;/h3&gt;
+&lt;h3 id=&#34;no-implicit-string-concatenation:152b3ca9eaa5f9a2262d95ae2b1b15be&#34;&gt;No implicit string concatenation&lt;/h3&gt;
 
 &lt;p&gt;&lt;a href=&#34;https://groups.google.com/d/msg/golang-nuts/S6a3bg65TBE/ikyNMzUSnXsJ&#34;&gt;Rob&lt;/a&gt;:
 That used to be in the language but was dropped when the semicolon insertion rules went in. You need the + to be able to span lines, and if you can&amp;rsquo;t span lines operatorless concatenation is close to pointless.&lt;/p&gt;
 
-&lt;h3 id=&#34;no-implicit-conversion:7dee003ea8460b8c44d861f1c60e603b&#34;&gt;No Implicit conversion&lt;/h3&gt;
+&lt;h3 id=&#34;no-implicit-conversion:152b3ca9eaa5f9a2262d95ae2b1b15be&#34;&gt;No Implicit conversion&lt;/h3&gt;
 
 &lt;p&gt;&lt;a href=&#34;https://groups.google.com/d/msg/golang-nuts/S6a3bg65TBE/ikyNMzUSnXsJ&#34;&gt;Rob&lt;/a&gt;:
 In any case the clarity of Go&amp;rsquo;s strictness is worth the occasional conversion. A huge class of bugs is simply gone, and a huge piece of tricky language in the specification never needed to be written.&lt;/p&gt;
@@ -271,13 +375,13 @@ In any case the clarity of Go&amp;rsquo;s strictness is worth the occasional con
 &lt;p&gt;&lt;a href=&#34;https://groups.google.com/d/msg/golang-nuts/S6a3bg65TBE/KUNfj8L4H4IJ&#34;&gt;Russ&lt;/a&gt;:
 Inserting automatic widening means giving up the &amp;ldquo;named types are not the same&amp;rdquo; rule, which makes it pretty much a non-starter.&lt;/p&gt;
 
-&lt;h3 id=&#34;octal-literal:7dee003ea8460b8c44d861f1c60e603b&#34;&gt;Octal literal&lt;/h3&gt;
+&lt;h3 id=&#34;octal-literal:152b3ca9eaa5f9a2262d95ae2b1b15be&#34;&gt;Octal literal&lt;/h3&gt;
 
 &lt;p&gt;Octal numeric system is rarely used, why does Go support them?&lt;/p&gt;
 
 &lt;p&gt;From Wikipedia “Octal”: Octal representation of non-ASCII bytes may be particularly handy with UTF-8, where any start byte has octal value \3nn and any continuation byte has octal value \2nn.&lt;/p&gt;
 
-&lt;h3 id=&#34;null-pointer-billion-dollar-mistake:7dee003ea8460b8c44d861f1c60e603b&#34;&gt;Null pointer (billion-dollar mistake)&lt;/h3&gt;
+&lt;h3 id=&#34;null-pointer-billion-dollar-mistake:152b3ca9eaa5f9a2262d95ae2b1b15be&#34;&gt;Null pointer (billion-dollar mistake)&lt;/h3&gt;
 
 &lt;p&gt;&lt;a href=&#34;https://groups.google.com/d/msg/golang-nuts/Vxpuc37S8tQ/2zGB1QgjmbAJ&#34;&gt;Jonathan&lt;/a&gt;:
 in the eyes of the Go designers, who clearly don&amp;rsquo;t view it as a billion-dollar mistake, and in my eyes as well,
@@ -286,19 +390,19 @@ in the eyes of the Go designers, who clearly don&amp;rsquo;t view it as a billio
 &lt;p&gt;&lt;a href=&#34;https://groups.google.com/d/msg/golang-nuts/SskXyc9D5Sk/-EKHAIFBRXEJ&#34;&gt;rog&lt;/a&gt;:
 even in languages with no nil, such as Haskell, you can still get exceptions from using things that have an unexpected form. e.g. head [] that&amp;rsquo;s not too different from a nil pointer exception. so even if you go the non-nil route, you may still end up paying a good proportion of the &amp;ldquo;billion dollar&amp;rdquo; price.&lt;/p&gt;
 
-&lt;h3 id=&#34;return-errors-rather-than-exceptions:7dee003ea8460b8c44d861f1c60e603b&#34;&gt;Return errors rather than exceptions&lt;/h3&gt;
+&lt;h3 id=&#34;return-errors-rather-than-exceptions:152b3ca9eaa5f9a2262d95ae2b1b15be&#34;&gt;Return errors rather than exceptions&lt;/h3&gt;
 
 &lt;p&gt;&lt;a href=&#34;http://blogs.msdn.com/b/oldnewthing/archive/2005/01/14/352949.aspx&#34;&gt;Raymond Chen&lt;/a&gt;:
 It&amp;rsquo;s easy to write bad code, regardless of the error model. It&amp;rsquo;s hard to write good error-code-based code since you have to check every error code and think about what you should do when an error occurs. It&amp;rsquo;s really hard to write good exception-based code since you have to check every single line of code (indeed, every sub-expression) and think about what exceptions it might raise and how your code will react to it. (In C++ it&amp;rsquo;s not quite so bad because C++ exceptions are raised only at specific points during execution. In C#, exceptions can be raised at any time.)&lt;/p&gt;
 
-&lt;h3 id=&#34;nil-channel-always-blocks-both-send-and-receive:7dee003ea8460b8c44d861f1c60e603b&#34;&gt;Nil channel always blocks (both send and receive)&lt;/h3&gt;
+&lt;h3 id=&#34;nil-channel-always-blocks-both-send-and-receive:152b3ca9eaa5f9a2262d95ae2b1b15be&#34;&gt;Nil channel always blocks (both send and receive)&lt;/h3&gt;
 
 &lt;p&gt;&lt;a href=&#34;https://groups.google.com/d/msg/golang-nuts/QltQ0nd9HvE/VvDhLO07Oq4J&#34;&gt;Rob&lt;/a&gt;:
 It&amp;rsquo;s for consistency with select. The semantics of a nil channel are
 the same regardless of how it is used. It&amp;rsquo;s useful that it blocks in a
 select, so that&amp;rsquo;s what it does outside a select.&lt;/p&gt;
 
-&lt;h3 id=&#34;reading-a-closed-channel-always-succeeds-with-zero-value:7dee003ea8460b8c44d861f1c60e603b&#34;&gt;Reading a closed channel always succeeds with zero value&lt;/h3&gt;
+&lt;h3 id=&#34;reading-a-closed-channel-always-succeeds-with-zero-value:152b3ca9eaa5f9a2262d95ae2b1b15be&#34;&gt;Reading a closed channel always succeeds with zero value&lt;/h3&gt;
 
 &lt;ol&gt;
 &lt;li&gt;the read cannot block because then it will not be distinguishable with nil channel.&lt;/li&gt;
@@ -307,11 +411,11 @@ select, so that&amp;rsquo;s what it does outside a select.&lt;/p&gt;
 e.g. v, ok := &amp;lt;-ch.&lt;/li&gt;
 &lt;/ol&gt;
 
-&lt;h3 id=&#34;writing-a-closed-channel-panics:7dee003ea8460b8c44d861f1c60e603b&#34;&gt;Writing a closed channel panics&lt;/h3&gt;
+&lt;h3 id=&#34;writing-a-closed-channel-panics:152b3ca9eaa5f9a2262d95ae2b1b15be&#34;&gt;Writing a closed channel panics&lt;/h3&gt;
 
 &lt;p&gt;The channel should only be closed by the writer(not reader), so if a writer close the channel and then write it again, it should be a programming bug and panic is the right behavior.&lt;/p&gt;
 
-&lt;h3 id=&#34;full-qualified-package-name:7dee003ea8460b8c44d861f1c60e603b&#34;&gt;Full qualified package name&lt;/h3&gt;
+&lt;h3 id=&#34;full-qualified-package-name:152b3ca9eaa5f9a2262d95ae2b1b15be&#34;&gt;Full qualified package name&lt;/h3&gt;
 
 &lt;p&gt;&lt;a href=&#34;https://groups.google.com/d/msg/golang-nuts/-tyo4o1uVTQ/FbDSkH9kq_oJ&#34;&gt;Rob&lt;/a&gt;:&lt;/p&gt;
 
@@ -329,11 +433,11 @@ e.g. v, ok := &amp;lt;-ch.&lt;/li&gt;
 
 &lt;p&gt;This convention we have, using the package names always, is deliberate.  Yes, sometimes it makes for more typing but we believe in the long run it means less typing.&lt;/p&gt;
 
-&lt;h3 id=&#34;slice-type-is-a-builtin-type:7dee003ea8460b8c44d861f1c60e603b&#34;&gt;Slice type is a builtin type&lt;/h3&gt;
+&lt;h3 id=&#34;slice-type-is-a-builtin-type:152b3ca9eaa5f9a2262d95ae2b1b15be&#34;&gt;Slice type is a builtin type&lt;/h3&gt;
 
 &lt;p&gt;To support variadic arguments.&lt;/p&gt;
 
-&lt;h3 id=&#34;what-is-type-t-t:7dee003ea8460b8c44d861f1c60e603b&#34;&gt;What is &lt;code&gt;type T []T&lt;/code&gt;?&lt;/h3&gt;
+&lt;h3 id=&#34;what-is-type-t-t:152b3ca9eaa5f9a2262d95ae2b1b15be&#34;&gt;What is &lt;code&gt;type T []T&lt;/code&gt;?&lt;/h3&gt;
 
 &lt;p&gt;?&lt;/p&gt;
 </description>
@@ -341,21 +445,21 @@ e.g. v, ok := &amp;lt;-ch.&lt;/li&gt;
     
     <item>
       <title>What Go cannot Do</title>
-      <link>http://h12.me/note/what_go_cannot_do/</link>
+      <link>http://h12.me/note/what-go-cannot-do/</link>
       <pubDate>Tue, 16 Jun 2015 00:00:00 +0000</pubDate>
       
-      <guid>http://h12.me/note/what_go_cannot_do/</guid>
+      <guid>http://h12.me/note/what-go-cannot-do/</guid>
       <description>
 
 &lt;p&gt;This is a list about the corner cases that Go cannot do, and their work arounds.&lt;/p&gt;
 
-&lt;h2 id=&#34;run-all-deferred-functions-of-other-goroutines-when-a-goroutine-panics:8b55f9ddc77541e5f8b431a4722abe5d&#34;&gt;Run all deferred functions of other goroutines when a goroutine panics&lt;/h2&gt;
+&lt;h2 id=&#34;run-all-deferred-functions-of-other-goroutines-when-a-goroutine-panics:9e386c4da73e9ffc81b3d6aaf29abff9&#34;&gt;Run all deferred functions of other goroutines when a goroutine panics&lt;/h2&gt;
 
 &lt;p&gt;Uncaught panicking of one goroutine will exit the program without executing deferred functions of other goroutines.&lt;/p&gt;
 
 &lt;p&gt;Workaround: this is the standard behavior, C++ with RAII also has the same problem. Persist your data in a way that crashing will not cause data integrity issue.&lt;/p&gt;
 
-&lt;h2 id=&#34;assigning-to-fields-with-short-declaration-notation:8b55f9ddc77541e5f8b431a4722abe5d&#34;&gt;Assigning to fields with short declaration notation&lt;/h2&gt;
+&lt;h2 id=&#34;assigning-to-fields-with-short-declaration-notation:9e386c4da73e9ffc81b3d6aaf29abff9&#34;&gt;Assigning to fields with short declaration notation&lt;/h2&gt;
 
 &lt;ul&gt;
 &lt;li&gt;Issue: &lt;a href=&#34;https://github.com/golang/go/issues/6842&#34;&gt;6842&lt;/a&gt;&lt;/li&gt;
@@ -377,7 +481,7 @@ if x.f, ok = f(); !ok {
 }
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h2 id=&#34;accessing-unexported-fields-with-reflect-value-interface-method:8b55f9ddc77541e5f8b431a4722abe5d&#34;&gt;Accessing unexported fields with reflect.Value.Interface method&lt;/h2&gt;
+&lt;h2 id=&#34;accessing-unexported-fields-with-reflect-value-interface-method:9e386c4da73e9ffc81b3d6aaf29abff9&#34;&gt;Accessing unexported fields with reflect.Value.Interface method&lt;/h2&gt;
 
 &lt;p&gt;When it is useful:&lt;/p&gt;
 
@@ -405,7 +509,7 @@ if v.Kind() == reflect.String {
 }
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h2 id=&#34;slice-of-array-literal:8b55f9ddc77541e5f8b431a4722abe5d&#34;&gt;Slice of array literal&lt;/h2&gt;
+&lt;h2 id=&#34;slice-of-array-literal:9e386c4da73e9ffc81b3d6aaf29abff9&#34;&gt;Slice of array literal&lt;/h2&gt;
 
 &lt;p&gt;e.g.&lt;/p&gt;
 
@@ -418,18 +522,18 @@ if v.Kind() == reflect.String {
     
     <item>
       <title>How to &#34;go get&#34; Behind a Proxy</title>
-      <link>http://h12.me/note/go_get_behind_proxy/</link>
+      <link>http://h12.me/note/go-get-behind-proxy/</link>
       <pubDate>Wed, 06 May 2015 12:01:11 +0800</pubDate>
       
-      <guid>http://h12.me/note/go_get_behind_proxy/</guid>
+      <guid>http://h12.me/note/go-get-behind-proxy/</guid>
       <description>
 
-&lt;h2 id=&#34;proxy-for-go-get:e490f2aac2393f2512d8fa1fe826c975&#34;&gt;Proxy for &amp;ldquo;go get&amp;rdquo;&lt;/h2&gt;
+&lt;h2 id=&#34;proxy-for-go-get:70e7a77773bb657f64cd08cb621ddcd5&#34;&gt;Proxy for &amp;ldquo;go get&amp;rdquo;&lt;/h2&gt;
 
 &lt;pre&gt;&lt;code&gt;https_proxy=http://user:pass@proxy_host:port go get ...
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h2 id=&#34;proxy-for-git:e490f2aac2393f2512d8fa1fe826c975&#34;&gt;Proxy for Git&lt;/h2&gt;
+&lt;h2 id=&#34;proxy-for-git:70e7a77773bb657f64cd08cb621ddcd5&#34;&gt;Proxy for Git&lt;/h2&gt;
 
 &lt;p&gt;In &lt;code&gt;$HOME/.gitconfig&lt;/code&gt;:&lt;/p&gt;
 
@@ -437,7 +541,7 @@ if v.Kind() == reflect.String {
 	proxy = proxy_url
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h2 id=&#34;proxy-for-mercurial:e490f2aac2393f2512d8fa1fe826c975&#34;&gt;Proxy for Mercurial&lt;/h2&gt;
+&lt;h2 id=&#34;proxy-for-mercurial:70e7a77773bb657f64cd08cb621ddcd5&#34;&gt;Proxy for Mercurial&lt;/h2&gt;
 
 &lt;p&gt;In &lt;code&gt;$HOME/.hgrc&lt;/code&gt;:&lt;/p&gt;
 
@@ -451,10 +555,10 @@ passwd = ...
     
     <item>
       <title>Go 1.4.1 Build Failure and Solution</title>
-      <link>http://h12.me/note/go_build_failure/</link>
+      <link>http://h12.me/note/go-build-failure/</link>
       <pubDate>Thu, 29 Jan 2015 03:55:08 +0000</pubDate>
       
-      <guid>http://h12.me/note/go_build_failure/</guid>
+      <guid>http://h12.me/note/go-build-failure/</guid>
       <description>&lt;p&gt;Today I tried to build Go 1.4.1 from source but it failed with this error:&lt;/p&gt;
 
 &lt;pre&gt;&lt;code&gt;    go/src/liblink/anames9.c:6:29: fatal error: ../cmd/9l/9.out.h: No such file or directory
@@ -472,10 +576,10 @@ you would have to figure it out yourself if no one ever mentioned it (&lt;a href
     
     <item>
       <title>A Shorter Domain Name</title>
-      <link>http://h12.me/note/new_domain_h12/</link>
+      <link>http://h12.me/note/new-domain-h12/</link>
       <pubDate>Tue, 16 Dec 2014 09:43:40 +0000</pubDate>
       
-      <guid>http://h12.me/note/new_domain_h12/</guid>
+      <guid>http://h12.me/note/new-domain-h12/</guid>
       <description>&lt;p&gt;This year, I decided not to renewal the previous domain name (hailiang.ws) last
 year, but to register a shorter one. There are two reasons:&lt;/p&gt;
 
@@ -494,10 +598,10 @@ website.&lt;/p&gt;
     
     <item>
       <title>About 301 Moved Permanently</title>
-      <link>http://h12.me/note/301_redirect/</link>
+      <link>http://h12.me/note/301-redirect/</link>
       <pubDate>Fri, 25 Jul 2014 03:39:05 +0000</pubDate>
       
-      <guid>http://h12.me/note/301_redirect/</guid>
+      <guid>http://h12.me/note/301-redirect/</guid>
       <description>&lt;p&gt;When building a website, there is one inevitable thing:
 &lt;a href=&#34;http://en.wikipedia.org/wiki/HTTP_301&#34;&gt;301 permanent redirection&lt;/a&gt;. The cases
 that have to involve 301 includes:&lt;/p&gt;
@@ -523,10 +627,10 @@ or not, so the root path needs no redirection.&lt;/p&gt;
     
     <item>
       <title>Serving Static Pages on App Engine with Go</title>
-      <link>http://h12.me/note/serve_static/</link>
+      <link>http://h12.me/note/serve-static/</link>
       <pubDate>Sun, 06 Jul 2014 06:39:27 +0000</pubDate>
       
-      <guid>http://h12.me/note/serve_static/</guid>
+      <guid>http://h12.me/note/serve-static/</guid>
       <description>&lt;p&gt;It is straightforward to serve static pages with &lt;a href=&#34;http://golang.org/pkg/net/http/&#34;&gt;Go&lt;/a&gt;
 or &lt;a href=&#34;https://developers.google.com/appengine/docs/go/config/appconfig&#34;&gt;config file&lt;/a&gt;
 on App Engine, but how to serve static pages on App Engine with Go?&lt;/p&gt;
@@ -827,16 +931,16 @@ func TestAll(t *testing.T) {
     
     <item>
       <title>html-query: a fluent and functional approach to querying HTML DOM</title>
-      <link>http://h12.me/project/html_query/</link>
+      <link>http://h12.me/project/html-query/</link>
       <pubDate>Mon, 20 Jan 2014 01:49:08 +0000</pubDate>
       
-      <guid>http://h12.me/project/html_query/</guid>
+      <guid>http://h12.me/project/html-query/</guid>
       <description>
 
 &lt;p&gt;html-query is a Go package that provides a fluent and functional interface for
 querying HTML DOM. It is based on &lt;a href=&#34;http://code.google.com/p/go.net/html&#34;&gt;go.net/html&lt;/a&gt;.&lt;/p&gt;
 
-&lt;h2 id=&#34;examples:c9c332b4cde328f092b2b6058a047b6b&#34;&gt;Examples&lt;/h2&gt;
+&lt;h2 id=&#34;examples:07fd2986486b663fc679cbfeabbf5621&#34;&gt;Examples&lt;/h2&gt;
 
 &lt;ol&gt;
 &lt;li&gt;&lt;p&gt;A simple example (under &amp;ldquo;examples&amp;rdquo; directory)&lt;/p&gt;
@@ -859,11 +963,11 @@ root.Div(Id(&amp;quot;content&amp;quot;)).Children(Class(&amp;quot;blogtitle&amp
 &lt;p&gt;A large part of html-query is automatically generated from HTML spec. The
 spec is in HTML format, so the generator parses it using html-query itself.&lt;/p&gt;
 
-&lt;h2 id=&#34;design:c9c332b4cde328f092b2b6058a047b6b&#34;&gt;Design&lt;/h2&gt;
+&lt;h2 id=&#34;design:07fd2986486b663fc679cbfeabbf5621&#34;&gt;Design&lt;/h2&gt;
 
 &lt;p&gt;Here is a simple explanation of the design of html-query.&lt;/p&gt;
 
-&lt;h3 id=&#34;functional-query-expressions:c9c332b4cde328f092b2b6058a047b6b&#34;&gt;Functional query expressions&lt;/h3&gt;
+&lt;h3 id=&#34;functional-query-expressions:07fd2986486b663fc679cbfeabbf5621&#34;&gt;Functional query expressions&lt;/h3&gt;
 
 &lt;p&gt;All functional definitions are defined in html-query/expr package.&lt;/p&gt;
 
@@ -898,7 +1002,7 @@ builder builder (function that returns a checker builder) defined in
 html-query when needed.&lt;/p&gt;&lt;/li&gt;
 &lt;/ol&gt;
 
-&lt;h3 id=&#34;fluent-interface:c9c332b4cde328f092b2b6058a047b6b&#34;&gt;Fluent interface&lt;/h3&gt;
+&lt;h3 id=&#34;fluent-interface:07fd2986486b663fc679cbfeabbf5621&#34;&gt;Fluent interface&lt;/h3&gt;
 
 &lt;p&gt;Fluent interface (&lt;a href=&#34;http://en.wikipedia.org/wiki/Fluent_interface&#34;&gt;http://en.wikipedia.org/wiki/Fluent_interface&lt;/a&gt;) are defined in
 html-query package.&lt;/p&gt;
@@ -937,113 +1041,10 @@ Method Node.Children and Node.Descendants each returns a node iterator
 (NodeIter). Method NodeIter.For can be used to loop through these nodes.&lt;/p&gt;&lt;/li&gt;
 &lt;/ol&gt;
 
-&lt;h2 id=&#34;alternative:c9c332b4cde328f092b2b6058a047b6b&#34;&gt;Alternative&lt;/h2&gt;
+&lt;h2 id=&#34;alternative:07fd2986486b663fc679cbfeabbf5621&#34;&gt;Alternative&lt;/h2&gt;
 
 &lt;p&gt;If you prefer a jquery like DSL rather than functional way, you might want to
 try &lt;a href=&#34;https://github.com/PuerkitoBio/goquery&#34;&gt;goquery&lt;/a&gt;.&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Cwrap: wraps C libraries in Go</title>
-      <link>http://h12.me/project/cwrap/</link>
-      <pubDate>Wed, 01 Jan 2014 01:30:04 +0000</pubDate>
-      
-      <guid>http://h12.me/project/cwrap/</guid>
-      <description>
-
-&lt;p&gt;Cwrap is a Go wrapper generator for C libraries.&lt;/p&gt;
-
-&lt;h2 id=&#34;features:21057ccf4628b2bc6e763170c8e0103a&#34;&gt;Features&lt;/h2&gt;
-
-&lt;ul&gt;
-&lt;li&gt;No Cgo types exposed out of the wrapper package, and uses as less allocation/copy as possible.&lt;/li&gt;
-&lt;li&gt;C name prefix mapped to Go packages, and a wrapper package can import another wrapper package.&lt;/li&gt;
-&lt;li&gt;Follows Go naming conventions.&lt;/li&gt;
-&lt;li&gt;C union.&lt;/li&gt;
-&lt;li&gt;Use Go language features when possible:
-
-&lt;ul&gt;
-&lt;li&gt;string and bool.&lt;/li&gt;
-&lt;li&gt;Multiple return values.&lt;/li&gt;
-&lt;li&gt;Slice, slice of slice and slice of string.&lt;/li&gt;
-&lt;li&gt;struct with methods.&lt;/li&gt;
-&lt;li&gt;Go closures as callbacks.&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;Stay out of the way when you need to do it manually for specified declarations.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&#34;usage:21057ccf4628b2bc6e763170c8e0103a&#34;&gt;Usage&lt;/h2&gt;
-
-&lt;p&gt;Cwrap itself is a Go package rather than an executable program. Just fill a cwrap.Package struct literal and call its Wrap method to generate your wrapper package under $GOPATH. Here is a simple example:&lt;/p&gt;
-
-&lt;p&gt;Say you want to generate a wrapper package for SDL2, and its header is at&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;/usr/local/include/SDL2/SDL2.h
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;So the cwrap.Package literal looks like:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-go&#34;&gt;var sdl = &amp;amp;Package{
-	PacName: &amp;quot;sdl&amp;quot;,
-	PacPath: &amp;quot;go-sdl&amp;quot;,
-	From: Header{
-		Dir:           &amp;quot;/usr/local/include/&amp;quot;,
-		File:          &amp;quot;SDL2/SDL.h&amp;quot;,
-		OtherCode:     &amp;quot;#define _SDL_main_h&amp;quot;,
-		NamePattern:   `\ASDL(.*)`,
-		Excluded:      []string{},
-		CgoDirectives: []string{&amp;quot;pkg-config: sdl2&amp;quot;},
-		BoolTypes:     []string{&amp;quot;SDL_bool&amp;quot;},
-	},
-	Included: []*Package{},
-}
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Then just call&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-go&#34;&gt;err := sdl.Wrap()
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h2 id=&#34;examples:21057ccf4628b2bc6e763170c8e0103a&#34;&gt;Examples&lt;/h2&gt;
-
-&lt;p&gt;In the examples directory, there are C libraries that I have successfully applied Cwrap, including:&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;Cairo&lt;/li&gt;
-&lt;li&gt;GSL (GNU Scientific Library)&lt;/li&gt;
-&lt;li&gt;MuPDF&lt;/li&gt;
-&lt;li&gt;PLplot&lt;/li&gt;
-&lt;li&gt;SDL2 (Simple DirectMedia Layer)&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;You are very welcome to submit examples you think useful to others.&lt;/p&gt;
-
-&lt;h2 id=&#34;applications:21057ccf4628b2bc6e763170c8e0103a&#34;&gt;Applications&lt;/h2&gt;
-
-&lt;ul&gt;
-&lt;li&gt;gr: A minimal PDF viewer based on SDL2 and MuPDF (&lt;a href=&#34;https://github.com/h12w/gr&#34;&gt;https://github.com/h12w/gr&lt;/a&gt;)&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&#34;issue-report:21057ccf4628b2bc6e763170c8e0103a&#34;&gt;Issue Report&lt;/h2&gt;
-
-&lt;p&gt;Cwrap may not cover every possible case and fails to come up with a corrresonding Go type or convertion, then the generated code may not be able to compile. When this happens, do the following steps:&lt;/p&gt;
-
-&lt;ol&gt;
-&lt;li&gt;Comment out the failed function wrappers till it compiles.&lt;/li&gt;
-&lt;li&gt;Add the C names of these failed functions to the excluded list (Package.From.Excluded).&lt;/li&gt;
-&lt;li&gt;Submit the generator example to me. I cannot guarantee anything but I will try to fix critical issues.&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;h2 id=&#34;limitations:21057ccf4628b2bc6e763170c8e0103a&#34;&gt;Limitations&lt;/h2&gt;
-
-&lt;ul&gt;
-&lt;li&gt;C variadic functions (&amp;hellip;) are not supported.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&#34;acknowledgement:21057ccf4628b2bc6e763170c8e0103a&#34;&gt;Acknowledgement&lt;/h2&gt;
-
-&lt;p&gt;Cwrap uses gccxml (&lt;a href=&#34;http://gccxml.github.io&#34;&gt;http://gccxml.github.io&lt;/a&gt;) to parse C headers to an XML file. Thanks very much for their excellent work.&lt;/p&gt;
 </description>
     </item>
     

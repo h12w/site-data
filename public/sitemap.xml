@@ -28,7 +28,12 @@
   </url>
   
   <url>
-    <loc>http://h12.me/note/remove_all_exited_docker_containers/</loc>
+    <loc>http://h12.me/project/aliyun-oss-go-sdk/</loc>
+    <lastmod>2015-10-22T15:32:58+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://h12.me/note/remove-all-exited-docker-containers/</loc>
     <lastmod>2015-08-03T16:55:49+08:00</lastmod>
   </url>
   
@@ -38,162 +43,162 @@
   </url>
   
   <url>
-    <loc>http://h12.me/note/proxy_notes/</loc>
+    <loc>http://h12.me/note/proxy-notes/</loc>
     <lastmod>2015-07-08T07:58:34+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://h12.me/note/phonetic_notations/</loc>
+    <loc>http://h12.me/note/phonetic-notations/</loc>
     <lastmod>2015-06-30T12:43:19+08:00</lastmod>
   </url>
   
   <url>
-    <loc>http://h12.me/note/go_design/</loc>
+    <loc>http://h12.me/note/go-design/</loc>
     <lastmod>2015-06-29T16:34:59+08:00</lastmod>
   </url>
   
   <url>
-    <loc>http://h12.me/note/what_go_cannot_do/</loc>
+    <loc>http://h12.me/note/what-go-cannot-do/</loc>
     <lastmod>2015-06-16T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://h12.me/note/ebook_tools/</loc>
+    <loc>http://h12.me/note/ebook-tools/</loc>
     <lastmod>2015-06-04T14:19:38+08:00</lastmod>
   </url>
   
   <url>
-    <loc>http://h12.me/note/go_get_behind_proxy/</loc>
+    <loc>http://h12.me/note/go-get-behind-proxy/</loc>
     <lastmod>2015-05-06T12:01:11+08:00</lastmod>
   </url>
   
   <url>
-    <loc>http://h12.me/note/tips_on_ssh/</loc>
+    <loc>http://h12.me/note/tips-on-ssh/</loc>
     <lastmod>2015-04-28T10:59:02+08:00</lastmod>
   </url>
   
   <url>
-    <loc>http://h12.me/note/generate_xsd_from_xml/</loc>
+    <loc>http://h12.me/note/generate-xsd-from-xml/</loc>
     <lastmod>2015-04-23T15:41:12+08:00</lastmod>
   </url>
   
   <url>
-    <loc>http://h12.me/article/password_management/</loc>
+    <loc>http://h12.me/article/password-management/</loc>
     <lastmod>2015-02-18T17:23:24+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://h12.me/article/scientific_web_surfing/</loc>
+    <loc>http://h12.me/article/scientific-web-surfing/</loc>
     <lastmod>2015-02-14T09:30:55+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://h12.me/note/go_build_failure/</loc>
+    <loc>http://h12.me/note/go-build-failure/</loc>
     <lastmod>2015-01-29T03:55:08+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://h12.me/note/gae_custom_domain/</loc>
+    <loc>http://h12.me/note/gae-custom-domain/</loc>
     <lastmod>2015-01-19T09:32:04+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://h12.me/note/install_ca_android/</loc>
+    <loc>http://h12.me/note/install-ca-android/</loc>
     <lastmod>2015-01-17T18:13:09+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://h12.me/note/new_domain_h12/</loc>
+    <loc>http://h12.me/note/new-domain-h12/</loc>
     <lastmod>2014-12-16T09:43:40+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://h12.me/note/parser_combinator_links/</loc>
+    <loc>http://h12.me/note/parser-combinator-links/</loc>
     <lastmod>2014-08-04T15:12:55+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://h12.me/note/hyphen_res/</loc>
+    <loc>http://h12.me/note/hyphen-res/</loc>
     <lastmod>2014-07-30T08:29:57+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://h12.me/article/learn_haskell/</loc>
+    <loc>http://h12.me/article/learn-haskell/</loc>
     <lastmod>2014-07-26T08:12:39+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://h12.me/note/301_redirect/</loc>
+    <loc>http://h12.me/note/301-redirect/</loc>
     <lastmod>2014-07-25T03:39:05+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://h12.me/article/pagespeed_insights/</loc>
+    <loc>http://h12.me/article/pagespeed-insights/</loc>
     <lastmod>2014-07-24T03:42:01+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://h12.me/note/ci_overview/</loc>
+    <loc>http://h12.me/note/ci-overview/</loc>
     <lastmod>2014-07-17T14:54:26+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://h12.me/note/install_scp/</loc>
+    <loc>http://h12.me/note/install-scp/</loc>
     <lastmod>2014-07-17T03:19:18+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://h12.me/note/install_susy/</loc>
+    <loc>http://h12.me/note/install-susy/</loc>
     <lastmod>2014-07-17T02:29:57+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://h12.me/note/web_design_site/</loc>
+    <loc>http://h12.me/note/web-design-site/</loc>
     <lastmod>2014-07-10T04:04:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://h12.me/note/ugly_font/</loc>
+    <loc>http://h12.me/note/ugly-font/</loc>
     <lastmod>2014-07-09T05:42:42+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://h12.me/note/serve_static/</loc>
+    <loc>http://h12.me/note/serve-static/</loc>
     <lastmod>2014-07-06T06:39:27+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://h12.me/article/optimal_font_scale/</loc>
+    <loc>http://h12.me/article/optimal-font-scale/</loc>
     <lastmod>2014-07-05T15:03:04+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://h12.me/note/site_test/</loc>
+    <loc>http://h12.me/note/site-test/</loc>
     <lastmod>2014-07-03T06:21:58+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://h12.me/note/narrow_fonts/</loc>
+    <loc>http://h12.me/note/narrow-fonts/</loc>
     <lastmod>2014-07-01T08:39:42+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://h12.me/note/font_links/</loc>
+    <loc>http://h12.me/note/font-links/</loc>
     <lastmod>2014-06-22T14:09:45+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://h12.me/note/searchable_meta_data/</loc>
+    <loc>http://h12.me/note/searchable-meta-data/</loc>
     <lastmod>2014-06-22T12:34:02+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://h12.me/note/htc_upgrade/</loc>
+    <loc>http://h12.me/note/htc-upgrade/</loc>
     <lastmod>2014-06-11T12:24:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://h12.me/note/disable_touchpad/</loc>
+    <loc>http://h12.me/note/disable-touchpad/</loc>
     <lastmod>2014-06-10T23:00:24+00:00</lastmod>
   </url>
   
@@ -208,7 +213,7 @@
   </url>
   
   <url>
-    <loc>http://h12.me/project/html_query/</loc>
+    <loc>http://h12.me/project/html-query/</loc>
     <lastmod>2014-01-20T01:49:08+00:00</lastmod>
   </url>
   

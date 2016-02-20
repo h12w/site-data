@@ -12,10 +12,10 @@
     
     <item>
       <title>About 301 Moved Permanently</title>
-      <link>http://h12.me/note/301_redirect/</link>
+      <link>http://h12.me/note/301-redirect/</link>
       <pubDate>Fri, 25 Jul 2014 03:39:05 +0000</pubDate>
       
-      <guid>http://h12.me/note/301_redirect/</guid>
+      <guid>http://h12.me/note/301-redirect/</guid>
       <description>&lt;p&gt;When building a website, there is one inevitable thing:
 &lt;a href=&#34;http://en.wikipedia.org/wiki/HTTP_301&#34;&gt;301 permanent redirection&lt;/a&gt;. The cases
 that have to involve 301 includes:&lt;/p&gt;

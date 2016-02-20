@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title> An Overview of Continuous Integration Services </title>
+        <title> Learning Haskell the Hard Way </title>
         <link rel="shortcut icon" href="/img/favicon.png" />
 
         <style>
@@ -70,56 +70,600 @@
 
         <main class="container">
             <article class="single">
-                <h1>An Overview of Continuous Integration Services</h1>
+                <h1>Learning Haskell the Hard Way</h1>
                 <div class="article-body hyphenate">
                 
 
-<p>After reviewing many continuous integration services below, there is no doubt
-that Wercker is the winner. The Wercker Box (virtual container) is based on
-Ubuntu and any packages can be easily installed with &ldquo;apt-get&rdquo;. This flexibility
-basically allows running any test suites and deploying to any cloud platforms.
-Furthermore, a Wercker Box can inherit from another box and can be stored and
-published in Wercker directories as the starting point for any projects,
-increasing the performance significantly.</p>
+<p>When I was reading the <a href="http://www.haskell.org/haskellwiki/Learning_Haskell">collection</a> of learning resources on Haskell and tried to find a good start, I quickly realized that
+none of the books or tutorials are suitable for me: the easier a tutorial claims
+to be, the harder to really understand Haskell by reading it. What I need is a
+terse documentation that introduces the syntax and semantics of Haskell
+systematically and clearly, but unfortunately none was found.</p>
 
-<h2 id="price:a76620099a0a46cdb5d632ea8ed57862">Price</h2>
+<p>I know I have to try the hard way: reading the
+<a href="http://www.haskell.org/haskellwiki/Language_and_library_specification">Haskell language specification</a>
+directly and absorb it myself. To make the process less dull and record my
+progress, I will write down my learning notes here incrementally.</p>
 
-<p>Open source friendly:</p>
+<h2 id="overview:f12ba4ec1e96d9d8ed4fe3dd41e7395e">Overview</h2>
 
-<ul>
-<li><a href="https://drone.io/">Drone.io</a></li>
-<li><a href="https://www.shippable.com/">Shippable</a></li>
-<li><a href="https://snap-ci.com/">Snap</a></li>
-<li><a href="https://travis-ci.org/">Travis-CI</a></li>
-<li><a href="http://wercker.com/">Wercker</a></li>
-</ul>
+<p>A Haskell program is organized with four levels: <em>modules</em>, <em>declarations</em>,
+<em>expressions</em> &amp; <em>lexical structures</em>, but the specification is organized in the
+reverse order.</p>
 
-<p>Has free plan:</p>
+<p>Haskell has <em>ad hoc</em> polymorphism (<em>overloading</em>) and <em>parametric</em> polymorphism
+(Hindley-Milner type structure).</p>
 
-<ul>
-<li><a href="http://www.cloudbees.com/">CloudBees</a></li>
-<li><a href="https://codeship.io/">Codeship</a></li>
-<li><a href="https://ship.io/">Ship.io</a></li>
-</ul>
-
-<p>No fee plan:</p>
+<p>Haskell has six namespaces:</p>
 
 <ul>
-<li><a href="https://circleci.com/">CircleCI</a></li>
-<li><a href="https://hosted-ci.com/">Hosted CI</a></li>
-<li><a href="https://semaphoreapp.com/">Semaphore</a></li>
-<li><a href="https://www.solanolabs.com/">Solano Labs</a></li>
-<li><a href="https://www.atlassian.com/software/bamboo">Bamboo</a></li>
+<li>for value
+
+<ul>
+<li>variable</li>
+<li>constructor</li>
+</ul></li>
+<li>for type entity
+
+<ul>
+<li>type variable</li>
+<li>type constructor</li>
+<li>type class</li>
+</ul></li>
+<li>module</li>
 </ul>
+
+<p>The same name can be reused without conflicts as long as they are in different
+namespaces.</p>
+
+<h2 id="lexical-structure:f12ba4ec1e96d9d8ed4fe3dd41e7395e">Lexical Structure</h2>
+
+<p>A Haskell program is composed of lexemes (tokens) and whitespaces.</p>
+
+<pre><code>program → { lexeme | whitespace } 
+</code></pre>
+
+<p>Whitespace includes:</p>
+
+<ul>
+<li>The complete set of whitespace in both ASCII &amp; Unicode</li>
+<li>Two kinds of comments
+
+<ul>
+<li>inline comment starts with <code>--</code></li>
+<li>nested comment wrapped by <code>{- -}</code></li>
+</ul></li>
+</ul>
+
+<p>A lexeme is one of the following:</p>
+
+<ul>
+<li>identifier
+
+<ul>
+<li>qvarid: (qualified) variable identifier</li>
+<li>qconid: (qualified) constructor identifier</li>
+<li>reservedid: reserved identifier</li>
+</ul></li>
+<li>operator
+
+<ul>
+<li>qvarsym: (qualified) variable (symbolic) operator</li>
+<li>qconsym: (qualified) constructor (symbolic) operator</li>
+<li>reservedop: reserved operator</li>
+</ul></li>
+<li>literal: integer, float, character or string literal</li>
+<li>special: one of special symbols <code>()[]{}`,;</code></li>
+</ul>
+
+<p>A variable and a constructor is distinguished by the first character and put into
+different namespaces:</p>
+
+<ul>
+<li>identifier
+
+<ul>
+<li>variable: lower case (including underscore)</li>
+<li>constructor: upper case</li>
+</ul></li>
+<li>operator
+
+<ul>
+<li>variable: non-colon</li>
+<li>constructor: colon <code>:</code></li>
+</ul></li>
+</ul>
+
+<p>A variable or constructor can contain symbol <code>'</code>, so the common mathematical
+term &ldquo;x prime&rdquo; can be represented as <code>x'</code>.</p>
+
+<p>By using layout rule (indentation), symbols <code>{};</code> can be omitted in sereral
+grammer productions.</p>
+
+<h2 id="expressions:f12ba4ec1e96d9d8ed4fe3dd41e7395e">Expressions</h2>
+
+<h3 id="parentheses:f12ba4ec1e96d9d8ed4fe3dd41e7395e">Parentheses</h3>
+
+<p><code>(exp)</code> is a <em>parenthesized expression</em>, and is equivalent to <code>exp</code>.</p>
+
+<h3 id="function-operator-application:f12ba4ec1e96d9d8ed4fe3dd41e7395e">Function &amp; operator application</h3>
+
+<p>Function is prefixed and curried, so <code>f x y</code> means <code>(f x) y</code>.</p>
+
+<pre><code>fexp    → [fexp] aexp
+</code></pre>
+
+<p>All operators are infixed except prefix negation <code>-</code>.</p>
+
+<pre><code>infixexp→ lexp qop infixexp
+        | - infixexp    (prefix negation)
+        | lexp
+qop     → qvarop | qconop
+</code></pre>
+
+<p>An operator can be converted to prefix notation by parentheses. e.g.</p>
+
+<pre><code>(+) x y
+</code></pre>
+
+<p>Reversely, a function identifier (either variable or constructor) can be
+converted to an infix operator by backquotes.</p>
+
+<pre><code>x `op` y
+</code></pre>
+
+<h3 id="list-tuple:f12ba4ec1e96d9d8ed4fe3dd41e7395e">List &amp; Tuple</h3>
+
+<p>List is constructed with <code>:</code>.</p>
+
+<pre><code>1:2:3:[]   or   (:) 1 ((:) 2 ((:) 3 []))
+</code></pre>
+
+<p><em>Arithmetic sequence</em> is another way to construct a list.</p>
+
+<pre><code>[1,3..6] == [1,3,5]
+  [1..6] == [1,2,3,4,5,6]
+</code></pre>
+
+<p>Tuple is constructed with <code>(,...,)</code>.</p>
+
+<pre><code>(1, 2, &quot;a&quot;)   or   (,,) 1 2 &quot;a&quot;
+</code></pre>
+
+<h3 id="field-label:f12ba4ec1e96d9d8ed4fe3dd41e7395e">Field label</h3>
+
+<p>A field label is used to give a name to a field in a datatype. It can be used to
+construct, extract and update the field.</p>
+
+<p>A constructor with labeled fields:</p>
+
+<pre><code>aexp    → qcon { fbind1 , … , fbindn }  (n ≥ 0)
+fbind   → qvar = exp 
+</code></pre>
+
+<h3 id="pattern-matching:f12ba4ec1e96d9d8ed4fe3dd41e7395e">Pattern matching</h3>
+
+<p>A pattern itself is not an expression, but it is an important part of sereral
+expressions, including: <em>lambda abstractions</em>, <em>function definitions</em>,
+<em>let expressions</em>, <em>list comprehensions</em>, <em>do expressions</em> and <em>case expressions</em>.</p>
+
+<p>Pattern matching is used to deconstruct values according to their type
+specification. It proceeds from left to right, and outside to inside. Attempting
+to match a pattern can have one of three results:</p>
+
+<ul>
+<li>Fail</li>
+<li>Succeed: returning a binding for each variable in the pattern</li>
+<li>Diverge: i.e. return ⊥</li>
+</ul>
+
+<p>The syntax for patterns covers a subset of expressions.</p>
+
+<p>A pattern can match against infix expressions, but limited to infix constructors
+(the operator must be <code>qconop</code>).</p>
+
+<pre><code>pat     → lpat qconop pat (infix constructor)
+</code></pre>
+
+<p>A pattern can match against constructor functions (with or without field labels).</p>
+
+<pre><code>pat     → ...
+        | lpat
+
+lpat    → apat
+        | gcon apat1 … apatk    (arity gcon  =  k, k ≥ 1) 
+
+apat    → ...
+        | gcon  (arity gcon  =  0)
+        | qcon { fpat1 , … , fpatk }    (labeled pattern, k ≥ 0)
+
+fpat    → qvar = pat 
+</code></pre>
+
+<p>A pattern can match against a variable, a literal, a parenthesized expression,
+a tuple or a list.</p>
+
+<pre><code>lpat    → var ...
+        | - (integer | float)   (negative literal) 
+
+apat    → ...
+        | literal
+        | ( pat )               (parenthesized pattern)
+        | ( pat1 , … , patk )   (tuple pattern, k ≥ 2)
+        | [ pat1 , … , patk ]   (list pattern, k ≥ 1)
+</code></pre>
+
+<p>The variables defined within the pattern can be binded, but how to name and bind
+the whole pattern? This is exactly what an <em>as pattern</em> does (<code>var</code> before <code>@</code>
+is the name for the whole pattern).</p>
+
+<pre><code>apat    → var [ @ apat] (as pattern) 
+</code></pre>
+
+<p>Wildcard is used when you need a variable placeholder but do not want to bind
+the value to a name.</p>
+
+<pre><code>apat    → ...
+        | _     (wildcard)
+</code></pre>
+
+<p>Sometimes you need a pattern that can never fail (only succeed or diverge), it
+is called a irrefutable pattern.</p>
+
+<pre><code>apat    → ...
+        | ~ apat        (irrefutable pattern)
+</code></pre>
+
+<p>Besides <code>~apat</code>, these patterns are also irrefutable: a variable, a wildcard,
+<code>N apat</code> where N is a constructor defined by newtype and apat is irrefutable,
+<code>var@apat</code> where apat is irrefutable. All other patterns are refutable.</p>
+
+<h3 id="case-expression:f12ba4ec1e96d9d8ed4fe3dd41e7395e">Case expression</h3>
+
+<p>Case expression is very important because all other pattern matching expressions
+ultimately translate into case expressions.</p>
+
+<p>A case expression has one or more alternatives.</p>
+
+<pre><code>lexp    → case exp of { alts }
+alts    → alt1 ; … ; altn       (n ≥ 1) 
+</code></pre>
+
+<p>An alternative is either a pattern or empty. The pattern either coresponds to
+an expression (body) directly, or has one or more guarded patterns (note an
+optional gdpat appears at the right side of itself). A guarded pattern starts
+with <code>|</code> and is composed of one or more guards.</p>
+
+<pre><code>alt     → pat -&gt; exp [where decls]
+        | pat  gdpat [where decls]
+        | (empty alternative) 
+gdpat   → guards -&gt; exp [ gdpat ]
+guards  → | guard1, …, guardn   (n ≥ 1)
+decls   → { decl1 ; … ; decln } (n ≥ 0) 
+</code></pre>
+
+<p>Note that each alternative can optionally have a <code>where</code> declaration. It is used
+to bind extra variables to be used in the local scope.</p>
+
+<p>There are two types of guards: <em>pattern guard</em> &amp; <em>boolean guard</em>, and local
+declarations can also be introduced together with guards.</p>
+
+<pre><code>guard   → pat &lt;- infixexp     (pattern guard)
+        | let decls           (local declaration)
+        | infixexp            (boolean guard)
+</code></pre>
+
+<p>This is how a case expression works:</p>
+
+<ol>
+<li>The expression after <code>case</code> is matched against each alternative till a match
+is found.</li>
+<li>Then each guarded pattern in the matched alterantive is tested till one
+passes. A guarded pattern passes if and only if all of its guards pass.</li>
+<li>If successful, the conresponding expression is returned, otherwise, the next
+guarded pattern or alternative is tried sequentially.</li>
+<li>If no match can be found, the result is ⊥.</li>
+</ol>
+
+<h3 id="lambda-expression:f12ba4ec1e96d9d8ed4fe3dd41e7395e">Lambda expression</h3>
+
+<p>Lambda is used to construct a function without a name. Besides a variable, the
+input can also be any pattern.</p>
+
+<pre><code>lexp    → \ apat1 … apatn -&gt; exp        (n ≥ 1)
+</code></pre>
+
+<p>An example:</p>
+
+<pre><code>(\ (x, y) -&gt; x+y) (3, 7)
+</code></pre>
+
+<p>Also note that lambda <code>-&gt;</code> associates to the right, e.g.</p>
+
+<pre><code>Integer -&gt;  Integer -&gt; Integer
+    is equivalent to
+Integer -&gt; (Integer -&gt; Integer)
+</code></pre>
+
+<h3 id="let-expression:f12ba4ec1e96d9d8ed4fe3dd41e7395e">Let expression</h3>
+
+<p>A let expression introduces a nested, lexically-scoped, mutually-recursive list
+of declarations. <code>exp</code> after keyword <code>in</code> is the value of a let expression.</p>
+
+<pre><code>lexp    → let decls in exp
+decls   → { decl1 ; … ; decln } (n ≥ 0) 
+</code></pre>
+
+<p>Some examples:</p>
+
+<pre><code>let {} in 42
+let {(x,y) = (1,2)} in x+y
+</code></pre>
+
+<h3 id="list-comprehension:f12ba4ec1e96d9d8ed4fe3dd41e7395e">List comprehension</h3>
+
+<p>A list comprehension constructs a list of elements represented by <code>exp</code> qualified
+by one or more qualifiers.</p>
+
+<pre><code>aexp    → [ exp | qual1 , … , qualn ]   (n ≥ 1)
+</code></pre>
+
+<p>There are three kinds of qualifiers.</p>
+
+<p>A generator is composed of a pattern (<code>pat</code> with type <code>t</code>) and a list (<code>e</code> with
+type <code>[t]</code>). The pattern is matched against and binded to each element of the
+list one by one, so the binded variables can be used to generate each element of
+the result list. The generators are evaluated in a nested, depth-first order,
+and a failed match is just skipped over.</p>
+
+<pre><code>qual    → pat &lt;- e      (generator)
+</code></pre>
+
+<p>A qualifier can also be a local declaration to bind auxiliary variables, or a
+boolean guard to exclude some elements from the list.</p>
+
+<pre><code>qual    → ...
+        | let decls     (local declaration)
+        | exp           (boolean guard) 
+</code></pre>
+
+<h3 id="do-expression:f12ba4ec1e96d9d8ed4fe3dd41e7395e">Do expression</h3>
+
+<p><em>Wait till monad is fully understood.</em></p>
+
+<h3 id="type-signature:f12ba4ec1e96d9d8ed4fe3dd41e7395e">Type signature</h3>
+
+<p>Haskell has type inference, but an expression can be optionally specified with a
+<em>type signature</em>.</p>
+
+<pre><code>exp     → infixexp :: [context =&gt;] type
+</code></pre>
+
+<h2 id="declarations:f12ba4ec1e96d9d8ed4fe3dd41e7395e">Declarations</h2>
+
+<p>There are top declarations (<code>topdecl</code>) that are only allowed at the top level of
+a module, and nested declarations (<code>decl</code>) that may be used either at the top
+level or in nested scopes.</p>
+
+<pre><code>topdecl → ...
+        | ...
+        | decl 
+</code></pre>
+
+<h3 id="top-declarations:f12ba4ec1e96d9d8ed4fe3dd41e7395e">Top declarations</h3>
+
+<p>A top declaration starts with one of the keywords: <code>data</code>, <code>type</code>, <code>newtype</code>,
+<code>class</code>, <code>instance</code>, <code>default</code> and <code>foreign</code>.</p>
+
+<p><code>data</code>, <code>type</code> and <code>newtype</code> is for declaring new types. <code>class</code> is for
+declaring typeclasses and <code>instance</code> is for declaring the membership between
+types and typeclasses.</p>
+
+<p>They are explained later one by one.</p>
+
+<h3 id="nested-declarations:f12ba4ec1e96d9d8ed4fe3dd41e7395e">Nested declarations</h3>
+
+<p>In the last section, <code>decl</code> appears in the let expression and where clause
+without any explanations. Actually, they are nested declarations.</p>
+
+<p>There are five kinds of nested declarations: <em>type signature</em>, <em>fixity</em>,
+<em>function binding</em>, <em>pattern binding</em> and <em>empty</em> declartions.</p>
+
+<p>A <em>type signature</em> simply specifies types for variables.</p>
+
+<pre><code>decl    → gendecl
+        | ...
+gendecl → vars :: [context =&gt;] type
+vars    → var1 , …, varn        (n ≥ 1)
+</code></pre>
+
+<p>A <em>fixity</em> declaration gives the fixity and binding precedence of one or more
+operators.</p>
+
+<pre><code>gendecl → ...
+        | fixity [integer] ops
+fixity  → infixl | infixr | infix
+ops     → op1 , … , opn         (n ≥ 1)
+op      → varop | conop 
+</code></pre>
+
+<p>The right hand side (<code>rhs</code>) of function and pattern bindings are the same.</p>
+
+<pre><code>decl    → ...
+        | (funlhs | pat) rhs
+</code></pre>
+
+<p>The syntax of <code>rhs</code> is almost the same as <em>case expression</em>, except <code>-&gt;</code> is
+replaced by <code>=</code>.</p>
+
+<pre><code>rhs     → = exp [where decls]
+        | gdrhs [where decls]
+gdrhs   → guards = exp [gdrhs]
+</code></pre>
+
+<p>A function can be binded in multiple function binding declarations, as long as
+they are contiguous and the number of patterns is the same. In each of the
+declaration, the left hand side supports three alternative syntaxes.</p>
+
+<pre><code>funlhs  → var apat { apat }
+        | pat varop pat
+        | ( funlhs ) apat { apat }
+</code></pre>
+
+<p>And an example:</p>
+
+<pre><code>plus x y z = x+y+z
+x ‘plus‘ y = \ z -&gt; x+y+z
+(x ‘plus‘ y) z = x+y+z
+</code></pre>
+
+<h3 id="type:f12ba4ec1e96d9d8ed4fe3dd41e7395e">Type</h3>
+
+<p>Just as an <em>expression</em> may contain variables and denotes a value, a
+<em>type expression</em> may contain <em>type variables</em> and denotes a type value (but it
+is evaluated at compile time, unlike an expression evaluated at run time).</p>
+
+<p>Type expressions are designed to have similar representations as their
+corresponding expressions.</p>
+
+<p>Function type can be represented in infix or prefix notation.
+Like function application, <em>type application</em> (<code>btype</code>) is also prefixed and
+curried. <code>atype</code> is the type expression excluding infix function type and
+type application.</p>
+
+<pre><code>type    → btype [-&gt; type]       (function type)
+btype   → [btype] atype         (type application)
+atype   → gtycon
+        | ...
+gtycon  → ...
+        | (-&gt;)  (function constructor)
+</code></pre>
+
+<p>A <em>type variable</em> is an identifier beginning with a lowercase letter.
+A <em>parenthesized type</em> <code>(t)</code> is identical to the type <code>t</code>.
+A <em>type constructor</em> (type template) as an identifier begins with an uppercase
+letter.
+Besides function type, the syntaxes for tuple and list are also special syntaxes.</p>
+
+<pre><code>atype   → gtycon
+        | tyvar
+        | ( type1 , … , typek ) (tuple type, k ≥ 2)
+        | [ type ]              (list type)
+        | ( type )              (parenthesised constructor)
+gtycon  → qtycon
+        | ()            (unit type)
+        | []            (list constructor)
+        | (-&gt;)          (function constructor)
+        | (,{,})        (tupling constructors) 
+</code></pre>
+
+<h3 id="kind:f12ba4ec1e96d9d8ed4fe3dd41e7395e">Kind</h3>
+
+<p>What is <code>*</code>, <code>* -&gt; *</code>&hellip;? An ordinary type has kind <code>*</code>. A type constructor
+(template) that has one type argument has kind <code>* -&gt; *</code>, e.g. a list. So on and
+so forth.</p>
+
+<h3 id="context:f12ba4ec1e96d9d8ed4fe3dd41e7395e">Context</h3>
+
+<p>The context (<code>context =&gt; type</code>) is used to indicate that type <code>tyvar</code> belongs to
+class <code>qtycls</code>.</p>
+
+<p>A context is composed of zero or more class assertions.</p>
+
+<pre><code>context → class
+        | ( class1 , … , classn )               (n ≥ 0)
+</code></pre>
+
+<p>And a class assertion is either either a type variable, or the application of
+type variable to one or more types.</p>
+
+<pre><code>class   → qtycls tyvar
+        | qtycls ( tyvar atype1 … atypen )      (n ≥ 1)
+qtycls  → [ modid . ] tycls
+tycls   → conid
+tyvar   → varid 
+</code></pre>
+
+<h3 id="algebraic-data-type:f12ba4ec1e96d9d8ed4fe3dd41e7395e">Algebraic data type</h3>
+
+<p><em>algebraic data type</em> is named so because it is composed of other types by
+product and sum (algebraic operations). It introduces a new type constructor
+(<code>simpletype</code>) with zero or more constituent data constructors (<code>constrs</code>).</p>
+
+<pre><code>topdecl → ...
+        | data [context =&gt;] simpletype [= constrs] [deriving]
+</code></pre>
+
+<p>The type constructor begins with upper case letter and may have zero to more
+type variables as parameters. The type constructor then can be used in curried
+type application in a type expression.</p>
+
+<pre><code>simpletype      → tycon tyvar1 … tyvark         (k ≥ 0) 
+</code></pre>
+
+<p>On the right side of <code>=</code>, sum (alternative) types are separated by <code>|</code>.</p>
+
+<pre><code>constrs → constr1 | … | constrn         (n ≥ 1)
+</code></pre>
+
+<p>For each <code>constr</code>, there are three alternative syntaxes.</p>
+
+<ol>
+<li>A data constructor followed by zero or more <code>atype</code>.</li>
+<li>An infix data constructor operator between two <code>btype</code>.</li>
+<li>A data constructor followed by field declarations.</li>
+</ol>
+
+<pre><code>constr  → con [!] atype1 … [!] atypek   (arity con  =  k, k ≥ 0)
+        | (btype | ! atype) conop (btype | ! atype) (infix conop)
+        | con { fielddecl1 , … , fielddecln }       (n ≥ 0) 
+con     → conid | ( consym )    (constructor) 
+</code></pre>
+
+<p><code>!</code> is strictness flag to indicate that the corresponding constructor argument
+is eagerly evaluated.</p>
+
+<h3 id="type-synonym:f12ba4ec1e96d9d8ed4fe3dd41e7395e">Type synonym</h3>
+
+<p>A type synonym is equivalent to its definition are completely interchangeable.</p>
+
+<pre><code>topdecl → type simpletype = type
+</code></pre>
+
+<h3 id="newtype:f12ba4ec1e96d9d8ed4fe3dd41e7395e">Newtype</h3>
+
+<p>A <em>newtype</em> declaration introduces a distinct type whose representation is the
+same as an existing type.</p>
+
+<pre><code>topdecl     → newtype [context =&gt;] simpletype = newconstr [deriving]
+newconstr   → con atype
+            | con { var :: type }
+</code></pre>
+
+<ul>
+<li>Unlike type synonyms, <code>newtype</code> may be used to define recursive types.</li>
+<li>New instances can be defined for a type defined by <code>newtype</code> but may not be
+defined for a type synonym.</li>
+<li>A type created by <code>newtype</code> has an extra level of indirection compared to an
+algebraic datatype, so the pattern matching rule is different.</li>
+</ul>
+
+<h3 id="ad-hoc-polymorphism:f12ba4ec1e96d9d8ed4fe3dd41e7395e">Ad hoc polymorphism</h3>
+
+<p>Ad hoc polymorphism (overloading) is supported by <em>typeclasses</em>.</p>
+
+<p>A class declaration introduces a new class and the operations (methods) on it.</p>
+
+<h2 id="modules:f12ba4ec1e96d9d8ed4fe3dd41e7395e">Modules</h2>
+
+<p><em>To be continued&hellip;</em></p>
 
                 </div>
                 <div>
-                    <div id="article-time">17 July 2014</div>
+                    <div id="article-time">26 July 2014</div>
                     <ul id="tags">
   
-    <li><a href="/tags/continuous-integration">Continuous integration</a> </li>
-  
-    <li><a href="/tags/automatic-deployment">Automatic deployment</a> </li>
+    <li><a href="/tags/haskell">Haskell</a> </li>
   
 </ul>
 

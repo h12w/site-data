@@ -12,13 +12,13 @@
     
     <item>
       <title>A Comprehensive Note about Proxy Settings</title>
-      <link>http://h12.me/note/proxy_notes/</link>
+      <link>http://h12.me/note/proxy-notes/</link>
       <pubDate>Wed, 08 Jul 2015 07:58:34 +0000</pubDate>
       
-      <guid>http://h12.me/note/proxy_notes/</guid>
+      <guid>http://h12.me/note/proxy-notes/</guid>
       <description>
 
-&lt;h2 id=&#34;git:c75aaf27ff78e6c7de91570c27fb0dfd&#34;&gt;Git&lt;/h2&gt;
+&lt;h2 id=&#34;git:98bdf1dc45f059ee4334ef1c195fb8bb&#34;&gt;Git&lt;/h2&gt;
 
 &lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;&amp;gt; cat ~/.gitconfig
 [http]
@@ -27,13 +27,13 @@
 	proxy = socks5://[host]:[port]
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h2 id=&#34;curl-homebrew:c75aaf27ff78e6c7de91570c27fb0dfd&#34;&gt;Curl (Homebrew)&lt;/h2&gt;
+&lt;h2 id=&#34;curl-homebrew:98bdf1dc45f059ee4334ef1c195fb8bb&#34;&gt;Curl (Homebrew)&lt;/h2&gt;
 
 &lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;&amp;gt; cat ~/.curlrc
 socks5 = &amp;quot;[host]:[port]&amp;quot;
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h2 id=&#34;gae:c75aaf27ff78e6c7de91570c27fb0dfd&#34;&gt;GAE&lt;/h2&gt;
+&lt;h2 id=&#34;gae:98bdf1dc45f059ee4334ef1c195fb8bb&#34;&gt;GAE&lt;/h2&gt;
 
 &lt;ol&gt;
 &lt;li&gt;&lt;p&gt;Set proxy&lt;/p&gt;
@@ -55,10 +55,10 @@ make sure the proxy is safe before this step).&lt;/p&gt;&lt;/li&gt;
     
     <item>
       <title>How to configure a custom domain name in GAE?</title>
-      <link>http://h12.me/note/gae_custom_domain/</link>
+      <link>http://h12.me/note/gae-custom-domain/</link>
       <pubDate>Mon, 19 Jan 2015 09:32:04 +0000</pubDate>
       
-      <guid>http://h12.me/note/gae_custom_domain/</guid>
+      <guid>http://h12.me/note/gae-custom-domain/</guid>
       <description>&lt;p&gt;Steps:&lt;/p&gt;
 
 &lt;ol&gt;

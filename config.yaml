@@ -1,0 +1,50 @@
+domain_name: h12.me
+
+githost: https://github.com/h12w
+
+packages:
+  - color
+  - config
+  - csv
+  - cv
+  - cwrap
+  - dfa
+  - egress
+  - errors
+  - exercise
+  - gengo
+  - getgo
+  - gexf
+  - go-gccxml
+  - go-gnuplot
+  - go-gsl
+  - go-mupdf
+  - go-nauty
+  - go-plfit
+  - go-plplot
+  - go-sdl
+  - go-shapefile
+  - go-zip
+  - gombi
+  - gorun
+  - gosweep
+  - gr
+  - graph
+  - gs
+  - gspec
+  - html-query
+  - httpauth
+  - kpax
+  - macro-expand
+  - misc
+  - realtest
+  - schemata
+  - script
+  - site
+  - snippets
+  - socks
+  - svg
+  - teff
+  - uuid
+  - wipro
+  - xsd

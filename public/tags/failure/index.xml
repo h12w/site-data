@@ -12,10 +12,10 @@
     
     <item>
       <title>Go 1.4.1 Build Failure and Solution</title>
-      <link>http://h12.me/note/go_build_failure/</link>
+      <link>http://h12.me/note/go-build-failure/</link>
       <pubDate>Thu, 29 Jan 2015 03:55:08 +0000</pubDate>
       
-      <guid>http://h12.me/note/go_build_failure/</guid>
+      <guid>http://h12.me/note/go-build-failure/</guid>
       <description>&lt;p&gt;Today I tried to build Go 1.4.1 from source but it failed with this error:&lt;/p&gt;
 
 &lt;pre&gt;&lt;code&gt;    go/src/liblink/anames9.c:6:29: fatal error: ../cmd/9l/9.out.h: No such file or directory

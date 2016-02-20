@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title> How to &#34;go get&#34; Behind a Proxy </title>
+        <title> html-query: a fluent and functional approach to querying HTML DOM </title>
         <link rel="shortcut icon" href="/img/favicon.png" />
 
         <style>
@@ -68,49 +68,140 @@
             </div>
         </header>
 
+        <div id="github-ribbon">
+            <a href="https://github.com/h12w/html-query">Fork me on GitHub</a>
+        </div>
         <main class="container">
             <article class="single">
-                <h1>How to &#34;go get&#34; Behind a Proxy</h1>
+                <h1>html-query: a fluent and functional approach to querying HTML DOM</h1>
                 <div class="article-body hyphenate">
                 
+                
+                
 
-<h2 id="proxy-for-go-get:e490f2aac2393f2512d8fa1fe826c975">Proxy for &ldquo;go get&rdquo;</h2>
+<p>html-query is a Go package that provides a fluent and functional interface for
+querying HTML DOM. It is based on <a href="http://code.google.com/p/go.net/html">go.net/html</a>.</p>
 
-<pre><code>https_proxy=http://user:pass@proxy_host:port go get ...
+<h2 id="examples:07fd2986486b663fc679cbfeabbf5621">Examples</h2>
+
+<ol>
+<li><p>A simple example (under &ldquo;examples&rdquo; directory)</p>
+
+<pre><code class="language-go">r := get(`http://blog.golang.org/index`)
+defer r.Close()
+root, err := query.Parse(r)
+checkError(err)
+root.Div(Id(&quot;content&quot;)).Children(Class(&quot;blogtitle&quot;)).For(func(item *query.Node) {
+    href := item.Ahref().Href()
+    date := item.Span(Class(&quot;date&quot;)).Text()
+    tags := item.Span(Class(&quot;tags&quot;)).Text()
+    // ......
+})
+</code></pre></li>
+
+<li><p>Generator of html-query (under &ldquo;gen&rdquo; directory)</p></li>
+</ol>
+
+<p>A large part of html-query is automatically generated from HTML spec. The
+spec is in HTML format, so the generator parses it using html-query itself.</p>
+
+<h2 id="design:07fd2986486b663fc679cbfeabbf5621">Design</h2>
+
+<p>Here is a simple explanation of the design of html-query.</p>
+
+<h3 id="functional-query-expressions:07fd2986486b663fc679cbfeabbf5621">Functional query expressions</h3>
+
+<p>All functional definitions are defined in html-query/expr package.</p>
+
+<ol>
+<li><p>Checker and checker composition<br />
+A checker is a function that accept and conditionally returns a *html.Node.</p>
+
+<pre><code class="language-go">type Checker func(*html.Node) *html.Node
 </code></pre>
 
-<h2 id="proxy-for-git:e490f2aac2393f2512d8fa1fe826c975">Proxy for Git</h2>
+<p>Here are some checker examples:</p>
 
-<p>In <code>$HOME/.gitconfig</code>:</p>
-
-<pre><code>[https]
-	proxy = proxy_url
+<pre><code>Id(&quot;id1&quot;)
+Class(&quot;c1&quot;)
+Div
+Abbr
+H1
+H2
 </code></pre>
 
-<h2 id="proxy-for-mercurial:e490f2aac2393f2512d8fa1fe826c975">Proxy for Mercurial</h2>
+<p>Checkers can be combined as boolean expressions:</p>
 
-<p>In <code>$HOME/.hgrc</code>:</p>
+<pre><code class="language-go">And(Id(&quot;id1&quot;), Class(&quot;c1&quot;))
+Or(Class(&quot;c1&quot;), Class(&quot;c2&quot;))
+And(Class(&quot;c1&quot;), Not(Class(&quot;c2&quot;)))
+</code></pre></li>
 
-<pre><code>[http_proxy]
-host = host:port
-user = ...
-passwd = ...
+<li><p>Checker builder<br />
+A checker builder is a function that returns a checker. &ldquo;Id&rdquo;, &ldquo;Class&rdquo;, &ldquo;And&rdquo;,
+&ldquo;Or&rdquo;, &ldquo;Not&rdquo; shown above are all checker builders. There are also some checker
+builder builder (function that returns a checker builder) defined in
+html-query when needed.</p></li>
+</ol>
+
+<h3 id="fluent-interface:07fd2986486b663fc679cbfeabbf5621">Fluent interface</h3>
+
+<p>Fluent interface (<a href="http://en.wikipedia.org/wiki/Fluent_interface">http://en.wikipedia.org/wiki/Fluent_interface</a>) are defined in
+html-query package.</p>
+
+<ol>
+<li><p>Root node<br />
+Function Parse returns the root node of an html document.</p></li>
+
+<li><p>Node finder<br />
+Method Node.Find implements a BFS search for a node, e.g.</p>
+
+<pre><code class="language-go">node.Find(Div, Class(&quot;id1&quot;))
 </code></pre>
+
+<p>But usually you can write the short form:</p>
+
+<pre><code class="language-go">node.Div(Class(&quot;id1&quot;))
+</code></pre></li>
+
+<li><p>Attribute getter
+Method Node.Attr can be used to get the value (or a regular expression
+submatch of the value) of a node, e.g.</p>
+
+<pre><code class="language-go">node.Attr(&quot;Id&quot;)
+node.Attr(&quot;href&quot;, &quot;\(.*)&quot;)
+</code></pre>
+
+<p>But usually you can write the short form:</p>
+
+<pre><code class="language-go">node.Id()
+node.Href(&quot;\(.*)&quot;)
+</code></pre></li>
+
+<li><p>Node iterator<br />
+Method Node.Children and Node.Descendants each returns a node iterator
+(NodeIter). Method NodeIter.For can be used to loop through these nodes.</p></li>
+</ol>
+
+<h2 id="alternative:07fd2986486b663fc679cbfeabbf5621">Alternative</h2>
+
+<p>If you prefer a jquery like DSL rather than functional way, you might want to
+try <a href="https://github.com/PuerkitoBio/goquery">goquery</a>.</p>
 
                 </div>
                 <div>
-                    <div id="article-time">6 May 2015</div>
+                    <div id="article-time">20 January 2014</div>
                     <ul id="tags">
   
+    <li><a href="/tags/html-dom">HTML DOM</a> </li>
+  
+    <li><a href="/tags/query">query</a> </li>
+  
+    <li><a href="/tags/functional">functional</a> </li>
+  
+    <li><a href="/tags/combinator">combinator</a> </li>
+  
     <li><a href="/tags/golang">Golang</a> </li>
-  
-    <li><a href="/tags/go-get">go get</a> </li>
-  
-    <li><a href="/tags/proxy">proxy</a> </li>
-  
-    <li><a href="/tags/git">Git</a> </li>
-  
-    <li><a href="/tags/mercurial">Mercurial</a> </li>
   
 </ul>
 

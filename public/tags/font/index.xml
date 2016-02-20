@@ -12,10 +12,10 @@
     
     <item>
       <title>Installing Source Code Pro</title>
-      <link>http://h12.me/note/install_scp/</link>
+      <link>http://h12.me/note/install-scp/</link>
       <pubDate>Thu, 17 Jul 2014 03:19:18 +0000</pubDate>
       
-      <guid>http://h12.me/note/install_scp/</guid>
+      <guid>http://h12.me/note/install-scp/</guid>
       <description>&lt;p&gt;&lt;em&gt;Source Code Pro&lt;/em&gt; is one of the best monospace fonts and it is &lt;a href=&#34;https://github.com/adobe/source-code-pro&#34;&gt;open sourced&lt;/a&gt;.&lt;/p&gt;
 
 &lt;p&gt;Here is the &lt;a href=&#34;https://github.com/h12w/linux/blob/master/install_scp.sh&#34;&gt;script&lt;/a&gt; for installing it on Linux.&lt;/p&gt;
@@ -24,10 +24,10 @@
     
     <item>
       <title>Why My Web Font Looks Ugly on IE?</title>
-      <link>http://h12.me/note/ugly_font/</link>
+      <link>http://h12.me/note/ugly-font/</link>
       <pubDate>Wed, 09 Jul 2014 05:42:42 +0000</pubDate>
       
-      <guid>http://h12.me/note/ugly_font/</guid>
+      <guid>http://h12.me/note/ugly-font/</guid>
       <description>&lt;p&gt;Windows needs hand-tuned hinting which is missing in many web fonts. To solve this
 problem, there is a tool called &lt;a href=&#34;http://www.freetype.org/ttfautohint/index.html&#34;&gt;ttfautohint&lt;/a&gt;
 which can automatically add hinting to font files.&lt;/p&gt;
@@ -39,10 +39,10 @@ and an online tool called &lt;a href=&#34;http://fontie.flowyapps.com/&#34;&gt;F
     
     <item>
       <title>A List of Narrow Fonts for Titles</title>
-      <link>http://h12.me/note/narrow_fonts/</link>
+      <link>http://h12.me/note/narrow-fonts/</link>
       <pubDate>Tue, 01 Jul 2014 08:39:42 +0000</pubDate>
       
-      <guid>http://h12.me/note/narrow_fonts/</guid>
+      <guid>http://h12.me/note/narrow-fonts/</guid>
       <description>&lt;ul&gt;
 &lt;li&gt;Economica&lt;/li&gt;
 &lt;li&gt;Fjalla One&lt;/li&gt;
@@ -62,10 +62,10 @@ and an online tool called &lt;a href=&#34;http://fontie.flowyapps.com/&#34;&gt;F
     
     <item>
       <title>Links about Font Choosing</title>
-      <link>http://h12.me/note/font_links/</link>
+      <link>http://h12.me/note/font-links/</link>
       <pubDate>Sun, 22 Jun 2014 14:09:45 +0000</pubDate>
       
-      <guid>http://h12.me/note/font_links/</guid>
+      <guid>http://h12.me/note/font-links/</guid>
       <description>&lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;http://www.snapily.com/blog/the-best-font-styles-for-blogging/&#34;&gt;The Best Font Styles for Blogging&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;http://www.bigbrandsystem.com/best-font-size/&#34;&gt;Size Doesn’t Matter, and What Does&lt;/a&gt;&lt;/li&gt;

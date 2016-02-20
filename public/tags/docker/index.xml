@@ -60,10 +60,10 @@
     
     <item>
       <title>How to Remove All Exited Containers &amp; Dangling Images for Docker?</title>
-      <link>http://h12.me/note/remove_all_exited_docker_containers/</link>
+      <link>http://h12.me/note/remove-all-exited-docker-containers/</link>
       <pubDate>Mon, 03 Aug 2015 16:55:49 +0800</pubDate>
       
-      <guid>http://h12.me/note/remove_all_exited_docker_containers/</guid>
+      <guid>http://h12.me/note/remove-all-exited-docker-containers/</guid>
       <description>&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;docker ps --quiet --filter=status=exited | xargs docker rm
 &lt;/code&gt;&lt;/pre&gt;
 
@@ -74,15 +74,15 @@
     
     <item>
       <title>A Brief Note on Scientific Web Surfing</title>
-      <link>http://h12.me/article/scientific_web_surfing/</link>
+      <link>http://h12.me/article/scientific-web-surfing/</link>
       <pubDate>Sat, 14 Feb 2015 09:30:55 +0000</pubDate>
       
-      <guid>http://h12.me/article/scientific_web_surfing/</guid>
+      <guid>http://h12.me/article/scientific-web-surfing/</guid>
       <description>
 
 &lt;p&gt;&lt;em&gt;Knowledge is power. Information is liberating. &amp;mdash; by Kofi Annan.&lt;/em&gt;&lt;/p&gt;
 
-&lt;h2 id=&#34;vps:ea9e3bd770b9144f6a284e7574cdf713&#34;&gt;VPS&lt;/h2&gt;
+&lt;h2 id=&#34;vps:ed389849b892ef1bb1002c7398bba070&#34;&gt;VPS&lt;/h2&gt;
 
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;http://www.vultr.com/?ref=6837862&#34;&gt;Vultr&lt;/a&gt;&lt;/li&gt;
@@ -96,18 +96,18 @@
 &lt;/ul&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h2 id=&#34;docker:ea9e3bd770b9144f6a284e7574cdf713&#34;&gt;Docker&lt;/h2&gt;
+&lt;h2 id=&#34;docker:ed389849b892ef1bb1002c7398bba070&#34;&gt;Docker&lt;/h2&gt;
 
 &lt;p&gt;Install &lt;a href=&#34;https://docs.docker.com/installation/&#34;&gt;Docker&lt;/a&gt; on VPS.&lt;/p&gt;
 
-&lt;h2 id=&#34;remote-proxy:ea9e3bd770b9144f6a284e7574cdf713&#34;&gt;Remote Proxy&lt;/h2&gt;
+&lt;h2 id=&#34;remote-proxy:ed389849b892ef1bb1002c7398bba070&#34;&gt;Remote Proxy&lt;/h2&gt;
 
 &lt;p&gt;Install &lt;a href=&#34;https://github.com/shadowsocks/shadowsocks-go/releases&#34;&gt;shadowsocks&lt;/a&gt;:&lt;/p&gt;
 
 &lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;docker run -d -p &amp;lt;port&amp;gt;:&amp;lt;port&amp;gt; h12w/shadowsocks -p &amp;lt;port&amp;gt; -k &amp;lt;password&amp;gt; -m aes-128-cfb -t 60
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h2 id=&#34;remote-dns-server:ea9e3bd770b9144f6a284e7574cdf713&#34;&gt;Remote DNS server&lt;/h2&gt;
+&lt;h2 id=&#34;remote-dns-server:ed389849b892ef1bb1002c7398bba070&#34;&gt;Remote DNS server&lt;/h2&gt;
 
 &lt;p&gt;Install &lt;a href=&#34;http://members.home.nl/p.a.rombouts/pdnsd/&#34;&gt;pdnsd&lt;/a&gt;:&lt;/p&gt;
 
@@ -119,7 +119,7 @@
 &lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;dig @xxx.xxx.xxx.xxx -p xxxx www.linux.com
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h2 id=&#34;local-openwrt-router:ea9e3bd770b9144f6a284e7574cdf713&#34;&gt;Local OpenWrt Router&lt;/h2&gt;
+&lt;h2 id=&#34;local-openwrt-router:ed389849b892ef1bb1002c7398bba070&#34;&gt;Local OpenWrt Router&lt;/h2&gt;
 
 &lt;p&gt;Install &lt;a href=&#34;https://github.com/shadowsocks/openwrt-shadowsocks&#34;&gt;openwrt-shadowsocks&lt;/a&gt;
 on an &lt;a href=&#34;https://openwrt.org/&#34;&gt;OpenWrt&lt;/a&gt; router.&lt;/p&gt;
@@ -213,7 +213,7 @@ config chinadns
     option nohosts &#39;1&#39;
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h2 id=&#34;redsocks2:ea9e3bd770b9144f6a284e7574cdf713&#34;&gt;RedSocks2&lt;/h2&gt;
+&lt;h2 id=&#34;redsocks2:ed389849b892ef1bb1002c7398bba070&#34;&gt;RedSocks2&lt;/h2&gt;
 
 &lt;p&gt;Use RedSocks2 to bypass the proxy when the target site is reachable.&lt;/p&gt;
 
@@ -236,7 +236,7 @@ opkg install xxx.ipk
 
 &lt;p&gt;RedSocks2 will take effect immediately.&lt;/p&gt;
 
-&lt;h2 id=&#34;upgrade-openwrt:ea9e3bd770b9144f6a284e7574cdf713&#34;&gt;Upgrade OpenWRT&lt;/h2&gt;
+&lt;h2 id=&#34;upgrade-openwrt:ed389849b892ef1bb1002c7398bba070&#34;&gt;Upgrade OpenWRT&lt;/h2&gt;
 
 &lt;p&gt;Download latest &lt;code&gt;*.ipk&lt;/code&gt; above.&lt;/p&gt;
 
@@ -256,7 +256,7 @@ scp ignore.list root@192.168.1.1:/etc/shadowsocks/ignore.list
 &lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;reboot
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h2 id=&#34;android-client:ea9e3bd770b9144f6a284e7574cdf713&#34;&gt;Android Client&lt;/h2&gt;
+&lt;h2 id=&#34;android-client:ed389849b892ef1bb1002c7398bba070&#34;&gt;Android Client&lt;/h2&gt;
 
 &lt;p&gt;&lt;a href=&#34;https://github.com/shadowsocks/shadowsocks-android/releases&#34;&gt;shadowsocks-android&lt;/a&gt;.&lt;/p&gt;
 </description>

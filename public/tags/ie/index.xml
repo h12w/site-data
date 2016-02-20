@@ -12,10 +12,10 @@
     
     <item>
       <title>Why My Web Font Looks Ugly on IE?</title>
-      <link>http://h12.me/note/ugly_font/</link>
+      <link>http://h12.me/note/ugly-font/</link>
       <pubDate>Wed, 09 Jul 2014 05:42:42 +0000</pubDate>
       
-      <guid>http://h12.me/note/ugly_font/</guid>
+      <guid>http://h12.me/note/ugly-font/</guid>
       <description>&lt;p&gt;Windows needs hand-tuned hinting which is missing in many web fonts. To solve this
 problem, there is a tool called &lt;a href=&#34;http://www.freetype.org/ttfautohint/index.html&#34;&gt;ttfautohint&lt;/a&gt;
 which can automatically add hinting to font files.&lt;/p&gt;

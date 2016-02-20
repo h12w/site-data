@@ -12,10 +12,10 @@
     
     <item>
       <title>Resources on Offline Hyphenation</title>
-      <link>http://h12.me/note/hyphen_res/</link>
+      <link>http://h12.me/note/hyphen-res/</link>
       <pubDate>Wed, 30 Jul 2014 08:29:57 +0000</pubDate>
       
-      <guid>http://h12.me/note/hyphen_res/</guid>
+      <guid>http://h12.me/note/hyphen-res/</guid>
       <description>&lt;p&gt;&lt;a href=&#34;http://caniuse.com/css-hyphens&#34;&gt;CSS hyphenation&lt;/a&gt; is supported by latest version
 of Firefox, Safari &amp;amp; IE. However, Chrome does not support it. Though
 &lt;a href=&#34;https://code.google.com/p/hyphenator/&#34;&gt;Hyphenator.js&lt;/a&gt; can solve this problem,

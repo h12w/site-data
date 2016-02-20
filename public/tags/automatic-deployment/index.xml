@@ -12,10 +12,10 @@
     
     <item>
       <title>An Overview of Continuous Integration Services</title>
-      <link>http://h12.me/note/ci_overview/</link>
+      <link>http://h12.me/note/ci-overview/</link>
       <pubDate>Thu, 17 Jul 2014 14:54:26 +0000</pubDate>
       
-      <guid>http://h12.me/note/ci_overview/</guid>
+      <guid>http://h12.me/note/ci-overview/</guid>
       <description>
 
 &lt;p&gt;After reviewing many continuous integration services below, there is no doubt
@@ -26,7 +26,7 @@ Furthermore, a Wercker Box can inherit from another box and can be stored and
 published in Wercker directories as the starting point for any projects,
 increasing the performance significantly.&lt;/p&gt;
 
-&lt;h2 id=&#34;price:a76620099a0a46cdb5d632ea8ed57862&#34;&gt;Price&lt;/h2&gt;
+&lt;h2 id=&#34;price:da5a5acea4f1038004bb9cb6ce226ffd&#34;&gt;Price&lt;/h2&gt;
 
 &lt;p&gt;Open source friendly:&lt;/p&gt;
 

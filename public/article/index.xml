@@ -12,10 +12,10 @@
     
     <item>
       <title>A Developer&#39;s Guide to Password Management</title>
-      <link>http://h12.me/article/password_management/</link>
+      <link>http://h12.me/article/password-management/</link>
       <pubDate>Wed, 18 Feb 2015 17:23:24 +0000</pubDate>
       
-      <guid>http://h12.me/article/password_management/</guid>
+      <guid>http://h12.me/article/password-management/</guid>
       <description>
 
 &lt;p&gt;This article is intended to be a comprehensive recipe to password management,
@@ -40,7 +40,7 @@ and its open source implementation (&lt;a href=&#34;https://gnupg.org&#34;&gt;Gn
 &lt;li&gt;A backup plan: do not put all your eggs in one basket&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h2 id=&#34;install-prerequisites:05f84c8567f6e5f08117e66d318cc61a&#34;&gt;Install Prerequisites&lt;/h2&gt;
+&lt;h2 id=&#34;install-prerequisites:8870b417a59981bead20d1ef5c323841&#34;&gt;Install Prerequisites&lt;/h2&gt;
 
 &lt;p&gt;On Linux:&lt;/p&gt;
 
@@ -68,7 +68,7 @@ sudo apt-get install pass
 &lt;li&gt;&lt;a href=&#34;https://github.com/rephorm/pass-ios&#34;&gt;Pass for iOS&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h2 id=&#34;preparing-pgp-keys:05f84c8567f6e5f08117e66d318cc61a&#34;&gt;Preparing PGP Keys&lt;/h2&gt;
+&lt;h2 id=&#34;preparing-pgp-keys:8870b417a59981bead20d1ef5c323841&#34;&gt;Preparing PGP Keys&lt;/h2&gt;
 
 &lt;p&gt;If you are already a PGP user, skip this step, otherwise, you are going to generate:&lt;/p&gt;
 
@@ -127,7 +127,7 @@ sub   4096R/&amp;lt;sub-key-id&amp;gt; &amp;lt;date&amp;gt;
 save
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h2 id=&#34;intialize-a-pass-store:05f84c8567f6e5f08117e66d318cc61a&#34;&gt;Intialize a Pass Store&lt;/h2&gt;
+&lt;h2 id=&#34;intialize-a-pass-store:8870b417a59981bead20d1ef5c323841&#34;&gt;Intialize a Pass Store&lt;/h2&gt;
 
 &lt;p&gt;A password store is simply a directory including encrypted files, and each of them
 contains a password (the first line) and extra information (rest of the file).&lt;/p&gt;
@@ -136,9 +136,9 @@ contains a password (the first line) and extra information (rest of the file).&l
 pass init &amp;lt;sub-key-id&amp;gt;
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h2 id=&#34;password-management-tips:05f84c8567f6e5f08117e66d318cc61a&#34;&gt;Password Management Tips&lt;/h2&gt;
+&lt;h2 id=&#34;password-management-tips:8870b417a59981bead20d1ef5c323841&#34;&gt;Password Management Tips&lt;/h2&gt;
 
-&lt;h3 id=&#34;replace-existing-passwords-with-strong-ones:05f84c8567f6e5f08117e66d318cc61a&#34;&gt;Replace Existing Passwords with Strong Ones&lt;/h3&gt;
+&lt;h3 id=&#34;replace-existing-passwords-with-strong-ones:8870b417a59981bead20d1ef5c323841&#34;&gt;Replace Existing Passwords with Strong Ones&lt;/h3&gt;
 
 &lt;p&gt;Generate a random password (15 characters):&lt;/p&gt;
 
@@ -155,12 +155,12 @@ line is the generated password.&lt;/p&gt;
 
 &lt;p&gt;Then you can update the password online accordingly.&lt;/p&gt;
 
-&lt;h3 id=&#34;put-a-password-into-clipboard-for-45-seconds:05f84c8567f6e5f08117e66d318cc61a&#34;&gt;Put a password into Clipboard for 45 seconds&lt;/h3&gt;
+&lt;h3 id=&#34;put-a-password-into-clipboard-for-45-seconds:8870b417a59981bead20d1ef5c323841&#34;&gt;Put a password into Clipboard for 45 seconds&lt;/h3&gt;
 
 &lt;pre&gt;&lt;code&gt;pass -c &amp;lt;account-name&amp;gt;
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h3 id=&#34;avoid-typing-master-passwords-repeatedly:05f84c8567f6e5f08117e66d318cc61a&#34;&gt;Avoid typing master passwords repeatedly&lt;/h3&gt;
+&lt;h3 id=&#34;avoid-typing-master-passwords-repeatedly:8870b417a59981bead20d1ef5c323841&#34;&gt;Avoid typing master passwords repeatedly&lt;/h3&gt;
 
 &lt;p&gt;Add configuration file &lt;code&gt;$HOME/.gnupg/gpg-agent.conf&lt;/code&gt; and remember the master
 password for 3600 seconds:&lt;/p&gt;
@@ -170,7 +170,7 @@ default-cache-ttl 3600
 max-cache-ttl 3600
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h3 id=&#34;store-ssh-keys:05f84c8567f6e5f08117e66d318cc61a&#34;&gt;Store SSH keys&lt;/h3&gt;
+&lt;h3 id=&#34;store-ssh-keys:8870b417a59981bead20d1ef5c323841&#34;&gt;Store SSH keys&lt;/h3&gt;
 
 &lt;p&gt;Store SSH public key as the password in the pass store, and encrypt the private
 key in the rest of the file.&lt;/p&gt;
@@ -180,7 +180,7 @@ key in the rest of the file.&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;git remote set-url origin git@&amp;lt;domain-name&amp;gt;:&amp;lt;repo-path&amp;gt;.git
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h2 id=&#34;backup-plan:05f84c8567f6e5f08117e66d318cc61a&#34;&gt;Backup Plan&lt;/h2&gt;
+&lt;h2 id=&#34;backup-plan:8870b417a59981bead20d1ef5c323841&#34;&gt;Backup Plan&lt;/h2&gt;
 
 &lt;p&gt;Prepare for the following extreme case:&lt;/p&gt;
 
@@ -190,7 +190,7 @@ damaged or stolen.&lt;/li&gt;
 &lt;li&gt;But you can still remember the master pass phrase.&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h3 id=&#34;use-a-remote-git-repository-to-backup-the-password-store:05f84c8567f6e5f08117e66d318cc61a&#34;&gt;Use a remote Git repository to backup the password store&lt;/h3&gt;
+&lt;h3 id=&#34;use-a-remote-git-repository-to-backup-the-password-store:8870b417a59981bead20d1ef5c323841&#34;&gt;Use a remote Git repository to backup the password store&lt;/h3&gt;
 
 &lt;pre&gt;&lt;code&gt;cd &amp;lt;pass-store&amp;gt;
 pass git init
@@ -198,7 +198,7 @@ pass git remote add origin &amp;lt;remote-git-url&amp;gt;
 pass git push
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h3 id=&#34;backup-pgp-keys:05f84c8567f6e5f08117e66d318cc61a&#34;&gt;Backup PGP keys&lt;/h3&gt;
+&lt;h3 id=&#34;backup-pgp-keys:8870b417a59981bead20d1ef5c323841&#34;&gt;Backup PGP keys&lt;/h3&gt;
 
 &lt;p&gt;Export all the key pairs (including both master and sub keys):&lt;/p&gt;
 
@@ -213,7 +213,7 @@ gpg --export             --armor &amp;lt;email-address&amp;gt;  &amp;gt;  &amp;l
 &lt;pre&gt;&lt;code&gt;gpg --import &amp;lt;private-key-file&amp;gt; &amp;lt;public-key-file&amp;gt;
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h2 id=&#34;hide-pgp-master-private-key:05f84c8567f6e5f08117e66d318cc61a&#34;&gt;Hide PGP Master Private Key&lt;/h2&gt;
+&lt;h2 id=&#34;hide-pgp-master-private-key:8870b417a59981bead20d1ef5c323841&#34;&gt;Hide PGP Master Private Key&lt;/h2&gt;
 
 &lt;p&gt;AFTER the full backup of your PGP keys, you can choose to delete the master
 private key on the device with the pass store, because only the sub key pair is
@@ -226,12 +226,12 @@ gpg   --import subkeys
 shred --remove subkeys
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h2 id=&#34;security-limitation:05f84c8567f6e5f08117e66d318cc61a&#34;&gt;Security Limitation&lt;/h2&gt;
+&lt;h2 id=&#34;security-limitation:8870b417a59981bead20d1ef5c323841&#34;&gt;Security Limitation&lt;/h2&gt;
 
 &lt;p&gt;PGP itself is secure and robust, but it all depends on how well you can preserve
 and protect your PGP key pair and master pass phrase.&lt;/p&gt;
 
-&lt;h2 id=&#34;references:05f84c8567f6e5f08117e66d318cc61a&#34;&gt;References&lt;/h2&gt;
+&lt;h2 id=&#34;references:8870b417a59981bead20d1ef5c323841&#34;&gt;References&lt;/h2&gt;
 
 &lt;ol&gt;
 &lt;li&gt;&lt;a href=&#34;https://alexcabal.com/creating-the-perfect-gpg-keypair&#34;&gt;Creating the Perfect GPG Keypair&lt;/a&gt;&lt;/li&gt;
@@ -242,15 +242,15 @@ and protect your PGP key pair and master pass phrase.&lt;/p&gt;
     
     <item>
       <title>A Brief Note on Scientific Web Surfing</title>
-      <link>http://h12.me/article/scientific_web_surfing/</link>
+      <link>http://h12.me/article/scientific-web-surfing/</link>
       <pubDate>Sat, 14 Feb 2015 09:30:55 +0000</pubDate>
       
-      <guid>http://h12.me/article/scientific_web_surfing/</guid>
+      <guid>http://h12.me/article/scientific-web-surfing/</guid>
       <description>
 
 &lt;p&gt;&lt;em&gt;Knowledge is power. Information is liberating. &amp;mdash; by Kofi Annan.&lt;/em&gt;&lt;/p&gt;
 
-&lt;h2 id=&#34;vps:ea9e3bd770b9144f6a284e7574cdf713&#34;&gt;VPS&lt;/h2&gt;
+&lt;h2 id=&#34;vps:ed389849b892ef1bb1002c7398bba070&#34;&gt;VPS&lt;/h2&gt;
 
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;http://www.vultr.com/?ref=6837862&#34;&gt;Vultr&lt;/a&gt;&lt;/li&gt;
@@ -264,18 +264,18 @@ and protect your PGP key pair and master pass phrase.&lt;/p&gt;
 &lt;/ul&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h2 id=&#34;docker:ea9e3bd770b9144f6a284e7574cdf713&#34;&gt;Docker&lt;/h2&gt;
+&lt;h2 id=&#34;docker:ed389849b892ef1bb1002c7398bba070&#34;&gt;Docker&lt;/h2&gt;
 
 &lt;p&gt;Install &lt;a href=&#34;https://docs.docker.com/installation/&#34;&gt;Docker&lt;/a&gt; on VPS.&lt;/p&gt;
 
-&lt;h2 id=&#34;remote-proxy:ea9e3bd770b9144f6a284e7574cdf713&#34;&gt;Remote Proxy&lt;/h2&gt;
+&lt;h2 id=&#34;remote-proxy:ed389849b892ef1bb1002c7398bba070&#34;&gt;Remote Proxy&lt;/h2&gt;
 
 &lt;p&gt;Install &lt;a href=&#34;https://github.com/shadowsocks/shadowsocks-go/releases&#34;&gt;shadowsocks&lt;/a&gt;:&lt;/p&gt;
 
 &lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;docker run -d -p &amp;lt;port&amp;gt;:&amp;lt;port&amp;gt; h12w/shadowsocks -p &amp;lt;port&amp;gt; -k &amp;lt;password&amp;gt; -m aes-128-cfb -t 60
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h2 id=&#34;remote-dns-server:ea9e3bd770b9144f6a284e7574cdf713&#34;&gt;Remote DNS server&lt;/h2&gt;
+&lt;h2 id=&#34;remote-dns-server:ed389849b892ef1bb1002c7398bba070&#34;&gt;Remote DNS server&lt;/h2&gt;
 
 &lt;p&gt;Install &lt;a href=&#34;http://members.home.nl/p.a.rombouts/pdnsd/&#34;&gt;pdnsd&lt;/a&gt;:&lt;/p&gt;
 
@@ -287,7 +287,7 @@ and protect your PGP key pair and master pass phrase.&lt;/p&gt;
 &lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;dig @xxx.xxx.xxx.xxx -p xxxx www.linux.com
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h2 id=&#34;local-openwrt-router:ea9e3bd770b9144f6a284e7574cdf713&#34;&gt;Local OpenWrt Router&lt;/h2&gt;
+&lt;h2 id=&#34;local-openwrt-router:ed389849b892ef1bb1002c7398bba070&#34;&gt;Local OpenWrt Router&lt;/h2&gt;
 
 &lt;p&gt;Install &lt;a href=&#34;https://github.com/shadowsocks/openwrt-shadowsocks&#34;&gt;openwrt-shadowsocks&lt;/a&gt;
 on an &lt;a href=&#34;https://openwrt.org/&#34;&gt;OpenWrt&lt;/a&gt; router.&lt;/p&gt;
@@ -381,7 +381,7 @@ config chinadns
     option nohosts &#39;1&#39;
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h2 id=&#34;redsocks2:ea9e3bd770b9144f6a284e7574cdf713&#34;&gt;RedSocks2&lt;/h2&gt;
+&lt;h2 id=&#34;redsocks2:ed389849b892ef1bb1002c7398bba070&#34;&gt;RedSocks2&lt;/h2&gt;
 
 &lt;p&gt;Use RedSocks2 to bypass the proxy when the target site is reachable.&lt;/p&gt;
 
@@ -404,7 +404,7 @@ opkg install xxx.ipk
 
 &lt;p&gt;RedSocks2 will take effect immediately.&lt;/p&gt;
 
-&lt;h2 id=&#34;upgrade-openwrt:ea9e3bd770b9144f6a284e7574cdf713&#34;&gt;Upgrade OpenWRT&lt;/h2&gt;
+&lt;h2 id=&#34;upgrade-openwrt:ed389849b892ef1bb1002c7398bba070&#34;&gt;Upgrade OpenWRT&lt;/h2&gt;
 
 &lt;p&gt;Download latest &lt;code&gt;*.ipk&lt;/code&gt; above.&lt;/p&gt;
 
@@ -424,7 +424,7 @@ scp ignore.list root@192.168.1.1:/etc/shadowsocks/ignore.list
 &lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;reboot
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h2 id=&#34;android-client:ea9e3bd770b9144f6a284e7574cdf713&#34;&gt;Android Client&lt;/h2&gt;
+&lt;h2 id=&#34;android-client:ed389849b892ef1bb1002c7398bba070&#34;&gt;Android Client&lt;/h2&gt;
 
 &lt;p&gt;&lt;a href=&#34;https://github.com/shadowsocks/shadowsocks-android/releases&#34;&gt;shadowsocks-android&lt;/a&gt;.&lt;/p&gt;
 </description>
@@ -432,10 +432,10 @@ scp ignore.list root@192.168.1.1:/etc/shadowsocks/ignore.list
     
     <item>
       <title>Learning Haskell the Hard Way</title>
-      <link>http://h12.me/article/learn_haskell/</link>
+      <link>http://h12.me/article/learn-haskell/</link>
       <pubDate>Sat, 26 Jul 2014 08:12:39 +0000</pubDate>
       
-      <guid>http://h12.me/article/learn_haskell/</guid>
+      <guid>http://h12.me/article/learn-haskell/</guid>
       <description>
 
 &lt;p&gt;When I was reading the &lt;a href=&#34;http://www.haskell.org/haskellwiki/Learning_Haskell&#34;&gt;collection&lt;/a&gt; of learning resources on Haskell and tried to find a good start, I quickly realized that
@@ -449,7 +449,7 @@ systematically and clearly, but unfortunately none was found.&lt;/p&gt;
 directly and absorb it myself. To make the process less dull and record my
 progress, I will write down my learning notes here incrementally.&lt;/p&gt;
 
-&lt;h2 id=&#34;overview:b9b074007e556aa28f8a3e7bb14cecf5&#34;&gt;Overview&lt;/h2&gt;
+&lt;h2 id=&#34;overview:f12ba4ec1e96d9d8ed4fe3dd41e7395e&#34;&gt;Overview&lt;/h2&gt;
 
 &lt;p&gt;A Haskell program is organized with four levels: &lt;em&gt;modules&lt;/em&gt;, &lt;em&gt;declarations&lt;/em&gt;,
 &lt;em&gt;expressions&lt;/em&gt; &amp;amp; &lt;em&gt;lexical structures&lt;/em&gt;, but the specification is organized in the
@@ -480,7 +480,7 @@ reverse order.&lt;/p&gt;
 &lt;p&gt;The same name can be reused without conflicts as long as they are in different
 namespaces.&lt;/p&gt;
 
-&lt;h2 id=&#34;lexical-structure:b9b074007e556aa28f8a3e7bb14cecf5&#34;&gt;Lexical Structure&lt;/h2&gt;
+&lt;h2 id=&#34;lexical-structure:f12ba4ec1e96d9d8ed4fe3dd41e7395e&#34;&gt;Lexical Structure&lt;/h2&gt;
 
 &lt;p&gt;A Haskell program is composed of lexemes (tokens) and whitespaces.&lt;/p&gt;
 
@@ -544,13 +544,13 @@ term &amp;ldquo;x prime&amp;rdquo; can be represented as &lt;code&gt;x&#39;&lt;/
 &lt;p&gt;By using layout rule (indentation), symbols &lt;code&gt;{};&lt;/code&gt; can be omitted in sereral
 grammer productions.&lt;/p&gt;
 
-&lt;h2 id=&#34;expressions:b9b074007e556aa28f8a3e7bb14cecf5&#34;&gt;Expressions&lt;/h2&gt;
+&lt;h2 id=&#34;expressions:f12ba4ec1e96d9d8ed4fe3dd41e7395e&#34;&gt;Expressions&lt;/h2&gt;
 
-&lt;h3 id=&#34;parentheses:b9b074007e556aa28f8a3e7bb14cecf5&#34;&gt;Parentheses&lt;/h3&gt;
+&lt;h3 id=&#34;parentheses:f12ba4ec1e96d9d8ed4fe3dd41e7395e&#34;&gt;Parentheses&lt;/h3&gt;
 
 &lt;p&gt;&lt;code&gt;(exp)&lt;/code&gt; is a &lt;em&gt;parenthesized expression&lt;/em&gt;, and is equivalent to &lt;code&gt;exp&lt;/code&gt;.&lt;/p&gt;
 
-&lt;h3 id=&#34;function-operator-application:b9b074007e556aa28f8a3e7bb14cecf5&#34;&gt;Function &amp;amp; operator application&lt;/h3&gt;
+&lt;h3 id=&#34;function-operator-application:f12ba4ec1e96d9d8ed4fe3dd41e7395e&#34;&gt;Function &amp;amp; operator application&lt;/h3&gt;
 
 &lt;p&gt;Function is prefixed and curried, so &lt;code&gt;f x y&lt;/code&gt; means &lt;code&gt;(f x) y&lt;/code&gt;.&lt;/p&gt;
 
@@ -576,7 +576,7 @@ converted to an infix operator by backquotes.&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;x `op` y
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h3 id=&#34;list-tuple:b9b074007e556aa28f8a3e7bb14cecf5&#34;&gt;List &amp;amp; Tuple&lt;/h3&gt;
+&lt;h3 id=&#34;list-tuple:f12ba4ec1e96d9d8ed4fe3dd41e7395e&#34;&gt;List &amp;amp; Tuple&lt;/h3&gt;
 
 &lt;p&gt;List is constructed with &lt;code&gt;:&lt;/code&gt;.&lt;/p&gt;
 
@@ -594,7 +594,7 @@ converted to an infix operator by backquotes.&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;(1, 2, &amp;quot;a&amp;quot;)   or   (,,) 1 2 &amp;quot;a&amp;quot;
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h3 id=&#34;field-label:b9b074007e556aa28f8a3e7bb14cecf5&#34;&gt;Field label&lt;/h3&gt;
+&lt;h3 id=&#34;field-label:f12ba4ec1e96d9d8ed4fe3dd41e7395e&#34;&gt;Field label&lt;/h3&gt;
 
 &lt;p&gt;A field label is used to give a name to a field in a datatype. It can be used to
 construct, extract and update the field.&lt;/p&gt;
@@ -605,7 +605,7 @@ construct, extract and update the field.&lt;/p&gt;
 fbind   → qvar = exp 
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h3 id=&#34;pattern-matching:b9b074007e556aa28f8a3e7bb14cecf5&#34;&gt;Pattern matching&lt;/h3&gt;
+&lt;h3 id=&#34;pattern-matching:f12ba4ec1e96d9d8ed4fe3dd41e7395e&#34;&gt;Pattern matching&lt;/h3&gt;
 
 &lt;p&gt;A pattern itself is not an expression, but it is an important part of sereral
 expressions, including: &lt;em&gt;lambda abstractions&lt;/em&gt;, &lt;em&gt;function definitions&lt;/em&gt;,
@@ -682,7 +682,7 @@ is called a irrefutable pattern.&lt;/p&gt;
 &lt;code&gt;N apat&lt;/code&gt; where N is a constructor defined by newtype and apat is irrefutable,
 &lt;code&gt;var@apat&lt;/code&gt; where apat is irrefutable. All other patterns are refutable.&lt;/p&gt;
 
-&lt;h3 id=&#34;case-expression:b9b074007e556aa28f8a3e7bb14cecf5&#34;&gt;Case expression&lt;/h3&gt;
+&lt;h3 id=&#34;case-expression:f12ba4ec1e96d9d8ed4fe3dd41e7395e&#34;&gt;Case expression&lt;/h3&gt;
 
 &lt;p&gt;Case expression is very important because all other pattern matching expressions
 ultimately translate into case expressions.&lt;/p&gt;
@@ -729,7 +729,7 @@ guarded pattern or alternative is tried sequentially.&lt;/li&gt;
 &lt;li&gt;If no match can be found, the result is ⊥.&lt;/li&gt;
 &lt;/ol&gt;
 
-&lt;h3 id=&#34;lambda-expression:b9b074007e556aa28f8a3e7bb14cecf5&#34;&gt;Lambda expression&lt;/h3&gt;
+&lt;h3 id=&#34;lambda-expression:f12ba4ec1e96d9d8ed4fe3dd41e7395e&#34;&gt;Lambda expression&lt;/h3&gt;
 
 &lt;p&gt;Lambda is used to construct a function without a name. Besides a variable, the
 input can also be any pattern.&lt;/p&gt;
@@ -749,7 +749,7 @@ input can also be any pattern.&lt;/p&gt;
 Integer -&amp;gt; (Integer -&amp;gt; Integer)
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h3 id=&#34;let-expression:b9b074007e556aa28f8a3e7bb14cecf5&#34;&gt;Let expression&lt;/h3&gt;
+&lt;h3 id=&#34;let-expression:f12ba4ec1e96d9d8ed4fe3dd41e7395e&#34;&gt;Let expression&lt;/h3&gt;
 
 &lt;p&gt;A let expression introduces a nested, lexically-scoped, mutually-recursive list
 of declarations. &lt;code&gt;exp&lt;/code&gt; after keyword &lt;code&gt;in&lt;/code&gt; is the value of a let expression.&lt;/p&gt;
@@ -764,7 +764,7 @@ decls   → { decl1 ; … ; decln } (n ≥ 0)
 let {(x,y) = (1,2)} in x+y
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h3 id=&#34;list-comprehension:b9b074007e556aa28f8a3e7bb14cecf5&#34;&gt;List comprehension&lt;/h3&gt;
+&lt;h3 id=&#34;list-comprehension:f12ba4ec1e96d9d8ed4fe3dd41e7395e&#34;&gt;List comprehension&lt;/h3&gt;
 
 &lt;p&gt;A list comprehension constructs a list of elements represented by &lt;code&gt;exp&lt;/code&gt; qualified
 by one or more qualifiers.&lt;/p&gt;
@@ -791,11 +791,11 @@ boolean guard to exclude some elements from the list.&lt;/p&gt;
         | exp           (boolean guard) 
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h3 id=&#34;do-expression:b9b074007e556aa28f8a3e7bb14cecf5&#34;&gt;Do expression&lt;/h3&gt;
+&lt;h3 id=&#34;do-expression:f12ba4ec1e96d9d8ed4fe3dd41e7395e&#34;&gt;Do expression&lt;/h3&gt;
 
 &lt;p&gt;&lt;em&gt;Wait till monad is fully understood.&lt;/em&gt;&lt;/p&gt;
 
-&lt;h3 id=&#34;type-signature:b9b074007e556aa28f8a3e7bb14cecf5&#34;&gt;Type signature&lt;/h3&gt;
+&lt;h3 id=&#34;type-signature:f12ba4ec1e96d9d8ed4fe3dd41e7395e&#34;&gt;Type signature&lt;/h3&gt;
 
 &lt;p&gt;Haskell has type inference, but an expression can be optionally specified with a
 &lt;em&gt;type signature&lt;/em&gt;.&lt;/p&gt;
@@ -803,7 +803,7 @@ boolean guard to exclude some elements from the list.&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;exp     → infixexp :: [context =&amp;gt;] type
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h2 id=&#34;declarations:b9b074007e556aa28f8a3e7bb14cecf5&#34;&gt;Declarations&lt;/h2&gt;
+&lt;h2 id=&#34;declarations:f12ba4ec1e96d9d8ed4fe3dd41e7395e&#34;&gt;Declarations&lt;/h2&gt;
 
 &lt;p&gt;There are top declarations (&lt;code&gt;topdecl&lt;/code&gt;) that are only allowed at the top level of
 a module, and nested declarations (&lt;code&gt;decl&lt;/code&gt;) that may be used either at the top
@@ -814,7 +814,7 @@ level or in nested scopes.&lt;/p&gt;
         | decl 
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h3 id=&#34;top-declarations:b9b074007e556aa28f8a3e7bb14cecf5&#34;&gt;Top declarations&lt;/h3&gt;
+&lt;h3 id=&#34;top-declarations:f12ba4ec1e96d9d8ed4fe3dd41e7395e&#34;&gt;Top declarations&lt;/h3&gt;
 
 &lt;p&gt;A top declaration starts with one of the keywords: &lt;code&gt;data&lt;/code&gt;, &lt;code&gt;type&lt;/code&gt;, &lt;code&gt;newtype&lt;/code&gt;,
 &lt;code&gt;class&lt;/code&gt;, &lt;code&gt;instance&lt;/code&gt;, &lt;code&gt;default&lt;/code&gt; and &lt;code&gt;foreign&lt;/code&gt;.&lt;/p&gt;
@@ -825,7 +825,7 @@ types and typeclasses.&lt;/p&gt;
 
 &lt;p&gt;They are explained later one by one.&lt;/p&gt;
 
-&lt;h3 id=&#34;nested-declarations:b9b074007e556aa28f8a3e7bb14cecf5&#34;&gt;Nested declarations&lt;/h3&gt;
+&lt;h3 id=&#34;nested-declarations:f12ba4ec1e96d9d8ed4fe3dd41e7395e&#34;&gt;Nested declarations&lt;/h3&gt;
 
 &lt;p&gt;In the last section, &lt;code&gt;decl&lt;/code&gt; appears in the let expression and where clause
 without any explanations. Actually, they are nested declarations.&lt;/p&gt;
@@ -881,7 +881,7 @@ x ‘plus‘ y = \ z -&amp;gt; x+y+z
 (x ‘plus‘ y) z = x+y+z
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h3 id=&#34;type:b9b074007e556aa28f8a3e7bb14cecf5&#34;&gt;Type&lt;/h3&gt;
+&lt;h3 id=&#34;type:f12ba4ec1e96d9d8ed4fe3dd41e7395e&#34;&gt;Type&lt;/h3&gt;
 
 &lt;p&gt;Just as an &lt;em&gt;expression&lt;/em&gt; may contain variables and denotes a value, a
 &lt;em&gt;type expression&lt;/em&gt; may contain &lt;em&gt;type variables&lt;/em&gt; and denotes a type value (but it
@@ -921,13 +921,13 @@ gtycon  → qtycon
         | (,{,})        (tupling constructors) 
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h3 id=&#34;kind:b9b074007e556aa28f8a3e7bb14cecf5&#34;&gt;Kind&lt;/h3&gt;
+&lt;h3 id=&#34;kind:f12ba4ec1e96d9d8ed4fe3dd41e7395e&#34;&gt;Kind&lt;/h3&gt;
 
 &lt;p&gt;What is &lt;code&gt;*&lt;/code&gt;, &lt;code&gt;* -&amp;gt; *&lt;/code&gt;&amp;hellip;? An ordinary type has kind &lt;code&gt;*&lt;/code&gt;. A type constructor
 (template) that has one type argument has kind &lt;code&gt;* -&amp;gt; *&lt;/code&gt;, e.g. a list. So on and
 so forth.&lt;/p&gt;
 
-&lt;h3 id=&#34;context:b9b074007e556aa28f8a3e7bb14cecf5&#34;&gt;Context&lt;/h3&gt;
+&lt;h3 id=&#34;context:f12ba4ec1e96d9d8ed4fe3dd41e7395e&#34;&gt;Context&lt;/h3&gt;
 
 &lt;p&gt;The context (&lt;code&gt;context =&amp;gt; type&lt;/code&gt;) is used to indicate that type &lt;code&gt;tyvar&lt;/code&gt; belongs to
 class &lt;code&gt;qtycls&lt;/code&gt;.&lt;/p&gt;
@@ -948,7 +948,7 @@ tycls   → conid
 tyvar   → varid 
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h3 id=&#34;algebraic-data-type:b9b074007e556aa28f8a3e7bb14cecf5&#34;&gt;Algebraic data type&lt;/h3&gt;
+&lt;h3 id=&#34;algebraic-data-type:f12ba4ec1e96d9d8ed4fe3dd41e7395e&#34;&gt;Algebraic data type&lt;/h3&gt;
 
 &lt;p&gt;&lt;em&gt;algebraic data type&lt;/em&gt; is named so because it is composed of other types by
 product and sum (algebraic operations). It introduces a new type constructor
@@ -987,14 +987,14 @@ con     → conid | ( consym )    (constructor)
 &lt;p&gt;&lt;code&gt;!&lt;/code&gt; is strictness flag to indicate that the corresponding constructor argument
 is eagerly evaluated.&lt;/p&gt;
 
-&lt;h3 id=&#34;type-synonym:b9b074007e556aa28f8a3e7bb14cecf5&#34;&gt;Type synonym&lt;/h3&gt;
+&lt;h3 id=&#34;type-synonym:f12ba4ec1e96d9d8ed4fe3dd41e7395e&#34;&gt;Type synonym&lt;/h3&gt;
 
 &lt;p&gt;A type synonym is equivalent to its definition are completely interchangeable.&lt;/p&gt;
 
 &lt;pre&gt;&lt;code&gt;topdecl → type simpletype = type
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h3 id=&#34;newtype:b9b074007e556aa28f8a3e7bb14cecf5&#34;&gt;Newtype&lt;/h3&gt;
+&lt;h3 id=&#34;newtype:f12ba4ec1e96d9d8ed4fe3dd41e7395e&#34;&gt;Newtype&lt;/h3&gt;
 
 &lt;p&gt;A &lt;em&gt;newtype&lt;/em&gt; declaration introduces a distinct type whose representation is the
 same as an existing type.&lt;/p&gt;
@@ -1012,13 +1012,13 @@ defined for a type synonym.&lt;/li&gt;
 algebraic datatype, so the pattern matching rule is different.&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h3 id=&#34;ad-hoc-polymorphism:b9b074007e556aa28f8a3e7bb14cecf5&#34;&gt;Ad hoc polymorphism&lt;/h3&gt;
+&lt;h3 id=&#34;ad-hoc-polymorphism:f12ba4ec1e96d9d8ed4fe3dd41e7395e&#34;&gt;Ad hoc polymorphism&lt;/h3&gt;
 
 &lt;p&gt;Ad hoc polymorphism (overloading) is supported by &lt;em&gt;typeclasses&lt;/em&gt;.&lt;/p&gt;
 
 &lt;p&gt;A class declaration introduces a new class and the operations (methods) on it.&lt;/p&gt;
 
-&lt;h2 id=&#34;modules:b9b074007e556aa28f8a3e7bb14cecf5&#34;&gt;Modules&lt;/h2&gt;
+&lt;h2 id=&#34;modules:f12ba4ec1e96d9d8ed4fe3dd41e7395e&#34;&gt;Modules&lt;/h2&gt;
 
 &lt;p&gt;&lt;em&gt;To be continued&amp;hellip;&lt;/em&gt;&lt;/p&gt;
 </description>
@@ -1026,13 +1026,13 @@ algebraic datatype, so the pattern matching rule is different.&lt;/li&gt;
     
     <item>
       <title>How to Achieve a Perfect PageSpeed Insights Score</title>
-      <link>http://h12.me/article/pagespeed_insights/</link>
+      <link>http://h12.me/article/pagespeed-insights/</link>
       <pubDate>Thu, 24 Jul 2014 03:42:01 +0000</pubDate>
       
-      <guid>http://h12.me/article/pagespeed_insights/</guid>
+      <guid>http://h12.me/article/pagespeed-insights/</guid>
       <description>
 
-&lt;h2 id=&#34;indtroduction:919a68b12dcbd06a0bdd7b43f8ef2907&#34;&gt;Indtroduction&lt;/h2&gt;
+&lt;h2 id=&#34;indtroduction:679b7602d5a8b08073cea405cbeecd74&#34;&gt;Indtroduction&lt;/h2&gt;
 
 &lt;p&gt;&lt;a href=&#34;https://developers.google.com/speed/pagespeed/insights/&#34;&gt;PageSpeed Insights&lt;/a&gt; is
 an online tool by Google to measure the performance of an web page for mobile
@@ -1049,9 +1049,9 @@ than 1 sec to about 500 ms in the &lt;a href=&#34;http://fpt.pingdom.com/&#34;&g
 In the following section, I would like to share what I have learned by
 optimizing this website to achieve a &lt;a href=&#34;https://developers.google.com/speed/pagespeed/insights/?url=http%3A%2F%2Fh12.me&#34;&gt;perfect score&lt;/a&gt;, rule by rule.&lt;/p&gt;
 
-&lt;h2 id=&#34;speed-rules:919a68b12dcbd06a0bdd7b43f8ef2907&#34;&gt;Speed rules&lt;/h2&gt;
+&lt;h2 id=&#34;speed-rules:679b7602d5a8b08073cea405cbeecd74&#34;&gt;Speed rules&lt;/h2&gt;
 
-&lt;h3 id=&#34;avoid-landing-page-redirects:919a68b12dcbd06a0bdd7b43f8ef2907&#34;&gt;Avoid landing page redirects&lt;/h3&gt;
+&lt;h3 id=&#34;avoid-landing-page-redirects:679b7602d5a8b08073cea405cbeecd74&#34;&gt;Avoid landing page redirects&lt;/h3&gt;
 
 &lt;p&gt;The redirection to mobile version can be avoided by responsive design (CSS media
 queries).&lt;/p&gt;
@@ -1060,7 +1060,7 @@ queries).&lt;/p&gt;
 subdomain to the naked domain, but the naked domain does not have any further
 redirection.&lt;/p&gt;
 
-&lt;h3 id=&#34;eliminate-render-blocking-javascript-and-css-in-above-the-fold-content:919a68b12dcbd06a0bdd7b43f8ef2907&#34;&gt;Eliminate render-blocking JavaScript and CSS in above-the-fold content&lt;/h3&gt;
+&lt;h3 id=&#34;eliminate-render-blocking-javascript-and-css-in-above-the-fold-content:679b7602d5a8b08073cea405cbeecd74&#34;&gt;Eliminate render-blocking JavaScript and CSS in above-the-fold content&lt;/h3&gt;
 
 &lt;p&gt;This might be the hardest rule to fully comply with.&lt;/p&gt;
 
@@ -1079,46 +1079,46 @@ are loaded asychronously but executed in order.&lt;/p&gt;
 layout of above-the-fold content. You might have to make some trade off and cut
 off some functionality.&lt;/p&gt;
 
-&lt;h3 id=&#34;enable-compression-leverage-browser-caching-reduce-server-response-time:919a68b12dcbd06a0bdd7b43f8ef2907&#34;&gt;Enable compression, Leverage browser caching &amp;amp; Reduce server response time&lt;/h3&gt;
+&lt;h3 id=&#34;enable-compression-leverage-browser-caching-reduce-server-response-time:679b7602d5a8b08073cea405cbeecd74&#34;&gt;Enable compression, Leverage browser caching &amp;amp; Reduce server response time&lt;/h3&gt;
 
 &lt;p&gt;Since I uses Google App Engine, the gzip compression should already been enabled
 by default, the expiration time for static resources are configurable via
 config.yaml and GAE responses fast enough.&lt;/p&gt;
 
-&lt;h3 id=&#34;minify-resources-html-css-and-javascript:919a68b12dcbd06a0bdd7b43f8ef2907&#34;&gt;Minify Resources (HTML, CSS, and JavaScript)&lt;/h3&gt;
+&lt;h3 id=&#34;minify-resources-html-css-and-javascript:679b7602d5a8b08073cea405cbeecd74&#34;&gt;Minify Resources (HTML, CSS, and JavaScript)&lt;/h3&gt;
 
 &lt;p&gt;The CSS is minified by Compass, and scripts imported are already minified. The
 HTML file is not minified but it seems not serious enough to trigger a test
 warning by PageSpeed.&lt;/p&gt;
 
-&lt;h3 id=&#34;optimize-images:919a68b12dcbd06a0bdd7b43f8ef2907&#34;&gt;Optimize images&lt;/h3&gt;
+&lt;h3 id=&#34;optimize-images:679b7602d5a8b08073cea405cbeecd74&#34;&gt;Optimize images&lt;/h3&gt;
 
 &lt;p&gt;I use font icons in my site. When there has to be an image, use PNG compressed with
 &lt;a href=&#34;http://optipng.sourceforge.net/&#34;&gt;OptiPNG&lt;/a&gt;.&lt;/p&gt;
 
-&lt;h3 id=&#34;reduce-the-size-of-the-above-the-fold-content:919a68b12dcbd06a0bdd7b43f8ef2907&#34;&gt;Reduce the size of the above-the-fold content&lt;/h3&gt;
+&lt;h3 id=&#34;reduce-the-size-of-the-above-the-fold-content:679b7602d5a8b08073cea405cbeecd74&#34;&gt;Reduce the size of the above-the-fold content&lt;/h3&gt;
 
 &lt;p&gt;It basically depends on your design and just remember the YAGNI principle.&lt;/p&gt;
 
-&lt;h2 id=&#34;user-experience-rules:919a68b12dcbd06a0bdd7b43f8ef2907&#34;&gt;User experience rules&lt;/h2&gt;
+&lt;h2 id=&#34;user-experience-rules:679b7602d5a8b08073cea405cbeecd74&#34;&gt;User experience rules&lt;/h2&gt;
 
 &lt;p&gt;These rule only applies to mobile platforms.&lt;/p&gt;
 
-&lt;h3 id=&#34;avoid-plugins:919a68b12dcbd06a0bdd7b43f8ef2907&#34;&gt;Avoid plugins&lt;/h3&gt;
+&lt;h3 id=&#34;avoid-plugins:679b7602d5a8b08073cea405cbeecd74&#34;&gt;Avoid plugins&lt;/h3&gt;
 
 &lt;p&gt;None of them on my site.&lt;/p&gt;
 
-&lt;h3 id=&#34;configure-the-viewport:919a68b12dcbd06a0bdd7b43f8ef2907&#34;&gt;Configure the viewport&lt;/h3&gt;
+&lt;h3 id=&#34;configure-the-viewport:679b7602d5a8b08073cea405cbeecd74&#34;&gt;Configure the viewport&lt;/h3&gt;
 
 &lt;p&gt;This is part of the responsive design.&lt;/p&gt;
 
-&lt;h3 id=&#34;size-content-to-viewport:919a68b12dcbd06a0bdd7b43f8ef2907&#34;&gt;Size content to viewport&lt;/h3&gt;
+&lt;h3 id=&#34;size-content-to-viewport:679b7602d5a8b08073cea405cbeecd74&#34;&gt;Size content to viewport&lt;/h3&gt;
 
 &lt;p&gt;An important lesson: never write a URL directly in an article because URL does
 not wrap well and could overflow out of the viewport width. instead, give the
 URL a name composed of words.&lt;/p&gt;
 
-&lt;h3 id=&#34;size-tap-targets-appropriately-use-legible-font-sizes:919a68b12dcbd06a0bdd7b43f8ef2907&#34;&gt;Size tap targets appropriately &amp;amp; Use legible font sizes&lt;/h3&gt;
+&lt;h3 id=&#34;size-tap-targets-appropriately-use-legible-font-sizes:679b7602d5a8b08073cea405cbeecd74&#34;&gt;Size tap targets appropriately &amp;amp; Use legible font sizes&lt;/h3&gt;
 
 &lt;p&gt;I have written some lists of links in my notes, which makes those links close to
 each other. To make them separate enough to pass this rule, the line height cannot
@@ -1132,7 +1132,7 @@ be too small, here is the minimal requirement from my tests (font-size/line-heig
 &lt;li&gt;20px/30px&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h2 id=&#34;conclusion:919a68b12dcbd06a0bdd7b43f8ef2907&#34;&gt;Conclusion&lt;/h2&gt;
+&lt;h2 id=&#34;conclusion:679b7602d5a8b08073cea405cbeecd74&#34;&gt;Conclusion&lt;/h2&gt;
 
 &lt;p&gt;It is not rocket science to build a website with good performance. You just needs
 to tune and optimize every detail of your site patiently. In this process,
@@ -1142,17 +1142,17 @@ PageSpeed Insights can help a lot.&lt;/p&gt;
     
     <item>
       <title>Finding Optimal Typographic Scale</title>
-      <link>http://h12.me/article/optimal_font_scale/</link>
+      <link>http://h12.me/article/optimal-font-scale/</link>
       <pubDate>Sat, 05 Jul 2014 15:03:04 +0000</pubDate>
       
-      <guid>http://h12.me/article/optimal_font_scale/</guid>
+      <guid>http://h12.me/article/optimal-font-scale/</guid>
       <description>
 
 &lt;p&gt;During the construction of this site, there are many important design decisions
 that need to be made. One of them is to decide the font size for each level of
 headings, i.e., typographic scale.&lt;/p&gt;
 
-&lt;h2 id=&#34;investigation:f857546c9f6549514c78eb24fd887797&#34;&gt;Investigation&lt;/h2&gt;
+&lt;h2 id=&#34;investigation:f9a358ee4dd031f5b9852a0d1cb742af&#34;&gt;Investigation&lt;/h2&gt;
 
 &lt;p&gt;The first thing I did was to read &lt;a href=&#34;https://www.google.com/?#newwindow=1&amp;amp;q=typographic+scale&#34;&gt;everything online&lt;/a&gt;
 about typographic scale. I will just skip the details and jump to my opinions:&lt;/p&gt;
@@ -1179,7 +1179,7 @@ irrelevant factors, instead, we should consider the constraints from our
 &lt;em&gt;real problem&lt;/em&gt;. The same reason applies to the golden ratio and double-stranded
 scale.&lt;/p&gt;
 
-&lt;h2 id=&#34;problem-constraints:f857546c9f6549514c78eb24fd887797&#34;&gt;Problem &amp;amp; constraints&lt;/h2&gt;
+&lt;h2 id=&#34;problem-constraints:f9a358ee4dd031f5b9852a0d1cb742af&#34;&gt;Problem &amp;amp; constraints&lt;/h2&gt;
 
 &lt;p&gt;What is a good typographic scale? For a Blog article, it should at least meet the
 following requirements:&lt;/p&gt;
@@ -1207,7 +1207,7 @@ of body copy (vertical rhythm)&lt;/li&gt;
 &lt;li&gt;The maximum acceptable size of the top heading&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h2 id=&#34;optimization:f857546c9f6549514c78eb24fd887797&#34;&gt;Optimization&lt;/h2&gt;
+&lt;h2 id=&#34;optimization:f9a358ee4dd031f5b9852a0d1cb742af&#34;&gt;Optimization&lt;/h2&gt;
 
 &lt;p&gt;Design is a process exploring all the possible solutions (the design space) to
 find an optimal one, i.e. an &lt;a href=&#34;http://en.wikipedia.org/wiki/Optimization_problem&#34;&gt;optimization problem&lt;/a&gt;.
@@ -1233,7 +1233,7 @@ sorts all the solutions by the inconsistency and find the best solution.&lt;/p&g
 &lt;p&gt;Here is the code (runable online):
 &lt;a href=&#34;http://play.golang.org/p/rP09HJDUcz&#34;&gt;a Go program to calculate optimal typographic scale&lt;/a&gt;.&lt;/p&gt;
 
-&lt;h2 id=&#34;example:f857546c9f6549514c78eb24fd887797&#34;&gt;Example&lt;/h2&gt;
+&lt;h2 id=&#34;example:f9a358ee4dd031f5b9852a0d1cb742af&#34;&gt;Example&lt;/h2&gt;
 
 &lt;p&gt;In this site, I need to use maximum three levels of headings: H1, H2 &amp;amp; H3. I
 choose 19px/30px as body copy. The search range for H3 is from 1.2*19px to
@@ -1249,7 +1249,7 @@ H1: 39px/1.5
 &lt;p&gt;Though the line height of H2 is still not ideal, it is already the best solution
 given the restrictions by vertical rhythm.&lt;/p&gt;
 
-&lt;h2 id=&#34;conclusion:f857546c9f6549514c78eb24fd887797&#34;&gt;Conclusion&lt;/h2&gt;
+&lt;h2 id=&#34;conclusion:f9a358ee4dd031f5b9852a0d1cb742af&#34;&gt;Conclusion&lt;/h2&gt;
 
 &lt;p&gt;The approach can sccessfully find the optimal typographic scale under the
 precise problem definition in this article. It does not rely on any mysterious

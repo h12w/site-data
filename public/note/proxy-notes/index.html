@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title> What Go cannot Do </title>
+        <title> A Comprehensive Note about Proxy Settings </title>
         <link rel="shortcut icon" href="/img/favicon.png" />
 
         <style>
@@ -70,83 +70,55 @@
 
         <main class="container">
             <article class="single">
-                <h1>What Go cannot Do</h1>
+                <h1>A Comprehensive Note about Proxy Settings</h1>
                 <div class="article-body hyphenate">
                 
 
-<p>This is a list about the corner cases that Go cannot do, and their work arounds.</p>
+<h2 id="git:98bdf1dc45f059ee4334ef1c195fb8bb">Git</h2>
 
-<h2 id="run-all-deferred-functions-of-other-goroutines-when-a-goroutine-panics:8b55f9ddc77541e5f8b431a4722abe5d">Run all deferred functions of other goroutines when a goroutine panics</h2>
-
-<p>Uncaught panicking of one goroutine will exit the program without executing deferred functions of other goroutines.</p>
-
-<p>Workaround: this is the standard behavior, C++ with RAII also has the same problem. Persist your data in a way that crashing will not cause data integrity issue.</p>
-
-<h2 id="assigning-to-fields-with-short-declaration-notation:8b55f9ddc77541e5f8b431a4722abe5d">Assigning to fields with short declaration notation</h2>
-
-<ul>
-<li>Issue: <a href="https://github.com/golang/go/issues/6842">6842</a></li>
-<li>Status: Open &amp; Unplanned</li>
-</ul>
-
-<p>When it is useful:</p>
-
-<pre><code class="language-go">if x.f, ok := f(); !ok {
-	...
-}
+<pre><code class="language-bash">&gt; cat ~/.gitconfig
+[http]
+	proxy = socks5://[host]:[port]
+[https]
+	proxy = socks5://[host]:[port]
 </code></pre>
 
-<p>Workaround:</p>
+<h2 id="curl-homebrew:98bdf1dc45f059ee4334ef1c195fb8bb">Curl (Homebrew)</h2>
 
-<pre><code class="language-go">var ok bool
-if x.f, ok = f(); !ok {
-	...
-}
+<pre><code class="language-bash">&gt; cat ~/.curlrc
+socks5 = &quot;[host]:[port]&quot;
 </code></pre>
 
-<h2 id="accessing-unexported-fields-with-reflect-value-interface-method:8b55f9ddc77541e5f8b431a4722abe5d">Accessing unexported fields with reflect.Value.Interface method</h2>
+<h2 id="gae:98bdf1dc45f059ee4334ef1c195fb8bb">GAE</h2>
 
-<p>When it is useful:</p>
+<ol>
+<li><p>Set proxy</p>
 
-<pre><code class="language-go">type S struct {
-   val string
-}
+<pre><code class="language-bash">export HTTP_PROXY http://[host]:[port]
+export HTTPS_PROXY http://[host]:[port]
+</code></pre></li>
 
-...
+<li><p>Delete cacerts.txt under GAE SDK installation to disable SSL verification (
+make sure the proxy is safe before this step).</p></li>
 
-var s S
+<li><p>Deploy.</p>
 
-reflect.Value(s).Fields(0).Interface()
-</code></pre>
-
-<p>The code will panics with message:</p>
-
-<pre><code>reflect.Value.Interface: cannot return value obtained from unexported field or method
-</code></pre>
-
-<p>Workaround:</p>
-
-<pre><code class="language-go">v := reflect.Value(s).Fields(0)
-if v.Kind() == reflect.String {
-	s := v.String()
-}
-</code></pre>
-
-<h2 id="slice-of-array-literal:8b55f9ddc77541e5f8b431a4722abe5d">Slice of array literal</h2>
-
-<p>e.g.</p>
-
-<pre><code class="language-go">[3]int{1, 2, 3}[:]
-</code></pre>
-
-<p>Just use slice literal instead!</p>
+<pre><code class="language-bash">appcfg.py . --email=[address] --passin
+</code></pre></li>
+</ol>
 
                 </div>
                 <div>
-                    <div id="article-time">16 June 2015</div>
+                    <div id="article-time">8 July 2015</div>
                     <ul id="tags">
   
+    <li><a href="/tags/gae">GAE</a> </li>
+  
     <li><a href="/tags/golang">Golang</a> </li>
+  
+    <li><a href="/tags/web">web</a> </li>
+  
+    <li><a href="/tags/proxy">proxy</a> </li>
   
 </ul>
 

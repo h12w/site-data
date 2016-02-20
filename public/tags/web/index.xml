@@ -12,13 +12,13 @@
     
     <item>
       <title>A Comprehensive Note about Proxy Settings</title>
-      <link>http://h12.me/note/proxy_notes/</link>
+      <link>http://h12.me/note/proxy-notes/</link>
       <pubDate>Wed, 08 Jul 2015 07:58:34 +0000</pubDate>
       
-      <guid>http://h12.me/note/proxy_notes/</guid>
+      <guid>http://h12.me/note/proxy-notes/</guid>
       <description>
 
-&lt;h2 id=&#34;git:c75aaf27ff78e6c7de91570c27fb0dfd&#34;&gt;Git&lt;/h2&gt;
+&lt;h2 id=&#34;git:98bdf1dc45f059ee4334ef1c195fb8bb&#34;&gt;Git&lt;/h2&gt;
 
 &lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;&amp;gt; cat ~/.gitconfig
 [http]
@@ -27,13 +27,13 @@
 	proxy = socks5://[host]:[port]
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h2 id=&#34;curl-homebrew:c75aaf27ff78e6c7de91570c27fb0dfd&#34;&gt;Curl (Homebrew)&lt;/h2&gt;
+&lt;h2 id=&#34;curl-homebrew:98bdf1dc45f059ee4334ef1c195fb8bb&#34;&gt;Curl (Homebrew)&lt;/h2&gt;
 
 &lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;&amp;gt; cat ~/.curlrc
 socks5 = &amp;quot;[host]:[port]&amp;quot;
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h2 id=&#34;gae:c75aaf27ff78e6c7de91570c27fb0dfd&#34;&gt;GAE&lt;/h2&gt;
+&lt;h2 id=&#34;gae:98bdf1dc45f059ee4334ef1c195fb8bb&#34;&gt;GAE&lt;/h2&gt;
 
 &lt;ol&gt;
 &lt;li&gt;&lt;p&gt;Set proxy&lt;/p&gt;
@@ -55,15 +55,15 @@ make sure the proxy is safe before this step).&lt;/p&gt;&lt;/li&gt;
     
     <item>
       <title>A Brief Note on Scientific Web Surfing</title>
-      <link>http://h12.me/article/scientific_web_surfing/</link>
+      <link>http://h12.me/article/scientific-web-surfing/</link>
       <pubDate>Sat, 14 Feb 2015 09:30:55 +0000</pubDate>
       
-      <guid>http://h12.me/article/scientific_web_surfing/</guid>
+      <guid>http://h12.me/article/scientific-web-surfing/</guid>
       <description>
 
 &lt;p&gt;&lt;em&gt;Knowledge is power. Information is liberating. &amp;mdash; by Kofi Annan.&lt;/em&gt;&lt;/p&gt;
 
-&lt;h2 id=&#34;vps:ea9e3bd770b9144f6a284e7574cdf713&#34;&gt;VPS&lt;/h2&gt;
+&lt;h2 id=&#34;vps:ed389849b892ef1bb1002c7398bba070&#34;&gt;VPS&lt;/h2&gt;
 
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;http://www.vultr.com/?ref=6837862&#34;&gt;Vultr&lt;/a&gt;&lt;/li&gt;
@@ -77,18 +77,18 @@ make sure the proxy is safe before this step).&lt;/p&gt;&lt;/li&gt;
 &lt;/ul&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h2 id=&#34;docker:ea9e3bd770b9144f6a284e7574cdf713&#34;&gt;Docker&lt;/h2&gt;
+&lt;h2 id=&#34;docker:ed389849b892ef1bb1002c7398bba070&#34;&gt;Docker&lt;/h2&gt;
 
 &lt;p&gt;Install &lt;a href=&#34;https://docs.docker.com/installation/&#34;&gt;Docker&lt;/a&gt; on VPS.&lt;/p&gt;
 
-&lt;h2 id=&#34;remote-proxy:ea9e3bd770b9144f6a284e7574cdf713&#34;&gt;Remote Proxy&lt;/h2&gt;
+&lt;h2 id=&#34;remote-proxy:ed389849b892ef1bb1002c7398bba070&#34;&gt;Remote Proxy&lt;/h2&gt;
 
 &lt;p&gt;Install &lt;a href=&#34;https://github.com/shadowsocks/shadowsocks-go/releases&#34;&gt;shadowsocks&lt;/a&gt;:&lt;/p&gt;
 
 &lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;docker run -d -p &amp;lt;port&amp;gt;:&amp;lt;port&amp;gt; h12w/shadowsocks -p &amp;lt;port&amp;gt; -k &amp;lt;password&amp;gt; -m aes-128-cfb -t 60
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h2 id=&#34;remote-dns-server:ea9e3bd770b9144f6a284e7574cdf713&#34;&gt;Remote DNS server&lt;/h2&gt;
+&lt;h2 id=&#34;remote-dns-server:ed389849b892ef1bb1002c7398bba070&#34;&gt;Remote DNS server&lt;/h2&gt;
 
 &lt;p&gt;Install &lt;a href=&#34;http://members.home.nl/p.a.rombouts/pdnsd/&#34;&gt;pdnsd&lt;/a&gt;:&lt;/p&gt;
 
@@ -100,7 +100,7 @@ make sure the proxy is safe before this step).&lt;/p&gt;&lt;/li&gt;
 &lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;dig @xxx.xxx.xxx.xxx -p xxxx www.linux.com
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h2 id=&#34;local-openwrt-router:ea9e3bd770b9144f6a284e7574cdf713&#34;&gt;Local OpenWrt Router&lt;/h2&gt;
+&lt;h2 id=&#34;local-openwrt-router:ed389849b892ef1bb1002c7398bba070&#34;&gt;Local OpenWrt Router&lt;/h2&gt;
 
 &lt;p&gt;Install &lt;a href=&#34;https://github.com/shadowsocks/openwrt-shadowsocks&#34;&gt;openwrt-shadowsocks&lt;/a&gt;
 on an &lt;a href=&#34;https://openwrt.org/&#34;&gt;OpenWrt&lt;/a&gt; router.&lt;/p&gt;
@@ -194,7 +194,7 @@ config chinadns
     option nohosts &#39;1&#39;
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h2 id=&#34;redsocks2:ea9e3bd770b9144f6a284e7574cdf713&#34;&gt;RedSocks2&lt;/h2&gt;
+&lt;h2 id=&#34;redsocks2:ed389849b892ef1bb1002c7398bba070&#34;&gt;RedSocks2&lt;/h2&gt;
 
 &lt;p&gt;Use RedSocks2 to bypass the proxy when the target site is reachable.&lt;/p&gt;
 
@@ -217,7 +217,7 @@ opkg install xxx.ipk
 
 &lt;p&gt;RedSocks2 will take effect immediately.&lt;/p&gt;
 
-&lt;h2 id=&#34;upgrade-openwrt:ea9e3bd770b9144f6a284e7574cdf713&#34;&gt;Upgrade OpenWRT&lt;/h2&gt;
+&lt;h2 id=&#34;upgrade-openwrt:ed389849b892ef1bb1002c7398bba070&#34;&gt;Upgrade OpenWRT&lt;/h2&gt;
 
 &lt;p&gt;Download latest &lt;code&gt;*.ipk&lt;/code&gt; above.&lt;/p&gt;
 
@@ -237,7 +237,7 @@ scp ignore.list root@192.168.1.1:/etc/shadowsocks/ignore.list
 &lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;reboot
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h2 id=&#34;android-client:ea9e3bd770b9144f6a284e7574cdf713&#34;&gt;Android Client&lt;/h2&gt;
+&lt;h2 id=&#34;android-client:ed389849b892ef1bb1002c7398bba070&#34;&gt;Android Client&lt;/h2&gt;
 
 &lt;p&gt;&lt;a href=&#34;https://github.com/shadowsocks/shadowsocks-android/releases&#34;&gt;shadowsocks-android&lt;/a&gt;.&lt;/p&gt;
 </description>
@@ -245,10 +245,10 @@ scp ignore.list root@192.168.1.1:/etc/shadowsocks/ignore.list
     
     <item>
       <title>A Shorter Domain Name</title>
-      <link>http://h12.me/note/new_domain_h12/</link>
+      <link>http://h12.me/note/new-domain-h12/</link>
       <pubDate>Tue, 16 Dec 2014 09:43:40 +0000</pubDate>
       
-      <guid>http://h12.me/note/new_domain_h12/</guid>
+      <guid>http://h12.me/note/new-domain-h12/</guid>
       <description>&lt;p&gt;This year, I decided not to renewal the previous domain name (hailiang.ws) last
 year, but to register a shorter one. There are two reasons:&lt;/p&gt;
 
@@ -267,10 +267,10 @@ website.&lt;/p&gt;
     
     <item>
       <title>Resources on Offline Hyphenation</title>
-      <link>http://h12.me/note/hyphen_res/</link>
+      <link>http://h12.me/note/hyphen-res/</link>
       <pubDate>Wed, 30 Jul 2014 08:29:57 +0000</pubDate>
       
-      <guid>http://h12.me/note/hyphen_res/</guid>
+      <guid>http://h12.me/note/hyphen-res/</guid>
       <description>&lt;p&gt;&lt;a href=&#34;http://caniuse.com/css-hyphens&#34;&gt;CSS hyphenation&lt;/a&gt; is supported by latest version
 of Firefox, Safari &amp;amp; IE. However, Chrome does not support it. Though
 &lt;a href=&#34;https://code.google.com/p/hyphenator/&#34;&gt;Hyphenator.js&lt;/a&gt; can solve this problem,
@@ -293,10 +293,10 @@ dictionary file&lt;/li&gt;
     
     <item>
       <title>About 301 Moved Permanently</title>
-      <link>http://h12.me/note/301_redirect/</link>
+      <link>http://h12.me/note/301-redirect/</link>
       <pubDate>Fri, 25 Jul 2014 03:39:05 +0000</pubDate>
       
-      <guid>http://h12.me/note/301_redirect/</guid>
+      <guid>http://h12.me/note/301-redirect/</guid>
       <description>&lt;p&gt;When building a website, there is one inevitable thing:
 &lt;a href=&#34;http://en.wikipedia.org/wiki/HTTP_301&#34;&gt;301 permanent redirection&lt;/a&gt;. The cases
 that have to involve 301 includes:&lt;/p&gt;
@@ -322,13 +322,13 @@ or not, so the root path needs no redirection.&lt;/p&gt;
     
     <item>
       <title>How to Achieve a Perfect PageSpeed Insights Score</title>
-      <link>http://h12.me/article/pagespeed_insights/</link>
+      <link>http://h12.me/article/pagespeed-insights/</link>
       <pubDate>Thu, 24 Jul 2014 03:42:01 +0000</pubDate>
       
-      <guid>http://h12.me/article/pagespeed_insights/</guid>
+      <guid>http://h12.me/article/pagespeed-insights/</guid>
       <description>
 
-&lt;h2 id=&#34;indtroduction:919a68b12dcbd06a0bdd7b43f8ef2907&#34;&gt;Indtroduction&lt;/h2&gt;
+&lt;h2 id=&#34;indtroduction:679b7602d5a8b08073cea405cbeecd74&#34;&gt;Indtroduction&lt;/h2&gt;
 
 &lt;p&gt;&lt;a href=&#34;https://developers.google.com/speed/pagespeed/insights/&#34;&gt;PageSpeed Insights&lt;/a&gt; is
 an online tool by Google to measure the performance of an web page for mobile
@@ -345,9 +345,9 @@ than 1 sec to about 500 ms in the &lt;a href=&#34;http://fpt.pingdom.com/&#34;&g
 In the following section, I would like to share what I have learned by
 optimizing this website to achieve a &lt;a href=&#34;https://developers.google.com/speed/pagespeed/insights/?url=http%3A%2F%2Fh12.me&#34;&gt;perfect score&lt;/a&gt;, rule by rule.&lt;/p&gt;
 
-&lt;h2 id=&#34;speed-rules:919a68b12dcbd06a0bdd7b43f8ef2907&#34;&gt;Speed rules&lt;/h2&gt;
+&lt;h2 id=&#34;speed-rules:679b7602d5a8b08073cea405cbeecd74&#34;&gt;Speed rules&lt;/h2&gt;
 
-&lt;h3 id=&#34;avoid-landing-page-redirects:919a68b12dcbd06a0bdd7b43f8ef2907&#34;&gt;Avoid landing page redirects&lt;/h3&gt;
+&lt;h3 id=&#34;avoid-landing-page-redirects:679b7602d5a8b08073cea405cbeecd74&#34;&gt;Avoid landing page redirects&lt;/h3&gt;
 
 &lt;p&gt;The redirection to mobile version can be avoided by responsive design (CSS media
 queries).&lt;/p&gt;
@@ -356,7 +356,7 @@ queries).&lt;/p&gt;
 subdomain to the naked domain, but the naked domain does not have any further
 redirection.&lt;/p&gt;
 
-&lt;h3 id=&#34;eliminate-render-blocking-javascript-and-css-in-above-the-fold-content:919a68b12dcbd06a0bdd7b43f8ef2907&#34;&gt;Eliminate render-blocking JavaScript and CSS in above-the-fold content&lt;/h3&gt;
+&lt;h3 id=&#34;eliminate-render-blocking-javascript-and-css-in-above-the-fold-content:679b7602d5a8b08073cea405cbeecd74&#34;&gt;Eliminate render-blocking JavaScript and CSS in above-the-fold content&lt;/h3&gt;
 
 &lt;p&gt;This might be the hardest rule to fully comply with.&lt;/p&gt;
 
@@ -375,46 +375,46 @@ are loaded asychronously but executed in order.&lt;/p&gt;
 layout of above-the-fold content. You might have to make some trade off and cut
 off some functionality.&lt;/p&gt;
 
-&lt;h3 id=&#34;enable-compression-leverage-browser-caching-reduce-server-response-time:919a68b12dcbd06a0bdd7b43f8ef2907&#34;&gt;Enable compression, Leverage browser caching &amp;amp; Reduce server response time&lt;/h3&gt;
+&lt;h3 id=&#34;enable-compression-leverage-browser-caching-reduce-server-response-time:679b7602d5a8b08073cea405cbeecd74&#34;&gt;Enable compression, Leverage browser caching &amp;amp; Reduce server response time&lt;/h3&gt;
 
 &lt;p&gt;Since I uses Google App Engine, the gzip compression should already been enabled
 by default, the expiration time for static resources are configurable via
 config.yaml and GAE responses fast enough.&lt;/p&gt;
 
-&lt;h3 id=&#34;minify-resources-html-css-and-javascript:919a68b12dcbd06a0bdd7b43f8ef2907&#34;&gt;Minify Resources (HTML, CSS, and JavaScript)&lt;/h3&gt;
+&lt;h3 id=&#34;minify-resources-html-css-and-javascript:679b7602d5a8b08073cea405cbeecd74&#34;&gt;Minify Resources (HTML, CSS, and JavaScript)&lt;/h3&gt;
 
 &lt;p&gt;The CSS is minified by Compass, and scripts imported are already minified. The
 HTML file is not minified but it seems not serious enough to trigger a test
 warning by PageSpeed.&lt;/p&gt;
 
-&lt;h3 id=&#34;optimize-images:919a68b12dcbd06a0bdd7b43f8ef2907&#34;&gt;Optimize images&lt;/h3&gt;
+&lt;h3 id=&#34;optimize-images:679b7602d5a8b08073cea405cbeecd74&#34;&gt;Optimize images&lt;/h3&gt;
 
 &lt;p&gt;I use font icons in my site. When there has to be an image, use PNG compressed with
 &lt;a href=&#34;http://optipng.sourceforge.net/&#34;&gt;OptiPNG&lt;/a&gt;.&lt;/p&gt;
 
-&lt;h3 id=&#34;reduce-the-size-of-the-above-the-fold-content:919a68b12dcbd06a0bdd7b43f8ef2907&#34;&gt;Reduce the size of the above-the-fold content&lt;/h3&gt;
+&lt;h3 id=&#34;reduce-the-size-of-the-above-the-fold-content:679b7602d5a8b08073cea405cbeecd74&#34;&gt;Reduce the size of the above-the-fold content&lt;/h3&gt;
 
 &lt;p&gt;It basically depends on your design and just remember the YAGNI principle.&lt;/p&gt;
 
-&lt;h2 id=&#34;user-experience-rules:919a68b12dcbd06a0bdd7b43f8ef2907&#34;&gt;User experience rules&lt;/h2&gt;
+&lt;h2 id=&#34;user-experience-rules:679b7602d5a8b08073cea405cbeecd74&#34;&gt;User experience rules&lt;/h2&gt;
 
 &lt;p&gt;These rule only applies to mobile platforms.&lt;/p&gt;
 
-&lt;h3 id=&#34;avoid-plugins:919a68b12dcbd06a0bdd7b43f8ef2907&#34;&gt;Avoid plugins&lt;/h3&gt;
+&lt;h3 id=&#34;avoid-plugins:679b7602d5a8b08073cea405cbeecd74&#34;&gt;Avoid plugins&lt;/h3&gt;
 
 &lt;p&gt;None of them on my site.&lt;/p&gt;
 
-&lt;h3 id=&#34;configure-the-viewport:919a68b12dcbd06a0bdd7b43f8ef2907&#34;&gt;Configure the viewport&lt;/h3&gt;
+&lt;h3 id=&#34;configure-the-viewport:679b7602d5a8b08073cea405cbeecd74&#34;&gt;Configure the viewport&lt;/h3&gt;
 
 &lt;p&gt;This is part of the responsive design.&lt;/p&gt;
 
-&lt;h3 id=&#34;size-content-to-viewport:919a68b12dcbd06a0bdd7b43f8ef2907&#34;&gt;Size content to viewport&lt;/h3&gt;
+&lt;h3 id=&#34;size-content-to-viewport:679b7602d5a8b08073cea405cbeecd74&#34;&gt;Size content to viewport&lt;/h3&gt;
 
 &lt;p&gt;An important lesson: never write a URL directly in an article because URL does
 not wrap well and could overflow out of the viewport width. instead, give the
 URL a name composed of words.&lt;/p&gt;
 
-&lt;h3 id=&#34;size-tap-targets-appropriately-use-legible-font-sizes:919a68b12dcbd06a0bdd7b43f8ef2907&#34;&gt;Size tap targets appropriately &amp;amp; Use legible font sizes&lt;/h3&gt;
+&lt;h3 id=&#34;size-tap-targets-appropriately-use-legible-font-sizes:679b7602d5a8b08073cea405cbeecd74&#34;&gt;Size tap targets appropriately &amp;amp; Use legible font sizes&lt;/h3&gt;
 
 &lt;p&gt;I have written some lists of links in my notes, which makes those links close to
 each other. To make them separate enough to pass this rule, the line height cannot
@@ -428,7 +428,7 @@ be too small, here is the minimal requirement from my tests (font-size/line-heig
 &lt;li&gt;20px/30px&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h2 id=&#34;conclusion:919a68b12dcbd06a0bdd7b43f8ef2907&#34;&gt;Conclusion&lt;/h2&gt;
+&lt;h2 id=&#34;conclusion:679b7602d5a8b08073cea405cbeecd74&#34;&gt;Conclusion&lt;/h2&gt;
 
 &lt;p&gt;It is not rocket science to build a website with good performance. You just needs
 to tune and optimize every detail of your site patiently. In this process,
@@ -438,10 +438,10 @@ PageSpeed Insights can help a lot.&lt;/p&gt;
     
     <item>
       <title>Installing Susy</title>
-      <link>http://h12.me/note/install_susy/</link>
+      <link>http://h12.me/note/install-susy/</link>
       <pubDate>Thu, 17 Jul 2014 02:29:57 +0000</pubDate>
       
-      <guid>http://h12.me/note/install_susy/</guid>
+      <guid>http://h12.me/note/install-susy/</guid>
       <description>&lt;p&gt;The script:&lt;/p&gt;
 
 &lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;sudo apt-get install ruby
@@ -466,10 +466,10 @@ your location might help.&lt;/li&gt;
     
     <item>
       <title>A List of URLs about Web Design</title>
-      <link>http://h12.me/note/web_design_site/</link>
+      <link>http://h12.me/note/web-design-site/</link>
       <pubDate>Thu, 10 Jul 2014 04:04:00 +0000</pubDate>
       
-      <guid>http://h12.me/note/web_design_site/</guid>
+      <guid>http://h12.me/note/web-design-site/</guid>
       <description>&lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;http://webtypography.net/&#34;&gt;The Elements of Typographic Style Applied to the Web&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;http://www.smashingmagazine.com/&#34;&gt;Smashing Magazine&lt;/a&gt;&lt;/li&gt;
@@ -481,10 +481,10 @@ your location might help.&lt;/li&gt;
     
     <item>
       <title>Why My Web Font Looks Ugly on IE?</title>
-      <link>http://h12.me/note/ugly_font/</link>
+      <link>http://h12.me/note/ugly-font/</link>
       <pubDate>Wed, 09 Jul 2014 05:42:42 +0000</pubDate>
       
-      <guid>http://h12.me/note/ugly_font/</guid>
+      <guid>http://h12.me/note/ugly-font/</guid>
       <description>&lt;p&gt;Windows needs hand-tuned hinting which is missing in many web fonts. To solve this
 problem, there is a tool called &lt;a href=&#34;http://www.freetype.org/ttfautohint/index.html&#34;&gt;ttfautohint&lt;/a&gt;
 which can automatically add hinting to font files.&lt;/p&gt;
@@ -496,10 +496,10 @@ and an online tool called &lt;a href=&#34;http://fontie.flowyapps.com/&#34;&gt;F
     
     <item>
       <title>Serving Static Pages on App Engine with Go</title>
-      <link>http://h12.me/note/serve_static/</link>
+      <link>http://h12.me/note/serve-static/</link>
       <pubDate>Sun, 06 Jul 2014 06:39:27 +0000</pubDate>
       
-      <guid>http://h12.me/note/serve_static/</guid>
+      <guid>http://h12.me/note/serve-static/</guid>
       <description>&lt;p&gt;It is straightforward to serve static pages with &lt;a href=&#34;http://golang.org/pkg/net/http/&#34;&gt;Go&lt;/a&gt;
 or &lt;a href=&#34;https://developers.google.com/appengine/docs/go/config/appconfig&#34;&gt;config file&lt;/a&gt;
 on App Engine, but how to serve static pages on App Engine with Go?&lt;/p&gt;
@@ -534,17 +534,17 @@ Go again (source:
     
     <item>
       <title>Finding Optimal Typographic Scale</title>
-      <link>http://h12.me/article/optimal_font_scale/</link>
+      <link>http://h12.me/article/optimal-font-scale/</link>
       <pubDate>Sat, 05 Jul 2014 15:03:04 +0000</pubDate>
       
-      <guid>http://h12.me/article/optimal_font_scale/</guid>
+      <guid>http://h12.me/article/optimal-font-scale/</guid>
       <description>
 
 &lt;p&gt;During the construction of this site, there are many important design decisions
 that need to be made. One of them is to decide the font size for each level of
 headings, i.e., typographic scale.&lt;/p&gt;
 
-&lt;h2 id=&#34;investigation:f857546c9f6549514c78eb24fd887797&#34;&gt;Investigation&lt;/h2&gt;
+&lt;h2 id=&#34;investigation:f9a358ee4dd031f5b9852a0d1cb742af&#34;&gt;Investigation&lt;/h2&gt;
 
 &lt;p&gt;The first thing I did was to read &lt;a href=&#34;https://www.google.com/?#newwindow=1&amp;amp;q=typographic+scale&#34;&gt;everything online&lt;/a&gt;
 about typographic scale. I will just skip the details and jump to my opinions:&lt;/p&gt;
@@ -571,7 +571,7 @@ irrelevant factors, instead, we should consider the constraints from our
 &lt;em&gt;real problem&lt;/em&gt;. The same reason applies to the golden ratio and double-stranded
 scale.&lt;/p&gt;
 
-&lt;h2 id=&#34;problem-constraints:f857546c9f6549514c78eb24fd887797&#34;&gt;Problem &amp;amp; constraints&lt;/h2&gt;
+&lt;h2 id=&#34;problem-constraints:f9a358ee4dd031f5b9852a0d1cb742af&#34;&gt;Problem &amp;amp; constraints&lt;/h2&gt;
 
 &lt;p&gt;What is a good typographic scale? For a Blog article, it should at least meet the
 following requirements:&lt;/p&gt;
@@ -599,7 +599,7 @@ of body copy (vertical rhythm)&lt;/li&gt;
 &lt;li&gt;The maximum acceptable size of the top heading&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h2 id=&#34;optimization:f857546c9f6549514c78eb24fd887797&#34;&gt;Optimization&lt;/h2&gt;
+&lt;h2 id=&#34;optimization:f9a358ee4dd031f5b9852a0d1cb742af&#34;&gt;Optimization&lt;/h2&gt;
 
 &lt;p&gt;Design is a process exploring all the possible solutions (the design space) to
 find an optimal one, i.e. an &lt;a href=&#34;http://en.wikipedia.org/wiki/Optimization_problem&#34;&gt;optimization problem&lt;/a&gt;.
@@ -625,7 +625,7 @@ sorts all the solutions by the inconsistency and find the best solution.&lt;/p&g
 &lt;p&gt;Here is the code (runable online):
 &lt;a href=&#34;http://play.golang.org/p/rP09HJDUcz&#34;&gt;a Go program to calculate optimal typographic scale&lt;/a&gt;.&lt;/p&gt;
 
-&lt;h2 id=&#34;example:f857546c9f6549514c78eb24fd887797&#34;&gt;Example&lt;/h2&gt;
+&lt;h2 id=&#34;example:f9a358ee4dd031f5b9852a0d1cb742af&#34;&gt;Example&lt;/h2&gt;
 
 &lt;p&gt;In this site, I need to use maximum three levels of headings: H1, H2 &amp;amp; H3. I
 choose 19px/30px as body copy. The search range for H3 is from 1.2*19px to
@@ -641,7 +641,7 @@ H1: 39px/1.5
 &lt;p&gt;Though the line height of H2 is still not ideal, it is already the best solution
 given the restrictions by vertical rhythm.&lt;/p&gt;
 
-&lt;h2 id=&#34;conclusion:f857546c9f6549514c78eb24fd887797&#34;&gt;Conclusion&lt;/h2&gt;
+&lt;h2 id=&#34;conclusion:f9a358ee4dd031f5b9852a0d1cb742af&#34;&gt;Conclusion&lt;/h2&gt;
 
 &lt;p&gt;The approach can sccessfully find the optimal typographic scale under the
 precise problem definition in this article. It does not rely on any mysterious
@@ -651,10 +651,10 @@ process or magic numbers, but only reasoning and computation.&lt;/p&gt;
     
     <item>
       <title>A List of Website Testing Services</title>
-      <link>http://h12.me/note/site_test/</link>
+      <link>http://h12.me/note/site-test/</link>
       <pubDate>Thu, 03 Jul 2014 06:21:58 +0000</pubDate>
       
-      <guid>http://h12.me/note/site_test/</guid>
+      <guid>http://h12.me/note/site-test/</guid>
       <description>&lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;http://validator.w3.org/&#34;&gt;The W3C Markup Validation Service&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;http://developers.google.com/speed/pagespeed/insights/&#34;&gt;Google PageSpeed Insights&lt;/a&gt;&lt;/li&gt;
@@ -667,10 +667,10 @@ process or magic numbers, but only reasoning and computation.&lt;/p&gt;
     
     <item>
       <title>A List of Narrow Fonts for Titles</title>
-      <link>http://h12.me/note/narrow_fonts/</link>
+      <link>http://h12.me/note/narrow-fonts/</link>
       <pubDate>Tue, 01 Jul 2014 08:39:42 +0000</pubDate>
       
-      <guid>http://h12.me/note/narrow_fonts/</guid>
+      <guid>http://h12.me/note/narrow-fonts/</guid>
       <description>&lt;ul&gt;
 &lt;li&gt;Economica&lt;/li&gt;
 &lt;li&gt;Fjalla One&lt;/li&gt;
@@ -690,10 +690,10 @@ process or magic numbers, but only reasoning and computation.&lt;/p&gt;
     
     <item>
       <title>Links about Font Choosing</title>
-      <link>http://h12.me/note/font_links/</link>
+      <link>http://h12.me/note/font-links/</link>
       <pubDate>Sun, 22 Jun 2014 14:09:45 +0000</pubDate>
       
-      <guid>http://h12.me/note/font_links/</guid>
+      <guid>http://h12.me/note/font-links/</guid>
       <description>&lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;http://www.snapily.com/blog/the-best-font-styles-for-blogging/&#34;&gt;The Best Font Styles for Blogging&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;http://www.bigbrandsystem.com/best-font-size/&#34;&gt;Size Doesn’t Matter, and What Does&lt;/a&gt;&lt;/li&gt;

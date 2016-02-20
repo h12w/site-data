@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title> A Brief Note on Scientific Web Surfing </title>
+        <title> How to Achieve a Perfect PageSpeed Insights Score </title>
         <link rel="shortcut icon" href="/img/favicon.png" />
 
         <style>
@@ -70,206 +70,126 @@
 
         <main class="container">
             <article class="single">
-                <h1>A Brief Note on Scientific Web Surfing</h1>
+                <h1>How to Achieve a Perfect PageSpeed Insights Score</h1>
                 <div class="article-body hyphenate">
                 
 
-<p><em>Knowledge is power. Information is liberating. &mdash; by Kofi Annan.</em></p>
+<h2 id="indtroduction:679b7602d5a8b08073cea405cbeecd74">Indtroduction</h2>
 
-<h2 id="vps:ea9e3bd770b9144f6a284e7574cdf713">VPS</h2>
+<p><a href="https://developers.google.com/speed/pagespeed/insights/">PageSpeed Insights</a> is
+an online tool by Google to measure the performance of an web page for mobile
+and desktop devices. It has a set of heuristic rules considering the
+network-independent aspects of page performance. Each rule has a weight and the
+total score ranges from 0 to 100 points. The desktop and mobile tests have the
+same set of rules for performance and mobile test has some extra rules
+about user experience.</p>
+
+<p>Though it might be too rigorous to require <sup>100</sup>&frasl;<sub>100</sub> score for a web site, it is a
+good way to learn those rules to actually achieve it, and it does have a
+significant improvement to the load time of my site (load time reduces from more
+than 1 sec to about 500 ms in the <a href="http://fpt.pingdom.com/">Pingdom Website Speed Test</a>).
+In the following section, I would like to share what I have learned by
+optimizing this website to achieve a <a href="https://developers.google.com/speed/pagespeed/insights/?url=http%3A%2F%2Fh12.me">perfect score</a>, rule by rule.</p>
+
+<h2 id="speed-rules:679b7602d5a8b08073cea405cbeecd74">Speed rules</h2>
+
+<h3 id="avoid-landing-page-redirects:679b7602d5a8b08073cea405cbeecd74">Avoid landing page redirects</h3>
+
+<p>The redirection to mobile version can be avoided by responsive design (CSS media
+queries).</p>
+
+<p>You cannot avoid redirections completely, e.g. I have a 301 redirection from www
+subdomain to the naked domain, but the naked domain does not have any further
+redirection.</p>
+
+<h3 id="eliminate-render-blocking-javascript-and-css-in-above-the-fold-content:679b7602d5a8b08073cea405cbeecd74">Eliminate render-blocking JavaScript and CSS in above-the-fold content</h3>
+
+<p>This might be the hardest rule to fully comply with.</p>
+
+<p>Firstly, you need to minimize and fully inline your CSS into HTML, and your CSS
+cannot be too large. (My CSS is 22kB after minimization). If you use web fonts,
+you should directly write the @font-face in your inlined CSS, rather than
+importing an external CSS.</p>
+
+<p>Secondly, you need to inline or asynchronously load all your scripts. The
+&ldquo;async&rdquo; attribute is not very useful because it cannot control the order of
+the execution of multiple scripts. I have found <a href="http://headjs.com/">HeadJS</a>
+to solve the problem. HeadJS is inlined into the HTML (3.7kB), and other scripts
+are loaded asychronously but executed in order.</p>
+
+<p>Finally, you have to make sure the delayed scripts will not affect the
+layout of above-the-fold content. You might have to make some trade off and cut
+off some functionality.</p>
+
+<h3 id="enable-compression-leverage-browser-caching-reduce-server-response-time:679b7602d5a8b08073cea405cbeecd74">Enable compression, Leverage browser caching &amp; Reduce server response time</h3>
+
+<p>Since I uses Google App Engine, the gzip compression should already been enabled
+by default, the expiration time for static resources are configurable via
+config.yaml and GAE responses fast enough.</p>
+
+<h3 id="minify-resources-html-css-and-javascript:679b7602d5a8b08073cea405cbeecd74">Minify Resources (HTML, CSS, and JavaScript)</h3>
+
+<p>The CSS is minified by Compass, and scripts imported are already minified. The
+HTML file is not minified but it seems not serious enough to trigger a test
+warning by PageSpeed.</p>
+
+<h3 id="optimize-images:679b7602d5a8b08073cea405cbeecd74">Optimize images</h3>
+
+<p>I use font icons in my site. When there has to be an image, use PNG compressed with
+<a href="http://optipng.sourceforge.net/">OptiPNG</a>.</p>
+
+<h3 id="reduce-the-size-of-the-above-the-fold-content:679b7602d5a8b08073cea405cbeecd74">Reduce the size of the above-the-fold content</h3>
+
+<p>It basically depends on your design and just remember the YAGNI principle.</p>
+
+<h2 id="user-experience-rules:679b7602d5a8b08073cea405cbeecd74">User experience rules</h2>
+
+<p>These rule only applies to mobile platforms.</p>
+
+<h3 id="avoid-plugins:679b7602d5a8b08073cea405cbeecd74">Avoid plugins</h3>
+
+<p>None of them on my site.</p>
+
+<h3 id="configure-the-viewport:679b7602d5a8b08073cea405cbeecd74">Configure the viewport</h3>
+
+<p>This is part of the responsive design.</p>
+
+<h3 id="size-content-to-viewport:679b7602d5a8b08073cea405cbeecd74">Size content to viewport</h3>
+
+<p>An important lesson: never write a URL directly in an article because URL does
+not wrap well and could overflow out of the viewport width. instead, give the
+URL a name composed of words.</p>
+
+<h3 id="size-tap-targets-appropriately-use-legible-font-sizes:679b7602d5a8b08073cea405cbeecd74">Size tap targets appropriately &amp; Use legible font sizes</h3>
+
+<p>I have written some lists of links in my notes, which makes those links close to
+each other. To make them separate enough to pass this rule, the line height cannot
+be too small, here is the minimal requirement from my tests (font-size/line-height):</p>
 
 <ul>
-<li><a href="http://www.vultr.com/?ref=6837862">Vultr</a></li>
-<li><a href="https://www.digitalocean.com/?refcode=56202ab61fb7">DigitalOcean</a></li>
-<li><a href="https://bandwagonhost.com/aff.php?aff=2128">BandwagonHOST</a>
-
-<ul>
-<li>Client Area -&gt; Services -&gt; Order New Services</li>
-<li>64MB RAM is enough for running both ShadowSocks and pdnsd</li>
-<li>Install Ubuntu LTS 32bit (x86, i686).</li>
-</ul></li>
+<li>16px/28px</li>
+<li>17px/28px</li>
+<li>18px/29px</li>
+<li>19px/30px</li>
+<li>20px/30px</li>
 </ul>
 
-<h2 id="docker:ea9e3bd770b9144f6a284e7574cdf713">Docker</h2>
+<h2 id="conclusion:679b7602d5a8b08073cea405cbeecd74">Conclusion</h2>
 
-<p>Install <a href="https://docs.docker.com/installation/">Docker</a> on VPS.</p>
-
-<h2 id="remote-proxy:ea9e3bd770b9144f6a284e7574cdf713">Remote Proxy</h2>
-
-<p>Install <a href="https://github.com/shadowsocks/shadowsocks-go/releases">shadowsocks</a>:</p>
-
-<pre><code class="language-bash">docker run -d -p &lt;port&gt;:&lt;port&gt; h12w/shadowsocks -p &lt;port&gt; -k &lt;password&gt; -m aes-128-cfb -t 60
-</code></pre>
-
-<h2 id="remote-dns-server:ea9e3bd770b9144f6a284e7574cdf713">Remote DNS server</h2>
-
-<p>Install <a href="http://members.home.nl/p.a.rombouts/pdnsd/">pdnsd</a>:</p>
-
-<pre><code class="language-bash">docker run -d -p [port]:53 -p [port]:53/udp h12w/pdnsd
-</code></pre>
-
-<p>To test the DNS server:</p>
-
-<pre><code class="language-bash">dig @xxx.xxx.xxx.xxx -p xxxx www.linux.com
-</code></pre>
-
-<h2 id="local-openwrt-router:ea9e3bd770b9144f6a284e7574cdf713">Local OpenWrt Router</h2>
-
-<p>Install <a href="https://github.com/shadowsocks/openwrt-shadowsocks">openwrt-shadowsocks</a>
-on an <a href="https://openwrt.org/">OpenWrt</a> router.</p>
-
-<pre><code class="language-bash">opkg update
-opkg install ipset libopenssl resolveip iptables-mod-tproxy
-</code></pre>
-
-<p>Check CPU version of the router:</p>
-
-<pre><code class="language-bash">cat /proc/cpuinfo
-</code></pre>
-
-<p>From <a href="http://sourceforge.net/projects/openwrt-dist/">OpenWrt-Dist</a>, download
-IPKs of the corresponding CPU:</p>
-
-<ul>
-<li><a href="http://sourceforge.net/projects/openwrt-dist/files/shadowsocks-libev/">shadowsocks-libev-spec</a>
-
-<ul>
-<li><a href="http://sourceforge.net/projects/openwrt-dist/files/luci-app/shadowsocks-spec/">luci-shadowsocks</a></li>
-</ul></li>
-<li><a href="http://sourceforge.net/projects/openwrt-dist/files/chinadns/">chinadns</a>
-
-<ul>
-<li><a href="http://sourceforge.net/projects/openwrt-dist/files/luci-app/chinadns/">luci-chinadns</a></li>
-</ul></li>
-</ul>
-
-<p>Copy <code>*.ipk</code> to router:</p>
-
-<pre><code class="language-bash">scp *.ipk root@192.168.1.1:/tmp
-</code></pre>
-
-<p>And install:</p>
-
-<pre><code class="language-bash">opkg install shadowsocks-libev-spec_xxx.ipk
-opkg install ChinaDNS_xxx.ipk
-/etc/init.d/shadowsocks enable
-/etc/init.d/chinadns enable
-</code></pre>
-
-<p>ShadowSocks configuration in <code>/etc/config/shadowsocks</code>:</p>
-
-<pre><code>config shadowsocks
-	...
-	option config_file '/etc/shadowsocks/config.json'
-	...
-	option tunnel_enable '0'
-	...
-</code></pre>
-
-<p>It refers to <code>/etc/shadowsocks/config.json</code>:</p>
-
-<pre><code>{
-    &quot;server&quot;:      &quot;xxx.xxx.xxx.xxx&quot;,
-    &quot;server_port&quot;: xxxx,
-    &quot;local_port&quot;:  xxxx,
-    &quot;password&quot;:    &quot;xxxxxx&quot;,
-    &quot;method&quot;:      &quot;aes-128-cfb&quot;,
-    &quot;timeout&quot;:     60
-}
-</code></pre>
-
-<p>ChinaDNS configuration in <code>/etc/config/chinadns</code>:</p>
-
-<pre><code>config chinadns
-    ...
-    option chnroute '/etc/shadowsocks/ignore.list'
-    ...
-    option server '[isp_dns],[private_pdnsd_dns]'
-    ...
-</code></pre>
-
-<p>Make sure <code>[private_pdnsd_dns]</code> is the same IP:PORT as the remote pdnsd server.</p>
-
-<p>ucitrack configuration in <code>/etc/config/ucitrack</code>:</p>
-
-<pre><code>config shadowsocks
-    option init 'shadowsocks'
-
-config chinadns
-    option init 'chinadns'
-</code></pre>
-
-<p>DHCP configuration in <code>/etc/config/dhcp</code>:</p>
-
-<pre><code>config dnsmasq
-    list server '127.0.0.1#5353'
-    option noresolv '1'
-    option nohosts '1'
-</code></pre>
-
-<h2 id="redsocks2:ea9e3bd770b9144f6a284e7574cdf713">RedSocks2</h2>
-
-<p>Use RedSocks2 to bypass the proxy when the target site is reachable.</p>
-
-<p>Download RedSocks2:</p>
-
-<ul>
-<li><a href="http://sourceforge.net/projects/openwrt-dist/files/redsocks2/">RedSocks2</a>
-
-<ul>
-<li><a href="http://sourceforge.net/projects/openwrt-dist/files/luci-app/redsocks2/">luci-redsocks2</a></li>
-</ul></li>
-</ul>
-
-<p>Install RedSocks2:</p>
-
-<pre><code>scp *.ipk root@192.168.1.1:/tmp
-opkg update
-opkg install xxx.ipk
-</code></pre>
-
-<p>RedSocks2 will take effect immediately.</p>
-
-<h2 id="upgrade-openwrt:ea9e3bd770b9144f6a284e7574cdf713">Upgrade OpenWRT</h2>
-
-<p>Download latest <code>*.ipk</code> above.</p>
-
-<pre><code class="language-bash">opkg update
-opkg upgrade ipset libopenssl resolveip iptables-mod-tproxy
-opkg install xxx.ipk
-</code></pre>
-
-<p>Merge configuration files manually.</p>
-
-<p>Update <code>ignore.list</code>:</p>
-
-<pre><code>wget -O- 'http://ftp.apnic.net/apnic/stats/apnic/delegated-apnic-latest' | awk -F\| '/CN\|ipv4/ { printf(&quot;%s/%d\n&quot;, $4, 32-log($5)/log(2)) }' &gt; ignore.list
-scp ignore.list root@192.168.1.1:/etc/shadowsocks/ignore.list
-</code></pre>
-
-<pre><code class="language-bash">reboot
-</code></pre>
-
-<h2 id="android-client:ea9e3bd770b9144f6a284e7574cdf713">Android Client</h2>
-
-<p><a href="https://github.com/shadowsocks/shadowsocks-android/releases">shadowsocks-android</a>.</p>
+<p>It is not rocket science to build a website with good performance. You just needs
+to tune and optimize every detail of your site patiently. In this process,
+PageSpeed Insights can help a lot.</p>
 
                 </div>
                 <div>
-                    <div id="article-time">14 February 2015</div>
+                    <div id="article-time">24 July 2014</div>
                     <ul id="tags">
   
-    <li><a href="/tags/scientific-web-surfing">Scientific Web Surfing</a> </li>
+    <li><a href="/tags/pagespeed-insights">PageSpeed Insights</a> </li>
   
     <li><a href="/tags/web">web</a> </li>
   
-    <li><a href="/tags/china">China</a> </li>
-  
-    <li><a href="/tags/firewall">firewall</a> </li>
-  
-    <li><a href="/tags/docker">Docker</a> </li>
-  
-    <li><a href="/tags/vps">VPS</a> </li>
+    <li><a href="/tags/tutorial">tutorial</a> </li>
   
 </ul>
 
