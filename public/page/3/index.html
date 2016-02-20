@@ -73,6 +73,198 @@
         
             <article class="frontpage">
                 <h1>
+                    <a href="http://h12.me/article/scientific_web_surfing/">A Brief Note on Scientific Web Surfing</a>
+                    <span class="line"></span>
+                </h1>
+                <span class="time">14 February 2015</span>
+                <div class="article-body hyphenate">
+                    
+
+<p><em>Knowledge is power. Information is liberating. &mdash; by Kofi Annan.</em></p>
+
+<h2 id="vps:ea9e3bd770b9144f6a284e7574cdf713">VPS</h2>
+
+<ul>
+<li><a href="http://www.vultr.com/?ref=6837862">Vultr</a></li>
+<li><a href="https://www.digitalocean.com/?refcode=56202ab61fb7">DigitalOcean</a></li>
+<li><a href="https://bandwagonhost.com/aff.php?aff=2128">BandwagonHOST</a>
+
+<ul>
+<li>Client Area -&gt; Services -&gt; Order New Services</li>
+<li>64MB RAM is enough for running both ShadowSocks and pdnsd</li>
+<li>Install Ubuntu LTS 32bit (x86, i686).</li>
+</ul></li>
+</ul>
+
+<h2 id="docker:ea9e3bd770b9144f6a284e7574cdf713">Docker</h2>
+
+<p>Install <a href="https://docs.docker.com/installation/">Docker</a> on VPS.</p>
+
+<h2 id="remote-proxy:ea9e3bd770b9144f6a284e7574cdf713">Remote Proxy</h2>
+
+<p>Install <a href="https://github.com/shadowsocks/shadowsocks-go/releases">shadowsocks</a>:</p>
+
+<pre><code class="language-bash">docker run -d -p &lt;port&gt;:&lt;port&gt; h12w/shadowsocks -p &lt;port&gt; -k &lt;password&gt; -m aes-128-cfb -t 60
+</code></pre>
+
+<h2 id="remote-dns-server:ea9e3bd770b9144f6a284e7574cdf713">Remote DNS server</h2>
+
+<p>Install <a href="http://members.home.nl/p.a.rombouts/pdnsd/">pdnsd</a>:</p>
+
+<pre><code class="language-bash">docker run -d -p [port]:53 -p [port]:53/udp h12w/pdnsd
+</code></pre>
+
+<p>To test the DNS server:</p>
+
+<pre><code class="language-bash">dig @xxx.xxx.xxx.xxx -p xxxx www.linux.com
+</code></pre>
+
+<h2 id="local-openwrt-router:ea9e3bd770b9144f6a284e7574cdf713">Local OpenWrt Router</h2>
+
+<p>Install <a href="https://github.com/shadowsocks/openwrt-shadowsocks">openwrt-shadowsocks</a>
+on an <a href="https://openwrt.org/">OpenWrt</a> router.</p>
+
+<pre><code class="language-bash">opkg update
+opkg install ipset libopenssl resolveip iptables-mod-tproxy
+</code></pre>
+
+<p>Check CPU version of the router:</p>
+
+<pre><code class="language-bash">cat /proc/cpuinfo
+</code></pre>
+
+<p>From <a href="http://sourceforge.net/projects/openwrt-dist/">OpenWrt-Dist</a>, download
+IPKs of the corresponding CPU:</p>
+
+<ul>
+<li><a href="http://sourceforge.net/projects/openwrt-dist/files/shadowsocks-libev/">shadowsocks-libev-spec</a>
+
+<ul>
+<li><a href="http://sourceforge.net/projects/openwrt-dist/files/luci-app/shadowsocks-spec/">luci-shadowsocks</a></li>
+</ul></li>
+<li><a href="http://sourceforge.net/projects/openwrt-dist/files/chinadns/">chinadns</a>
+
+<ul>
+<li><a href="http://sourceforge.net/projects/openwrt-dist/files/luci-app/chinadns/">luci-chinadns</a></li>
+</ul></li>
+</ul>
+
+<p>Copy <code>*.ipk</code> to router:</p>
+
+<pre><code class="language-bash">scp *.ipk root@192.168.1.1:/tmp
+</code></pre>
+
+<p>And install:</p>
+
+<pre><code class="language-bash">opkg install shadowsocks-libev-spec_xxx.ipk
+opkg install ChinaDNS_xxx.ipk
+/etc/init.d/shadowsocks enable
+/etc/init.d/chinadns enable
+</code></pre>
+
+<p>ShadowSocks configuration in <code>/etc/config/shadowsocks</code>:</p>
+
+<pre><code>config shadowsocks
+	...
+	option config_file '/etc/shadowsocks/config.json'
+	...
+	option tunnel_enable '0'
+	...
+</code></pre>
+
+<p>It refers to <code>/etc/shadowsocks/config.json</code>:</p>
+
+<pre><code>{
+    &quot;server&quot;:      &quot;xxx.xxx.xxx.xxx&quot;,
+    &quot;server_port&quot;: xxxx,
+    &quot;local_port&quot;:  xxxx,
+    &quot;password&quot;:    &quot;xxxxxx&quot;,
+    &quot;method&quot;:      &quot;aes-128-cfb&quot;,
+    &quot;timeout&quot;:     60
+}
+</code></pre>
+
+<p>ChinaDNS configuration in <code>/etc/config/chinadns</code>:</p>
+
+<pre><code>config chinadns
+    ...
+    option chnroute '/etc/shadowsocks/ignore.list'
+    ...
+    option server '[isp_dns],[private_pdnsd_dns]'
+    ...
+</code></pre>
+
+<p>Make sure <code>[private_pdnsd_dns]</code> is the same IP:PORT as the remote pdnsd server.</p>
+
+<p>ucitrack configuration in <code>/etc/config/ucitrack</code>:</p>
+
+<pre><code>config shadowsocks
+    option init 'shadowsocks'
+
+config chinadns
+    option init 'chinadns'
+</code></pre>
+
+<p>DHCP configuration in <code>/etc/config/dhcp</code>:</p>
+
+<pre><code>config dnsmasq
+    list server '127.0.0.1#5353'
+    option noresolv '1'
+    option nohosts '1'
+</code></pre>
+
+<h2 id="redsocks2:ea9e3bd770b9144f6a284e7574cdf713">RedSocks2</h2>
+
+<p>Use RedSocks2 to bypass the proxy when the target site is reachable.</p>
+
+<p>Download RedSocks2:</p>
+
+<ul>
+<li><a href="http://sourceforge.net/projects/openwrt-dist/files/redsocks2/">RedSocks2</a>
+
+<ul>
+<li><a href="http://sourceforge.net/projects/openwrt-dist/files/luci-app/redsocks2/">luci-redsocks2</a></li>
+</ul></li>
+</ul>
+
+<p>Install RedSocks2:</p>
+
+<pre><code>scp *.ipk root@192.168.1.1:/tmp
+opkg update
+opkg install xxx.ipk
+</code></pre>
+
+<p>RedSocks2 will take effect immediately.</p>
+
+<h2 id="upgrade-openwrt:ea9e3bd770b9144f6a284e7574cdf713">Upgrade OpenWRT</h2>
+
+<p>Download latest <code>*.ipk</code> above.</p>
+
+<pre><code class="language-bash">opkg update
+opkg upgrade ipset libopenssl resolveip iptables-mod-tproxy
+opkg install xxx.ipk
+</code></pre>
+
+<p>Merge configuration files manually.</p>
+
+<p>Update <code>ignore.list</code>:</p>
+
+<pre><code>wget -O- 'http://ftp.apnic.net/apnic/stats/apnic/delegated-apnic-latest' | awk -F\| '/CN\|ipv4/ { printf(&quot;%s/%d\n&quot;, $4, 32-log($5)/log(2)) }' &gt; ignore.list
+scp ignore.list root@192.168.1.1:/etc/shadowsocks/ignore.list
+</code></pre>
+
+<pre><code class="language-bash">reboot
+</code></pre>
+
+<h2 id="android-client:ea9e3bd770b9144f6a284e7574cdf713">Android Client</h2>
+
+<p><a href="https://github.com/shadowsocks/shadowsocks-android/releases">shadowsocks-android</a>.</p>
+
+                </div>
+            </article>
+        
+            <article class="frontpage">
+                <h1>
                     <a href="http://h12.me/note/go_build_failure/">Go 1.4.1 Build Failure and Solution</a>
                     <span class="line"></span>
                 </h1>
@@ -199,602 +391,6 @@ used by LibreOffice</li>
 dictionary file</li>
 <li>A test <a href="http://clagnut.com/sandbox/softhyphen/">page</a> for soft hyphen</li>
 </ul>
-
-                </div>
-            </article>
-        
-            <article class="frontpage">
-                <h1>
-                    <a href="http://h12.me/article/learn_haskell/">Learning Haskell the Hard Way</a>
-                    <span class="line"></span>
-                </h1>
-                <span class="time">26 July 2014</span>
-                <div class="article-body hyphenate">
-                    
-
-<p>When I was reading the <a href="http://www.haskell.org/haskellwiki/Learning_Haskell">collection</a> of learning resources on Haskell and tried to find a good start, I quickly realized that
-none of the books or tutorials are suitable for me: the easier a tutorial claims
-to be, the harder to really understand Haskell by reading it. What I need is a
-terse documentation that introduces the syntax and semantics of Haskell
-systematically and clearly, but unfortunately none was found.</p>
-
-<p>I know I have to try the hard way: reading the
-<a href="http://www.haskell.org/haskellwiki/Language_and_library_specification">Haskell language specification</a>
-directly and absorb it myself. To make the process less dull and record my
-progress, I will write down my learning notes here incrementally.</p>
-
-<h2 id="overview:b9b074007e556aa28f8a3e7bb14cecf5">Overview</h2>
-
-<p>A Haskell program is organized with four levels: <em>modules</em>, <em>declarations</em>,
-<em>expressions</em> &amp; <em>lexical structures</em>, but the specification is organized in the
-reverse order.</p>
-
-<p>Haskell has <em>ad hoc</em> polymorphism (<em>overloading</em>) and <em>parametric</em> polymorphism
-(Hindley-Milner type structure).</p>
-
-<p>Haskell has six namespaces:</p>
-
-<ul>
-<li>for value
-
-<ul>
-<li>variable</li>
-<li>constructor</li>
-</ul></li>
-<li>for type entity
-
-<ul>
-<li>type variable</li>
-<li>type constructor</li>
-<li>type class</li>
-</ul></li>
-<li>module</li>
-</ul>
-
-<p>The same name can be reused without conflicts as long as they are in different
-namespaces.</p>
-
-<h2 id="lexical-structure:b9b074007e556aa28f8a3e7bb14cecf5">Lexical Structure</h2>
-
-<p>A Haskell program is composed of lexemes (tokens) and whitespaces.</p>
-
-<pre><code>program → { lexeme | whitespace } 
-</code></pre>
-
-<p>Whitespace includes:</p>
-
-<ul>
-<li>The complete set of whitespace in both ASCII &amp; Unicode</li>
-<li>Two kinds of comments
-
-<ul>
-<li>inline comment starts with <code>--</code></li>
-<li>nested comment wrapped by <code>{- -}</code></li>
-</ul></li>
-</ul>
-
-<p>A lexeme is one of the following:</p>
-
-<ul>
-<li>identifier
-
-<ul>
-<li>qvarid: (qualified) variable identifier</li>
-<li>qconid: (qualified) constructor identifier</li>
-<li>reservedid: reserved identifier</li>
-</ul></li>
-<li>operator
-
-<ul>
-<li>qvarsym: (qualified) variable (symbolic) operator</li>
-<li>qconsym: (qualified) constructor (symbolic) operator</li>
-<li>reservedop: reserved operator</li>
-</ul></li>
-<li>literal: integer, float, character or string literal</li>
-<li>special: one of special symbols <code>()[]{}`,;</code></li>
-</ul>
-
-<p>A variable and a constructor is distinguished by the first character and put into
-different namespaces:</p>
-
-<ul>
-<li>identifier
-
-<ul>
-<li>variable: lower case (including underscore)</li>
-<li>constructor: upper case</li>
-</ul></li>
-<li>operator
-
-<ul>
-<li>variable: non-colon</li>
-<li>constructor: colon <code>:</code></li>
-</ul></li>
-</ul>
-
-<p>A variable or constructor can contain symbol <code>'</code>, so the common mathematical
-term &ldquo;x prime&rdquo; can be represented as <code>x'</code>.</p>
-
-<p>By using layout rule (indentation), symbols <code>{};</code> can be omitted in sereral
-grammer productions.</p>
-
-<h2 id="expressions:b9b074007e556aa28f8a3e7bb14cecf5">Expressions</h2>
-
-<h3 id="parentheses:b9b074007e556aa28f8a3e7bb14cecf5">Parentheses</h3>
-
-<p><code>(exp)</code> is a <em>parenthesized expression</em>, and is equivalent to <code>exp</code>.</p>
-
-<h3 id="function-operator-application:b9b074007e556aa28f8a3e7bb14cecf5">Function &amp; operator application</h3>
-
-<p>Function is prefixed and curried, so <code>f x y</code> means <code>(f x) y</code>.</p>
-
-<pre><code>fexp    → [fexp] aexp
-</code></pre>
-
-<p>All operators are infixed except prefix negation <code>-</code>.</p>
-
-<pre><code>infixexp→ lexp qop infixexp
-        | - infixexp    (prefix negation)
-        | lexp
-qop     → qvarop | qconop
-</code></pre>
-
-<p>An operator can be converted to prefix notation by parentheses. e.g.</p>
-
-<pre><code>(+) x y
-</code></pre>
-
-<p>Reversely, a function identifier (either variable or constructor) can be
-converted to an infix operator by backquotes.</p>
-
-<pre><code>x `op` y
-</code></pre>
-
-<h3 id="list-tuple:b9b074007e556aa28f8a3e7bb14cecf5">List &amp; Tuple</h3>
-
-<p>List is constructed with <code>:</code>.</p>
-
-<pre><code>1:2:3:[]   or   (:) 1 ((:) 2 ((:) 3 []))
-</code></pre>
-
-<p><em>Arithmetic sequence</em> is another way to construct a list.</p>
-
-<pre><code>[1,3..6] == [1,3,5]
-  [1..6] == [1,2,3,4,5,6]
-</code></pre>
-
-<p>Tuple is constructed with <code>(,...,)</code>.</p>
-
-<pre><code>(1, 2, &quot;a&quot;)   or   (,,) 1 2 &quot;a&quot;
-</code></pre>
-
-<h3 id="field-label:b9b074007e556aa28f8a3e7bb14cecf5">Field label</h3>
-
-<p>A field label is used to give a name to a field in a datatype. It can be used to
-construct, extract and update the field.</p>
-
-<p>A constructor with labeled fields:</p>
-
-<pre><code>aexp    → qcon { fbind1 , … , fbindn }  (n ≥ 0)
-fbind   → qvar = exp 
-</code></pre>
-
-<h3 id="pattern-matching:b9b074007e556aa28f8a3e7bb14cecf5">Pattern matching</h3>
-
-<p>A pattern itself is not an expression, but it is an important part of sereral
-expressions, including: <em>lambda abstractions</em>, <em>function definitions</em>,
-<em>let expressions</em>, <em>list comprehensions</em>, <em>do expressions</em> and <em>case expressions</em>.</p>
-
-<p>Pattern matching is used to deconstruct values according to their type
-specification. It proceeds from left to right, and outside to inside. Attempting
-to match a pattern can have one of three results:</p>
-
-<ul>
-<li>Fail</li>
-<li>Succeed: returning a binding for each variable in the pattern</li>
-<li>Diverge: i.e. return ⊥</li>
-</ul>
-
-<p>The syntax for patterns covers a subset of expressions.</p>
-
-<p>A pattern can match against infix expressions, but limited to infix constructors
-(the operator must be <code>qconop</code>).</p>
-
-<pre><code>pat     → lpat qconop pat (infix constructor)
-</code></pre>
-
-<p>A pattern can match against constructor functions (with or without field labels).</p>
-
-<pre><code>pat     → ...
-        | lpat
-
-lpat    → apat
-        | gcon apat1 … apatk    (arity gcon  =  k, k ≥ 1) 
-
-apat    → ...
-        | gcon  (arity gcon  =  0)
-        | qcon { fpat1 , … , fpatk }    (labeled pattern, k ≥ 0)
-
-fpat    → qvar = pat 
-</code></pre>
-
-<p>A pattern can match against a variable, a literal, a parenthesized expression,
-a tuple or a list.</p>
-
-<pre><code>lpat    → var ...
-        | - (integer | float)   (negative literal) 
-
-apat    → ...
-        | literal
-        | ( pat )               (parenthesized pattern)
-        | ( pat1 , … , patk )   (tuple pattern, k ≥ 2)
-        | [ pat1 , … , patk ]   (list pattern, k ≥ 1)
-</code></pre>
-
-<p>The variables defined within the pattern can be binded, but how to name and bind
-the whole pattern? This is exactly what an <em>as pattern</em> does (<code>var</code> before <code>@</code>
-is the name for the whole pattern).</p>
-
-<pre><code>apat    → var [ @ apat] (as pattern) 
-</code></pre>
-
-<p>Wildcard is used when you need a variable placeholder but do not want to bind
-the value to a name.</p>
-
-<pre><code>apat    → ...
-        | _     (wildcard)
-</code></pre>
-
-<p>Sometimes you need a pattern that can never fail (only succeed or diverge), it
-is called a irrefutable pattern.</p>
-
-<pre><code>apat    → ...
-        | ~ apat        (irrefutable pattern)
-</code></pre>
-
-<p>Besides <code>~apat</code>, these patterns are also irrefutable: a variable, a wildcard,
-<code>N apat</code> where N is a constructor defined by newtype and apat is irrefutable,
-<code>var@apat</code> where apat is irrefutable. All other patterns are refutable.</p>
-
-<h3 id="case-expression:b9b074007e556aa28f8a3e7bb14cecf5">Case expression</h3>
-
-<p>Case expression is very important because all other pattern matching expressions
-ultimately translate into case expressions.</p>
-
-<p>A case expression has one or more alternatives.</p>
-
-<pre><code>lexp    → case exp of { alts }
-alts    → alt1 ; … ; altn       (n ≥ 1) 
-</code></pre>
-
-<p>An alternative is either a pattern or empty. The pattern either coresponds to
-an expression (body) directly, or has one or more guarded patterns (note an
-optional gdpat appears at the right side of itself). A guarded pattern starts
-with <code>|</code> and is composed of one or more guards.</p>
-
-<pre><code>alt     → pat -&gt; exp [where decls]
-        | pat  gdpat [where decls]
-        | (empty alternative) 
-gdpat   → guards -&gt; exp [ gdpat ]
-guards  → | guard1, …, guardn   (n ≥ 1)
-decls   → { decl1 ; … ; decln } (n ≥ 0) 
-</code></pre>
-
-<p>Note that each alternative can optionally have a <code>where</code> declaration. It is used
-to bind extra variables to be used in the local scope.</p>
-
-<p>There are two types of guards: <em>pattern guard</em> &amp; <em>boolean guard</em>, and local
-declarations can also be introduced together with guards.</p>
-
-<pre><code>guard   → pat &lt;- infixexp     (pattern guard)
-        | let decls           (local declaration)
-        | infixexp            (boolean guard)
-</code></pre>
-
-<p>This is how a case expression works:</p>
-
-<ol>
-<li>The expression after <code>case</code> is matched against each alternative till a match
-is found.</li>
-<li>Then each guarded pattern in the matched alterantive is tested till one
-passes. A guarded pattern passes if and only if all of its guards pass.</li>
-<li>If successful, the conresponding expression is returned, otherwise, the next
-guarded pattern or alternative is tried sequentially.</li>
-<li>If no match can be found, the result is ⊥.</li>
-</ol>
-
-<h3 id="lambda-expression:b9b074007e556aa28f8a3e7bb14cecf5">Lambda expression</h3>
-
-<p>Lambda is used to construct a function without a name. Besides a variable, the
-input can also be any pattern.</p>
-
-<pre><code>lexp    → \ apat1 … apatn -&gt; exp        (n ≥ 1)
-</code></pre>
-
-<p>An example:</p>
-
-<pre><code>(\ (x, y) -&gt; x+y) (3, 7)
-</code></pre>
-
-<p>Also note that lambda <code>-&gt;</code> associates to the right, e.g.</p>
-
-<pre><code>Integer -&gt;  Integer -&gt; Integer
-    is equivalent to
-Integer -&gt; (Integer -&gt; Integer)
-</code></pre>
-
-<h3 id="let-expression:b9b074007e556aa28f8a3e7bb14cecf5">Let expression</h3>
-
-<p>A let expression introduces a nested, lexically-scoped, mutually-recursive list
-of declarations. <code>exp</code> after keyword <code>in</code> is the value of a let expression.</p>
-
-<pre><code>lexp    → let decls in exp
-decls   → { decl1 ; … ; decln } (n ≥ 0) 
-</code></pre>
-
-<p>Some examples:</p>
-
-<pre><code>let {} in 42
-let {(x,y) = (1,2)} in x+y
-</code></pre>
-
-<h3 id="list-comprehension:b9b074007e556aa28f8a3e7bb14cecf5">List comprehension</h3>
-
-<p>A list comprehension constructs a list of elements represented by <code>exp</code> qualified
-by one or more qualifiers.</p>
-
-<pre><code>aexp    → [ exp | qual1 , … , qualn ]   (n ≥ 1)
-</code></pre>
-
-<p>There are three kinds of qualifiers.</p>
-
-<p>A generator is composed of a pattern (<code>pat</code> with type <code>t</code>) and a list (<code>e</code> with
-type <code>[t]</code>). The pattern is matched against and binded to each element of the
-list one by one, so the binded variables can be used to generate each element of
-the result list. The generators are evaluated in a nested, depth-first order,
-and a failed match is just skipped over.</p>
-
-<pre><code>qual    → pat &lt;- e      (generator)
-</code></pre>
-
-<p>A qualifier can also be a local declaration to bind auxiliary variables, or a
-boolean guard to exclude some elements from the list.</p>
-
-<pre><code>qual    → ...
-        | let decls     (local declaration)
-        | exp           (boolean guard) 
-</code></pre>
-
-<h3 id="do-expression:b9b074007e556aa28f8a3e7bb14cecf5">Do expression</h3>
-
-<p><em>Wait till monad is fully understood.</em></p>
-
-<h3 id="type-signature:b9b074007e556aa28f8a3e7bb14cecf5">Type signature</h3>
-
-<p>Haskell has type inference, but an expression can be optionally specified with a
-<em>type signature</em>.</p>
-
-<pre><code>exp     → infixexp :: [context =&gt;] type
-</code></pre>
-
-<h2 id="declarations:b9b074007e556aa28f8a3e7bb14cecf5">Declarations</h2>
-
-<p>There are top declarations (<code>topdecl</code>) that are only allowed at the top level of
-a module, and nested declarations (<code>decl</code>) that may be used either at the top
-level or in nested scopes.</p>
-
-<pre><code>topdecl → ...
-        | ...
-        | decl 
-</code></pre>
-
-<h3 id="top-declarations:b9b074007e556aa28f8a3e7bb14cecf5">Top declarations</h3>
-
-<p>A top declaration starts with one of the keywords: <code>data</code>, <code>type</code>, <code>newtype</code>,
-<code>class</code>, <code>instance</code>, <code>default</code> and <code>foreign</code>.</p>
-
-<p><code>data</code>, <code>type</code> and <code>newtype</code> is for declaring new types. <code>class</code> is for
-declaring typeclasses and <code>instance</code> is for declaring the membership between
-types and typeclasses.</p>
-
-<p>They are explained later one by one.</p>
-
-<h3 id="nested-declarations:b9b074007e556aa28f8a3e7bb14cecf5">Nested declarations</h3>
-
-<p>In the last section, <code>decl</code> appears in the let expression and where clause
-without any explanations. Actually, they are nested declarations.</p>
-
-<p>There are five kinds of nested declarations: <em>type signature</em>, <em>fixity</em>,
-<em>function binding</em>, <em>pattern binding</em> and <em>empty</em> declartions.</p>
-
-<p>A <em>type signature</em> simply specifies types for variables.</p>
-
-<pre><code>decl    → gendecl
-        | ...
-gendecl → vars :: [context =&gt;] type
-vars    → var1 , …, varn        (n ≥ 1)
-</code></pre>
-
-<p>A <em>fixity</em> declaration gives the fixity and binding precedence of one or more
-operators.</p>
-
-<pre><code>gendecl → ...
-        | fixity [integer] ops
-fixity  → infixl | infixr | infix
-ops     → op1 , … , opn         (n ≥ 1)
-op      → varop | conop 
-</code></pre>
-
-<p>The right hand side (<code>rhs</code>) of function and pattern bindings are the same.</p>
-
-<pre><code>decl    → ...
-        | (funlhs | pat) rhs
-</code></pre>
-
-<p>The syntax of <code>rhs</code> is almost the same as <em>case expression</em>, except <code>-&gt;</code> is
-replaced by <code>=</code>.</p>
-
-<pre><code>rhs     → = exp [where decls]
-        | gdrhs [where decls]
-gdrhs   → guards = exp [gdrhs]
-</code></pre>
-
-<p>A function can be binded in multiple function binding declarations, as long as
-they are contiguous and the number of patterns is the same. In each of the
-declaration, the left hand side supports three alternative syntaxes.</p>
-
-<pre><code>funlhs  → var apat { apat }
-        | pat varop pat
-        | ( funlhs ) apat { apat }
-</code></pre>
-
-<p>And an example:</p>
-
-<pre><code>plus x y z = x+y+z
-x ‘plus‘ y = \ z -&gt; x+y+z
-(x ‘plus‘ y) z = x+y+z
-</code></pre>
-
-<h3 id="type:b9b074007e556aa28f8a3e7bb14cecf5">Type</h3>
-
-<p>Just as an <em>expression</em> may contain variables and denotes a value, a
-<em>type expression</em> may contain <em>type variables</em> and denotes a type value (but it
-is evaluated at compile time, unlike an expression evaluated at run time).</p>
-
-<p>Type expressions are designed to have similar representations as their
-corresponding expressions.</p>
-
-<p>Function type can be represented in infix or prefix notation.
-Like function application, <em>type application</em> (<code>btype</code>) is also prefixed and
-curried. <code>atype</code> is the type expression excluding infix function type and
-type application.</p>
-
-<pre><code>type    → btype [-&gt; type]       (function type)
-btype   → [btype] atype         (type application)
-atype   → gtycon
-        | ...
-gtycon  → ...
-        | (-&gt;)  (function constructor)
-</code></pre>
-
-<p>A <em>type variable</em> is an identifier beginning with a lowercase letter.
-A <em>parenthesized type</em> <code>(t)</code> is identical to the type <code>t</code>.
-A <em>type constructor</em> (type template) as an identifier begins with an uppercase
-letter.
-Besides function type, the syntaxes for tuple and list are also special syntaxes.</p>
-
-<pre><code>atype   → gtycon
-        | tyvar
-        | ( type1 , … , typek ) (tuple type, k ≥ 2)
-        | [ type ]              (list type)
-        | ( type )              (parenthesised constructor)
-gtycon  → qtycon
-        | ()            (unit type)
-        | []            (list constructor)
-        | (-&gt;)          (function constructor)
-        | (,{,})        (tupling constructors) 
-</code></pre>
-
-<h3 id="kind:b9b074007e556aa28f8a3e7bb14cecf5">Kind</h3>
-
-<p>What is <code>*</code>, <code>* -&gt; *</code>&hellip;? An ordinary type has kind <code>*</code>. A type constructor
-(template) that has one type argument has kind <code>* -&gt; *</code>, e.g. a list. So on and
-so forth.</p>
-
-<h3 id="context:b9b074007e556aa28f8a3e7bb14cecf5">Context</h3>
-
-<p>The context (<code>context =&gt; type</code>) is used to indicate that type <code>tyvar</code> belongs to
-class <code>qtycls</code>.</p>
-
-<p>A context is composed of zero or more class assertions.</p>
-
-<pre><code>context → class
-        | ( class1 , … , classn )               (n ≥ 0)
-</code></pre>
-
-<p>And a class assertion is either either a type variable, or the application of
-type variable to one or more types.</p>
-
-<pre><code>class   → qtycls tyvar
-        | qtycls ( tyvar atype1 … atypen )      (n ≥ 1)
-qtycls  → [ modid . ] tycls
-tycls   → conid
-tyvar   → varid 
-</code></pre>
-
-<h3 id="algebraic-data-type:b9b074007e556aa28f8a3e7bb14cecf5">Algebraic data type</h3>
-
-<p><em>algebraic data type</em> is named so because it is composed of other types by
-product and sum (algebraic operations). It introduces a new type constructor
-(<code>simpletype</code>) with zero or more constituent data constructors (<code>constrs</code>).</p>
-
-<pre><code>topdecl → ...
-        | data [context =&gt;] simpletype [= constrs] [deriving]
-</code></pre>
-
-<p>The type constructor begins with upper case letter and may have zero to more
-type variables as parameters. The type constructor then can be used in curried
-type application in a type expression.</p>
-
-<pre><code>simpletype      → tycon tyvar1 … tyvark         (k ≥ 0) 
-</code></pre>
-
-<p>On the right side of <code>=</code>, sum (alternative) types are separated by <code>|</code>.</p>
-
-<pre><code>constrs → constr1 | … | constrn         (n ≥ 1)
-</code></pre>
-
-<p>For each <code>constr</code>, there are three alternative syntaxes.</p>
-
-<ol>
-<li>A data constructor followed by zero or more <code>atype</code>.</li>
-<li>An infix data constructor operator between two <code>btype</code>.</li>
-<li>A data constructor followed by field declarations.</li>
-</ol>
-
-<pre><code>constr  → con [!] atype1 … [!] atypek   (arity con  =  k, k ≥ 0)
-        | (btype | ! atype) conop (btype | ! atype) (infix conop)
-        | con { fielddecl1 , … , fielddecln }       (n ≥ 0) 
-con     → conid | ( consym )    (constructor) 
-</code></pre>
-
-<p><code>!</code> is strictness flag to indicate that the corresponding constructor argument
-is eagerly evaluated.</p>
-
-<h3 id="type-synonym:b9b074007e556aa28f8a3e7bb14cecf5">Type synonym</h3>
-
-<p>A type synonym is equivalent to its definition are completely interchangeable.</p>
-
-<pre><code>topdecl → type simpletype = type
-</code></pre>
-
-<h3 id="newtype:b9b074007e556aa28f8a3e7bb14cecf5">Newtype</h3>
-
-<p>A <em>newtype</em> declaration introduces a distinct type whose representation is the
-same as an existing type.</p>
-
-<pre><code>topdecl     → newtype [context =&gt;] simpletype = newconstr [deriving]
-newconstr   → con atype
-            | con { var :: type }
-</code></pre>
-
-<ul>
-<li>Unlike type synonyms, <code>newtype</code> may be used to define recursive types.</li>
-<li>New instances can be defined for a type defined by <code>newtype</code> but may not be
-defined for a type synonym.</li>
-<li>A type created by <code>newtype</code> has an extra level of indirection compared to an
-algebraic datatype, so the pattern matching rule is different.</li>
-</ul>
-
-<h3 id="ad-hoc-polymorphism:b9b074007e556aa28f8a3e7bb14cecf5">Ad hoc polymorphism</h3>
-
-<p>Ad hoc polymorphism (overloading) is supported by <em>typeclasses</em>.</p>
-
-<p>A class declaration introduces a new class and the operations (methods) on it.</p>
-
-<h2 id="modules:b9b074007e556aa28f8a3e7bb14cecf5">Modules</h2>
-
-<p><em>To be continued&hellip;</em></p>
 
                 </div>
             </article>
