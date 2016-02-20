@@ -415,9 +415,7 @@ interface. An io.Reader is provided to be decoded by the encoding/json package.&
       <guid>http://h12.me/project/gspec/</guid>
       <description>
 
-&lt;p&gt;&lt;a href=&#34;https://travis-ci.org/h12w/gspec&#34;&gt;&lt;img src=&#34;https://travis-ci.org/h12w/gspec.png?branch=master&#34; alt=&#34;Build Status&#34; /&gt;
-&lt;/a&gt;
-&lt;a href=&#34;https://coveralls.io/r/h12w/gspec?branch=master&#34;&gt;&lt;img src=&#34;https://coveralls.io/repos/h12w/gspec/badge.png?branch=master&#34; alt=&#34;Coverage Status&#34; /&gt;
+&lt;p&gt;&lt;a href=&#34;https://app.wercker.com/project/bykey/d5ed30f0d03d4a5210f65659ead13888&#34;&gt;&lt;img src=&#34;https://app.wercker.com/status/d5ed30f0d03d4a5210f65659ead13888/s&#34; alt=&#34;wercker status&#34; title=&#34;wercker status&#34; /&gt;
 &lt;/a&gt;
 &lt;a href=&#34;https://godoc.org/h12.me/gspec&#34;&gt;&lt;img src=&#34;https://godoc.org/h12.me/gspec?status.png&#34; alt=&#34;GoDoc&#34; /&gt;
 &lt;/a&gt;&lt;/p&gt;
