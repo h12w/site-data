@@ -73,309 +73,55 @@
         
             <article class="frontpage">
                 <h1>
-                    <a href="http://h12.me/note/phonetic_notations/">Phonetic Notations</a>
+                    <a href="http://h12.me/project/socks/">SOCKS: a SOCKS Proxy Package for Go</a>
                     <span class="line"></span>
                 </h1>
-                <span class="time">30 June 2015</span>
+                <span class="time">1 August 2012</span>
                 <div class="article-body hyphenate">
                     
 
-<h2 id="google-dictionary:f89be48f7c6192a3d480a930835745a7">Google Dictionary</h2>
+<p><a href="https://godoc.org/h12.me/socks"><img src="https://godoc.org/h12.me/socks?status.svg" alt="GoDoc" />
+</a></p>
 
-<p>Google dictionary uses a phonetic notation same as <a href="http://en.wikipedia.org/wiki/Pronunciation_respelling_for_English">NORD (New Oxford American Dictionary)</a>.</p>
+<p>SOCKS is a SOCKS4, SOCKS4A and SOCKS5 proxy package for Go.</p>
 
-<p>To figure out an unknown phonetic notation, the simple way is to look up a few words that you know how to pronounce:
-church, hat, which, judge, game, thing, ship, thin, this, yes, pleasure
-cat, pay, care, father, arm, let, see, here, city, my, pot, no, caught, war, force, boy, put, tour, boot, out, cut, word, item, rabbit, winner, pupil</p>
+<h2 id="quick-start:d77d00cbd213acbdf85f41426e5559a4">Quick Start</h2>
 
-                </div>
-            </article>
-        
-            <article class="frontpage">
-                <h1>
-                    <a href="http://h12.me/note/go_design/">Notes on the Design of Go</a>
-                    <span class="line"></span>
-                </h1>
-                <span class="time">29 June 2015</span>
-                <div class="article-body hyphenate">
-                    
+<h3 id="get-the-package:d77d00cbd213acbdf85f41426e5559a4">Get the package</h3>
 
-<h3 id="refusing-new-features:7dee003ea8460b8c44d861f1c60e603b">Refusing new features</h3>
-
-<p>Avoid <a href="https://en.wikipedia.org/wiki/Leaky_abstraction">leaky abstraction</a> as much as possible. If an abstraction is not solid enough, you’d rather not use them at all. Go is designed like this, the features are carefully selected. If a feature is not solid enough, it will not be allowed to enter Go.</p>
-
-<h3 id="no-implicit-string-concatenation:7dee003ea8460b8c44d861f1c60e603b">No implicit string concatenation</h3>
-
-<p><a href="https://groups.google.com/d/msg/golang-nuts/S6a3bg65TBE/ikyNMzUSnXsJ">Rob</a>:
-That used to be in the language but was dropped when the semicolon insertion rules went in. You need the + to be able to span lines, and if you can&rsquo;t span lines operatorless concatenation is close to pointless.</p>
-
-<h3 id="no-implicit-conversion:7dee003ea8460b8c44d861f1c60e603b">No Implicit conversion</h3>
-
-<p><a href="https://groups.google.com/d/msg/golang-nuts/S6a3bg65TBE/ikyNMzUSnXsJ">Rob</a>:
-In any case the clarity of Go&rsquo;s strictness is worth the occasional conversion. A huge class of bugs is simply gone, and a huge piece of tricky language in the specification never needed to be written.</p>
-
-<p><a href="https://groups.google.com/d/msg/golang-nuts/S6a3bg65TBE/KUNfj8L4H4IJ">Russ</a>:
-Inserting automatic widening means giving up the &ldquo;named types are not the same&rdquo; rule, which makes it pretty much a non-starter.</p>
-
-<h3 id="octal-literal:7dee003ea8460b8c44d861f1c60e603b">Octal literal</h3>
-
-<p>Octal numeric system is rarely used, why does Go support them?</p>
-
-<p>From Wikipedia “Octal”: Octal representation of non-ASCII bytes may be particularly handy with UTF-8, where any start byte has octal value \3nn and any continuation byte has octal value \2nn.</p>
-
-<h3 id="null-pointer-billion-dollar-mistake:7dee003ea8460b8c44d861f1c60e603b">Null pointer (billion-dollar mistake)</h3>
-
-<p><a href="https://groups.google.com/d/msg/golang-nuts/Vxpuc37S8tQ/2zGB1QgjmbAJ">Jonathan</a>:
-in the eyes of the Go designers, who clearly don&rsquo;t view it as a billion-dollar mistake, and in my eyes as well,
- having spent days debugging (or failing to debug) race conditions, but rarely more than an hour per null-pointer bug).</p>
-
-<p><a href="https://groups.google.com/d/msg/golang-nuts/SskXyc9D5Sk/-EKHAIFBRXEJ">rog</a>:
-even in languages with no nil, such as Haskell, you can still get exceptions from using things that have an unexpected form. e.g. head [] that&rsquo;s not too different from a nil pointer exception. so even if you go the non-nil route, you may still end up paying a good proportion of the &ldquo;billion dollar&rdquo; price.</p>
-
-<h3 id="return-errors-rather-than-exceptions:7dee003ea8460b8c44d861f1c60e603b">Return errors rather than exceptions</h3>
-
-<p><a href="http://blogs.msdn.com/b/oldnewthing/archive/2005/01/14/352949.aspx">Raymond Chen</a>:
-It&rsquo;s easy to write bad code, regardless of the error model. It&rsquo;s hard to write good error-code-based code since you have to check every error code and think about what you should do when an error occurs. It&rsquo;s really hard to write good exception-based code since you have to check every single line of code (indeed, every sub-expression) and think about what exceptions it might raise and how your code will react to it. (In C++ it&rsquo;s not quite so bad because C++ exceptions are raised only at specific points during execution. In C#, exceptions can be raised at any time.)</p>
-
-<h3 id="nil-channel-always-blocks-both-send-and-receive:7dee003ea8460b8c44d861f1c60e603b">Nil channel always blocks (both send and receive)</h3>
-
-<p><a href="https://groups.google.com/d/msg/golang-nuts/QltQ0nd9HvE/VvDhLO07Oq4J">Rob</a>:
-It&rsquo;s for consistency with select. The semantics of a nil channel are
-the same regardless of how it is used. It&rsquo;s useful that it blocks in a
-select, so that&rsquo;s what it does outside a select.</p>
-
-<h3 id="reading-a-closed-channel-always-succeeds-with-zero-value:7dee003ea8460b8c44d861f1c60e603b">Reading a closed channel always succeeds with zero value</h3>
-
-<ol>
-<li>the read cannot block because then it will not be distinguishable with nil channel.</li>
-<li>the read cannot panic because the writer close the channel to signal that it has been closed, not to panicking the reader.</li>
-<li>Then the read has to return, which value to return? Since the channel has been closed, so the only possible value is a fake one &ndash; default zero value. an additional result of type bool reporting whether the communication succeeded.
-e.g. v, ok := &lt;-ch.</li>
-</ol>
-
-<h3 id="writing-a-closed-channel-panics:7dee003ea8460b8c44d861f1c60e603b">Writing a closed channel panics</h3>
-
-<p>The channel should only be closed by the writer(not reader), so if a writer close the channel and then write it again, it should be a programming bug and panic is the right behavior.</p>
-
-<h3 id="full-qualified-package-name:7dee003ea8460b8c44d861f1c60e603b">Full qualified package name</h3>
-
-<p><a href="https://groups.google.com/d/msg/golang-nuts/-tyo4o1uVTQ/FbDSkH9kq_oJ">Rob</a>:</p>
-
-<p>Using . as an import name is part of the language and necessary in some cases to solve difficult naming issues but it&rsquo;s not the intended style.  Package authors can depend on the fact that their code lives in its own name space.  If . becomes standard, then all packages in effect become a global name space and the style changes. Instead of</p>
-
-<pre><code>foo.New
+<pre><code>go get -u &quot;h12.me/socks&quot;
 </code></pre>
 
-<p>the function must be called something like</p>
+<h3 id="import-the-package:d77d00cbd213acbdf85f41426e5559a4">Import the package</h3>
 
-<pre><code>foo.NewFoo
+<pre><code>import &quot;h12.me/socks&quot;
 </code></pre>
 
-<p>to avoid colliding with New from other packages.  And then what if Foo is itself a common name such as Buffer?  You rapidly end up in the Java space of very long names for everything.</p>
+<h3 id="create-a-socks-proxy-dialing-function:d77d00cbd213acbdf85f41426e5559a4">Create a SOCKS proxy dialing function</h3>
 
-<p>This convention we have, using the package names always, is deliberate.  Yes, sometimes it makes for more typing but we believe in the long run it means less typing.</p>
-
-<h3 id="slice-type-is-a-builtin-type:7dee003ea8460b8c44d861f1c60e603b">Slice type is a builtin type</h3>
-
-<p>To support variadic arguments.</p>
-
-<h3 id="what-is-type-t-t:7dee003ea8460b8c44d861f1c60e603b">What is <code>type T []T</code>?</h3>
-
-<p>?</p>
-
-                </div>
-            </article>
-        
-            <article class="frontpage">
-                <h1>
-                    <a href="http://h12.me/note/what_go_cannot_do/">What Go cannot Do</a>
-                    <span class="line"></span>
-                </h1>
-                <span class="time">16 June 2015</span>
-                <div class="article-body hyphenate">
-                    
-
-<p>This is a list about the corner cases that Go cannot do, and their work arounds.</p>
-
-<h2 id="run-all-deferred-functions-of-other-goroutines-when-a-goroutine-panics:8b55f9ddc77541e5f8b431a4722abe5d">Run all deferred functions of other goroutines when a goroutine panics</h2>
-
-<p>Uncaught panicking of one goroutine will exit the program without executing deferred functions of other goroutines.</p>
-
-<p>Workaround: this is the standard behavior, C++ with RAII also has the same problem. Persist your data in a way that crashing will not cause data integrity issue.</p>
-
-<h2 id="assigning-to-fields-with-short-declaration-notation:8b55f9ddc77541e5f8b431a4722abe5d">Assigning to fields with short declaration notation</h2>
-
-<ul>
-<li>Issue: <a href="https://github.com/golang/go/issues/6842">6842</a></li>
-<li>Status: Open &amp; Unplanned</li>
-</ul>
-
-<p>When it is useful:</p>
-
-<pre><code class="language-go">if x.f, ok := f(); !ok {
-	...
-}
+<pre><code>dialSocksProxy := socks.DialSocksProxy(socks.SOCKS5, &quot;127.0.0.1:1080&quot;)
+tr := &amp;http.Transport{Dial: dialSocksProxy}
+httpClient := &amp;http.Client{Transport: tr}
 </code></pre>
 
-<p>Workaround:</p>
+<h2 id="alternatives:d77d00cbd213acbdf85f41426e5559a4">Alternatives</h2>
 
-<pre><code class="language-go">var ok bool
-if x.f, ok = f(); !ok {
-	...
-}
-</code></pre>
-
-<h2 id="accessing-unexported-fields-with-reflect-value-interface-method:8b55f9ddc77541e5f8b431a4722abe5d">Accessing unexported fields with reflect.Value.Interface method</h2>
-
-<p>When it is useful:</p>
-
-<pre><code class="language-go">type S struct {
-   val string
-}
-
-...
-
-var s S
-
-reflect.Value(s).Fields(0).Interface()
-</code></pre>
-
-<p>The code will panics with message:</p>
-
-<pre><code>reflect.Value.Interface: cannot return value obtained from unexported field or method
-</code></pre>
-
-<p>Workaround:</p>
-
-<pre><code class="language-go">v := reflect.Value(s).Fields(0)
-if v.Kind() == reflect.String {
-	s := v.String()
-}
-</code></pre>
-
-<h2 id="slice-of-array-literal:8b55f9ddc77541e5f8b431a4722abe5d">Slice of array literal</h2>
-
-<p>e.g.</p>
-
-<pre><code class="language-go">[3]int{1, 2, 3}[:]
-</code></pre>
-
-<p>Just use slice literal instead!</p>
-
-                </div>
-            </article>
-        
-            <article class="frontpage">
-                <h1>
-                    <a href="http://h12.me/note/ebook_tools/">Ebook Manipulation Tools</a>
-                    <span class="line"></span>
-                </h1>
-                <span class="time">4 June 2015</span>
-                <div class="article-body hyphenate">
-                    <ul>
-<li>Ebook manager: <a href="http://calibre-ebook.com/">Calibre</a></li>
-<li>Kindle PDF optimizer: <a href="http://www.willus.com/k2pdfopt/">k2pdfopt</a></li>
-<li>PDF Border Cropper <a href="http://sourceforge.net/projects/briss/">Briss</a></li>
-<li>CHM File Extractor <a href="https://github.com/dottedmag/archmage">archmage</a></li>
-<li>PDF editing <a href="http://xournal.sourceforge.net">Xournal</a></li>
-</ul>
-
-                </div>
-            </article>
-        
-            <article class="frontpage">
-                <h1>
-                    <a href="http://h12.me/note/go_get_behind_proxy/">How to &#34;go get&#34; Behind a Proxy</a>
-                    <span class="line"></span>
-                </h1>
-                <span class="time">6 May 2015</span>
-                <div class="article-body hyphenate">
-                    
-
-<h2 id="proxy-for-go-get:e490f2aac2393f2512d8fa1fe826c975">Proxy for &ldquo;go get&rdquo;</h2>
-
-<pre><code>https_proxy=http://user:pass@proxy_host:port go get ...
-</code></pre>
-
-<h2 id="proxy-for-git:e490f2aac2393f2512d8fa1fe826c975">Proxy for Git</h2>
-
-<p>In <code>$HOME/.gitconfig</code>:</p>
-
-<pre><code>[https]
-	proxy = proxy_url
-</code></pre>
-
-<h2 id="proxy-for-mercurial:e490f2aac2393f2512d8fa1fe826c975">Proxy for Mercurial</h2>
-
-<p>In <code>$HOME/.hgrc</code>:</p>
-
-<pre><code>[http_proxy]
-host = host:port
-user = ...
-passwd = ...
-</code></pre>
-
-                </div>
-            </article>
-        
-            <article class="frontpage">
-                <h1>
-                    <a href="http://h12.me/note/tips_on_ssh/">Tips on SSH</a>
-                    <span class="line"></span>
-                </h1>
-                <span class="time">28 April 2015</span>
-                <div class="article-body hyphenate">
-                    
-
-<h2 id="generate-ssh-keys:1f1c4e8b5b8b665e71e6a80f55c5a955">Generate SSH keys</h2>
-
-<pre><code class="language-bash">ssh-keygen -C w@h12.me
-</code></pre>
-
-<h2 id="authorize-public-key-at-remote-server:1f1c4e8b5b8b665e71e6a80f55c5a955">Authorize public key at remote server</h2>
-
-<pre><code class="language-bash">ssh-copy-id user@host
-</code></pre>
-
-<p>On Mac OSX, <code>ssh-copy-id</code> should be installed first.</p>
-
-<pre><code class="language-bash">brew install ssh-copy-id
-</code></pre>
-
-<h2 id="generate-pem:1f1c4e8b5b8b665e71e6a80f55c5a955">Generate PEM</h2>
-
-<pre><code class="language-bash">ssh-keygen -f ~/.ssh/id_rsa -e -m pem &gt; ~/.ssh/id_rsa.pem
-</code></pre>
-
-                </div>
-            </article>
-        
-            <article class="frontpage">
-                <h1>
-                    <a href="http://h12.me/note/generate_xsd_from_xml/">How to Generate XSD Schema from XML?</a>
-                    <span class="line"></span>
-                </h1>
-                <span class="time">23 April 2015</span>
-                <div class="article-body hyphenate">
-                    <p><a href="http://archive.apache.org/dist/xmlbeans/binaries">Apache XMLBeans</a> is an old tool but still functioning. Download and uncompress the latest binary release, then run inst2xsd under bin folder (needs JDK).</p>
-
-<pre><code>inst2xsd xxx.xml
-</code></pre>
+<p><a href="http://code.google.com/p/go/source/browse/?repo=net#hg%2Fproxy">http://code.google.com/p/go/source/browse/?repo=net#hg%2Fproxy</a></p>
 
                 </div>
             </article>
         
         <nav class="pagination">
-            <span>- 2 -</span>
+            <span>- 7 -</span>
             <ul>
                 <li>
             
-                    <a href="/">« Prev</a>
+                    <a href="/page/6">« Prev</a>
             
                 </li>
                 <li>
             
-                    <a href="/page/3">Next »</a>
+                    <span class="disabled">Next »</span>
             
                 </li>
             </ul>

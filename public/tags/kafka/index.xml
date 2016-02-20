@@ -7,8 +7,56 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>Copyright (c) 2012-2016, Hǎiliàng Wáng; all rights reserved.</copyright>
-    <lastBuildDate>Thu, 23 Jul 2015 13:36:25 +0800</lastBuildDate>
+    <lastBuildDate>Sat, 14 Nov 2015 13:57:09 +0800</lastBuildDate>
     <atom:link href="http://h12.me/tags/kafka/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>RealTest: real test environment for Go</title>
+      <link>http://h12.me/project/realtest/</link>
+      <pubDate>Sat, 14 Nov 2015 13:57:09 +0800</pubDate>
+      
+      <guid>http://h12.me/project/realtest/</guid>
+      <description>
+
+&lt;p&gt;h12.me/realtest provides real test environment for Go unit testing, based on Docker.&lt;/p&gt;
+
+&lt;p&gt;Includes:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Queue
+
+&lt;ul&gt;
+&lt;li&gt;Kafka cluster (with zookeeper)&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;Database:
+
+&lt;ul&gt;
+&lt;li&gt;MySQL&lt;/li&gt;
+&lt;li&gt;MongoDB&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;Cache
+
+&lt;ul&gt;
+&lt;li&gt;Redis&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;Configuration service
+
+&lt;ul&gt;
+&lt;li&gt;ZooKeeper&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;author:392938f6c0ed47446e9bccc40e79ace3&#34;&gt;Author&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/h12w&#34;&gt;Hǎiliàng Wáng&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;contributors:392938f6c0ed47446e9bccc40e79ace3&#34;&gt;Contributors&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/AnotherGoogleFans&#34;&gt;Tao Huang&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
     
     <item>
       <title>kpax: a modular &amp; idiomatic Kafka client in Go</title>
