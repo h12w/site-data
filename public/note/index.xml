@@ -7,8 +7,120 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>Copyright (c) 2012-2016, Hǎiliàng Wáng; all rights reserved.</copyright>
-    <lastBuildDate>Mon, 01 Feb 2016 18:11:29 +0800</lastBuildDate>
+    <lastBuildDate>Sat, 27 Feb 2016 14:59:54 +0800</lastBuildDate>
     <atom:link href="http://h12.me/note/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Note on OpenWRT</title>
+      <link>http://h12.me/note/openwrt-note/</link>
+      <pubDate>Sat, 27 Feb 2016 14:59:54 +0800</pubDate>
+      
+      <guid>http://h12.me/note/openwrt-note/</guid>
+      <description>
+
+&lt;h2 id=&#34;obtain-openwrt:fba9a0f50fdb02ecc398287f8a6d0f68&#34;&gt;Obtain OpenWRT&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Find the device model at the &lt;a href=&#34;https://wiki.openwrt.org/toh/start&#34;&gt;Table of Hardware&lt;/a&gt; (Huawei HG556a C)&lt;/li&gt;
+&lt;li&gt;Open &lt;em&gt;Device Techdata&lt;/em&gt; for &lt;em&gt;Firmware OpenWrt Install URL&lt;/em&gt;&lt;/li&gt;
+&lt;li&gt;Open &lt;em&gt;Device Page&lt;/em&gt; for &lt;em&gt;Installation&lt;/em&gt; instructions&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;computer-cable-router:fba9a0f50fdb02ecc398287f8a6d0f68&#34;&gt;Computer - Cable - Router&lt;/h2&gt;
+
+&lt;p&gt;Connect the computer to the router with a cable.&lt;/p&gt;
+
+&lt;h2 id=&#34;install-openwrt:fba9a0f50fdb02ecc398287f8a6d0f68&#34;&gt;Install OpenWRT&lt;/h2&gt;
+
+&lt;p&gt;Follow the instructions to install OpenWRT.&lt;/p&gt;
+
+&lt;h2 id=&#34;ssh:fba9a0f50fdb02ecc398287f8a6d0f68&#34;&gt;SSH&lt;/h2&gt;
+
+&lt;p&gt;First login:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;telnet 192.168.1.1
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Change password to enable SSH:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;passwd
+exit
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;For public key authentication, add the public key:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;ssh-copy-id root@192.168.1.1
+ssh root@192.168.1.1
+mv ~/.ssh/authorized_keys /etc/dropbear
+exit
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;wifi:fba9a0f50fdb02ecc398287f8a6d0f68&#34;&gt;WiFi&lt;/h2&gt;
+
+&lt;p&gt;In &lt;code&gt;/etc/config/wireless&lt;/code&gt;:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;config wifi-device  radio0
+	......
+	# REMOVE THIS LINE TO ENABLE WIFI:
+	# option disabled 1
+
+config wifi-iface
+	option device     radio0
+	option network    lan
+	option mode       ap
+	option encryption psk2
+	option hidden     1
+	option ssid       [SSID]
+	option key        [WiFi password]
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Execute:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;wifi
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;computer-wifi-router:fba9a0f50fdb02ecc398287f8a6d0f68&#34;&gt;Computer - WiFi - Router&lt;/h2&gt;
+
+&lt;p&gt;Disconnect the cable to the router. Try SSH via WiFi.&lt;/p&gt;
+
+&lt;h2 id=&#34;internet:fba9a0f50fdb02ecc398287f8a6d0f68&#34;&gt;Internet&lt;/h2&gt;
+
+&lt;p&gt;In &lt;code&gt;/etc/config/network&lt;/code&gt;:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;# lan switch
+config switch_vlan
+	option device 	eth0
+	option vlan 	1
+	option ports 	&amp;quot;1 2 5t&amp;quot;
+
+# wan switch
+config switch_vlan
+	option device 	eth0
+	option vlan 	2
+	option ports 	&amp;quot;0 5t&amp;quot;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;For DHCP wan:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;config interface wan
+	option ifname eth0.2
+	option proto  dhcp
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;For PPPOE wan:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;config interface wan
+	option ifname   eth0.2
+	option proto    pppoe
+	option username [PPPOE user name]
+	option password [password]
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;computer-wifi-router-cable-internet:fba9a0f50fdb02ecc398287f8a6d0f68&#34;&gt;Computer - WiFi - Router - Cable - Internet&lt;/h2&gt;
+
+&lt;p&gt;Connect the internet cable to the router, reboot the router.&lt;/p&gt;
+</description>
+    </item>
     
     <item>
       <title>About Pretty Printing</title>
@@ -345,8 +457,15 @@ if v.Kind() == reflect.String {
 &lt;li&gt;Kindle PDF optimizer: &lt;a href=&#34;http://www.willus.com/k2pdfopt/&#34;&gt;k2pdfopt&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;PDF Border Cropper &lt;a href=&#34;http://sourceforge.net/projects/briss/&#34;&gt;Briss&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;CHM File Extractor &lt;a href=&#34;https://github.com/dottedmag/archmage&#34;&gt;archmage&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;PDF editing &lt;a href=&#34;http://xournal.sourceforge.net&#34;&gt;Xournal&lt;/a&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;PDF editing &lt;a href=&#34;http://xournal.sourceforge.net&#34;&gt;Xournal&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;convert images to PDF&lt;/p&gt;&lt;/li&gt;
 &lt;/ul&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;	sudo apt-get install imagemagick
+	convert *.jpg pictures.pdf
+&lt;/code&gt;&lt;/pre&gt;
 </description>
     </item>
     
@@ -471,16 +590,6 @@ provider.&lt;/li&gt;
 &lt;li&gt;It will not work if you only modify the DNS record without actually assigning
 the custom domain in the Developer Console.&lt;/li&gt;
 &lt;/ol&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>How to install a self-signed CA Certificate to Android 4.4</title>
-      <link>http://h12.me/note/install-ca-android/</link>
-      <pubDate>Sat, 17 Jan 2015 18:13:09 +0000</pubDate>
-      
-      <guid>http://h12.me/note/install-ca-android/</guid>
-      <description>&lt;p&gt;See this blog &lt;a href=&#34;https://samhobbs.co.uk/2013/12/remove-network-may-be-monitored-by-an-unknown-third-party-in-android-4-4-kitkat&#34;&gt;&lt;em&gt;Remove &amp;ldquo;Network May Be Monitored by an Unknown Third Party&amp;rdquo; in Android 4.4 KitKat&lt;/em&gt;&lt;/a&gt;.&lt;/p&gt;
 </description>
     </item>
     

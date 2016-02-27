@@ -1,6 +1,6 @@
 domain_name: h12.me
 
-githost: https://github.com/h12w
+git_host: https://github.com/h12w
 
 packages:
   - color

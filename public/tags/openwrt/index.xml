@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Openwrt on h12.me</title>
+    <link>http://h12.me/tags/openwrt/</link>
+    <description>Recent content in Openwrt on h12.me</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>Copyright (c) 2012-2016, Hǎiliàng Wáng; all rights reserved.</copyright>
+    <lastBuildDate>Sat, 27 Feb 2016 14:59:54 +0800</lastBuildDate>
+    <atom:link href="http://h12.me/tags/openwrt/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Note on OpenWRT</title>
+      <link>http://h12.me/note/openwrt-note/</link>
+      <pubDate>Sat, 27 Feb 2016 14:59:54 +0800</pubDate>
+      
+      <guid>http://h12.me/note/openwrt-note/</guid>
+      <description>
+
+&lt;h2 id=&#34;obtain-openwrt:fba9a0f50fdb02ecc398287f8a6d0f68&#34;&gt;Obtain OpenWRT&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Find the device model at the &lt;a href=&#34;https://wiki.openwrt.org/toh/start&#34;&gt;Table of Hardware&lt;/a&gt; (Huawei HG556a C)&lt;/li&gt;
+&lt;li&gt;Open &lt;em&gt;Device Techdata&lt;/em&gt; for &lt;em&gt;Firmware OpenWrt Install URL&lt;/em&gt;&lt;/li&gt;
+&lt;li&gt;Open &lt;em&gt;Device Page&lt;/em&gt; for &lt;em&gt;Installation&lt;/em&gt; instructions&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;computer-cable-router:fba9a0f50fdb02ecc398287f8a6d0f68&#34;&gt;Computer - Cable - Router&lt;/h2&gt;
+
+&lt;p&gt;Connect the computer to the router with a cable.&lt;/p&gt;
+
+&lt;h2 id=&#34;install-openwrt:fba9a0f50fdb02ecc398287f8a6d0f68&#34;&gt;Install OpenWRT&lt;/h2&gt;
+
+&lt;p&gt;Follow the instructions to install OpenWRT.&lt;/p&gt;
+
+&lt;h2 id=&#34;ssh:fba9a0f50fdb02ecc398287f8a6d0f68&#34;&gt;SSH&lt;/h2&gt;
+
+&lt;p&gt;First login:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;telnet 192.168.1.1
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Change password to enable SSH:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;passwd
+exit
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;For public key authentication, add the public key:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;ssh-copy-id root@192.168.1.1
+ssh root@192.168.1.1
+mv ~/.ssh/authorized_keys /etc/dropbear
+exit
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;wifi:fba9a0f50fdb02ecc398287f8a6d0f68&#34;&gt;WiFi&lt;/h2&gt;
+
+&lt;p&gt;In &lt;code&gt;/etc/config/wireless&lt;/code&gt;:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;config wifi-device  radio0
+	......
+	# REMOVE THIS LINE TO ENABLE WIFI:
+	# option disabled 1
+
+config wifi-iface
+	option device     radio0
+	option network    lan
+	option mode       ap
+	option encryption psk2
+	option hidden     1
+	option ssid       [SSID]
+	option key        [WiFi password]
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Execute:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;wifi
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;computer-wifi-router:fba9a0f50fdb02ecc398287f8a6d0f68&#34;&gt;Computer - WiFi - Router&lt;/h2&gt;
+
+&lt;p&gt;Disconnect the cable to the router. Try SSH via WiFi.&lt;/p&gt;
+
+&lt;h2 id=&#34;internet:fba9a0f50fdb02ecc398287f8a6d0f68&#34;&gt;Internet&lt;/h2&gt;
+
+&lt;p&gt;In &lt;code&gt;/etc/config/network&lt;/code&gt;:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;# lan switch
+config switch_vlan
+	option device 	eth0
+	option vlan 	1
+	option ports 	&amp;quot;1 2 5t&amp;quot;
+
+# wan switch
+config switch_vlan
+	option device 	eth0
+	option vlan 	2
+	option ports 	&amp;quot;0 5t&amp;quot;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;For DHCP wan:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;config interface wan
+	option ifname eth0.2
+	option proto  dhcp
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;For PPPOE wan:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;config interface wan
+	option ifname   eth0.2
+	option proto    pppoe
+	option username [PPPOE user name]
+	option password [password]
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;computer-wifi-router-cable-internet:fba9a0f50fdb02ecc398287f8a6d0f68&#34;&gt;Computer - WiFi - Router - Cable - Internet&lt;/h2&gt;
+
+&lt;p&gt;Connect the internet cable to the router, reboot the router.&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

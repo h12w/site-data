@@ -3,8 +3,13 @@
   
   <url>
     <loc>http://h12.me/</loc>
-    <lastmod>2016-02-01T18:11:29+08:00</lastmod>
+    <lastmod>2016-02-27T14:59:54+08:00</lastmod>
     <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://h12.me/note/openwrt-note/</loc>
+    <lastmod>2016-02-27T14:59:54+08:00</lastmod>
   </url>
   
   <url>
@@ -228,12 +233,12 @@
   </url>
   
   <url>
-    <loc>http://h12.me/test/height_test/</loc>
+    <loc>http://h12.me/test/size_test/</loc>
     <lastmod>2014-07-10T03:06:35+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://h12.me/test/size_test/</loc>
+    <loc>http://h12.me/test/height_test/</loc>
     <lastmod>2014-07-10T03:06:35+00:00</lastmod>
   </url>
   

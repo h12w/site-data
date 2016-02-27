@@ -59,20 +59,30 @@
 
 &lt;h2 id=&#34;local-openwrt-router:ed389849b892ef1bb1002c7398bba070&#34;&gt;Local OpenWrt Router&lt;/h2&gt;
 
-&lt;p&gt;Install &lt;a href=&#34;https://github.com/shadowsocks/openwrt-shadowsocks&#34;&gt;openwrt-shadowsocks&lt;/a&gt;
-on an &lt;a href=&#34;https://openwrt.org/&#34;&gt;OpenWrt&lt;/a&gt; router.&lt;/p&gt;
+&lt;p&gt;Install &lt;a href=&#34;https://github.com/shadowsocks/openwrt-shadowsocks&#34;&gt;openwrt-shadowsocks&lt;/a&gt; &amp;amp;
+&lt;a href=&#34;https://github.com/shadowsocks/ChinaDNS&#34;&gt;ChinaDNS&lt;/a&gt; on an &lt;a href=&#34;https://openwrt.org/&#34;&gt;OpenWrt&lt;/a&gt; router.&lt;/p&gt;
 
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;opkg update
-opkg install ipset libopenssl resolveip iptables-mod-tproxy
-&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Follow the instructions on &lt;a href=&#34;http://openwrt-dist.sourceforge.net&#34;&gt;OpenWrt-Dist&lt;/a&gt;:&lt;/p&gt;
 
-&lt;p&gt;Check CPU version of the router:&lt;/p&gt;
+&lt;p&gt;Check CPU model of the router:&lt;/p&gt;
 
 &lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;cat /proc/cpuinfo
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;p&gt;From &lt;a href=&#34;http://sourceforge.net/projects/openwrt-dist/&#34;&gt;OpenWrt-Dist&lt;/a&gt;, download
-IPKs of the corresponding CPU:&lt;/p&gt;
+&lt;p&gt;add the following to &lt;code&gt;/etc/opkg.conf&lt;/code&gt;:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;src/gz openwrt_dist http://openwrt-dist.sourceforge.net/releases/[cpu model]/packages
+src/gz openwrt_dist_luci http://openwrt-dist.sourceforge.net/releases/luci/packages
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;opkg update
+opkg install ChinaDNS
+opkg install luci-app-chinadns
+opkg install shadowsocks-libev-spec
+opkg install luci-app-shadowsocks-spec
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Or manually download IPKs of the corresponding CPU:&lt;/p&gt;
 
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;http://sourceforge.net/projects/openwrt-dist/files/shadowsocks-libev/&#34;&gt;shadowsocks-libev-spec&lt;/a&gt;
