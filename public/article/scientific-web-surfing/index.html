@@ -79,6 +79,7 @@
 <h2 id="vps:ed389849b892ef1bb1002c7398bba070">VPS</h2>
 
 <ul>
+<li><a href="https://www.cloudsvm.com/billing/aff.php?aff=140">CloudsVM</a></li>
 <li><a href="http://www.vultr.com/?ref=6837862">Vultr</a></li>
 <li><a href="https://www.digitalocean.com/?refcode=56202ab61fb7">DigitalOcean</a></li>
 <li><a href="https://bandwagonhost.com/aff.php?aff=2128">BandwagonHOST</a>
@@ -86,9 +87,21 @@
 <ul>
 <li>Client Area -&gt; Services -&gt; Order New Services</li>
 <li>64MB RAM is enough for running both ShadowSocks and pdnsd</li>
-<li>Install Ubuntu LTS 32bit (x86, i686).</li>
+<li>Install Ubuntu LTS 32bit (x86, i686) or CentOS 7.</li>
 </ul></li>
 </ul>
+
+<h2 id="shadowsocks-on-centos:ed389849b892ef1bb1002c7398bba070">Shadowsocks on CentOS</h2>
+
+<pre><code class="language-bash">cd /etc/yum.repos.d/
+curl -OL https://copr.fedorainfracloud.org/coprs/librehat/shadowsocks/repo/epel-7/librehat-shadowsocks-epel-7.repo
+yum update
+yum install shadowsocks-libev
+cd /etc/shadowsocks-libev/
+vim config.json
+systemctl enable shadowsocks-libenv
+systemctl start shadowsocks-libenv
+</code></pre>
 
 <h2 id="docker:ed389849b892ef1bb1002c7398bba070">Docker</h2>
 

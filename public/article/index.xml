@@ -253,6 +253,7 @@ and protect your PGP key pair and master pass phrase.&lt;/p&gt;
 &lt;h2 id=&#34;vps:ed389849b892ef1bb1002c7398bba070&#34;&gt;VPS&lt;/h2&gt;
 
 &lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.cloudsvm.com/billing/aff.php?aff=140&#34;&gt;CloudsVM&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;http://www.vultr.com/?ref=6837862&#34;&gt;Vultr&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;https://www.digitalocean.com/?refcode=56202ab61fb7&#34;&gt;DigitalOcean&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;https://bandwagonhost.com/aff.php?aff=2128&#34;&gt;BandwagonHOST&lt;/a&gt;
@@ -260,9 +261,21 @@ and protect your PGP key pair and master pass phrase.&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;Client Area -&amp;gt; Services -&amp;gt; Order New Services&lt;/li&gt;
 &lt;li&gt;64MB RAM is enough for running both ShadowSocks and pdnsd&lt;/li&gt;
-&lt;li&gt;Install Ubuntu LTS 32bit (x86, i686).&lt;/li&gt;
+&lt;li&gt;Install Ubuntu LTS 32bit (x86, i686) or CentOS 7.&lt;/li&gt;
 &lt;/ul&gt;&lt;/li&gt;
 &lt;/ul&gt;
+
+&lt;h2 id=&#34;shadowsocks-on-centos:ed389849b892ef1bb1002c7398bba070&#34;&gt;Shadowsocks on CentOS&lt;/h2&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;cd /etc/yum.repos.d/
+curl -OL https://copr.fedorainfracloud.org/coprs/librehat/shadowsocks/repo/epel-7/librehat-shadowsocks-epel-7.repo
+yum update
+yum install shadowsocks-libev
+cd /etc/shadowsocks-libev/
+vim config.json
+systemctl enable shadowsocks-libenv
+systemctl start shadowsocks-libenv
+&lt;/code&gt;&lt;/pre&gt;
 
 &lt;h2 id=&#34;docker:ed389849b892ef1bb1002c7398bba070&#34;&gt;Docker&lt;/h2&gt;
 
