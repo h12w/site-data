@@ -72,6 +72,7 @@ config wifi-iface
 	option hidden     1
 	option ssid       [SSID]
 	option key        [WiFi password]
+	option macaddr    [00:0A:4B:3C:6D:02]
 &lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;Execute:&lt;/p&gt;

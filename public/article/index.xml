@@ -265,16 +265,43 @@ and protect your PGP key pair and master pass phrase.&lt;/p&gt;
 &lt;/ul&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h2 id=&#34;shadowsocks-on-centos:ed389849b892ef1bb1002c7398bba070&#34;&gt;Shadowsocks on CentOS&lt;/h2&gt;
+&lt;h2 id=&#34;centos:ed389849b892ef1bb1002c7398bba070&#34;&gt;CentOS&lt;/h2&gt;
+
+&lt;h3 id=&#34;shadowsocks:ed389849b892ef1bb1002c7398bba070&#34;&gt;Shadowsocks&lt;/h3&gt;
 
 &lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;cd /etc/yum.repos.d/
-curl -OL https://copr.fedorainfracloud.org/coprs/librehat/shadowsocks/repo/epel-7/librehat-shadowsocks-epel-7.repo
+wget https://copr.fedorainfracloud.org/coprs/librehat/shadowsocks/repo/epel-7/librehat-shadowsocks-epel-7.repo
 yum update
 yum install shadowsocks-libev
 cd /etc/shadowsocks-libev/
 vim config.json
 systemctl enable shadowsocks-libenv
 systemctl start shadowsocks-libenv
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&#34;pdnsd:ed389849b892ef1bb1002c7398bba070&#34;&gt;pdnsd&lt;/h3&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;wget http://members.home.nl/p.a.rombouts/pdnsd/releases/pdnsd-1.2.9a-par_sl6.x86_64.rpm
+yum localinstall pdnsd-1.2.9a-par_sl6.x86_64.rpm
+vim /etc/pdnsd.conf
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;pdnsd.conf&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;global {
+	run_as      = &amp;quot;pdnsd&amp;quot;;
+	server_ip   = 0.0.0.0;
+	server_port = [xxxx];
+}
+
+server {
+	label   = &amp;quot;GoogleDNS&amp;quot;;
+	ip      = 8.8.8.8, 8.8.4.4;
+	timeout = 3;
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;service pdnsd start
 &lt;/code&gt;&lt;/pre&gt;
 
 &lt;h2 id=&#34;docker:ed389849b892ef1bb1002c7398bba070&#34;&gt;Docker&lt;/h2&gt;
@@ -317,6 +344,8 @@ systemctl start shadowsocks-libenv
 &lt;pre&gt;&lt;code&gt;src/gz openwrt_dist http://openwrt-dist.sourceforge.net/releases/[cpu model]/packages
 src/gz openwrt_dist_luci http://openwrt-dist.sourceforge.net/releases/luci/packages
 &lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;and install:&lt;/p&gt;
 
 &lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;opkg update
 opkg install ChinaDNS

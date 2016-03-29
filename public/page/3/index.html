@@ -376,16 +376,43 @@ and protect your PGP key pair and master pass phrase.</p>
 </ul></li>
 </ul>
 
-<h2 id="shadowsocks-on-centos:ed389849b892ef1bb1002c7398bba070">Shadowsocks on CentOS</h2>
+<h2 id="centos:ed389849b892ef1bb1002c7398bba070">CentOS</h2>
+
+<h3 id="shadowsocks:ed389849b892ef1bb1002c7398bba070">Shadowsocks</h3>
 
 <pre><code class="language-bash">cd /etc/yum.repos.d/
-curl -OL https://copr.fedorainfracloud.org/coprs/librehat/shadowsocks/repo/epel-7/librehat-shadowsocks-epel-7.repo
+wget https://copr.fedorainfracloud.org/coprs/librehat/shadowsocks/repo/epel-7/librehat-shadowsocks-epel-7.repo
 yum update
 yum install shadowsocks-libev
 cd /etc/shadowsocks-libev/
 vim config.json
 systemctl enable shadowsocks-libenv
 systemctl start shadowsocks-libenv
+</code></pre>
+
+<h3 id="pdnsd:ed389849b892ef1bb1002c7398bba070">pdnsd</h3>
+
+<pre><code class="language-bash">wget http://members.home.nl/p.a.rombouts/pdnsd/releases/pdnsd-1.2.9a-par_sl6.x86_64.rpm
+yum localinstall pdnsd-1.2.9a-par_sl6.x86_64.rpm
+vim /etc/pdnsd.conf
+</code></pre>
+
+<p>pdnsd.conf</p>
+
+<pre><code>global {
+	run_as      = &quot;pdnsd&quot;;
+	server_ip   = 0.0.0.0;
+	server_port = [xxxx];
+}
+
+server {
+	label   = &quot;GoogleDNS&quot;;
+	ip      = 8.8.8.8, 8.8.4.4;
+	timeout = 3;
+}
+</code></pre>
+
+<pre><code class="language-bash">service pdnsd start
 </code></pre>
 
 <h2 id="docker:ed389849b892ef1bb1002c7398bba070">Docker</h2>
@@ -428,6 +455,8 @@ systemctl start shadowsocks-libenv
 <pre><code>src/gz openwrt_dist http://openwrt-dist.sourceforge.net/releases/[cpu model]/packages
 src/gz openwrt_dist_luci http://openwrt-dist.sourceforge.net/releases/luci/packages
 </code></pre>
+
+<p>and install:</p>
 
 <pre><code class="language-bash">opkg update
 opkg install ChinaDNS
