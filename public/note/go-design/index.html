@@ -153,6 +153,12 @@ e.g. v, ok := &lt;-ch.</li>
 
 <p>To support variadic arguments.</p>
 
+<h3 id="len-returns-int-rather-than-uint:152b3ca9eaa5f9a2262d95ae2b1b15be">len returns int rather than uint</h3>
+
+<p><a href="https://groups.google.com/d/msg/golang-nuts/jJWAAMdquwQ/jhWhxJJbzVYJ">Ian</a>:</p>
+
+<p>Unsigned types are not a good choice for counts, because they have odd behaviour at 0, a common case.  Signed types have odd behaviour at very large and very small values, an uncommon case.</p>
+
 <h3 id="what-is-type-t-t:152b3ca9eaa5f9a2262d95ae2b1b15be">What is <code>type T []T</code>?</h3>
 
 <p>?</p>
