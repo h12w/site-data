@@ -7,8 +7,38 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>Copyright (c) 2012-2016, Hǎiliàng Wáng; all rights reserved.</copyright>
-    <lastBuildDate>Sat, 27 Feb 2016 14:59:54 +0800</lastBuildDate>
+    <lastBuildDate>Sat, 02 Jul 2016 19:03:40 +0800</lastBuildDate>
     <atom:link href="http://h12.me/note/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>On Reliable Persistence</title>
+      <link>http://h12.me/note/on-reliable-persistence/</link>
+      <pubDate>Sat, 02 Jul 2016 19:03:40 +0800</pubDate>
+      
+      <guid>http://h12.me/note/on-reliable-persistence/</guid>
+      <description>&lt;p&gt;A short investigation on reliable persistence:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;Crash consistency is &lt;a href=&#34;http://danluu.com/file-consistency/&#34;&gt;hard&lt;/a&gt; but
+&lt;a href=&#34;https://www.flamingspork.com/talks/&#34;&gt;possible&lt;/a&gt; at a huge performance
+&lt;a href=&#34;https://www.google.com/#q=fsync+performance&#34;&gt;cost&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Data safty must rely on distributed solution&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://raft.github.io&#34;&gt;Raft&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Perhaps we should just give up manual fsync and rely on&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;OS background flush&lt;/li&gt;
+&lt;li&gt;corruption detection &amp;amp; correction at startup&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://kafka.apache.org/08/ops.html&#34;&gt;replication&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
     
     <item>
       <title>Note on OpenWRT</title>
@@ -570,33 +600,6 @@ and found nothing special.&lt;/p&gt;
 &lt;p&gt;Then I searched for the error source and it turned out that I should deleted
 &lt;code&gt;anames*.c&lt;/code&gt;, manually. There is no document and no automatic cleaning script, and
 you would have to figure it out yourself if no one ever mentioned it (&lt;a href=&#34;https://groups.google.com/d/msg/golang-nuts/wQoQqXOnOTo/QbubO2UebpUJ&#34;&gt;source&lt;/a&gt;).&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>How to configure a custom domain name in GAE?</title>
-      <link>http://h12.me/note/gae-custom-domain/</link>
-      <pubDate>Mon, 19 Jan 2015 09:32:04 +0000</pubDate>
-      
-      <guid>http://h12.me/note/gae-custom-domain/</guid>
-      <description>&lt;p&gt;Steps:&lt;/p&gt;
-
-&lt;ol&gt;
-&lt;li&gt;Visit &lt;a href=&#34;https://console.developers.google.com&#34;&gt;Developers Console&lt;/a&gt;.&lt;/li&gt;
-&lt;li&gt;In your project: Compute -&amp;gt; App Engine -&amp;gt; Settings.&lt;/li&gt;
-&lt;li&gt;On the tab labelled CUSTOM DOMAINS, you can verify your domain and assign it
-and/or its subdomains to your GAE project.&lt;/li&gt;
-&lt;li&gt;Add the DNS settings provided by Google into the DNS server of your domain
-provider.&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;Notes:&lt;/p&gt;
-
-&lt;ol&gt;
-&lt;li&gt;Only HTTP is supported, HTTPS is not.&lt;/li&gt;
-&lt;li&gt;It will not work if you only modify the DNS record without actually assigning
-the custom domain in the Developer Console.&lt;/li&gt;
-&lt;/ol&gt;
 </description>
     </item>
     

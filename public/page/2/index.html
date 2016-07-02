@@ -73,6 +73,22 @@
         
             <article class="frontpage">
                 <h1>
+                    <a href="http://h12.me/note/remove-all-exited-docker-containers/">How to Remove All Exited Containers &amp; Dangling Images for Docker?</a>
+                    <span class="line"></span>
+                </h1>
+                <span class="time">3 August 2015</span>
+                <div class="article-body hyphenate">
+                    <pre><code class="language-bash">docker ps --quiet --filter=status=exited | xargs docker rm
+</code></pre>
+
+<pre><code class="language-bash">docker images --no-trunc=true --filter=&quot;dangling=true&quot; --quiet=true | xargs docker rmi
+</code></pre>
+
+                </div>
+            </article>
+        
+            <article class="frontpage">
+                <h1>
                     <a href="http://h12.me/project/kpax/">kpax: a modular &amp; idiomatic Kafka client in Go</a>
                     <span class="line"></span>
                 </h1>
@@ -444,41 +460,6 @@ if v.Kind() == reflect.String {
 
 <pre><code class="language-bash">	sudo apt-get install imagemagick
 	convert *.jpg pictures.pdf
-</code></pre>
-
-                </div>
-            </article>
-        
-            <article class="frontpage">
-                <h1>
-                    <a href="http://h12.me/note/go-get-behind-proxy/">How to &#34;go get&#34; Behind a Proxy</a>
-                    <span class="line"></span>
-                </h1>
-                <span class="time">6 May 2015</span>
-                <div class="article-body hyphenate">
-                    
-
-<h2 id="proxy-for-go-get:70e7a77773bb657f64cd08cb621ddcd5">Proxy for &ldquo;go get&rdquo;</h2>
-
-<pre><code>https_proxy=http://user:pass@proxy_host:port go get ...
-</code></pre>
-
-<h2 id="proxy-for-git:70e7a77773bb657f64cd08cb621ddcd5">Proxy for Git</h2>
-
-<p>In <code>$HOME/.gitconfig</code>:</p>
-
-<pre><code>[https]
-	proxy = proxy_url
-</code></pre>
-
-<h2 id="proxy-for-mercurial:70e7a77773bb657f64cd08cb621ddcd5">Proxy for Mercurial</h2>
-
-<p>In <code>$HOME/.hgrc</code>:</p>
-
-<pre><code>[http_proxy]
-host = host:port
-user = ...
-passwd = ...
 </code></pre>
 
                 </div>
