@@ -7,8 +7,32 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>Copyright (c) 2012-2016, Hǎiliàng Wáng; all rights reserved.</copyright>
-    <lastBuildDate>Sat, 02 Jul 2016 19:03:40 +0800</lastBuildDate>
+    <lastBuildDate>Sun, 03 Jul 2016 21:16:34 +0800</lastBuildDate>
     <atom:link href="http://h12.me/note/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>A Manager&#39;s FAQ</title>
+      <link>http://h12.me/note/manager-faq/</link>
+      <pubDate>Sun, 03 Jul 2016 21:16:34 +0800</pubDate>
+      
+      <guid>http://h12.me/note/manager-faq/</guid>
+      <description>&lt;p&gt;This is an &lt;a href=&#34;https://readthink.com/a-managers-faq-35858a229f84#.7a4wlb9qy&#34;&gt;insightful list&lt;/a&gt;
+from &lt;a href=&#34;Henry Ward&#34;&gt;Henry Ward&lt;/a&gt;:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;How do I get employees to perform better?&lt;/strong&gt; Tell them what they are doing well.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;How do I give negative feedback?&lt;/strong&gt; By being curious.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;How do I decide what to delegate?&lt;/strong&gt; Delegate the work you want to do.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;How should I prioritize?&lt;/strong&gt; Fix problems. Then prevent problems.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;How should I grade employees?&lt;/strong&gt; Don’t. Teach them to self-evaluate.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;When do I fire somebody?&lt;/strong&gt; When you know they can’t succeed.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;How do I fire somebody?&lt;/strong&gt; By apologizing for our failures.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Why can’t I just tell people what to do?&lt;/strong&gt; Because the more responsibility you have, the less authority you have.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;How do I know if I am a good manager?&lt;/strong&gt; Employees ask you for advice.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;How do I know if I have good management team?&lt;/strong&gt; Shit rolls uphill.&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
     
     <item>
       <title>On Reliable Persistence</title>
@@ -117,6 +141,12 @@ config wifi-iface
 &lt;h2 id=&#34;internet:fba9a0f50fdb02ecc398287f8a6d0f68&#34;&gt;Internet&lt;/h2&gt;
 
 &lt;p&gt;In &lt;code&gt;/etc/config/network&lt;/code&gt;:&lt;/p&gt;
+
+&lt;p&gt;It is better to change the lan address so that it will not be conflicted with the upstream address.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;config interface &#39;lan&#39;
+	option ipaddr &#39;192.168.2.1&#39;
+&lt;/code&gt;&lt;/pre&gt;
 
 &lt;pre&gt;&lt;code&gt;# lan switch
 config switch_vlan
@@ -579,27 +609,6 @@ passwd = ...
 
 &lt;pre&gt;&lt;code&gt;inst2xsd xxx.xml
 &lt;/code&gt;&lt;/pre&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Go 1.4.1 Build Failure and Solution</title>
-      <link>http://h12.me/note/go-build-failure/</link>
-      <pubDate>Thu, 29 Jan 2015 03:55:08 +0000</pubDate>
-      
-      <guid>http://h12.me/note/go-build-failure/</guid>
-      <description>&lt;p&gt;Today I tried to build Go 1.4.1 from source but it failed with this error:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;    go/src/liblink/anames9.c:6:29: fatal error: ../cmd/9l/9.out.h: No such file or directory
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;At first I thought the building routine might have be changed so I opened and read
-&lt;a href=&#34;http://golang.org/doc/install/source&#34;&gt;&lt;em&gt;Installing Go from Source&lt;/em&gt;&lt;/a&gt; again, carefully,
-and found nothing special.&lt;/p&gt;
-
-&lt;p&gt;Then I searched for the error source and it turned out that I should deleted
-&lt;code&gt;anames*.c&lt;/code&gt;, manually. There is no document and no automatic cleaning script, and
-you would have to figure it out yourself if no one ever mentioned it (&lt;a href=&#34;https://groups.google.com/d/msg/golang-nuts/wQoQqXOnOTo/QbubO2UebpUJ&#34;&gt;source&lt;/a&gt;).&lt;/p&gt;
 </description>
     </item>
     

@@ -73,6 +73,31 @@
         
             <article class="frontpage">
                 <h1>
+                    <a href="http://h12.me/note/ebook-tools/">Ebook Manipulation Tools</a>
+                    <span class="line"></span>
+                </h1>
+                <span class="time">4 June 2015</span>
+                <div class="article-body hyphenate">
+                    <ul>
+<li>Ebook manager: <a href="http://calibre-ebook.com/">Calibre</a></li>
+<li>Kindle PDF optimizer: <a href="http://www.willus.com/k2pdfopt/">k2pdfopt</a></li>
+<li>PDF Border Cropper <a href="http://sourceforge.net/projects/briss/">Briss</a></li>
+<li>CHM File Extractor <a href="https://github.com/dottedmag/archmage">archmage</a></li>
+
+<li><p>PDF editing <a href="http://xournal.sourceforge.net">Xournal</a></p></li>
+
+<li><p>convert images to PDF</p></li>
+</ul>
+
+<pre><code class="language-bash">	sudo apt-get install imagemagick
+	convert *.jpg pictures.pdf
+</code></pre>
+
+                </div>
+            </article>
+        
+            <article class="frontpage">
+                <h1>
                     <a href="http://h12.me/note/go-get-behind-proxy/">How to &#34;go get&#34; Behind a Proxy</a>
                     <span class="line"></span>
                 </h1>
@@ -498,6 +523,8 @@ opkg install ChinaDNS
 opkg install luci-app-chinadns
 opkg install shadowsocks-libev-spec
 opkg install luci-app-shadowsocks-spec
+
+opkg install bind-dig
 </code></pre>
 
 <p>Or manually download IPKs of the corresponding CPU:</p>
@@ -517,7 +544,7 @@ opkg install luci-app-shadowsocks-spec
 
 <p>Copy <code>*.ipk</code> to router:</p>
 
-<pre><code class="language-bash">scp *.ipk root@192.168.1.1:/tmp
+<pre><code class="language-bash">scp *.ipk root@192.168.2.1:/tmp
 </code></pre>
 
 <p>And install:</p>
@@ -595,7 +622,7 @@ config chinadns
 
 <p>Install RedSocks2:</p>
 
-<pre><code>scp *.ipk root@192.168.1.1:/tmp
+<pre><code>scp *.ipk root@192.168.2.1:/tmp
 opkg update
 opkg install xxx.ipk
 </code></pre>
@@ -616,7 +643,7 @@ opkg install xxx.ipk
 <p>Update <code>ignore.list</code>:</p>
 
 <pre><code>wget -O- 'http://ftp.apnic.net/apnic/stats/apnic/delegated-apnic-latest' | awk -F\| '/CN\|ipv4/ { printf(&quot;%s/%d\n&quot;, $4, 32-log($5)/log(2)) }' &gt; ignore.list
-scp ignore.list root@192.168.1.1:/etc/shadowsocks/ignore.list
+scp ignore.list root@192.168.2.1:/etc/shadowsocks/ignore.list
 </code></pre>
 
 <pre><code class="language-bash">reboot
@@ -648,35 +675,6 @@ and found nothing special.</p>
 <p>Then I searched for the error source and it turned out that I should deleted
 <code>anames*.c</code>, manually. There is no document and no automatic cleaning script, and
 you would have to figure it out yourself if no one ever mentioned it (<a href="https://groups.google.com/d/msg/golang-nuts/wQoQqXOnOTo/QbubO2UebpUJ">source</a>).</p>
-
-                </div>
-            </article>
-        
-            <article class="frontpage">
-                <h1>
-                    <a href="http://h12.me/note/gae-custom-domain/">How to configure a custom domain name in GAE?</a>
-                    <span class="line"></span>
-                </h1>
-                <span class="time">19 January 2015</span>
-                <div class="article-body hyphenate">
-                    <p>Steps:</p>
-
-<ol>
-<li>Visit <a href="https://console.developers.google.com">Developers Console</a>.</li>
-<li>In your project: Compute -&gt; App Engine -&gt; Settings.</li>
-<li>On the tab labelled CUSTOM DOMAINS, you can verify your domain and assign it
-and/or its subdomains to your GAE project.</li>
-<li>Add the DNS settings provided by Google into the DNS server of your domain
-provider.</li>
-</ol>
-
-<p>Notes:</p>
-
-<ol>
-<li>Only HTTP is supported, HTTPS is not.</li>
-<li>It will not work if you only modify the DNS record without actually assigning
-the custom domain in the Developer Console.</li>
-</ol>
 
                 </div>
             </article>

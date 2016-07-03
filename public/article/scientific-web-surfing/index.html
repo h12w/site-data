@@ -178,6 +178,8 @@ opkg install ChinaDNS
 opkg install luci-app-chinadns
 opkg install shadowsocks-libev-spec
 opkg install luci-app-shadowsocks-spec
+
+opkg install bind-dig
 </code></pre>
 
 <p>Or manually download IPKs of the corresponding CPU:</p>
@@ -197,7 +199,7 @@ opkg install luci-app-shadowsocks-spec
 
 <p>Copy <code>*.ipk</code> to router:</p>
 
-<pre><code class="language-bash">scp *.ipk root@192.168.1.1:/tmp
+<pre><code class="language-bash">scp *.ipk root@192.168.2.1:/tmp
 </code></pre>
 
 <p>And install:</p>
@@ -275,7 +277,7 @@ config chinadns
 
 <p>Install RedSocks2:</p>
 
-<pre><code>scp *.ipk root@192.168.1.1:/tmp
+<pre><code>scp *.ipk root@192.168.2.1:/tmp
 opkg update
 opkg install xxx.ipk
 </code></pre>
@@ -296,7 +298,7 @@ opkg install xxx.ipk
 <p>Update <code>ignore.list</code>:</p>
 
 <pre><code>wget -O- 'http://ftp.apnic.net/apnic/stats/apnic/delegated-apnic-latest' | awk -F\| '/CN\|ipv4/ { printf(&quot;%s/%d\n&quot;, $4, 32-log($5)/log(2)) }' &gt; ignore.list
-scp ignore.list root@192.168.1.1:/etc/shadowsocks/ignore.list
+scp ignore.list root@192.168.2.1:/etc/shadowsocks/ignore.list
 </code></pre>
 
 <pre><code class="language-bash">reboot

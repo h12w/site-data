@@ -88,6 +88,12 @@ config wifi-iface
 
 &lt;p&gt;In &lt;code&gt;/etc/config/network&lt;/code&gt;:&lt;/p&gt;
 
+&lt;p&gt;It is better to change the lan address so that it will not be conflicted with the upstream address.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;config interface &#39;lan&#39;
+	option ipaddr &#39;192.168.2.1&#39;
+&lt;/code&gt;&lt;/pre&gt;
+
 &lt;pre&gt;&lt;code&gt;# lan switch
 config switch_vlan
 	option device 	eth0
