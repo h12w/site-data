@@ -160,6 +160,12 @@ passwd = ...
 <pre><code class="language-bash">ssh-keygen -f ~/.ssh/id_rsa -e -m pem &gt; ~/.ssh/id_rsa.pem
 </code></pre>
 
+<h2 id="copy-file-by-base64:94a5150ca2ae26062cc82162c1b651e1">Copy file by base64</h2>
+
+<p>On remote session, run <code>base64 &lt; myfile</code> and copy the output.</p>
+
+<p>On local terminal, run <code>base64 -d &gt; myfile</code>, paste the content and press <code>ctrl+D</code>.</p>
+
                 </div>
             </article>
         

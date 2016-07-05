@@ -37,6 +37,12 @@
 
 &lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;ssh-keygen -f ~/.ssh/id_rsa -e -m pem &amp;gt; ~/.ssh/id_rsa.pem
 &lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;copy-file-by-base64:94a5150ca2ae26062cc82162c1b651e1&#34;&gt;Copy file by base64&lt;/h2&gt;
+
+&lt;p&gt;On remote session, run &lt;code&gt;base64 &amp;lt; myfile&lt;/code&gt; and copy the output.&lt;/p&gt;
+
+&lt;p&gt;On local terminal, run &lt;code&gt;base64 -d &amp;gt; myfile&lt;/code&gt;, paste the content and press &lt;code&gt;ctrl+D&lt;/code&gt;.&lt;/p&gt;
 </description>
     </item>
     
