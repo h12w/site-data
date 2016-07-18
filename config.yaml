@@ -43,8 +43,11 @@ packages:
   - site
   - snippets
   - socks
+  - stats
   - svg
   - teff
+  - ua
+  - ua-test
   - uuid
   - wipro
   - xsd
