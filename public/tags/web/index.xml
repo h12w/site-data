@@ -90,8 +90,9 @@ yum update
 yum install shadowsocks-libev
 cd /etc/shadowsocks-libev/
 vim config.json
-systemctl enable shadowsocks-libenv
-systemctl start shadowsocks-libenv
+
+systemctl enable shadowsocks-libev
+systemctl start shadowsocks-libev
 &lt;/code&gt;&lt;/pre&gt;
 
 &lt;h3 id=&#34;pdnsd:ed389849b892ef1bb1002c7398bba070&#34;&gt;pdnsd&lt;/h3&gt;
