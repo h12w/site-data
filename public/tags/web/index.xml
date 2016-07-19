@@ -80,6 +80,8 @@ make sure the proxy is safe before this step).&lt;/p&gt;&lt;/li&gt;
 
 &lt;h2 id=&#34;centos:ed389849b892ef1bb1002c7398bba070&#34;&gt;CentOS&lt;/h2&gt;
 
+&lt;h3 id=&#34;install-centos-7-64bit:ed389849b892ef1bb1002c7398bba070&#34;&gt;Install CentOS 7 (64bit)&lt;/h3&gt;
+
 &lt;h3 id=&#34;shadowsocks:ed389849b892ef1bb1002c7398bba070&#34;&gt;Shadowsocks&lt;/h3&gt;
 
 &lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;cd /etc/yum.repos.d/
