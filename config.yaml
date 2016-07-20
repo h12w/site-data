@@ -1,3 +1,5 @@
+# site/config.yml: DO NOT EDIT the copy in docker repo
+
 domain_name: h12.me
 
 git_host: https://github.com/h12w
@@ -43,8 +45,11 @@ packages:
   - site
   - snippets
   - socks
+  - stats
   - svg
   - teff
+  - ua
+  - ua-test
   - uuid
   - wipro
   - xsd
