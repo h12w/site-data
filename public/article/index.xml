@@ -304,7 +304,10 @@ server {
 }
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;service pdnsd start
+&lt;p&gt;Then run:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;systemctl enable pdnsd
+systemctl start pdnsd
 &lt;/code&gt;&lt;/pre&gt;
 
 &lt;h2 id=&#34;docker:ed389849b892ef1bb1002c7398bba070&#34;&gt;Docker&lt;/h2&gt;
