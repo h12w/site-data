@@ -430,9 +430,22 @@ e.g. v, ok := &amp;lt;-ch.&lt;/li&gt;
 
 &lt;p&gt;Unsigned types are not a good choice for counts, because they have odd behaviour at 0, a common case.  Signed types have odd behaviour at very large and very small values, an uncommon case.&lt;/p&gt;
 
-&lt;h3 id=&#34;what-is-type-t-t:152b3ca9eaa5f9a2262d95ae2b1b15be&#34;&gt;What is &lt;code&gt;type T []T&lt;/code&gt;?&lt;/h3&gt;
+&lt;h3 id=&#34;what-is-type-t-t:152b3ca9eaa5f9a2262d95ae2b1b15be&#34;&gt;What is &lt;code&gt;type T []T&lt;/code&gt;&lt;/h3&gt;
 
-&lt;p&gt;?&lt;/p&gt;
+&lt;p&gt;A slice is a small object containing a pointer to the underlying array, so T is the slice object containing a pointer to the underlying array, whose element is T itself.&lt;/p&gt;
+
+&lt;h3 id=&#34;each-if-for-and-switch-statement-is-considered-to-be-in-its-own-implicit-block-https-golang-org-ref-spec-blocks:152b3ca9eaa5f9a2262d95ae2b1b15be&#34;&gt;&lt;a href=&#34;https://golang.org/ref/spec#Blocks&#34;&gt;Each &lt;code&gt;if&lt;/code&gt;, &lt;code&gt;for&lt;/code&gt;, and &lt;code&gt;switch&lt;/code&gt; statement is considered to be in its own implicit block&lt;/a&gt;&lt;/h3&gt;
+
+&lt;p&gt;It means a for loop has two nested blocks, the outer implicit block is for the loop variable, and the inner block for the loop body:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-go&#34;&gt;for i := 0; i &amp;lt; 5; i++ {
+	fmt.Println(&amp;quot;outer i:&amp;quot;, i)
+	i := 999
+	fmt.Println(&amp;quot;inner i:&amp;quot;, i)
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;The implicit block has to be introduced to &lt;code&gt;for statement&lt;/code&gt; so that the the value of the loop variable can be shared between iterations, but I am not sure why it is useful for &lt;code&gt;if&lt;/code&gt; and &lt;code&gt;switch&lt;/code&gt;.&lt;/p&gt;
 </description>
     </item>
     

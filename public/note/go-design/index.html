@@ -159,9 +159,22 @@ e.g. v, ok := &lt;-ch.</li>
 
 <p>Unsigned types are not a good choice for counts, because they have odd behaviour at 0, a common case.  Signed types have odd behaviour at very large and very small values, an uncommon case.</p>
 
-<h3 id="what-is-type-t-t:152b3ca9eaa5f9a2262d95ae2b1b15be">What is <code>type T []T</code>?</h3>
+<h3 id="what-is-type-t-t:152b3ca9eaa5f9a2262d95ae2b1b15be">What is <code>type T []T</code></h3>
 
-<p>?</p>
+<p>A slice is a small object containing a pointer to the underlying array, so T is the slice object containing a pointer to the underlying array, whose element is T itself.</p>
+
+<h3 id="each-if-for-and-switch-statement-is-considered-to-be-in-its-own-implicit-block-https-golang-org-ref-spec-blocks:152b3ca9eaa5f9a2262d95ae2b1b15be"><a href="https://golang.org/ref/spec#Blocks">Each <code>if</code>, <code>for</code>, and <code>switch</code> statement is considered to be in its own implicit block</a></h3>
+
+<p>It means a for loop has two nested blocks, the outer implicit block is for the loop variable, and the inner block for the loop body:</p>
+
+<pre><code class="language-go">for i := 0; i &lt; 5; i++ {
+	fmt.Println(&quot;outer i:&quot;, i)
+	i := 999
+	fmt.Println(&quot;inner i:&quot;, i)
+}
+</code></pre>
+
+<p>The implicit block has to be introduced to <code>for statement</code> so that the the value of the loop variable can be shared between iterations, but I am not sure why it is useful for <code>if</code> and <code>switch</code>.</p>
 
                 </div>
                 <div>
