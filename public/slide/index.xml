@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Slides on h12.me</title>
+    <link>http://h12.me/slide/</link>
+    <description>Recent content in Slides on h12.me</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>Copyright (c) 2012-2016, Hǎiliàng Wáng; all rights reserved.</copyright>
+    <lastBuildDate>Sun, 21 Aug 2016 13:00:00 +0000</lastBuildDate>
+    <atom:link href="http://h12.me/slide/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>kpax</title>
+      <link>http://h12.me/slide/kpax/</link>
+      <pubDate>Sun, 21 Aug 2016 13:00:00 +0000</pubDate>
+      
+      <guid>http://h12.me/slide/kpax/</guid>
+      <description>&lt;script&gt;
+      var notesEnabled =  false ;
+    &lt;/script&gt;
+    &lt;script src=&#39;http://h12.me/static/slides.js&#39;&gt;&lt;/script&gt;
+
+    
+
+    &lt;section class=&#39;slides layout-widescreen&#39;&gt;
+
+      &lt;article&gt;
+        &lt;h1&gt;kpax&lt;/h1&gt;
+        &lt;h3&gt;a modular &amp;amp; idiomatic Kafka client in Go&lt;/h3&gt;
+        &lt;h3&gt;21 August 2016&lt;/h3&gt;
+        
+          &lt;div class=&#34;presenter&#34;&gt;
+            
+  
+  &lt;p&gt;
+    Wáng Hǎiliàng
+  &lt;/p&gt;
+  
+
+  
+  &lt;p&gt;
+    Gopher at Appcoach
+  &lt;/p&gt;
+  
+
+          &lt;/div&gt;
+        
+      &lt;/article&gt;
+
+  
+  
+      &lt;article&gt;
+      
+        &lt;h2&gt;Kafka Introduction&lt;/h2&gt;
+      
+      &lt;/article&gt;
+  
+  
+  
+      &lt;article&gt;
+      
+        &lt;h2&gt;Design of kpax&lt;/h2&gt;
+      
+      &lt;/article&gt;
+  
+  
+  
+      &lt;article&gt;
+      
+        &lt;h3&gt;Protocol Generation&lt;/h3&gt;
+        
+  
+  &lt;p&gt;
+    TODO
+  &lt;/p&gt;
+  
+
+      
+      &lt;/article&gt;
+  
+  
+  
+      &lt;article&gt;
+      
+        &lt;h2&gt;Abstraction&lt;/h2&gt;
+      
+      &lt;/article&gt;
+  
+  
+  
+      &lt;article&gt;
+      
+        &lt;h3&gt;Test and verification&lt;/h3&gt;
+        
+  
+  &lt;p&gt;
+    TODO
+  &lt;/p&gt;
+  
+
+  
+  &lt;p&gt;
+    TODO
+  &lt;/p&gt;
+  
+
+      
+      &lt;/article&gt;
+  
+  
+  
+      &lt;article&gt;
+      
+        &lt;h2&gt;Usage of kpax&lt;/h2&gt;
+      
+      &lt;/article&gt;
+  
+  
+
+      &lt;article&gt;
+        &lt;h3&gt;Thank you&lt;/h3&gt;
+        
+          &lt;div class=&#34;presenter&#34;&gt;
+            
+  
+  &lt;p&gt;
+    Wáng Hǎiliàng
+  &lt;/p&gt;
+  
+
+  
+  &lt;p&gt;
+    Gopher at Appcoach
+  &lt;/p&gt;
+  
+&lt;p class=&#34;link&#34;&gt;&lt;a href=&#34;mailto:w@h12.me&#34; target=&#34;_blank&#34;&gt;w@h12.me&lt;/a&gt;&lt;/p&gt;&lt;p class=&#34;link&#34;&gt;&lt;a href=&#34;https://h12.me&#34; target=&#34;_blank&#34;&gt;https://h12.me&lt;/a&gt;&lt;/p&gt;
+          &lt;/div&gt;
+        
+      &lt;/article&gt;
+
+    &lt;/section&gt;
+
+    
+
+</description>
+    </item>
+    
+  </channel>
+</rss>
