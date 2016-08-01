@@ -557,6 +557,11 @@ x-oss-acl becomes X-Oss-Acl&lt;/li&gt;
 socks5 = &amp;quot;[host]:[port]&amp;quot;
 &lt;/code&gt;&lt;/pre&gt;
 
+&lt;h2 id=&#34;docker-pull:98bdf1dc45f059ee4334ef1c195fb8bb&#34;&gt;Docker pull&lt;/h2&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-fish&#34;&gt;env HTTP_PROXY=http://xxx docker pull yyy
+&lt;/code&gt;&lt;/pre&gt;
+
 &lt;h2 id=&#34;gae:98bdf1dc45f059ee4334ef1c195fb8bb&#34;&gt;GAE&lt;/h2&gt;
 
 &lt;ol&gt;
