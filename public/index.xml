@@ -116,16 +116,24 @@
       
         &lt;h3&gt;Test and verification&lt;/h3&gt;
         
+  &lt;ul&gt;
   
-  &lt;p&gt;
-    TODO
-  &lt;/p&gt;
+    &lt;li&gt;compatibility test&lt;/li&gt;
   
+  &lt;/ul&gt;
 
   
-  &lt;p&gt;
-    TODO
-  &lt;/p&gt;
+  &lt;div class=&#34;code&#34;&gt;&lt;pre&gt;go get h12.me/realtest/kafka&lt;/pre&gt;&lt;/div&gt;
+  
+
+  &lt;ul&gt;
+  
+    &lt;li&gt;data integrity&lt;/li&gt;
+  
+  &lt;/ul&gt;
+
+  
+  &lt;div class=&#34;code&#34;&gt;&lt;pre&gt;go get h12.me/stats&lt;/pre&gt;&lt;/div&gt;
   
 
       
