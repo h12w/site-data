@@ -116,16 +116,24 @@
       
         &lt;h3&gt;Test and verification&lt;/h3&gt;
         
+  &lt;ul&gt;
   
-  &lt;p&gt;
-    TODO
-  &lt;/p&gt;
+    &lt;li&gt;compatibility test&lt;/li&gt;
   
+  &lt;/ul&gt;
 
   
-  &lt;p&gt;
-    TODO
-  &lt;/p&gt;
+  &lt;div class=&#34;code&#34;&gt;&lt;pre&gt;go get h12.me/realtest/kafka&lt;/pre&gt;&lt;/div&gt;
+  
+
+  &lt;ul&gt;
+  
+    &lt;li&gt;data integrity&lt;/li&gt;
+  
+  &lt;/ul&gt;
+
+  
+  &lt;div class=&#34;code&#34;&gt;&lt;pre&gt;go get h12.me/stats&lt;/pre&gt;&lt;/div&gt;
   
 
       
@@ -727,6 +735,11 @@ x-oss-acl becomes X-Oss-Acl&lt;/li&gt;
 
 &lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;&amp;gt; cat ~/.curlrc
 socks5 = &amp;quot;[host]:[port]&amp;quot;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;docker-pull:98bdf1dc45f059ee4334ef1c195fb8bb&#34;&gt;Docker pull&lt;/h2&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-fish&#34;&gt;env HTTP_PROXY=http://xxx docker pull yyy
 &lt;/code&gt;&lt;/pre&gt;
 
 &lt;h2 id=&#34;gae:98bdf1dc45f059ee4334ef1c195fb8bb&#34;&gt;GAE&lt;/h2&gt;

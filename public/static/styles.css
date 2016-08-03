@@ -236,7 +236,7 @@
   }
 
   div.code {
-    background: rgb(240, 240, 240);
+    background: rgb(240,240,240);
   }
 
   /* Add explicit links */
@@ -354,8 +354,8 @@ div.code {
   margin-bottom: 20px;
   overflow: hidden;
 
-  background: rgb(240, 240, 240);
-  border: 1px solid rgb(224, 224, 224);
+  background: #1a1a1a;
+  border-radius: 5px;
 }
 pre {
   margin: 0;
