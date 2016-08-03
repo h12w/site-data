@@ -52,7 +52,22 @@
   
       &lt;article&gt;
       
-        &lt;h2&gt;Problem&lt;/h2&gt;
+        &lt;h2&gt;Background&lt;/h2&gt;
+      
+      &lt;/article&gt;
+  
+  
+  
+      &lt;article&gt;
+      
+        &lt;h3&gt;Why message queue is useful?&lt;/h3&gt;
+        
+  &lt;ul&gt;
+  
+    &lt;li&gt;Asynchronous?&lt;/li&gt;
+  
+  &lt;/ul&gt;
+
       
       &lt;/article&gt;
   
