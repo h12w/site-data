@@ -7,21 +7,8 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>Copyright (c) 2012-2016, Hǎiliàng Wáng; all rights reserved.</copyright>
-    <lastBuildDate>Wed, 03 Aug 2016 08:51:30 +0800</lastBuildDate>
+    <lastBuildDate>Sun, 03 Jul 2016 21:16:34 +0800</lastBuildDate>
     <atom:link href="http://h12.me/note/index.xml" rel="self" type="application/rss+xml" />
-    
-    <item>
-      <title>A Note on Mobi Format</title>
-      <link>http://h12.me/note/mobi/</link>
-      <pubDate>Wed, 03 Aug 2016 08:51:30 +0800</pubDate>
-      
-      <guid>http://h12.me/note/mobi/</guid>
-      <description>&lt;ul&gt;
-&lt;li&gt;Mobi Format Description: &lt;a href=&#34;http://wiki.mobileread.com/wiki/MOBI&#34;&gt;http://wiki.mobileread.com/wiki/MOBI&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Python lib: &lt;a href=&#34;https://github.com/kroo/mobi-python&#34;&gt;https://github.com/kroo/mobi-python&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-</description>
-    </item>
     
     <item>
       <title>A Manager&#39;s FAQ</title>
@@ -633,6 +620,19 @@ passwd = ...
 &lt;p&gt;On remote session, run &lt;code&gt;base64 &amp;lt; myfile&lt;/code&gt; and copy the output.&lt;/p&gt;
 
 &lt;p&gt;On local terminal, run &lt;code&gt;base64 -d &amp;gt; myfile&lt;/code&gt;, paste the content and press &lt;code&gt;ctrl+D&lt;/code&gt;.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>How to Generate XSD Schema from XML?</title>
+      <link>http://h12.me/note/generate-xsd-from-xml/</link>
+      <pubDate>Thu, 23 Apr 2015 15:41:12 +0800</pubDate>
+      
+      <guid>http://h12.me/note/generate-xsd-from-xml/</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;http://archive.apache.org/dist/xmlbeans/binaries&#34;&gt;Apache XMLBeans&lt;/a&gt; is an old tool but still functioning. Download and uncompress the latest binary release, then run inst2xsd under bin folder (needs JDK).&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;inst2xsd xxx.xml
+&lt;/code&gt;&lt;/pre&gt;
 </description>
     </item>
     

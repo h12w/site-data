@@ -74,85 +74,6 @@
         
             <article class="frontpage">
                 <h1>
-                    <a href="http://h12.me/note/what-go-cannot-do/">What Go cannot Do</a>
-                    <span class="line"></span>
-                </h1>
-                <span class="time">16 June 2015</span>
-                <div class="article-body hyphenate">
-                    
-
-<p>This is a list about the corner cases that Go cannot do, and their work arounds.</p>
-
-<h2 id="run-all-deferred-functions-of-other-goroutines-when-a-goroutine-panics:9e386c4da73e9ffc81b3d6aaf29abff9">Run all deferred functions of other goroutines when a goroutine panics</h2>
-
-<p>Uncaught panicking of one goroutine will exit the program without executing deferred functions of other goroutines.</p>
-
-<p>Workaround: this is the standard behavior, C++ with RAII also has the same problem. Persist your data in a way that crashing will not cause data integrity issue.</p>
-
-<h2 id="assigning-to-fields-with-short-declaration-notation:9e386c4da73e9ffc81b3d6aaf29abff9">Assigning to fields with short declaration notation</h2>
-
-<ul>
-<li>Issue: <a href="https://github.com/golang/go/issues/6842">6842</a></li>
-<li>Status: Open &amp; Unplanned</li>
-</ul>
-
-<p>When it is useful:</p>
-
-<pre><code class="language-go">if x.f, ok := f(); !ok {
-	...
-}
-</code></pre>
-
-<p>Workaround:</p>
-
-<pre><code class="language-go">var ok bool
-if x.f, ok = f(); !ok {
-	...
-}
-</code></pre>
-
-<h2 id="accessing-unexported-fields-with-reflect-value-interface-method:9e386c4da73e9ffc81b3d6aaf29abff9">Accessing unexported fields with reflect.Value.Interface method</h2>
-
-<p>When it is useful:</p>
-
-<pre><code class="language-go">type S struct {
-   val string
-}
-
-...
-
-var s S
-
-reflect.Value(s).Fields(0).Interface()
-</code></pre>
-
-<p>The code will panics with message:</p>
-
-<pre><code>reflect.Value.Interface: cannot return value obtained from unexported field or method
-</code></pre>
-
-<p>Workaround:</p>
-
-<pre><code class="language-go">v := reflect.Value(s).Fields(0)
-if v.Kind() == reflect.String {
-	s := v.String()
-}
-</code></pre>
-
-<h2 id="slice-of-array-literal:9e386c4da73e9ffc81b3d6aaf29abff9">Slice of array literal</h2>
-
-<p>e.g.</p>
-
-<pre><code class="language-go">[3]int{1, 2, 3}[:]
-</code></pre>
-
-<p>Just use slice literal instead!</p>
-
-                </div>
-            </article>
-        
-            <article class="frontpage">
-                <h1>
                     <a href="http://h12.me/note/ebook-tools/">Ebook Manipulation Tools</a>
                     <span class="line"></span>
                 </h1>
@@ -744,6 +665,29 @@ scp ignore.list root@192.168.2.1:/etc/shadowsocks/ignore.list
 <h2 id="android-client:ed389849b892ef1bb1002c7398bba070">Android Client</h2>
 
 <p><a href="https://github.com/shadowsocks/shadowsocks-android/releases">shadowsocks-android</a>.</p>
+
+                </div>
+            </article>
+        
+            <article class="frontpage">
+                <h1>
+                    <a href="http://h12.me/note/go-build-failure/">Go 1.4.1 Build Failure and Solution</a>
+                    <span class="line"></span>
+                </h1>
+                <span class="time">29 January 2015</span>
+                <div class="article-body hyphenate">
+                    <p>Today I tried to build Go 1.4.1 from source but it failed with this error:</p>
+
+<pre><code>    go/src/liblink/anames9.c:6:29: fatal error: ../cmd/9l/9.out.h: No such file or directory
+</code></pre>
+
+<p>At first I thought the building routine might have be changed so I opened and read
+<a href="http://golang.org/doc/install/source"><em>Installing Go from Source</em></a> again, carefully,
+and found nothing special.</p>
+
+<p>Then I searched for the error source and it turned out that I should deleted
+<code>anames*.c</code>, manually. There is no document and no automatic cleaning script, and
+you would have to figure it out yourself if no one ever mentioned it (<a href="https://groups.google.com/d/msg/golang-nuts/wQoQqXOnOTo/QbubO2UebpUJ">source</a>).</p>
 
                 </div>
             </article>

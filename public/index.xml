@@ -215,19 +215,6 @@
     </item>
     
     <item>
-      <title>A Note on Mobi Format</title>
-      <link>http://h12.me/note/mobi/</link>
-      <pubDate>Wed, 03 Aug 2016 08:51:30 +0800</pubDate>
-      
-      <guid>http://h12.me/note/mobi/</guid>
-      <description>&lt;ul&gt;
-&lt;li&gt;Mobi Format Description: &lt;a href=&#34;http://wiki.mobileread.com/wiki/MOBI&#34;&gt;http://wiki.mobileread.com/wiki/MOBI&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Python lib: &lt;a href=&#34;https://github.com/kroo/mobi-python&#34;&gt;https://github.com/kroo/mobi-python&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-</description>
-    </item>
-    
-    <item>
       <title>A Manager&#39;s FAQ</title>
       <link>http://h12.me/note/manager-faq/</link>
       <pubDate>Sun, 03 Jul 2016 21:16:34 +0800</pubDate>
@@ -926,6 +913,83 @@ e.g. v, ok := &amp;lt;-ch.&lt;/li&gt;
 &lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;The implicit block has to be introduced to &lt;code&gt;for statement&lt;/code&gt; so that the the value of the loop variable can be shared between iterations, but I am not sure why it is useful for &lt;code&gt;if&lt;/code&gt; and &lt;code&gt;switch&lt;/code&gt;.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>What Go cannot Do</title>
+      <link>http://h12.me/note/what-go-cannot-do/</link>
+      <pubDate>Tue, 16 Jun 2015 00:00:00 +0000</pubDate>
+      
+      <guid>http://h12.me/note/what-go-cannot-do/</guid>
+      <description>
+
+&lt;p&gt;This is a list about the corner cases that Go cannot do, and their work arounds.&lt;/p&gt;
+
+&lt;h2 id=&#34;run-all-deferred-functions-of-other-goroutines-when-a-goroutine-panics:9e386c4da73e9ffc81b3d6aaf29abff9&#34;&gt;Run all deferred functions of other goroutines when a goroutine panics&lt;/h2&gt;
+
+&lt;p&gt;Uncaught panicking of one goroutine will exit the program without executing deferred functions of other goroutines.&lt;/p&gt;
+
+&lt;p&gt;Workaround: this is the standard behavior, C++ with RAII also has the same problem. Persist your data in a way that crashing will not cause data integrity issue.&lt;/p&gt;
+
+&lt;h2 id=&#34;assigning-to-fields-with-short-declaration-notation:9e386c4da73e9ffc81b3d6aaf29abff9&#34;&gt;Assigning to fields with short declaration notation&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Issue: &lt;a href=&#34;https://github.com/golang/go/issues/6842&#34;&gt;6842&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Status: Open &amp;amp; Unplanned&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;When it is useful:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-go&#34;&gt;if x.f, ok := f(); !ok {
+	...
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Workaround:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-go&#34;&gt;var ok bool
+if x.f, ok = f(); !ok {
+	...
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;accessing-unexported-fields-with-reflect-value-interface-method:9e386c4da73e9ffc81b3d6aaf29abff9&#34;&gt;Accessing unexported fields with reflect.Value.Interface method&lt;/h2&gt;
+
+&lt;p&gt;When it is useful:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-go&#34;&gt;type S struct {
+   val string
+}
+
+...
+
+var s S
+
+reflect.Value(s).Fields(0).Interface()
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;The code will panics with message:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;reflect.Value.Interface: cannot return value obtained from unexported field or method
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Workaround:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-go&#34;&gt;v := reflect.Value(s).Fields(0)
+if v.Kind() == reflect.String {
+	s := v.String()
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;slice-of-array-literal:9e386c4da73e9ffc81b3d6aaf29abff9&#34;&gt;Slice of array literal&lt;/h2&gt;
+
+&lt;p&gt;e.g.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-go&#34;&gt;[3]int{1, 2, 3}[:]
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Just use slice literal instead!&lt;/p&gt;
 </description>
     </item>
     
