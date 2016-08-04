@@ -75,6 +75,43 @@
   
       &lt;article&gt;
       
+        &lt;h3&gt;How to achieve reliable persistence?&lt;/h3&gt;
+        
+  
+  &lt;p&gt;
+    Crash consistency is hard but possible at a huge performance cost (fsync)
+  &lt;/p&gt;
+  
+
+  
+  &lt;p&gt;
+    Data safty must rely on distributed solution (Raft/Paxos)
+  &lt;/p&gt;
+  
+
+  
+  &lt;p&gt;
+    Perhaps we should just give up manual fsync and rely on:
+  &lt;/p&gt;
+  
+
+  &lt;ul&gt;
+  
+    &lt;li&gt;OS background flush&lt;/li&gt;
+  
+    &lt;li&gt;corruption detection &amp;amp; correction at startup&lt;/li&gt;
+  
+    &lt;li&gt;replication&lt;/li&gt;
+  
+  &lt;/ul&gt;
+
+      
+      &lt;/article&gt;
+  
+  
+  
+      &lt;article&gt;
+      
         &lt;h2&gt;Kafka Introduction&lt;/h2&gt;
       
       &lt;/article&gt;
