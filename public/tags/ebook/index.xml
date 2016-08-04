@@ -7,8 +7,21 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>Copyright (c) 2012-2016, Hǎiliàng Wáng; all rights reserved.</copyright>
-    <lastBuildDate>Thu, 04 Jun 2015 14:19:38 +0800</lastBuildDate>
+    <lastBuildDate>Wed, 03 Aug 2016 08:51:30 +0800</lastBuildDate>
     <atom:link href="http://h12.me/tags/ebook/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>A Note on Mobi Format</title>
+      <link>http://h12.me/note/mobi/</link>
+      <pubDate>Wed, 03 Aug 2016 08:51:30 +0800</pubDate>
+      
+      <guid>http://h12.me/note/mobi/</guid>
+      <description>&lt;ul&gt;
+&lt;li&gt;Mobi Format Description: &lt;a href=&#34;http://wiki.mobileread.com/wiki/MOBI&#34;&gt;http://wiki.mobileread.com/wiki/MOBI&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Python lib: &lt;a href=&#34;https://github.com/kroo/mobi-python&#34;&gt;https://github.com/kroo/mobi-python&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
     
     <item>
       <title>Ebook Manipulation Tools</title>
