@@ -52,6 +52,29 @@
   
       &lt;article&gt;
       
+        &lt;h3&gt;Wáng Hǎiliàng&lt;/h3&gt;
+        
+  &lt;ul&gt;
+  
+    &lt;li&gt;Pure Gopher&lt;/li&gt;
+  
+    &lt;li&gt;Backend Lead at Appcoach&lt;/li&gt;
+  
+  &lt;/ul&gt;
+
+  
+  &lt;p&gt;
+    &lt;i&gt;a global mobile performance agency with local insights&lt;/i&gt; (http://www.appcoachs.com)
+  &lt;/p&gt;
+  
+
+      
+      &lt;/article&gt;
+  
+  
+  
+      &lt;article&gt;
+      
         &lt;h2&gt;Background&lt;/h2&gt;
       
       &lt;/article&gt;
@@ -60,11 +83,13 @@
   
       &lt;article&gt;
       
-        &lt;h3&gt;Why message queue is useful?&lt;/h3&gt;
+        &lt;h3&gt;Kafka&lt;/h3&gt;
         
   &lt;ul&gt;
   
-    &lt;li&gt;Asynchronous?&lt;/li&gt;
+    &lt;li&gt;A distributed, persisted, replicated messaging system&lt;/li&gt;
+  
+    &lt;li&gt;Key concepts: topic, partition, offset, consumer group, replication-factor&lt;/li&gt;
   
   &lt;/ul&gt;
 
@@ -75,44 +100,24 @@
   
       &lt;article&gt;
       
-        &lt;h3&gt;How to achieve reliable persistence?&lt;/h3&gt;
+        &lt;h3&gt;Why yet another Go client for Kafka?&lt;/h3&gt;
         
   
   &lt;p&gt;
-    Crash consistency is hard but possible at a huge performance cost (fsync)
-  &lt;/p&gt;
-  
-
-  
-  &lt;p&gt;
-    Data safty must rely on distributed solution (Raft/Paxos)
-  &lt;/p&gt;
-  
-
-  
-  &lt;p&gt;
-    Perhaps we should just give up manual fsync and rely on:
+    Disappointed about the unnecessary complexity of
   &lt;/p&gt;
   
 
   &lt;ul&gt;
   
-    &lt;li&gt;OS background flush&lt;/li&gt;
+    &lt;li&gt;the official Java client&lt;/li&gt;
   
-    &lt;li&gt;corruption detection &amp;amp; correction at startup&lt;/li&gt;
+    &lt;li&gt;&lt;code&gt;sarama&lt;/code&gt;&lt;/li&gt;
   
-    &lt;li&gt;replication&lt;/li&gt;
+    &lt;li&gt;&lt;code&gt;go_kafka_client&lt;/code&gt;&lt;/li&gt;
   
   &lt;/ul&gt;
 
-      
-      &lt;/article&gt;
-  
-  
-  
-      &lt;article&gt;
-      
-        &lt;h2&gt;Kafka Introduction&lt;/h2&gt;
       
       &lt;/article&gt;
   
@@ -181,6 +186,66 @@
       &lt;article&gt;
       
         &lt;h2&gt;Usage of kpax&lt;/h2&gt;
+      
+      &lt;/article&gt;
+  
+  
+  
+      &lt;article&gt;
+      
+        &lt;h2&gt;Some Thought on Messaging System&lt;/h2&gt;
+      
+      &lt;/article&gt;
+  
+  
+  
+      &lt;article&gt;
+      
+        &lt;h3&gt;Why message queue is useful?&lt;/h3&gt;
+        
+  &lt;ul&gt;
+  
+    &lt;li&gt;Asynchronous?&lt;/li&gt;
+  
+  &lt;/ul&gt;
+
+      
+      &lt;/article&gt;
+  
+  
+  
+      &lt;article&gt;
+      
+        &lt;h3&gt;How to achieve reliable persistence?&lt;/h3&gt;
+        
+  
+  &lt;p&gt;
+    Crash consistency is hard but possible at a huge performance cost (fsync)
+  &lt;/p&gt;
+  
+
+  
+  &lt;p&gt;
+    Data safty must rely on distributed solution (Raft/Paxos)
+  &lt;/p&gt;
+  
+
+  
+  &lt;p&gt;
+    Perhaps we should just give up manual fsync and rely on:
+  &lt;/p&gt;
+  
+
+  &lt;ul&gt;
+  
+    &lt;li&gt;OS background flush&lt;/li&gt;
+  
+    &lt;li&gt;corruption detection &amp;amp; correction at startup&lt;/li&gt;
+  
+    &lt;li&gt;replication&lt;/li&gt;
+  
+  &lt;/ul&gt;
+
       
       &lt;/article&gt;
   

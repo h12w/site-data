@@ -47,6 +47,29 @@
   
       <article>
       
+        <h3>Wáng Hǎiliàng</h3>
+        
+  <ul>
+  
+    <li>Pure Gopher</li>
+  
+    <li>Backend Lead at Appcoach</li>
+  
+  </ul>
+
+  
+  <p>
+    <i>a global mobile performance agency with local insights</i> (http://www.appcoachs.com)
+  </p>
+  
+
+      
+      </article>
+  
+  
+  
+      <article>
+      
         <h2>Background</h2>
       
       </article>
@@ -55,11 +78,13 @@
   
       <article>
       
-        <h3>Why message queue is useful?</h3>
+        <h3>Kafka</h3>
         
   <ul>
   
-    <li>Asynchronous?</li>
+    <li>A distributed, persisted, replicated messaging system</li>
+  
+    <li>Key concepts: topic, partition, offset, consumer group, replication-factor</li>
   
   </ul>
 
@@ -70,44 +95,24 @@
   
       <article>
       
-        <h3>How to achieve reliable persistence?</h3>
+        <h3>Why yet another Go client for Kafka?</h3>
         
   
   <p>
-    Crash consistency is hard but possible at a huge performance cost (fsync)
-  </p>
-  
-
-  
-  <p>
-    Data safty must rely on distributed solution (Raft/Paxos)
-  </p>
-  
-
-  
-  <p>
-    Perhaps we should just give up manual fsync and rely on:
+    Disappointed about the unnecessary complexity of
   </p>
   
 
   <ul>
   
-    <li>OS background flush</li>
+    <li>the official Java client</li>
   
-    <li>corruption detection &amp; correction at startup</li>
+    <li><code>sarama</code></li>
   
-    <li>replication</li>
+    <li><code>go_kafka_client</code></li>
   
   </ul>
 
-      
-      </article>
-  
-  
-  
-      <article>
-      
-        <h2>Kafka Introduction</h2>
       
       </article>
   
@@ -176,6 +181,66 @@
       <article>
       
         <h2>Usage of kpax</h2>
+      
+      </article>
+  
+  
+  
+      <article>
+      
+        <h2>Some Thought on Messaging System</h2>
+      
+      </article>
+  
+  
+  
+      <article>
+      
+        <h3>Why message queue is useful?</h3>
+        
+  <ul>
+  
+    <li>Asynchronous?</li>
+  
+  </ul>
+
+      
+      </article>
+  
+  
+  
+      <article>
+      
+        <h3>How to achieve reliable persistence?</h3>
+        
+  
+  <p>
+    Crash consistency is hard but possible at a huge performance cost (fsync)
+  </p>
+  
+
+  
+  <p>
+    Data safty must rely on distributed solution (Raft/Paxos)
+  </p>
+  
+
+  
+  <p>
+    Perhaps we should just give up manual fsync and rely on:
+  </p>
+  
+
+  <ul>
+  
+    <li>OS background flush</li>
+  
+    <li>corruption detection &amp; correction at startup</li>
+  
+    <li>replication</li>
+  
+  </ul>
+
       
       </article>
   
