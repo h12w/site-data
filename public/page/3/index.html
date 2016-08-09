@@ -74,6 +74,120 @@
         
             <article class="frontpage">
                 <h1>
+                    <a href="http://h12.me/note/go-design/">Notes on the Design of Go</a>
+                    <span class="line"></span>
+                </h1>
+                <span class="time">29 June 2015</span>
+                <div class="article-body hyphenate">
+                    
+
+<h3 id="refusing-new-features:152b3ca9eaa5f9a2262d95ae2b1b15be">Refusing new features</h3>
+
+<p>Avoid <a href="https://en.wikipedia.org/wiki/Leaky_abstraction">leaky abstraction</a> as much as possible. If an abstraction is not solid enough, you’d rather not use them at all. Go is designed like this, the features are carefully selected. If a feature is not solid enough, it will not be allowed to enter Go.</p>
+
+<h3 id="no-implicit-string-concatenation:152b3ca9eaa5f9a2262d95ae2b1b15be">No implicit string concatenation</h3>
+
+<p><a href="https://groups.google.com/d/msg/golang-nuts/S6a3bg65TBE/ikyNMzUSnXsJ">Rob</a>:
+That used to be in the language but was dropped when the semicolon insertion rules went in. You need the + to be able to span lines, and if you can&rsquo;t span lines operatorless concatenation is close to pointless.</p>
+
+<h3 id="no-implicit-conversion:152b3ca9eaa5f9a2262d95ae2b1b15be">No Implicit conversion</h3>
+
+<p><a href="https://groups.google.com/d/msg/golang-nuts/S6a3bg65TBE/ikyNMzUSnXsJ">Rob</a>:
+In any case the clarity of Go&rsquo;s strictness is worth the occasional conversion. A huge class of bugs is simply gone, and a huge piece of tricky language in the specification never needed to be written.</p>
+
+<p><a href="https://groups.google.com/d/msg/golang-nuts/S6a3bg65TBE/KUNfj8L4H4IJ">Russ</a>:
+Inserting automatic widening means giving up the &ldquo;named types are not the same&rdquo; rule, which makes it pretty much a non-starter.</p>
+
+<h3 id="octal-literal:152b3ca9eaa5f9a2262d95ae2b1b15be">Octal literal</h3>
+
+<p>Octal numeric system is rarely used, why does Go support them?</p>
+
+<p>From Wikipedia “Octal”: Octal representation of non-ASCII bytes may be particularly handy with UTF-8, where any start byte has octal value \3nn and any continuation byte has octal value \2nn.</p>
+
+<h3 id="null-pointer-billion-dollar-mistake:152b3ca9eaa5f9a2262d95ae2b1b15be">Null pointer (billion-dollar mistake)</h3>
+
+<p><a href="https://groups.google.com/d/msg/golang-nuts/Vxpuc37S8tQ/2zGB1QgjmbAJ">Jonathan</a>:
+in the eyes of the Go designers, who clearly don&rsquo;t view it as a billion-dollar mistake, and in my eyes as well,
+ having spent days debugging (or failing to debug) race conditions, but rarely more than an hour per null-pointer bug).</p>
+
+<p><a href="https://groups.google.com/d/msg/golang-nuts/SskXyc9D5Sk/-EKHAIFBRXEJ">rog</a>:
+even in languages with no nil, such as Haskell, you can still get exceptions from using things that have an unexpected form. e.g. head [] that&rsquo;s not too different from a nil pointer exception. so even if you go the non-nil route, you may still end up paying a good proportion of the &ldquo;billion dollar&rdquo; price.</p>
+
+<h3 id="return-errors-rather-than-exceptions:152b3ca9eaa5f9a2262d95ae2b1b15be">Return errors rather than exceptions</h3>
+
+<p><a href="http://blogs.msdn.com/b/oldnewthing/archive/2005/01/14/352949.aspx">Raymond Chen</a>:
+It&rsquo;s easy to write bad code, regardless of the error model. It&rsquo;s hard to write good error-code-based code since you have to check every error code and think about what you should do when an error occurs. It&rsquo;s really hard to write good exception-based code since you have to check every single line of code (indeed, every sub-expression) and think about what exceptions it might raise and how your code will react to it. (In C++ it&rsquo;s not quite so bad because C++ exceptions are raised only at specific points during execution. In C#, exceptions can be raised at any time.)</p>
+
+<h3 id="nil-channel-always-blocks-both-send-and-receive:152b3ca9eaa5f9a2262d95ae2b1b15be">Nil channel always blocks (both send and receive)</h3>
+
+<p><a href="https://groups.google.com/d/msg/golang-nuts/QltQ0nd9HvE/VvDhLO07Oq4J">Rob</a>:
+It&rsquo;s for consistency with select. The semantics of a nil channel are
+the same regardless of how it is used. It&rsquo;s useful that it blocks in a
+select, so that&rsquo;s what it does outside a select.</p>
+
+<h3 id="reading-a-closed-channel-always-succeeds-with-zero-value:152b3ca9eaa5f9a2262d95ae2b1b15be">Reading a closed channel always succeeds with zero value</h3>
+
+<ol>
+<li>the read cannot block because then it will not be distinguishable with nil channel.</li>
+<li>the read cannot panic because the writer close the channel to signal that it has been closed, not to panicking the reader.</li>
+<li>Then the read has to return, which value to return? Since the channel has been closed, so the only possible value is a fake one &ndash; default zero value. an additional result of type bool reporting whether the communication succeeded.
+e.g. v, ok := &lt;-ch.</li>
+</ol>
+
+<h3 id="writing-a-closed-channel-panics:152b3ca9eaa5f9a2262d95ae2b1b15be">Writing a closed channel panics</h3>
+
+<p>The channel should only be closed by the writer(not reader), so if a writer close the channel and then write it again, it should be a programming bug and panic is the right behavior.</p>
+
+<h3 id="full-qualified-package-name:152b3ca9eaa5f9a2262d95ae2b1b15be">Full qualified package name</h3>
+
+<p><a href="https://groups.google.com/d/msg/golang-nuts/-tyo4o1uVTQ/FbDSkH9kq_oJ">Rob</a>:</p>
+
+<p>Using . as an import name is part of the language and necessary in some cases to solve difficult naming issues but it&rsquo;s not the intended style.  Package authors can depend on the fact that their code lives in its own name space.  If . becomes standard, then all packages in effect become a global name space and the style changes. Instead of</p>
+
+<pre><code>foo.New
+</code></pre>
+
+<p>the function must be called something like</p>
+
+<pre><code>foo.NewFoo
+</code></pre>
+
+<p>to avoid colliding with New from other packages.  And then what if Foo is itself a common name such as Buffer?  You rapidly end up in the Java space of very long names for everything.</p>
+
+<p>This convention we have, using the package names always, is deliberate.  Yes, sometimes it makes for more typing but we believe in the long run it means less typing.</p>
+
+<h3 id="slice-type-is-a-builtin-type:152b3ca9eaa5f9a2262d95ae2b1b15be">Slice type is a builtin type</h3>
+
+<p>To support variadic arguments.</p>
+
+<h3 id="len-returns-int-rather-than-uint:152b3ca9eaa5f9a2262d95ae2b1b15be">len returns int rather than uint</h3>
+
+<p><a href="https://groups.google.com/d/msg/golang-nuts/jJWAAMdquwQ/jhWhxJJbzVYJ">Ian</a>:</p>
+
+<p>Unsigned types are not a good choice for counts, because they have odd behaviour at 0, a common case.  Signed types have odd behaviour at very large and very small values, an uncommon case.</p>
+
+<h3 id="what-is-type-t-t:152b3ca9eaa5f9a2262d95ae2b1b15be">What is <code>type T []T</code></h3>
+
+<p>A slice is a small object containing a pointer to the underlying array, so T is the slice object containing a pointer to the underlying array, whose element is T itself.</p>
+
+<h3 id="each-if-for-and-switch-statement-is-considered-to-be-in-its-own-implicit-block-https-golang-org-ref-spec-blocks:152b3ca9eaa5f9a2262d95ae2b1b15be"><a href="https://golang.org/ref/spec#Blocks">Each <code>if</code>, <code>for</code>, and <code>switch</code> statement is considered to be in its own implicit block</a></h3>
+
+<p>It means a for loop has two nested blocks, the outer implicit block is for the loop variable, and the inner block for the loop body:</p>
+
+<pre><code class="language-go">for i := 0; i &lt; 5; i++ {
+	fmt.Println(&quot;outer i:&quot;, i)
+	i := 999
+	fmt.Println(&quot;inner i:&quot;, i)
+}
+</code></pre>
+
+<p>The implicit block has to be introduced to <code>for statement</code> so that the the value of the loop variable can be shared between iterations, but I am not sure why it is useful for <code>if</code> and <code>switch</code>.</p>
+
+                </div>
+            </article>
+        
+            <article class="frontpage">
+                <h1>
                     <a href="http://h12.me/note/what-go-cannot-do/">What Go cannot Do</a>
                     <span class="line"></span>
                 </h1>
@@ -492,258 +606,6 @@ and protect your PGP key pair and master pass phrase.</p>
 <li><a href="https://alexcabal.com/creating-the-perfect-gpg-keypair">Creating the Perfect GPG Keypair</a></li>
 <li><a href="http://www.passwordstore.org">Pass: the standard unix password manager</a></li>
 </ol>
-
-                </div>
-            </article>
-        
-            <article class="frontpage">
-                <h1>
-                    <a href="http://h12.me/article/scientific-web-surfing/">A Brief Note on Scientific Web Surfing</a>
-                    <span class="line"></span>
-                </h1>
-                <span class="time">14 February 2015</span>
-                <div class="article-body hyphenate">
-                    
-
-<p><em>Knowledge is power. Information is liberating. &mdash; by Kofi Annan.</em></p>
-
-<h2 id="vps:ed389849b892ef1bb1002c7398bba070">VPS</h2>
-
-<ul>
-<li><a href="https://www.cloudsvm.com/billing/aff.php?aff=140">CloudsVM</a></li>
-<li><a href="http://www.vultr.com/?ref=6837862">Vultr</a></li>
-<li><a href="https://www.digitalocean.com/?refcode=56202ab61fb7">DigitalOcean</a></li>
-<li><a href="https://bandwagonhost.com/aff.php?aff=2128">BandwagonHOST</a>
-
-<ul>
-<li>Client Area -&gt; Services -&gt; Order New Services</li>
-<li>64MB RAM is enough for running both ShadowSocks and pdnsd</li>
-<li>Install Ubuntu LTS 32bit (x86, i686) or CentOS 7.</li>
-</ul></li>
-</ul>
-
-<h2 id="centos:ed389849b892ef1bb1002c7398bba070">CentOS</h2>
-
-<h3 id="install-centos-7-64bit:ed389849b892ef1bb1002c7398bba070">Install CentOS 7 (64bit)</h3>
-
-<h3 id="shadowsocks:ed389849b892ef1bb1002c7398bba070">Shadowsocks</h3>
-
-<pre><code class="language-bash">cd /etc/yum.repos.d/
-wget https://copr.fedorainfracloud.org/coprs/librehat/shadowsocks/repo/epel-7/librehat-shadowsocks-epel-7.repo
-yum update
-yum install shadowsocks-libev
-cd /etc/shadowsocks-libev/
-vim config.json
-
-systemctl enable shadowsocks-libev
-systemctl start shadowsocks-libev
-</code></pre>
-
-<h3 id="pdnsd:ed389849b892ef1bb1002c7398bba070">pdnsd</h3>
-
-<pre><code class="language-bash">wget http://members.home.nl/p.a.rombouts/pdnsd/releases/pdnsd-1.2.9a-par_sl6.x86_64.rpm
-yum localinstall pdnsd-1.2.9a-par_sl6.x86_64.rpm
-vim /etc/pdnsd.conf
-</code></pre>
-
-<p>pdnsd.conf</p>
-
-<pre><code>global {
-	run_as      = &quot;pdnsd&quot;;
-	server_ip   = 0.0.0.0;
-	server_port = [xxxx];
-}
-
-server {
-	label   = &quot;GoogleDNS&quot;;
-	ip      = 8.8.8.8, 8.8.4.4;
-	timeout = 3;
-}
-</code></pre>
-
-<p>Then run:</p>
-
-<pre><code class="language-bash">systemctl enable pdnsd
-systemctl start pdnsd
-</code></pre>
-
-<h2 id="docker:ed389849b892ef1bb1002c7398bba070">Docker</h2>
-
-<p>Install <a href="https://docs.docker.com/installation/">Docker</a> on VPS.</p>
-
-<h2 id="remote-proxy:ed389849b892ef1bb1002c7398bba070">Remote Proxy</h2>
-
-<p>Install <a href="https://github.com/shadowsocks/shadowsocks-go/releases">shadowsocks</a>:</p>
-
-<pre><code class="language-bash">docker run -d -p &lt;port&gt;:&lt;port&gt; h12w/shadowsocks -p &lt;port&gt; -k &lt;password&gt; -m aes-128-cfb -t 60
-</code></pre>
-
-<h2 id="remote-dns-server:ed389849b892ef1bb1002c7398bba070">Remote DNS server</h2>
-
-<p>Install <a href="http://members.home.nl/p.a.rombouts/pdnsd/">pdnsd</a>:</p>
-
-<pre><code class="language-bash">docker run -d -p [port]:53 -p [port]:53/udp h12w/pdnsd
-</code></pre>
-
-<p>To test the DNS server:</p>
-
-<pre><code class="language-bash">dig @xxx.xxx.xxx.xxx -p xxxx www.linux.com
-</code></pre>
-
-<h2 id="local-openwrt-router:ed389849b892ef1bb1002c7398bba070">Local OpenWrt Router</h2>
-
-<p>Install <a href="https://github.com/shadowsocks/openwrt-shadowsocks">openwrt-shadowsocks</a> &amp;
-<a href="https://github.com/shadowsocks/ChinaDNS">ChinaDNS</a> on an <a href="https://openwrt.org/">OpenWrt</a> router.</p>
-
-<p>Follow the instructions on <a href="http://openwrt-dist.sourceforge.net">OpenWrt-Dist</a>:</p>
-
-<p>Check CPU model of the router:</p>
-
-<pre><code class="language-bash">cat /proc/cpuinfo
-</code></pre>
-
-<p>add the following to <code>/etc/opkg.conf</code>:</p>
-
-<pre><code>src/gz openwrt_dist http://openwrt-dist.sourceforge.net/releases/[cpu model]/packages
-src/gz openwrt_dist_luci http://openwrt-dist.sourceforge.net/releases/luci/packages
-</code></pre>
-
-<p>and install:</p>
-
-<pre><code class="language-bash">opkg update
-opkg install ChinaDNS
-opkg install luci-app-chinadns
-opkg install shadowsocks-libev-spec
-opkg install luci-app-shadowsocks-spec
-
-opkg install bind-dig
-</code></pre>
-
-<p>Or manually download IPKs of the corresponding CPU:</p>
-
-<ul>
-<li><a href="http://sourceforge.net/projects/openwrt-dist/files/shadowsocks-libev/">shadowsocks-libev-spec</a>
-
-<ul>
-<li><a href="http://sourceforge.net/projects/openwrt-dist/files/luci-app/shadowsocks-spec/">luci-shadowsocks</a></li>
-</ul></li>
-<li><a href="http://sourceforge.net/projects/openwrt-dist/files/chinadns/">chinadns</a>
-
-<ul>
-<li><a href="http://sourceforge.net/projects/openwrt-dist/files/luci-app/chinadns/">luci-chinadns</a></li>
-</ul></li>
-</ul>
-
-<p>Copy <code>*.ipk</code> to router:</p>
-
-<pre><code class="language-bash">scp *.ipk root@192.168.2.1:/tmp
-</code></pre>
-
-<p>And install:</p>
-
-<pre><code class="language-bash">opkg install shadowsocks-libev-spec_xxx.ipk
-opkg install ChinaDNS_xxx.ipk
-/etc/init.d/shadowsocks enable
-/etc/init.d/chinadns enable
-</code></pre>
-
-<p>ShadowSocks configuration in <code>/etc/config/shadowsocks</code>:</p>
-
-<pre><code>config shadowsocks
-	...
-	option config_file '/etc/shadowsocks/config.json'
-	...
-	option tunnel_enable '0'
-	...
-</code></pre>
-
-<p>It refers to <code>/etc/shadowsocks/config.json</code>:</p>
-
-<pre><code>{
-    &quot;server&quot;:      &quot;xxx.xxx.xxx.xxx&quot;,
-    &quot;server_port&quot;: xxxx,
-    &quot;local_port&quot;:  xxxx,
-    &quot;password&quot;:    &quot;xxxxxx&quot;,
-    &quot;method&quot;:      &quot;aes-128-cfb&quot;,
-    &quot;timeout&quot;:     60
-}
-</code></pre>
-
-<p>ChinaDNS configuration in <code>/etc/config/chinadns</code>:</p>
-
-<pre><code>config chinadns
-    ...
-    option chnroute '/etc/shadowsocks/ignore.list'
-    ...
-    option server '[isp_dns],[private_pdnsd_dns]'
-    ...
-</code></pre>
-
-<p>Make sure <code>[private_pdnsd_dns]</code> is the same IP:PORT as the remote pdnsd server.</p>
-
-<p>ucitrack configuration in <code>/etc/config/ucitrack</code>:</p>
-
-<pre><code>config shadowsocks
-    option init 'shadowsocks'
-
-config chinadns
-    option init 'chinadns'
-</code></pre>
-
-<p>DHCP configuration in <code>/etc/config/dhcp</code>:</p>
-
-<pre><code>config dnsmasq
-    list server '127.0.0.1#5353'
-    option noresolv '1'
-    option nohosts '1'
-</code></pre>
-
-<h2 id="redsocks2:ed389849b892ef1bb1002c7398bba070">RedSocks2</h2>
-
-<p>Use RedSocks2 to bypass the proxy when the target site is reachable.</p>
-
-<p>Download RedSocks2:</p>
-
-<ul>
-<li><a href="http://sourceforge.net/projects/openwrt-dist/files/redsocks2/">RedSocks2</a>
-
-<ul>
-<li><a href="http://sourceforge.net/projects/openwrt-dist/files/luci-app/redsocks2/">luci-redsocks2</a></li>
-</ul></li>
-</ul>
-
-<p>Install RedSocks2:</p>
-
-<pre><code>scp *.ipk root@192.168.2.1:/tmp
-opkg update
-opkg install xxx.ipk
-</code></pre>
-
-<p>RedSocks2 will take effect immediately.</p>
-
-<h2 id="upgrade-openwrt:ed389849b892ef1bb1002c7398bba070">Upgrade OpenWRT</h2>
-
-<p>Download latest <code>*.ipk</code> above.</p>
-
-<pre><code class="language-bash">opkg update
-opkg upgrade ipset libopenssl resolveip iptables-mod-tproxy
-opkg install xxx.ipk
-</code></pre>
-
-<p>Merge configuration files manually.</p>
-
-<p>Update <code>ignore.list</code>:</p>
-
-<pre><code>wget -O- 'http://ftp.apnic.net/apnic/stats/apnic/delegated-apnic-latest' | awk -F\| '/CN\|ipv4/ { printf(&quot;%s/%d\n&quot;, $4, 32-log($5)/log(2)) }' &gt; ignore.list
-scp ignore.list root@192.168.2.1:/etc/shadowsocks/ignore.list
-</code></pre>
-
-<pre><code class="language-bash">reboot
-</code></pre>
-
-<h2 id="android-client:ed389849b892ef1bb1002c7398bba070">Android Client</h2>
-
-<p><a href="https://github.com/shadowsocks/shadowsocks-android/releases">shadowsocks-android</a>.</p>
 
                 </div>
             </article>

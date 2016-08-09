@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Word Frequency on h12.me</title>
+    <link>http://h12.me/tags/word-frequency/</link>
+    <description>Recent content in Word Frequency on h12.me</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>Copyright (c) 2012-2016, Hǎiliàng Wáng; all rights reserved.</copyright>
+    <lastBuildDate>Tue, 09 Aug 2016 18:31:04 +0800</lastBuildDate>
+    <atom:link href="http://h12.me/tags/word-frequency/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Counting Word Frequencies in One Line</title>
+      <link>http://h12.me/note/count-word-freq/</link>
+      <pubDate>Tue, 09 Aug 2016 18:31:04 +0800</pubDate>
+      
+      <guid>http://h12.me/note/count-word-freq/</guid>
+      <description>&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;cat book.txt | tr -d [:punct:] | tr [:upper:] [:lower:] | tr -d &#39;\r&#39; | tr &#39; &#39; &#39;\n&#39; | sed -e &#39;/^$/d&#39; | sort | uniq -c | sort -nr &amp;gt; book-wordfreq.txt
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;ul&gt;
+&lt;li&gt;remove punctuations&lt;/li&gt;
+&lt;li&gt;convert to lower cases&lt;/li&gt;
+&lt;li&gt;remove &lt;code&gt;\r&lt;/code&gt; from `\r\n&amp;rsquo;&lt;/li&gt;
+&lt;li&gt;one word per line&lt;/li&gt;
+&lt;li&gt;remove empty lines&lt;/li&gt;
+&lt;li&gt;sort and count unique words&lt;/li&gt;
+&lt;li&gt;sort by freqency in descending order&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>
