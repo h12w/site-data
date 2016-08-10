@@ -285,18 +285,18 @@
       <pubDate>Tue, 09 Aug 2016 18:31:04 +0800</pubDate>
       
       <guid>http://h12.me/note/count-word-freq/</guid>
-      <description>&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;cat book.txt | tr -d [:punct:] | tr [:upper:] [:lower:] | tr -d &#39;\r&#39; | tr &#39; &#39; &#39;\n&#39; | sed -e &#39;/^$/d&#39; | sort | uniq -c | sort -nr | cut -c9- &amp;gt; book-wordfreq.txt
+      <description>&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;cat book.txt | tr &#39;!()[]{};:&amp;quot;,&amp;lt;.&amp;gt;?“”‘’*/\r&#39; &#39; &#39; | tr [:upper:] [:lower:] | tr &#39; &#39; &#39;\n&#39; | sed -e &#39;/^$/d&#39; | sort | uniq -c | sort -nr | cut -c9- | grep -a -P &amp;quot;^[\p{L}\p{N}\-&#39;]+\$&amp;quot; &amp;gt; words.txt
 &lt;/code&gt;&lt;/pre&gt;
 
 &lt;ul&gt;
-&lt;li&gt;remove punctuations&lt;/li&gt;
+&lt;li&gt;replace punctuations with space; remove &lt;code&gt;\r&lt;/code&gt; from `\r\n&amp;rsquo;&lt;/li&gt;
 &lt;li&gt;convert to lower cases&lt;/li&gt;
-&lt;li&gt;remove &lt;code&gt;\r&lt;/code&gt; from `\r\n&amp;rsquo;&lt;/li&gt;
 &lt;li&gt;one word per line&lt;/li&gt;
 &lt;li&gt;remove empty lines&lt;/li&gt;
 &lt;li&gt;sort and count unique words&lt;/li&gt;
 &lt;li&gt;sort by freqency in descending order&lt;/li&gt;
 &lt;li&gt;trim the frequency column&lt;/li&gt;
+&lt;li&gt;keep only words composed of unicode letters, numbers, hyphen and apostrophe&lt;/li&gt;
 &lt;/ul&gt;
 </description>
     </item>

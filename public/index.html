@@ -79,18 +79,18 @@
                 </h1>
                 <span class="time">9 August 2016</span>
                 <div class="article-body hyphenate">
-                    <pre><code class="language-bash">cat book.txt | tr -d [:punct:] | tr [:upper:] [:lower:] | tr -d '\r' | tr ' ' '\n' | sed -e '/^$/d' | sort | uniq -c | sort -nr | cut -c9- &gt; book-wordfreq.txt
+                    <pre><code class="language-bash">cat book.txt | tr '!()[]{};:&quot;,&lt;.&gt;?“”‘’*/\r' ' ' | tr [:upper:] [:lower:] | tr ' ' '\n' | sed -e '/^$/d' | sort | uniq -c | sort -nr | cut -c9- | grep -a -P &quot;^[\p{L}\p{N}\-']+\$&quot; &gt; words.txt
 </code></pre>
 
 <ul>
-<li>remove punctuations</li>
+<li>replace punctuations with space; remove <code>\r</code> from `\r\n&rsquo;</li>
 <li>convert to lower cases</li>
-<li>remove <code>\r</code> from `\r\n&rsquo;</li>
 <li>one word per line</li>
 <li>remove empty lines</li>
 <li>sort and count unique words</li>
 <li>sort by freqency in descending order</li>
 <li>trim the frequency column</li>
+<li>keep only words composed of unicode letters, numbers, hyphen and apostrophe</li>
 </ul>
 
                 </div>
