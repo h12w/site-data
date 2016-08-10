@@ -16,7 +16,7 @@
       <pubDate>Tue, 09 Aug 2016 18:31:04 +0800</pubDate>
       
       <guid>http://h12.me/note/count-word-freq/</guid>
-      <description>&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;cat book.txt | tr -d [:punct:] | tr [:upper:] [:lower:] | tr -d &#39;\r&#39; | tr &#39; &#39; &#39;\n&#39; | sed -e &#39;/^$/d&#39; | sort | uniq -c | sort -nr &amp;gt; book-wordfreq.txt
+      <description>&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;cat book.txt | tr -d [:punct:] | tr [:upper:] [:lower:] | tr -d &#39;\r&#39; | tr &#39; &#39; &#39;\n&#39; | sed -e &#39;/^$/d&#39; | sort | uniq -c | sort -nr | cut -c9- &amp;gt; book-wordfreq.txt
 &lt;/code&gt;&lt;/pre&gt;
 
 &lt;ul&gt;
@@ -27,6 +27,7 @@
 &lt;li&gt;remove empty lines&lt;/li&gt;
 &lt;li&gt;sort and count unique words&lt;/li&gt;
 &lt;li&gt;sort by freqency in descending order&lt;/li&gt;
+&lt;li&gt;trim the frequency column&lt;/li&gt;
 &lt;/ul&gt;
 </description>
     </item>

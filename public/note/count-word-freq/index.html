@@ -73,7 +73,7 @@
             <article class="single">
                 <h1>Counting Word Frequencies in One Line</h1>
                 <div class="article-body hyphenate">
-                <pre><code class="language-bash">cat book.txt | tr -d [:punct:] | tr [:upper:] [:lower:] | tr -d '\r' | tr ' ' '\n' | sed -e '/^$/d' | sort | uniq -c | sort -nr &gt; book-wordfreq.txt
+                <pre><code class="language-bash">cat book.txt | tr -d [:punct:] | tr [:upper:] [:lower:] | tr -d '\r' | tr ' ' '\n' | sed -e '/^$/d' | sort | uniq -c | sort -nr | cut -c9- &gt; book-wordfreq.txt
 </code></pre>
 
 <ul>
@@ -84,6 +84,7 @@
 <li>remove empty lines</li>
 <li>sort and count unique words</li>
 <li>sort by freqency in descending order</li>
+<li>trim the frequency column</li>
 </ul>
 
                 </div>
