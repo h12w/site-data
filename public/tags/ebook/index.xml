@@ -81,7 +81,7 @@ cut -c9- &amp;gt; words.txt
 &lt;/ul&gt;
 
 &lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;        sudo apt-get install calibre
-        ebook-convert xxx.mobi xxx.txt
+        ebook-convert xxx.mobi xxx.txt --unsmarten-punctuation
 &lt;/code&gt;&lt;/pre&gt;
 </description>
     </item>
