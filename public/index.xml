@@ -286,7 +286,6 @@
       
       <guid>http://h12.me/note/count-word-freq/</guid>
       <description>&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;cat book.txt | \
-tr [:upper:] [:lower:] | \
 tr &#39;!()[]{};:&amp;quot;,&amp;lt;.&amp;gt;?“”‘’*/\r&#39; &#39; &#39; | \
 tr &#39; &#39; &#39;\n&#39; | \
 grep -a -P &amp;quot;^[\p{L}\p{N}\-&#39;]+\$&amp;quot; | \
@@ -298,7 +297,6 @@ cut -c9- &amp;gt; words.txt
 &lt;/code&gt;&lt;/pre&gt;
 
 &lt;ul&gt;
-&lt;li&gt;convert to lower cases&lt;/li&gt;
 &lt;li&gt;replace punctuations with space; remove &lt;code&gt;\r&lt;/code&gt; from `\r\n&amp;rsquo;&lt;/li&gt;
 &lt;li&gt;one word per line&lt;/li&gt;
 &lt;li&gt;keep only words composed of unicode letters, numbers, hyphen and apostrophe&lt;/li&gt;

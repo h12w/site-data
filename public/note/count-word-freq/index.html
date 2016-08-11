@@ -74,7 +74,6 @@
                 <h1>Counting Word Frequencies in One Line</h1>
                 <div class="article-body hyphenate">
                 <pre><code class="language-bash">cat book.txt | \
-tr [:upper:] [:lower:] | \
 tr '!()[]{};:&quot;,&lt;.&gt;?“”‘’*/\r' ' ' | \
 tr ' ' '\n' | \
 grep -a -P &quot;^[\p{L}\p{N}\-']+\$&quot; | \
@@ -86,7 +85,6 @@ cut -c9- &gt; words.txt
 </code></pre>
 
 <ul>
-<li>convert to lower cases</li>
 <li>replace punctuations with space; remove <code>\r</code> from `\r\n&rsquo;</li>
 <li>one word per line</li>
 <li>keep only words composed of unicode letters, numbers, hyphen and apostrophe</li>
