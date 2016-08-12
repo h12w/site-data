@@ -290,6 +290,7 @@ tr &#39;!()[]{};:&amp;quot;,&amp;lt;.&amp;gt;?“”‘’*/\r&#39; &#39; &#39; 
 tr &#39; &#39; &#39;\n&#39; | \
 grep -a -P &amp;quot;^[\p{L}\p{N}\-&#39;]+\$&amp;quot; | \
 grep -a -P -v &amp;quot;^[\p{N}\-&#39;]+\$&amp;quot; | \
+sed &amp;quot;s/&#39;s\$//&amp;quot; | \
 sed &amp;quot;s/^&#39;//&amp;quot; | sed &amp;quot;s/&#39;\$//&amp;quot; | \
 sort | uniq -c | \
 sort -nr | \
@@ -301,6 +302,7 @@ cut -c9- &amp;gt; words.txt
 &lt;li&gt;one word per line&lt;/li&gt;
 &lt;li&gt;keep only words composed of unicode letters, numbers, hyphen and apostrophe&lt;/li&gt;
 &lt;li&gt;remove pure numbers&lt;/li&gt;
+&lt;li&gt;remove &amp;rsquo;s&lt;/li&gt;
 &lt;li&gt;remove starting and ending apostrophe&lt;/li&gt;
 &lt;li&gt;sort and count unique words&lt;/li&gt;
 &lt;li&gt;sort by freqency in descending order&lt;/li&gt;

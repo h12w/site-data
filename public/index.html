@@ -84,6 +84,7 @@ tr '!()[]{};:&quot;,&lt;.&gt;?“”‘’*/\r' ' ' | \
 tr ' ' '\n' | \
 grep -a -P &quot;^[\p{L}\p{N}\-']+\$&quot; | \
 grep -a -P -v &quot;^[\p{N}\-']+\$&quot; | \
+sed &quot;s/'s\$//&quot; | \
 sed &quot;s/^'//&quot; | sed &quot;s/'\$//&quot; | \
 sort | uniq -c | \
 sort -nr | \
@@ -95,6 +96,7 @@ cut -c9- &gt; words.txt
 <li>one word per line</li>
 <li>keep only words composed of unicode letters, numbers, hyphen and apostrophe</li>
 <li>remove pure numbers</li>
+<li>remove &rsquo;s</li>
 <li>remove starting and ending apostrophe</li>
 <li>sort and count unique words</li>
 <li>sort by freqency in descending order</li>
