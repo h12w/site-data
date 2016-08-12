@@ -52,21 +52,37 @@
   
       &lt;article&gt;
       
-        &lt;h3&gt;Wáng Hǎiliàng&lt;/h3&gt;
+        &lt;h3&gt;Introuction&lt;/h3&gt;
         
+  
+  &lt;p&gt;
+    &lt;b&gt;Wáng Hǎiliàng&lt;/b&gt;
+  &lt;/p&gt;
+  
+
   &lt;ul&gt;
   
     &lt;li&gt;Pure Gopher&lt;/li&gt;
   
     &lt;li&gt;Backend Lead at Appcoach&lt;/li&gt;
   
+    &lt;li&gt;https://h12.me&lt;/li&gt;
+  
   &lt;/ul&gt;
 
   
   &lt;p&gt;
-    &lt;i&gt;a global mobile performance agency with local insights&lt;/i&gt; (http://www.appcoachs.com)
+    &lt;b&gt;Appcoach&lt;/b&gt;
   &lt;/p&gt;
   
+
+  &lt;ul&gt;
+  
+    &lt;li&gt;Global Mobile Advertising Industry&lt;/li&gt;
+  
+    &lt;li&gt;http://www.appcoachs.com&lt;/li&gt;
+  
+  &lt;/ul&gt;
 
       
       &lt;/article&gt;
@@ -83,8 +99,20 @@
   
       &lt;article&gt;
       
-        &lt;h3&gt;Kafka&lt;/h3&gt;
+        &lt;h3&gt;Why Kafka?&lt;/h3&gt;
         
+  
+  &lt;p&gt;
+    No resources to build our own messaging system
+  &lt;/p&gt;
+  
+
+  
+  &lt;p&gt;
+    Kafka is good enough:
+  &lt;/p&gt;
+  
+
   &lt;ul&gt;
   
     &lt;li&gt;A distributed, persisted, replicated messaging system&lt;/li&gt;
@@ -117,6 +145,12 @@
     &lt;li&gt;&lt;code&gt;go_kafka_client&lt;/code&gt;&lt;/li&gt;
   
   &lt;/ul&gt;
+
+  
+  &lt;p&gt;
+    Will know how to troubleshoot when problem occurs
+  &lt;/p&gt;
+  
 
       
       &lt;/article&gt;
