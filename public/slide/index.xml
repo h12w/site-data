@@ -52,17 +52,17 @@
   
       &lt;article&gt;
       
-        &lt;h3&gt;Introuction&lt;/h3&gt;
+        &lt;h3&gt;Introduction&lt;/h3&gt;
         
   
   &lt;p&gt;
-    &lt;b&gt;Wáng Hǎiliàng&lt;/b&gt;
+    About Me
   &lt;/p&gt;
   
 
   &lt;ul&gt;
   
-    &lt;li&gt;Pure Gopher&lt;/li&gt;
+    &lt;li&gt;Pure Gopher since 2012&lt;/li&gt;
   
     &lt;li&gt;Backend Lead at Appcoach&lt;/li&gt;
   
@@ -72,13 +72,15 @@
 
   
   &lt;p&gt;
-    &lt;b&gt;Appcoach&lt;/b&gt;
+    About Appcoach
   &lt;/p&gt;
   
 
   &lt;ul&gt;
   
-    &lt;li&gt;Global Mobile Advertising Industry&lt;/li&gt;
+    &lt;li&gt;Global mobile advertising agency founded in 2014&lt;/li&gt;
+  
+    &lt;li&gt;Almost all backend services are written in Go&lt;/li&gt;
   
     &lt;li&gt;http://www.appcoachs.com&lt;/li&gt;
   
@@ -91,7 +93,7 @@
   
       &lt;article&gt;
       
-        &lt;h2&gt;Background&lt;/h2&gt;
+        &lt;h2&gt;Rationale&lt;/h2&gt;
       
       &lt;/article&gt;
   
@@ -103,7 +105,7 @@
         
   
   &lt;p&gt;
-    No resources to build our own messaging system
+    No resources to build our own messaging system :-)
   &lt;/p&gt;
   
 
@@ -117,9 +119,13 @@
   
     &lt;li&gt;A distributed, persisted, replicated messaging system&lt;/li&gt;
   
-    &lt;li&gt;Key concepts: topic, partition, offset, consumer group, replication-factor&lt;/li&gt;
+    &lt;li&gt;Key concepts: topic, partition, offset, consumer group, replication-factor, broker/cluster&lt;/li&gt;
   
   &lt;/ul&gt;
+
+&lt;div class=&#34;image&#34;&gt;
+  &lt;img src=&#34;http://h12.me/img/kpax/kafka.png&#34;&gt;
+&lt;/div&gt;
 
       
       &lt;/article&gt;
@@ -138,17 +144,15 @@
 
   &lt;ul&gt;
   
-    &lt;li&gt;the official Java client&lt;/li&gt;
-  
     &lt;li&gt;&lt;code&gt;sarama&lt;/code&gt;&lt;/li&gt;
   
-    &lt;li&gt;&lt;code&gt;go_kafka_client&lt;/code&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;code&gt;siesta&lt;/code&gt; &amp;amp; &lt;code&gt;go_kafka_client&lt;/code&gt;&lt;/li&gt;
   
   &lt;/ul&gt;
 
   
   &lt;p&gt;
-    Will know how to troubleshoot when problem occurs
+    Gain better understanding about Kafka by writing a client and know how to troubleshoot when problems occur
   &lt;/p&gt;
   
 
@@ -159,7 +163,18 @@
   
       &lt;article&gt;
       
-        &lt;h2&gt;Design of kpax&lt;/h2&gt;
+        &lt;h3&gt;Goal&lt;/h3&gt;
+        
+  &lt;ul&gt;
+  
+    &lt;li&gt;Simplicity: a thin layer above Kafka Wire Protocol, avoiding abuse of goroutines and channels&lt;/li&gt;
+  
+    &lt;li&gt;Modularity: separation of mechanism and policy, allowing the policy code to be easily replaced&lt;/li&gt;
+  
+    &lt;li&gt;Verifiability: unit test, online data tracing and command line tool&lt;/li&gt;
+  
+  &lt;/ul&gt;
+
       
       &lt;/article&gt;
   
@@ -167,12 +182,36 @@
   
       &lt;article&gt;
       
-        &lt;h3&gt;Protocol Generation&lt;/h3&gt;
+        &lt;h2&gt;Kafka Wire Protocol&lt;/h2&gt;
+      
+      &lt;/article&gt;
+  
+  
+  
+      &lt;article&gt;
+      
+        &lt;h3&gt;BNF&lt;/h3&gt;
         
   
   &lt;p&gt;
-    TODO
+    From http://kafka.apache.org/protocol.html:
   &lt;/p&gt;
+  
+
+  
+  &lt;div class=&#34;code&#34;&gt;&lt;pre&gt;MessageSet =&amp;gt; &amp;lt;OffsetMessage&amp;gt;
+    OffsetMessage =&amp;gt; Offset SizedMessage
+    Offset =&amp;gt; int64
+    SizedMessage =&amp;gt; Size CrcMessage
+    Size =&amp;gt; int32
+    CrcMessage =&amp;gt; Crc Message
+    Crc =&amp;gt; uint32
+
+Message =&amp;gt; MagicByte Attributes Key Value
+    MagicByte =&amp;gt; int8
+    Attributes =&amp;gt; int8
+    Key =&amp;gt; bytes
+    Value =&amp;gt; bytes&lt;/pre&gt;&lt;/div&gt;
   
 
       
@@ -182,7 +221,79 @@
   
       &lt;article&gt;
       
-        &lt;h2&gt;Abstraction&lt;/h2&gt;
+        &lt;h3&gt;Code Generation&lt;/h3&gt;
+        
+  
+  &lt;p&gt;
+    By h12.me/wipro:
+  &lt;/p&gt;
+  
+
+  
+  &lt;div class=&#34;code&#34;&gt;&lt;pre&gt;func (t *MessageSet) Marshal(w *wipro.Writer) {
+    offset := len(w.B)
+    w.WriteInt32(0)
+    start := len(w.B)
+    for i := range *t {
+        (*t)[i].Marshal(w)
+    }
+    w.SetInt32(offset, int32(len(w.B)-start))
+}
+
+func (t *Message) Marshal(w *wipro.Writer) {
+    w.WriteInt8(t.MagicByte)
+    w.WriteInt8(t.Attributes)
+    w.WriteBytes(t.Key)
+    w.WriteBytes(t.Value)
+}&lt;/pre&gt;&lt;/div&gt;
+  
+
+      
+      &lt;/article&gt;
+  
+  
+  
+      &lt;article&gt;
+      
+        &lt;h2&gt;Modularity&lt;/h2&gt;
+      
+      &lt;/article&gt;
+  
+  
+  
+      &lt;article&gt;
+      
+        &lt;h3&gt;Dependency Inversion Principle (DIP)&lt;/h3&gt;
+        
+  &lt;ul&gt;
+  
+    &lt;li&gt;High-level modules should not depend on low-level modules. Both should depend on abstractions&lt;/li&gt;
+  
+    &lt;li&gt;Abstractions should not depend on details. Details should depend on abstractions&lt;/li&gt;
+  
+  &lt;/ul&gt;
+
+      
+      &lt;/article&gt;
+  
+  
+  
+      &lt;article&gt;
+      
+        &lt;h3&gt;kpax Command Line&lt;/h3&gt;
+        
+  &lt;ul&gt;
+  
+    &lt;li&gt;tail&lt;/li&gt;
+  
+    &lt;li&gt;consume&lt;/li&gt;
+  
+    &lt;li&gt;offset&lt;/li&gt;
+  
+    &lt;li&gt;rollback&lt;/li&gt;
+  
+  &lt;/ul&gt;
+
       
       &lt;/article&gt;
   
@@ -192,34 +303,32 @@
       
         &lt;h3&gt;Test and verification&lt;/h3&gt;
         
-  &lt;ul&gt;
   
-    &lt;li&gt;compatibility test&lt;/li&gt;
-  
-  &lt;/ul&gt;
-
-  
-  &lt;div class=&#34;code&#34;&gt;&lt;pre&gt;go get h12.me/realtest/kafka&lt;/pre&gt;&lt;/div&gt;
+  &lt;p&gt;
+    Compatibility test
+  &lt;/p&gt;
   
 
   &lt;ul&gt;
   
-    &lt;li&gt;data integrity&lt;/li&gt;
+    &lt;li&gt;h12.me/realtest/kafka&lt;/li&gt;
   
   &lt;/ul&gt;
 
   
-  &lt;div class=&#34;code&#34;&gt;&lt;pre&gt;go get h12.me/stats&lt;/pre&gt;&lt;/div&gt;
+  &lt;p&gt;
+    Data integrity
+  &lt;/p&gt;
   
 
-      
-      &lt;/article&gt;
+  &lt;ul&gt;
   
+    &lt;li&gt;h12.me/stats&lt;/li&gt;
   
+    &lt;li&gt;InfluxDB/Grafana&lt;/li&gt;
   
-      &lt;article&gt;
-      
-        &lt;h2&gt;Usage of kpax&lt;/h2&gt;
+  &lt;/ul&gt;
+
       
       &lt;/article&gt;
   
@@ -301,7 +410,7 @@
     Gopher at Appcoach
   &lt;/p&gt;
   
-&lt;p class=&#34;link&#34;&gt;&lt;a href=&#34;mailto:w@h12.me&#34; target=&#34;_blank&#34;&gt;w@h12.me&lt;/a&gt;&lt;/p&gt;&lt;p class=&#34;link&#34;&gt;&lt;a href=&#34;https://h12.me&#34; target=&#34;_blank&#34;&gt;https://h12.me&lt;/a&gt;&lt;/p&gt;
+&lt;p class=&#34;link&#34;&gt;&lt;a href=&#34;mailto:w@h12.me&#34; target=&#34;_blank&#34;&gt;w@h12.me&lt;/a&gt;&lt;/p&gt;
           &lt;/div&gt;
         
       &lt;/article&gt;

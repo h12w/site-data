@@ -47,17 +47,17 @@
   
       <article>
       
-        <h3>Introuction</h3>
+        <h3>Introduction</h3>
         
   
   <p>
-    <b>Wáng Hǎiliàng</b>
+    About Me
   </p>
   
 
   <ul>
   
-    <li>Pure Gopher</li>
+    <li>Pure Gopher since 2012</li>
   
     <li>Backend Lead at Appcoach</li>
   
@@ -67,13 +67,15 @@
 
   
   <p>
-    <b>Appcoach</b>
+    About Appcoach
   </p>
   
 
   <ul>
   
-    <li>Global Mobile Advertising Industry</li>
+    <li>Global mobile advertising agency founded in 2014</li>
+  
+    <li>Almost all backend services are written in Go</li>
   
     <li>http://www.appcoachs.com</li>
   
@@ -86,7 +88,7 @@
   
       <article>
       
-        <h2>Background</h2>
+        <h2>Rationale</h2>
       
       </article>
   
@@ -98,7 +100,7 @@
         
   
   <p>
-    No resources to build our own messaging system
+    No resources to build our own messaging system :-)
   </p>
   
 
@@ -112,9 +114,13 @@
   
     <li>A distributed, persisted, replicated messaging system</li>
   
-    <li>Key concepts: topic, partition, offset, consumer group, replication-factor</li>
+    <li>Key concepts: topic, partition, offset, consumer group, replication-factor, broker/cluster</li>
   
   </ul>
+
+<div class="image">
+  <img src="/img/kpax/kafka.png">
+</div>
 
       
       </article>
@@ -133,17 +139,15 @@
 
   <ul>
   
-    <li>the official Java client</li>
-  
     <li><code>sarama</code></li>
   
-    <li><code>go_kafka_client</code></li>
+    <li><code>siesta</code> &amp; <code>go_kafka_client</code></li>
   
   </ul>
 
   
   <p>
-    Will know how to troubleshoot when problem occurs
+    Gain better understanding about Kafka by writing a client and know how to troubleshoot when problems occur
   </p>
   
 
@@ -154,7 +158,18 @@
   
       <article>
       
-        <h2>Design of kpax</h2>
+        <h3>Goal</h3>
+        
+  <ul>
+  
+    <li>Simplicity: a thin layer above Kafka Wire Protocol, avoiding abuse of goroutines and channels</li>
+  
+    <li>Modularity: separation of mechanism and policy, allowing the policy code to be easily replaced</li>
+  
+    <li>Verifiability: unit test, online data tracing and command line tool</li>
+  
+  </ul>
+
       
       </article>
   
@@ -162,12 +177,36 @@
   
       <article>
       
-        <h3>Protocol Generation</h3>
+        <h2>Kafka Wire Protocol</h2>
+      
+      </article>
+  
+  
+  
+      <article>
+      
+        <h3>BNF</h3>
         
   
   <p>
-    TODO
+    From http://kafka.apache.org/protocol.html:
   </p>
+  
+
+  
+  <div class="code"><pre>MessageSet =&gt; &lt;OffsetMessage&gt;
+    OffsetMessage =&gt; Offset SizedMessage
+    Offset =&gt; int64
+    SizedMessage =&gt; Size CrcMessage
+    Size =&gt; int32
+    CrcMessage =&gt; Crc Message
+    Crc =&gt; uint32
+
+Message =&gt; MagicByte Attributes Key Value
+    MagicByte =&gt; int8
+    Attributes =&gt; int8
+    Key =&gt; bytes
+    Value =&gt; bytes</pre></div>
   
 
       
@@ -177,7 +216,79 @@
   
       <article>
       
-        <h2>Abstraction</h2>
+        <h3>Code Generation</h3>
+        
+  
+  <p>
+    By h12.me/wipro:
+  </p>
+  
+
+  
+  <div class="code"><pre>func (t *MessageSet) Marshal(w *wipro.Writer) {
+    offset := len(w.B)
+    w.WriteInt32(0)
+    start := len(w.B)
+    for i := range *t {
+        (*t)[i].Marshal(w)
+    }
+    w.SetInt32(offset, int32(len(w.B)-start))
+}
+
+func (t *Message) Marshal(w *wipro.Writer) {
+    w.WriteInt8(t.MagicByte)
+    w.WriteInt8(t.Attributes)
+    w.WriteBytes(t.Key)
+    w.WriteBytes(t.Value)
+}</pre></div>
+  
+
+      
+      </article>
+  
+  
+  
+      <article>
+      
+        <h2>Modularity</h2>
+      
+      </article>
+  
+  
+  
+      <article>
+      
+        <h3>Dependency Inversion Principle (DIP)</h3>
+        
+  <ul>
+  
+    <li>High-level modules should not depend on low-level modules. Both should depend on abstractions</li>
+  
+    <li>Abstractions should not depend on details. Details should depend on abstractions</li>
+  
+  </ul>
+
+      
+      </article>
+  
+  
+  
+      <article>
+      
+        <h3>kpax Command Line</h3>
+        
+  <ul>
+  
+    <li>tail</li>
+  
+    <li>consume</li>
+  
+    <li>offset</li>
+  
+    <li>rollback</li>
+  
+  </ul>
+
       
       </article>
   
@@ -187,34 +298,32 @@
       
         <h3>Test and verification</h3>
         
-  <ul>
   
-    <li>compatibility test</li>
-  
-  </ul>
-
-  
-  <div class="code"><pre>go get h12.me/realtest/kafka</pre></div>
+  <p>
+    Compatibility test
+  </p>
   
 
   <ul>
   
-    <li>data integrity</li>
+    <li>h12.me/realtest/kafka</li>
   
   </ul>
 
   
-  <div class="code"><pre>go get h12.me/stats</pre></div>
+  <p>
+    Data integrity
+  </p>
   
 
-      
-      </article>
+  <ul>
   
+    <li>h12.me/stats</li>
   
+    <li>InfluxDB/Grafana</li>
   
-      <article>
-      
-        <h2>Usage of kpax</h2>
+  </ul>
+
       
       </article>
   
@@ -296,7 +405,7 @@
     Gopher at Appcoach
   </p>
   
-<p class="link"><a href="mailto:w@h12.me" target="_blank">w@h12.me</a></p><p class="link"><a href="https://h12.me" target="_blank">https://h12.me</a></p>
+<p class="link"><a href="mailto:w@h12.me" target="_blank">w@h12.me</a></p>
           </div>
         
       </article>
