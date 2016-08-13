@@ -85,10 +85,12 @@ tr ' ' '\n' | \
 grep -a -P &quot;^[\p{L}\p{N}\-']+\$&quot; | \
 grep -a -P -v &quot;^[\p{N}\-']+\$&quot; | \
 sed &quot;s/'s\$//&quot; | \
-sed &quot;s/^'//&quot; | sed &quot;s/'\$//&quot; | \
+sed &quot;s/^'//&quot; | sed &quot;s/'\$//&quot; &gt; words.txt
+
+cat words.txt | \
 sort | uniq -c | \
 sort -nr | \
-cut -c9- &gt; words.txt
+cut -c9- &gt; words_desc.txt
 </code></pre>
 
 <ul>
@@ -98,9 +100,14 @@ cut -c9- &gt; words.txt
 <li>remove pure numbers</li>
 <li>remove &rsquo;s</li>
 <li>remove starting and ending apostrophe</li>
-<li>sort and count unique words</li>
-<li>sort by freqency in descending order</li>
-<li>trim the frequency column</li>
+
+<li><p>output words.txt</p></li>
+
+<li><p>sort and count unique words</p></li>
+
+<li><p>sort by freqency in descending order</p></li>
+
+<li><p>trim the frequency column</p></li>
 </ul>
 
                 </div>

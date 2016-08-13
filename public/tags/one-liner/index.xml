@@ -22,10 +22,12 @@ tr &#39; &#39; &#39;\n&#39; | \
 grep -a -P &amp;quot;^[\p{L}\p{N}\-&#39;]+\$&amp;quot; | \
 grep -a -P -v &amp;quot;^[\p{N}\-&#39;]+\$&amp;quot; | \
 sed &amp;quot;s/&#39;s\$//&amp;quot; | \
-sed &amp;quot;s/^&#39;//&amp;quot; | sed &amp;quot;s/&#39;\$//&amp;quot; | \
+sed &amp;quot;s/^&#39;//&amp;quot; | sed &amp;quot;s/&#39;\$//&amp;quot; &amp;gt; words.txt
+
+cat words.txt | \
 sort | uniq -c | \
 sort -nr | \
-cut -c9- &amp;gt; words.txt
+cut -c9- &amp;gt; words_desc.txt
 &lt;/code&gt;&lt;/pre&gt;
 
 &lt;ul&gt;
@@ -35,9 +37,14 @@ cut -c9- &amp;gt; words.txt
 &lt;li&gt;remove pure numbers&lt;/li&gt;
 &lt;li&gt;remove &amp;rsquo;s&lt;/li&gt;
 &lt;li&gt;remove starting and ending apostrophe&lt;/li&gt;
-&lt;li&gt;sort and count unique words&lt;/li&gt;
-&lt;li&gt;sort by freqency in descending order&lt;/li&gt;
-&lt;li&gt;trim the frequency column&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;output words.txt&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;sort and count unique words&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;sort by freqency in descending order&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;trim the frequency column&lt;/p&gt;&lt;/li&gt;
 &lt;/ul&gt;
 </description>
     </item>
