@@ -194,7 +194,7 @@
         
   
   &lt;p&gt;
-    From http://kafka.apache.org/protocol.html:
+    From KWP (http://kafka.apache.org/protocol.html):
   &lt;/p&gt;
   
 
@@ -255,6 +255,37 @@ func (t *Message) Marshal(w *wipro.Writer) {
   
       &lt;article&gt;
       
+        &lt;h3&gt;Broker&lt;/h3&gt;
+        
+  
+  &lt;p&gt;
+    Kafka Wire Protocol:
+  &lt;/p&gt;
+  
+
+  
+  &lt;p&gt;
+    &amp;#34;It should not generally be necessary to maintain multiple connections to a single broker from a single client instance (i.e. connection pooling)&amp;#34;
+  &lt;/p&gt;
+  
+
+  
+  &lt;p&gt;
+    &amp;#34;Clients can (and ideally should) use non-blocking IO to implement request pipelining and achieve higher throughput&amp;#34;
+  &lt;/p&gt;
+  
+
+&lt;div class=&#34;image&#34;&gt;
+  &lt;img src=&#34;http://h12.me/img/kpax/async-io.png&#34; height=&#34;250&#34;&gt;
+&lt;/div&gt;
+
+      
+      &lt;/article&gt;
+  
+  
+  
+      &lt;article&gt;
+      
         &lt;h2&gt;Modularity&lt;/h2&gt;
       
       &lt;/article&gt;
@@ -272,6 +303,66 @@ func (t *Message) Marshal(w *wipro.Writer) {
     &lt;li&gt;Abstractions should not depend on details. Details should depend on abstractions&lt;/li&gt;
   
   &lt;/ul&gt;
+
+      
+      &lt;/article&gt;
+  
+  
+  
+      &lt;article&gt;
+      
+        &lt;h3&gt;Abstraction&lt;/h3&gt;
+        
+  
+  &lt;div class=&#34;code&#34;&gt;&lt;pre&gt;type Broker interface {
+    Do(Request, Response) error
+    Close()
+}
+
+type Cluster interface {
+    Coordinator(group string) (Broker, error)
+    CoordinatorIsDown(group string)
+    Leader(topic string, partition int32) (Broker, error)
+    LeaderIsDown(topic string, partition int32)
+    Partitions(topic string) ([]int32, error)
+}
+
+type Request interface {
+    Send(io.Writer) error
+    ID() int32
+    SetID(int32)
+}
+
+type Response interface {
+    Receive(io.Reader) error
+    ID() int32
+}&lt;/pre&gt;&lt;/div&gt;
+  
+
+      
+      &lt;/article&gt;
+  
+  
+  
+      &lt;article&gt;
+      
+        &lt;h3&gt;Payload.Produce&lt;/h3&gt;
+        
+  
+  &lt;div class=&#34;code&#34;&gt;&lt;pre&gt;func (p *Payload) Produce(c model.Cluster) error {
+    leader, err := c.Leader(p.Topic, p.Partition)
+    if err != nil {
+        return err
+    }
+    if err := p.DoProduce(leader); err != nil {
+        if IsNotLeader(err) {
+            c.LeaderIsDown(p.Topic, p.Partition)
+        }
+        return err
+    }
+    return nil
+}&lt;/pre&gt;&lt;/div&gt;
+  
 
       
       &lt;/article&gt;
