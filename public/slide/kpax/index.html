@@ -189,7 +189,7 @@
         
   
   <p>
-    From KWP (http://kafka.apache.org/protocol.html):
+    From http://kafka.apache.org/protocol.html:
   </p>
   
 
@@ -281,7 +281,7 @@ func (t *Message) Marshal(w *wipro.Writer) {
   
       <article>
       
-        <h2>Modularity</h2>
+        <h2>Wrap It Up</h2>
       
       </article>
   
@@ -289,13 +289,70 @@ func (t *Message) Marshal(w *wipro.Writer) {
   
       <article>
       
-        <h3>Dependency Inversion Principle (DIP)</h3>
+        <h3>A Naive Approach</h3>
         
+  
+  <p>
+    Broker &gt; Cluster &gt; Producer
+  </p>
+  
+
+  
+  <p>
+    Produce:
+  </p>
+  
+
+  
+  <div class="code"><pre>func (b *Broker) Produce(.......)
+func (b *Cluster) Produce(.......)
+func (b *Producer) Produce(.......)</pre></div>
+  
+
+  
+  <p>
+    Constructers:
+  </p>
+  
+
+  
+  <div class="code"><pre>NewBroker(cfg *BrokerConfig)
+NewCluster(cfg *ClusterConfig)
+NewProducer(cfg *ProducerConfig)</pre></div>
+  
+
+      
+      </article>
+  
+  
+  
+      <article>
+      
+        <h3>Dependency Inversion Principle</h3>
+        
+  
+  <p>
+    DIP:
+  </p>
+  
+
   <ul>
   
-    <li>High-level modules should not depend on low-level modules. Both should depend on abstractions</li>
+    <li>High-level modules should not depend on low-level modules. Both should depend on abstractions.</li>
   
-    <li>Abstractions should not depend on details. Details should depend on abstractions</li>
+    <li>Abstractions should not depend on details. Details should depend on abstractions.</li>
+  
+  </ul>
+
+  
+  <p>
+    In our case:
+  </p>
+  
+
+  <ul>
+  
+    <li>Broker/Cluster level should not depend on protocol level. Both protocol and broker/cluster implementation should depend on abstract broker/cluster.</li>
   
   </ul>
 
@@ -366,6 +423,117 @@ type Response interface {
   
       <article>
       
+        <h3>Configuration</h3>
+        
+  
+  <p>
+    Exported Fields:
+  </p>
+  
+
+  
+  <div class="code"><pre>type Payload struct {
+    Topic        string
+    Partition    int32
+    MessageSet   MessageSet
+    RequiredAcks ProduceAckType
+    AckTimeout   time.Duration
+}
+
+type Broker struct {
+    Timeout  time.Duration
+    QueueLen int
+    Addr     string
+}
+
+type Producer struct {
+    RequiredAcks proto.ProduceAckType
+    AckTimeout   time.Duration
+}</pre></div>
+  
+
+  
+  <p>
+    &#34;New&#34; returns an interface object with default configuration.
+  </p>
+  
+
+      
+      </article>
+  
+  
+  
+      <article>
+      
+        <h2>Verification</h2>
+      
+      </article>
+  
+  
+  
+      <article>
+      
+        <h3>Unit Test with Docker</h3>
+        
+  
+  <p>
+    Using h12.me/realtest/kafka:
+  </p>
+  
+
+  
+  <div class="code"><pre>func TestXXX(t *testing.T) {
+    k, err := kafka.New()
+    if err != nil {
+        t.Fatal(err)
+    }
+    partitionCount := 2
+    topic, err := k.NewRandomTopic(partitionCount)
+    if err != nil {
+        t.Fatal(err)
+    }
+    defer k.DeleteTopic(topic)
+
+    // Your test code goes here
+}</pre></div>
+  
+
+      
+      </article>
+  
+  
+  
+      <article>
+      
+        <h3>Message Counting</h3>
+        
+  
+  <p>
+    SearchOffsetByTime
+  </p>
+  
+
+  
+  <p>
+    Count number of messages in
+  </p>
+  
+
+  <ul>
+  
+    <li>InfluxDB</li>
+  
+    <li>Grafana</li>
+  
+  </ul>
+
+      
+      </article>
+  
+  
+  
+      <article>
+      
         <h3>kpax Command Line</h3>
         
   <ul>
@@ -406,14 +574,6 @@ type Response interface {
     Data integrity
   </p>
   
-
-  <ul>
-  
-    <li>h12.me/stats</li>
-  
-    <li>InfluxDB/Grafana</li>
-  
-  </ul>
 
       
       </article>

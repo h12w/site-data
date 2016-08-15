@@ -194,7 +194,7 @@
         
   
   &lt;p&gt;
-    From KWP (http://kafka.apache.org/protocol.html):
+    From http://kafka.apache.org/protocol.html:
   &lt;/p&gt;
   
 
@@ -286,7 +286,7 @@ func (t *Message) Marshal(w *wipro.Writer) {
   
       &lt;article&gt;
       
-        &lt;h2&gt;Modularity&lt;/h2&gt;
+        &lt;h2&gt;Wrap It Up&lt;/h2&gt;
       
       &lt;/article&gt;
   
@@ -294,13 +294,70 @@ func (t *Message) Marshal(w *wipro.Writer) {
   
       &lt;article&gt;
       
-        &lt;h3&gt;Dependency Inversion Principle (DIP)&lt;/h3&gt;
+        &lt;h3&gt;A Naive Approach&lt;/h3&gt;
         
+  
+  &lt;p&gt;
+    Broker &amp;gt; Cluster &amp;gt; Producer
+  &lt;/p&gt;
+  
+
+  
+  &lt;p&gt;
+    Produce:
+  &lt;/p&gt;
+  
+
+  
+  &lt;div class=&#34;code&#34;&gt;&lt;pre&gt;func (b *Broker) Produce(.......)
+func (b *Cluster) Produce(.......)
+func (b *Producer) Produce(.......)&lt;/pre&gt;&lt;/div&gt;
+  
+
+  
+  &lt;p&gt;
+    Constructers:
+  &lt;/p&gt;
+  
+
+  
+  &lt;div class=&#34;code&#34;&gt;&lt;pre&gt;NewBroker(cfg *BrokerConfig)
+NewCluster(cfg *ClusterConfig)
+NewProducer(cfg *ProducerConfig)&lt;/pre&gt;&lt;/div&gt;
+  
+
+      
+      &lt;/article&gt;
+  
+  
+  
+      &lt;article&gt;
+      
+        &lt;h3&gt;Dependency Inversion Principle&lt;/h3&gt;
+        
+  
+  &lt;p&gt;
+    DIP:
+  &lt;/p&gt;
+  
+
   &lt;ul&gt;
   
-    &lt;li&gt;High-level modules should not depend on low-level modules. Both should depend on abstractions&lt;/li&gt;
+    &lt;li&gt;High-level modules should not depend on low-level modules. Both should depend on abstractions.&lt;/li&gt;
   
-    &lt;li&gt;Abstractions should not depend on details. Details should depend on abstractions&lt;/li&gt;
+    &lt;li&gt;Abstractions should not depend on details. Details should depend on abstractions.&lt;/li&gt;
+  
+  &lt;/ul&gt;
+
+  
+  &lt;p&gt;
+    In our case:
+  &lt;/p&gt;
+  
+
+  &lt;ul&gt;
+  
+    &lt;li&gt;Broker/Cluster level should not depend on protocol level. Both protocol and broker/cluster implementation should depend on abstract broker/cluster.&lt;/li&gt;
   
   &lt;/ul&gt;
 
@@ -371,6 +428,117 @@ type Response interface {
   
       &lt;article&gt;
       
+        &lt;h3&gt;Configuration&lt;/h3&gt;
+        
+  
+  &lt;p&gt;
+    Exported Fields:
+  &lt;/p&gt;
+  
+
+  
+  &lt;div class=&#34;code&#34;&gt;&lt;pre&gt;type Payload struct {
+    Topic        string
+    Partition    int32
+    MessageSet   MessageSet
+    RequiredAcks ProduceAckType
+    AckTimeout   time.Duration
+}
+
+type Broker struct {
+    Timeout  time.Duration
+    QueueLen int
+    Addr     string
+}
+
+type Producer struct {
+    RequiredAcks proto.ProduceAckType
+    AckTimeout   time.Duration
+}&lt;/pre&gt;&lt;/div&gt;
+  
+
+  
+  &lt;p&gt;
+    &amp;#34;New&amp;#34; returns an interface object with default configuration.
+  &lt;/p&gt;
+  
+
+      
+      &lt;/article&gt;
+  
+  
+  
+      &lt;article&gt;
+      
+        &lt;h2&gt;Verification&lt;/h2&gt;
+      
+      &lt;/article&gt;
+  
+  
+  
+      &lt;article&gt;
+      
+        &lt;h3&gt;Unit Test with Docker&lt;/h3&gt;
+        
+  
+  &lt;p&gt;
+    Using h12.me/realtest/kafka:
+  &lt;/p&gt;
+  
+
+  
+  &lt;div class=&#34;code&#34;&gt;&lt;pre&gt;func TestXXX(t *testing.T) {
+    k, err := kafka.New()
+    if err != nil {
+        t.Fatal(err)
+    }
+    partitionCount := 2
+    topic, err := k.NewRandomTopic(partitionCount)
+    if err != nil {
+        t.Fatal(err)
+    }
+    defer k.DeleteTopic(topic)
+
+    // Your test code goes here
+}&lt;/pre&gt;&lt;/div&gt;
+  
+
+      
+      &lt;/article&gt;
+  
+  
+  
+      &lt;article&gt;
+      
+        &lt;h3&gt;Message Counting&lt;/h3&gt;
+        
+  
+  &lt;p&gt;
+    SearchOffsetByTime
+  &lt;/p&gt;
+  
+
+  
+  &lt;p&gt;
+    Count number of messages in
+  &lt;/p&gt;
+  
+
+  &lt;ul&gt;
+  
+    &lt;li&gt;InfluxDB&lt;/li&gt;
+  
+    &lt;li&gt;Grafana&lt;/li&gt;
+  
+  &lt;/ul&gt;
+
+      
+      &lt;/article&gt;
+  
+  
+  
+      &lt;article&gt;
+      
         &lt;h3&gt;kpax Command Line&lt;/h3&gt;
         
   &lt;ul&gt;
@@ -411,14 +579,6 @@ type Response interface {
     Data integrity
   &lt;/p&gt;
   
-
-  &lt;ul&gt;
-  
-    &lt;li&gt;h12.me/stats&lt;/li&gt;
-  
-    &lt;li&gt;InfluxDB/Grafana&lt;/li&gt;
-  
-  &lt;/ul&gt;
 
       
       &lt;/article&gt;
