@@ -105,7 +105,7 @@
         
   
   &lt;p&gt;
-    No resources to build our own messaging system :-)
+    No resources to build our own messaging system from scratch :-)
   &lt;/p&gt;
   
 
@@ -171,7 +171,7 @@
   
     &lt;li&gt;Modularity: separation of mechanism and policy, allowing the policy code to be easily replaced&lt;/li&gt;
   
-    &lt;li&gt;Verifiability: unit test, online data tracing and command line tool&lt;/li&gt;
+    &lt;li&gt;Verifiability: unit test, manual checking with CLI and online data tracing&lt;/li&gt;
   
   &lt;/ul&gt;
 
@@ -294,7 +294,32 @@ func (t *Message) Marshal(w *wipro.Writer) {
   
       &lt;article&gt;
       
-        &lt;h3&gt;A Naive Approach&lt;/h3&gt;
+        &lt;h3&gt;Code Organization&lt;/h3&gt;
+        
+  
+  &lt;p&gt;
+    Modular and reusable sub-packages:
+  &lt;/p&gt;
+  
+
+  
+  &lt;div class=&#34;code&#34;&gt;&lt;pre&gt;h12.me/kpax/
+    proto
+    broker
+    cluster
+    producer
+    consumer
+    log&lt;/pre&gt;&lt;/div&gt;
+  
+
+      
+      &lt;/article&gt;
+  
+  
+  
+      &lt;article&gt;
+      
+        &lt;h3&gt;A Simple &amp;amp; Naive Approach&lt;/h3&gt;
         
   
   &lt;p&gt;
@@ -304,7 +329,7 @@ func (t *Message) Marshal(w *wipro.Writer) {
 
   
   &lt;p&gt;
-    Produce:
+    Produce Methods:
   &lt;/p&gt;
   
 
@@ -321,10 +346,26 @@ func (b *Producer) Produce(.......)&lt;/pre&gt;&lt;/div&gt;
   
 
   
-  &lt;div class=&#34;code&#34;&gt;&lt;pre&gt;NewBroker(cfg *BrokerConfig)
-NewCluster(cfg *ClusterConfig)
-NewProducer(cfg *ProducerConfig)&lt;/pre&gt;&lt;/div&gt;
+  &lt;div class=&#34;code&#34;&gt;&lt;pre&gt;broker.New(cfg *BrokerConfig)
+cluster.New(cfg *ClusterConfig)
+producer.New(cfg *ProducerConfig)&lt;/pre&gt;&lt;/div&gt;
   
+
+  
+  &lt;p&gt;
+    Problems of this approach
+  &lt;/p&gt;
+  
+
+  &lt;ul&gt;
+  
+    &lt;li&gt;Duplicated code&lt;/li&gt;
+  
+    &lt;li&gt;Low and high level are tightly coupled&lt;/li&gt;
+  
+    &lt;li&gt;Policies in lower level components cannot be replaced&lt;/li&gt;
+  
+  &lt;/ul&gt;
 
       
       &lt;/article&gt;
@@ -357,7 +398,9 @@ NewProducer(cfg *ProducerConfig)&lt;/pre&gt;&lt;/div&gt;
 
   &lt;ul&gt;
   
-    &lt;li&gt;Broker/Cluster level should not depend on protocol level. Both protocol and broker/cluster implementation should depend on abstract broker/cluster.&lt;/li&gt;
+    &lt;li&gt;Broker/Cluster level should not depend on protocol-level details&lt;/li&gt;
+  
+    &lt;li&gt;Protocol-level details should depend on abstract broker/cluster&lt;/li&gt;
   
   &lt;/ul&gt;
 
@@ -403,8 +446,14 @@ type Response interface {
   
       &lt;article&gt;
       
-        &lt;h3&gt;Payload.Produce&lt;/h3&gt;
+        &lt;h3&gt;Details&lt;/h3&gt;
         
+  
+  &lt;p&gt;
+    Payload.Produce
+  &lt;/p&gt;
+  
+
   
   &lt;div class=&#34;code&#34;&gt;&lt;pre&gt;func (p *Payload) Produce(c model.Cluster) error {
     leader, err := c.Leader(p.Topic, p.Partition)
@@ -418,6 +467,14 @@ type Response interface {
         return err
     }
     return nil
+}
+
+func (p *Payload) DoProduce(b model.Broker) error {
+    ......
+    if err := b.Do(&amp;amp;req, &amp;amp;resp); err != nil {
+        return err
+    }
+    ......
 }&lt;/pre&gt;&lt;/div&gt;
   
 
@@ -431,12 +488,6 @@ type Response interface {
         &lt;h3&gt;Configuration&lt;/h3&gt;
         
   
-  &lt;p&gt;
-    Exported Fields:
-  &lt;/p&gt;
-  
-
-  
   &lt;div class=&#34;code&#34;&gt;&lt;pre&gt;type Payload struct {
     Topic        string
     Partition    int32
@@ -446,22 +497,59 @@ type Response interface {
 }
 
 type Broker struct {
-    Timeout  time.Duration
-    QueueLen int
     Addr     string
+    Timeout  time.Duration
 }
 
 type Producer struct {
+    Cluster      model.Cluster
     RequiredAcks proto.ProduceAckType
     AckTimeout   time.Duration
-}&lt;/pre&gt;&lt;/div&gt;
+}
+
+NewCluster(newBroker NewBrokerFunc, brokers []string) model.Cluster&lt;/pre&gt;&lt;/div&gt;
   
 
   
   &lt;p&gt;
-    &amp;#34;New&amp;#34; returns an interface object with default configuration.
+    &amp;#34;New&amp;#34; constructor returns an object with default configuration.
   &lt;/p&gt;
   
+
+      
+      &lt;/article&gt;
+  
+  
+  
+      &lt;article&gt;
+      
+        &lt;h3&gt;Command Line Tool&lt;/h3&gt;
+        
+  
+  &lt;div class=&#34;code&#34;&gt;&lt;pre&gt;go install h12.me/kpax/cmd/kpax&lt;/pre&gt;&lt;/div&gt;
+  
+
+  
+  &lt;p&gt;
+    Sub-commands:
+  &lt;/p&gt;
+  
+
+  &lt;ul&gt;
+  
+    &lt;li&gt;tail: print recent n messages&lt;/li&gt;
+  
+    &lt;li&gt;consume: print or count messages within a time range&lt;/li&gt;
+  
+    &lt;li&gt;produce: send a test message&lt;/li&gt;
+  
+    &lt;li&gt;offset: print latest/earliest/current offset&lt;/li&gt;
+  
+    &lt;li&gt;rollback: reset offset to a previous time&lt;/li&gt;
+  
+    &lt;li&gt;meta: print topic metadata&lt;/li&gt;
+  
+  &lt;/ul&gt;
 
       
       &lt;/article&gt;
@@ -478,7 +566,7 @@ type Producer struct {
   
       &lt;article&gt;
       
-        &lt;h3&gt;Unit Test with Docker&lt;/h3&gt;
+        &lt;h3&gt;Unit Testing with Docker&lt;/h3&gt;
         
   
   &lt;p&gt;
@@ -514,21 +602,31 @@ type Producer struct {
         
   
   &lt;p&gt;
-    SearchOffsetByTime
-  &lt;/p&gt;
-  
-
-  
-  &lt;p&gt;
-    Count number of messages in
+    Manual checking:
   &lt;/p&gt;
   
 
   &lt;ul&gt;
   
-    &lt;li&gt;InfluxDB&lt;/li&gt;
+    &lt;li&gt;use kpax command line tool&lt;/li&gt;
   
-    &lt;li&gt;Grafana&lt;/li&gt;
+  &lt;/ul&gt;
+
+  
+  &lt;p&gt;
+    Continuous monitoring:
+  &lt;/p&gt;
+  
+
+  &lt;ul&gt;
+  
+    &lt;li&gt;Consume and count all messages&lt;/li&gt;
+  
+    &lt;li&gt;Collect statistics from API&lt;/li&gt;
+  
+    &lt;li&gt;Send all the statistics to InfluxDB&lt;/li&gt;
+  
+    &lt;li&gt;Visualize and compare with Grafana&lt;/li&gt;
   
   &lt;/ul&gt;
 
@@ -539,20 +637,7 @@ type Producer struct {
   
       &lt;article&gt;
       
-        &lt;h3&gt;kpax Command Line&lt;/h3&gt;
-        
-  &lt;ul&gt;
-  
-    &lt;li&gt;tail&lt;/li&gt;
-  
-    &lt;li&gt;consume&lt;/li&gt;
-  
-    &lt;li&gt;offset&lt;/li&gt;
-  
-    &lt;li&gt;rollback&lt;/li&gt;
-  
-  &lt;/ul&gt;
-
+        &lt;h2&gt;Some Thoughts on Messaging System&lt;/h2&gt;
       
       &lt;/article&gt;
   
@@ -560,46 +645,19 @@ type Producer struct {
   
       &lt;article&gt;
       
-        &lt;h3&gt;Test and verification&lt;/h3&gt;
-        
-  
-  &lt;p&gt;
-    Compatibility test
-  &lt;/p&gt;
-  
-
-  &lt;ul&gt;
-  
-    &lt;li&gt;h12.me/realtest/kafka&lt;/li&gt;
-  
-  &lt;/ul&gt;
-
-  
-  &lt;p&gt;
-    Data integrity
-  &lt;/p&gt;
-  
-
-      
-      &lt;/article&gt;
-  
-  
-  
-      &lt;article&gt;
-      
-        &lt;h2&gt;Some Thought on Messaging System&lt;/h2&gt;
-      
-      &lt;/article&gt;
-  
-  
-  
-      &lt;article&gt;
-      
-        &lt;h3&gt;Why message queue is useful?&lt;/h3&gt;
+        &lt;h3&gt;Why a messaging system is useful?&lt;/h3&gt;
         
   &lt;ul&gt;
   
-    &lt;li&gt;Asynchronous?&lt;/li&gt;
+    &lt;li&gt;Asynchronous: goroutine&lt;/li&gt;
+  
+    &lt;li&gt;Batch buffer: buffered channel&lt;/li&gt;
+  
+    &lt;li&gt;Decoupling: backend API&lt;/li&gt;
+  
+    &lt;li&gt;Resiliency/Scalability: distributed backend API&lt;/li&gt;
+  
+    &lt;li&gt;Delivery guarantees: maybe&lt;/li&gt;
   
   &lt;/ul&gt;
 
@@ -620,13 +678,13 @@ type Producer struct {
 
   
   &lt;p&gt;
-    Data safty must rely on distributed solution (Raft/Paxos)
+    To get short response time, perhaps we should either give up persistence,
   &lt;/p&gt;
   
 
   
   &lt;p&gt;
-    Perhaps we should just give up manual fsync and rely on:
+    or we could just give up manual fsync and rely on replication:
   &lt;/p&gt;
   
 
@@ -634,9 +692,9 @@ type Producer struct {
   
     &lt;li&gt;OS background flush&lt;/li&gt;
   
-    &lt;li&gt;corruption detection &amp;amp; correction at startup&lt;/li&gt;
-  
     &lt;li&gt;replication&lt;/li&gt;
+  
+    &lt;li&gt;corruption detection &amp;amp; correction at startup&lt;/li&gt;
   
   &lt;/ul&gt;
 
