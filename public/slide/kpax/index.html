@@ -633,7 +633,24 @@ NewCluster(newBroker NewBrokerFunc, brokers []string) model.Cluster</pre></div>
   
       <article>
       
-        <h3>Why a messaging system is useful?</h3>
+        <h3>When is a Messaging System NOT Useful?</h3>
+        
+  <ul>
+  
+    <li>Fastest processing required</li>
+  
+    <li>Data is disposable</li>
+  
+  </ul>
+
+      
+      </article>
+  
+  
+  
+      <article>
+      
+        <h3>Why is a Messaging System Useful?</h3>
         
   <ul>
   
@@ -644,6 +661,8 @@ NewCluster(newBroker NewBrokerFunc, brokers []string) model.Cluster</pre></div>
     <li>Decoupling: backend API</li>
   
     <li>Resiliency/Scalability: distributed backend API</li>
+  
+    <li>Multiple consumers: maybe</li>
   
     <li>Delivery guarantees: maybe</li>
   
