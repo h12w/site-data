@@ -646,19 +646,6 @@ NewCluster(newBroker NewBrokerFunc, brokers []string) model.Cluster&lt;/pre&gt;&
   
     &lt;li&gt;Data is disposable&lt;/li&gt;
   
-  &lt;/ul&gt;
-
-      
-      &lt;/article&gt;
-  
-  
-  
-      &lt;article&gt;
-      
-        &lt;h3&gt;Why is a Messaging System Useful?&lt;/h3&gt;
-        
-  &lt;ul&gt;
-  
     &lt;li&gt;Asynchronous: goroutine&lt;/li&gt;
   
     &lt;li&gt;Batch buffer: buffered channel&lt;/li&gt;
@@ -666,6 +653,10 @@ NewCluster(newBroker NewBrokerFunc, brokers []string) model.Cluster&lt;/pre&gt;&
     &lt;li&gt;Decoupling: backend API&lt;/li&gt;
   
     &lt;li&gt;Resiliency/Scalability: distributed backend API&lt;/li&gt;
+  
+  &lt;/ul&gt;
+
+  &lt;ul&gt;
   
     &lt;li&gt;Multiple consumers: maybe&lt;/li&gt;
   
