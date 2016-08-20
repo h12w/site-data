@@ -73,7 +73,7 @@
   
     &lt;li&gt;Global mobile advertising agency founded in 2014&lt;/li&gt;
   
-    &lt;li&gt;Almost all backend services are written in Go&lt;/li&gt;
+    &lt;li&gt;All backend services are written in Go&lt;/li&gt;
   
     &lt;li&gt;http://www.appcoachs.com&lt;/li&gt;
   
@@ -104,7 +104,7 @@
 
   
   &lt;p&gt;
-    Kafka is good enough:
+    Kafka has excellent design and robust implementation:
   &lt;/p&gt;
   
 
@@ -112,7 +112,7 @@
   
     &lt;li&gt;A distributed, persisted, replicated messaging system&lt;/li&gt;
   
-    &lt;li&gt;Key concepts: topic, partition, offset, consumer group, replication-factor, broker/cluster&lt;/li&gt;
+    &lt;li&gt;Key concepts: topic, partition, offset, retention, replication-factor, partition leader, consumer group, broker/cluster&lt;/li&gt;
   
   &lt;/ul&gt;
 
@@ -638,11 +638,9 @@ NewCluster(newBroker NewBrokerFunc, brokers []string) model.Cluster&lt;/pre&gt;&
   
       &lt;article&gt;
       
-        &lt;h3&gt;When is a Messaging System NOT Useful?&lt;/h3&gt;
+        &lt;h3&gt;When a Messaging System could be Overkill?&lt;/h3&gt;
         
   &lt;ul&gt;
-  
-    &lt;li&gt;Fastest processing required&lt;/li&gt;
   
     &lt;li&gt;Data is disposable&lt;/li&gt;
   
@@ -656,11 +654,22 @@ NewCluster(newBroker NewBrokerFunc, brokers []string) model.Cluster&lt;/pre&gt;&
   
   &lt;/ul&gt;
 
+      
+      &lt;/article&gt;
+  
+  
+  
+      &lt;article&gt;
+      
+        &lt;h3&gt;When a Messaging System INDEED useful?&lt;/h3&gt;
+        
   &lt;ul&gt;
   
-    &lt;li&gt;Multiple consumers: maybe&lt;/li&gt;
+    &lt;li&gt;Delivery guarantees: provide &amp;#34;commit&amp;#34; semantics to the writer (i.e. acknowledging only when your write guaranteed not to be lost)&lt;/li&gt;
   
-    &lt;li&gt;Delivery guarantees: maybe&lt;/li&gt;
+    &lt;li&gt;Order guarantees: handle data consistency by sequencing concurrent updates to nodes&lt;/li&gt;
+  
+    &lt;li&gt;Multiple subscribers: provide the external data subscription feed from the system&lt;/li&gt;
   
   &lt;/ul&gt;
 

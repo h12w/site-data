@@ -68,7 +68,7 @@
   
     <li>Global mobile advertising agency founded in 2014</li>
   
-    <li>Almost all backend services are written in Go</li>
+    <li>All backend services are written in Go</li>
   
     <li>http://www.appcoachs.com</li>
   
@@ -99,7 +99,7 @@
 
   
   <p>
-    Kafka is good enough:
+    Kafka has excellent design and robust implementation:
   </p>
   
 
@@ -107,7 +107,7 @@
   
     <li>A distributed, persisted, replicated messaging system</li>
   
-    <li>Key concepts: topic, partition, offset, consumer group, replication-factor, broker/cluster</li>
+    <li>Key concepts: topic, partition, offset, retention, replication-factor, partition leader, consumer group, broker/cluster</li>
   
   </ul>
 
@@ -633,11 +633,9 @@ NewCluster(newBroker NewBrokerFunc, brokers []string) model.Cluster</pre></div>
   
       <article>
       
-        <h3>When is a Messaging System NOT Useful?</h3>
+        <h3>When a Messaging System could be Overkill?</h3>
         
   <ul>
-  
-    <li>Fastest processing required</li>
   
     <li>Data is disposable</li>
   
@@ -651,11 +649,22 @@ NewCluster(newBroker NewBrokerFunc, brokers []string) model.Cluster</pre></div>
   
   </ul>
 
+      
+      </article>
+  
+  
+  
+      <article>
+      
+        <h3>When a Messaging System INDEED useful?</h3>
+        
   <ul>
   
-    <li>Multiple consumers: maybe</li>
+    <li>Delivery guarantees: provide &#34;commit&#34; semantics to the writer (i.e. acknowledging only when your write guaranteed not to be lost)</li>
   
-    <li>Delivery guarantees: maybe</li>
+    <li>Order guarantees: handle data consistency by sequencing concurrent updates to nodes</li>
+  
+    <li>Multiple subscribers: provide the external data subscription feed from the system</li>
   
   </ul>
 
