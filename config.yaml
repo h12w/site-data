@@ -40,6 +40,7 @@ packages:
   - macro-expand
   - misc
   - realtest
+  - retracer
   - schemata
   - script
   - site
