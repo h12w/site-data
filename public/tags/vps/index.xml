@@ -47,6 +47,10 @@ yum update
 yum install shadowsocks-libev
 cd /etc/shadowsocks-libev/
 vim config.json
+# server should be 0.0.0.0
+
+vi /usr/lib/systemd/system/shadowsocks-libev.service
+# replace all $variables to constant values to fix the bug
 
 systemctl enable shadowsocks-libev
 systemctl start shadowsocks-libev
@@ -59,7 +63,7 @@ yum localinstall pdnsd-1.2.9a-par_sl6.x86_64.rpm
 vim /etc/pdnsd.conf
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;p&gt;pdnsd.conf&lt;/p&gt;
+&lt;p&gt;pdnsd.conf (replace the port)&lt;/p&gt;
 
 &lt;pre&gt;&lt;code&gt;global {
 	run_as      = &amp;quot;pdnsd&amp;quot;;
