@@ -79,14 +79,16 @@
                 </h1>
                 <span class="time">2 September 2016</span>
                 <div class="article-body hyphenate">
-                    <pre><code>mongo --eval &quot;JSON.stringify(db.currentOp(true))&quot; | tail -n +3 | \
-	jq -r .inprog[].client | \
-	sed 's/\(.*\):.*/\1/' \
-	| sort | uniq -c | sort -nr
+                    <pre><code>mongo --eval &quot;JSON.stringify(db.currentOp(true))&quot; | \
+tail -n +3 | \
+jq -r .inprog[].client | \
+sed 's/\(.*\):.*/\1/' \
+| sort | uniq -c | sort -nr
 </code></pre>
 
 <ul>
 <li>dump connection information in standard JSON format</li>
+<li>remove MongoDB header</li>
 <li>extract IP:port as a list</li>
 <li>trim port</li>
 <li>sort IPs by freqencies</li>

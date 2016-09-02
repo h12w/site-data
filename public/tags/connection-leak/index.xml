@@ -16,14 +16,16 @@
       <pubDate>Fri, 02 Sep 2016 15:40:41 +0800</pubDate>
       
       <guid>http://h12.me/note/mongodb-conn/</guid>
-      <description>&lt;pre&gt;&lt;code&gt;mongo --eval &amp;quot;JSON.stringify(db.currentOp(true))&amp;quot; | tail -n +3 | \
-	jq -r .inprog[].client | \
-	sed &#39;s/\(.*\):.*/\1/&#39; \
-	| sort | uniq -c | sort -nr
+      <description>&lt;pre&gt;&lt;code&gt;mongo --eval &amp;quot;JSON.stringify(db.currentOp(true))&amp;quot; | \
+tail -n +3 | \
+jq -r .inprog[].client | \
+sed &#39;s/\(.*\):.*/\1/&#39; \
+| sort | uniq -c | sort -nr
 &lt;/code&gt;&lt;/pre&gt;
 
 &lt;ul&gt;
 &lt;li&gt;dump connection information in standard JSON format&lt;/li&gt;
+&lt;li&gt;remove MongoDB header&lt;/li&gt;
 &lt;li&gt;extract IP:port as a list&lt;/li&gt;
 &lt;li&gt;trim port&lt;/li&gt;
 &lt;li&gt;sort IPs by freqencies&lt;/li&gt;
