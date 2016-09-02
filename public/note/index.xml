@@ -7,8 +7,29 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>Copyright (c) 2012-2016, Hǎiliàng Wáng; all rights reserved.</copyright>
-    <lastBuildDate>Tue, 09 Aug 2016 18:31:04 +0800</lastBuildDate>
+    <lastBuildDate>Fri, 02 Sep 2016 15:40:41 +0800</lastBuildDate>
     <atom:link href="http://h12.me/note/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>One-liner to check MongoDB Connections</title>
+      <link>http://h12.me/note/mongodb-conn/</link>
+      <pubDate>Fri, 02 Sep 2016 15:40:41 +0800</pubDate>
+      
+      <guid>http://h12.me/note/mongodb-conn/</guid>
+      <description>&lt;pre&gt;&lt;code&gt;mongo --eval &amp;quot;JSON.stringify(db.currentOp(true))&amp;quot; | tail -n +3 | \
+	jq -r .inprog[].client | \
+	sed &#39;s/\(.*\):.*/\1/&#39; \
+	| sort | uniq -c | sort -nr
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;ul&gt;
+&lt;li&gt;dump connection information in standard JSON format&lt;/li&gt;
+&lt;li&gt;extract IP:port as a list&lt;/li&gt;
+&lt;li&gt;trim port&lt;/li&gt;
+&lt;li&gt;sort IPs by freqencies&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
     
     <item>
       <title>Counting Word Frequencies in One Line</title>
@@ -610,39 +631,6 @@ if v.Kind() == reflect.String {
 
 &lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;        sudo apt-get install calibre
         ebook-convert xxx.mobi xxx.txt --unsmarten-punctuation
-&lt;/code&gt;&lt;/pre&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>How to &#34;go get&#34; Behind a Proxy</title>
-      <link>http://h12.me/note/go-get-behind-proxy/</link>
-      <pubDate>Wed, 06 May 2015 12:01:11 +0800</pubDate>
-      
-      <guid>http://h12.me/note/go-get-behind-proxy/</guid>
-      <description>
-
-&lt;h2 id=&#34;proxy-for-go-get:70e7a77773bb657f64cd08cb621ddcd5&#34;&gt;Proxy for &amp;ldquo;go get&amp;rdquo;&lt;/h2&gt;
-
-&lt;pre&gt;&lt;code&gt;https_proxy=http://user:pass@proxy_host:port go get ...
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h2 id=&#34;proxy-for-git:70e7a77773bb657f64cd08cb621ddcd5&#34;&gt;Proxy for Git&lt;/h2&gt;
-
-&lt;p&gt;In &lt;code&gt;$HOME/.gitconfig&lt;/code&gt;:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;[https]
-	proxy = proxy_url
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h2 id=&#34;proxy-for-mercurial:70e7a77773bb657f64cd08cb621ddcd5&#34;&gt;Proxy for Mercurial&lt;/h2&gt;
-
-&lt;p&gt;In &lt;code&gt;$HOME/.hgrc&lt;/code&gt;:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;[http_proxy]
-host = host:port
-user = ...
-passwd = ...
 &lt;/code&gt;&lt;/pre&gt;
 </description>
     </item>

@@ -7,8 +7,29 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>Copyright (c) 2012-2016, Hǎiliàng Wáng; all rights reserved.</copyright>
-    <lastBuildDate>Sun, 21 Aug 2016 13:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 02 Sep 2016 15:40:41 +0800</lastBuildDate>
     <atom:link href="http://h12.me/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>One-liner to check MongoDB Connections</title>
+      <link>http://h12.me/note/mongodb-conn/</link>
+      <pubDate>Fri, 02 Sep 2016 15:40:41 +0800</pubDate>
+      
+      <guid>http://h12.me/note/mongodb-conn/</guid>
+      <description>&lt;pre&gt;&lt;code&gt;mongo --eval &amp;quot;JSON.stringify(db.currentOp(true))&amp;quot; | tail -n +3 | \
+	jq -r .inprog[].client | \
+	sed &#39;s/\(.*\):.*/\1/&#39; \
+	| sort | uniq -c | sort -nr
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;ul&gt;
+&lt;li&gt;dump connection information in standard JSON format&lt;/li&gt;
+&lt;li&gt;extract IP:port as a list&lt;/li&gt;
+&lt;li&gt;trim port&lt;/li&gt;
+&lt;li&gt;sort IPs by freqencies&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
     
     <item>
       <title>kpax</title>
@@ -1364,24 +1385,6 @@ make sure the proxy is safe before this step).&lt;/p&gt;&lt;/li&gt;
 &lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;appcfg.py . --email=[address] --passin
 &lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
 &lt;/ol&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Phonetic Notations</title>
-      <link>http://h12.me/note/phonetic-notations/</link>
-      <pubDate>Tue, 30 Jun 2015 12:43:19 +0800</pubDate>
-      
-      <guid>http://h12.me/note/phonetic-notations/</guid>
-      <description>
-
-&lt;h2 id=&#34;google-dictionary:94ca165df739a66252ddc3004eb84c61&#34;&gt;Google Dictionary&lt;/h2&gt;
-
-&lt;p&gt;Google dictionary uses a phonetic notation same as &lt;a href=&#34;http://en.wikipedia.org/wiki/Pronunciation_respelling_for_English&#34;&gt;NORD (New Oxford American Dictionary)&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;To figure out an unknown phonetic notation, the simple way is to look up a few words that you know how to pronounce:
-church, hat, which, judge, game, thing, ship, thin, this, yes, pleasure
-cat, pay, care, father, arm, let, see, here, city, my, pot, no, caught, war, force, boy, put, tour, boot, out, cut, word, item, rabbit, winner, pupil&lt;/p&gt;
 </description>
     </item>
     

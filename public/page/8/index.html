@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title> Mongodb </title>
+        <title> h12.me </title>
         <link rel="shortcut icon" href="/img/favicon.png" />
 
         <style>
@@ -70,24 +70,63 @@
         </header>
 
         <main class="container">
-        <h1 class="list">Mongodb</h1>
-            
-            <article class="list">
-                <h2>
-                    <a href="http://h12.me/note/mongodb-conn/">One-liner to check MongoDB Connections</a><br>
-                </h2>
-                <span class="time">2 September 2016</span>
-                <span class="tags"></span>
+        
+        
+            <article class="frontpage">
+                <h1>
+                    <a href="http://h12.me/project/socks/">SOCKS: a SOCKS Proxy Package for Go</a>
+                    <span class="line"></span>
+                </h1>
+                <span class="time">1 August 2012</span>
+                <div class="article-body hyphenate">
+                    
+
+<p><a href="https://godoc.org/h12.me/socks"><img src="https://godoc.org/h12.me/socks?status.svg" alt="GoDoc" />
+</a></p>
+
+<p>SOCKS is a SOCKS4, SOCKS4A and SOCKS5 proxy package for Go.</p>
+
+<h2 id="quick-start:d77d00cbd213acbdf85f41426e5559a4">Quick Start</h2>
+
+<h3 id="get-the-package:d77d00cbd213acbdf85f41426e5559a4">Get the package</h3>
+
+<pre><code>go get -u &quot;h12.me/socks&quot;
+</code></pre>
+
+<h3 id="import-the-package:d77d00cbd213acbdf85f41426e5559a4">Import the package</h3>
+
+<pre><code>import &quot;h12.me/socks&quot;
+</code></pre>
+
+<h3 id="create-a-socks-proxy-dialing-function:d77d00cbd213acbdf85f41426e5559a4">Create a SOCKS proxy dialing function</h3>
+
+<pre><code>dialSocksProxy := socks.DialSocksProxy(socks.SOCKS5, &quot;127.0.0.1:1080&quot;)
+tr := &amp;http.Transport{Dial: dialSocksProxy}
+httpClient := &amp;http.Client{Transport: tr}
+</code></pre>
+
+<h2 id="alternatives:d77d00cbd213acbdf85f41426e5559a4">Alternatives</h2>
+
+<p><a href="http://code.google.com/p/go/source/browse/?repo=net#hg%2Fproxy">http://code.google.com/p/go/source/browse/?repo=net#hg%2Fproxy</a></p>
+
+                </div>
             </article>
+        
+        <nav class="pagination">
+            <span>- 8 -</span>
+            <ul>
+                <li>
             
-            <article class="list">
-                <h2>
-                    <a href="http://h12.me/project/realtest/">RealTest: real test environment for Go</a><br>
-                </h2>
-                <span class="time">14 November 2015</span>
-                <span class="tags"></span>
-            </article>
+                    <a href="/page/7">« Prev</a>
             
+                </li>
+                <li>
+            
+                    <span class="disabled">Next »</span>
+            
+                </li>
+            </ul>
+        </nav>
         </main>
         <footer id="site-footer">
             <hr>

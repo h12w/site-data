@@ -3,8 +3,13 @@
   
   <url>
     <loc>http://h12.me/</loc>
-    <lastmod>2016-08-21T13:00:00+00:00</lastmod>
+    <lastmod>2016-09-02T15:40:41+08:00</lastmod>
     <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://h12.me/note/mongodb-conn/</loc>
+    <lastmod>2016-09-02T15:40:41+08:00</lastmod>
   </url>
   
   <url>

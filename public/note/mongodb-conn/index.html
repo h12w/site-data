@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title> Mongodb </title>
+        <title> One-liner to check MongoDB Connections </title>
         <link rel="shortcut icon" href="/img/favicon.png" />
 
         <style>
@@ -70,24 +70,37 @@
         </header>
 
         <main class="container">
-        <h1 class="list">Mongodb</h1>
-            
-            <article class="list">
-                <h2>
-                    <a href="http://h12.me/note/mongodb-conn/">One-liner to check MongoDB Connections</a><br>
-                </h2>
-                <span class="time">2 September 2016</span>
-                <span class="tags"></span>
+            <article class="single">
+                <h1>One-liner to check MongoDB Connections</h1>
+                <div class="article-body hyphenate">
+                <pre><code>mongo --eval &quot;JSON.stringify(db.currentOp(true))&quot; | tail -n +3 | \
+	jq -r .inprog[].client | \
+	sed 's/\(.*\):.*/\1/' \
+	| sort | uniq -c | sort -nr
+</code></pre>
+
+<ul>
+<li>dump connection information in standard JSON format</li>
+<li>extract IP:port as a list</li>
+<li>trim port</li>
+<li>sort IPs by freqencies</li>
+</ul>
+
+                </div>
+                <div>
+                    <div id="article-time">2 September 2016</div>
+                    <ul id="tags">
+  
+    <li><a href="/tags/mongodb">MongoDB</a> </li>
+  
+    <li><a href="/tags/one-liner">one-liner</a> </li>
+  
+    <li><a href="/tags/connection-leak">connection leak</a> </li>
+  
+</ul>
+
+                </div>
             </article>
-            
-            <article class="list">
-                <h2>
-                    <a href="http://h12.me/project/realtest/">RealTest: real test environment for Go</a><br>
-                </h2>
-                <span class="time">14 November 2015</span>
-                <span class="tags"></span>
-            </article>
-            
         </main>
         <footer id="site-footer">
             <hr>
