@@ -74,6 +74,28 @@
         
             <article class="frontpage">
                 <h1>
+                    <a href="http://h12.me/note/about-pretty-print/">About Pretty Printing</a>
+                    <span class="line"></span>
+                </h1>
+                <span class="time">1 February 2016</span>
+                <div class="article-body hyphenate">
+                    
+
+<h2 id="json:1197732d8fa443c2a3177ffc1bd0267c">JSON</h2>
+
+<pre><code class="language-bash">cat xxx.json | jq .
+</code></pre>
+
+<h2 id="xml:1197732d8fa443c2a3177ffc1bd0267c">XML</h2>
+
+<pre><code class="language-bash">cat xxx.xml | xmllint --format -
+</code></pre>
+
+                </div>
+            </article>
+        
+            <article class="frontpage">
+                <h1>
                     <a href="http://h12.me/note/send-email-from-gmail/">Sending Email from Gmail using Go</a>
                     <span class="line"></span>
                 </h1>
@@ -411,56 +433,6 @@ x-oss-acl becomes X-Oss-Acl</li>
 <ul>
 <li><a href="https://github.com/AnotherGoogleFans">Tao Huang</a></li>
 </ul>
-
-                </div>
-            </article>
-        
-            <article class="frontpage">
-                <h1>
-                    <a href="http://h12.me/note/proxy-notes/">A Comprehensive Note about Proxy Settings</a>
-                    <span class="line"></span>
-                </h1>
-                <span class="time">8 July 2015</span>
-                <div class="article-body hyphenate">
-                    
-
-<h2 id="git:98bdf1dc45f059ee4334ef1c195fb8bb">Git</h2>
-
-<pre><code class="language-bash">&gt; cat ~/.gitconfig
-[http]
-	proxy = socks5://[host]:[port]
-[https]
-	proxy = socks5://[host]:[port]
-</code></pre>
-
-<h2 id="curl-homebrew:98bdf1dc45f059ee4334ef1c195fb8bb">Curl (Homebrew)</h2>
-
-<pre><code class="language-bash">&gt; cat ~/.curlrc
-socks5 = &quot;[host]:[port]&quot;
-</code></pre>
-
-<h2 id="docker-pull:98bdf1dc45f059ee4334ef1c195fb8bb">Docker pull</h2>
-
-<pre><code class="language-fish">env HTTP_PROXY=http://xxx docker pull yyy
-</code></pre>
-
-<h2 id="gae:98bdf1dc45f059ee4334ef1c195fb8bb">GAE</h2>
-
-<ol>
-<li><p>Set proxy</p>
-
-<pre><code class="language-bash">export HTTP_PROXY http://[host]:[port]
-export HTTPS_PROXY http://[host]:[port]
-</code></pre></li>
-
-<li><p>Delete cacerts.txt under GAE SDK installation to disable SSL verification (
-make sure the proxy is safe before this step).</p></li>
-
-<li><p>Deploy.</p>
-
-<pre><code class="language-bash">appcfg.py . --email=[address] --passin
-</code></pre></li>
-</ol>
 
                 </div>
             </article>

@@ -7,8 +7,27 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>Copyright (c) 2012-2016, Hǎiliàng Wáng; all rights reserved.</copyright>
-    <lastBuildDate>Fri, 02 Sep 2016 15:40:41 +0800</lastBuildDate>
+    <lastBuildDate>Mon, 05 Sep 2016 10:30:49 +0800</lastBuildDate>
     <atom:link href="http://h12.me/note/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Making Code Block Wrap in Jira</title>
+      <link>http://h12.me/note/make-jira-code-wrap/</link>
+      <pubDate>Mon, 05 Sep 2016 10:30:49 +0800</pubDate>
+      
+      <guid>http://h12.me/note/make-jira-code-wrap/</guid>
+      <description>&lt;p&gt;It is a hack.&lt;/p&gt;
+
+&lt;p&gt;Set Jira Administration -&amp;gt; System -&amp;gt; Announcement Banner -&amp;gt; Announcement:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-css&#34;&gt;&amp;lt;style type=&amp;quot;text/css&amp;quot;&amp;gt;
+pre {
+    white-space: pre-wrap!important;
+}
+&amp;lt;/style&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+</description>
+    </item>
     
     <item>
       <title>One-liner to check MongoDB Connections</title>
@@ -603,37 +622,6 @@ if v.Kind() == reflect.String {
 &lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;Just use slice literal instead!&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Ebook Manipulation Tools</title>
-      <link>http://h12.me/note/ebook-tools/</link>
-      <pubDate>Thu, 04 Jun 2015 14:19:38 +0800</pubDate>
-      
-      <guid>http://h12.me/note/ebook-tools/</guid>
-      <description>&lt;ul&gt;
-&lt;li&gt;Ebook manager: &lt;a href=&#34;http://calibre-ebook.com/&#34;&gt;Calibre&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Kindle PDF optimizer: &lt;a href=&#34;http://www.willus.com/k2pdfopt/&#34;&gt;k2pdfopt&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;PDF Border Cropper &lt;a href=&#34;http://sourceforge.net/projects/briss/&#34;&gt;Briss&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;CHM File Extractor &lt;a href=&#34;https://github.com/dottedmag/archmage&#34;&gt;archmage&lt;/a&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;PDF editing &lt;a href=&#34;http://xournal.sourceforge.net&#34;&gt;Xournal&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;convert images to PDF&lt;/p&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;	sudo apt-get install imagemagick
-	convert *.jpg pictures.pdf
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;ul&gt;
-&lt;li&gt;convert between different formats:&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;        sudo apt-get install calibre
-        ebook-convert xxx.mobi xxx.txt --unsmarten-punctuation
-&lt;/code&gt;&lt;/pre&gt;
 </description>
     </item>
     
