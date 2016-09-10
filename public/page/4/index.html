@@ -74,6 +74,44 @@
         
             <article class="frontpage">
                 <h1>
+                    <a href="http://h12.me/note/tips-on-ssh/">Tips on SSH</a>
+                    <span class="line"></span>
+                </h1>
+                <span class="time">28 April 2015</span>
+                <div class="article-body hyphenate">
+                    
+
+<h2 id="generate-ssh-keys:94a5150ca2ae26062cc82162c1b651e1">Generate SSH keys</h2>
+
+<pre><code class="language-bash">ssh-keygen -C w@h12.me
+</code></pre>
+
+<h2 id="authorize-public-key-at-remote-server:94a5150ca2ae26062cc82162c1b651e1">Authorize public key at remote server</h2>
+
+<pre><code class="language-bash">ssh-copy-id user@host
+</code></pre>
+
+<p>On Mac OSX, <code>ssh-copy-id</code> should be installed first.</p>
+
+<pre><code class="language-bash">brew install ssh-copy-id
+</code></pre>
+
+<h2 id="generate-pem:94a5150ca2ae26062cc82162c1b651e1">Generate PEM</h2>
+
+<pre><code class="language-bash">ssh-keygen -f ~/.ssh/id_rsa -e -m pem &gt; ~/.ssh/id_rsa.pem
+</code></pre>
+
+<h2 id="copy-file-by-base64:94a5150ca2ae26062cc82162c1b651e1">Copy file by base64</h2>
+
+<p>On remote session, run <code>base64 &lt; myfile</code> and copy the output.</p>
+
+<p>On local terminal, run <code>base64 -d &gt; myfile</code>, paste the content and press <code>ctrl+D</code>.</p>
+
+                </div>
+            </article>
+        
+            <article class="frontpage">
+                <h1>
                     <a href="http://h12.me/note/generate-xsd-from-xml/">How to Generate XSD Schema from XML?</a>
                     <span class="line"></span>
                 </h1>
@@ -635,30 +673,6 @@ the custom domain in the Developer Console.</li>
                 <span class="time">17 January 2015</span>
                 <div class="article-body hyphenate">
                     <p>See this blog <a href="https://samhobbs.co.uk/2013/12/remove-network-may-be-monitored-by-an-unknown-third-party-in-android-4-4-kitkat"><em>Remove &ldquo;Network May Be Monitored by an Unknown Third Party&rdquo; in Android 4.4 KitKat</em></a>.</p>
-
-                </div>
-            </article>
-        
-            <article class="frontpage">
-                <h1>
-                    <a href="http://h12.me/note/new-domain-h12/">A Shorter Domain Name</a>
-                    <span class="line"></span>
-                </h1>
-                <span class="time">16 December 2014</span>
-                <div class="article-body hyphenate">
-                    <p>This year, I decided not to renewal the previous domain name (hailiang.ws) last
-year, but to register a shorter one. There are two reasons:</p>
-
-<ol>
-<li>Both the site URL and the email address will be cleaner.</li>
-<li>A more friendly Go import path will be possible for my repositories on Github.</li>
-</ol>
-
-<p>After comparing various choices on major domain providers, I chose <code>h12.me</code> as
-the new domain. It is the shortest but still meaningful domain that I can afford.
-<code>H</code> is the initial letter of my given name, <code>12</code> is simply the number of letters
-of my full name, and <code>.me</code> is a top level domain quite suitable for a personal
-website.</p>
 
                 </div>
             </article>
