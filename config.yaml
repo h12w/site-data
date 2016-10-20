@@ -36,6 +36,7 @@ packages:
   gspec:
   html-query:
   httpauth:
+  json-schema:
   kpax: ["v1", "v2"]
   macro-expand:
   misc:
