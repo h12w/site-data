@@ -27,6 +27,7 @@ packages:
   go-sdl:
   go-shapefile:
   go-zip:
+  go-flags:
   gombi:
   gorun:
   gosweep:
@@ -36,10 +37,12 @@ packages:
   gspec:
   html-query:
   httpauth:
+  httpdump:
   json-schema:
   kpax: ["v1", "v2"]
   macro-expand:
   misc:
+  mitm:
   realtest:
   retracer:
   schemata:
