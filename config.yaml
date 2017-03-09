@@ -45,6 +45,7 @@ packages:
   misc:
   mitm:
   mongodb-json:
+  mongoschema:
   realtest:
   retracer:
   schemata:
