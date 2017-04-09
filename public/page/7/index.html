@@ -74,6 +74,24 @@
         
             <article class="frontpage">
                 <h1>
+                    <a href="http://h12.me/note/site-test/">A List of Website Testing Services</a>
+                    <span class="line"></span>
+                </h1>
+                <span class="time">3 July 2014</span>
+                <div class="article-body hyphenate">
+                    <ul>
+<li><a href="http://validator.w3.org/">The W3C Markup Validation Service</a></li>
+<li><a href="http://developers.google.com/speed/pagespeed/insights/">Google PageSpeed Insights</a></li>
+<li><a href="http://tools.pingdom.com/fpt/">Pingdom Website Speed Test</a></li>
+<li><a href="http://nibbler.silktide.com">Nibbler</a></li>
+<li><a href="http://www.browserstack.com/screenshots">BrowserStack</a></li>
+</ul>
+
+                </div>
+            </article>
+        
+            <article class="frontpage">
+                <h1>
                     <a href="http://h12.me/note/narrow-fonts/">A List of Narrow Fonts for Titles</a>
                     <span class="line"></span>
                 </h1>
@@ -293,133 +311,6 @@ interface. An io.Reader is provided to be decoded by the encoding/json package.<
 	Requester
 	Handle(r io.Reader, s Storer) error
 }
-</code></pre>
-
-                </div>
-            </article>
-        
-            <article class="frontpage">
-                <h1>
-                    <a href="http://h12.me/project/gspec/">GSpec: a productive Go test framework</a>
-                    <span class="line"></span>
-                </h1>
-                <span class="time">28 May 2014</span>
-                <div class="article-body hyphenate">
-                    
-
-<p><a href="https://app.wercker.com/project/bykey/d5ed30f0d03d4a5210f65659ead13888"><img src="https://app.wercker.com/status/d5ed30f0d03d4a5210f65659ead13888/s" alt="wercker status" title="wercker status" />
-</a>
-<a href="https://godoc.org/h12.me/gspec"><img src="https://godoc.org/h12.me/gspec?status.png" alt="GoDoc" />
-</a></p>
-
-<p>GSpec is an <em>expressive, reliable, concurrent and extensible</em> Go test framework
-that makes it productive to organize and verify the mind model of software.</p>
-
-<ul>
-<li><em>Expressive</em>: a complete runnable specification can be organized via both BDD
-            and table driven styles.</li>
-<li><em>Reliable</em>:   the implementation has minimal footprint and is tested with 100%
-            coverage.</li>
-<li><em>Concurrent</em>: test cases can be executed concurrently or sequentially.</li>
-<li><em>Extensible</em>: customizable BDD cue words, expectations and test reporters.</li>
-<li><em>Compatible</em>: &ldquo;go test&rdquo; is sufficient but not mandatory to run GSpec tests.</li>
-</ul>
-
-<h2 id="quick-start:4a2050c4ac0cfa42fab8c8cafa02e158">Quick start</h2>
-
-<h3 id="get-gspec:4a2050c4ac0cfa42fab8c8cafa02e158">Get GSpec</h3>
-
-<pre><code class="language-bash">go get -u -f h12.me/gspec
-go test h12.me/gspec/...
-</code></pre>
-
-<h3 id="write-tests-with-gspec:4a2050c4ac0cfa42fab8c8cafa02e158">Write tests with GSpec</h3>
-
-<p>According to the <a href="http://golang.org/doc/code.html#Testing">convention of Go</a>,
-write GSpec tests in file xxx_test.go to test code in xxx.go.</p>
-
-<pre><code class="language-go">import (
-	&quot;fmt&quot;
-
-	&quot;h12.me/gspec&quot;
-)
-
-// Only one suite.Add is needed for each xxx_test.go file.
-var _ = gspec.Add(func(s gspec.S) {
-	// BDD cue word is customizible.
-	describe, given, when, it := s.Alias(&quot;describe&quot;), s.Alias(&quot;given&quot;), s.Alias(&quot;when&quot;), s.Alias(&quot;it&quot;)
-	// expectation cue word is customizible too.
-	expect := gspec.Alias(s.FailNow)
-
-	// A BDD example.
-	describe(&quot;an integer i&quot;, func() {
-		// setup
-		i := 2
-		defer func() {
-			// teardown (if any)
-		}()
-		given(&quot;another integer j&quot;, func() {
-			j := 3
-			when(&quot;j is added to i&quot;, func() {
-				i += j
-				it(&quot;should become the sum of original i and j&quot;, func() {
-					expect(i).Equal(5) // a passing case
-				})
-			})
-			when(&quot;j is minused from i&quot;, func() {
-				i -= j
-				it(&quot;should become the difference of j minus i&quot;, func() {
-					expect(i).Equal(4) // a failing case
-				})
-			})
-			when(&quot;j is multiplied to i&quot;, nil) // a pending case
-		})
-	})
-
-	// A table-driven example.
-	testcase := s.Alias(&quot;testcase&quot;)
-	describe(&quot;integer summation&quot;, func() {
-		for _, c := range []struct{ i, j, sum int }{
-			{1, 2, 3}, // a passing case
-			{1, 1, 0}, // a failing case
-		} {
-			testcase(fmt.Sprintf(`%d + %d = %d`, c.i, c.j, c.sum), func() {
-				expect(c.i + c.j).Equal(c.sum)
-			})
-		}
-	})
-})
-</code></pre>
-
-<p>Write the following go test function for only once in any test file within the
-package (e.g. all_test.go).</p>
-
-<pre><code class="language-go">import (
-	&quot;testing&quot;
-	&quot;h12.me/gspec&quot;
-)
-
-// Defined only once within a package.
-func TestAll(t *testing.T) {
-	gspec.Test(t)
-}
-</code></pre>
-
-<h3 id="run-tests-with-go-test:4a2050c4ac0cfa42fab8c8cafa02e158">Run tests with &ldquo;go test&rdquo;</h3>
-
-<p>Run all the tests concurrently (sequencially by default) and display errors.</p>
-
-<pre><code class="language-bash">go test -concurrent
-</code></pre>
-
-<p>Run all the tests and view the complete specification.</p>
-
-<pre><code class="language-bash">go test -v
-</code></pre>
-
-<p>Run only a failing test case (even it is an entry in the driven table):</p>
-
-<pre><code class="language-bash">go test -focus 1/1
 </code></pre>
 
                 </div>

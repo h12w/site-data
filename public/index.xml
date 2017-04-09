@@ -7,8 +7,20 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>Copyright (c) 2012-2016, Hǎiliàng Wáng; all rights reserved.</copyright>
-    <lastBuildDate>Sat, 10 Sep 2016 09:08:10 +0800</lastBuildDate>
+    <lastBuildDate>Sun, 09 Apr 2017 14:30:03 +0800</lastBuildDate>
     <atom:link href="http://h12.me/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>A Single Command to Download a Website</title>
+      <link>http://h12.me/note/download-website/</link>
+      <pubDate>Sun, 09 Apr 2017 14:30:03 +0800</pubDate>
+      
+      <guid>http://h12.me/note/download-website/</guid>
+      <description>&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;wget --recursive --level=2 --no-parent --no-clobber --convert-links --continue
+[URL]
+&lt;/code&gt;&lt;/pre&gt;
+</description>
+    </item>
     
     <item>
       <title>How to Remove Old Kernels in Ubuntu</title>
@@ -1256,20 +1268,6 @@ x-oss-acl becomes X-Oss-Acl&lt;/li&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;https://docs.aliyun.com/#/pub/oss&#34;&gt;OSS Document (Chinese)&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>How to Remove All Exited Containers &amp; Dangling Images for Docker?</title>
-      <link>http://h12.me/note/remove-all-exited-docker-containers/</link>
-      <pubDate>Mon, 03 Aug 2015 16:55:49 +0800</pubDate>
-      
-      <guid>http://h12.me/note/remove-all-exited-docker-containers/</guid>
-      <description>&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;docker ps --quiet --filter=status=exited | xargs docker rm
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;docker images --no-trunc=true --filter=&amp;quot;dangling=true&amp;quot; --quiet=true | xargs docker rmi
-&lt;/code&gt;&lt;/pre&gt;
 </description>
     </item>
     

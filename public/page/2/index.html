@@ -74,6 +74,38 @@
         
             <article class="frontpage">
                 <h1>
+                    <a href="http://h12.me/note/on-reliable-persistence/">On Reliable Persistence</a>
+                    <span class="line"></span>
+                </h1>
+                <span class="time">2 July 2016</span>
+                <div class="article-body hyphenate">
+                    <p>A short investigation on reliable persistence:</p>
+
+<ul>
+<li><p>Crash consistency is <a href="http://danluu.com/file-consistency/">hard</a> but
+<a href="https://www.flamingspork.com/talks/">possible</a> at a huge performance
+<a href="https://www.google.com/#q=fsync+performance">cost</a></p></li>
+
+<li><p>Data safty must rely on distributed solution</p>
+
+<ul>
+<li><a href="https://raft.github.io">Raft</a></li>
+</ul></li>
+
+<li><p>Perhaps we should just give up manual fsync and rely on</p>
+
+<ul>
+<li>OS background flush</li>
+<li>corruption detection &amp; correction at startup</li>
+<li><a href="https://kafka.apache.org/08/ops.html">replication</a></li>
+</ul></li>
+</ul>
+
+                </div>
+            </article>
+        
+            <article class="frontpage">
+                <h1>
                     <a href="http://h12.me/note/openwrt-note/">Note on OpenWRT</a>
                     <span class="line"></span>
                 </h1>
@@ -430,22 +462,6 @@ x-oss-acl becomes X-Oss-Acl</li>
 <ul>
 <li><a href="https://docs.aliyun.com/#/pub/oss">OSS Document (Chinese)</a></li>
 </ul>
-
-                </div>
-            </article>
-        
-            <article class="frontpage">
-                <h1>
-                    <a href="http://h12.me/note/remove-all-exited-docker-containers/">How to Remove All Exited Containers &amp; Dangling Images for Docker?</a>
-                    <span class="line"></span>
-                </h1>
-                <span class="time">3 August 2015</span>
-                <div class="article-body hyphenate">
-                    <pre><code class="language-bash">docker ps --quiet --filter=status=exited | xargs docker rm
-</code></pre>
-
-<pre><code class="language-bash">docker images --no-trunc=true --filter=&quot;dangling=true&quot; --quiet=true | xargs docker rmi
-</code></pre>
 
                 </div>
             </article>
