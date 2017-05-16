@@ -29,6 +29,7 @@ packages:
   go-shapefile:
   go-zip:
   go-flags:
+  gogetx:
   gombi:
   gorun:
   gosweep:
