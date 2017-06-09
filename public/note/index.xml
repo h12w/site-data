@@ -7,8 +7,20 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>Copyright (c) 2012-2016, Hǎiliàng Wáng; all rights reserved.</copyright>
-    <lastBuildDate>Sun, 09 Apr 2017 14:30:03 +0800</lastBuildDate>
+    <lastBuildDate>Fri, 09 Jun 2017 13:41:44 +0800</lastBuildDate>
     <atom:link href="http://h12.me/note/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>How to Delete a Git Branch</title>
+      <link>http://h12.me/note/delete-git-branch/</link>
+      <pubDate>Fri, 09 Jun 2017 13:41:44 +0800</pubDate>
+      
+      <guid>http://h12.me/note/delete-git-branch/</guid>
+      <description>&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;git branch      --delete [branch-name]
+git push origin --delete [branch-name]
+&lt;/code&gt;&lt;/pre&gt;
+</description>
+    </item>
     
     <item>
       <title>A Single Command to Download a Website</title>
@@ -445,24 +457,6 @@ make sure the proxy is safe before this step).&lt;/p&gt;&lt;/li&gt;
 &lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;appcfg.py . --email=[address] --passin
 &lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
 &lt;/ol&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Phonetic Notations</title>
-      <link>http://h12.me/note/phonetic-notations/</link>
-      <pubDate>Tue, 30 Jun 2015 12:43:19 +0800</pubDate>
-      
-      <guid>http://h12.me/note/phonetic-notations/</guid>
-      <description>
-
-&lt;h2 id=&#34;google-dictionary:94ca165df739a66252ddc3004eb84c61&#34;&gt;Google Dictionary&lt;/h2&gt;
-
-&lt;p&gt;Google dictionary uses a phonetic notation same as &lt;a href=&#34;http://en.wikipedia.org/wiki/Pronunciation_respelling_for_English&#34;&gt;NORD (New Oxford American Dictionary)&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;To figure out an unknown phonetic notation, the simple way is to look up a few words that you know how to pronounce:
-church, hat, which, judge, game, thing, ship, thin, this, yes, pleasure
-cat, pay, care, father, arm, let, see, here, city, my, pot, no, caught, war, force, boy, put, tour, boot, out, cut, word, item, rabbit, winner, pupil&lt;/p&gt;
 </description>
     </item>
     

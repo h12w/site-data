@@ -7,8 +7,20 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>Copyright (c) 2012-2016, Hǎiliàng Wáng; all rights reserved.</copyright>
-    <lastBuildDate>Sun, 09 Apr 2017 14:30:03 +0800</lastBuildDate>
+    <lastBuildDate>Fri, 09 Jun 2017 13:41:44 +0800</lastBuildDate>
     <atom:link href="http://h12.me/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>How to Delete a Git Branch</title>
+      <link>http://h12.me/note/delete-git-branch/</link>
+      <pubDate>Fri, 09 Jun 2017 13:41:44 +0800</pubDate>
+      
+      <guid>http://h12.me/note/delete-git-branch/</guid>
+      <description>&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;git branch      --delete [branch-name]
+git push origin --delete [branch-name]
+&lt;/code&gt;&lt;/pre&gt;
+</description>
+    </item>
     
     <item>
       <title>A Single Command to Download a Website</title>
@@ -1163,110 +1175,6 @@ func main() {
 
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;https://github.com/AnotherGoogleFans&#34;&gt;Tao Huang&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Aliyun OSS Go SDK</title>
-      <link>http://h12.me/project/aliyun-oss-go-sdk/</link>
-      <pubDate>Thu, 22 Oct 2015 15:32:58 +0800</pubDate>
-      
-      <guid>http://h12.me/project/aliyun-oss-go-sdk/</guid>
-      <description>
-
-&lt;p&gt;&lt;a href=&#34;https://drone.io/github.com/h12w/aliyun-oss-go-sdk/latest&#34;&gt;&lt;img src=&#34;https://drone.io/github.com/h12w/aliyun-oss-go-sdk/status.png&#34; alt=&#34;Build
-Status&#34; /&gt;
-&lt;/a&gt;
-&lt;a href=&#34;https://coveralls.io/github/h12w/aliyun-oss-go-sdk?branch=master&#34;&gt;&lt;img src=&#34;https://coveralls.io/repos/h12w/aliyun-oss-go-sdk/badge.svg?branch=master&amp;amp;service=github&#34; alt=&#34;Coverage
-Status&#34; /&gt;
-&lt;/a&gt;
-&lt;a href=&#34;https://godoc.org/github.com/aliyun/aliyun-oss-go-sdk/oss&#34;&gt;&lt;img src=&#34;https://godoc.org/github.com/aliyun/aliyun-oss-go-sdk/oss?status.svg&#34; alt=&#34;GoDoc&#34; /&gt;
-&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;Aliyun OSS (Object Storage Service) Go SDK is a client SDK to access Aliyun OSS
-API, implemented in the Go programming language.&lt;/p&gt;
-
-&lt;h2 id=&#34;installation:f87687907588b3c94606277d316d7263&#34;&gt;Installation&lt;/h2&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;go get -u github.com/aliyun/aliyun-oss-go-sdk/oss
-go test -v -cover github.com/aliyun/aliyun-oss-go-sdk/oss
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h2 id=&#34;highlights:f87687907588b3c94606277d316d7263&#34;&gt;Highlights&lt;/h2&gt;
-
-&lt;ul&gt;
-&lt;li&gt;Complete set of Aliyun OSS API&lt;/li&gt;
-&lt;li&gt;Thouroughly tested
-
-&lt;ul&gt;
-&lt;li&gt;100% test coverage&lt;/li&gt;
-&lt;li&gt;intuitive table driven tests&lt;/li&gt;
-&lt;li&gt;full test suite completes within 2 seconds&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;Lint clean
-
-&lt;ul&gt;
-&lt;li&gt;golint&lt;/li&gt;
-&lt;li&gt;go fmt&lt;/li&gt;
-&lt;li&gt;goimports&lt;/li&gt;
-&lt;li&gt;go vet&lt;/li&gt;
-&lt;li&gt;race detector&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;Idiomatic &amp;amp; elegant
-
-&lt;ul&gt;
-&lt;li&gt;response is returned as a parsed object&lt;/li&gt;
-&lt;li&gt;error is returned as a Go error&lt;/li&gt;
-&lt;li&gt;named options for setting headers &amp;amp; parameters&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;Great extensibility
-
-&lt;ul&gt;
-&lt;li&gt;clean and orthogonal implementation&lt;/li&gt;
-&lt;li&gt;users can easily extend the SDK when a new API method is supported&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;No third party dependencies&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&#34;documentation:f87687907588b3c94606277d316d7263&#34;&gt;Documentation&lt;/h2&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;doc/overview.md&#34;&gt;Overview&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;doc/api-object.md&#34;&gt;API Object&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;doc/bucket.md&#34;&gt;Bucket&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;doc/object.md&#34;&gt;Object&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;doc/options.md&#34;&gt;Optional Headers and Parameters&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;doc/upload.md&#34;&gt;Multipart Upload&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;doc/cors.md&#34;&gt;Cross-Origin Resource Sharing (CORS)&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;doc/lifecycle.md&#34;&gt;Object Lifecycle Management&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;doc/extend.md&#34;&gt;Extending the SDK&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&#34;differences-with-python-sdk:f87687907588b3c94606277d316d7263&#34;&gt;Differences with Python SDK&lt;/h2&gt;
-
-&lt;ul&gt;
-&lt;li&gt;HTTP header User-Agent, e.g. aliyun-sdk-go/0.1.1 (Linux/3.16.0-51-generic/x86_64;go1.5.1)&lt;/li&gt;
-&lt;li&gt;Go HTTP client does not support 100-Continue (will be supported after Go 1.6, see &lt;a href=&#34;https://github.com/golang/go/issues/3665&#34;&gt;https://github.com/golang/go/issues/3665&lt;/a&gt;)&lt;/li&gt;
-&lt;li&gt;HTTP header keys are automatically converted into canonical format, e.g.
-x-oss-acl becomes X-Oss-Acl&lt;/li&gt;
-&lt;li&gt;Go GET request does not have redundant &amp;ldquo;Content-Length: 0&amp;rdquo; header&lt;/li&gt;
-&lt;li&gt;Parameters will be omitted if the argument is not set&lt;/li&gt;
-&lt;li&gt;Go always sends URL parameters and headers in canonical order&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&#34;author:f87687907588b3c94606277d316d7263&#34;&gt;Author&lt;/h2&gt;
-
-&lt;p&gt;&lt;a href=&#34;https://github.com/h12w&#34;&gt;Hǎiliàng Wáng&lt;/a&gt;&lt;/p&gt;
-
-&lt;h2 id=&#34;license:f87687907588b3c94606277d316d7263&#34;&gt;License&lt;/h2&gt;
-
-&lt;p&gt;licensed under the &lt;a href=&#34;https://www.apache.org/licenses/LICENSE-2.0.html&#34;&gt;Apache License 2.0&lt;/a&gt;&lt;/p&gt;
-
-&lt;h2 id=&#34;references:f87687907588b3c94606277d316d7263&#34;&gt;References&lt;/h2&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://docs.aliyun.com/#/pub/oss&#34;&gt;OSS Document (Chinese)&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 </description>
     </item>
