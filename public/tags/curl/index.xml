@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Curl on h12.me</title>
+    <link>http://h12.me/tags/curl/</link>
+    <description>Recent content in Curl on h12.me</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>Copyright (c) 2012-2016, Hǎiliàng Wáng; all rights reserved.</copyright>
+    <lastBuildDate>Tue, 20 Jun 2017 12:40:10 +0800</lastBuildDate>
+    <atom:link href="http://h12.me/tags/curl/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>How to Measure Response Time with Curl</title>
+      <link>http://h12.me/note/measure-response-time-with-curl/</link>
+      <pubDate>Tue, 20 Jun 2017 12:40:10 +0800</pubDate>
+      
+      <guid>http://h12.me/note/measure-response-time-with-curl/</guid>
+      <description>&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;curl [args] --write-out &amp;quot;%{time_total}s&amp;quot; --output /dev/null --silent [URL] 
+&lt;/code&gt;&lt;/pre&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>
