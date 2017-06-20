@@ -7,8 +7,19 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>Copyright (c) 2012-2016, Hǎiliàng Wáng; all rights reserved.</copyright>
-    <lastBuildDate>Fri, 09 Jun 2017 13:41:44 +0800</lastBuildDate>
+    <lastBuildDate>Tue, 20 Jun 2017 12:40:10 +0800</lastBuildDate>
     <atom:link href="http://h12.me/note/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>How to Measure Response Time with Curl</title>
+      <link>http://h12.me/note/measure-response-time-with-curl/</link>
+      <pubDate>Tue, 20 Jun 2017 12:40:10 +0800</pubDate>
+      
+      <guid>http://h12.me/note/measure-response-time-with-curl/</guid>
+      <description>&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;curl [args] --write-out &amp;quot;%{time_total}s&amp;quot; --output /dev/null --silent [URL] 
+&lt;/code&gt;&lt;/pre&gt;
+</description>
+    </item>
     
     <item>
       <title>How to Delete a Git Branch</title>
@@ -410,54 +421,6 @@ func main() {
 
 &lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;docker images --no-trunc=true --filter=&amp;quot;dangling=true&amp;quot; --quiet=true | xargs docker rmi
 &lt;/code&gt;&lt;/pre&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>A Comprehensive Note about Proxy Settings</title>
-      <link>http://h12.me/note/proxy-notes/</link>
-      <pubDate>Wed, 08 Jul 2015 07:58:34 +0000</pubDate>
-      
-      <guid>http://h12.me/note/proxy-notes/</guid>
-      <description>
-
-&lt;h2 id=&#34;git:98bdf1dc45f059ee4334ef1c195fb8bb&#34;&gt;Git&lt;/h2&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;&amp;gt; cat ~/.gitconfig
-[http]
-	proxy = socks5://[host]:[port]
-[https]
-	proxy = socks5://[host]:[port]
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h2 id=&#34;curl-homebrew:98bdf1dc45f059ee4334ef1c195fb8bb&#34;&gt;Curl (Homebrew)&lt;/h2&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;&amp;gt; cat ~/.curlrc
-socks5 = &amp;quot;[host]:[port]&amp;quot;
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h2 id=&#34;docker-pull:98bdf1dc45f059ee4334ef1c195fb8bb&#34;&gt;Docker pull&lt;/h2&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-fish&#34;&gt;env HTTP_PROXY=http://xxx docker pull yyy
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h2 id=&#34;gae:98bdf1dc45f059ee4334ef1c195fb8bb&#34;&gt;GAE&lt;/h2&gt;
-
-&lt;ol&gt;
-&lt;li&gt;&lt;p&gt;Set proxy&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;export HTTP_PROXY http://[host]:[port]
-export HTTPS_PROXY http://[host]:[port]
-&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;Delete cacerts.txt under GAE SDK installation to disable SSL verification (
-make sure the proxy is safe before this step).&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;Deploy.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;appcfg.py . --email=[address] --passin
-&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
-&lt;/ol&gt;
 </description>
     </item>
     

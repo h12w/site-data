@@ -7,8 +7,19 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>Copyright (c) 2012-2016, Hǎiliàng Wáng; all rights reserved.</copyright>
-    <lastBuildDate>Fri, 09 Jun 2017 13:41:44 +0800</lastBuildDate>
+    <lastBuildDate>Tue, 20 Jun 2017 12:40:10 +0800</lastBuildDate>
     <atom:link href="http://h12.me/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>How to Measure Response Time with Curl</title>
+      <link>http://h12.me/note/measure-response-time-with-curl/</link>
+      <pubDate>Tue, 20 Jun 2017 12:40:10 +0800</pubDate>
+      
+      <guid>http://h12.me/note/measure-response-time-with-curl/</guid>
+      <description>&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;curl [args] --write-out &amp;quot;%{time_total}s&amp;quot; --output /dev/null --silent [URL] 
+&lt;/code&gt;&lt;/pre&gt;
+</description>
+    </item>
     
     <item>
       <title>How to Delete a Git Branch</title>
@@ -1128,54 +1139,6 @@ func main() {
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;http://blog.ralch.com/tutorial/golang-ssh-connection/&#34;&gt;SSH Client connection in Golang&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;http://kukuruku.co/hub/golang/ssh-commands-execution-on-hundreds-of-servers-via-go&#34;&gt;Using Go to Execute Commands on Hundreds of Servers with SSH&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>RealTest: real test environment for Go</title>
-      <link>http://h12.me/project/realtest/</link>
-      <pubDate>Sat, 14 Nov 2015 13:57:09 +0800</pubDate>
-      
-      <guid>http://h12.me/project/realtest/</guid>
-      <description>
-
-&lt;p&gt;h12.me/realtest provides real test environment for Go unit testing, based on Docker.&lt;/p&gt;
-
-&lt;p&gt;Includes:&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;Queue
-
-&lt;ul&gt;
-&lt;li&gt;Kafka cluster (with zookeeper)&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;Database:
-
-&lt;ul&gt;
-&lt;li&gt;MySQL&lt;/li&gt;
-&lt;li&gt;MongoDB&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;Cache
-
-&lt;ul&gt;
-&lt;li&gt;Redis&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;Configuration service
-
-&lt;ul&gt;
-&lt;li&gt;ZooKeeper&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&#34;author:392938f6c0ed47446e9bccc40e79ace3&#34;&gt;Author&lt;/h2&gt;
-
-&lt;p&gt;&lt;a href=&#34;https://github.com/h12w&#34;&gt;Hǎiliàng Wáng&lt;/a&gt;&lt;/p&gt;
-
-&lt;h2 id=&#34;contributors:392938f6c0ed47446e9bccc40e79ace3&#34;&gt;Contributors&lt;/h2&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://github.com/AnotherGoogleFans&#34;&gt;Tao Huang&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 </description>
     </item>

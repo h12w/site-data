@@ -74,6 +74,25 @@
         
             <article class="frontpage">
                 <h1>
+                    <a href="http://h12.me/note/disable-touchpad/">How to Disable the Touchpad in Linux?</a>
+                    <span class="line"></span>
+                </h1>
+                <span class="time">10 June 2014</span>
+                <div class="article-body hyphenate">
+                    <p>Have you ever been annoyed by accidentally touching the touchpad on your laptop
+when you are typing?</p>
+
+<p>I am using a Linux laptop with both trackpoint and touchpad so the touchpad is
+just an annoying redundant thing. Here is the one-liner to disable it:</p>
+
+<pre><code class="language-bash">xinput list | grep TouchPad | grep -Po 'id=\K([0-9]+)' | xargs xinput disable
+</code></pre>
+
+                </div>
+            </article>
+        
+            <article class="frontpage">
+                <h1>
                     <a href="http://h12.me/project/getgo/">Getgo: a concurrent, simple and extensible web scraping framework</a>
                     <span class="line"></span>
                 </h1>

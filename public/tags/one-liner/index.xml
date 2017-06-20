@@ -7,8 +7,19 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>Copyright (c) 2012-2016, Hǎiliàng Wáng; all rights reserved.</copyright>
-    <lastBuildDate>Sun, 09 Apr 2017 14:30:03 +0800</lastBuildDate>
+    <lastBuildDate>Tue, 20 Jun 2017 12:40:10 +0800</lastBuildDate>
     <atom:link href="http://h12.me/tags/one-liner/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>How to Measure Response Time with Curl</title>
+      <link>http://h12.me/note/measure-response-time-with-curl/</link>
+      <pubDate>Tue, 20 Jun 2017 12:40:10 +0800</pubDate>
+      
+      <guid>http://h12.me/note/measure-response-time-with-curl/</guid>
+      <description>&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;curl [args] --write-out &amp;quot;%{time_total}s&amp;quot; --output /dev/null --silent [URL] 
+&lt;/code&gt;&lt;/pre&gt;
+</description>
+    </item>
     
     <item>
       <title>A Single Command to Download a Website</title>
