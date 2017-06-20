@@ -16,7 +16,8 @@
       <pubDate>Fri, 09 Jun 2017 13:41:44 +0800</pubDate>
       
       <guid>http://h12.me/note/delete-git-branch/</guid>
-      <description>&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;git branch      --delete [branch-name]
+      <description>&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;git fetch       --prune  origin
+git branch      --delete [branch-name]
 git push origin --delete [branch-name]
 &lt;/code&gt;&lt;/pre&gt;
 </description>

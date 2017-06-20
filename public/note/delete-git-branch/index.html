@@ -73,7 +73,8 @@
             <article class="single">
                 <h1>How to Delete a Git Branch</h1>
                 <div class="article-body hyphenate">
-                <pre><code class="language-bash">git branch      --delete [branch-name]
+                <pre><code class="language-bash">git fetch       --prune  origin
+git branch      --delete [branch-name]
 git push origin --delete [branch-name]
 </code></pre>
 
