@@ -56,6 +56,7 @@ packages:
   site:
   snippets:
   socks:
+  state:
   stats:
   svg:
   teff:
