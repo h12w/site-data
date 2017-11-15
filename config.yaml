@@ -5,6 +5,7 @@ domain_name: h12.me
 git_host: https://github.com/h12w
 
 packages:
+  buid:
   color:
   config:
   csv:
