@@ -7,8 +7,37 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>Copyright (c) 2012-2016, Hǎiliàng Wáng; all rights reserved.</copyright>
-    <lastBuildDate>Tue, 20 Jun 2017 12:40:10 +0800</lastBuildDate>
+    <lastBuildDate>Wed, 28 Feb 2018 13:38:45 +0800</lastBuildDate>
     <atom:link href="http://h12.me/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Pagination Done Right</title>
+      <link>http://h12.me/note/pagination-done-right/</link>
+      <pubDate>Wed, 28 Feb 2018 13:38:45 +0800</pubDate>
+      
+      <guid>http://h12.me/note/pagination-done-right/</guid>
+      <description>
+
+&lt;p&gt;Server side pagination is intrinsically not accurate, as long as the data is dynamic.&lt;/p&gt;
+
+&lt;p&gt;The data items could be inserted, deleted or changed on the server side while the user goes forward and backward among the pages.&lt;/p&gt;
+
+&lt;p&gt;However, there is an algorithm that can keep the pagination as stable as possible:&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;encode the id and sorting fields of last value in a page as the continue-token&lt;/li&gt;
+&lt;li&gt;return the continue-token along with each page&lt;/li&gt;
+&lt;li&gt;the client must pass the continue-token to fetch the next page&lt;/li&gt;
+&lt;li&gt;the next page starts with value &amp;gt; continue-token || (value == continue-token &amp;amp;&amp;amp; value.id &amp;gt; continue-token.id)&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h3 id=&#34;reference:b1a5991f8415a5880f5a91d74fe78fe3&#34;&gt;Reference&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://skelia.com/articles/pagination-with-dynamic-data-loading-2/&#34;&gt;Pagination with Dynamic Data Loading&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
     
     <item>
       <title>How to Measure Response Time with Curl</title>
@@ -1120,26 +1149,6 @@ func main() {
 	}
 }
 &lt;/code&gt;&lt;/pre&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>SSH Resources in Go</title>
-      <link>http://h12.me/note/go-ssh-resources/</link>
-      <pubDate>Sun, 31 Jan 2016 14:49:01 +0800</pubDate>
-      
-      <guid>http://h12.me/note/go-ssh-resources/</guid>
-      <description>&lt;ul&gt;
-&lt;li&gt;golang.org/x/crypto/ssh&lt;/li&gt;
-&lt;li&gt;github.com/YuriyNasretdinov/GoSSHa&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Articles:&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;http://blog.ralch.com/tutorial/golang-ssh-connection/&#34;&gt;SSH Client connection in Golang&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;http://kukuruku.co/hub/golang/ssh-commands-execution-on-hundreds-of-servers-via-go&#34;&gt;Using Go to Execute Commands on Hundreds of Servers with SSH&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
 </description>
     </item>
     

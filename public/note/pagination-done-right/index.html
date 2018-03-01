@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title> h12.me </title>
+        <title> Pagination Done Right </title>
         <link rel="shortcut icon" href="/img/favicon.png" />
 
         <style>
@@ -70,16 +70,10 @@
         </header>
 
         <main class="container">
-        
-        
-            <article class="frontpage">
-                <h1>
-                    <a href="http://h12.me/note/pagination-done-right/">Pagination Done Right</a>
-                    <span class="line"></span>
-                </h1>
-                <span class="time">28 February 2018</span>
+            <article class="single">
+                <h1>Pagination Done Right</h1>
                 <div class="article-body hyphenate">
-                    
+                
 
 <p>Server side pagination is intrinsically not accurate, as long as the data is dynamic.</p>
 
@@ -101,131 +95,18 @@
 </ul>
 
                 </div>
-            </article>
-        
-            <article class="frontpage">
-                <h1>
-                    <a href="http://h12.me/note/measure-response-time-with-curl/">How to Measure Response Time with Curl</a>
-                    <span class="line"></span>
-                </h1>
-                <span class="time">20 June 2017</span>
-                <div class="article-body hyphenate">
-                    <pre><code class="language-bash">curl [args] --write-out &quot;%{time_total}s&quot; --output /dev/null --silent [URL] 
-</code></pre>
-
-                </div>
-            </article>
-        
-            <article class="frontpage">
-                <h1>
-                    <a href="http://h12.me/note/delete-git-branch/">How to Delete a Git Branch</a>
-                    <span class="line"></span>
-                </h1>
-                <span class="time">9 June 2017</span>
-                <div class="article-body hyphenate">
-                    <pre><code class="language-bash">git fetch       --prune  origin
-git branch      --delete [branch-name]
-git push origin --delete [branch-name]
-</code></pre>
-
-                </div>
-            </article>
-        
-            <article class="frontpage">
-                <h1>
-                    <a href="http://h12.me/note/download-website/">A Single Command to Download a Website</a>
-                    <span class="line"></span>
-                </h1>
-                <span class="time">9 April 2017</span>
-                <div class="article-body hyphenate">
-                    <pre><code class="language-bash">wget --recursive --level=2 --no-parent --no-clobber --convert-links --continue
-[URL]
-</code></pre>
-
-                </div>
-            </article>
-        
-            <article class="frontpage">
-                <h1>
-                    <a href="http://h12.me/note/ubuntu-remove-old-kernels/">How to Remove Old Kernels in Ubuntu</a>
-                    <span class="line"></span>
-                </h1>
-                <span class="time">10 September 2016</span>
-                <div class="article-body hyphenate">
-                    <pre><code class="language-bash">sudo apt install byobu
-sudo purge-old-kernels
-</code></pre>
-
-<p>Reference:</p>
-
-<ul>
-<li>Remove Old Kernels (<a href="https://help.ubuntu.com/community/Lubuntu/Documentation/RemoveOldKernels">https://help.ubuntu.com/community/Lubuntu/Documentation/RemoveOldKernels</a>)</li>
+                <div>
+                    <div id="article-time">28 February 2018</div>
+                    <ul id="tags">
+  
+    <li><a href="/tags/pagination">pagination</a> </li>
+  
+    <li><a href="/tags/golang">Golang</a> </li>
+  
 </ul>
 
                 </div>
             </article>
-        
-            <article class="frontpage">
-                <h1>
-                    <a href="http://h12.me/note/make-jira-code-wrap/">Making Code Block Wrap in Jira</a>
-                    <span class="line"></span>
-                </h1>
-                <span class="time">5 September 2016</span>
-                <div class="article-body hyphenate">
-                    <p>It is a hack.</p>
-
-<p>Set Jira Administration -&gt; System -&gt; Announcement Banner -&gt; Announcement:</p>
-
-<pre><code class="language-css">&lt;style type=&quot;text/css&quot;&gt;
-pre {
-    white-space: pre-wrap!important;
-}
-&lt;/style&gt;
-</code></pre>
-
-                </div>
-            </article>
-        
-            <article class="frontpage">
-                <h1>
-                    <a href="http://h12.me/note/mongodb-conn/">One-liner to check MongoDB Connections</a>
-                    <span class="line"></span>
-                </h1>
-                <span class="time">2 September 2016</span>
-                <div class="article-body hyphenate">
-                    <pre><code>mongo --eval &quot;JSON.stringify(db.currentOp(true))&quot; | \
-tail -n +3 | \
-jq -r .inprog[].client | \
-sed 's/\(.*\):.*/\1/' \
-| sort | uniq -c | sort -nr
-</code></pre>
-
-<ul>
-<li>dump connection information in standard JSON format</li>
-<li>remove MongoDB header</li>
-<li>extract IP:port as a list</li>
-<li>trim port</li>
-<li>sort IPs by freqencies</li>
-</ul>
-
-                </div>
-            </article>
-        
-        <nav class="pagination">
-            <span>- 1 -</span>
-            <ul>
-                <li>
-            
-                    <span class="disabled">« Prev</span>
-            
-                </li>
-                <li>
-            
-                    <a href="/page/2">Next »</a>
-            
-                </li>
-            </ul>
-        </nav>
         </main>
         <footer id="site-footer">
             <hr>
