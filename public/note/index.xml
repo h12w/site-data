@@ -2,13 +2,15 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Notes on h12.me</title>
-    <link>http://h12.me/note/index.xml</link>
+    <link>http://h12.me/note/</link>
     <description>Recent content in Notes on h12.me</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>Copyright (c) 2012-2018, Hǎiliàng Wáng; all rights reserved.</copyright>
     <lastBuildDate>Wed, 28 Feb 2018 13:38:45 +0800</lastBuildDate>
-    <atom:link href="http://h12.me/note/index.xml" rel="self" type="application/rss+xml" />
+    
+	<atom:link href="http://h12.me/note/index.xml" rel="self" type="application/rss+xml" />
+    
     
     <item>
       <title>Pagination Done Right</title>
@@ -16,27 +18,10 @@
       <pubDate>Wed, 28 Feb 2018 13:38:45 +0800</pubDate>
       
       <guid>http://h12.me/note/pagination-done-right/</guid>
-      <description>
-
-&lt;p&gt;Server side pagination is intrinsically not accurate, as long as the data is dynamic.&lt;/p&gt;
-
-&lt;p&gt;The data items could be inserted, deleted or changed on the server side while the user goes forward and backward among the pages.&lt;/p&gt;
-
-&lt;p&gt;However, there is an algorithm that can keep the pagination as stable as possible:&lt;/p&gt;
-
-&lt;ol&gt;
-&lt;li&gt;encode the id and sorting fields of last value in a page as the continue-token&lt;/li&gt;
-&lt;li&gt;return the continue-token along with each page&lt;/li&gt;
-&lt;li&gt;the client must pass the continue-token to fetch the next page&lt;/li&gt;
-&lt;li&gt;the next page starts with value &amp;gt; continue-token || (value == continue-token &amp;amp;&amp;amp; value.id &amp;gt; continue-token.id)&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;h3 id=&#34;reference&#34;&gt;Reference&lt;/h3&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://skelia.com/articles/pagination-with-dynamic-data-loading-2/&#34;&gt;Pagination with Dynamic Data Loading&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-</description>
+      <description>Server side pagination is intrinsically not accurate, as long as the data is dynamic.
+The data items could be inserted, deleted or changed on the server side while the user goes forward and backward among the pages.
+However, there is an algorithm that can keep the pagination as stable as possible:
+ encode the id and sorting fields of last value in a page as the continue-token return the continue-token along with each page the client must pass the continue-token to fetch the next page the next page starts with value &amp;gt; continue-token || (value == continue-token &amp;amp;&amp;amp; value.</description>
     </item>
     
     <item>
@@ -45,9 +30,7 @@
       <pubDate>Tue, 20 Jun 2017 12:40:10 +0800</pubDate>
       
       <guid>http://h12.me/note/measure-response-time-with-curl/</guid>
-      <description>&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;curl [args] --write-out &amp;quot;%{time_total}s&amp;quot; --output /dev/null --silent [URL] 
-&lt;/code&gt;&lt;/pre&gt;
-</description>
+      <description>curl [args] --write-out &amp;quot;%{time_total}s&amp;quot; --output /dev/null --silent [URL]  </description>
     </item>
     
     <item>
@@ -56,11 +39,7 @@
       <pubDate>Fri, 09 Jun 2017 13:41:44 +0800</pubDate>
       
       <guid>http://h12.me/note/delete-git-branch/</guid>
-      <description>&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;git fetch       --prune  origin
-git branch      --delete [branch-name]
-git push origin --delete [branch-name]
-&lt;/code&gt;&lt;/pre&gt;
-</description>
+      <description>git fetch --prune origin git branch --delete [branch-name] git push origin --delete [branch-name]  </description>
     </item>
     
     <item>
@@ -69,10 +48,7 @@ git push origin --delete [branch-name]
       <pubDate>Sun, 09 Apr 2017 14:30:03 +0800</pubDate>
       
       <guid>http://h12.me/note/download-website/</guid>
-      <description>&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;wget --recursive --level=2 --no-parent --no-clobber --convert-links --continue
-[URL]
-&lt;/code&gt;&lt;/pre&gt;
-</description>
+      <description>wget --recursive --level=2 --no-parent --no-clobber --convert-links --continue [URL]  </description>
     </item>
     
     <item>
@@ -81,16 +57,8 @@ git push origin --delete [branch-name]
       <pubDate>Sat, 10 Sep 2016 09:08:10 +0800</pubDate>
       
       <guid>http://h12.me/note/ubuntu-remove-old-kernels/</guid>
-      <description>&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;sudo apt install byobu
-sudo purge-old-kernels
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Reference:&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;Remove Old Kernels (&lt;a href=&#34;https://help.ubuntu.com/community/Lubuntu/Documentation/RemoveOldKernels&#34;&gt;https://help.ubuntu.com/community/Lubuntu/Documentation/RemoveOldKernels&lt;/a&gt;)&lt;/li&gt;
-&lt;/ul&gt;
-</description>
+      <description>sudo apt install byobu sudo purge-old-kernels  Reference:
+ Remove Old Kernels (https://help.ubuntu.com/community/Lubuntu/Documentation/RemoveOldKernels)  </description>
     </item>
     
     <item>
@@ -99,17 +67,9 @@ sudo purge-old-kernels
       <pubDate>Mon, 05 Sep 2016 10:30:49 +0800</pubDate>
       
       <guid>http://h12.me/note/make-jira-code-wrap/</guid>
-      <description>&lt;p&gt;It is a hack.&lt;/p&gt;
-
-&lt;p&gt;Set Jira Administration -&amp;gt; System -&amp;gt; Announcement Banner -&amp;gt; Announcement:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-css&#34;&gt;&amp;lt;style type=&amp;quot;text/css&amp;quot;&amp;gt;
-pre {
-    white-space: pre-wrap!important;
-}
-&amp;lt;/style&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;
-</description>
+      <description>It is a hack.
+Set Jira Administration -&amp;gt; System -&amp;gt; Announcement Banner -&amp;gt; Announcement:
+&amp;lt;style type=&amp;quot;text/css&amp;quot;&amp;gt; pre { white-space: pre-wrap!important; } &amp;lt;/style&amp;gt;  </description>
     </item>
     
     <item>
@@ -118,21 +78,7 @@ pre {
       <pubDate>Fri, 02 Sep 2016 15:40:41 +0800</pubDate>
       
       <guid>http://h12.me/note/mongodb-conn/</guid>
-      <description>&lt;pre&gt;&lt;code&gt;mongo --eval &amp;quot;JSON.stringify(db.currentOp(true))&amp;quot; | \
-tail -n +3 | \
-jq -r .inprog[].client | \
-sed &#39;s/\(.*\):.*/\1/&#39; \
-| sort | uniq -c | sort -nr
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;ul&gt;
-&lt;li&gt;dump connection information in standard JSON format&lt;/li&gt;
-&lt;li&gt;remove MongoDB header&lt;/li&gt;
-&lt;li&gt;extract IP:port as a list&lt;/li&gt;
-&lt;li&gt;trim port&lt;/li&gt;
-&lt;li&gt;sort IPs by freqencies&lt;/li&gt;
-&lt;/ul&gt;
-</description>
+      <description>mongo --eval &amp;quot;JSON.stringify(db.currentOp(true))&amp;quot; | \ tail -n +3 | \ jq -r .inprog[].client | \ sed &#39;s/\(.*\):.*/\1/&#39; \ | sort | uniq -c | sort -nr   dump connection information in standard JSON format remove MongoDB header extract IP:port as a list trim port sort IPs by freqencies  </description>
     </item>
     
     <item>
@@ -141,37 +87,7 @@ sed &#39;s/\(.*\):.*/\1/&#39; \
       <pubDate>Tue, 09 Aug 2016 18:31:04 +0800</pubDate>
       
       <guid>http://h12.me/note/count-word-freq/</guid>
-      <description>&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;cat book.txt | \
-tr &#39;!()[]{};:&amp;quot;,&amp;lt;.&amp;gt;?“”‘’*/\r&#39; &#39; &#39; | \
-tr &#39; &#39; &#39;\n&#39; | \
-grep -a -P &amp;quot;^[\p{L}\p{N}\-&#39;]+\$&amp;quot; | \
-grep -a -P -v &amp;quot;^[\p{N}\-&#39;]+\$&amp;quot; | \
-sed &amp;quot;s/&#39;s\$//&amp;quot; | \
-sed &amp;quot;s/^&#39;//&amp;quot; | sed &amp;quot;s/&#39;\$//&amp;quot; &amp;gt; words.txt
-
-cat words.txt | \
-sort | uniq -c | \
-sort -nr | \
-cut -c9- &amp;gt; words_desc.txt
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;ul&gt;
-&lt;li&gt;replace punctuations with space; remove &lt;code&gt;\r&lt;/code&gt; from `\r\n&amp;rsquo;&lt;/li&gt;
-&lt;li&gt;one word per line&lt;/li&gt;
-&lt;li&gt;keep only words composed of unicode letters, numbers, hyphen and apostrophe&lt;/li&gt;
-&lt;li&gt;remove pure numbers&lt;/li&gt;
-&lt;li&gt;remove &amp;rsquo;s&lt;/li&gt;
-&lt;li&gt;remove starting and ending apostrophe&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;output words.txt&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;sort and count unique words&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;sort by freqency in descending order&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;trim the frequency column&lt;/p&gt;&lt;/li&gt;
-&lt;/ul&gt;
-</description>
+      <description>cat book.txt | \ tr &#39;!()[]{};:&amp;quot;,&amp;lt;.&amp;gt;?“”‘’*/\r&#39; &#39; &#39; | \ tr &#39; &#39; &#39;\n&#39; | \ grep -a -P &amp;quot;^[\p{L}\p{N}\-&#39;]+\$&amp;quot; | \ grep -a -P -v &amp;quot;^[\p{N}\-&#39;]+\$&amp;quot; | \ sed &amp;quot;s/&#39;s\$//&amp;quot; | \ sed &amp;quot;s/^&#39;//&amp;quot; | sed &amp;quot;s/&#39;\$//&amp;quot; &amp;gt; words.txt cat words.txt | \ sort | uniq -c | \ sort -nr | \ cut -c9- &amp;gt; words_desc.txt   replace punctuations with space; remove \r from `\r\n&amp;rsquo; one word per line keep only words composed of unicode letters, numbers, hyphen and apostrophe remove pure numbers remove &amp;rsquo;s remove starting and ending apostrophe output words.</description>
     </item>
     
     <item>
@@ -180,11 +96,7 @@ cut -c9- &amp;gt; words_desc.txt
       <pubDate>Wed, 03 Aug 2016 08:51:30 +0800</pubDate>
       
       <guid>http://h12.me/note/mobi/</guid>
-      <description>&lt;ul&gt;
-&lt;li&gt;Mobi Format Description: &lt;a href=&#34;http://wiki.mobileread.com/wiki/MOBI&#34;&gt;http://wiki.mobileread.com/wiki/MOBI&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Python lib: &lt;a href=&#34;https://github.com/kroo/mobi-python&#34;&gt;https://github.com/kroo/mobi-python&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-</description>
+      <description> Mobi Format Description: http://wiki.mobileread.com/wiki/MOBI Python lib: https://github.com/kroo/mobi-python  </description>
     </item>
     
     <item>
@@ -193,22 +105,8 @@ cut -c9- &amp;gt; words_desc.txt
       <pubDate>Sun, 03 Jul 2016 21:16:34 +0800</pubDate>
       
       <guid>http://h12.me/note/manager-faq/</guid>
-      <description>&lt;p&gt;This is an &lt;a href=&#34;https://readthink.com/a-managers-faq-35858a229f84#.7a4wlb9qy&#34;&gt;insightful list&lt;/a&gt;
-from &lt;a href=&#34;Henry Ward&#34;&gt;Henry Ward&lt;/a&gt;:&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;How do I get employees to perform better?&lt;/strong&gt; Tell them what they are doing well.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;How do I give negative feedback?&lt;/strong&gt; By being curious.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;How do I decide what to delegate?&lt;/strong&gt; Delegate the work you want to do.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;How should I prioritize?&lt;/strong&gt; Fix problems. Then prevent problems.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;How should I grade employees?&lt;/strong&gt; Don’t. Teach them to self-evaluate.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;When do I fire somebody?&lt;/strong&gt; When you know they can’t succeed.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;How do I fire somebody?&lt;/strong&gt; By apologizing for our failures.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Why can’t I just tell people what to do?&lt;/strong&gt; Because the more responsibility you have, the less authority you have.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;How do I know if I am a good manager?&lt;/strong&gt; Employees ask you for advice.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;How do I know if I have good management team?&lt;/strong&gt; Shit rolls uphill.&lt;/li&gt;
-&lt;/ul&gt;
-</description>
+      <description>This is an insightful list from Henry Ward:
+ How do I get employees to perform better? Tell them what they are doing well. How do I give negative feedback? By being curious. How do I decide what to delegate? Delegate the work you want to do. How should I prioritize? Fix problems. Then prevent problems. How should I grade employees? Don’t. Teach them to self-evaluate. When do I fire somebody?</description>
     </item>
     
     <item>
@@ -217,28 +115,11 @@ from &lt;a href=&#34;Henry Ward&#34;&gt;Henry Ward&lt;/a&gt;:&lt;/p&gt;
       <pubDate>Sat, 02 Jul 2016 19:03:40 +0800</pubDate>
       
       <guid>http://h12.me/note/on-reliable-persistence/</guid>
-      <description>&lt;p&gt;A short investigation on reliable persistence:&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;p&gt;Crash consistency is &lt;a href=&#34;http://danluu.com/file-consistency/&#34;&gt;hard&lt;/a&gt; but
-&lt;a href=&#34;https://www.flamingspork.com/talks/&#34;&gt;possible&lt;/a&gt; at a huge performance
-&lt;a href=&#34;https://www.google.com/#q=fsync+performance&#34;&gt;cost&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;Data safty must rely on distributed solution&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://raft.github.io&#34;&gt;Raft&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;Perhaps we should just give up manual fsync and rely on&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;OS background flush&lt;/li&gt;
-&lt;li&gt;corruption detection &amp;amp; correction at startup&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://kafka.apache.org/08/ops.html&#34;&gt;replication&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;/ul&gt;
-</description>
+      <description>A short investigation on reliable persistence:
+ Crash consistency is hard but possible at a huge performance cost
+ Data safty must rely on distributed solution
+ Raft  Perhaps we should just give up manual fsync and rely on
+ OS background flush corruption detection &amp;amp; correction at startup replication   </description>
     </item>
     
     <item>
@@ -247,117 +128,11 @@ from &lt;a href=&#34;Henry Ward&#34;&gt;Henry Ward&lt;/a&gt;:&lt;/p&gt;
       <pubDate>Sat, 27 Feb 2016 14:59:54 +0800</pubDate>
       
       <guid>http://h12.me/note/openwrt-note/</guid>
-      <description>
-
-&lt;h2 id=&#34;obtain-openwrt&#34;&gt;Obtain OpenWRT&lt;/h2&gt;
-
-&lt;ul&gt;
-&lt;li&gt;Find the device model at the &lt;a href=&#34;https://wiki.openwrt.org/toh/start&#34;&gt;Table of Hardware&lt;/a&gt; (Huawei HG556a C)&lt;/li&gt;
-&lt;li&gt;Open &lt;em&gt;Device Techdata&lt;/em&gt; for &lt;em&gt;Firmware OpenWrt Install URL&lt;/em&gt;&lt;/li&gt;
-&lt;li&gt;Open &lt;em&gt;Device Page&lt;/em&gt; for &lt;em&gt;Installation&lt;/em&gt; instructions&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&#34;computer-cable-router&#34;&gt;Computer - Cable - Router&lt;/h2&gt;
-
-&lt;p&gt;Connect the computer to the router with a cable.&lt;/p&gt;
-
-&lt;h2 id=&#34;install-openwrt&#34;&gt;Install OpenWRT&lt;/h2&gt;
-
-&lt;p&gt;Follow the instructions to install OpenWRT.&lt;/p&gt;
-
-&lt;h2 id=&#34;ssh&#34;&gt;SSH&lt;/h2&gt;
-
-&lt;p&gt;First login:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;telnet 192.168.1.1
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Change password to enable SSH:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;passwd
-exit
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;For public key authentication, add the public key:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;ssh-copy-id root@192.168.1.1
-ssh root@192.168.1.1
-mv ~/.ssh/authorized_keys /etc/dropbear
-exit
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h2 id=&#34;wifi&#34;&gt;WiFi&lt;/h2&gt;
-
-&lt;p&gt;In &lt;code&gt;/etc/config/wireless&lt;/code&gt;:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;config wifi-device  radio0
-	......
-	# REMOVE THIS LINE TO ENABLE WIFI:
-	# option disabled 1
-
-config wifi-iface
-	option device     radio0
-	option network    lan
-	option mode       ap
-	option encryption psk2
-	option hidden     1
-	option ssid       [SSID]
-	option key        [WiFi password]
-	option macaddr    [00:0A:4B:3C:6D:02]
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Execute:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;wifi
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h2 id=&#34;computer-wifi-router&#34;&gt;Computer - WiFi - Router&lt;/h2&gt;
-
-&lt;p&gt;Disconnect the cable to the router. Try SSH via WiFi.&lt;/p&gt;
-
-&lt;h2 id=&#34;internet&#34;&gt;Internet&lt;/h2&gt;
-
-&lt;p&gt;In &lt;code&gt;/etc/config/network&lt;/code&gt;:&lt;/p&gt;
-
-&lt;p&gt;It is better to change the lan address so that it will not be conflicted with the upstream address.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;config interface &#39;lan&#39;
-	option ipaddr &#39;192.168.2.1&#39;
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;pre&gt;&lt;code&gt;# lan switch
-config switch_vlan
-	option device 	eth0
-	option vlan 	1
-	option ports 	&amp;quot;1 2 5t&amp;quot;
-
-# wan switch
-config switch_vlan
-	option device 	eth0
-	option vlan 	2
-	option ports 	&amp;quot;0 5t&amp;quot;
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;For DHCP wan:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;config interface wan
-	option ifname eth0.2
-	option proto  dhcp
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;For PPPOE wan:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;config interface wan
-	option ifname   eth0.2
-	option proto    pppoe
-	option username [PPPOE user name]
-	option password [password]
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h2 id=&#34;computer-wifi-router-cable-internet&#34;&gt;Computer - WiFi - Router - Cable - Internet&lt;/h2&gt;
-
-&lt;p&gt;Connect the internet cable to the router, reboot the router.&lt;/p&gt;
-</description>
+      <description>Obtain OpenWRT  Find the device model at the Table of Hardware (Huawei HG556a C) Open Device Techdata for Firmware OpenWrt Install URL Open Device Page for Installation instructions  Computer - Cable - Router Connect the computer to the router with a cable.
+Install OpenWRT Follow the instructions to install OpenWRT.
+SSH First login:
+telnet 192.168.1.1  Change password to enable SSH:
+passwd exit  For public key authentication, add the public key:</description>
     </item>
     
     <item>
@@ -366,18 +141,7 @@ config switch_vlan
       <pubDate>Mon, 01 Feb 2016 18:11:29 +0800</pubDate>
       
       <guid>http://h12.me/note/about-pretty-print/</guid>
-      <description>
-
-&lt;h2 id=&#34;json&#34;&gt;JSON&lt;/h2&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;cat xxx.json | jq .
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h2 id=&#34;xml&#34;&gt;XML&lt;/h2&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;cat xxx.xml | xmllint --format -
-&lt;/code&gt;&lt;/pre&gt;
-</description>
+      <description> JSON cat xxx.json | jq .  XML cat xxx.xml | xmllint --format -  </description>
     </item>
     
     <item>
@@ -386,37 +150,10 @@ config switch_vlan
       <pubDate>Sun, 31 Jan 2016 20:31:06 +0800</pubDate>
       
       <guid>http://h12.me/note/send-email-from-gmail/</guid>
-      <description>&lt;ol&gt;
-&lt;li&gt;&lt;p&gt;Turn on &lt;a href=&#34;http://accounts.google.com/SmsAuthConfig&#34;&gt;&amp;ldquo;2-Step Verification&amp;rdquo;&lt;/a&gt; so
-that an &lt;a href=&#34;https://security.google.com/settings/security/apppasswords&#34;&gt;&amp;ldquo;App password&amp;rdquo;&lt;/a&gt; can be generated&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;&lt;code&gt;go get gopkg.in/gomail.v2&lt;/code&gt;&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;Send your Email like the example below:&lt;/p&gt;&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-go&#34;&gt;package main
-
-import (
-	&amp;quot;gopkg.in/gomail.v2&amp;quot;
-)
-
-func main() {
-	m := gomail.NewMessage()
-	m.SetHeader(&amp;quot;From&amp;quot;, &amp;quot;from_address@gmail.com&amp;quot;)
-	m.SetAddressHeader(&amp;quot;To&amp;quot;, &amp;quot;to_adress@xxx&amp;quot;, &amp;quot;to_name&amp;quot;)
-	m.SetAddressHeader(&amp;quot;Cc&amp;quot;, &amp;quot;cc_adress@xxx&amp;quot;, &amp;quot;cc_name&amp;quot;)
-	m.SetHeader(&amp;quot;Subject&amp;quot;, &amp;quot;Hello! TEST!&amp;quot;)
-	m.SetBody(&amp;quot;text/html&amp;quot;, &amp;quot;Hello! &amp;lt;b&amp;gt;TEST&amp;lt;/b&amp;gt;!&amp;quot;)
-
-	d := gomail.NewPlainDialer(&amp;quot;smtp.gmail.com&amp;quot;, 587, &amp;quot;from_address@gmail.com&amp;quot;, &amp;quot;the App password&amp;quot;)
-
-	if err := d.DialAndSend(m); err != nil {
-		panic(err)
-	}
-}
-&lt;/code&gt;&lt;/pre&gt;
-</description>
+      <description> Turn on &amp;ldquo;2-Step Verification&amp;rdquo; so that an &amp;ldquo;App password&amp;rdquo; can be generated
+ go get gopkg.in/gomail.v2
+ Send your Email like the example below:
+  package main import ( &amp;quot;gopkg.in/gomail.v2&amp;quot; ) func main() { m := gomail.NewMessage() m.SetHeader(&amp;quot;From&amp;quot;, &amp;quot;from_address@gmail.com&amp;quot;) m.SetAddressHeader(&amp;quot;To&amp;quot;, &amp;quot;to_adress@xxx&amp;quot;, &amp;quot;to_name&amp;quot;) m.SetAddressHeader(&amp;quot;Cc&amp;quot;, &amp;quot;cc_adress@xxx&amp;quot;, &amp;quot;cc_name&amp;quot;) m.SetHeader(&amp;quot;Subject&amp;quot;, &amp;quot;Hello! TEST!&amp;quot;) m.SetBody(&amp;quot;text/html&amp;quot;, &amp;quot;Hello! &amp;lt;b&amp;gt;TEST&amp;lt;/b&amp;gt;!&amp;quot;) d := gomail.NewPlainDialer(&amp;quot;smtp.gmail.com&amp;quot;, 587, &amp;quot;from_address@gmail.com&amp;quot;, &amp;quot;the App password&amp;quot;) if err := d.DialAndSend(m); err != nil { panic(err) } }  </description>
     </item>
     
     <item>
@@ -425,18 +162,293 @@ func main() {
       <pubDate>Sun, 31 Jan 2016 14:49:01 +0800</pubDate>
       
       <guid>http://h12.me/note/go-ssh-resources/</guid>
-      <description>&lt;ul&gt;
-&lt;li&gt;golang.org/x/crypto/ssh&lt;/li&gt;
-&lt;li&gt;github.com/YuriyNasretdinov/GoSSHa&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Articles:&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;http://blog.ralch.com/tutorial/golang-ssh-connection/&#34;&gt;SSH Client connection in Golang&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;http://kukuruku.co/hub/golang/ssh-commands-execution-on-hundreds-of-servers-via-go&#34;&gt;Using Go to Execute Commands on Hundreds of Servers with SSH&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-</description>
+      <description> golang.org/x/crypto/ssh github.com/YuriyNasretdinov/GoSSHa  Articles:
+ SSH Client connection in Golang Using Go to Execute Commands on Hundreds of Servers with SSH  </description>
+    </item>
+    
+    <item>
+      <title>How to Remove All Exited Containers &amp; Dangling Images for Docker?</title>
+      <link>http://h12.me/note/remove-all-exited-docker-containers/</link>
+      <pubDate>Mon, 03 Aug 2015 16:55:49 +0800</pubDate>
+      
+      <guid>http://h12.me/note/remove-all-exited-docker-containers/</guid>
+      <description>docker ps --quiet --filter=status=exited | xargs docker rm  docker images --no-trunc=true --filter=&amp;quot;dangling=true&amp;quot; --quiet=true | xargs docker rmi  </description>
+    </item>
+    
+    <item>
+      <title>A Comprehensive Note about Proxy Settings</title>
+      <link>http://h12.me/note/proxy-notes/</link>
+      <pubDate>Wed, 08 Jul 2015 07:58:34 +0000</pubDate>
+      
+      <guid>http://h12.me/note/proxy-notes/</guid>
+      <description> Git &amp;gt; cat ~/.gitconfig [http] proxy = socks5://[host]:[port] [https] proxy = socks5://[host]:[port]  Curl (Homebrew) &amp;gt; cat ~/.curlrc socks5 = &amp;quot;[host]:[port]&amp;quot;  Docker pull env HTTP_PROXY=http://xxx docker pull yyy  GAE  Set proxy
+export HTTP_PROXY http://[host]:[port] export HTTPS_PROXY http://[host]:[port]  Delete cacerts.txt under GAE SDK installation to disable SSL verification ( make sure the proxy is safe before this step).
+ Deploy.
+appcfg.py . --email=[address] --passin   </description>
+    </item>
+    
+    <item>
+      <title>Phonetic Notations</title>
+      <link>http://h12.me/note/phonetic-notations/</link>
+      <pubDate>Tue, 30 Jun 2015 12:43:19 +0800</pubDate>
+      
+      <guid>http://h12.me/note/phonetic-notations/</guid>
+      <description>Google Dictionary Google dictionary uses a phonetic notation same as NORD (New Oxford American Dictionary).
+To figure out an unknown phonetic notation, the simple way is to look up a few words that you know how to pronounce: church, hat, which, judge, game, thing, ship, thin, this, yes, pleasure cat, pay, care, father, arm, let, see, here, city, my, pot, no, caught, war, force, boy, put, tour, boot, out, cut, word, item, rabbit, winner, pupil</description>
+    </item>
+    
+    <item>
+      <title>Notes on the Design of Go</title>
+      <link>http://h12.me/note/go-design/</link>
+      <pubDate>Mon, 29 Jun 2015 16:34:59 +0800</pubDate>
+      
+      <guid>http://h12.me/note/go-design/</guid>
+      <description>Refusing new features Avoid leaky abstraction as much as possible. If an abstraction is not solid enough, you’d rather not use them at all. Go is designed like this, the features are carefully selected. If a feature is not solid enough, it will not be allowed to enter Go.
+No implicit string concatenation Rob: That used to be in the language but was dropped when the semicolon insertion rules went in.</description>
+    </item>
+    
+    <item>
+      <title>What Go cannot Do</title>
+      <link>http://h12.me/note/what-go-cannot-do/</link>
+      <pubDate>Tue, 16 Jun 2015 00:00:00 +0000</pubDate>
+      
+      <guid>http://h12.me/note/what-go-cannot-do/</guid>
+      <description>This is a list about the corner cases that Go cannot do, and their work arounds.
+Run all deferred functions of other goroutines when a goroutine panics Uncaught panicking of one goroutine will exit the program without executing deferred functions of other goroutines.
+Workaround: this is the standard behavior, C++ with RAII also has the same problem. Persist your data in a way that crashing will not cause data integrity issue.</description>
+    </item>
+    
+    <item>
+      <title>Ebook Manipulation Tools</title>
+      <link>http://h12.me/note/ebook-tools/</link>
+      <pubDate>Thu, 04 Jun 2015 14:19:38 +0800</pubDate>
+      
+      <guid>http://h12.me/note/ebook-tools/</guid>
+      <description> Ebook manager: Calibre Kindle PDF optimizer: k2pdfopt PDF Border Cropper Briss CHM File Extractor archmage PDF editing Xournal
+ convert images to PDF
+sudo apt-get install imagemagick convert *.jpg pictures.pdf  convert between different formats:
+sudo apt-get install calibre ebook-convert xxx.mobi xxx.txt --unsmarten-punctuation   </description>
+    </item>
+    
+    <item>
+      <title>How to &#34;go get&#34; Behind a Proxy</title>
+      <link>http://h12.me/note/go-get-behind-proxy/</link>
+      <pubDate>Wed, 06 May 2015 12:01:11 +0800</pubDate>
+      
+      <guid>http://h12.me/note/go-get-behind-proxy/</guid>
+      <description> Proxy for &amp;ldquo;go get&amp;rdquo; https_proxy=http://user:pass@proxy_host:port go get ...  Proxy for Git In $HOME/.gitconfig:
+[https] proxy = proxy_url  Proxy for Mercurial In $HOME/.hgrc:
+[http_proxy] host = host:port user = ... passwd = ...  </description>
+    </item>
+    
+    <item>
+      <title>Tips on SSH</title>
+      <link>http://h12.me/note/tips-on-ssh/</link>
+      <pubDate>Tue, 28 Apr 2015 10:59:02 +0800</pubDate>
+      
+      <guid>http://h12.me/note/tips-on-ssh/</guid>
+      <description>Generate SSH keys ssh-keygen -C w@h12.me  Authorize public key at remote server ssh-copy-id user@host  On Mac OSX, ssh-copy-id should be installed first.
+brew install ssh-copy-id  Generate PEM ssh-keygen -f ~/.ssh/id_rsa -e -m pem &amp;gt; ~/.ssh/id_rsa.pem  Copy file by base64 On remote session, run base64 &amp;lt; myfile and copy the output.
+On local terminal, run base64 -d &amp;gt; myfile, paste the content and press ctrl+D.</description>
+    </item>
+    
+    <item>
+      <title>How to Generate XSD Schema from XML?</title>
+      <link>http://h12.me/note/generate-xsd-from-xml/</link>
+      <pubDate>Thu, 23 Apr 2015 15:41:12 +0800</pubDate>
+      
+      <guid>http://h12.me/note/generate-xsd-from-xml/</guid>
+      <description>Apache XMLBeans is an old tool but still functioning. Download and uncompress the latest binary release, then run inst2xsd under bin folder (needs JDK).
+inst2xsd xxx.xml  </description>
+    </item>
+    
+    <item>
+      <title>Go 1.4.1 Build Failure and Solution</title>
+      <link>http://h12.me/note/go-build-failure/</link>
+      <pubDate>Thu, 29 Jan 2015 03:55:08 +0000</pubDate>
+      
+      <guid>http://h12.me/note/go-build-failure/</guid>
+      <description>Today I tried to build Go 1.4.1 from source but it failed with this error:
+ go/src/liblink/anames9.c:6:29: fatal error: ../cmd/9l/9.out.h: No such file or directory  At first I thought the building routine might have be changed so I opened and read Installing Go from Source again, carefully, and found nothing special.
+Then I searched for the error source and it turned out that I should deleted anames*.c, manually. There is no document and no automatic cleaning script, and you would have to figure it out yourself if no one ever mentioned it (source).</description>
+    </item>
+    
+    <item>
+      <title>How to configure a custom domain name in GAE?</title>
+      <link>http://h12.me/note/gae-custom-domain/</link>
+      <pubDate>Mon, 19 Jan 2015 09:32:04 +0000</pubDate>
+      
+      <guid>http://h12.me/note/gae-custom-domain/</guid>
+      <description>Steps:
+ Visit Developers Console. In your project: Compute -&amp;gt; App Engine -&amp;gt; Settings. On the tab labelled CUSTOM DOMAINS, you can verify your domain and assign it and/or its subdomains to your GAE project. Add the DNS settings provided by Google into the DNS server of your domain provider.  Notes:
+ Only HTTP is supported, HTTPS is not. It will not work if you only modify the DNS record without actually assigning the custom domain in the Developer Console.</description>
+    </item>
+    
+    <item>
+      <title>How to install a self-signed CA Certificate to Android 4.4</title>
+      <link>http://h12.me/note/install-ca-android/</link>
+      <pubDate>Sat, 17 Jan 2015 18:13:09 +0000</pubDate>
+      
+      <guid>http://h12.me/note/install-ca-android/</guid>
+      <description>See this blog Remove &amp;ldquo;Network May Be Monitored by an Unknown Third Party&amp;rdquo; in Android 4.4 KitKat.</description>
+    </item>
+    
+    <item>
+      <title>A Shorter Domain Name</title>
+      <link>http://h12.me/note/new-domain-h12/</link>
+      <pubDate>Tue, 16 Dec 2014 09:43:40 +0000</pubDate>
+      
+      <guid>http://h12.me/note/new-domain-h12/</guid>
+      <description>This year, I decided not to renewal the previous domain name (hailiang.ws) last year, but to register a shorter one. There are two reasons:
+ Both the site URL and the email address will be cleaner. A more friendly Go import path will be possible for my repositories on Github.  After comparing various choices on major domain providers, I chose h12.me as the new domain. It is the shortest but still meaningful domain that I can afford.</description>
+    </item>
+    
+    <item>
+      <title>Learning Resources on Parser Combinator</title>
+      <link>http://h12.me/note/parser-combinator-links/</link>
+      <pubDate>Mon, 04 Aug 2014 15:12:55 +0000</pubDate>
+      
+      <guid>http://h12.me/note/parser-combinator-links/</guid>
+      <description> Monadic Parser Combinators Parsec: Direct Style Monadic Parser Combinators for the Real World Combinator Parsing: A Short Tutorial  </description>
+    </item>
+    
+    <item>
+      <title>Resources on Offline Hyphenation</title>
+      <link>http://h12.me/note/hyphen-res/</link>
+      <pubDate>Wed, 30 Jul 2014 08:29:57 +0000</pubDate>
+      
+      <guid>http://h12.me/note/hyphen-res/</guid>
+      <description>CSS hyphenation is supported by latest version of Firefox, Safari &amp;amp; IE. However, Chrome does not support it. Though Hyphenator.js can solve this problem, it runs in the browser and affects the rendering speed of above-the-fold content. So there is only one option left: soft hyphen (U+00AD, &amp;amp;shy;).
+Here is a list of resources that leads to its implementation:
+ An article about CSS3 hyphenation by Hyphenator.js Hunspell: the spell checker &amp;amp; hyphenator used by LibreOffice English Dictionary of LibreOffice Pyphen: A Python hyphenator using Hunspell dictionary file A test page for soft hyphen  </description>
+    </item>
+    
+    <item>
+      <title>About 301 Moved Permanently</title>
+      <link>http://h12.me/note/301-redirect/</link>
+      <pubDate>Fri, 25 Jul 2014 03:39:05 +0000</pubDate>
+      
+      <guid>http://h12.me/note/301-redirect/</guid>
+      <description>When building a website, there is one inevitable thing: 301 permanent redirection. The cases that have to involve 301 includes:
+ Redirection from www subdomain to naked domain or vise versa. Redirection from slashed pretty URL to unslashed URL or vise versa.  301 is easy to implement with Go:
+func redirect301(w http.ResponseWriter, url string) { w.Header().Set(&amp;quot;Location&amp;quot;, url) w.WriteHeader(http.StatusMovedPermanently) }  There is one more thing that needs attention: The root path of a domain always contains a slash (GET / in HTTP request), regardless the user enters the slash or not, so the root path needs no redirection.</description>
+    </item>
+    
+    <item>
+      <title>An Overview of Continuous Integration Services</title>
+      <link>http://h12.me/note/ci-overview/</link>
+      <pubDate>Thu, 17 Jul 2014 14:54:26 +0000</pubDate>
+      
+      <guid>http://h12.me/note/ci-overview/</guid>
+      <description>After reviewing many continuous integration services below, there is no doubt that Wercker is the winner. The Wercker Box (virtual container) is based on Ubuntu and any packages can be easily installed with &amp;ldquo;apt-get&amp;rdquo;. This flexibility basically allows running any test suites and deploying to any cloud platforms. Furthermore, a Wercker Box can inherit from another box and can be stored and published in Wercker directories as the starting point for any projects, increasing the performance significantly.</description>
+    </item>
+    
+    <item>
+      <title>Installing Source Code Pro</title>
+      <link>http://h12.me/note/install-scp/</link>
+      <pubDate>Thu, 17 Jul 2014 03:19:18 +0000</pubDate>
+      
+      <guid>http://h12.me/note/install-scp/</guid>
+      <description>Source Code Pro is one of the best monospace fonts and it is open sourced.
+Here is the script for installing it on Linux.</description>
+    </item>
+    
+    <item>
+      <title>Installing Susy</title>
+      <link>http://h12.me/note/install-susy/</link>
+      <pubDate>Thu, 17 Jul 2014 02:29:57 +0000</pubDate>
+      
+      <guid>http://h12.me/note/install-susy/</guid>
+      <description>The script:
+sudo apt-get install ruby sudo apt-get install ruby-dev sudo gem install susy -V sudo gem install compass --pre -V sudo gem lnstall breakpoint -V  Notes:
+ The current version of Susy uses a higher version of Sass than Compass, so the corresponding Compass version has to be a prerelease (&amp;ndash;pre). The installing process is slow and it feels better to print it out (-V). You may have to run &amp;ldquo;compass watch&amp;rdquo; with sudo (issue 1497).</description>
+    </item>
+    
+    <item>
+      <title>A List of URLs about Web Design</title>
+      <link>http://h12.me/note/web-design-site/</link>
+      <pubDate>Thu, 10 Jul 2014 04:04:00 +0000</pubDate>
+      
+      <guid>http://h12.me/note/web-design-site/</guid>
+      <description> The Elements of Typographic Style Applied to the Web Smashing Magazine Trentwalton Inkwell  </description>
+    </item>
+    
+    <item>
+      <title>Why My Web Font Looks Ugly on IE?</title>
+      <link>http://h12.me/note/ugly-font/</link>
+      <pubDate>Wed, 09 Jul 2014 05:42:42 +0000</pubDate>
+      
+      <guid>http://h12.me/note/ugly-font/</guid>
+      <description>Windows needs hand-tuned hinting which is missing in many web fonts. To solve this problem, there is a tool called ttfautohint which can automatically add hinting to font files.
+There is a tutorial, and an online tool called Fontie.</description>
+    </item>
+    
+    <item>
+      <title>Serving Static Pages on App Engine with Go</title>
+      <link>http://h12.me/note/serve-static/</link>
+      <pubDate>Sun, 06 Jul 2014 06:39:27 +0000</pubDate>
+      
+      <guid>http://h12.me/note/serve-static/</guid>
+      <description>It is straightforward to serve static pages with Go or config file on App Engine, but how to serve static pages on App Engine with Go?
+I got the following error when I tried to customize the 404 page with Go:
+No such file or directory  The solution turns out to be simple: do not do both.
+The file will not be accessible to Go if there is already a rule for it in config.</description>
+    </item>
+    
+    <item>
+      <title>A List of Website Testing Services</title>
+      <link>http://h12.me/note/site-test/</link>
+      <pubDate>Thu, 03 Jul 2014 06:21:58 +0000</pubDate>
+      
+      <guid>http://h12.me/note/site-test/</guid>
+      <description> The W3C Markup Validation Service Google PageSpeed Insights Pingdom Website Speed Test Nibbler BrowserStack  </description>
+    </item>
+    
+    <item>
+      <title>A List of Narrow Fonts for Titles</title>
+      <link>http://h12.me/note/narrow-fonts/</link>
+      <pubDate>Tue, 01 Jul 2014 08:39:42 +0000</pubDate>
+      
+      <guid>http://h12.me/note/narrow-fonts/</guid>
+      <description> Economica Fjalla One League Gothic Medula One Open Sans Condensed Oswald Pathway Gothic One PT Sans Narrow Rationale Six Caps Tulpen One Yanone Kaffeesatz  </description>
+    </item>
+    
+    <item>
+      <title>Links about Font Choosing</title>
+      <link>http://h12.me/note/font-links/</link>
+      <pubDate>Sun, 22 Jun 2014 14:09:45 +0000</pubDate>
+      
+      <guid>http://h12.me/note/font-links/</guid>
+      <description> The Best Font Styles for Blogging Size Doesn’t Matter, and What Does Using Media Queries To Improve Readability 8 Definitive Web Font Stacks  </description>
+    </item>
+    
+    <item>
+      <title>How to Make Web Pages Searchable by Meta Data?</title>
+      <link>http://h12.me/note/searchable-meta-data/</link>
+      <pubDate>Sun, 22 Jun 2014 12:34:02 +0000</pubDate>
+      
+      <guid>http://h12.me/note/searchable-meta-data/</guid>
+      <description>Providing Structured Data</description>
+    </item>
+    
+    <item>
+      <title>Upgrading 4.4.3 ROM for HTC One</title>
+      <link>http://h12.me/note/htc-upgrade/</link>
+      <pubDate>Wed, 11 Jun 2014 12:24:00 +0000</pubDate>
+      
+      <guid>http://h12.me/note/htc-upgrade/</guid>
+      <description>Upgrade your rooted Google Play Edition</description>
+    </item>
+    
+    <item>
+      <title>How to Disable the Touchpad in Linux?</title>
+      <link>http://h12.me/note/disable-touchpad/</link>
+      <pubDate>Tue, 10 Jun 2014 23:00:24 +0000</pubDate>
+      
+      <guid>http://h12.me/note/disable-touchpad/</guid>
+      <description>Have you ever been annoyed by accidentally touching the touchpad on your laptop when you are typing?
+I am using a Linux laptop with both trackpoint and touchpad so the touchpad is just an annoying redundant thing. Here is the one-liner to disable it:
+xinput list | grep TouchPad | grep -Po &#39;id=\K([0-9]+)&#39; | xargs xinput disable  </description>
     </item>
     
   </channel>

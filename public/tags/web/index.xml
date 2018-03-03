@@ -2,12 +2,15 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Web on h12.me</title>
-    <link>http://h12.me/tags/web/index.xml</link>
+    <link>http://h12.me/tags/web/</link>
     <description>Recent content in Web on h12.me</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>Copyright (c) 2012-2018, Hǎiliàng Wáng; all rights reserved.</copyright>
-    <atom:link href="http://h12.me/tags/web/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 08 Jul 2015 07:58:34 +0000</lastBuildDate>
+    
+	<atom:link href="http://h12.me/tags/web/index.xml" rel="self" type="application/rss+xml" />
+    
     
     <item>
       <title>A Comprehensive Note about Proxy Settings</title>
@@ -15,46 +18,10 @@
       <pubDate>Wed, 08 Jul 2015 07:58:34 +0000</pubDate>
       
       <guid>http://h12.me/note/proxy-notes/</guid>
-      <description>
-
-&lt;h2 id=&#34;git&#34;&gt;Git&lt;/h2&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;&amp;gt; cat ~/.gitconfig
-[http]
-	proxy = socks5://[host]:[port]
-[https]
-	proxy = socks5://[host]:[port]
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h2 id=&#34;curl-homebrew&#34;&gt;Curl (Homebrew)&lt;/h2&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;&amp;gt; cat ~/.curlrc
-socks5 = &amp;quot;[host]:[port]&amp;quot;
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h2 id=&#34;docker-pull&#34;&gt;Docker pull&lt;/h2&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-fish&#34;&gt;env HTTP_PROXY=http://xxx docker pull yyy
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h2 id=&#34;gae&#34;&gt;GAE&lt;/h2&gt;
-
-&lt;ol&gt;
-&lt;li&gt;&lt;p&gt;Set proxy&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;export HTTP_PROXY http://[host]:[port]
-export HTTPS_PROXY http://[host]:[port]
-&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;Delete cacerts.txt under GAE SDK installation to disable SSL verification (
-make sure the proxy is safe before this step).&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;Deploy.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;appcfg.py . --email=[address] --passin
-&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
-&lt;/ol&gt;
-</description>
+      <description> Git &amp;gt; cat ~/.gitconfig [http] proxy = socks5://[host]:[port] [https] proxy = socks5://[host]:[port]  Curl (Homebrew) &amp;gt; cat ~/.curlrc socks5 = &amp;quot;[host]:[port]&amp;quot;  Docker pull env HTTP_PROXY=http://xxx docker pull yyy  GAE  Set proxy
+export HTTP_PROXY http://[host]:[port] export HTTPS_PROXY http://[host]:[port]  Delete cacerts.txt under GAE SDK installation to disable SSL verification ( make sure the proxy is safe before this step).
+ Deploy.
+appcfg.py . --email=[address] --passin   </description>
     </item>
     
     <item>
@@ -63,252 +30,8 @@ make sure the proxy is safe before this step).&lt;/p&gt;&lt;/li&gt;
       <pubDate>Sat, 14 Feb 2015 09:30:55 +0000</pubDate>
       
       <guid>http://h12.me/article/scientific-web-surfing/</guid>
-      <description>
-
-&lt;p&gt;&lt;em&gt;Knowledge is power. Information is liberating. &amp;mdash; by Kofi Annan.&lt;/em&gt;&lt;/p&gt;
-
-&lt;h2 id=&#34;vps&#34;&gt;VPS&lt;/h2&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://www.cloudsvm.com/billing/aff.php?aff=140&#34;&gt;CloudsVM&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;http://www.vultr.com/?ref=6837862&#34;&gt;Vultr&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://www.digitalocean.com/?refcode=56202ab61fb7&#34;&gt;DigitalOcean&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://bandwagonhost.com/aff.php?aff=2128&#34;&gt;BandwagonHOST&lt;/a&gt;
-
-&lt;ul&gt;
-&lt;li&gt;Client Area -&amp;gt; Services -&amp;gt; Order New Services&lt;/li&gt;
-&lt;li&gt;64MB RAM is enough for running both ShadowSocks and pdnsd&lt;/li&gt;
-&lt;li&gt;Install Ubuntu LTS 32bit (x86, i686) or CentOS 7.&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&#34;centos&#34;&gt;CentOS&lt;/h2&gt;
-
-&lt;h3 id=&#34;install-centos-7-64bit&#34;&gt;Install CentOS 7 (64bit)&lt;/h3&gt;
-
-&lt;h3 id=&#34;shadowsocks&#34;&gt;Shadowsocks&lt;/h3&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;cd /etc/yum.repos.d/
-wget https://copr.fedorainfracloud.org/coprs/librehat/shadowsocks/repo/epel-7/librehat-shadowsocks-epel-7.repo
-yum update
-yum install shadowsocks-libev
-cd /etc/shadowsocks-libev/
-vim config.json
-# server should be 0.0.0.0
-
-vi /usr/lib/systemd/system/shadowsocks-libev.service
-# replace all $variables to constant values to fix the bug
-
-systemctl enable shadowsocks-libev
-systemctl start shadowsocks-libev
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h3 id=&#34;pdnsd&#34;&gt;pdnsd&lt;/h3&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;wget http://members.home.nl/p.a.rombouts/pdnsd/releases/pdnsd-1.2.9a-par_sl6.x86_64.rpm
-yum localinstall pdnsd-1.2.9a-par_sl6.x86_64.rpm
-vim /etc/pdnsd.conf
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;pdnsd.conf (replace the port)&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;global {
-	run_as      = &amp;quot;pdnsd&amp;quot;;
-	server_ip   = 0.0.0.0;
-	server_port = [xxxx];
-}
-
-server {
-	label   = &amp;quot;GoogleDNS&amp;quot;;
-	ip      = 8.8.8.8, 8.8.4.4;
-	timeout = 3;
-}
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Then run:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;systemctl enable pdnsd
-systemctl start pdnsd
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h2 id=&#34;docker&#34;&gt;Docker&lt;/h2&gt;
-
-&lt;p&gt;Install &lt;a href=&#34;https://docs.docker.com/installation/&#34;&gt;Docker&lt;/a&gt; on VPS.&lt;/p&gt;
-
-&lt;h2 id=&#34;remote-proxy&#34;&gt;Remote Proxy&lt;/h2&gt;
-
-&lt;p&gt;Install &lt;a href=&#34;https://github.com/shadowsocks/shadowsocks-go/releases&#34;&gt;shadowsocks&lt;/a&gt;:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;docker run -d -p &amp;lt;port&amp;gt;:&amp;lt;port&amp;gt; h12w/shadowsocks -p &amp;lt;port&amp;gt; -k &amp;lt;password&amp;gt; -m aes-128-cfb -t 60
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h2 id=&#34;remote-dns-server&#34;&gt;Remote DNS server&lt;/h2&gt;
-
-&lt;p&gt;Install &lt;a href=&#34;http://members.home.nl/p.a.rombouts/pdnsd/&#34;&gt;pdnsd&lt;/a&gt;:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;docker run -d -p [port]:53 -p [port]:53/udp h12w/pdnsd
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;To test the DNS server:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;dig @xxx.xxx.xxx.xxx -p xxxx www.linux.com
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h2 id=&#34;local-openwrt-router&#34;&gt;Local OpenWrt Router&lt;/h2&gt;
-
-&lt;p&gt;Install &lt;a href=&#34;https://github.com/shadowsocks/openwrt-shadowsocks&#34;&gt;openwrt-shadowsocks&lt;/a&gt; &amp;amp;
-&lt;a href=&#34;https://github.com/shadowsocks/ChinaDNS&#34;&gt;ChinaDNS&lt;/a&gt; on an &lt;a href=&#34;https://openwrt.org/&#34;&gt;OpenWrt&lt;/a&gt; router.&lt;/p&gt;
-
-&lt;p&gt;Follow the instructions on &lt;a href=&#34;http://openwrt-dist.sourceforge.net&#34;&gt;OpenWrt-Dist&lt;/a&gt;:&lt;/p&gt;
-
-&lt;p&gt;Check CPU model of the router:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;cat /proc/cpuinfo
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;add the following to &lt;code&gt;/etc/opkg.conf&lt;/code&gt;:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;src/gz openwrt_dist http://openwrt-dist.sourceforge.net/releases/[cpu model]/packages
-src/gz openwrt_dist_luci http://openwrt-dist.sourceforge.net/releases/luci/packages
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;and install:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;opkg update
-opkg install ChinaDNS
-opkg install luci-app-chinadns
-opkg install shadowsocks-libev-spec
-opkg install luci-app-shadowsocks-spec
-
-opkg install bind-dig
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Or manually download IPKs of the corresponding CPU:&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;http://sourceforge.net/projects/openwrt-dist/files/shadowsocks-libev/&#34;&gt;shadowsocks-libev-spec&lt;/a&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;http://sourceforge.net/projects/openwrt-dist/files/luci-app/shadowsocks-spec/&#34;&gt;luci-shadowsocks&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;http://sourceforge.net/projects/openwrt-dist/files/chinadns/&#34;&gt;chinadns&lt;/a&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;http://sourceforge.net/projects/openwrt-dist/files/luci-app/chinadns/&#34;&gt;luci-chinadns&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Copy &lt;code&gt;*.ipk&lt;/code&gt; to router:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;scp *.ipk root@192.168.2.1:/tmp
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;And install:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;opkg install shadowsocks-libev-spec_xxx.ipk
-opkg install ChinaDNS_xxx.ipk
-/etc/init.d/shadowsocks enable
-/etc/init.d/chinadns enable
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;ShadowSocks configuration in &lt;code&gt;/etc/config/shadowsocks&lt;/code&gt;:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;config shadowsocks
-	...
-	option config_file &#39;/etc/shadowsocks/config.json&#39;
-	...
-	option tunnel_enable &#39;0&#39;
-	...
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;It refers to &lt;code&gt;/etc/shadowsocks/config.json&lt;/code&gt;:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;{
-    &amp;quot;server&amp;quot;:      &amp;quot;xxx.xxx.xxx.xxx&amp;quot;,
-    &amp;quot;server_port&amp;quot;: xxxx,
-    &amp;quot;local_port&amp;quot;:  xxxx,
-    &amp;quot;password&amp;quot;:    &amp;quot;xxxxxx&amp;quot;,
-    &amp;quot;method&amp;quot;:      &amp;quot;aes-128-cfb&amp;quot;,
-    &amp;quot;timeout&amp;quot;:     60
-}
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;ChinaDNS configuration in &lt;code&gt;/etc/config/chinadns&lt;/code&gt;:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;config chinadns
-    ...
-    option chnroute &#39;/etc/shadowsocks/ignore.list&#39;
-    ...
-    option server &#39;[isp_dns],[private_pdnsd_dns]&#39;
-    ...
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Make sure &lt;code&gt;[private_pdnsd_dns]&lt;/code&gt; is the same IP:PORT as the remote pdnsd server.&lt;/p&gt;
-
-&lt;p&gt;ucitrack configuration in &lt;code&gt;/etc/config/ucitrack&lt;/code&gt;:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;config shadowsocks
-    option init &#39;shadowsocks&#39;
-
-config chinadns
-    option init &#39;chinadns&#39;
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;DHCP configuration in &lt;code&gt;/etc/config/dhcp&lt;/code&gt;:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;config dnsmasq
-    list server &#39;127.0.0.1#5353&#39;
-    option noresolv &#39;1&#39;
-    option nohosts &#39;1&#39;
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h2 id=&#34;redsocks2&#34;&gt;RedSocks2&lt;/h2&gt;
-
-&lt;p&gt;Use RedSocks2 to bypass the proxy when the target site is reachable.&lt;/p&gt;
-
-&lt;p&gt;Download RedSocks2:&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;http://sourceforge.net/projects/openwrt-dist/files/redsocks2/&#34;&gt;RedSocks2&lt;/a&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;http://sourceforge.net/projects/openwrt-dist/files/luci-app/redsocks2/&#34;&gt;luci-redsocks2&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Install RedSocks2:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;scp *.ipk root@192.168.2.1:/tmp
-opkg update
-opkg install xxx.ipk
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;RedSocks2 will take effect immediately.&lt;/p&gt;
-
-&lt;h2 id=&#34;upgrade-openwrt&#34;&gt;Upgrade OpenWRT&lt;/h2&gt;
-
-&lt;p&gt;Download latest &lt;code&gt;*.ipk&lt;/code&gt; above.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;opkg update
-opkg upgrade ipset libopenssl resolveip iptables-mod-tproxy
-opkg install xxx.ipk
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Merge configuration files manually.&lt;/p&gt;
-
-&lt;p&gt;Update &lt;code&gt;ignore.list&lt;/code&gt;:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;wget -O- &#39;http://ftp.apnic.net/apnic/stats/apnic/delegated-apnic-latest&#39; | awk -F\| &#39;/CN\|ipv4/ { printf(&amp;quot;%s/%d\n&amp;quot;, $4, 32-log($5)/log(2)) }&#39; &amp;gt; ignore.list
-scp ignore.list root@192.168.2.1:/etc/shadowsocks/ignore.list
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;reboot
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h2 id=&#34;android-client&#34;&gt;Android Client&lt;/h2&gt;
-
-&lt;p&gt;&lt;a href=&#34;https://github.com/shadowsocks/shadowsocks-android/releases&#34;&gt;shadowsocks-android&lt;/a&gt;.&lt;/p&gt;
-</description>
+      <description>Knowledge is power. Information is liberating. &amp;mdash; by Kofi Annan.
+VPS  CloudsVM Vultr DigitalOcean BandwagonHOST  Client Area -&amp;gt; Services -&amp;gt; Order New Services 64MB RAM is enough for running both ShadowSocks and pdnsd Install Ubuntu LTS 32bit (x86, i686) or CentOS 7.   CentOS Install CentOS 7 (64bit) Shadowsocks cd /etc/yum.repos.d/ wget https://copr.fedorainfracloud.org/coprs/librehat/shadowsocks/repo/epel-7/librehat-shadowsocks-epel-7.repo yum update yum install shadowsocks-libev cd /etc/shadowsocks-libev/ vim config.json # server should be 0.</description>
     </item>
     
     <item>
@@ -317,20 +40,8 @@ scp ignore.list root@192.168.2.1:/etc/shadowsocks/ignore.list
       <pubDate>Tue, 16 Dec 2014 09:43:40 +0000</pubDate>
       
       <guid>http://h12.me/note/new-domain-h12/</guid>
-      <description>&lt;p&gt;This year, I decided not to renewal the previous domain name (hailiang.ws) last
-year, but to register a shorter one. There are two reasons:&lt;/p&gt;
-
-&lt;ol&gt;
-&lt;li&gt;Both the site URL and the email address will be cleaner.&lt;/li&gt;
-&lt;li&gt;A more friendly Go import path will be possible for my repositories on Github.&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;After comparing various choices on major domain providers, I chose &lt;code&gt;h12.me&lt;/code&gt; as
-the new domain. It is the shortest but still meaningful domain that I can afford.
-&lt;code&gt;H&lt;/code&gt; is the initial letter of my given name, &lt;code&gt;12&lt;/code&gt; is simply the number of letters
-of my full name, and &lt;code&gt;.me&lt;/code&gt; is a top level domain quite suitable for a personal
-website.&lt;/p&gt;
-</description>
+      <description>This year, I decided not to renewal the previous domain name (hailiang.ws) last year, but to register a shorter one. There are two reasons:
+ Both the site URL and the email address will be cleaner. A more friendly Go import path will be possible for my repositories on Github.  After comparing various choices on major domain providers, I chose h12.me as the new domain. It is the shortest but still meaningful domain that I can afford.</description>
     </item>
     
     <item>
@@ -339,24 +50,9 @@ website.&lt;/p&gt;
       <pubDate>Wed, 30 Jul 2014 08:29:57 +0000</pubDate>
       
       <guid>http://h12.me/note/hyphen-res/</guid>
-      <description>&lt;p&gt;&lt;a href=&#34;http://caniuse.com/css-hyphens&#34;&gt;CSS hyphenation&lt;/a&gt; is supported by latest version
-of Firefox, Safari &amp;amp; IE. However, Chrome does not support it. Though
-&lt;a href=&#34;https://code.google.com/p/hyphenator/&#34;&gt;Hyphenator.js&lt;/a&gt; can solve this problem,
-it runs in the browser and affects the rendering speed of above-the-fold content.
-So there is only one option left: soft hyphen (&lt;code&gt;U+00AD&lt;/code&gt;, &lt;code&gt;&amp;amp;shy;&lt;/code&gt;).&lt;/p&gt;
-
-&lt;p&gt;Here is a list of resources that leads to its implementation:&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;An &lt;a href=&#34;https://code.google.com/p/hyphenator/wiki/en_CSS3Hyphenation&#34;&gt;article&lt;/a&gt; about CSS3 hyphenation by Hyphenator.js&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;http://hunspell.sourceforge.net/&#34;&gt;Hunspell&lt;/a&gt;: the spell checker &amp;amp; hyphenator
-used by LibreOffice&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;http://extensions.libreoffice.org/extension-center/american-british-canadian-spelling-hyphen-thesaurus-dictionaries&#34;&gt;English Dictionary&lt;/a&gt; of LibreOffice&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://github.com/Kozea/Pyphen&#34;&gt;Pyphen&lt;/a&gt;: A Python hyphenator using Hunspell
-dictionary file&lt;/li&gt;
-&lt;li&gt;A test &lt;a href=&#34;http://clagnut.com/sandbox/softhyphen/&#34;&gt;page&lt;/a&gt; for soft hyphen&lt;/li&gt;
-&lt;/ul&gt;
-</description>
+      <description>CSS hyphenation is supported by latest version of Firefox, Safari &amp;amp; IE. However, Chrome does not support it. Though Hyphenator.js can solve this problem, it runs in the browser and affects the rendering speed of above-the-fold content. So there is only one option left: soft hyphen (U+00AD, &amp;amp;shy;).
+Here is a list of resources that leads to its implementation:
+ An article about CSS3 hyphenation by Hyphenator.js Hunspell: the spell checker &amp;amp; hyphenator used by LibreOffice English Dictionary of LibreOffice Pyphen: A Python hyphenator using Hunspell dictionary file A test page for soft hyphen  </description>
     </item>
     
     <item>
@@ -365,27 +61,9 @@ dictionary file&lt;/li&gt;
       <pubDate>Fri, 25 Jul 2014 03:39:05 +0000</pubDate>
       
       <guid>http://h12.me/note/301-redirect/</guid>
-      <description>&lt;p&gt;When building a website, there is one inevitable thing:
-&lt;a href=&#34;http://en.wikipedia.org/wiki/HTTP_301&#34;&gt;301 permanent redirection&lt;/a&gt;. The cases
-that have to involve 301 includes:&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;Redirection from www subdomain to naked domain or vise versa.&lt;/li&gt;
-&lt;li&gt;Redirection from slashed pretty URL to unslashed URL or vise versa.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;301 is easy to implement with Go:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-go&#34;&gt;func redirect301(w http.ResponseWriter, url string) {
-    w.Header().Set(&amp;quot;Location&amp;quot;, url)
-    w.WriteHeader(http.StatusMovedPermanently)
-}
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;There is one more thing that needs attention: The root path of a domain always
-contains a slash (GET / in HTTP request), regardless the user enters the slash
-or not, so the root path needs no redirection.&lt;/p&gt;
-</description>
+      <description>When building a website, there is one inevitable thing: 301 permanent redirection. The cases that have to involve 301 includes:
+ Redirection from www subdomain to naked domain or vise versa. Redirection from slashed pretty URL to unslashed URL or vise versa.  301 is easy to implement with Go:
+func redirect301(w http.ResponseWriter, url string) { w.Header().Set(&amp;quot;Location&amp;quot;, url) w.WriteHeader(http.StatusMovedPermanently) }  There is one more thing that needs attention: The root path of a domain always contains a slash (GET / in HTTP request), regardless the user enters the slash or not, so the root path needs no redirection.</description>
     </item>
     
     <item>
@@ -394,114 +72,7 @@ or not, so the root path needs no redirection.&lt;/p&gt;
       <pubDate>Thu, 24 Jul 2014 03:42:01 +0000</pubDate>
       
       <guid>http://h12.me/article/pagespeed-insights/</guid>
-      <description>
-
-&lt;h2 id=&#34;indtroduction&#34;&gt;Indtroduction&lt;/h2&gt;
-
-&lt;p&gt;&lt;a href=&#34;https://developers.google.com/speed/pagespeed/insights/&#34;&gt;PageSpeed Insights&lt;/a&gt; is
-an online tool by Google to measure the performance of an web page for mobile
-and desktop devices. It has a set of heuristic rules considering the
-network-independent aspects of page performance. Each rule has a weight and the
-total score ranges from 0 to 100 points. The desktop and mobile tests have the
-same set of rules for performance and mobile test has some extra rules
-about user experience.&lt;/p&gt;
-
-&lt;p&gt;Though it might be too rigorous to require &lt;sup&gt;100&lt;/sup&gt;&amp;frasl;&lt;sub&gt;100&lt;/sub&gt; score for a web site, it is a
-good way to learn those rules to actually achieve it, and it does have a
-significant improvement to the load time of my site (load time reduces from more
-than 1 sec to about 500 ms in the &lt;a href=&#34;http://fpt.pingdom.com/&#34;&gt;Pingdom Website Speed Test&lt;/a&gt;).
-In the following section, I would like to share what I have learned by
-optimizing this website to achieve a &lt;a href=&#34;https://developers.google.com/speed/pagespeed/insights/?url=http%3A%2F%2Fh12.me&#34;&gt;perfect score&lt;/a&gt;, rule by rule.&lt;/p&gt;
-
-&lt;h2 id=&#34;speed-rules&#34;&gt;Speed rules&lt;/h2&gt;
-
-&lt;h3 id=&#34;avoid-landing-page-redirects&#34;&gt;Avoid landing page redirects&lt;/h3&gt;
-
-&lt;p&gt;The redirection to mobile version can be avoided by responsive design (CSS media
-queries).&lt;/p&gt;
-
-&lt;p&gt;You cannot avoid redirections completely, e.g. I have a 301 redirection from www
-subdomain to the naked domain, but the naked domain does not have any further
-redirection.&lt;/p&gt;
-
-&lt;h3 id=&#34;eliminate-render-blocking-javascript-and-css-in-above-the-fold-content&#34;&gt;Eliminate render-blocking JavaScript and CSS in above-the-fold content&lt;/h3&gt;
-
-&lt;p&gt;This might be the hardest rule to fully comply with.&lt;/p&gt;
-
-&lt;p&gt;Firstly, you need to minimize and fully inline your CSS into HTML, and your CSS
-cannot be too large. (My CSS is 22kB after minimization). If you use web fonts,
-you should directly write the @font-face in your inlined CSS, rather than
-importing an external CSS.&lt;/p&gt;
-
-&lt;p&gt;Secondly, you need to inline or asynchronously load all your scripts. The
-&amp;ldquo;async&amp;rdquo; attribute is not very useful because it cannot control the order of
-the execution of multiple scripts. I have found &lt;a href=&#34;http://headjs.com/&#34;&gt;HeadJS&lt;/a&gt;
-to solve the problem. HeadJS is inlined into the HTML (3.7kB), and other scripts
-are loaded asychronously but executed in order.&lt;/p&gt;
-
-&lt;p&gt;Finally, you have to make sure the delayed scripts will not affect the
-layout of above-the-fold content. You might have to make some trade off and cut
-off some functionality.&lt;/p&gt;
-
-&lt;h3 id=&#34;enable-compression-leverage-browser-caching-reduce-server-response-time&#34;&gt;Enable compression, Leverage browser caching &amp;amp; Reduce server response time&lt;/h3&gt;
-
-&lt;p&gt;Since I uses Google App Engine, the gzip compression should already been enabled
-by default, the expiration time for static resources are configurable via
-config.yaml and GAE responses fast enough.&lt;/p&gt;
-
-&lt;h3 id=&#34;minify-resources-html-css-and-javascript&#34;&gt;Minify Resources (HTML, CSS, and JavaScript)&lt;/h3&gt;
-
-&lt;p&gt;The CSS is minified by Compass, and scripts imported are already minified. The
-HTML file is not minified but it seems not serious enough to trigger a test
-warning by PageSpeed.&lt;/p&gt;
-
-&lt;h3 id=&#34;optimize-images&#34;&gt;Optimize images&lt;/h3&gt;
-
-&lt;p&gt;I use font icons in my site. When there has to be an image, use PNG compressed with
-&lt;a href=&#34;http://optipng.sourceforge.net/&#34;&gt;OptiPNG&lt;/a&gt;.&lt;/p&gt;
-
-&lt;h3 id=&#34;reduce-the-size-of-the-above-the-fold-content&#34;&gt;Reduce the size of the above-the-fold content&lt;/h3&gt;
-
-&lt;p&gt;It basically depends on your design and just remember the YAGNI principle.&lt;/p&gt;
-
-&lt;h2 id=&#34;user-experience-rules&#34;&gt;User experience rules&lt;/h2&gt;
-
-&lt;p&gt;These rule only applies to mobile platforms.&lt;/p&gt;
-
-&lt;h3 id=&#34;avoid-plugins&#34;&gt;Avoid plugins&lt;/h3&gt;
-
-&lt;p&gt;None of them on my site.&lt;/p&gt;
-
-&lt;h3 id=&#34;configure-the-viewport&#34;&gt;Configure the viewport&lt;/h3&gt;
-
-&lt;p&gt;This is part of the responsive design.&lt;/p&gt;
-
-&lt;h3 id=&#34;size-content-to-viewport&#34;&gt;Size content to viewport&lt;/h3&gt;
-
-&lt;p&gt;An important lesson: never write a URL directly in an article because URL does
-not wrap well and could overflow out of the viewport width. instead, give the
-URL a name composed of words.&lt;/p&gt;
-
-&lt;h3 id=&#34;size-tap-targets-appropriately-use-legible-font-sizes&#34;&gt;Size tap targets appropriately &amp;amp; Use legible font sizes&lt;/h3&gt;
-
-&lt;p&gt;I have written some lists of links in my notes, which makes those links close to
-each other. To make them separate enough to pass this rule, the line height cannot
-be too small, here is the minimal requirement from my tests (font-size/line-height):&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;16px/28px&lt;/li&gt;
-&lt;li&gt;17px/28px&lt;/li&gt;
-&lt;li&gt;18px/29px&lt;/li&gt;
-&lt;li&gt;19px/30px&lt;/li&gt;
-&lt;li&gt;20px/30px&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&#34;conclusion&#34;&gt;Conclusion&lt;/h2&gt;
-
-&lt;p&gt;It is not rocket science to build a website with good performance. You just needs
-to tune and optimize every detail of your site patiently. In this process,
-PageSpeed Insights can help a lot.&lt;/p&gt;
-</description>
+      <description>Indtroduction PageSpeed Insights is an online tool by Google to measure the performance of an web page for mobile and desktop devices. It has a set of heuristic rules considering the network-independent aspects of page performance. Each rule has a weight and the total score ranges from 0 to 100 points. The desktop and mobile tests have the same set of rules for performance and mobile test has some extra rules about user experience.</description>
     </item>
     
     <item>
@@ -510,26 +81,9 @@ PageSpeed Insights can help a lot.&lt;/p&gt;
       <pubDate>Thu, 17 Jul 2014 02:29:57 +0000</pubDate>
       
       <guid>http://h12.me/note/install-susy/</guid>
-      <description>&lt;p&gt;The script:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;sudo apt-get install ruby
-sudo apt-get install ruby-dev
-sudo gem install susy -V
-sudo gem install compass --pre -V
-sudo gem lnstall breakpoint -V
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Notes:&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;The current version of Susy uses a higher version of Sass than Compass, so the
-corresponding Compass version has to be a prerelease (&amp;ndash;pre).&lt;/li&gt;
-&lt;li&gt;The installing process is slow and it feels better to print it out (-V).&lt;/li&gt;
-&lt;li&gt;You may have to run &amp;ldquo;compass watch&amp;rdquo; with sudo (&lt;a href=&#34;https://github.com/Compass/compass/issues/1497&#34;&gt;issue 1497&lt;/a&gt;).&lt;/li&gt;
-&lt;li&gt;An alternative &lt;a href=&#34;https://ruby.taobao.org/&#34;&gt;RubyGems source&lt;/a&gt; that is close to
-your location might help.&lt;/li&gt;
-&lt;/ul&gt;
-</description>
+      <description>The script:
+sudo apt-get install ruby sudo apt-get install ruby-dev sudo gem install susy -V sudo gem install compass --pre -V sudo gem lnstall breakpoint -V  Notes:
+ The current version of Susy uses a higher version of Sass than Compass, so the corresponding Compass version has to be a prerelease (&amp;ndash;pre). The installing process is slow and it feels better to print it out (-V). You may have to run &amp;ldquo;compass watch&amp;rdquo; with sudo (issue 1497).</description>
     </item>
     
     <item>
@@ -538,13 +92,7 @@ your location might help.&lt;/li&gt;
       <pubDate>Thu, 10 Jul 2014 04:04:00 +0000</pubDate>
       
       <guid>http://h12.me/note/web-design-site/</guid>
-      <description>&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;http://webtypography.net/&#34;&gt;The Elements of Typographic Style Applied to the Web&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;http://www.smashingmagazine.com/&#34;&gt;Smashing Magazine&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;http://trentwalton.com/&#34;&gt;Trentwalton&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;http://www.inkwell.ie/&#34;&gt;Inkwell&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-</description>
+      <description> The Elements of Typographic Style Applied to the Web Smashing Magazine Trentwalton Inkwell  </description>
     </item>
     
     <item>
@@ -553,13 +101,8 @@ your location might help.&lt;/li&gt;
       <pubDate>Wed, 09 Jul 2014 05:42:42 +0000</pubDate>
       
       <guid>http://h12.me/note/ugly-font/</guid>
-      <description>&lt;p&gt;Windows needs hand-tuned hinting which is missing in many web fonts. To solve this
-problem, there is a tool called &lt;a href=&#34;http://www.freetype.org/ttfautohint/index.html&#34;&gt;ttfautohint&lt;/a&gt;
-which can automatically add hinting to font files.&lt;/p&gt;
-
-&lt;p&gt;There is a &lt;a href=&#34;http://pixelsvsbytes.com/blog/2013/11/how-to-create-perfect-web-fonts-in-3-steps/&#34;&gt;tutorial&lt;/a&gt;,
-and an online tool called &lt;a href=&#34;http://fontie.flowyapps.com/&#34;&gt;Fontie&lt;/a&gt;.&lt;/p&gt;
-</description>
+      <description>Windows needs hand-tuned hinting which is missing in many web fonts. To solve this problem, there is a tool called ttfautohint which can automatically add hinting to font files.
+There is a tutorial, and an online tool called Fontie.</description>
     </item>
     
     <item>
@@ -568,36 +111,10 @@ and an online tool called &lt;a href=&#34;http://fontie.flowyapps.com/&#34;&gt;F
       <pubDate>Sun, 06 Jul 2014 06:39:27 +0000</pubDate>
       
       <guid>http://h12.me/note/serve-static/</guid>
-      <description>&lt;p&gt;It is straightforward to serve static pages with &lt;a href=&#34;http://golang.org/pkg/net/http/&#34;&gt;Go&lt;/a&gt;
-or &lt;a href=&#34;https://developers.google.com/appengine/docs/go/config/appconfig&#34;&gt;config file&lt;/a&gt;
-on App Engine, but how to serve static pages on App Engine with Go?&lt;/p&gt;
-
-&lt;p&gt;I got the following error when I tried to customize the 404 page with Go:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;No such file or directory
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;The solution turns out to be simple: do not do both.&lt;/p&gt;
-
-&lt;p&gt;The file will not be accessible to Go if there is already a rule for it in
-config.yaml. Remove the rule from config.yaml and the file will be available to
-Go again (source:
-&lt;a href=&#34;https://groups.google.com/d/msg/google-appengine-go/DmfDPUBkmrg/SvJ1dwjC0_EJ&#34;&gt;google-appengine-go&lt;/a&gt;).&lt;/p&gt;
-
-&lt;p&gt;Here is an exmaple to serve a custom 404 not found page:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-go&#34;&gt;func serve404(w http.ResponseWriter, r *http.Request) {
-	w.WriteHeader(http.StatusNotFound)
-	f, err := http.Dir(&amp;quot;public&amp;quot;).Open(&amp;quot;404.html&amp;quot;)
-	if err != nil {
-		serveError(w, r, err)
-		return
-	}
-	defer f.Close()
-	io.Copy(w, f)
-}
-&lt;/code&gt;&lt;/pre&gt;
-</description>
+      <description>It is straightforward to serve static pages with Go or config file on App Engine, but how to serve static pages on App Engine with Go?
+I got the following error when I tried to customize the 404 page with Go:
+No such file or directory  The solution turns out to be simple: do not do both.
+The file will not be accessible to Go if there is already a rule for it in config.</description>
     </item>
     
     <item>
@@ -606,115 +123,9 @@ Go again (source:
       <pubDate>Sat, 05 Jul 2014 15:03:04 +0000</pubDate>
       
       <guid>http://h12.me/article/optimal-font-scale/</guid>
-      <description>
-
-&lt;p&gt;During the construction of this site, there are many important design decisions
-that need to be made. One of them is to decide the font size for each level of
-headings, i.e., typographic scale.&lt;/p&gt;
-
-&lt;h2 id=&#34;investigation&#34;&gt;Investigation&lt;/h2&gt;
-
-&lt;p&gt;The first thing I did was to read &lt;a href=&#34;https://www.google.com/?#newwindow=1&amp;amp;q=typographic+scale&#34;&gt;everything online&lt;/a&gt;
-about typographic scale. I will just skip the details and jump to my opinions:&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;Modular scale should be followed&lt;/li&gt;
-&lt;li&gt;Traditional scale is obsolete&lt;/li&gt;
-&lt;li&gt;Golden ratio or double-stranded scale do not make any sense&lt;/li&gt;
-&lt;li&gt;Vertical rhythm should be considered&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Then a little explanation.&lt;/p&gt;
-
-&lt;p&gt;Modular scale (geometric series) is the way how our visual perception understands
-relative size. When a page is zoomed in or out, the perceived aboslue length
-changes, but the ratio remains the same. Rather than choosing modular scale, we
-actually think in terms of modular scale.  There is no hard rule that the ratio
-of modular scale must be a constant, but a constant modular ratio is the simplest
-and provides consistency.&lt;/p&gt;
-
-&lt;p&gt;Traditional scale is actually modular scale of ratio 2 for size 6 7 8 9, with some
-extra and missing sizes. There is no reason why we restraint ourselves to
-irrelevant factors, instead, we should consider the constraints from our
-&lt;em&gt;real problem&lt;/em&gt;. The same reason applies to the golden ratio and double-stranded
-scale.&lt;/p&gt;
-
-&lt;h2 id=&#34;problem-constraints&#34;&gt;Problem &amp;amp; constraints&lt;/h2&gt;
-
-&lt;p&gt;What is a good typographic scale? For a Blog article, it should at least meet the
-following requirements:&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;Discrimination: different headings can be easily distingushed&lt;/li&gt;
-&lt;li&gt;Consistency: all the headings looks consistent by the same principle&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Besides font size, line height of each level of headings should also be adjusted
-to meet the requirement of vertical rhythm. Line height affects the appearance
-of a heading, especially when the heading is wrapped and takes up multiple lines.&lt;/p&gt;
-
-&lt;p&gt;Modular scale solves part of the problem, but we still have to determine the
-value of the modular ratio and to make the line height as consistent as possible
-while maintaining vertical rhythm.&lt;/p&gt;
-
-&lt;p&gt;The typographic scale should also satisfy these constraints:&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;The line height of each heading must be an integral multiple of the line height
-of body copy (vertical rhythm)&lt;/li&gt;
-&lt;li&gt;The smallest heading must not smaller than the body copy&lt;/li&gt;
-&lt;li&gt;The number of heading levels&lt;/li&gt;
-&lt;li&gt;The maximum acceptable size of the top heading&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&#34;optimization&#34;&gt;Optimization&lt;/h2&gt;
-
-&lt;p&gt;Design is a process exploring all the possible solutions (the design space) to
-find an optimal one, i.e. an &lt;a href=&#34;http://en.wikipedia.org/wiki/Optimization_problem&#34;&gt;optimization problem&lt;/a&gt;.
-If we can express the problem in a mathematical form, we can solve it by
-computation.&lt;/p&gt;
-
-&lt;p&gt;The constraints are already listed. The next thing is to express the objective
-function, which is the inconsistency of headings from each other. What is it?&lt;/p&gt;
-
-&lt;p&gt;Short answer: the standard deviation of relative line height.&lt;/p&gt;
-
-&lt;p&gt;Long answer: The line height of each heading is different, but the relative line
-height (line height divided by font size) of different headings can be the same,
-and when they are the same, the headings look consistent. To compare two numbers,
-you can just use the absolute value of the difference of the two numbers, but for
-a list of numbers, standard deviation is an effective measure for their inconsistency.&lt;/p&gt;
-
-&lt;p&gt;The caculation is easy for a computer, and can be done with brute force. The
-program just needs to exhaustively tries each possible heading sizes that
-satisifies all the constraints and evaluates the inconsistency. Finally, it
-sorts all the solutions by the inconsistency and find the best solution.&lt;/p&gt;
-
-&lt;p&gt;Here is the code (runable online):
-&lt;a href=&#34;http://play.golang.org/p/rP09HJDUcz&#34;&gt;a Go program to calculate optimal typographic scale&lt;/a&gt;.&lt;/p&gt;
-
-&lt;h2 id=&#34;example&#34;&gt;Example&lt;/h2&gt;
-
-&lt;p&gt;In this site, I need to use maximum three levels of headings: H1, H2 &amp;amp; H3. I
-choose 19px/30px as body copy. The search range for H3 is from 1.2*19px to
-1.5*19px, and the range for H3 is from 35 to 50.
-Finally the solution is:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;Ratio: 1.3079
-H3: 23px/1.3
-H2: 30px/1.0
-H1: 39px/1.5
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Though the line height of H2 is still not ideal, it is already the best solution
-given the restrictions by vertical rhythm.&lt;/p&gt;
-
-&lt;h2 id=&#34;conclusion&#34;&gt;Conclusion&lt;/h2&gt;
-
-&lt;p&gt;The approach can sccessfully find the optimal typographic scale under the
-precise problem definition in this article. It does not rely on any mysterious
-process or magic numbers, but only reasoning and computation.&lt;/p&gt;
-</description>
+      <description>During the construction of this site, there are many important design decisions that need to be made. One of them is to decide the font size for each level of headings, i.e., typographic scale.
+Investigation The first thing I did was to read everything online about typographic scale. I will just skip the details and jump to my opinions:
+ Modular scale should be followed Traditional scale is obsolete Golden ratio or double-stranded scale do not make any sense Vertical rhythm should be considered  Then a little explanation.</description>
     </item>
     
     <item>
@@ -723,14 +134,7 @@ process or magic numbers, but only reasoning and computation.&lt;/p&gt;
       <pubDate>Thu, 03 Jul 2014 06:21:58 +0000</pubDate>
       
       <guid>http://h12.me/note/site-test/</guid>
-      <description>&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;http://validator.w3.org/&#34;&gt;The W3C Markup Validation Service&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;http://developers.google.com/speed/pagespeed/insights/&#34;&gt;Google PageSpeed Insights&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;http://tools.pingdom.com/fpt/&#34;&gt;Pingdom Website Speed Test&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;http://nibbler.silktide.com&#34;&gt;Nibbler&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;http://www.browserstack.com/screenshots&#34;&gt;BrowserStack&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-</description>
+      <description> The W3C Markup Validation Service Google PageSpeed Insights Pingdom Website Speed Test Nibbler BrowserStack  </description>
     </item>
     
     <item>
@@ -739,21 +143,7 @@ process or magic numbers, but only reasoning and computation.&lt;/p&gt;
       <pubDate>Tue, 01 Jul 2014 08:39:42 +0000</pubDate>
       
       <guid>http://h12.me/note/narrow-fonts/</guid>
-      <description>&lt;ul&gt;
-&lt;li&gt;Economica&lt;/li&gt;
-&lt;li&gt;Fjalla One&lt;/li&gt;
-&lt;li&gt;League Gothic&lt;/li&gt;
-&lt;li&gt;Medula One&lt;/li&gt;
-&lt;li&gt;Open Sans Condensed&lt;/li&gt;
-&lt;li&gt;Oswald&lt;/li&gt;
-&lt;li&gt;Pathway Gothic One&lt;/li&gt;
-&lt;li&gt;PT Sans Narrow&lt;/li&gt;
-&lt;li&gt;Rationale&lt;/li&gt;
-&lt;li&gt;Six Caps&lt;/li&gt;
-&lt;li&gt;Tulpen One&lt;/li&gt;
-&lt;li&gt;Yanone Kaffeesatz&lt;/li&gt;
-&lt;/ul&gt;
-</description>
+      <description> Economica Fjalla One League Gothic Medula One Open Sans Condensed Oswald Pathway Gothic One PT Sans Narrow Rationale Six Caps Tulpen One Yanone Kaffeesatz  </description>
     </item>
     
     <item>
@@ -762,13 +152,7 @@ process or magic numbers, but only reasoning and computation.&lt;/p&gt;
       <pubDate>Sun, 22 Jun 2014 14:09:45 +0000</pubDate>
       
       <guid>http://h12.me/note/font-links/</guid>
-      <description>&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;http://www.snapily.com/blog/the-best-font-styles-for-blogging/&#34;&gt;The Best Font Styles for Blogging&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;http://www.bigbrandsystem.com/best-font-size/&#34;&gt;Size Doesn’t Matter, and What Does&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;http://blog.mailchimp.com/using-media-queries-to-improve-readability/&#34;&gt;Using Media Queries To Improve Readability&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;http://www.sitepoint.com/eight-definitive-font-stacks/&#34;&gt;8 Definitive Web Font Stacks&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-</description>
+      <description> The Best Font Styles for Blogging Size Doesn’t Matter, and What Does Using Media Queries To Improve Readability 8 Definitive Web Font Stacks  </description>
     </item>
     
     <item>
@@ -777,135 +161,9 @@ process or magic numbers, but only reasoning and computation.&lt;/p&gt;
       <pubDate>Mon, 02 Jun 2014 01:21:00 +0000</pubDate>
       
       <guid>http://h12.me/project/getgo/</guid>
-      <description>
-
-&lt;p&gt;&lt;a href=&#34;https://godoc.org/github.com/h12w/getgo&#34;&gt;&lt;img src=&#34;https://godoc.org/github.com/h12w/getgo?status.png&#34; alt=&#34;GoDoc&#34; /&gt;&lt;/a&gt;
-&lt;a href=&#34;https://travis-ci.org/h12w/getgo&#34;&gt;&lt;img src=&#34;https://travis-ci.org/h12w/getgo.svg?branch=master&#34; alt=&#34;Build Status&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;Getgo is a concurrent, simple and extensible web scraping framework written in &lt;a href=&#34;http://golang.org&#34;&gt;Go&lt;/a&gt;.&lt;/p&gt;
-
-&lt;h2 id=&#34;quick-start&#34;&gt;Quick start&lt;/h2&gt;
-
-&lt;h3 id=&#34;get-getgo&#34;&gt;Get Getgo&lt;/h3&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;go get -u github.com/h12w/getgo
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h3 id=&#34;define-a-task&#34;&gt;Define a task&lt;/h3&gt;
-
-&lt;p&gt;This example is under the examples/goblog directory. To use Getgo to scrap structured
-data from a web page, just define the structured data as a Go struct (golangBlogEntry),
-and define a corresponding task (golangBlogIndexTask).&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-go&#34;&gt;type golangBlogEntry struct {
-	Title string
-	URL   string
-	Tags  *string
-}
-
-type golangBlogIndexTask struct {
-	// Variables in task URL, e.g. page number
-}
-
-func (t golangBlogIndexTask) Request() *http.Request {
-	return getReq(`http://blog.golang.org/index`)
-}
-
-func (t golangBlogIndexTask) Handle(root *query.Node, s getgo.Storer) (err error) {
-	root.Div(_Id(&amp;quot;content&amp;quot;)).Children(_Class(&amp;quot;blogtitle&amp;quot;)).For(func(item *query.Node) {
-		title := item.Ahref().Text()
-		url := item.Ahref().Href()
-		tags := item.Span(_Class(&amp;quot;tags&amp;quot;)).Text()
-		if url != nil &amp;amp;&amp;amp; title != nil {
-			store(&amp;amp;golangBlogEntry{Title: *title, URL: *url, Tags: tags}, s, &amp;amp;err)
-		}
-	})
-	return
-}
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h3 id=&#34;run-the-task&#34;&gt;Run the task&lt;/h3&gt;
-
-&lt;p&gt;Use util.Run to run the task and print all the result to standard output.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-go&#34;&gt;	util.Run(golangBlogIndexTask{})
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;To store the parsed result to a database, a storage backend satisfying getgo.Tx
-interface should be provided to the getgo.Run method.&lt;/p&gt;
-
-&lt;h2 id=&#34;understand-getgo&#34;&gt;Understand Getgo&lt;/h2&gt;
-
-&lt;p&gt;A getgo.Task is an interface to represent an HTTP crawler task that provides an
-HTTP request and a method to handle the HTTP response.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-go&#34;&gt;type Task interface {
-	Requester
-	Handle(resp *http.Response) error
-}
-
-type Requester interface {
-	Request() *http.Request
-}
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;A getgo.Runner is responsible to run a getgo.Task. There are two concrete runners
-provided: SequentialRunner and ConcurrentRunner.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-go&#34;&gt;type Runner interface {
-	Run(task Task) error // Run runs a task
-	Close()              // Close closes the runner
-}
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;A task that stores data into a storage backend should satisfy getgo.StorableTask
-interface.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-go&#34;&gt;type StorableTask interface {
-	Requester
-	Handle(resp *http.Response, s Storer) error
-}
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;A storage backend is simply an object satisfying getgo.Tx interface.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-go&#34;&gt;type Storer interface {
-	Store(v interface{}) error
-}
-
-type Tx interface {
-	Storer
-	Commit() error
-	Rollback() error
-}
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;See getgo.Run method to understand how a StorableTask is combined with a storage
-backend and adapted to become a normal Task to allow a Runner to run it.&lt;/p&gt;
-
-&lt;p&gt;There are currently a PostgreSQL storage backend provided by Getgo, and it is
-not hard to support more backends (See getgo/db package for details).&lt;/p&gt;
-
-&lt;p&gt;The easier way to define a task for an HTML page is to define a task satisfying
-getgo.HTMLTask rather than getgo.Task, there are adapters to convert internally
-an HTMLTask to a Task so that a Runner can run an HTMLTask. The Handle method of
-HTMLTask provides an already parsed HTML DOM object (by html-query package).&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-go&#34;&gt;type HTMLTask interface {
-	Requester
-	Handle(root *query.Node, s Storer) error
-}
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Similarly, a task for retrieving a JSON page should satisfy getgo.TextTask
-interface. An io.Reader is provided to be decoded by the encoding/json package.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-go&#34;&gt;type TextTask interface {
-	Requester
-	Handle(r io.Reader, s Storer) error
-}
-&lt;/code&gt;&lt;/pre&gt;
-</description>
+      <description>Getgo is a concurrent, simple and extensible web scraping framework written in Go.
+Quick start Get Getgo go get -u github.com/h12w/getgo  Define a task This example is under the examples/goblog directory. To use Getgo to scrap structured data from a web page, just define the structured data as a Go struct (golangBlogEntry), and define a corresponding task (golangBlogIndexTask).
+type golangBlogEntry struct { Title string URL string Tags *string } type golangBlogIndexTask struct { // Variables in task URL, e.</description>
     </item>
     
   </channel>

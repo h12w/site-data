@@ -2,12 +2,15 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Source Code Pro on h12.me</title>
-    <link>http://h12.me/tags/source-code-pro/index.xml</link>
+    <link>http://h12.me/tags/source-code-pro/</link>
     <description>Recent content in Source Code Pro on h12.me</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>Copyright (c) 2012-2018, Hǎiliàng Wáng; all rights reserved.</copyright>
-    <atom:link href="http://h12.me/tags/source-code-pro/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 17 Jul 2014 03:19:18 +0000</lastBuildDate>
+    
+	<atom:link href="http://h12.me/tags/source-code-pro/index.xml" rel="self" type="application/rss+xml" />
+    
     
     <item>
       <title>Installing Source Code Pro</title>
@@ -15,10 +18,8 @@
       <pubDate>Thu, 17 Jul 2014 03:19:18 +0000</pubDate>
       
       <guid>http://h12.me/note/install-scp/</guid>
-      <description>&lt;p&gt;&lt;em&gt;Source Code Pro&lt;/em&gt; is one of the best monospace fonts and it is &lt;a href=&#34;https://github.com/adobe/source-code-pro&#34;&gt;open sourced&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;Here is the &lt;a href=&#34;https://github.com/h12w/linux/blob/master/install_scp.sh&#34;&gt;script&lt;/a&gt; for installing it on Linux.&lt;/p&gt;
-</description>
+      <description>Source Code Pro is one of the best monospace fonts and it is open sourced.
+Here is the script for installing it on Linux.</description>
     </item>
     
   </channel>

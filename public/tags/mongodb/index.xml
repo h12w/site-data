@@ -2,12 +2,15 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Mongodb on h12.me</title>
-    <link>http://h12.me/tags/mongodb/index.xml</link>
+    <link>http://h12.me/tags/mongodb/</link>
     <description>Recent content in Mongodb on h12.me</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>Copyright (c) 2012-2018, Hǎiliàng Wáng; all rights reserved.</copyright>
-    <atom:link href="http://h12.me/tags/mongodb/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 02 Sep 2016 15:40:41 +0800</lastBuildDate>
+    
+	<atom:link href="http://h12.me/tags/mongodb/index.xml" rel="self" type="application/rss+xml" />
+    
     
     <item>
       <title>One-liner to check MongoDB Connections</title>
@@ -15,21 +18,7 @@
       <pubDate>Fri, 02 Sep 2016 15:40:41 +0800</pubDate>
       
       <guid>http://h12.me/note/mongodb-conn/</guid>
-      <description>&lt;pre&gt;&lt;code&gt;mongo --eval &amp;quot;JSON.stringify(db.currentOp(true))&amp;quot; | \
-tail -n +3 | \
-jq -r .inprog[].client | \
-sed &#39;s/\(.*\):.*/\1/&#39; \
-| sort | uniq -c | sort -nr
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;ul&gt;
-&lt;li&gt;dump connection information in standard JSON format&lt;/li&gt;
-&lt;li&gt;remove MongoDB header&lt;/li&gt;
-&lt;li&gt;extract IP:port as a list&lt;/li&gt;
-&lt;li&gt;trim port&lt;/li&gt;
-&lt;li&gt;sort IPs by freqencies&lt;/li&gt;
-&lt;/ul&gt;
-</description>
+      <description>mongo --eval &amp;quot;JSON.stringify(db.currentOp(true))&amp;quot; | \ tail -n +3 | \ jq -r .inprog[].client | \ sed &#39;s/\(.*\):.*/\1/&#39; \ | sort | uniq -c | sort -nr   dump connection information in standard JSON format remove MongoDB header extract IP:port as a list trim port sort IPs by freqencies  </description>
     </item>
     
     <item>
@@ -38,46 +27,10 @@ sed &#39;s/\(.*\):.*/\1/&#39; \
       <pubDate>Sat, 14 Nov 2015 13:57:09 +0800</pubDate>
       
       <guid>http://h12.me/project/realtest/</guid>
-      <description>
-
-&lt;p&gt;h12.me/realtest provides real test environment for Go unit testing, based on Docker.&lt;/p&gt;
-
-&lt;p&gt;Includes:&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;Queue
-
-&lt;ul&gt;
-&lt;li&gt;Kafka cluster (with zookeeper)&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;Database:
-
-&lt;ul&gt;
-&lt;li&gt;MySQL&lt;/li&gt;
-&lt;li&gt;MongoDB&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;Cache
-
-&lt;ul&gt;
-&lt;li&gt;Redis&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;Configuration service
-
-&lt;ul&gt;
-&lt;li&gt;ZooKeeper&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&#34;author&#34;&gt;Author&lt;/h2&gt;
-
-&lt;p&gt;&lt;a href=&#34;https://github.com/h12w&#34;&gt;Hǎiliàng Wáng&lt;/a&gt;&lt;/p&gt;
-
-&lt;h2 id=&#34;contributors&#34;&gt;Contributors&lt;/h2&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://github.com/AnotherGoogleFans&#34;&gt;Tao Huang&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-</description>
+      <description> h12.me/realtest provides real test environment for Go unit testing, based on Docker.
+Includes:
+ Queue  Kafka cluster (with zookeeper)  Database:  MySQL MongoDB  Cache  Redis  Configuration service  ZooKeeper   Author Hǎiliàng Wáng
+Contributors  Tao Huang  </description>
     </item>
     
   </channel>

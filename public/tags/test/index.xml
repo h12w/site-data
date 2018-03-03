@@ -2,12 +2,15 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Test on h12.me</title>
-    <link>http://h12.me/tags/test/index.xml</link>
+    <link>http://h12.me/tags/test/</link>
     <description>Recent content in Test on h12.me</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>Copyright (c) 2012-2018, Hǎiliàng Wáng; all rights reserved.</copyright>
-    <atom:link href="http://h12.me/tags/test/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 14 Nov 2015 13:57:09 +0800</lastBuildDate>
+    
+	<atom:link href="http://h12.me/tags/test/index.xml" rel="self" type="application/rss+xml" />
+    
     
     <item>
       <title>RealTest: real test environment for Go</title>
@@ -15,46 +18,10 @@
       <pubDate>Sat, 14 Nov 2015 13:57:09 +0800</pubDate>
       
       <guid>http://h12.me/project/realtest/</guid>
-      <description>
-
-&lt;p&gt;h12.me/realtest provides real test environment for Go unit testing, based on Docker.&lt;/p&gt;
-
-&lt;p&gt;Includes:&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;Queue
-
-&lt;ul&gt;
-&lt;li&gt;Kafka cluster (with zookeeper)&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;Database:
-
-&lt;ul&gt;
-&lt;li&gt;MySQL&lt;/li&gt;
-&lt;li&gt;MongoDB&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;Cache
-
-&lt;ul&gt;
-&lt;li&gt;Redis&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;Configuration service
-
-&lt;ul&gt;
-&lt;li&gt;ZooKeeper&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&#34;author&#34;&gt;Author&lt;/h2&gt;
-
-&lt;p&gt;&lt;a href=&#34;https://github.com/h12w&#34;&gt;Hǎiliàng Wáng&lt;/a&gt;&lt;/p&gt;
-
-&lt;h2 id=&#34;contributors&#34;&gt;Contributors&lt;/h2&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://github.com/AnotherGoogleFans&#34;&gt;Tao Huang&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-</description>
+      <description> h12.me/realtest provides real test environment for Go unit testing, based on Docker.
+Includes:
+ Queue  Kafka cluster (with zookeeper)  Database:  MySQL MongoDB  Cache  Redis  Configuration service  ZooKeeper   Author Hǎiliàng Wáng
+Contributors  Tao Huang  </description>
     </item>
     
     <item>
@@ -63,14 +30,7 @@
       <pubDate>Thu, 03 Jul 2014 06:21:58 +0000</pubDate>
       
       <guid>http://h12.me/note/site-test/</guid>
-      <description>&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;http://validator.w3.org/&#34;&gt;The W3C Markup Validation Service&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;http://developers.google.com/speed/pagespeed/insights/&#34;&gt;Google PageSpeed Insights&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;http://tools.pingdom.com/fpt/&#34;&gt;Pingdom Website Speed Test&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;http://nibbler.silktide.com&#34;&gt;Nibbler&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;http://www.browserstack.com/screenshots&#34;&gt;BrowserStack&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-</description>
+      <description> The W3C Markup Validation Service Google PageSpeed Insights Pingdom Website Speed Test Nibbler BrowserStack  </description>
     </item>
     
     <item>
@@ -80,115 +40,7 @@
       
       <guid>http://h12.me/project/gspec/</guid>
       <description>&lt;p&gt;&lt;a href=&#34;https://app.wercker.com/project/bykey/d5ed30f0d03d4a5210f65659ead13888&#34;&gt;&lt;img src=&#34;https://app.wercker.com/status/d5ed30f0d03d4a5210f65659ead13888/s&#34; alt=&#34;wercker status&#34; title=&#34;wercker status&#34; /&gt;&lt;/a&gt;
-&lt;a href=&#34;https://godoc.org/h12.me/gspec&#34;&gt;&lt;img src=&#34;https://godoc.org/h12.me/gspec?status.png&#34; alt=&#34;GoDoc&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;GSpec is an &lt;em&gt;expressive, reliable, concurrent and extensible&lt;/em&gt; Go test framework
-that makes it productive to organize and verify the mind model of software.
-
-* &lt;em&gt;Expressive&lt;/em&gt;: a complete runnable specification can be organized via both BDD
-                and table driven styles.
-* &lt;em&gt;Reliable&lt;/em&gt;:   the implementation has minimal footprint and is tested with 100%
-                coverage.
-* &lt;em&gt;Concurrent&lt;/em&gt;: test cases can be executed concurrently or sequentially.
-* &lt;em&gt;Extensible&lt;/em&gt;: customizable BDD cue words, expectations and test reporters.
-* &lt;em&gt;Compatible&lt;/em&gt;: &amp;ldquo;go test&amp;rdquo; is sufficient but not mandatory to run GSpec tests.&lt;/p&gt;
-
-&lt;h2 id=&#34;quick-start&#34;&gt;Quick start&lt;/h2&gt;
-
-&lt;h3 id=&#34;get-gspec&#34;&gt;Get GSpec&lt;/h3&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;go get -u -f h12.me/gspec
-go test h12.me/gspec/...
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h3 id=&#34;write-tests-with-gspec&#34;&gt;Write tests with GSpec&lt;/h3&gt;
-
-&lt;p&gt;According to the &lt;a href=&#34;http://golang.org/doc/code.html#Testing&#34;&gt;convention of Go&lt;/a&gt;,
-write GSpec tests in file xxx_test.go to test code in xxx.go.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-go&#34;&gt;import (
-	&amp;quot;fmt&amp;quot;
-
-	&amp;quot;h12.me/gspec&amp;quot;
-)
-
-// Only one suite.Add is needed for each xxx_test.go file.
-var _ = gspec.Add(func(s gspec.S) {
-	// BDD cue word is customizible.
-	describe, given, when, it := s.Alias(&amp;quot;describe&amp;quot;), s.Alias(&amp;quot;given&amp;quot;), s.Alias(&amp;quot;when&amp;quot;), s.Alias(&amp;quot;it&amp;quot;)
-	// expectation cue word is customizible too.
-	expect := gspec.Alias(s.FailNow)
-
-	// A BDD example.
-	describe(&amp;quot;an integer i&amp;quot;, func() {
-		// setup
-		i := 2
-		defer func() {
-			// teardown (if any)
-		}()
-		given(&amp;quot;another integer j&amp;quot;, func() {
-			j := 3
-			when(&amp;quot;j is added to i&amp;quot;, func() {
-				i += j
-				it(&amp;quot;should become the sum of original i and j&amp;quot;, func() {
-					expect(i).Equal(5) // a passing case
-				})
-			})
-			when(&amp;quot;j is minused from i&amp;quot;, func() {
-				i -= j
-				it(&amp;quot;should become the difference of j minus i&amp;quot;, func() {
-					expect(i).Equal(4) // a failing case
-				})
-			})
-			when(&amp;quot;j is multiplied to i&amp;quot;, nil) // a pending case
-		})
-	})
-
-	// A table-driven example.
-	testcase := s.Alias(&amp;quot;testcase&amp;quot;)
-	describe(&amp;quot;integer summation&amp;quot;, func() {
-		for _, c := range []struct{ i, j, sum int }{
-			{1, 2, 3}, // a passing case
-			{1, 1, 0}, // a failing case
-		} {
-			testcase(fmt.Sprintf(`%d + %d = %d`, c.i, c.j, c.sum), func() {
-				expect(c.i + c.j).Equal(c.sum)
-			})
-		}
-	})
-})
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Write the following go test function for only once in any test file within the
-package (e.g. all_test.go).&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-go&#34;&gt;import (
-	&amp;quot;testing&amp;quot;
-	&amp;quot;h12.me/gspec&amp;quot;
-)
-
-// Defined only once within a package.
-func TestAll(t *testing.T) {
-	gspec.Test(t)
-}
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h3 id=&#34;run-tests-with-go-test&#34;&gt;Run tests with &amp;ldquo;go test&amp;rdquo;&lt;/h3&gt;
-
-&lt;p&gt;Run all the tests concurrently (sequencially by default) and display errors.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;go test -concurrent
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Run all the tests and view the complete specification.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;go test -v
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Run only a failing test case (even it is an entry in the driven table):&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;go test -focus 1/1
-&lt;/code&gt;&lt;/pre&gt;</description>
+&lt;a href=&#34;https://godoc.org/h12.me/gspec&#34;&gt;&lt;img src=&#34;https://godoc.org/h12.me/gspec?status.png&#34; alt=&#34;GoDoc&#34; /&gt;&lt;/a&gt;&lt;/p&gt;</description>
     </item>
     
   </channel>

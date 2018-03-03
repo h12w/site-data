@@ -2,13 +2,15 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Projects on h12.me</title>
-    <link>http://h12.me/project/index.xml</link>
+    <link>http://h12.me/project/</link>
     <description>Recent content in Projects on h12.me</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>Copyright (c) 2012-2018, Hǎiliàng Wáng; all rights reserved.</copyright>
     <lastBuildDate>Sat, 14 Nov 2015 13:57:09 +0800</lastBuildDate>
-    <atom:link href="http://h12.me/project/index.xml" rel="self" type="application/rss+xml" />
+    
+	<atom:link href="http://h12.me/project/index.xml" rel="self" type="application/rss+xml" />
+    
     
     <item>
       <title>RealTest: real test environment for Go</title>
@@ -16,46 +18,10 @@
       <pubDate>Sat, 14 Nov 2015 13:57:09 +0800</pubDate>
       
       <guid>http://h12.me/project/realtest/</guid>
-      <description>
-
-&lt;p&gt;h12.me/realtest provides real test environment for Go unit testing, based on Docker.&lt;/p&gt;
-
-&lt;p&gt;Includes:&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;Queue
-
-&lt;ul&gt;
-&lt;li&gt;Kafka cluster (with zookeeper)&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;Database:
-
-&lt;ul&gt;
-&lt;li&gt;MySQL&lt;/li&gt;
-&lt;li&gt;MongoDB&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;Cache
-
-&lt;ul&gt;
-&lt;li&gt;Redis&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;Configuration service
-
-&lt;ul&gt;
-&lt;li&gt;ZooKeeper&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&#34;author&#34;&gt;Author&lt;/h2&gt;
-
-&lt;p&gt;&lt;a href=&#34;https://github.com/h12w&#34;&gt;Hǎiliàng Wáng&lt;/a&gt;&lt;/p&gt;
-
-&lt;h2 id=&#34;contributors&#34;&gt;Contributors&lt;/h2&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://github.com/AnotherGoogleFans&#34;&gt;Tao Huang&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-</description>
+      <description> h12.me/realtest provides real test environment for Go unit testing, based on Docker.
+Includes:
+ Queue  Kafka cluster (with zookeeper)  Database:  MySQL MongoDB  Cache  Redis  Configuration service  ZooKeeper   Author Hǎiliàng Wáng
+Contributors  Tao Huang  </description>
     </item>
     
     <item>
@@ -64,99 +30,8 @@
       <pubDate>Thu, 22 Oct 2015 15:32:58 +0800</pubDate>
       
       <guid>http://h12.me/project/aliyun-oss-go-sdk/</guid>
-      <description>
-
-&lt;p&gt;&lt;a href=&#34;https://drone.io/github.com/h12w/aliyun-oss-go-sdk/latest&#34;&gt;&lt;img src=&#34;https://drone.io/github.com/h12w/aliyun-oss-go-sdk/status.png&#34; alt=&#34;Build
-Status&#34; /&gt;&lt;/a&gt;
-&lt;a href=&#34;https://coveralls.io/github/h12w/aliyun-oss-go-sdk?branch=master&#34;&gt;&lt;img src=&#34;https://coveralls.io/repos/h12w/aliyun-oss-go-sdk/badge.svg?branch=master&amp;amp;service=github&#34; alt=&#34;Coverage
-Status&#34; /&gt;&lt;/a&gt;
-&lt;a href=&#34;https://godoc.org/github.com/aliyun/aliyun-oss-go-sdk/oss&#34;&gt;&lt;img src=&#34;https://godoc.org/github.com/aliyun/aliyun-oss-go-sdk/oss?status.svg&#34; alt=&#34;GoDoc&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;Aliyun OSS (Object Storage Service) Go SDK is a client SDK to access Aliyun OSS
-API, implemented in the Go programming language.&lt;/p&gt;
-
-&lt;h2 id=&#34;installation&#34;&gt;Installation&lt;/h2&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;go get -u github.com/aliyun/aliyun-oss-go-sdk/oss
-go test -v -cover github.com/aliyun/aliyun-oss-go-sdk/oss
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h2 id=&#34;highlights&#34;&gt;Highlights&lt;/h2&gt;
-
-&lt;ul&gt;
-&lt;li&gt;Complete set of Aliyun OSS API&lt;/li&gt;
-&lt;li&gt;Thouroughly tested
-
-&lt;ul&gt;
-&lt;li&gt;100% test coverage&lt;/li&gt;
-&lt;li&gt;intuitive table driven tests&lt;/li&gt;
-&lt;li&gt;full test suite completes within 2 seconds&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;Lint clean
-
-&lt;ul&gt;
-&lt;li&gt;golint&lt;/li&gt;
-&lt;li&gt;go fmt&lt;/li&gt;
-&lt;li&gt;goimports&lt;/li&gt;
-&lt;li&gt;go vet&lt;/li&gt;
-&lt;li&gt;race detector&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;Idiomatic &amp;amp; elegant
-
-&lt;ul&gt;
-&lt;li&gt;response is returned as a parsed object&lt;/li&gt;
-&lt;li&gt;error is returned as a Go error&lt;/li&gt;
-&lt;li&gt;named options for setting headers &amp;amp; parameters&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;Great extensibility
-
-&lt;ul&gt;
-&lt;li&gt;clean and orthogonal implementation&lt;/li&gt;
-&lt;li&gt;users can easily extend the SDK when a new API method is supported&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;No third party dependencies&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&#34;documentation&#34;&gt;Documentation&lt;/h2&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;doc/overview.md&#34;&gt;Overview&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;doc/api-object.md&#34;&gt;API Object&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;doc/bucket.md&#34;&gt;Bucket&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;doc/object.md&#34;&gt;Object&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;doc/options.md&#34;&gt;Optional Headers and Parameters&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;doc/upload.md&#34;&gt;Multipart Upload&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;doc/cors.md&#34;&gt;Cross-Origin Resource Sharing (CORS)&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;doc/lifecycle.md&#34;&gt;Object Lifecycle Management&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;doc/extend.md&#34;&gt;Extending the SDK&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&#34;differences-with-python-sdk&#34;&gt;Differences with Python SDK&lt;/h2&gt;
-
-&lt;ul&gt;
-&lt;li&gt;HTTP header User-Agent, e.g. aliyun-sdk-go/0.1.1 (Linux/3.16.0-51-generic/x86_64;go1.5.1)&lt;/li&gt;
-&lt;li&gt;Go HTTP client does not support 100-Continue (will be supported after Go 1.6, see &lt;a href=&#34;https://github.com/golang/go/issues/3665&#34;&gt;https://github.com/golang/go/issues/3665&lt;/a&gt;)&lt;/li&gt;
-&lt;li&gt;HTTP header keys are automatically converted into canonical format, e.g.
-x-oss-acl becomes X-Oss-Acl&lt;/li&gt;
-&lt;li&gt;Go GET request does not have redundant &amp;ldquo;Content-Length: 0&amp;rdquo; header&lt;/li&gt;
-&lt;li&gt;Parameters will be omitted if the argument is not set&lt;/li&gt;
-&lt;li&gt;Go always sends URL parameters and headers in canonical order&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&#34;author&#34;&gt;Author&lt;/h2&gt;
-
-&lt;p&gt;&lt;a href=&#34;https://github.com/h12w&#34;&gt;Hǎiliàng Wáng&lt;/a&gt;&lt;/p&gt;
-
-&lt;h2 id=&#34;license&#34;&gt;License&lt;/h2&gt;
-
-&lt;p&gt;licensed under the &lt;a href=&#34;https://www.apache.org/licenses/LICENSE-2.0.html&#34;&gt;Apache License 2.0&lt;/a&gt;&lt;/p&gt;
-
-&lt;h2 id=&#34;references&#34;&gt;References&lt;/h2&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://docs.aliyun.com/#/pub/oss&#34;&gt;OSS Document (Chinese)&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-</description>
+      <description>Aliyun OSS (Object Storage Service) Go SDK is a client SDK to access Aliyun OSS API, implemented in the Go programming language.
+Installation go get -u github.com/aliyun/aliyun-oss-go-sdk/oss go test -v -cover github.com/aliyun/aliyun-oss-go-sdk/oss  Highlights  Complete set of Aliyun OSS API Thouroughly tested  100% test coverage intuitive table driven tests full test suite completes within 2 seconds  Lint clean  golint go fmt goimports go vet race detector  Idiomatic &amp;amp; elegant  response is returned as a parsed object error is returned as a Go error named options for setting headers &amp;amp; parameters  Great extensibility  clean and orthogonal implementation users can easily extend the SDK when a new API method is supported  No third party dependencies  Documentation  Overview API Object Bucket Object Optional Headers and Parameters Multipart Upload Cross-Origin Resource Sharing (CORS) Object Lifecycle Management Extending the SDK  Differences with Python SDK  HTTP header User-Agent, e.</description>
     </item>
     
     <item>
@@ -165,103 +40,9 @@ x-oss-acl becomes X-Oss-Acl&lt;/li&gt;
       <pubDate>Thu, 23 Jul 2015 13:36:25 +0800</pubDate>
       
       <guid>http://h12.me/project/kpax/</guid>
-      <description>
-
-&lt;p&gt;&lt;a href=&#34;https://godoc.org/h12.me/kpax&#34;&gt;&lt;img src=&#34;https://godoc.org/h12.me/kpax?status.svg&#34; alt=&#34;GoDoc&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
-
-&lt;h2 id=&#34;install&#34;&gt;Install&lt;/h2&gt;
-
-&lt;pre&gt;&lt;code&gt;go get -u h12.me/kpax
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h2 id=&#34;design&#34;&gt;Design&lt;/h2&gt;
-
-&lt;p&gt;The client is built on top of Kafka Wire Protocol (i.e. low-level API). The protocol related types &amp;amp; marshal/unmarshal functions are automatically generated by &lt;a href=&#34;https://github.com/h12w/wipro&#34;&gt;wipro&lt;/a&gt; from &lt;a href=&#34;https://cwiki.apache.org/confluence/display/KAFKA/A+Guide+To+The+Kafka+Protocol&#34;&gt;the HTML spec&lt;/a&gt;).&lt;/p&gt;
-
-&lt;p&gt;&lt;code&gt;(-)&lt;/code&gt; means to be done.&lt;/p&gt;
-
-&lt;h3 id=&#34;sub-packages&#34;&gt;Sub packages&lt;/h3&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;model&lt;/strong&gt; is an abstraction model for request, response, broker and cluster&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;broker&lt;/strong&gt; is a lazy, asynchronous and recoverable round tripper that talks to a single Kafka broker&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;cluster&lt;/strong&gt; is a metadata manager that talks to a Kafka cluster&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;proto&lt;/strong&gt; contains both low level API and a &amp;ldquo;middle&amp;rdquo; level facade&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;producer&lt;/strong&gt;: fault tolerant high-level producer (batching and partitioning strategy)&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;consumer&lt;/strong&gt;: fault tolerant high-level consumer (consumer group and offset commit)&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;log&lt;/strong&gt;: replaceable global logger&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;cmd&lt;/strong&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;kpax&lt;/strong&gt;: command line tool to help with Kafka programming&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&#34;compatibility&#34;&gt;Compatibility&lt;/h3&gt;
-
-&lt;p&gt;Compatible with Kafka Server 0.8.2.&lt;/p&gt;
-
-&lt;h3 id=&#34;error-handling&#34;&gt;Error Handling&lt;/h3&gt;
-
-&lt;ul&gt;
-&lt;li&gt;broker
-
-&lt;ul&gt;
-&lt;li&gt;fail fast: timeout returns error immediately&lt;/li&gt;
-&lt;li&gt;release resources carefully&lt;/li&gt;
-&lt;li&gt;reconnect when requested next time&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;client
-
-&lt;ul&gt;
-&lt;li&gt;metadata reload lazily (only when a leader/coordinator cannot be found in cache)&lt;/li&gt;
-&lt;li&gt;leader/coordinator should be deleted on error&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;producer
-
-&lt;ul&gt;
-&lt;li&gt;fail over to another partition&lt;/li&gt;
-&lt;li&gt;failed partition will be retried again after a period of time&lt;/li&gt;
-&lt;li&gt;partition expand (-)&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;consumer
-
-&lt;ul&gt;
-&lt;li&gt;just loop &amp;amp; wait on error&lt;/li&gt;
-&lt;li&gt;partition expand (-)&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;graceful shutdown (-)&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&#34;efficiency&#34;&gt;Efficiency&lt;/h3&gt;
-
-&lt;ul&gt;
-&lt;li&gt;efficiency
-
-&lt;ul&gt;
-&lt;li&gt;batching&lt;/li&gt;
-&lt;li&gt;consumer response&lt;/li&gt;
-&lt;li&gt;consumer request (-)&lt;/li&gt;
-&lt;li&gt;producer (-)&lt;/li&gt;
-&lt;li&gt;decompression&lt;/li&gt;
-&lt;li&gt;snappy&lt;/li&gt;
-&lt;li&gt;gzip (-)&lt;/li&gt;
-&lt;li&gt;compression&lt;/li&gt;
-&lt;li&gt;snappy (-)&lt;/li&gt;
-&lt;li&gt;gzip (-)&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&#34;author&#34;&gt;Author&lt;/h2&gt;
-
-&lt;p&gt;&lt;a href=&#34;https://github.com/h12w&#34;&gt;Hǎiliàng Wáng&lt;/a&gt;&lt;/p&gt;
-
-&lt;h2 id=&#34;contributors&#34;&gt;Contributors&lt;/h2&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://github.com/AnotherGoogleFans&#34;&gt;Tao Huang&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-</description>
+      <description>Install go get -u h12.me/kpax  Design The client is built on top of Kafka Wire Protocol (i.e. low-level API). The protocol related types &amp;amp; marshal/unmarshal functions are automatically generated by wipro from the HTML spec).
+(-) means to be done.
+Sub packages  model is an abstraction model for request, response, broker and cluster broker is a lazy, asynchronous and recoverable round tripper that talks to a single Kafka broker cluster is a metadata manager that talks to a Kafka cluster proto contains both low level API and a &amp;ldquo;middle&amp;rdquo; level facade producer: fault tolerant high-level producer (batching and partitioning strategy) consumer: fault tolerant high-level consumer (consumer group and offset commit) log: replaceable global logger cmd  kpax: command line tool to help with Kafka programming   Compatibility Compatible with Kafka Server 0.</description>
     </item>
     
     <item>
@@ -270,135 +51,9 @@ x-oss-acl becomes X-Oss-Acl&lt;/li&gt;
       <pubDate>Mon, 02 Jun 2014 01:21:00 +0000</pubDate>
       
       <guid>http://h12.me/project/getgo/</guid>
-      <description>
-
-&lt;p&gt;&lt;a href=&#34;https://godoc.org/github.com/h12w/getgo&#34;&gt;&lt;img src=&#34;https://godoc.org/github.com/h12w/getgo?status.png&#34; alt=&#34;GoDoc&#34; /&gt;&lt;/a&gt;
-&lt;a href=&#34;https://travis-ci.org/h12w/getgo&#34;&gt;&lt;img src=&#34;https://travis-ci.org/h12w/getgo.svg?branch=master&#34; alt=&#34;Build Status&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;Getgo is a concurrent, simple and extensible web scraping framework written in &lt;a href=&#34;http://golang.org&#34;&gt;Go&lt;/a&gt;.&lt;/p&gt;
-
-&lt;h2 id=&#34;quick-start&#34;&gt;Quick start&lt;/h2&gt;
-
-&lt;h3 id=&#34;get-getgo&#34;&gt;Get Getgo&lt;/h3&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;go get -u github.com/h12w/getgo
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h3 id=&#34;define-a-task&#34;&gt;Define a task&lt;/h3&gt;
-
-&lt;p&gt;This example is under the examples/goblog directory. To use Getgo to scrap structured
-data from a web page, just define the structured data as a Go struct (golangBlogEntry),
-and define a corresponding task (golangBlogIndexTask).&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-go&#34;&gt;type golangBlogEntry struct {
-	Title string
-	URL   string
-	Tags  *string
-}
-
-type golangBlogIndexTask struct {
-	// Variables in task URL, e.g. page number
-}
-
-func (t golangBlogIndexTask) Request() *http.Request {
-	return getReq(`http://blog.golang.org/index`)
-}
-
-func (t golangBlogIndexTask) Handle(root *query.Node, s getgo.Storer) (err error) {
-	root.Div(_Id(&amp;quot;content&amp;quot;)).Children(_Class(&amp;quot;blogtitle&amp;quot;)).For(func(item *query.Node) {
-		title := item.Ahref().Text()
-		url := item.Ahref().Href()
-		tags := item.Span(_Class(&amp;quot;tags&amp;quot;)).Text()
-		if url != nil &amp;amp;&amp;amp; title != nil {
-			store(&amp;amp;golangBlogEntry{Title: *title, URL: *url, Tags: tags}, s, &amp;amp;err)
-		}
-	})
-	return
-}
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h3 id=&#34;run-the-task&#34;&gt;Run the task&lt;/h3&gt;
-
-&lt;p&gt;Use util.Run to run the task and print all the result to standard output.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-go&#34;&gt;	util.Run(golangBlogIndexTask{})
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;To store the parsed result to a database, a storage backend satisfying getgo.Tx
-interface should be provided to the getgo.Run method.&lt;/p&gt;
-
-&lt;h2 id=&#34;understand-getgo&#34;&gt;Understand Getgo&lt;/h2&gt;
-
-&lt;p&gt;A getgo.Task is an interface to represent an HTTP crawler task that provides an
-HTTP request and a method to handle the HTTP response.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-go&#34;&gt;type Task interface {
-	Requester
-	Handle(resp *http.Response) error
-}
-
-type Requester interface {
-	Request() *http.Request
-}
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;A getgo.Runner is responsible to run a getgo.Task. There are two concrete runners
-provided: SequentialRunner and ConcurrentRunner.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-go&#34;&gt;type Runner interface {
-	Run(task Task) error // Run runs a task
-	Close()              // Close closes the runner
-}
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;A task that stores data into a storage backend should satisfy getgo.StorableTask
-interface.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-go&#34;&gt;type StorableTask interface {
-	Requester
-	Handle(resp *http.Response, s Storer) error
-}
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;A storage backend is simply an object satisfying getgo.Tx interface.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-go&#34;&gt;type Storer interface {
-	Store(v interface{}) error
-}
-
-type Tx interface {
-	Storer
-	Commit() error
-	Rollback() error
-}
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;See getgo.Run method to understand how a StorableTask is combined with a storage
-backend and adapted to become a normal Task to allow a Runner to run it.&lt;/p&gt;
-
-&lt;p&gt;There are currently a PostgreSQL storage backend provided by Getgo, and it is
-not hard to support more backends (See getgo/db package for details).&lt;/p&gt;
-
-&lt;p&gt;The easier way to define a task for an HTML page is to define a task satisfying
-getgo.HTMLTask rather than getgo.Task, there are adapters to convert internally
-an HTMLTask to a Task so that a Runner can run an HTMLTask. The Handle method of
-HTMLTask provides an already parsed HTML DOM object (by html-query package).&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-go&#34;&gt;type HTMLTask interface {
-	Requester
-	Handle(root *query.Node, s Storer) error
-}
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Similarly, a task for retrieving a JSON page should satisfy getgo.TextTask
-interface. An io.Reader is provided to be decoded by the encoding/json package.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-go&#34;&gt;type TextTask interface {
-	Requester
-	Handle(r io.Reader, s Storer) error
-}
-&lt;/code&gt;&lt;/pre&gt;
-</description>
+      <description>Getgo is a concurrent, simple and extensible web scraping framework written in Go.
+Quick start Get Getgo go get -u github.com/h12w/getgo  Define a task This example is under the examples/goblog directory. To use Getgo to scrap structured data from a web page, just define the structured data as a Go struct (golangBlogEntry), and define a corresponding task (golangBlogIndexTask).
+type golangBlogEntry struct { Title string URL string Tags *string } type golangBlogIndexTask struct { // Variables in task URL, e.</description>
     </item>
     
     <item>
@@ -408,115 +63,7 @@ interface. An io.Reader is provided to be decoded by the encoding/json package.&
       
       <guid>http://h12.me/project/gspec/</guid>
       <description>&lt;p&gt;&lt;a href=&#34;https://app.wercker.com/project/bykey/d5ed30f0d03d4a5210f65659ead13888&#34;&gt;&lt;img src=&#34;https://app.wercker.com/status/d5ed30f0d03d4a5210f65659ead13888/s&#34; alt=&#34;wercker status&#34; title=&#34;wercker status&#34; /&gt;&lt;/a&gt;
-&lt;a href=&#34;https://godoc.org/h12.me/gspec&#34;&gt;&lt;img src=&#34;https://godoc.org/h12.me/gspec?status.png&#34; alt=&#34;GoDoc&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;GSpec is an &lt;em&gt;expressive, reliable, concurrent and extensible&lt;/em&gt; Go test framework
-that makes it productive to organize and verify the mind model of software.
-
-* &lt;em&gt;Expressive&lt;/em&gt;: a complete runnable specification can be organized via both BDD
-                and table driven styles.
-* &lt;em&gt;Reliable&lt;/em&gt;:   the implementation has minimal footprint and is tested with 100%
-                coverage.
-* &lt;em&gt;Concurrent&lt;/em&gt;: test cases can be executed concurrently or sequentially.
-* &lt;em&gt;Extensible&lt;/em&gt;: customizable BDD cue words, expectations and test reporters.
-* &lt;em&gt;Compatible&lt;/em&gt;: &amp;ldquo;go test&amp;rdquo; is sufficient but not mandatory to run GSpec tests.&lt;/p&gt;
-
-&lt;h2 id=&#34;quick-start&#34;&gt;Quick start&lt;/h2&gt;
-
-&lt;h3 id=&#34;get-gspec&#34;&gt;Get GSpec&lt;/h3&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;go get -u -f h12.me/gspec
-go test h12.me/gspec/...
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h3 id=&#34;write-tests-with-gspec&#34;&gt;Write tests with GSpec&lt;/h3&gt;
-
-&lt;p&gt;According to the &lt;a href=&#34;http://golang.org/doc/code.html#Testing&#34;&gt;convention of Go&lt;/a&gt;,
-write GSpec tests in file xxx_test.go to test code in xxx.go.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-go&#34;&gt;import (
-	&amp;quot;fmt&amp;quot;
-
-	&amp;quot;h12.me/gspec&amp;quot;
-)
-
-// Only one suite.Add is needed for each xxx_test.go file.
-var _ = gspec.Add(func(s gspec.S) {
-	// BDD cue word is customizible.
-	describe, given, when, it := s.Alias(&amp;quot;describe&amp;quot;), s.Alias(&amp;quot;given&amp;quot;), s.Alias(&amp;quot;when&amp;quot;), s.Alias(&amp;quot;it&amp;quot;)
-	// expectation cue word is customizible too.
-	expect := gspec.Alias(s.FailNow)
-
-	// A BDD example.
-	describe(&amp;quot;an integer i&amp;quot;, func() {
-		// setup
-		i := 2
-		defer func() {
-			// teardown (if any)
-		}()
-		given(&amp;quot;another integer j&amp;quot;, func() {
-			j := 3
-			when(&amp;quot;j is added to i&amp;quot;, func() {
-				i += j
-				it(&amp;quot;should become the sum of original i and j&amp;quot;, func() {
-					expect(i).Equal(5) // a passing case
-				})
-			})
-			when(&amp;quot;j is minused from i&amp;quot;, func() {
-				i -= j
-				it(&amp;quot;should become the difference of j minus i&amp;quot;, func() {
-					expect(i).Equal(4) // a failing case
-				})
-			})
-			when(&amp;quot;j is multiplied to i&amp;quot;, nil) // a pending case
-		})
-	})
-
-	// A table-driven example.
-	testcase := s.Alias(&amp;quot;testcase&amp;quot;)
-	describe(&amp;quot;integer summation&amp;quot;, func() {
-		for _, c := range []struct{ i, j, sum int }{
-			{1, 2, 3}, // a passing case
-			{1, 1, 0}, // a failing case
-		} {
-			testcase(fmt.Sprintf(`%d + %d = %d`, c.i, c.j, c.sum), func() {
-				expect(c.i + c.j).Equal(c.sum)
-			})
-		}
-	})
-})
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Write the following go test function for only once in any test file within the
-package (e.g. all_test.go).&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-go&#34;&gt;import (
-	&amp;quot;testing&amp;quot;
-	&amp;quot;h12.me/gspec&amp;quot;
-)
-
-// Defined only once within a package.
-func TestAll(t *testing.T) {
-	gspec.Test(t)
-}
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h3 id=&#34;run-tests-with-go-test&#34;&gt;Run tests with &amp;ldquo;go test&amp;rdquo;&lt;/h3&gt;
-
-&lt;p&gt;Run all the tests concurrently (sequencially by default) and display errors.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;go test -concurrent
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Run all the tests and view the complete specification.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;go test -v
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Run only a failing test case (even it is an entry in the driven table):&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;go test -focus 1/1
-&lt;/code&gt;&lt;/pre&gt;</description>
+&lt;a href=&#34;https://godoc.org/h12.me/gspec&#34;&gt;&lt;img src=&#34;https://godoc.org/h12.me/gspec?status.png&#34; alt=&#34;GoDoc&#34; /&gt;&lt;/a&gt;&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -525,117 +72,10 @@ func TestAll(t *testing.T) {
       <pubDate>Mon, 20 Jan 2014 01:49:08 +0000</pubDate>
       
       <guid>http://h12.me/project/html-query/</guid>
-      <description>
-
-&lt;p&gt;html-query is a Go package that provides a fluent and functional interface for
-querying HTML DOM. It is based on &lt;a href=&#34;http://code.google.com/p/go.net/html&#34;&gt;go.net/html&lt;/a&gt;.&lt;/p&gt;
-
-&lt;h2 id=&#34;examples&#34;&gt;Examples&lt;/h2&gt;
-
-&lt;ol&gt;
-&lt;li&gt;&lt;p&gt;A simple example (under &amp;ldquo;examples&amp;rdquo; directory)&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-go&#34;&gt;r := get(`http://blog.golang.org/index`)
-defer r.Close()
-root, err := query.Parse(r)
-checkError(err)
-root.Div(Id(&amp;quot;content&amp;quot;)).Children(Class(&amp;quot;blogtitle&amp;quot;)).For(func(item *query.Node) {
-    href := item.Ahref().Href()
-    date := item.Span(Class(&amp;quot;date&amp;quot;)).Text()
-    tags := item.Span(Class(&amp;quot;tags&amp;quot;)).Text()
-    // ......
-})
-&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;Generator of html-query (under &amp;ldquo;gen&amp;rdquo; directory)&lt;/p&gt;&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;A large part of html-query is automatically generated from HTML spec. The
-spec is in HTML format, so the generator parses it using html-query itself.&lt;/p&gt;
-
-&lt;h2 id=&#34;design&#34;&gt;Design&lt;/h2&gt;
-
-&lt;p&gt;Here is a simple explanation of the design of html-query.&lt;/p&gt;
-
-&lt;h3 id=&#34;functional-query-expressions&#34;&gt;Functional query expressions&lt;/h3&gt;
-
-&lt;p&gt;All functional definitions are defined in html-query/expr package.&lt;/p&gt;
-
-&lt;ol&gt;
-&lt;li&gt;&lt;p&gt;Checker and checker composition&lt;br /&gt;
-A checker is a function that accept and conditionally returns a *html.Node.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-go&#34;&gt;type Checker func(*html.Node) *html.Node
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Here are some checker examples:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;Id(&amp;quot;id1&amp;quot;)
-Class(&amp;quot;c1&amp;quot;)
-Div
-Abbr
-H1
-H2
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Checkers can be combined as boolean expressions:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-go&#34;&gt;And(Id(&amp;quot;id1&amp;quot;), Class(&amp;quot;c1&amp;quot;))
-Or(Class(&amp;quot;c1&amp;quot;), Class(&amp;quot;c2&amp;quot;))
-And(Class(&amp;quot;c1&amp;quot;), Not(Class(&amp;quot;c2&amp;quot;)))
-&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;Checker builder&lt;br /&gt;
-A checker builder is a function that returns a checker. &amp;ldquo;Id&amp;rdquo;, &amp;ldquo;Class&amp;rdquo;, &amp;ldquo;And&amp;rdquo;,
-&amp;ldquo;Or&amp;rdquo;, &amp;ldquo;Not&amp;rdquo; shown above are all checker builders. There are also some checker
-builder builder (function that returns a checker builder) defined in
-html-query when needed.&lt;/p&gt;&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;h3 id=&#34;fluent-interface&#34;&gt;Fluent interface&lt;/h3&gt;
-
-&lt;p&gt;Fluent interface (&lt;a href=&#34;http://en.wikipedia.org/wiki/Fluent_interface&#34;&gt;http://en.wikipedia.org/wiki/Fluent_interface&lt;/a&gt;) are defined in
-html-query package.&lt;/p&gt;
-
-&lt;ol&gt;
-&lt;li&gt;&lt;p&gt;Root node&lt;br /&gt;
-Function Parse returns the root node of an html document.&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;Node finder&lt;br /&gt;
-Method Node.Find implements a BFS search for a node, e.g.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-go&#34;&gt;node.Find(Div, Class(&amp;quot;id1&amp;quot;))
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;But usually you can write the short form:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-go&#34;&gt;node.Div(Class(&amp;quot;id1&amp;quot;))
-&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;Attribute getter
-Method Node.Attr can be used to get the value (or a regular expression
-submatch of the value) of a node, e.g.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-go&#34;&gt;node.Attr(&amp;quot;Id&amp;quot;)
-node.Attr(&amp;quot;href&amp;quot;, &amp;quot;\(.*)&amp;quot;)
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;But usually you can write the short form:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-go&#34;&gt;node.Id()
-node.Href(&amp;quot;\(.*)&amp;quot;)
-&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;Node iterator&lt;br /&gt;
-Method Node.Children and Node.Descendants each returns a node iterator
-(NodeIter). Method NodeIter.For can be used to loop through these nodes.&lt;/p&gt;&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;h2 id=&#34;alternative&#34;&gt;Alternative&lt;/h2&gt;
-
-&lt;p&gt;If you prefer a jquery like DSL rather than functional way, you might want to
-try &lt;a href=&#34;https://github.com/PuerkitoBio/goquery&#34;&gt;goquery&lt;/a&gt;.&lt;/p&gt;
-</description>
+      <description>html-query is a Go package that provides a fluent and functional interface for querying HTML DOM. It is based on go.net/html.
+Examples  A simple example (under &amp;ldquo;examples&amp;rdquo; directory)
+r := get(`http://blog.golang.org/index`) defer r.Close() root, err := query.Parse(r) checkError(err) root.Div(Id(&amp;quot;content&amp;quot;)).Children(Class(&amp;quot;blogtitle&amp;quot;)).For(func(item *query.Node) { href := item.Ahref().Href() date := item.Span(Class(&amp;quot;date&amp;quot;)).Text() tags := item.Span(Class(&amp;quot;tags&amp;quot;)).Text() // ...... })  Generator of html-query (under &amp;ldquo;gen&amp;rdquo; directory)
+  A large part of html-query is automatically generated from HTML spec.</description>
     </item>
     
     <item>
@@ -644,101 +84,8 @@ try &lt;a href=&#34;https://github.com/PuerkitoBio/goquery&#34;&gt;goquery&lt;/a
       <pubDate>Wed, 01 Jan 2014 01:30:04 +0000</pubDate>
       
       <guid>http://h12.me/project/cwrap/</guid>
-      <description>
-
-&lt;p&gt;Cwrap is a Go wrapper generator for C libraries.&lt;/p&gt;
-
-&lt;h2 id=&#34;features&#34;&gt;Features&lt;/h2&gt;
-
-&lt;ul&gt;
-&lt;li&gt;No Cgo types exposed out of the wrapper package, and uses as less allocation/copy as possible.&lt;/li&gt;
-&lt;li&gt;C name prefix mapped to Go packages, and a wrapper package can import another wrapper package.&lt;/li&gt;
-&lt;li&gt;Follows Go naming conventions.&lt;/li&gt;
-&lt;li&gt;C union.&lt;/li&gt;
-&lt;li&gt;Use Go language features when possible:
-
-&lt;ul&gt;
-&lt;li&gt;string and bool.&lt;/li&gt;
-&lt;li&gt;Multiple return values.&lt;/li&gt;
-&lt;li&gt;Slice, slice of slice and slice of string.&lt;/li&gt;
-&lt;li&gt;struct with methods.&lt;/li&gt;
-&lt;li&gt;Go closures as callbacks.&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;Stay out of the way when you need to do it manually for specified declarations.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&#34;usage&#34;&gt;Usage&lt;/h2&gt;
-
-&lt;p&gt;Cwrap itself is a Go package rather than an executable program. Just fill a cwrap.Package struct literal and call its Wrap method to generate your wrapper package under $GOPATH. Here is a simple example:&lt;/p&gt;
-
-&lt;p&gt;Say you want to generate a wrapper package for SDL2, and its header is at&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;/usr/local/include/SDL2/SDL2.h
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;So the cwrap.Package literal looks like:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-go&#34;&gt;var sdl = &amp;amp;Package{
-	PacName: &amp;quot;sdl&amp;quot;,
-	PacPath: &amp;quot;go-sdl&amp;quot;,
-	From: Header{
-		Dir:           &amp;quot;/usr/local/include/&amp;quot;,
-		File:          &amp;quot;SDL2/SDL.h&amp;quot;,
-		OtherCode:     &amp;quot;#define _SDL_main_h&amp;quot;,
-		NamePattern:   `\ASDL(.*)`,
-		Excluded:      []string{},
-		CgoDirectives: []string{&amp;quot;pkg-config: sdl2&amp;quot;},
-		BoolTypes:     []string{&amp;quot;SDL_bool&amp;quot;},
-	},
-	Included: []*Package{},
-}
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Then just call&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-go&#34;&gt;err := sdl.Wrap()
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h2 id=&#34;examples&#34;&gt;Examples&lt;/h2&gt;
-
-&lt;p&gt;In the examples directory, there are C libraries that I have successfully applied Cwrap, including:&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;Cairo&lt;/li&gt;
-&lt;li&gt;GSL (GNU Scientific Library)&lt;/li&gt;
-&lt;li&gt;MuPDF&lt;/li&gt;
-&lt;li&gt;PLplot&lt;/li&gt;
-&lt;li&gt;SDL2 (Simple DirectMedia Layer)&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;You are very welcome to submit examples you think useful to others.&lt;/p&gt;
-
-&lt;h2 id=&#34;applications&#34;&gt;Applications&lt;/h2&gt;
-
-&lt;ul&gt;
-&lt;li&gt;gr: A minimal PDF viewer based on SDL2 and MuPDF (&lt;a href=&#34;https://github.com/h12w/gr&#34;&gt;https://github.com/h12w/gr&lt;/a&gt;)&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&#34;issue-report&#34;&gt;Issue Report&lt;/h2&gt;
-
-&lt;p&gt;Cwrap may not cover every possible case and fails to come up with a corrresonding Go type or convertion, then the generated code may not be able to compile. When this happens, do the following steps:&lt;/p&gt;
-
-&lt;ol&gt;
-&lt;li&gt;Comment out the failed function wrappers till it compiles.&lt;/li&gt;
-&lt;li&gt;Add the C names of these failed functions to the excluded list (Package.From.Excluded).&lt;/li&gt;
-&lt;li&gt;Submit the generator example to me. I cannot guarantee anything but I will try to fix critical issues.&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;h2 id=&#34;limitations&#34;&gt;Limitations&lt;/h2&gt;
-
-&lt;ul&gt;
-&lt;li&gt;C variadic functions (&amp;hellip;) are not supported.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&#34;acknowledgement&#34;&gt;Acknowledgement&lt;/h2&gt;
-
-&lt;p&gt;Cwrap uses gccxml (&lt;a href=&#34;http://gccxml.github.io&#34;&gt;http://gccxml.github.io&lt;/a&gt;) to parse C headers to an XML file. Thanks very much for their excellent work.&lt;/p&gt;
-</description>
+      <description>Cwrap is a Go wrapper generator for C libraries.
+Features  No Cgo types exposed out of the wrapper package, and uses as less allocation/copy as possible. C name prefix mapped to Go packages, and a wrapper package can import another wrapper package. Follows Go naming conventions. C union. Use Go language features when possible:  string and bool. Multiple return values. Slice, slice of slice and slice of string.</description>
     </item>
     
     <item>
@@ -747,35 +94,8 @@ try &lt;a href=&#34;https://github.com/PuerkitoBio/goquery&#34;&gt;goquery&lt;/a
       <pubDate>Wed, 01 Aug 2012 23:57:54 +0000</pubDate>
       
       <guid>http://h12.me/project/socks/</guid>
-      <description>
-
-&lt;p&gt;&lt;a href=&#34;https://godoc.org/h12.me/socks&#34;&gt;&lt;img src=&#34;https://godoc.org/h12.me/socks?status.svg&#34; alt=&#34;GoDoc&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;SOCKS is a SOCKS4, SOCKS4A and SOCKS5 proxy package for Go.&lt;/p&gt;
-
-&lt;h2 id=&#34;quick-start&#34;&gt;Quick Start&lt;/h2&gt;
-
-&lt;h3 id=&#34;get-the-package&#34;&gt;Get the package&lt;/h3&gt;
-
-&lt;pre&gt;&lt;code&gt;go get -u &amp;quot;h12.me/socks&amp;quot;
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h3 id=&#34;import-the-package&#34;&gt;Import the package&lt;/h3&gt;
-
-&lt;pre&gt;&lt;code&gt;import &amp;quot;h12.me/socks&amp;quot;
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h3 id=&#34;create-a-socks-proxy-dialing-function&#34;&gt;Create a SOCKS proxy dialing function&lt;/h3&gt;
-
-&lt;pre&gt;&lt;code&gt;dialSocksProxy := socks.DialSocksProxy(socks.SOCKS5, &amp;quot;127.0.0.1:1080&amp;quot;)
-tr := &amp;amp;http.Transport{Dial: dialSocksProxy}
-httpClient := &amp;amp;http.Client{Transport: tr}
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h2 id=&#34;alternatives&#34;&gt;Alternatives&lt;/h2&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://code.google.com/p/go/source/browse/?repo=net#hg%2Fproxy&#34;&gt;http://code.google.com/p/go/source/browse/?repo=net#hg%2Fproxy&lt;/a&gt;&lt;/p&gt;
-</description>
+      <description>SOCKS is a SOCKS4, SOCKS4A and SOCKS5 proxy package for Go.
+Quick Start Get the package go get -u &amp;quot;h12.me/socks&amp;quot;  Import the package import &amp;quot;h12.me/socks&amp;quot;  Create a SOCKS proxy dialing function dialSocksProxy := socks.DialSocksProxy(socks.SOCKS5, &amp;quot;127.0.0.1:1080&amp;quot;) tr := &amp;amp;http.Transport{Dial: dialSocksProxy} httpClient := &amp;amp;http.Client{Transport: tr}  Alternatives http://code.google.com/p/go/source/browse/?repo=net#hg%2Fproxy</description>
     </item>
     
   </channel>

@@ -2,12 +2,15 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Gae on h12.me</title>
-    <link>http://h12.me/tags/gae/index.xml</link>
+    <link>http://h12.me/tags/gae/</link>
     <description>Recent content in Gae on h12.me</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>Copyright (c) 2012-2018, Hǎiliàng Wáng; all rights reserved.</copyright>
-    <atom:link href="http://h12.me/tags/gae/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 08 Jul 2015 07:58:34 +0000</lastBuildDate>
+    
+	<atom:link href="http://h12.me/tags/gae/index.xml" rel="self" type="application/rss+xml" />
+    
     
     <item>
       <title>A Comprehensive Note about Proxy Settings</title>
@@ -15,46 +18,10 @@
       <pubDate>Wed, 08 Jul 2015 07:58:34 +0000</pubDate>
       
       <guid>http://h12.me/note/proxy-notes/</guid>
-      <description>
-
-&lt;h2 id=&#34;git&#34;&gt;Git&lt;/h2&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;&amp;gt; cat ~/.gitconfig
-[http]
-	proxy = socks5://[host]:[port]
-[https]
-	proxy = socks5://[host]:[port]
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h2 id=&#34;curl-homebrew&#34;&gt;Curl (Homebrew)&lt;/h2&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;&amp;gt; cat ~/.curlrc
-socks5 = &amp;quot;[host]:[port]&amp;quot;
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h2 id=&#34;docker-pull&#34;&gt;Docker pull&lt;/h2&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-fish&#34;&gt;env HTTP_PROXY=http://xxx docker pull yyy
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h2 id=&#34;gae&#34;&gt;GAE&lt;/h2&gt;
-
-&lt;ol&gt;
-&lt;li&gt;&lt;p&gt;Set proxy&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;export HTTP_PROXY http://[host]:[port]
-export HTTPS_PROXY http://[host]:[port]
-&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;Delete cacerts.txt under GAE SDK installation to disable SSL verification (
-make sure the proxy is safe before this step).&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;Deploy.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;appcfg.py . --email=[address] --passin
-&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
-&lt;/ol&gt;
-</description>
+      <description> Git &amp;gt; cat ~/.gitconfig [http] proxy = socks5://[host]:[port] [https] proxy = socks5://[host]:[port]  Curl (Homebrew) &amp;gt; cat ~/.curlrc socks5 = &amp;quot;[host]:[port]&amp;quot;  Docker pull env HTTP_PROXY=http://xxx docker pull yyy  GAE  Set proxy
+export HTTP_PROXY http://[host]:[port] export HTTPS_PROXY http://[host]:[port]  Delete cacerts.txt under GAE SDK installation to disable SSL verification ( make sure the proxy is safe before this step).
+ Deploy.
+appcfg.py . --email=[address] --passin   </description>
     </item>
     
     <item>
@@ -63,25 +30,9 @@ make sure the proxy is safe before this step).&lt;/p&gt;&lt;/li&gt;
       <pubDate>Mon, 19 Jan 2015 09:32:04 +0000</pubDate>
       
       <guid>http://h12.me/note/gae-custom-domain/</guid>
-      <description>&lt;p&gt;Steps:&lt;/p&gt;
-
-&lt;ol&gt;
-&lt;li&gt;Visit &lt;a href=&#34;https://console.developers.google.com&#34;&gt;Developers Console&lt;/a&gt;.&lt;/li&gt;
-&lt;li&gt;In your project: Compute -&amp;gt; App Engine -&amp;gt; Settings.&lt;/li&gt;
-&lt;li&gt;On the tab labelled CUSTOM DOMAINS, you can verify your domain and assign it
-and/or its subdomains to your GAE project.&lt;/li&gt;
-&lt;li&gt;Add the DNS settings provided by Google into the DNS server of your domain
-provider.&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;Notes:&lt;/p&gt;
-
-&lt;ol&gt;
-&lt;li&gt;Only HTTP is supported, HTTPS is not.&lt;/li&gt;
-&lt;li&gt;It will not work if you only modify the DNS record without actually assigning
-the custom domain in the Developer Console.&lt;/li&gt;
-&lt;/ol&gt;
-</description>
+      <description>Steps:
+ Visit Developers Console. In your project: Compute -&amp;gt; App Engine -&amp;gt; Settings. On the tab labelled CUSTOM DOMAINS, you can verify your domain and assign it and/or its subdomains to your GAE project. Add the DNS settings provided by Google into the DNS server of your domain provider.  Notes:
+ Only HTTP is supported, HTTPS is not. It will not work if you only modify the DNS record without actually assigning the custom domain in the Developer Console.</description>
     </item>
     
   </channel>

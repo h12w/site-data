@@ -2,12 +2,15 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>One Liner on h12.me</title>
-    <link>http://h12.me/tags/one-liner/index.xml</link>
+    <link>http://h12.me/tags/one-liner/</link>
     <description>Recent content in One Liner on h12.me</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>Copyright (c) 2012-2018, Hǎiliàng Wáng; all rights reserved.</copyright>
-    <atom:link href="http://h12.me/tags/one-liner/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 20 Jun 2017 12:40:10 +0800</lastBuildDate>
+    
+	<atom:link href="http://h12.me/tags/one-liner/index.xml" rel="self" type="application/rss+xml" />
+    
     
     <item>
       <title>How to Measure Response Time with Curl</title>
@@ -15,9 +18,7 @@
       <pubDate>Tue, 20 Jun 2017 12:40:10 +0800</pubDate>
       
       <guid>http://h12.me/note/measure-response-time-with-curl/</guid>
-      <description>&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;curl [args] --write-out &amp;quot;%{time_total}s&amp;quot; --output /dev/null --silent [URL] 
-&lt;/code&gt;&lt;/pre&gt;
-</description>
+      <description>curl [args] --write-out &amp;quot;%{time_total}s&amp;quot; --output /dev/null --silent [URL]  </description>
     </item>
     
     <item>
@@ -26,10 +27,7 @@
       <pubDate>Sun, 09 Apr 2017 14:30:03 +0800</pubDate>
       
       <guid>http://h12.me/note/download-website/</guid>
-      <description>&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;wget --recursive --level=2 --no-parent --no-clobber --convert-links --continue
-[URL]
-&lt;/code&gt;&lt;/pre&gt;
-</description>
+      <description>wget --recursive --level=2 --no-parent --no-clobber --convert-links --continue [URL]  </description>
     </item>
     
     <item>
@@ -38,21 +36,7 @@
       <pubDate>Fri, 02 Sep 2016 15:40:41 +0800</pubDate>
       
       <guid>http://h12.me/note/mongodb-conn/</guid>
-      <description>&lt;pre&gt;&lt;code&gt;mongo --eval &amp;quot;JSON.stringify(db.currentOp(true))&amp;quot; | \
-tail -n +3 | \
-jq -r .inprog[].client | \
-sed &#39;s/\(.*\):.*/\1/&#39; \
-| sort | uniq -c | sort -nr
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;ul&gt;
-&lt;li&gt;dump connection information in standard JSON format&lt;/li&gt;
-&lt;li&gt;remove MongoDB header&lt;/li&gt;
-&lt;li&gt;extract IP:port as a list&lt;/li&gt;
-&lt;li&gt;trim port&lt;/li&gt;
-&lt;li&gt;sort IPs by freqencies&lt;/li&gt;
-&lt;/ul&gt;
-</description>
+      <description>mongo --eval &amp;quot;JSON.stringify(db.currentOp(true))&amp;quot; | \ tail -n +3 | \ jq -r .inprog[].client | \ sed &#39;s/\(.*\):.*/\1/&#39; \ | sort | uniq -c | sort -nr   dump connection information in standard JSON format remove MongoDB header extract IP:port as a list trim port sort IPs by freqencies  </description>
     </item>
     
     <item>
@@ -61,37 +45,7 @@ sed &#39;s/\(.*\):.*/\1/&#39; \
       <pubDate>Tue, 09 Aug 2016 18:31:04 +0800</pubDate>
       
       <guid>http://h12.me/note/count-word-freq/</guid>
-      <description>&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;cat book.txt | \
-tr &#39;!()[]{};:&amp;quot;,&amp;lt;.&amp;gt;?“”‘’*/\r&#39; &#39; &#39; | \
-tr &#39; &#39; &#39;\n&#39; | \
-grep -a -P &amp;quot;^[\p{L}\p{N}\-&#39;]+\$&amp;quot; | \
-grep -a -P -v &amp;quot;^[\p{N}\-&#39;]+\$&amp;quot; | \
-sed &amp;quot;s/&#39;s\$//&amp;quot; | \
-sed &amp;quot;s/^&#39;//&amp;quot; | sed &amp;quot;s/&#39;\$//&amp;quot; &amp;gt; words.txt
-
-cat words.txt | \
-sort | uniq -c | \
-sort -nr | \
-cut -c9- &amp;gt; words_desc.txt
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;ul&gt;
-&lt;li&gt;replace punctuations with space; remove &lt;code&gt;\r&lt;/code&gt; from `\r\n&amp;rsquo;&lt;/li&gt;
-&lt;li&gt;one word per line&lt;/li&gt;
-&lt;li&gt;keep only words composed of unicode letters, numbers, hyphen and apostrophe&lt;/li&gt;
-&lt;li&gt;remove pure numbers&lt;/li&gt;
-&lt;li&gt;remove &amp;rsquo;s&lt;/li&gt;
-&lt;li&gt;remove starting and ending apostrophe&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;output words.txt&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;sort and count unique words&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;sort by freqency in descending order&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;trim the frequency column&lt;/p&gt;&lt;/li&gt;
-&lt;/ul&gt;
-</description>
+      <description>cat book.txt | \ tr &#39;!()[]{};:&amp;quot;,&amp;lt;.&amp;gt;?“”‘’*/\r&#39; &#39; &#39; | \ tr &#39; &#39; &#39;\n&#39; | \ grep -a -P &amp;quot;^[\p{L}\p{N}\-&#39;]+\$&amp;quot; | \ grep -a -P -v &amp;quot;^[\p{N}\-&#39;]+\$&amp;quot; | \ sed &amp;quot;s/&#39;s\$//&amp;quot; | \ sed &amp;quot;s/^&#39;//&amp;quot; | sed &amp;quot;s/&#39;\$//&amp;quot; &amp;gt; words.txt cat words.txt | \ sort | uniq -c | \ sort -nr | \ cut -c9- &amp;gt; words_desc.txt   replace punctuations with space; remove \r from `\r\n&amp;rsquo; one word per line keep only words composed of unicode letters, numbers, hyphen and apostrophe remove pure numbers remove &amp;rsquo;s remove starting and ending apostrophe output words.</description>
     </item>
     
     <item>
@@ -100,12 +54,7 @@ cut -c9- &amp;gt; words_desc.txt
       <pubDate>Mon, 03 Aug 2015 16:55:49 +0800</pubDate>
       
       <guid>http://h12.me/note/remove-all-exited-docker-containers/</guid>
-      <description>&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;docker ps --quiet --filter=status=exited | xargs docker rm
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;docker images --no-trunc=true --filter=&amp;quot;dangling=true&amp;quot; --quiet=true | xargs docker rmi
-&lt;/code&gt;&lt;/pre&gt;
-</description>
+      <description>docker ps --quiet --filter=status=exited | xargs docker rm  docker images --no-trunc=true --filter=&amp;quot;dangling=true&amp;quot; --quiet=true | xargs docker rmi  </description>
     </item>
     
     <item>
@@ -114,34 +63,9 @@ cut -c9- &amp;gt; words_desc.txt
       <pubDate>Tue, 28 Apr 2015 10:59:02 +0800</pubDate>
       
       <guid>http://h12.me/note/tips-on-ssh/</guid>
-      <description>
-
-&lt;h2 id=&#34;generate-ssh-keys&#34;&gt;Generate SSH keys&lt;/h2&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;ssh-keygen -C w@h12.me
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h2 id=&#34;authorize-public-key-at-remote-server&#34;&gt;Authorize public key at remote server&lt;/h2&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;ssh-copy-id user@host
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;On Mac OSX, &lt;code&gt;ssh-copy-id&lt;/code&gt; should be installed first.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;brew install ssh-copy-id
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h2 id=&#34;generate-pem&#34;&gt;Generate PEM&lt;/h2&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;ssh-keygen -f ~/.ssh/id_rsa -e -m pem &amp;gt; ~/.ssh/id_rsa.pem
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h2 id=&#34;copy-file-by-base64&#34;&gt;Copy file by base64&lt;/h2&gt;
-
-&lt;p&gt;On remote session, run &lt;code&gt;base64 &amp;lt; myfile&lt;/code&gt; and copy the output.&lt;/p&gt;
-
-&lt;p&gt;On local terminal, run &lt;code&gt;base64 -d &amp;gt; myfile&lt;/code&gt;, paste the content and press &lt;code&gt;ctrl+D&lt;/code&gt;.&lt;/p&gt;
-</description>
+      <description>Generate SSH keys ssh-keygen -C w@h12.me  Authorize public key at remote server ssh-copy-id user@host  On Mac OSX, ssh-copy-id should be installed first.
+brew install ssh-copy-id  Generate PEM ssh-keygen -f ~/.ssh/id_rsa -e -m pem &amp;gt; ~/.ssh/id_rsa.pem  Copy file by base64 On remote session, run base64 &amp;lt; myfile and copy the output.
+On local terminal, run base64 -d &amp;gt; myfile, paste the content and press ctrl+D.</description>
     </item>
     
     <item>
@@ -150,15 +74,9 @@ cut -c9- &amp;gt; words_desc.txt
       <pubDate>Tue, 10 Jun 2014 23:00:24 +0000</pubDate>
       
       <guid>http://h12.me/note/disable-touchpad/</guid>
-      <description>&lt;p&gt;Have you ever been annoyed by accidentally touching the touchpad on your laptop
-when you are typing?&lt;/p&gt;
-
-&lt;p&gt;I am using a Linux laptop with both trackpoint and touchpad so the touchpad is
-just an annoying redundant thing. Here is the one-liner to disable it:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;xinput list | grep TouchPad | grep -Po &#39;id=\K([0-9]+)&#39; | xargs xinput disable
-&lt;/code&gt;&lt;/pre&gt;
-</description>
+      <description>Have you ever been annoyed by accidentally touching the touchpad on your laptop when you are typing?
+I am using a Linux laptop with both trackpoint and touchpad so the touchpad is just an annoying redundant thing. Here is the one-liner to disable it:
+xinput list | grep TouchPad | grep -Po &#39;id=\K([0-9]+)&#39; | xargs xinput disable  </description>
     </item>
     
   </channel>

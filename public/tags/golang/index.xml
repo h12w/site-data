@@ -2,12 +2,15 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Golang on h12.me</title>
-    <link>http://h12.me/tags/golang/index.xml</link>
+    <link>http://h12.me/tags/golang/</link>
     <description>Recent content in Golang on h12.me</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>Copyright (c) 2012-2018, Hǎiliàng Wáng; all rights reserved.</copyright>
-    <atom:link href="http://h12.me/tags/golang/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 28 Feb 2018 13:38:45 +0800</lastBuildDate>
+    
+	<atom:link href="http://h12.me/tags/golang/index.xml" rel="self" type="application/rss+xml" />
+    
     
     <item>
       <title>Pagination Done Right</title>
@@ -15,27 +18,10 @@
       <pubDate>Wed, 28 Feb 2018 13:38:45 +0800</pubDate>
       
       <guid>http://h12.me/note/pagination-done-right/</guid>
-      <description>
-
-&lt;p&gt;Server side pagination is intrinsically not accurate, as long as the data is dynamic.&lt;/p&gt;
-
-&lt;p&gt;The data items could be inserted, deleted or changed on the server side while the user goes forward and backward among the pages.&lt;/p&gt;
-
-&lt;p&gt;However, there is an algorithm that can keep the pagination as stable as possible:&lt;/p&gt;
-
-&lt;ol&gt;
-&lt;li&gt;encode the id and sorting fields of last value in a page as the continue-token&lt;/li&gt;
-&lt;li&gt;return the continue-token along with each page&lt;/li&gt;
-&lt;li&gt;the client must pass the continue-token to fetch the next page&lt;/li&gt;
-&lt;li&gt;the next page starts with value &amp;gt; continue-token || (value == continue-token &amp;amp;&amp;amp; value.id &amp;gt; continue-token.id)&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;h3 id=&#34;reference&#34;&gt;Reference&lt;/h3&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://skelia.com/articles/pagination-with-dynamic-data-loading-2/&#34;&gt;Pagination with Dynamic Data Loading&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-</description>
+      <description>Server side pagination is intrinsically not accurate, as long as the data is dynamic.
+The data items could be inserted, deleted or changed on the server side while the user goes forward and backward among the pages.
+However, there is an algorithm that can keep the pagination as stable as possible:
+ encode the id and sorting fields of last value in a page as the continue-token return the continue-token along with each page the client must pass the continue-token to fetch the next page the next page starts with value &amp;gt; continue-token || (value == continue-token &amp;amp;&amp;amp; value.</description>
     </item>
     
     <item>
@@ -44,37 +30,10 @@
       <pubDate>Sun, 31 Jan 2016 20:31:06 +0800</pubDate>
       
       <guid>http://h12.me/note/send-email-from-gmail/</guid>
-      <description>&lt;ol&gt;
-&lt;li&gt;&lt;p&gt;Turn on &lt;a href=&#34;http://accounts.google.com/SmsAuthConfig&#34;&gt;&amp;ldquo;2-Step Verification&amp;rdquo;&lt;/a&gt; so
-that an &lt;a href=&#34;https://security.google.com/settings/security/apppasswords&#34;&gt;&amp;ldquo;App password&amp;rdquo;&lt;/a&gt; can be generated&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;&lt;code&gt;go get gopkg.in/gomail.v2&lt;/code&gt;&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;Send your Email like the example below:&lt;/p&gt;&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-go&#34;&gt;package main
-
-import (
-	&amp;quot;gopkg.in/gomail.v2&amp;quot;
-)
-
-func main() {
-	m := gomail.NewMessage()
-	m.SetHeader(&amp;quot;From&amp;quot;, &amp;quot;from_address@gmail.com&amp;quot;)
-	m.SetAddressHeader(&amp;quot;To&amp;quot;, &amp;quot;to_adress@xxx&amp;quot;, &amp;quot;to_name&amp;quot;)
-	m.SetAddressHeader(&amp;quot;Cc&amp;quot;, &amp;quot;cc_adress@xxx&amp;quot;, &amp;quot;cc_name&amp;quot;)
-	m.SetHeader(&amp;quot;Subject&amp;quot;, &amp;quot;Hello! TEST!&amp;quot;)
-	m.SetBody(&amp;quot;text/html&amp;quot;, &amp;quot;Hello! &amp;lt;b&amp;gt;TEST&amp;lt;/b&amp;gt;!&amp;quot;)
-
-	d := gomail.NewPlainDialer(&amp;quot;smtp.gmail.com&amp;quot;, 587, &amp;quot;from_address@gmail.com&amp;quot;, &amp;quot;the App password&amp;quot;)
-
-	if err := d.DialAndSend(m); err != nil {
-		panic(err)
-	}
-}
-&lt;/code&gt;&lt;/pre&gt;
-</description>
+      <description> Turn on &amp;ldquo;2-Step Verification&amp;rdquo; so that an &amp;ldquo;App password&amp;rdquo; can be generated
+ go get gopkg.in/gomail.v2
+ Send your Email like the example below:
+  package main import ( &amp;quot;gopkg.in/gomail.v2&amp;quot; ) func main() { m := gomail.NewMessage() m.SetHeader(&amp;quot;From&amp;quot;, &amp;quot;from_address@gmail.com&amp;quot;) m.SetAddressHeader(&amp;quot;To&amp;quot;, &amp;quot;to_adress@xxx&amp;quot;, &amp;quot;to_name&amp;quot;) m.SetAddressHeader(&amp;quot;Cc&amp;quot;, &amp;quot;cc_adress@xxx&amp;quot;, &amp;quot;cc_name&amp;quot;) m.SetHeader(&amp;quot;Subject&amp;quot;, &amp;quot;Hello! TEST!&amp;quot;) m.SetBody(&amp;quot;text/html&amp;quot;, &amp;quot;Hello! &amp;lt;b&amp;gt;TEST&amp;lt;/b&amp;gt;!&amp;quot;) d := gomail.NewPlainDialer(&amp;quot;smtp.gmail.com&amp;quot;, 587, &amp;quot;from_address@gmail.com&amp;quot;, &amp;quot;the App password&amp;quot;) if err := d.DialAndSend(m); err != nil { panic(err) } }  </description>
     </item>
     
     <item>
@@ -83,46 +42,10 @@ func main() {
       <pubDate>Sat, 14 Nov 2015 13:57:09 +0800</pubDate>
       
       <guid>http://h12.me/project/realtest/</guid>
-      <description>
-
-&lt;p&gt;h12.me/realtest provides real test environment for Go unit testing, based on Docker.&lt;/p&gt;
-
-&lt;p&gt;Includes:&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;Queue
-
-&lt;ul&gt;
-&lt;li&gt;Kafka cluster (with zookeeper)&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;Database:
-
-&lt;ul&gt;
-&lt;li&gt;MySQL&lt;/li&gt;
-&lt;li&gt;MongoDB&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;Cache
-
-&lt;ul&gt;
-&lt;li&gt;Redis&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;Configuration service
-
-&lt;ul&gt;
-&lt;li&gt;ZooKeeper&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&#34;author&#34;&gt;Author&lt;/h2&gt;
-
-&lt;p&gt;&lt;a href=&#34;https://github.com/h12w&#34;&gt;Hǎiliàng Wáng&lt;/a&gt;&lt;/p&gt;
-
-&lt;h2 id=&#34;contributors&#34;&gt;Contributors&lt;/h2&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://github.com/AnotherGoogleFans&#34;&gt;Tao Huang&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-</description>
+      <description> h12.me/realtest provides real test environment for Go unit testing, based on Docker.
+Includes:
+ Queue  Kafka cluster (with zookeeper)  Database:  MySQL MongoDB  Cache  Redis  Configuration service  ZooKeeper   Author Hǎiliàng Wáng
+Contributors  Tao Huang  </description>
     </item>
     
     <item>
@@ -131,99 +54,8 @@ func main() {
       <pubDate>Thu, 22 Oct 2015 15:32:58 +0800</pubDate>
       
       <guid>http://h12.me/project/aliyun-oss-go-sdk/</guid>
-      <description>
-
-&lt;p&gt;&lt;a href=&#34;https://drone.io/github.com/h12w/aliyun-oss-go-sdk/latest&#34;&gt;&lt;img src=&#34;https://drone.io/github.com/h12w/aliyun-oss-go-sdk/status.png&#34; alt=&#34;Build
-Status&#34; /&gt;&lt;/a&gt;
-&lt;a href=&#34;https://coveralls.io/github/h12w/aliyun-oss-go-sdk?branch=master&#34;&gt;&lt;img src=&#34;https://coveralls.io/repos/h12w/aliyun-oss-go-sdk/badge.svg?branch=master&amp;amp;service=github&#34; alt=&#34;Coverage
-Status&#34; /&gt;&lt;/a&gt;
-&lt;a href=&#34;https://godoc.org/github.com/aliyun/aliyun-oss-go-sdk/oss&#34;&gt;&lt;img src=&#34;https://godoc.org/github.com/aliyun/aliyun-oss-go-sdk/oss?status.svg&#34; alt=&#34;GoDoc&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;Aliyun OSS (Object Storage Service) Go SDK is a client SDK to access Aliyun OSS
-API, implemented in the Go programming language.&lt;/p&gt;
-
-&lt;h2 id=&#34;installation&#34;&gt;Installation&lt;/h2&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;go get -u github.com/aliyun/aliyun-oss-go-sdk/oss
-go test -v -cover github.com/aliyun/aliyun-oss-go-sdk/oss
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h2 id=&#34;highlights&#34;&gt;Highlights&lt;/h2&gt;
-
-&lt;ul&gt;
-&lt;li&gt;Complete set of Aliyun OSS API&lt;/li&gt;
-&lt;li&gt;Thouroughly tested
-
-&lt;ul&gt;
-&lt;li&gt;100% test coverage&lt;/li&gt;
-&lt;li&gt;intuitive table driven tests&lt;/li&gt;
-&lt;li&gt;full test suite completes within 2 seconds&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;Lint clean
-
-&lt;ul&gt;
-&lt;li&gt;golint&lt;/li&gt;
-&lt;li&gt;go fmt&lt;/li&gt;
-&lt;li&gt;goimports&lt;/li&gt;
-&lt;li&gt;go vet&lt;/li&gt;
-&lt;li&gt;race detector&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;Idiomatic &amp;amp; elegant
-
-&lt;ul&gt;
-&lt;li&gt;response is returned as a parsed object&lt;/li&gt;
-&lt;li&gt;error is returned as a Go error&lt;/li&gt;
-&lt;li&gt;named options for setting headers &amp;amp; parameters&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;Great extensibility
-
-&lt;ul&gt;
-&lt;li&gt;clean and orthogonal implementation&lt;/li&gt;
-&lt;li&gt;users can easily extend the SDK when a new API method is supported&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;No third party dependencies&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&#34;documentation&#34;&gt;Documentation&lt;/h2&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;doc/overview.md&#34;&gt;Overview&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;doc/api-object.md&#34;&gt;API Object&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;doc/bucket.md&#34;&gt;Bucket&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;doc/object.md&#34;&gt;Object&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;doc/options.md&#34;&gt;Optional Headers and Parameters&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;doc/upload.md&#34;&gt;Multipart Upload&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;doc/cors.md&#34;&gt;Cross-Origin Resource Sharing (CORS)&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;doc/lifecycle.md&#34;&gt;Object Lifecycle Management&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;doc/extend.md&#34;&gt;Extending the SDK&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&#34;differences-with-python-sdk&#34;&gt;Differences with Python SDK&lt;/h2&gt;
-
-&lt;ul&gt;
-&lt;li&gt;HTTP header User-Agent, e.g. aliyun-sdk-go/0.1.1 (Linux/3.16.0-51-generic/x86_64;go1.5.1)&lt;/li&gt;
-&lt;li&gt;Go HTTP client does not support 100-Continue (will be supported after Go 1.6, see &lt;a href=&#34;https://github.com/golang/go/issues/3665&#34;&gt;https://github.com/golang/go/issues/3665&lt;/a&gt;)&lt;/li&gt;
-&lt;li&gt;HTTP header keys are automatically converted into canonical format, e.g.
-x-oss-acl becomes X-Oss-Acl&lt;/li&gt;
-&lt;li&gt;Go GET request does not have redundant &amp;ldquo;Content-Length: 0&amp;rdquo; header&lt;/li&gt;
-&lt;li&gt;Parameters will be omitted if the argument is not set&lt;/li&gt;
-&lt;li&gt;Go always sends URL parameters and headers in canonical order&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&#34;author&#34;&gt;Author&lt;/h2&gt;
-
-&lt;p&gt;&lt;a href=&#34;https://github.com/h12w&#34;&gt;Hǎiliàng Wáng&lt;/a&gt;&lt;/p&gt;
-
-&lt;h2 id=&#34;license&#34;&gt;License&lt;/h2&gt;
-
-&lt;p&gt;licensed under the &lt;a href=&#34;https://www.apache.org/licenses/LICENSE-2.0.html&#34;&gt;Apache License 2.0&lt;/a&gt;&lt;/p&gt;
-
-&lt;h2 id=&#34;references&#34;&gt;References&lt;/h2&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://docs.aliyun.com/#/pub/oss&#34;&gt;OSS Document (Chinese)&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-</description>
+      <description>Aliyun OSS (Object Storage Service) Go SDK is a client SDK to access Aliyun OSS API, implemented in the Go programming language.
+Installation go get -u github.com/aliyun/aliyun-oss-go-sdk/oss go test -v -cover github.com/aliyun/aliyun-oss-go-sdk/oss  Highlights  Complete set of Aliyun OSS API Thouroughly tested  100% test coverage intuitive table driven tests full test suite completes within 2 seconds  Lint clean  golint go fmt goimports go vet race detector  Idiomatic &amp;amp; elegant  response is returned as a parsed object error is returned as a Go error named options for setting headers &amp;amp; parameters  Great extensibility  clean and orthogonal implementation users can easily extend the SDK when a new API method is supported  No third party dependencies  Documentation  Overview API Object Bucket Object Optional Headers and Parameters Multipart Upload Cross-Origin Resource Sharing (CORS) Object Lifecycle Management Extending the SDK  Differences with Python SDK  HTTP header User-Agent, e.</description>
     </item>
     
     <item>
@@ -232,103 +64,9 @@ x-oss-acl becomes X-Oss-Acl&lt;/li&gt;
       <pubDate>Thu, 23 Jul 2015 13:36:25 +0800</pubDate>
       
       <guid>http://h12.me/project/kpax/</guid>
-      <description>
-
-&lt;p&gt;&lt;a href=&#34;https://godoc.org/h12.me/kpax&#34;&gt;&lt;img src=&#34;https://godoc.org/h12.me/kpax?status.svg&#34; alt=&#34;GoDoc&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
-
-&lt;h2 id=&#34;install&#34;&gt;Install&lt;/h2&gt;
-
-&lt;pre&gt;&lt;code&gt;go get -u h12.me/kpax
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h2 id=&#34;design&#34;&gt;Design&lt;/h2&gt;
-
-&lt;p&gt;The client is built on top of Kafka Wire Protocol (i.e. low-level API). The protocol related types &amp;amp; marshal/unmarshal functions are automatically generated by &lt;a href=&#34;https://github.com/h12w/wipro&#34;&gt;wipro&lt;/a&gt; from &lt;a href=&#34;https://cwiki.apache.org/confluence/display/KAFKA/A+Guide+To+The+Kafka+Protocol&#34;&gt;the HTML spec&lt;/a&gt;).&lt;/p&gt;
-
-&lt;p&gt;&lt;code&gt;(-)&lt;/code&gt; means to be done.&lt;/p&gt;
-
-&lt;h3 id=&#34;sub-packages&#34;&gt;Sub packages&lt;/h3&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;model&lt;/strong&gt; is an abstraction model for request, response, broker and cluster&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;broker&lt;/strong&gt; is a lazy, asynchronous and recoverable round tripper that talks to a single Kafka broker&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;cluster&lt;/strong&gt; is a metadata manager that talks to a Kafka cluster&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;proto&lt;/strong&gt; contains both low level API and a &amp;ldquo;middle&amp;rdquo; level facade&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;producer&lt;/strong&gt;: fault tolerant high-level producer (batching and partitioning strategy)&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;consumer&lt;/strong&gt;: fault tolerant high-level consumer (consumer group and offset commit)&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;log&lt;/strong&gt;: replaceable global logger&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;cmd&lt;/strong&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;kpax&lt;/strong&gt;: command line tool to help with Kafka programming&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&#34;compatibility&#34;&gt;Compatibility&lt;/h3&gt;
-
-&lt;p&gt;Compatible with Kafka Server 0.8.2.&lt;/p&gt;
-
-&lt;h3 id=&#34;error-handling&#34;&gt;Error Handling&lt;/h3&gt;
-
-&lt;ul&gt;
-&lt;li&gt;broker
-
-&lt;ul&gt;
-&lt;li&gt;fail fast: timeout returns error immediately&lt;/li&gt;
-&lt;li&gt;release resources carefully&lt;/li&gt;
-&lt;li&gt;reconnect when requested next time&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;client
-
-&lt;ul&gt;
-&lt;li&gt;metadata reload lazily (only when a leader/coordinator cannot be found in cache)&lt;/li&gt;
-&lt;li&gt;leader/coordinator should be deleted on error&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;producer
-
-&lt;ul&gt;
-&lt;li&gt;fail over to another partition&lt;/li&gt;
-&lt;li&gt;failed partition will be retried again after a period of time&lt;/li&gt;
-&lt;li&gt;partition expand (-)&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;consumer
-
-&lt;ul&gt;
-&lt;li&gt;just loop &amp;amp; wait on error&lt;/li&gt;
-&lt;li&gt;partition expand (-)&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;graceful shutdown (-)&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&#34;efficiency&#34;&gt;Efficiency&lt;/h3&gt;
-
-&lt;ul&gt;
-&lt;li&gt;efficiency
-
-&lt;ul&gt;
-&lt;li&gt;batching&lt;/li&gt;
-&lt;li&gt;consumer response&lt;/li&gt;
-&lt;li&gt;consumer request (-)&lt;/li&gt;
-&lt;li&gt;producer (-)&lt;/li&gt;
-&lt;li&gt;decompression&lt;/li&gt;
-&lt;li&gt;snappy&lt;/li&gt;
-&lt;li&gt;gzip (-)&lt;/li&gt;
-&lt;li&gt;compression&lt;/li&gt;
-&lt;li&gt;snappy (-)&lt;/li&gt;
-&lt;li&gt;gzip (-)&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&#34;author&#34;&gt;Author&lt;/h2&gt;
-
-&lt;p&gt;&lt;a href=&#34;https://github.com/h12w&#34;&gt;Hǎiliàng Wáng&lt;/a&gt;&lt;/p&gt;
-
-&lt;h2 id=&#34;contributors&#34;&gt;Contributors&lt;/h2&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://github.com/AnotherGoogleFans&#34;&gt;Tao Huang&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-</description>
+      <description>Install go get -u h12.me/kpax  Design The client is built on top of Kafka Wire Protocol (i.e. low-level API). The protocol related types &amp;amp; marshal/unmarshal functions are automatically generated by wipro from the HTML spec).
+(-) means to be done.
+Sub packages  model is an abstraction model for request, response, broker and cluster broker is a lazy, asynchronous and recoverable round tripper that talks to a single Kafka broker cluster is a metadata manager that talks to a Kafka cluster proto contains both low level API and a &amp;ldquo;middle&amp;rdquo; level facade producer: fault tolerant high-level producer (batching and partitioning strategy) consumer: fault tolerant high-level consumer (consumer group and offset commit) log: replaceable global logger cmd  kpax: command line tool to help with Kafka programming   Compatibility Compatible with Kafka Server 0.</description>
     </item>
     
     <item>
@@ -337,46 +75,10 @@ x-oss-acl becomes X-Oss-Acl&lt;/li&gt;
       <pubDate>Wed, 08 Jul 2015 07:58:34 +0000</pubDate>
       
       <guid>http://h12.me/note/proxy-notes/</guid>
-      <description>
-
-&lt;h2 id=&#34;git&#34;&gt;Git&lt;/h2&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;&amp;gt; cat ~/.gitconfig
-[http]
-	proxy = socks5://[host]:[port]
-[https]
-	proxy = socks5://[host]:[port]
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h2 id=&#34;curl-homebrew&#34;&gt;Curl (Homebrew)&lt;/h2&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;&amp;gt; cat ~/.curlrc
-socks5 = &amp;quot;[host]:[port]&amp;quot;
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h2 id=&#34;docker-pull&#34;&gt;Docker pull&lt;/h2&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-fish&#34;&gt;env HTTP_PROXY=http://xxx docker pull yyy
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h2 id=&#34;gae&#34;&gt;GAE&lt;/h2&gt;
-
-&lt;ol&gt;
-&lt;li&gt;&lt;p&gt;Set proxy&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;export HTTP_PROXY http://[host]:[port]
-export HTTPS_PROXY http://[host]:[port]
-&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;Delete cacerts.txt under GAE SDK installation to disable SSL verification (
-make sure the proxy is safe before this step).&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;Deploy.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;appcfg.py . --email=[address] --passin
-&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
-&lt;/ol&gt;
-</description>
+      <description> Git &amp;gt; cat ~/.gitconfig [http] proxy = socks5://[host]:[port] [https] proxy = socks5://[host]:[port]  Curl (Homebrew) &amp;gt; cat ~/.curlrc socks5 = &amp;quot;[host]:[port]&amp;quot;  Docker pull env HTTP_PROXY=http://xxx docker pull yyy  GAE  Set proxy
+export HTTP_PROXY http://[host]:[port] export HTTPS_PROXY http://[host]:[port]  Delete cacerts.txt under GAE SDK installation to disable SSL verification ( make sure the proxy is safe before this step).
+ Deploy.
+appcfg.py . --email=[address] --passin   </description>
     </item>
     
     <item>
@@ -385,110 +87,8 @@ make sure the proxy is safe before this step).&lt;/p&gt;&lt;/li&gt;
       <pubDate>Mon, 29 Jun 2015 16:34:59 +0800</pubDate>
       
       <guid>http://h12.me/note/go-design/</guid>
-      <description>
-
-&lt;h3 id=&#34;refusing-new-features&#34;&gt;Refusing new features&lt;/h3&gt;
-
-&lt;p&gt;Avoid &lt;a href=&#34;https://en.wikipedia.org/wiki/Leaky_abstraction&#34;&gt;leaky abstraction&lt;/a&gt; as much as possible. If an abstraction is not solid enough, you’d rather not use them at all. Go is designed like this, the features are carefully selected. If a feature is not solid enough, it will not be allowed to enter Go.&lt;/p&gt;
-
-&lt;h3 id=&#34;no-implicit-string-concatenation&#34;&gt;No implicit string concatenation&lt;/h3&gt;
-
-&lt;p&gt;&lt;a href=&#34;https://groups.google.com/d/msg/golang-nuts/S6a3bg65TBE/ikyNMzUSnXsJ&#34;&gt;Rob&lt;/a&gt;:
-That used to be in the language but was dropped when the semicolon insertion rules went in. You need the + to be able to span lines, and if you can&amp;rsquo;t span lines operatorless concatenation is close to pointless.&lt;/p&gt;
-
-&lt;h3 id=&#34;no-implicit-conversion&#34;&gt;No Implicit conversion&lt;/h3&gt;
-
-&lt;p&gt;&lt;a href=&#34;https://groups.google.com/d/msg/golang-nuts/S6a3bg65TBE/ikyNMzUSnXsJ&#34;&gt;Rob&lt;/a&gt;:
-In any case the clarity of Go&amp;rsquo;s strictness is worth the occasional conversion. A huge class of bugs is simply gone, and a huge piece of tricky language in the specification never needed to be written.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;https://groups.google.com/d/msg/golang-nuts/S6a3bg65TBE/KUNfj8L4H4IJ&#34;&gt;Russ&lt;/a&gt;:
-Inserting automatic widening means giving up the &amp;ldquo;named types are not the same&amp;rdquo; rule, which makes it pretty much a non-starter.&lt;/p&gt;
-
-&lt;h3 id=&#34;octal-literal&#34;&gt;Octal literal&lt;/h3&gt;
-
-&lt;p&gt;Octal numeric system is rarely used, why does Go support them?&lt;/p&gt;
-
-&lt;p&gt;From Wikipedia “Octal”: Octal representation of non-ASCII bytes may be particularly handy with UTF-8, where any start byte has octal value \3nn and any continuation byte has octal value \2nn.&lt;/p&gt;
-
-&lt;h3 id=&#34;null-pointer-billion-dollar-mistake&#34;&gt;Null pointer (billion-dollar mistake)&lt;/h3&gt;
-
-&lt;p&gt;&lt;a href=&#34;https://groups.google.com/d/msg/golang-nuts/Vxpuc37S8tQ/2zGB1QgjmbAJ&#34;&gt;Jonathan&lt;/a&gt;:
-in the eyes of the Go designers, who clearly don&amp;rsquo;t view it as a billion-dollar mistake, and in my eyes as well,
- having spent days debugging (or failing to debug) race conditions, but rarely more than an hour per null-pointer bug).&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;https://groups.google.com/d/msg/golang-nuts/SskXyc9D5Sk/-EKHAIFBRXEJ&#34;&gt;rog&lt;/a&gt;:
-even in languages with no nil, such as Haskell, you can still get exceptions from using things that have an unexpected form. e.g. head [] that&amp;rsquo;s not too different from a nil pointer exception. so even if you go the non-nil route, you may still end up paying a good proportion of the &amp;ldquo;billion dollar&amp;rdquo; price.&lt;/p&gt;
-
-&lt;h3 id=&#34;return-errors-rather-than-exceptions&#34;&gt;Return errors rather than exceptions&lt;/h3&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://blogs.msdn.com/b/oldnewthing/archive/2005/01/14/352949.aspx&#34;&gt;Raymond Chen&lt;/a&gt;:
-It&amp;rsquo;s easy to write bad code, regardless of the error model. It&amp;rsquo;s hard to write good error-code-based code since you have to check every error code and think about what you should do when an error occurs. It&amp;rsquo;s really hard to write good exception-based code since you have to check every single line of code (indeed, every sub-expression) and think about what exceptions it might raise and how your code will react to it. (In C++ it&amp;rsquo;s not quite so bad because C++ exceptions are raised only at specific points during execution. In C#, exceptions can be raised at any time.)&lt;/p&gt;
-
-&lt;h3 id=&#34;nil-channel-always-blocks-both-send-and-receive&#34;&gt;Nil channel always blocks (both send and receive)&lt;/h3&gt;
-
-&lt;p&gt;&lt;a href=&#34;https://groups.google.com/d/msg/golang-nuts/QltQ0nd9HvE/VvDhLO07Oq4J&#34;&gt;Rob&lt;/a&gt;:
-It&amp;rsquo;s for consistency with select. The semantics of a nil channel are
-the same regardless of how it is used. It&amp;rsquo;s useful that it blocks in a
-select, so that&amp;rsquo;s what it does outside a select.&lt;/p&gt;
-
-&lt;h3 id=&#34;reading-a-closed-channel-always-succeeds-with-zero-value&#34;&gt;Reading a closed channel always succeeds with zero value&lt;/h3&gt;
-
-&lt;ol&gt;
-&lt;li&gt;the read cannot block because then it will not be distinguishable with nil channel.&lt;/li&gt;
-&lt;li&gt;the read cannot panic because the writer close the channel to signal that it has been closed, not to panicking the reader.&lt;/li&gt;
-&lt;li&gt;Then the read has to return, which value to return? Since the channel has been closed, so the only possible value is a fake one &amp;ndash; default zero value. an additional result of type bool reporting whether the communication succeeded.
-e.g. v, ok := &amp;lt;-ch.&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;h3 id=&#34;writing-a-closed-channel-panics&#34;&gt;Writing a closed channel panics&lt;/h3&gt;
-
-&lt;p&gt;The channel should only be closed by the writer(not reader), so if a writer close the channel and then write it again, it should be a programming bug and panic is the right behavior.&lt;/p&gt;
-
-&lt;h3 id=&#34;full-qualified-package-name&#34;&gt;Full qualified package name&lt;/h3&gt;
-
-&lt;p&gt;&lt;a href=&#34;https://groups.google.com/d/msg/golang-nuts/-tyo4o1uVTQ/FbDSkH9kq_oJ&#34;&gt;Rob&lt;/a&gt;:&lt;/p&gt;
-
-&lt;p&gt;Using . as an import name is part of the language and necessary in some cases to solve difficult naming issues but it&amp;rsquo;s not the intended style.  Package authors can depend on the fact that their code lives in its own name space.  If . becomes standard, then all packages in effect become a global name space and the style changes. Instead of&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;foo.New
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;the function must be called something like&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;foo.NewFoo
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;to avoid colliding with New from other packages.  And then what if Foo is itself a common name such as Buffer?  You rapidly end up in the Java space of very long names for everything.&lt;/p&gt;
-
-&lt;p&gt;This convention we have, using the package names always, is deliberate.  Yes, sometimes it makes for more typing but we believe in the long run it means less typing.&lt;/p&gt;
-
-&lt;h3 id=&#34;slice-type-is-a-builtin-type&#34;&gt;Slice type is a builtin type&lt;/h3&gt;
-
-&lt;p&gt;To support variadic arguments.&lt;/p&gt;
-
-&lt;h3 id=&#34;len-returns-int-rather-than-uint&#34;&gt;len returns int rather than uint&lt;/h3&gt;
-
-&lt;p&gt;&lt;a href=&#34;https://groups.google.com/d/msg/golang-nuts/jJWAAMdquwQ/jhWhxJJbzVYJ&#34;&gt;Ian&lt;/a&gt;:&lt;/p&gt;
-
-&lt;p&gt;Unsigned types are not a good choice for counts, because they have odd behaviour at 0, a common case.  Signed types have odd behaviour at very large and very small values, an uncommon case.&lt;/p&gt;
-
-&lt;h3 id=&#34;what-is-type-t-t&#34;&gt;What is &lt;code&gt;type T []T&lt;/code&gt;&lt;/h3&gt;
-
-&lt;p&gt;A slice is a small object containing a pointer to the underlying array, so T is the slice object containing a pointer to the underlying array, whose element is T itself.&lt;/p&gt;
-
-&lt;h3 id=&#34;each-if-for-and-switch-statement-is-considered-to-be-in-its-own-implicit-block-https-golang-org-ref-spec-blocks&#34;&gt;&lt;a href=&#34;https://golang.org/ref/spec#Blocks&#34;&gt;Each &lt;code&gt;if&lt;/code&gt;, &lt;code&gt;for&lt;/code&gt;, and &lt;code&gt;switch&lt;/code&gt; statement is considered to be in its own implicit block&lt;/a&gt;&lt;/h3&gt;
-
-&lt;p&gt;It means a for loop has two nested blocks, the outer implicit block is for the loop variable, and the inner block for the loop body:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-go&#34;&gt;for i := 0; i &amp;lt; 5; i++ {
-	fmt.Println(&amp;quot;outer i:&amp;quot;, i)
-	i := 999
-	fmt.Println(&amp;quot;inner i:&amp;quot;, i)
-}
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;The implicit block has to be introduced to &lt;code&gt;for statement&lt;/code&gt; so that the the value of the loop variable can be shared between iterations, but I am not sure why it is useful for &lt;code&gt;if&lt;/code&gt; and &lt;code&gt;switch&lt;/code&gt;.&lt;/p&gt;
-</description>
+      <description>Refusing new features Avoid leaky abstraction as much as possible. If an abstraction is not solid enough, you’d rather not use them at all. Go is designed like this, the features are carefully selected. If a feature is not solid enough, it will not be allowed to enter Go.
+No implicit string concatenation Rob: That used to be in the language but was dropped when the semicolon insertion rules went in.</description>
     </item>
     
     <item>
@@ -497,75 +97,9 @@ e.g. v, ok := &amp;lt;-ch.&lt;/li&gt;
       <pubDate>Tue, 16 Jun 2015 00:00:00 +0000</pubDate>
       
       <guid>http://h12.me/note/what-go-cannot-do/</guid>
-      <description>
-
-&lt;p&gt;This is a list about the corner cases that Go cannot do, and their work arounds.&lt;/p&gt;
-
-&lt;h2 id=&#34;run-all-deferred-functions-of-other-goroutines-when-a-goroutine-panics&#34;&gt;Run all deferred functions of other goroutines when a goroutine panics&lt;/h2&gt;
-
-&lt;p&gt;Uncaught panicking of one goroutine will exit the program without executing deferred functions of other goroutines.&lt;/p&gt;
-
-&lt;p&gt;Workaround: this is the standard behavior, C++ with RAII also has the same problem. Persist your data in a way that crashing will not cause data integrity issue.&lt;/p&gt;
-
-&lt;h2 id=&#34;assigning-to-fields-with-short-declaration-notation&#34;&gt;Assigning to fields with short declaration notation&lt;/h2&gt;
-
-&lt;ul&gt;
-&lt;li&gt;Issue: &lt;a href=&#34;https://github.com/golang/go/issues/6842&#34;&gt;6842&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Status: Open &amp;amp; Unplanned&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;When it is useful:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-go&#34;&gt;if x.f, ok := f(); !ok {
-	...
-}
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Workaround:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-go&#34;&gt;var ok bool
-if x.f, ok = f(); !ok {
-	...
-}
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h2 id=&#34;accessing-unexported-fields-with-reflect-value-interface-method&#34;&gt;Accessing unexported fields with reflect.Value.Interface method&lt;/h2&gt;
-
-&lt;p&gt;When it is useful:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-go&#34;&gt;type S struct {
-   val string
-}
-
-...
-
-var s S
-
-reflect.Value(s).Fields(0).Interface()
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;The code will panics with message:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;reflect.Value.Interface: cannot return value obtained from unexported field or method
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Workaround:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-go&#34;&gt;v := reflect.Value(s).Fields(0)
-if v.Kind() == reflect.String {
-	s := v.String()
-}
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h2 id=&#34;slice-of-array-literal&#34;&gt;Slice of array literal&lt;/h2&gt;
-
-&lt;p&gt;e.g.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-go&#34;&gt;[3]int{1, 2, 3}[:]
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Just use slice literal instead!&lt;/p&gt;
-</description>
+      <description>This is a list about the corner cases that Go cannot do, and their work arounds.
+Run all deferred functions of other goroutines when a goroutine panics Uncaught panicking of one goroutine will exit the program without executing deferred functions of other goroutines.
+Workaround: this is the standard behavior, C++ with RAII also has the same problem. Persist your data in a way that crashing will not cause data integrity issue.</description>
     </item>
     
     <item>
@@ -574,31 +108,9 @@ if v.Kind() == reflect.String {
       <pubDate>Wed, 06 May 2015 12:01:11 +0800</pubDate>
       
       <guid>http://h12.me/note/go-get-behind-proxy/</guid>
-      <description>
-
-&lt;h2 id=&#34;proxy-for-go-get&#34;&gt;Proxy for &amp;ldquo;go get&amp;rdquo;&lt;/h2&gt;
-
-&lt;pre&gt;&lt;code&gt;https_proxy=http://user:pass@proxy_host:port go get ...
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h2 id=&#34;proxy-for-git&#34;&gt;Proxy for Git&lt;/h2&gt;
-
-&lt;p&gt;In &lt;code&gt;$HOME/.gitconfig&lt;/code&gt;:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;[https]
-	proxy = proxy_url
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h2 id=&#34;proxy-for-mercurial&#34;&gt;Proxy for Mercurial&lt;/h2&gt;
-
-&lt;p&gt;In &lt;code&gt;$HOME/.hgrc&lt;/code&gt;:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;[http_proxy]
-host = host:port
-user = ...
-passwd = ...
-&lt;/code&gt;&lt;/pre&gt;
-</description>
+      <description> Proxy for &amp;ldquo;go get&amp;rdquo; https_proxy=http://user:pass@proxy_host:port go get ...  Proxy for Git In $HOME/.gitconfig:
+[https] proxy = proxy_url  Proxy for Mercurial In $HOME/.hgrc:
+[http_proxy] host = host:port user = ... passwd = ...  </description>
     </item>
     
     <item>
@@ -607,19 +119,9 @@ passwd = ...
       <pubDate>Thu, 29 Jan 2015 03:55:08 +0000</pubDate>
       
       <guid>http://h12.me/note/go-build-failure/</guid>
-      <description>&lt;p&gt;Today I tried to build Go 1.4.1 from source but it failed with this error:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;    go/src/liblink/anames9.c:6:29: fatal error: ../cmd/9l/9.out.h: No such file or directory
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;At first I thought the building routine might have be changed so I opened and read
-&lt;a href=&#34;http://golang.org/doc/install/source&#34;&gt;&lt;em&gt;Installing Go from Source&lt;/em&gt;&lt;/a&gt; again, carefully,
-and found nothing special.&lt;/p&gt;
-
-&lt;p&gt;Then I searched for the error source and it turned out that I should deleted
-&lt;code&gt;anames*.c&lt;/code&gt;, manually. There is no document and no automatic cleaning script, and
-you would have to figure it out yourself if no one ever mentioned it (&lt;a href=&#34;https://groups.google.com/d/msg/golang-nuts/wQoQqXOnOTo/QbubO2UebpUJ&#34;&gt;source&lt;/a&gt;).&lt;/p&gt;
-</description>
+      <description>Today I tried to build Go 1.4.1 from source but it failed with this error:
+ go/src/liblink/anames9.c:6:29: fatal error: ../cmd/9l/9.out.h: No such file or directory  At first I thought the building routine might have be changed so I opened and read Installing Go from Source again, carefully, and found nothing special.
+Then I searched for the error source and it turned out that I should deleted anames*.c, manually. There is no document and no automatic cleaning script, and you would have to figure it out yourself if no one ever mentioned it (source).</description>
     </item>
     
     <item>
@@ -628,20 +130,8 @@ you would have to figure it out yourself if no one ever mentioned it (&lt;a href
       <pubDate>Tue, 16 Dec 2014 09:43:40 +0000</pubDate>
       
       <guid>http://h12.me/note/new-domain-h12/</guid>
-      <description>&lt;p&gt;This year, I decided not to renewal the previous domain name (hailiang.ws) last
-year, but to register a shorter one. There are two reasons:&lt;/p&gt;
-
-&lt;ol&gt;
-&lt;li&gt;Both the site URL and the email address will be cleaner.&lt;/li&gt;
-&lt;li&gt;A more friendly Go import path will be possible for my repositories on Github.&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;After comparing various choices on major domain providers, I chose &lt;code&gt;h12.me&lt;/code&gt; as
-the new domain. It is the shortest but still meaningful domain that I can afford.
-&lt;code&gt;H&lt;/code&gt; is the initial letter of my given name, &lt;code&gt;12&lt;/code&gt; is simply the number of letters
-of my full name, and &lt;code&gt;.me&lt;/code&gt; is a top level domain quite suitable for a personal
-website.&lt;/p&gt;
-</description>
+      <description>This year, I decided not to renewal the previous domain name (hailiang.ws) last year, but to register a shorter one. There are two reasons:
+ Both the site URL and the email address will be cleaner. A more friendly Go import path will be possible for my repositories on Github.  After comparing various choices on major domain providers, I chose h12.me as the new domain. It is the shortest but still meaningful domain that I can afford.</description>
     </item>
     
     <item>
@@ -650,27 +140,9 @@ website.&lt;/p&gt;
       <pubDate>Fri, 25 Jul 2014 03:39:05 +0000</pubDate>
       
       <guid>http://h12.me/note/301-redirect/</guid>
-      <description>&lt;p&gt;When building a website, there is one inevitable thing:
-&lt;a href=&#34;http://en.wikipedia.org/wiki/HTTP_301&#34;&gt;301 permanent redirection&lt;/a&gt;. The cases
-that have to involve 301 includes:&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;Redirection from www subdomain to naked domain or vise versa.&lt;/li&gt;
-&lt;li&gt;Redirection from slashed pretty URL to unslashed URL or vise versa.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;301 is easy to implement with Go:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-go&#34;&gt;func redirect301(w http.ResponseWriter, url string) {
-    w.Header().Set(&amp;quot;Location&amp;quot;, url)
-    w.WriteHeader(http.StatusMovedPermanently)
-}
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;There is one more thing that needs attention: The root path of a domain always
-contains a slash (GET / in HTTP request), regardless the user enters the slash
-or not, so the root path needs no redirection.&lt;/p&gt;
-</description>
+      <description>When building a website, there is one inevitable thing: 301 permanent redirection. The cases that have to involve 301 includes:
+ Redirection from www subdomain to naked domain or vise versa. Redirection from slashed pretty URL to unslashed URL or vise versa.  301 is easy to implement with Go:
+func redirect301(w http.ResponseWriter, url string) { w.Header().Set(&amp;quot;Location&amp;quot;, url) w.WriteHeader(http.StatusMovedPermanently) }  There is one more thing that needs attention: The root path of a domain always contains a slash (GET / in HTTP request), regardless the user enters the slash or not, so the root path needs no redirection.</description>
     </item>
     
     <item>
@@ -679,36 +151,10 @@ or not, so the root path needs no redirection.&lt;/p&gt;
       <pubDate>Sun, 06 Jul 2014 06:39:27 +0000</pubDate>
       
       <guid>http://h12.me/note/serve-static/</guid>
-      <description>&lt;p&gt;It is straightforward to serve static pages with &lt;a href=&#34;http://golang.org/pkg/net/http/&#34;&gt;Go&lt;/a&gt;
-or &lt;a href=&#34;https://developers.google.com/appengine/docs/go/config/appconfig&#34;&gt;config file&lt;/a&gt;
-on App Engine, but how to serve static pages on App Engine with Go?&lt;/p&gt;
-
-&lt;p&gt;I got the following error when I tried to customize the 404 page with Go:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;No such file or directory
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;The solution turns out to be simple: do not do both.&lt;/p&gt;
-
-&lt;p&gt;The file will not be accessible to Go if there is already a rule for it in
-config.yaml. Remove the rule from config.yaml and the file will be available to
-Go again (source:
-&lt;a href=&#34;https://groups.google.com/d/msg/google-appengine-go/DmfDPUBkmrg/SvJ1dwjC0_EJ&#34;&gt;google-appengine-go&lt;/a&gt;).&lt;/p&gt;
-
-&lt;p&gt;Here is an exmaple to serve a custom 404 not found page:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-go&#34;&gt;func serve404(w http.ResponseWriter, r *http.Request) {
-	w.WriteHeader(http.StatusNotFound)
-	f, err := http.Dir(&amp;quot;public&amp;quot;).Open(&amp;quot;404.html&amp;quot;)
-	if err != nil {
-		serveError(w, r, err)
-		return
-	}
-	defer f.Close()
-	io.Copy(w, f)
-}
-&lt;/code&gt;&lt;/pre&gt;
-</description>
+      <description>It is straightforward to serve static pages with Go or config file on App Engine, but how to serve static pages on App Engine with Go?
+I got the following error when I tried to customize the 404 page with Go:
+No such file or directory  The solution turns out to be simple: do not do both.
+The file will not be accessible to Go if there is already a rule for it in config.</description>
     </item>
     
     <item>
@@ -717,135 +163,9 @@ Go again (source:
       <pubDate>Mon, 02 Jun 2014 01:21:00 +0000</pubDate>
       
       <guid>http://h12.me/project/getgo/</guid>
-      <description>
-
-&lt;p&gt;&lt;a href=&#34;https://godoc.org/github.com/h12w/getgo&#34;&gt;&lt;img src=&#34;https://godoc.org/github.com/h12w/getgo?status.png&#34; alt=&#34;GoDoc&#34; /&gt;&lt;/a&gt;
-&lt;a href=&#34;https://travis-ci.org/h12w/getgo&#34;&gt;&lt;img src=&#34;https://travis-ci.org/h12w/getgo.svg?branch=master&#34; alt=&#34;Build Status&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;Getgo is a concurrent, simple and extensible web scraping framework written in &lt;a href=&#34;http://golang.org&#34;&gt;Go&lt;/a&gt;.&lt;/p&gt;
-
-&lt;h2 id=&#34;quick-start&#34;&gt;Quick start&lt;/h2&gt;
-
-&lt;h3 id=&#34;get-getgo&#34;&gt;Get Getgo&lt;/h3&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;go get -u github.com/h12w/getgo
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h3 id=&#34;define-a-task&#34;&gt;Define a task&lt;/h3&gt;
-
-&lt;p&gt;This example is under the examples/goblog directory. To use Getgo to scrap structured
-data from a web page, just define the structured data as a Go struct (golangBlogEntry),
-and define a corresponding task (golangBlogIndexTask).&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-go&#34;&gt;type golangBlogEntry struct {
-	Title string
-	URL   string
-	Tags  *string
-}
-
-type golangBlogIndexTask struct {
-	// Variables in task URL, e.g. page number
-}
-
-func (t golangBlogIndexTask) Request() *http.Request {
-	return getReq(`http://blog.golang.org/index`)
-}
-
-func (t golangBlogIndexTask) Handle(root *query.Node, s getgo.Storer) (err error) {
-	root.Div(_Id(&amp;quot;content&amp;quot;)).Children(_Class(&amp;quot;blogtitle&amp;quot;)).For(func(item *query.Node) {
-		title := item.Ahref().Text()
-		url := item.Ahref().Href()
-		tags := item.Span(_Class(&amp;quot;tags&amp;quot;)).Text()
-		if url != nil &amp;amp;&amp;amp; title != nil {
-			store(&amp;amp;golangBlogEntry{Title: *title, URL: *url, Tags: tags}, s, &amp;amp;err)
-		}
-	})
-	return
-}
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h3 id=&#34;run-the-task&#34;&gt;Run the task&lt;/h3&gt;
-
-&lt;p&gt;Use util.Run to run the task and print all the result to standard output.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-go&#34;&gt;	util.Run(golangBlogIndexTask{})
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;To store the parsed result to a database, a storage backend satisfying getgo.Tx
-interface should be provided to the getgo.Run method.&lt;/p&gt;
-
-&lt;h2 id=&#34;understand-getgo&#34;&gt;Understand Getgo&lt;/h2&gt;
-
-&lt;p&gt;A getgo.Task is an interface to represent an HTTP crawler task that provides an
-HTTP request and a method to handle the HTTP response.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-go&#34;&gt;type Task interface {
-	Requester
-	Handle(resp *http.Response) error
-}
-
-type Requester interface {
-	Request() *http.Request
-}
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;A getgo.Runner is responsible to run a getgo.Task. There are two concrete runners
-provided: SequentialRunner and ConcurrentRunner.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-go&#34;&gt;type Runner interface {
-	Run(task Task) error // Run runs a task
-	Close()              // Close closes the runner
-}
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;A task that stores data into a storage backend should satisfy getgo.StorableTask
-interface.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-go&#34;&gt;type StorableTask interface {
-	Requester
-	Handle(resp *http.Response, s Storer) error
-}
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;A storage backend is simply an object satisfying getgo.Tx interface.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-go&#34;&gt;type Storer interface {
-	Store(v interface{}) error
-}
-
-type Tx interface {
-	Storer
-	Commit() error
-	Rollback() error
-}
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;See getgo.Run method to understand how a StorableTask is combined with a storage
-backend and adapted to become a normal Task to allow a Runner to run it.&lt;/p&gt;
-
-&lt;p&gt;There are currently a PostgreSQL storage backend provided by Getgo, and it is
-not hard to support more backends (See getgo/db package for details).&lt;/p&gt;
-
-&lt;p&gt;The easier way to define a task for an HTML page is to define a task satisfying
-getgo.HTMLTask rather than getgo.Task, there are adapters to convert internally
-an HTMLTask to a Task so that a Runner can run an HTMLTask. The Handle method of
-HTMLTask provides an already parsed HTML DOM object (by html-query package).&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-go&#34;&gt;type HTMLTask interface {
-	Requester
-	Handle(root *query.Node, s Storer) error
-}
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Similarly, a task for retrieving a JSON page should satisfy getgo.TextTask
-interface. An io.Reader is provided to be decoded by the encoding/json package.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-go&#34;&gt;type TextTask interface {
-	Requester
-	Handle(r io.Reader, s Storer) error
-}
-&lt;/code&gt;&lt;/pre&gt;
-</description>
+      <description>Getgo is a concurrent, simple and extensible web scraping framework written in Go.
+Quick start Get Getgo go get -u github.com/h12w/getgo  Define a task This example is under the examples/goblog directory. To use Getgo to scrap structured data from a web page, just define the structured data as a Go struct (golangBlogEntry), and define a corresponding task (golangBlogIndexTask).
+type golangBlogEntry struct { Title string URL string Tags *string } type golangBlogIndexTask struct { // Variables in task URL, e.</description>
     </item>
     
     <item>
@@ -855,115 +175,39 @@ interface. An io.Reader is provided to be decoded by the encoding/json package.&
       
       <guid>http://h12.me/project/gspec/</guid>
       <description>&lt;p&gt;&lt;a href=&#34;https://app.wercker.com/project/bykey/d5ed30f0d03d4a5210f65659ead13888&#34;&gt;&lt;img src=&#34;https://app.wercker.com/status/d5ed30f0d03d4a5210f65659ead13888/s&#34; alt=&#34;wercker status&#34; title=&#34;wercker status&#34; /&gt;&lt;/a&gt;
-&lt;a href=&#34;https://godoc.org/h12.me/gspec&#34;&gt;&lt;img src=&#34;https://godoc.org/h12.me/gspec?status.png&#34; alt=&#34;GoDoc&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;GSpec is an &lt;em&gt;expressive, reliable, concurrent and extensible&lt;/em&gt; Go test framework
-that makes it productive to organize and verify the mind model of software.
-
-* &lt;em&gt;Expressive&lt;/em&gt;: a complete runnable specification can be organized via both BDD
-                and table driven styles.
-* &lt;em&gt;Reliable&lt;/em&gt;:   the implementation has minimal footprint and is tested with 100%
-                coverage.
-* &lt;em&gt;Concurrent&lt;/em&gt;: test cases can be executed concurrently or sequentially.
-* &lt;em&gt;Extensible&lt;/em&gt;: customizable BDD cue words, expectations and test reporters.
-* &lt;em&gt;Compatible&lt;/em&gt;: &amp;ldquo;go test&amp;rdquo; is sufficient but not mandatory to run GSpec tests.&lt;/p&gt;
-
-&lt;h2 id=&#34;quick-start&#34;&gt;Quick start&lt;/h2&gt;
-
-&lt;h3 id=&#34;get-gspec&#34;&gt;Get GSpec&lt;/h3&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;go get -u -f h12.me/gspec
-go test h12.me/gspec/...
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h3 id=&#34;write-tests-with-gspec&#34;&gt;Write tests with GSpec&lt;/h3&gt;
-
-&lt;p&gt;According to the &lt;a href=&#34;http://golang.org/doc/code.html#Testing&#34;&gt;convention of Go&lt;/a&gt;,
-write GSpec tests in file xxx_test.go to test code in xxx.go.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-go&#34;&gt;import (
-	&amp;quot;fmt&amp;quot;
-
-	&amp;quot;h12.me/gspec&amp;quot;
-)
-
-// Only one suite.Add is needed for each xxx_test.go file.
-var _ = gspec.Add(func(s gspec.S) {
-	// BDD cue word is customizible.
-	describe, given, when, it := s.Alias(&amp;quot;describe&amp;quot;), s.Alias(&amp;quot;given&amp;quot;), s.Alias(&amp;quot;when&amp;quot;), s.Alias(&amp;quot;it&amp;quot;)
-	// expectation cue word is customizible too.
-	expect := gspec.Alias(s.FailNow)
-
-	// A BDD example.
-	describe(&amp;quot;an integer i&amp;quot;, func() {
-		// setup
-		i := 2
-		defer func() {
-			// teardown (if any)
-		}()
-		given(&amp;quot;another integer j&amp;quot;, func() {
-			j := 3
-			when(&amp;quot;j is added to i&amp;quot;, func() {
-				i += j
-				it(&amp;quot;should become the sum of original i and j&amp;quot;, func() {
-					expect(i).Equal(5) // a passing case
-				})
-			})
-			when(&amp;quot;j is minused from i&amp;quot;, func() {
-				i -= j
-				it(&amp;quot;should become the difference of j minus i&amp;quot;, func() {
-					expect(i).Equal(4) // a failing case
-				})
-			})
-			when(&amp;quot;j is multiplied to i&amp;quot;, nil) // a pending case
-		})
-	})
-
-	// A table-driven example.
-	testcase := s.Alias(&amp;quot;testcase&amp;quot;)
-	describe(&amp;quot;integer summation&amp;quot;, func() {
-		for _, c := range []struct{ i, j, sum int }{
-			{1, 2, 3}, // a passing case
-			{1, 1, 0}, // a failing case
-		} {
-			testcase(fmt.Sprintf(`%d + %d = %d`, c.i, c.j, c.sum), func() {
-				expect(c.i + c.j).Equal(c.sum)
-			})
-		}
-	})
-})
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Write the following go test function for only once in any test file within the
-package (e.g. all_test.go).&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-go&#34;&gt;import (
-	&amp;quot;testing&amp;quot;
-	&amp;quot;h12.me/gspec&amp;quot;
-)
-
-// Defined only once within a package.
-func TestAll(t *testing.T) {
-	gspec.Test(t)
-}
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h3 id=&#34;run-tests-with-go-test&#34;&gt;Run tests with &amp;ldquo;go test&amp;rdquo;&lt;/h3&gt;
-
-&lt;p&gt;Run all the tests concurrently (sequencially by default) and display errors.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;go test -concurrent
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Run all the tests and view the complete specification.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;go test -v
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Run only a failing test case (even it is an entry in the driven table):&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;go test -focus 1/1
-&lt;/code&gt;&lt;/pre&gt;</description>
+&lt;a href=&#34;https://godoc.org/h12.me/gspec&#34;&gt;&lt;img src=&#34;https://godoc.org/h12.me/gspec?status.png&#34; alt=&#34;GoDoc&#34; /&gt;&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>html-query: a fluent and functional approach to querying HTML DOM</title>
+      <link>http://h12.me/project/html-query/</link>
+      <pubDate>Mon, 20 Jan 2014 01:49:08 +0000</pubDate>
+      
+      <guid>http://h12.me/project/html-query/</guid>
+      <description>html-query is a Go package that provides a fluent and functional interface for querying HTML DOM. It is based on go.net/html.
+Examples  A simple example (under &amp;ldquo;examples&amp;rdquo; directory)
+r := get(`http://blog.golang.org/index`) defer r.Close() root, err := query.Parse(r) checkError(err) root.Div(Id(&amp;quot;content&amp;quot;)).Children(Class(&amp;quot;blogtitle&amp;quot;)).For(func(item *query.Node) { href := item.Ahref().Href() date := item.Span(Class(&amp;quot;date&amp;quot;)).Text() tags := item.Span(Class(&amp;quot;tags&amp;quot;)).Text() // ...... })  Generator of html-query (under &amp;ldquo;gen&amp;rdquo; directory)
+  A large part of html-query is automatically generated from HTML spec.</description>
+    </item>
+    
+    <item>
+      <title>Cwrap: wraps C libraries in Go</title>
+      <link>http://h12.me/project/cwrap/</link>
+      <pubDate>Wed, 01 Jan 2014 01:30:04 +0000</pubDate>
+      
+      <guid>http://h12.me/project/cwrap/</guid>
+      <description>Cwrap is a Go wrapper generator for C libraries.
+Features  No Cgo types exposed out of the wrapper package, and uses as less allocation/copy as possible. C name prefix mapped to Go packages, and a wrapper package can import another wrapper package. Follows Go naming conventions. C union. Use Go language features when possible:  string and bool. Multiple return values. Slice, slice of slice and slice of string.</description>
+    </item>
+    
+    <item>
+      <title>SOCKS: a SOCKS Proxy Package for Go</title>
+      <link>http://h12.me/project/socks/</link>
+      <pubDate>Wed, 01 Aug 2012 23:57:54 +0000</pubDate>
+      
+      <guid>http://h12.me/project/socks/</guid>
+      <description>SOCKS is a SOCKS4, SOCKS4A and SOCKS5 proxy package for Go.
+Quick Start Get the package go get -u &amp;quot;h12.me/socks&amp;quot;  Import the package import &amp;quot;h12.me/socks&amp;quot;  Create a SOCKS proxy dialing function dialSocksProxy := socks.DialSocksProxy(socks.SOCKS5, &amp;quot;127.0.0.1:1080&amp;quot;) tr := &amp;amp;http.Transport{Dial: dialSocksProxy} httpClient := &amp;amp;http.Client{Transport: tr}  Alternatives http://code.google.com/p/go/source/browse/?repo=net#hg%2Fproxy</description>
     </item>
     
   </channel>

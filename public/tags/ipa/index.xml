@@ -2,12 +2,15 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Ipa on h12.me</title>
-    <link>http://h12.me/tags/ipa/index.xml</link>
+    <link>http://h12.me/tags/ipa/</link>
     <description>Recent content in Ipa on h12.me</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>Copyright (c) 2012-2018, Hǎiliàng Wáng; all rights reserved.</copyright>
-    <atom:link href="http://h12.me/tags/ipa/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 30 Jun 2015 12:43:19 +0800</lastBuildDate>
+    
+	<atom:link href="http://h12.me/tags/ipa/index.xml" rel="self" type="application/rss+xml" />
+    
     
     <item>
       <title>Phonetic Notations</title>
@@ -15,16 +18,8 @@
       <pubDate>Tue, 30 Jun 2015 12:43:19 +0800</pubDate>
       
       <guid>http://h12.me/note/phonetic-notations/</guid>
-      <description>
-
-&lt;h2 id=&#34;google-dictionary&#34;&gt;Google Dictionary&lt;/h2&gt;
-
-&lt;p&gt;Google dictionary uses a phonetic notation same as &lt;a href=&#34;http://en.wikipedia.org/wiki/Pronunciation_respelling_for_English&#34;&gt;NORD (New Oxford American Dictionary)&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;To figure out an unknown phonetic notation, the simple way is to look up a few words that you know how to pronounce:
-church, hat, which, judge, game, thing, ship, thin, this, yes, pleasure
-cat, pay, care, father, arm, let, see, here, city, my, pot, no, caught, war, force, boy, put, tour, boot, out, cut, word, item, rabbit, winner, pupil&lt;/p&gt;
-</description>
+      <description>Google Dictionary Google dictionary uses a phonetic notation same as NORD (New Oxford American Dictionary).
+To figure out an unknown phonetic notation, the simple way is to look up a few words that you know how to pronounce: church, hat, which, judge, game, thing, ship, thin, this, yes, pleasure cat, pay, care, father, arm, let, see, here, city, my, pot, no, caught, war, force, boy, put, tour, boot, out, cut, word, item, rabbit, winner, pupil</description>
     </item>
     
   </channel>

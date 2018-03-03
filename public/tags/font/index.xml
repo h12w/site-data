@@ -2,12 +2,15 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Font on h12.me</title>
-    <link>http://h12.me/tags/font/index.xml</link>
+    <link>http://h12.me/tags/font/</link>
     <description>Recent content in Font on h12.me</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>Copyright (c) 2012-2018, Hǎiliàng Wáng; all rights reserved.</copyright>
-    <atom:link href="http://h12.me/tags/font/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 17 Jul 2014 03:19:18 +0000</lastBuildDate>
+    
+	<atom:link href="http://h12.me/tags/font/index.xml" rel="self" type="application/rss+xml" />
+    
     
     <item>
       <title>Installing Source Code Pro</title>
@@ -15,10 +18,8 @@
       <pubDate>Thu, 17 Jul 2014 03:19:18 +0000</pubDate>
       
       <guid>http://h12.me/note/install-scp/</guid>
-      <description>&lt;p&gt;&lt;em&gt;Source Code Pro&lt;/em&gt; is one of the best monospace fonts and it is &lt;a href=&#34;https://github.com/adobe/source-code-pro&#34;&gt;open sourced&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;Here is the &lt;a href=&#34;https://github.com/h12w/linux/blob/master/install_scp.sh&#34;&gt;script&lt;/a&gt; for installing it on Linux.&lt;/p&gt;
-</description>
+      <description>Source Code Pro is one of the best monospace fonts and it is open sourced.
+Here is the script for installing it on Linux.</description>
     </item>
     
     <item>
@@ -27,13 +28,8 @@
       <pubDate>Wed, 09 Jul 2014 05:42:42 +0000</pubDate>
       
       <guid>http://h12.me/note/ugly-font/</guid>
-      <description>&lt;p&gt;Windows needs hand-tuned hinting which is missing in many web fonts. To solve this
-problem, there is a tool called &lt;a href=&#34;http://www.freetype.org/ttfautohint/index.html&#34;&gt;ttfautohint&lt;/a&gt;
-which can automatically add hinting to font files.&lt;/p&gt;
-
-&lt;p&gt;There is a &lt;a href=&#34;http://pixelsvsbytes.com/blog/2013/11/how-to-create-perfect-web-fonts-in-3-steps/&#34;&gt;tutorial&lt;/a&gt;,
-and an online tool called &lt;a href=&#34;http://fontie.flowyapps.com/&#34;&gt;Fontie&lt;/a&gt;.&lt;/p&gt;
-</description>
+      <description>Windows needs hand-tuned hinting which is missing in many web fonts. To solve this problem, there is a tool called ttfautohint which can automatically add hinting to font files.
+There is a tutorial, and an online tool called Fontie.</description>
     </item>
     
     <item>
@@ -42,21 +38,7 @@ and an online tool called &lt;a href=&#34;http://fontie.flowyapps.com/&#34;&gt;F
       <pubDate>Tue, 01 Jul 2014 08:39:42 +0000</pubDate>
       
       <guid>http://h12.me/note/narrow-fonts/</guid>
-      <description>&lt;ul&gt;
-&lt;li&gt;Economica&lt;/li&gt;
-&lt;li&gt;Fjalla One&lt;/li&gt;
-&lt;li&gt;League Gothic&lt;/li&gt;
-&lt;li&gt;Medula One&lt;/li&gt;
-&lt;li&gt;Open Sans Condensed&lt;/li&gt;
-&lt;li&gt;Oswald&lt;/li&gt;
-&lt;li&gt;Pathway Gothic One&lt;/li&gt;
-&lt;li&gt;PT Sans Narrow&lt;/li&gt;
-&lt;li&gt;Rationale&lt;/li&gt;
-&lt;li&gt;Six Caps&lt;/li&gt;
-&lt;li&gt;Tulpen One&lt;/li&gt;
-&lt;li&gt;Yanone Kaffeesatz&lt;/li&gt;
-&lt;/ul&gt;
-</description>
+      <description> Economica Fjalla One League Gothic Medula One Open Sans Condensed Oswald Pathway Gothic One PT Sans Narrow Rationale Six Caps Tulpen One Yanone Kaffeesatz  </description>
     </item>
     
     <item>
@@ -65,13 +47,7 @@ and an online tool called &lt;a href=&#34;http://fontie.flowyapps.com/&#34;&gt;F
       <pubDate>Sun, 22 Jun 2014 14:09:45 +0000</pubDate>
       
       <guid>http://h12.me/note/font-links/</guid>
-      <description>&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;http://www.snapily.com/blog/the-best-font-styles-for-blogging/&#34;&gt;The Best Font Styles for Blogging&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;http://www.bigbrandsystem.com/best-font-size/&#34;&gt;Size Doesn’t Matter, and What Does&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;http://blog.mailchimp.com/using-media-queries-to-improve-readability/&#34;&gt;Using Media Queries To Improve Readability&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;http://www.sitepoint.com/eight-definitive-font-stacks/&#34;&gt;8 Definitive Web Font Stacks&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-</description>
+      <description> The Best Font Styles for Blogging Size Doesn’t Matter, and What Does Using Media Queries To Improve Readability 8 Definitive Web Font Stacks  </description>
     </item>
     
   </channel>

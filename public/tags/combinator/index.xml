@@ -2,12 +2,15 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Combinator on h12.me</title>
-    <link>http://h12.me/tags/combinator/index.xml</link>
+    <link>http://h12.me/tags/combinator/</link>
     <description>Recent content in Combinator on h12.me</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>Copyright (c) 2012-2018, Hǎiliàng Wáng; all rights reserved.</copyright>
-    <atom:link href="http://h12.me/tags/combinator/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 20 Jan 2014 01:49:08 +0000</lastBuildDate>
+    
+	<atom:link href="http://h12.me/tags/combinator/index.xml" rel="self" type="application/rss+xml" />
+    
     
     <item>
       <title>html-query: a fluent and functional approach to querying HTML DOM</title>
@@ -15,117 +18,10 @@
       <pubDate>Mon, 20 Jan 2014 01:49:08 +0000</pubDate>
       
       <guid>http://h12.me/project/html-query/</guid>
-      <description>
-
-&lt;p&gt;html-query is a Go package that provides a fluent and functional interface for
-querying HTML DOM. It is based on &lt;a href=&#34;http://code.google.com/p/go.net/html&#34;&gt;go.net/html&lt;/a&gt;.&lt;/p&gt;
-
-&lt;h2 id=&#34;examples&#34;&gt;Examples&lt;/h2&gt;
-
-&lt;ol&gt;
-&lt;li&gt;&lt;p&gt;A simple example (under &amp;ldquo;examples&amp;rdquo; directory)&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-go&#34;&gt;r := get(`http://blog.golang.org/index`)
-defer r.Close()
-root, err := query.Parse(r)
-checkError(err)
-root.Div(Id(&amp;quot;content&amp;quot;)).Children(Class(&amp;quot;blogtitle&amp;quot;)).For(func(item *query.Node) {
-    href := item.Ahref().Href()
-    date := item.Span(Class(&amp;quot;date&amp;quot;)).Text()
-    tags := item.Span(Class(&amp;quot;tags&amp;quot;)).Text()
-    // ......
-})
-&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;Generator of html-query (under &amp;ldquo;gen&amp;rdquo; directory)&lt;/p&gt;&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;A large part of html-query is automatically generated from HTML spec. The
-spec is in HTML format, so the generator parses it using html-query itself.&lt;/p&gt;
-
-&lt;h2 id=&#34;design&#34;&gt;Design&lt;/h2&gt;
-
-&lt;p&gt;Here is a simple explanation of the design of html-query.&lt;/p&gt;
-
-&lt;h3 id=&#34;functional-query-expressions&#34;&gt;Functional query expressions&lt;/h3&gt;
-
-&lt;p&gt;All functional definitions are defined in html-query/expr package.&lt;/p&gt;
-
-&lt;ol&gt;
-&lt;li&gt;&lt;p&gt;Checker and checker composition&lt;br /&gt;
-A checker is a function that accept and conditionally returns a *html.Node.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-go&#34;&gt;type Checker func(*html.Node) *html.Node
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Here are some checker examples:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;Id(&amp;quot;id1&amp;quot;)
-Class(&amp;quot;c1&amp;quot;)
-Div
-Abbr
-H1
-H2
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Checkers can be combined as boolean expressions:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-go&#34;&gt;And(Id(&amp;quot;id1&amp;quot;), Class(&amp;quot;c1&amp;quot;))
-Or(Class(&amp;quot;c1&amp;quot;), Class(&amp;quot;c2&amp;quot;))
-And(Class(&amp;quot;c1&amp;quot;), Not(Class(&amp;quot;c2&amp;quot;)))
-&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;Checker builder&lt;br /&gt;
-A checker builder is a function that returns a checker. &amp;ldquo;Id&amp;rdquo;, &amp;ldquo;Class&amp;rdquo;, &amp;ldquo;And&amp;rdquo;,
-&amp;ldquo;Or&amp;rdquo;, &amp;ldquo;Not&amp;rdquo; shown above are all checker builders. There are also some checker
-builder builder (function that returns a checker builder) defined in
-html-query when needed.&lt;/p&gt;&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;h3 id=&#34;fluent-interface&#34;&gt;Fluent interface&lt;/h3&gt;
-
-&lt;p&gt;Fluent interface (&lt;a href=&#34;http://en.wikipedia.org/wiki/Fluent_interface&#34;&gt;http://en.wikipedia.org/wiki/Fluent_interface&lt;/a&gt;) are defined in
-html-query package.&lt;/p&gt;
-
-&lt;ol&gt;
-&lt;li&gt;&lt;p&gt;Root node&lt;br /&gt;
-Function Parse returns the root node of an html document.&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;Node finder&lt;br /&gt;
-Method Node.Find implements a BFS search for a node, e.g.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-go&#34;&gt;node.Find(Div, Class(&amp;quot;id1&amp;quot;))
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;But usually you can write the short form:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-go&#34;&gt;node.Div(Class(&amp;quot;id1&amp;quot;))
-&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;Attribute getter
-Method Node.Attr can be used to get the value (or a regular expression
-submatch of the value) of a node, e.g.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-go&#34;&gt;node.Attr(&amp;quot;Id&amp;quot;)
-node.Attr(&amp;quot;href&amp;quot;, &amp;quot;\(.*)&amp;quot;)
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;But usually you can write the short form:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-go&#34;&gt;node.Id()
-node.Href(&amp;quot;\(.*)&amp;quot;)
-&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;Node iterator&lt;br /&gt;
-Method Node.Children and Node.Descendants each returns a node iterator
-(NodeIter). Method NodeIter.For can be used to loop through these nodes.&lt;/p&gt;&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;h2 id=&#34;alternative&#34;&gt;Alternative&lt;/h2&gt;
-
-&lt;p&gt;If you prefer a jquery like DSL rather than functional way, you might want to
-try &lt;a href=&#34;https://github.com/PuerkitoBio/goquery&#34;&gt;goquery&lt;/a&gt;.&lt;/p&gt;
-</description>
+      <description>html-query is a Go package that provides a fluent and functional interface for querying HTML DOM. It is based on go.net/html.
+Examples  A simple example (under &amp;ldquo;examples&amp;rdquo; directory)
+r := get(`http://blog.golang.org/index`) defer r.Close() root, err := query.Parse(r) checkError(err) root.Div(Id(&amp;quot;content&amp;quot;)).Children(Class(&amp;quot;blogtitle&amp;quot;)).For(func(item *query.Node) { href := item.Ahref().Href() date := item.Span(Class(&amp;quot;date&amp;quot;)).Text() tags := item.Span(Class(&amp;quot;tags&amp;quot;)).Text() // ...... })  Generator of html-query (under &amp;ldquo;gen&amp;rdquo; directory)
+  A large part of html-query is automatically generated from HTML spec.</description>
     </item>
     
   </channel>

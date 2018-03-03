@@ -2,12 +2,15 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Proxy on h12.me</title>
-    <link>http://h12.me/tags/proxy/index.xml</link>
+    <link>http://h12.me/tags/proxy/</link>
     <description>Recent content in Proxy on h12.me</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>Copyright (c) 2012-2018, Hǎiliàng Wáng; all rights reserved.</copyright>
-    <atom:link href="http://h12.me/tags/proxy/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 08 Jul 2015 07:58:34 +0000</lastBuildDate>
+    
+	<atom:link href="http://h12.me/tags/proxy/index.xml" rel="self" type="application/rss+xml" />
+    
     
     <item>
       <title>A Comprehensive Note about Proxy Settings</title>
@@ -15,46 +18,10 @@
       <pubDate>Wed, 08 Jul 2015 07:58:34 +0000</pubDate>
       
       <guid>http://h12.me/note/proxy-notes/</guid>
-      <description>
-
-&lt;h2 id=&#34;git&#34;&gt;Git&lt;/h2&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;&amp;gt; cat ~/.gitconfig
-[http]
-	proxy = socks5://[host]:[port]
-[https]
-	proxy = socks5://[host]:[port]
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h2 id=&#34;curl-homebrew&#34;&gt;Curl (Homebrew)&lt;/h2&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;&amp;gt; cat ~/.curlrc
-socks5 = &amp;quot;[host]:[port]&amp;quot;
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h2 id=&#34;docker-pull&#34;&gt;Docker pull&lt;/h2&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-fish&#34;&gt;env HTTP_PROXY=http://xxx docker pull yyy
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h2 id=&#34;gae&#34;&gt;GAE&lt;/h2&gt;
-
-&lt;ol&gt;
-&lt;li&gt;&lt;p&gt;Set proxy&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;export HTTP_PROXY http://[host]:[port]
-export HTTPS_PROXY http://[host]:[port]
-&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;Delete cacerts.txt under GAE SDK installation to disable SSL verification (
-make sure the proxy is safe before this step).&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;Deploy.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;appcfg.py . --email=[address] --passin
-&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
-&lt;/ol&gt;
-</description>
+      <description> Git &amp;gt; cat ~/.gitconfig [http] proxy = socks5://[host]:[port] [https] proxy = socks5://[host]:[port]  Curl (Homebrew) &amp;gt; cat ~/.curlrc socks5 = &amp;quot;[host]:[port]&amp;quot;  Docker pull env HTTP_PROXY=http://xxx docker pull yyy  GAE  Set proxy
+export HTTP_PROXY http://[host]:[port] export HTTPS_PROXY http://[host]:[port]  Delete cacerts.txt under GAE SDK installation to disable SSL verification ( make sure the proxy is safe before this step).
+ Deploy.
+appcfg.py . --email=[address] --passin   </description>
     </item>
     
     <item>
@@ -63,31 +30,9 @@ make sure the proxy is safe before this step).&lt;/p&gt;&lt;/li&gt;
       <pubDate>Wed, 06 May 2015 12:01:11 +0800</pubDate>
       
       <guid>http://h12.me/note/go-get-behind-proxy/</guid>
-      <description>
-
-&lt;h2 id=&#34;proxy-for-go-get&#34;&gt;Proxy for &amp;ldquo;go get&amp;rdquo;&lt;/h2&gt;
-
-&lt;pre&gt;&lt;code&gt;https_proxy=http://user:pass@proxy_host:port go get ...
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h2 id=&#34;proxy-for-git&#34;&gt;Proxy for Git&lt;/h2&gt;
-
-&lt;p&gt;In &lt;code&gt;$HOME/.gitconfig&lt;/code&gt;:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;[https]
-	proxy = proxy_url
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h2 id=&#34;proxy-for-mercurial&#34;&gt;Proxy for Mercurial&lt;/h2&gt;
-
-&lt;p&gt;In &lt;code&gt;$HOME/.hgrc&lt;/code&gt;:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;[http_proxy]
-host = host:port
-user = ...
-passwd = ...
-&lt;/code&gt;&lt;/pre&gt;
-</description>
+      <description> Proxy for &amp;ldquo;go get&amp;rdquo; https_proxy=http://user:pass@proxy_host:port go get ...  Proxy for Git In $HOME/.gitconfig:
+[https] proxy = proxy_url  Proxy for Mercurial In $HOME/.hgrc:
+[http_proxy] host = host:port user = ... passwd = ...  </description>
     </item>
     
   </channel>

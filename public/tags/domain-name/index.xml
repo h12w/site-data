@@ -2,12 +2,15 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Domain Name on h12.me</title>
-    <link>http://h12.me/tags/domain-name/index.xml</link>
+    <link>http://h12.me/tags/domain-name/</link>
     <description>Recent content in Domain Name on h12.me</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>Copyright (c) 2012-2018, Hǎiliàng Wáng; all rights reserved.</copyright>
-    <atom:link href="http://h12.me/tags/domain-name/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 16 Dec 2014 09:43:40 +0000</lastBuildDate>
+    
+	<atom:link href="http://h12.me/tags/domain-name/index.xml" rel="self" type="application/rss+xml" />
+    
     
     <item>
       <title>A Shorter Domain Name</title>
@@ -15,20 +18,8 @@
       <pubDate>Tue, 16 Dec 2014 09:43:40 +0000</pubDate>
       
       <guid>http://h12.me/note/new-domain-h12/</guid>
-      <description>&lt;p&gt;This year, I decided not to renewal the previous domain name (hailiang.ws) last
-year, but to register a shorter one. There are two reasons:&lt;/p&gt;
-
-&lt;ol&gt;
-&lt;li&gt;Both the site URL and the email address will be cleaner.&lt;/li&gt;
-&lt;li&gt;A more friendly Go import path will be possible for my repositories on Github.&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;After comparing various choices on major domain providers, I chose &lt;code&gt;h12.me&lt;/code&gt; as
-the new domain. It is the shortest but still meaningful domain that I can afford.
-&lt;code&gt;H&lt;/code&gt; is the initial letter of my given name, &lt;code&gt;12&lt;/code&gt; is simply the number of letters
-of my full name, and &lt;code&gt;.me&lt;/code&gt; is a top level domain quite suitable for a personal
-website.&lt;/p&gt;
-</description>
+      <description>This year, I decided not to renewal the previous domain name (hailiang.ws) last year, but to register a shorter one. There are two reasons:
+ Both the site URL and the email address will be cleaner. A more friendly Go import path will be possible for my repositories on Github.  After comparing various choices on major domain providers, I chose h12.me as the new domain. It is the shortest but still meaningful domain that I can afford.</description>
     </item>
     
   </channel>

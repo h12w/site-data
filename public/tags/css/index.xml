@@ -2,12 +2,15 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Css on h12.me</title>
-    <link>http://h12.me/tags/css/index.xml</link>
+    <link>http://h12.me/tags/css/</link>
     <description>Recent content in Css on h12.me</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>Copyright (c) 2012-2018, Hǎiliàng Wáng; all rights reserved.</copyright>
-    <atom:link href="http://h12.me/tags/css/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 05 Sep 2016 10:30:49 +0800</lastBuildDate>
+    
+	<atom:link href="http://h12.me/tags/css/index.xml" rel="self" type="application/rss+xml" />
+    
     
     <item>
       <title>Making Code Block Wrap in Jira</title>
@@ -15,17 +18,9 @@
       <pubDate>Mon, 05 Sep 2016 10:30:49 +0800</pubDate>
       
       <guid>http://h12.me/note/make-jira-code-wrap/</guid>
-      <description>&lt;p&gt;It is a hack.&lt;/p&gt;
-
-&lt;p&gt;Set Jira Administration -&amp;gt; System -&amp;gt; Announcement Banner -&amp;gt; Announcement:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-css&#34;&gt;&amp;lt;style type=&amp;quot;text/css&amp;quot;&amp;gt;
-pre {
-    white-space: pre-wrap!important;
-}
-&amp;lt;/style&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;
-</description>
+      <description>It is a hack.
+Set Jira Administration -&amp;gt; System -&amp;gt; Announcement Banner -&amp;gt; Announcement:
+&amp;lt;style type=&amp;quot;text/css&amp;quot;&amp;gt; pre { white-space: pre-wrap!important; } &amp;lt;/style&amp;gt;  </description>
     </item>
     
     <item>
@@ -34,26 +29,9 @@ pre {
       <pubDate>Thu, 17 Jul 2014 02:29:57 +0000</pubDate>
       
       <guid>http://h12.me/note/install-susy/</guid>
-      <description>&lt;p&gt;The script:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;sudo apt-get install ruby
-sudo apt-get install ruby-dev
-sudo gem install susy -V
-sudo gem install compass --pre -V
-sudo gem lnstall breakpoint -V
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Notes:&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;The current version of Susy uses a higher version of Sass than Compass, so the
-corresponding Compass version has to be a prerelease (&amp;ndash;pre).&lt;/li&gt;
-&lt;li&gt;The installing process is slow and it feels better to print it out (-V).&lt;/li&gt;
-&lt;li&gt;You may have to run &amp;ldquo;compass watch&amp;rdquo; with sudo (&lt;a href=&#34;https://github.com/Compass/compass/issues/1497&#34;&gt;issue 1497&lt;/a&gt;).&lt;/li&gt;
-&lt;li&gt;An alternative &lt;a href=&#34;https://ruby.taobao.org/&#34;&gt;RubyGems source&lt;/a&gt; that is close to
-your location might help.&lt;/li&gt;
-&lt;/ul&gt;
-</description>
+      <description>The script:
+sudo apt-get install ruby sudo apt-get install ruby-dev sudo gem install susy -V sudo gem install compass --pre -V sudo gem lnstall breakpoint -V  Notes:
+ The current version of Susy uses a higher version of Sass than Compass, so the corresponding Compass version has to be a prerelease (&amp;ndash;pre). The installing process is slow and it feels better to print it out (-V). You may have to run &amp;ldquo;compass watch&amp;rdquo; with sudo (issue 1497).</description>
     </item>
     
   </channel>

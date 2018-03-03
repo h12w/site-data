@@ -2,12 +2,15 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Custom Domain on h12.me</title>
-    <link>http://h12.me/tags/custom-domain/index.xml</link>
+    <link>http://h12.me/tags/custom-domain/</link>
     <description>Recent content in Custom Domain on h12.me</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>Copyright (c) 2012-2018, Hǎiliàng Wáng; all rights reserved.</copyright>
-    <atom:link href="http://h12.me/tags/custom-domain/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 19 Jan 2015 09:32:04 +0000</lastBuildDate>
+    
+	<atom:link href="http://h12.me/tags/custom-domain/index.xml" rel="self" type="application/rss+xml" />
+    
     
     <item>
       <title>How to configure a custom domain name in GAE?</title>
@@ -15,25 +18,9 @@
       <pubDate>Mon, 19 Jan 2015 09:32:04 +0000</pubDate>
       
       <guid>http://h12.me/note/gae-custom-domain/</guid>
-      <description>&lt;p&gt;Steps:&lt;/p&gt;
-
-&lt;ol&gt;
-&lt;li&gt;Visit &lt;a href=&#34;https://console.developers.google.com&#34;&gt;Developers Console&lt;/a&gt;.&lt;/li&gt;
-&lt;li&gt;In your project: Compute -&amp;gt; App Engine -&amp;gt; Settings.&lt;/li&gt;
-&lt;li&gt;On the tab labelled CUSTOM DOMAINS, you can verify your domain and assign it
-and/or its subdomains to your GAE project.&lt;/li&gt;
-&lt;li&gt;Add the DNS settings provided by Google into the DNS server of your domain
-provider.&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;Notes:&lt;/p&gt;
-
-&lt;ol&gt;
-&lt;li&gt;Only HTTP is supported, HTTPS is not.&lt;/li&gt;
-&lt;li&gt;It will not work if you only modify the DNS record without actually assigning
-the custom domain in the Developer Console.&lt;/li&gt;
-&lt;/ol&gt;
-</description>
+      <description>Steps:
+ Visit Developers Console. In your project: Compute -&amp;gt; App Engine -&amp;gt; Settings. On the tab labelled CUSTOM DOMAINS, you can verify your domain and assign it and/or its subdomains to your GAE project. Add the DNS settings provided by Google into the DNS server of your domain provider.  Notes:
+ Only HTTP is supported, HTTPS is not. It will not work if you only modify the DNS record without actually assigning the custom domain in the Developer Console.</description>
     </item>
     
   </channel>

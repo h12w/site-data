@@ -2,12 +2,15 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Mobi on h12.me</title>
-    <link>http://h12.me/tags/mobi/index.xml</link>
+    <link>http://h12.me/tags/mobi/</link>
     <description>Recent content in Mobi on h12.me</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>Copyright (c) 2012-2018, Hǎiliàng Wáng; all rights reserved.</copyright>
-    <atom:link href="http://h12.me/tags/mobi/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 03 Aug 2016 08:51:30 +0800</lastBuildDate>
+    
+	<atom:link href="http://h12.me/tags/mobi/index.xml" rel="self" type="application/rss+xml" />
+    
     
     <item>
       <title>A Note on Mobi Format</title>
@@ -15,11 +18,7 @@
       <pubDate>Wed, 03 Aug 2016 08:51:30 +0800</pubDate>
       
       <guid>http://h12.me/note/mobi/</guid>
-      <description>&lt;ul&gt;
-&lt;li&gt;Mobi Format Description: &lt;a href=&#34;http://wiki.mobileread.com/wiki/MOBI&#34;&gt;http://wiki.mobileread.com/wiki/MOBI&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Python lib: &lt;a href=&#34;https://github.com/kroo/mobi-python&#34;&gt;https://github.com/kroo/mobi-python&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-</description>
+      <description> Mobi Format Description: http://wiki.mobileread.com/wiki/MOBI Python lib: https://github.com/kroo/mobi-python  </description>
     </item>
     
     <item>
@@ -28,27 +27,10 @@
       <pubDate>Thu, 04 Jun 2015 14:19:38 +0800</pubDate>
       
       <guid>http://h12.me/note/ebook-tools/</guid>
-      <description>&lt;ul&gt;
-&lt;li&gt;Ebook manager: &lt;a href=&#34;http://calibre-ebook.com/&#34;&gt;Calibre&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Kindle PDF optimizer: &lt;a href=&#34;http://www.willus.com/k2pdfopt/&#34;&gt;k2pdfopt&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;PDF Border Cropper &lt;a href=&#34;http://sourceforge.net/projects/briss/&#34;&gt;Briss&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;CHM File Extractor &lt;a href=&#34;https://github.com/dottedmag/archmage&#34;&gt;archmage&lt;/a&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;PDF editing &lt;a href=&#34;http://xournal.sourceforge.net&#34;&gt;Xournal&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;convert images to PDF&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;	sudo apt-get install imagemagick
-	convert *.jpg pictures.pdf
-&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;convert between different formats:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;    sudo apt-get install calibre
-    ebook-convert xxx.mobi xxx.txt --unsmarten-punctuation
-&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
-&lt;/ul&gt;
-</description>
+      <description> Ebook manager: Calibre Kindle PDF optimizer: k2pdfopt PDF Border Cropper Briss CHM File Extractor archmage PDF editing Xournal
+ convert images to PDF
+sudo apt-get install imagemagick convert *.jpg pictures.pdf  convert between different formats:
+sudo apt-get install calibre ebook-convert xxx.mobi xxx.txt --unsmarten-punctuation   </description>
     </item>
     
   </channel>

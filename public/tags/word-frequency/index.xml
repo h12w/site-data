@@ -2,12 +2,15 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Word Frequency on h12.me</title>
-    <link>http://h12.me/tags/word-frequency/index.xml</link>
+    <link>http://h12.me/tags/word-frequency/</link>
     <description>Recent content in Word Frequency on h12.me</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>Copyright (c) 2012-2018, Hǎiliàng Wáng; all rights reserved.</copyright>
-    <atom:link href="http://h12.me/tags/word-frequency/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 09 Aug 2016 18:31:04 +0800</lastBuildDate>
+    
+	<atom:link href="http://h12.me/tags/word-frequency/index.xml" rel="self" type="application/rss+xml" />
+    
     
     <item>
       <title>Counting Word Frequencies in One Line</title>
@@ -15,37 +18,7 @@
       <pubDate>Tue, 09 Aug 2016 18:31:04 +0800</pubDate>
       
       <guid>http://h12.me/note/count-word-freq/</guid>
-      <description>&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;cat book.txt | \
-tr &#39;!()[]{};:&amp;quot;,&amp;lt;.&amp;gt;?“”‘’*/\r&#39; &#39; &#39; | \
-tr &#39; &#39; &#39;\n&#39; | \
-grep -a -P &amp;quot;^[\p{L}\p{N}\-&#39;]+\$&amp;quot; | \
-grep -a -P -v &amp;quot;^[\p{N}\-&#39;]+\$&amp;quot; | \
-sed &amp;quot;s/&#39;s\$//&amp;quot; | \
-sed &amp;quot;s/^&#39;//&amp;quot; | sed &amp;quot;s/&#39;\$//&amp;quot; &amp;gt; words.txt
-
-cat words.txt | \
-sort | uniq -c | \
-sort -nr | \
-cut -c9- &amp;gt; words_desc.txt
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;ul&gt;
-&lt;li&gt;replace punctuations with space; remove &lt;code&gt;\r&lt;/code&gt; from `\r\n&amp;rsquo;&lt;/li&gt;
-&lt;li&gt;one word per line&lt;/li&gt;
-&lt;li&gt;keep only words composed of unicode letters, numbers, hyphen and apostrophe&lt;/li&gt;
-&lt;li&gt;remove pure numbers&lt;/li&gt;
-&lt;li&gt;remove &amp;rsquo;s&lt;/li&gt;
-&lt;li&gt;remove starting and ending apostrophe&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;output words.txt&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;sort and count unique words&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;sort by freqency in descending order&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;trim the frequency column&lt;/p&gt;&lt;/li&gt;
-&lt;/ul&gt;
-</description>
+      <description>cat book.txt | \ tr &#39;!()[]{};:&amp;quot;,&amp;lt;.&amp;gt;?“”‘’*/\r&#39; &#39; &#39; | \ tr &#39; &#39; &#39;\n&#39; | \ grep -a -P &amp;quot;^[\p{L}\p{N}\-&#39;]+\$&amp;quot; | \ grep -a -P -v &amp;quot;^[\p{N}\-&#39;]+\$&amp;quot; | \ sed &amp;quot;s/&#39;s\$//&amp;quot; | \ sed &amp;quot;s/^&#39;//&amp;quot; | sed &amp;quot;s/&#39;\$//&amp;quot; &amp;gt; words.txt cat words.txt | \ sort | uniq -c | \ sort -nr | \ cut -c9- &amp;gt; words_desc.txt   replace punctuations with space; remove \r from `\r\n&amp;rsquo; one word per line keep only words composed of unicode letters, numbers, hyphen and apostrophe remove pure numbers remove &amp;rsquo;s remove starting and ending apostrophe output words.</description>
     </item>
     
   </channel>

@@ -2,12 +2,15 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Xml on h12.me</title>
-    <link>http://h12.me/tags/xml/index.xml</link>
+    <link>http://h12.me/tags/xml/</link>
     <description>Recent content in Xml on h12.me</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>Copyright (c) 2012-2018, Hǎiliàng Wáng; all rights reserved.</copyright>
-    <atom:link href="http://h12.me/tags/xml/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 01 Feb 2016 18:11:29 +0800</lastBuildDate>
+    
+	<atom:link href="http://h12.me/tags/xml/index.xml" rel="self" type="application/rss+xml" />
+    
     
     <item>
       <title>About Pretty Printing</title>
@@ -15,18 +18,7 @@
       <pubDate>Mon, 01 Feb 2016 18:11:29 +0800</pubDate>
       
       <guid>http://h12.me/note/about-pretty-print/</guid>
-      <description>
-
-&lt;h2 id=&#34;json&#34;&gt;JSON&lt;/h2&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;cat xxx.json | jq .
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h2 id=&#34;xml&#34;&gt;XML&lt;/h2&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;cat xxx.xml | xmllint --format -
-&lt;/code&gt;&lt;/pre&gt;
-</description>
+      <description> JSON cat xxx.json | jq .  XML cat xxx.xml | xmllint --format -  </description>
     </item>
     
     <item>
@@ -35,11 +27,8 @@
       <pubDate>Thu, 23 Apr 2015 15:41:12 +0800</pubDate>
       
       <guid>http://h12.me/note/generate-xsd-from-xml/</guid>
-      <description>&lt;p&gt;&lt;a href=&#34;http://archive.apache.org/dist/xmlbeans/binaries&#34;&gt;Apache XMLBeans&lt;/a&gt; is an old tool but still functioning. Download and uncompress the latest binary release, then run inst2xsd under bin folder (needs JDK).&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;inst2xsd xxx.xml
-&lt;/code&gt;&lt;/pre&gt;
-</description>
+      <description>Apache XMLBeans is an old tool but still functioning. Download and uncompress the latest binary release, then run inst2xsd under bin folder (needs JDK).
+inst2xsd xxx.xml  </description>
     </item>
     
   </channel>

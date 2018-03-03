@@ -2,12 +2,15 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Ssh on h12.me</title>
-    <link>http://h12.me/tags/ssh/index.xml</link>
+    <link>http://h12.me/tags/ssh/</link>
     <description>Recent content in Ssh on h12.me</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>Copyright (c) 2012-2018, Hǎiliàng Wáng; all rights reserved.</copyright>
-    <atom:link href="http://h12.me/tags/ssh/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 28 Apr 2015 10:59:02 +0800</lastBuildDate>
+    
+	<atom:link href="http://h12.me/tags/ssh/index.xml" rel="self" type="application/rss+xml" />
+    
     
     <item>
       <title>Tips on SSH</title>
@@ -15,34 +18,9 @@
       <pubDate>Tue, 28 Apr 2015 10:59:02 +0800</pubDate>
       
       <guid>http://h12.me/note/tips-on-ssh/</guid>
-      <description>
-
-&lt;h2 id=&#34;generate-ssh-keys&#34;&gt;Generate SSH keys&lt;/h2&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;ssh-keygen -C w@h12.me
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h2 id=&#34;authorize-public-key-at-remote-server&#34;&gt;Authorize public key at remote server&lt;/h2&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;ssh-copy-id user@host
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;On Mac OSX, &lt;code&gt;ssh-copy-id&lt;/code&gt; should be installed first.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;brew install ssh-copy-id
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h2 id=&#34;generate-pem&#34;&gt;Generate PEM&lt;/h2&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;ssh-keygen -f ~/.ssh/id_rsa -e -m pem &amp;gt; ~/.ssh/id_rsa.pem
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h2 id=&#34;copy-file-by-base64&#34;&gt;Copy file by base64&lt;/h2&gt;
-
-&lt;p&gt;On remote session, run &lt;code&gt;base64 &amp;lt; myfile&lt;/code&gt; and copy the output.&lt;/p&gt;
-
-&lt;p&gt;On local terminal, run &lt;code&gt;base64 -d &amp;gt; myfile&lt;/code&gt;, paste the content and press &lt;code&gt;ctrl+D&lt;/code&gt;.&lt;/p&gt;
-</description>
+      <description>Generate SSH keys ssh-keygen -C w@h12.me  Authorize public key at remote server ssh-copy-id user@host  On Mac OSX, ssh-copy-id should be installed first.
+brew install ssh-copy-id  Generate PEM ssh-keygen -f ~/.ssh/id_rsa -e -m pem &amp;gt; ~/.ssh/id_rsa.pem  Copy file by base64 On remote session, run base64 &amp;lt; myfile and copy the output.
+On local terminal, run base64 -d &amp;gt; myfile, paste the content and press ctrl+D.</description>
     </item>
     
   </channel>

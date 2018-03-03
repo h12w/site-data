@@ -2,12 +2,15 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Scraping on h12.me</title>
-    <link>http://h12.me/tags/scraping/index.xml</link>
+    <link>http://h12.me/tags/scraping/</link>
     <description>Recent content in Scraping on h12.me</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>Copyright (c) 2012-2018, Hǎiliàng Wáng; all rights reserved.</copyright>
-    <atom:link href="http://h12.me/tags/scraping/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 02 Jun 2014 01:21:00 +0000</lastBuildDate>
+    
+	<atom:link href="http://h12.me/tags/scraping/index.xml" rel="self" type="application/rss+xml" />
+    
     
     <item>
       <title>Getgo: a concurrent, simple and extensible web scraping framework</title>
@@ -15,135 +18,9 @@
       <pubDate>Mon, 02 Jun 2014 01:21:00 +0000</pubDate>
       
       <guid>http://h12.me/project/getgo/</guid>
-      <description>
-
-&lt;p&gt;&lt;a href=&#34;https://godoc.org/github.com/h12w/getgo&#34;&gt;&lt;img src=&#34;https://godoc.org/github.com/h12w/getgo?status.png&#34; alt=&#34;GoDoc&#34; /&gt;&lt;/a&gt;
-&lt;a href=&#34;https://travis-ci.org/h12w/getgo&#34;&gt;&lt;img src=&#34;https://travis-ci.org/h12w/getgo.svg?branch=master&#34; alt=&#34;Build Status&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;Getgo is a concurrent, simple and extensible web scraping framework written in &lt;a href=&#34;http://golang.org&#34;&gt;Go&lt;/a&gt;.&lt;/p&gt;
-
-&lt;h2 id=&#34;quick-start&#34;&gt;Quick start&lt;/h2&gt;
-
-&lt;h3 id=&#34;get-getgo&#34;&gt;Get Getgo&lt;/h3&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;go get -u github.com/h12w/getgo
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h3 id=&#34;define-a-task&#34;&gt;Define a task&lt;/h3&gt;
-
-&lt;p&gt;This example is under the examples/goblog directory. To use Getgo to scrap structured
-data from a web page, just define the structured data as a Go struct (golangBlogEntry),
-and define a corresponding task (golangBlogIndexTask).&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-go&#34;&gt;type golangBlogEntry struct {
-	Title string
-	URL   string
-	Tags  *string
-}
-
-type golangBlogIndexTask struct {
-	// Variables in task URL, e.g. page number
-}
-
-func (t golangBlogIndexTask) Request() *http.Request {
-	return getReq(`http://blog.golang.org/index`)
-}
-
-func (t golangBlogIndexTask) Handle(root *query.Node, s getgo.Storer) (err error) {
-	root.Div(_Id(&amp;quot;content&amp;quot;)).Children(_Class(&amp;quot;blogtitle&amp;quot;)).For(func(item *query.Node) {
-		title := item.Ahref().Text()
-		url := item.Ahref().Href()
-		tags := item.Span(_Class(&amp;quot;tags&amp;quot;)).Text()
-		if url != nil &amp;amp;&amp;amp; title != nil {
-			store(&amp;amp;golangBlogEntry{Title: *title, URL: *url, Tags: tags}, s, &amp;amp;err)
-		}
-	})
-	return
-}
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h3 id=&#34;run-the-task&#34;&gt;Run the task&lt;/h3&gt;
-
-&lt;p&gt;Use util.Run to run the task and print all the result to standard output.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-go&#34;&gt;	util.Run(golangBlogIndexTask{})
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;To store the parsed result to a database, a storage backend satisfying getgo.Tx
-interface should be provided to the getgo.Run method.&lt;/p&gt;
-
-&lt;h2 id=&#34;understand-getgo&#34;&gt;Understand Getgo&lt;/h2&gt;
-
-&lt;p&gt;A getgo.Task is an interface to represent an HTTP crawler task that provides an
-HTTP request and a method to handle the HTTP response.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-go&#34;&gt;type Task interface {
-	Requester
-	Handle(resp *http.Response) error
-}
-
-type Requester interface {
-	Request() *http.Request
-}
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;A getgo.Runner is responsible to run a getgo.Task. There are two concrete runners
-provided: SequentialRunner and ConcurrentRunner.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-go&#34;&gt;type Runner interface {
-	Run(task Task) error // Run runs a task
-	Close()              // Close closes the runner
-}
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;A task that stores data into a storage backend should satisfy getgo.StorableTask
-interface.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-go&#34;&gt;type StorableTask interface {
-	Requester
-	Handle(resp *http.Response, s Storer) error
-}
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;A storage backend is simply an object satisfying getgo.Tx interface.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-go&#34;&gt;type Storer interface {
-	Store(v interface{}) error
-}
-
-type Tx interface {
-	Storer
-	Commit() error
-	Rollback() error
-}
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;See getgo.Run method to understand how a StorableTask is combined with a storage
-backend and adapted to become a normal Task to allow a Runner to run it.&lt;/p&gt;
-
-&lt;p&gt;There are currently a PostgreSQL storage backend provided by Getgo, and it is
-not hard to support more backends (See getgo/db package for details).&lt;/p&gt;
-
-&lt;p&gt;The easier way to define a task for an HTML page is to define a task satisfying
-getgo.HTMLTask rather than getgo.Task, there are adapters to convert internally
-an HTMLTask to a Task so that a Runner can run an HTMLTask. The Handle method of
-HTMLTask provides an already parsed HTML DOM object (by html-query package).&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-go&#34;&gt;type HTMLTask interface {
-	Requester
-	Handle(root *query.Node, s Storer) error
-}
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Similarly, a task for retrieving a JSON page should satisfy getgo.TextTask
-interface. An io.Reader is provided to be decoded by the encoding/json package.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-go&#34;&gt;type TextTask interface {
-	Requester
-	Handle(r io.Reader, s Storer) error
-}
-&lt;/code&gt;&lt;/pre&gt;
-</description>
+      <description>Getgo is a concurrent, simple and extensible web scraping framework written in Go.
+Quick start Get Getgo go get -u github.com/h12w/getgo  Define a task This example is under the examples/goblog directory. To use Getgo to scrap structured data from a web page, just define the structured data as a Go struct (golangBlogEntry), and define a corresponding task (golangBlogIndexTask).
+type golangBlogEntry struct { Title string URL string Tags *string } type golangBlogIndexTask struct { // Variables in task URL, e.</description>
     </item>
     
   </channel>

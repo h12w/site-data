@@ -2,12 +2,15 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Code Block on h12.me</title>
-    <link>http://h12.me/tags/code-block/index.xml</link>
+    <link>http://h12.me/tags/code-block/</link>
     <description>Recent content in Code Block on h12.me</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>Copyright (c) 2012-2018, Hǎiliàng Wáng; all rights reserved.</copyright>
-    <atom:link href="http://h12.me/tags/code-block/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 05 Sep 2016 10:30:49 +0800</lastBuildDate>
+    
+	<atom:link href="http://h12.me/tags/code-block/index.xml" rel="self" type="application/rss+xml" />
+    
     
     <item>
       <title>Making Code Block Wrap in Jira</title>
@@ -15,17 +18,9 @@
       <pubDate>Mon, 05 Sep 2016 10:30:49 +0800</pubDate>
       
       <guid>http://h12.me/note/make-jira-code-wrap/</guid>
-      <description>&lt;p&gt;It is a hack.&lt;/p&gt;
-
-&lt;p&gt;Set Jira Administration -&amp;gt; System -&amp;gt; Announcement Banner -&amp;gt; Announcement:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-css&#34;&gt;&amp;lt;style type=&amp;quot;text/css&amp;quot;&amp;gt;
-pre {
-    white-space: pre-wrap!important;
-}
-&amp;lt;/style&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;
-</description>
+      <description>It is a hack.
+Set Jira Administration -&amp;gt; System -&amp;gt; Announcement Banner -&amp;gt; Announcement:
+&amp;lt;style type=&amp;quot;text/css&amp;quot;&amp;gt; pre { white-space: pre-wrap!important; } &amp;lt;/style&amp;gt;  </description>
     </item>
     
   </channel>

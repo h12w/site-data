@@ -2,12 +2,15 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Persistence on h12.me</title>
-    <link>http://h12.me/tags/persistence/index.xml</link>
+    <link>http://h12.me/tags/persistence/</link>
     <description>Recent content in Persistence on h12.me</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>Copyright (c) 2012-2018, Hǎiliàng Wáng; all rights reserved.</copyright>
-    <atom:link href="http://h12.me/tags/persistence/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 02 Jul 2016 19:03:40 +0800</lastBuildDate>
+    
+	<atom:link href="http://h12.me/tags/persistence/index.xml" rel="self" type="application/rss+xml" />
+    
     
     <item>
       <title>On Reliable Persistence</title>
@@ -15,28 +18,11 @@
       <pubDate>Sat, 02 Jul 2016 19:03:40 +0800</pubDate>
       
       <guid>http://h12.me/note/on-reliable-persistence/</guid>
-      <description>&lt;p&gt;A short investigation on reliable persistence:&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;p&gt;Crash consistency is &lt;a href=&#34;http://danluu.com/file-consistency/&#34;&gt;hard&lt;/a&gt; but
-&lt;a href=&#34;https://www.flamingspork.com/talks/&#34;&gt;possible&lt;/a&gt; at a huge performance
-&lt;a href=&#34;https://www.google.com/#q=fsync+performance&#34;&gt;cost&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;Data safty must rely on distributed solution&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://raft.github.io&#34;&gt;Raft&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;Perhaps we should just give up manual fsync and rely on&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;OS background flush&lt;/li&gt;
-&lt;li&gt;corruption detection &amp;amp; correction at startup&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://kafka.apache.org/08/ops.html&#34;&gt;replication&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;/ul&gt;
-</description>
+      <description>A short investigation on reliable persistence:
+ Crash consistency is hard but possible at a huge performance cost
+ Data safty must rely on distributed solution
+ Raft  Perhaps we should just give up manual fsync and rely on
+ OS background flush corruption detection &amp;amp; correction at startup replication   </description>
     </item>
     
   </channel>

@@ -2,12 +2,15 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tutorial on h12.me</title>
-    <link>http://h12.me/tags/tutorial/index.xml</link>
+    <link>http://h12.me/tags/tutorial/</link>
     <description>Recent content in Tutorial on h12.me</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>Copyright (c) 2012-2018, Hǎiliàng Wáng; all rights reserved.</copyright>
-    <atom:link href="http://h12.me/tags/tutorial/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 24 Jul 2014 03:42:01 +0000</lastBuildDate>
+    
+	<atom:link href="http://h12.me/tags/tutorial/index.xml" rel="self" type="application/rss+xml" />
+    
     
     <item>
       <title>How to Achieve a Perfect PageSpeed Insights Score</title>
@@ -15,114 +18,7 @@
       <pubDate>Thu, 24 Jul 2014 03:42:01 +0000</pubDate>
       
       <guid>http://h12.me/article/pagespeed-insights/</guid>
-      <description>
-
-&lt;h2 id=&#34;indtroduction&#34;&gt;Indtroduction&lt;/h2&gt;
-
-&lt;p&gt;&lt;a href=&#34;https://developers.google.com/speed/pagespeed/insights/&#34;&gt;PageSpeed Insights&lt;/a&gt; is
-an online tool by Google to measure the performance of an web page for mobile
-and desktop devices. It has a set of heuristic rules considering the
-network-independent aspects of page performance. Each rule has a weight and the
-total score ranges from 0 to 100 points. The desktop and mobile tests have the
-same set of rules for performance and mobile test has some extra rules
-about user experience.&lt;/p&gt;
-
-&lt;p&gt;Though it might be too rigorous to require &lt;sup&gt;100&lt;/sup&gt;&amp;frasl;&lt;sub&gt;100&lt;/sub&gt; score for a web site, it is a
-good way to learn those rules to actually achieve it, and it does have a
-significant improvement to the load time of my site (load time reduces from more
-than 1 sec to about 500 ms in the &lt;a href=&#34;http://fpt.pingdom.com/&#34;&gt;Pingdom Website Speed Test&lt;/a&gt;).
-In the following section, I would like to share what I have learned by
-optimizing this website to achieve a &lt;a href=&#34;https://developers.google.com/speed/pagespeed/insights/?url=http%3A%2F%2Fh12.me&#34;&gt;perfect score&lt;/a&gt;, rule by rule.&lt;/p&gt;
-
-&lt;h2 id=&#34;speed-rules&#34;&gt;Speed rules&lt;/h2&gt;
-
-&lt;h3 id=&#34;avoid-landing-page-redirects&#34;&gt;Avoid landing page redirects&lt;/h3&gt;
-
-&lt;p&gt;The redirection to mobile version can be avoided by responsive design (CSS media
-queries).&lt;/p&gt;
-
-&lt;p&gt;You cannot avoid redirections completely, e.g. I have a 301 redirection from www
-subdomain to the naked domain, but the naked domain does not have any further
-redirection.&lt;/p&gt;
-
-&lt;h3 id=&#34;eliminate-render-blocking-javascript-and-css-in-above-the-fold-content&#34;&gt;Eliminate render-blocking JavaScript and CSS in above-the-fold content&lt;/h3&gt;
-
-&lt;p&gt;This might be the hardest rule to fully comply with.&lt;/p&gt;
-
-&lt;p&gt;Firstly, you need to minimize and fully inline your CSS into HTML, and your CSS
-cannot be too large. (My CSS is 22kB after minimization). If you use web fonts,
-you should directly write the @font-face in your inlined CSS, rather than
-importing an external CSS.&lt;/p&gt;
-
-&lt;p&gt;Secondly, you need to inline or asynchronously load all your scripts. The
-&amp;ldquo;async&amp;rdquo; attribute is not very useful because it cannot control the order of
-the execution of multiple scripts. I have found &lt;a href=&#34;http://headjs.com/&#34;&gt;HeadJS&lt;/a&gt;
-to solve the problem. HeadJS is inlined into the HTML (3.7kB), and other scripts
-are loaded asychronously but executed in order.&lt;/p&gt;
-
-&lt;p&gt;Finally, you have to make sure the delayed scripts will not affect the
-layout of above-the-fold content. You might have to make some trade off and cut
-off some functionality.&lt;/p&gt;
-
-&lt;h3 id=&#34;enable-compression-leverage-browser-caching-reduce-server-response-time&#34;&gt;Enable compression, Leverage browser caching &amp;amp; Reduce server response time&lt;/h3&gt;
-
-&lt;p&gt;Since I uses Google App Engine, the gzip compression should already been enabled
-by default, the expiration time for static resources are configurable via
-config.yaml and GAE responses fast enough.&lt;/p&gt;
-
-&lt;h3 id=&#34;minify-resources-html-css-and-javascript&#34;&gt;Minify Resources (HTML, CSS, and JavaScript)&lt;/h3&gt;
-
-&lt;p&gt;The CSS is minified by Compass, and scripts imported are already minified. The
-HTML file is not minified but it seems not serious enough to trigger a test
-warning by PageSpeed.&lt;/p&gt;
-
-&lt;h3 id=&#34;optimize-images&#34;&gt;Optimize images&lt;/h3&gt;
-
-&lt;p&gt;I use font icons in my site. When there has to be an image, use PNG compressed with
-&lt;a href=&#34;http://optipng.sourceforge.net/&#34;&gt;OptiPNG&lt;/a&gt;.&lt;/p&gt;
-
-&lt;h3 id=&#34;reduce-the-size-of-the-above-the-fold-content&#34;&gt;Reduce the size of the above-the-fold content&lt;/h3&gt;
-
-&lt;p&gt;It basically depends on your design and just remember the YAGNI principle.&lt;/p&gt;
-
-&lt;h2 id=&#34;user-experience-rules&#34;&gt;User experience rules&lt;/h2&gt;
-
-&lt;p&gt;These rule only applies to mobile platforms.&lt;/p&gt;
-
-&lt;h3 id=&#34;avoid-plugins&#34;&gt;Avoid plugins&lt;/h3&gt;
-
-&lt;p&gt;None of them on my site.&lt;/p&gt;
-
-&lt;h3 id=&#34;configure-the-viewport&#34;&gt;Configure the viewport&lt;/h3&gt;
-
-&lt;p&gt;This is part of the responsive design.&lt;/p&gt;
-
-&lt;h3 id=&#34;size-content-to-viewport&#34;&gt;Size content to viewport&lt;/h3&gt;
-
-&lt;p&gt;An important lesson: never write a URL directly in an article because URL does
-not wrap well and could overflow out of the viewport width. instead, give the
-URL a name composed of words.&lt;/p&gt;
-
-&lt;h3 id=&#34;size-tap-targets-appropriately-use-legible-font-sizes&#34;&gt;Size tap targets appropriately &amp;amp; Use legible font sizes&lt;/h3&gt;
-
-&lt;p&gt;I have written some lists of links in my notes, which makes those links close to
-each other. To make them separate enough to pass this rule, the line height cannot
-be too small, here is the minimal requirement from my tests (font-size/line-height):&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;16px/28px&lt;/li&gt;
-&lt;li&gt;17px/28px&lt;/li&gt;
-&lt;li&gt;18px/29px&lt;/li&gt;
-&lt;li&gt;19px/30px&lt;/li&gt;
-&lt;li&gt;20px/30px&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&#34;conclusion&#34;&gt;Conclusion&lt;/h2&gt;
-
-&lt;p&gt;It is not rocket science to build a website with good performance. You just needs
-to tune and optimize every detail of your site patiently. In this process,
-PageSpeed Insights can help a lot.&lt;/p&gt;
-</description>
+      <description>Indtroduction PageSpeed Insights is an online tool by Google to measure the performance of an web page for mobile and desktop devices. It has a set of heuristic rules considering the network-independent aspects of page performance. Each rule has a weight and the total score ranges from 0 to 100 points. The desktop and mobile tests have the same set of rules for performance and mobile test has some extra rules about user experience.</description>
     </item>
     
   </channel>
