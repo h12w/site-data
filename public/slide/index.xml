@@ -2,11 +2,11 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Slides on h12.me</title>
-    <link>http://h12.me/slide/</link>
+    <link>http://h12.me/slide/index.xml</link>
     <description>Recent content in Slides on h12.me</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <copyright>Copyright (c) 2012-2016, Hǎiliàng Wáng; all rights reserved.</copyright>
+    <copyright>Copyright (c) 2012-2018, Hǎiliàng Wáng; all rights reserved.</copyright>
     <lastBuildDate>Sun, 21 Aug 2016 13:00:00 +0000</lastBuildDate>
     <atom:link href="http://h12.me/slide/index.xml" rel="self" type="application/rss+xml" />
     

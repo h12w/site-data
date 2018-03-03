@@ -78,35 +78,29 @@
                 <div class="article-body hyphenate">
                 
                 
-                
-
-<p><a href="https://app.wercker.com/project/bykey/d5ed30f0d03d4a5210f65659ead13888"><img src="https://app.wercker.com/status/d5ed30f0d03d4a5210f65659ead13888/s" alt="wercker status" title="wercker status" />
-</a>
-<a href="https://godoc.org/h12.me/gspec"><img src="https://godoc.org/h12.me/gspec?status.png" alt="GoDoc" />
-</a></p>
+                <p><a href="https://app.wercker.com/project/bykey/d5ed30f0d03d4a5210f65659ead13888"><img src="https://app.wercker.com/status/d5ed30f0d03d4a5210f65659ead13888/s" alt="wercker status" title="wercker status" /></a>
+<a href="https://godoc.org/h12.me/gspec"><img src="https://godoc.org/h12.me/gspec?status.png" alt="GoDoc" /></a></p>
 
 <p>GSpec is an <em>expressive, reliable, concurrent and extensible</em> Go test framework
-that makes it productive to organize and verify the mind model of software.</p>
+that makes it productive to organize and verify the mind model of software.
 
-<ul>
-<li><em>Expressive</em>: a complete runnable specification can be organized via both BDD
-            and table driven styles.</li>
-<li><em>Reliable</em>:   the implementation has minimal footprint and is tested with 100%
-            coverage.</li>
-<li><em>Concurrent</em>: test cases can be executed concurrently or sequentially.</li>
-<li><em>Extensible</em>: customizable BDD cue words, expectations and test reporters.</li>
-<li><em>Compatible</em>: &ldquo;go test&rdquo; is sufficient but not mandatory to run GSpec tests.</li>
-</ul>
+* <em>Expressive</em>: a complete runnable specification can be organized via both BDD
+                and table driven styles.
+* <em>Reliable</em>:   the implementation has minimal footprint and is tested with 100%
+                coverage.
+* <em>Concurrent</em>: test cases can be executed concurrently or sequentially.
+* <em>Extensible</em>: customizable BDD cue words, expectations and test reporters.
+* <em>Compatible</em>: &ldquo;go test&rdquo; is sufficient but not mandatory to run GSpec tests.</p>
 
-<h2 id="quick-start:4a2050c4ac0cfa42fab8c8cafa02e158">Quick start</h2>
+<h2 id="quick-start">Quick start</h2>
 
-<h3 id="get-gspec:4a2050c4ac0cfa42fab8c8cafa02e158">Get GSpec</h3>
+<h3 id="get-gspec">Get GSpec</h3>
 
 <pre><code class="language-bash">go get -u -f h12.me/gspec
 go test h12.me/gspec/...
 </code></pre>
 
-<h3 id="write-tests-with-gspec:4a2050c4ac0cfa42fab8c8cafa02e158">Write tests with GSpec</h3>
+<h3 id="write-tests-with-gspec">Write tests with GSpec</h3>
 
 <p>According to the <a href="http://golang.org/doc/code.html#Testing">convention of Go</a>,
 write GSpec tests in file xxx_test.go to test code in xxx.go.</p>
@@ -178,7 +172,7 @@ func TestAll(t *testing.T) {
 }
 </code></pre>
 
-<h3 id="run-tests-with-go-test:4a2050c4ac0cfa42fab8c8cafa02e158">Run tests with &ldquo;go test&rdquo;</h3>
+<h3 id="run-tests-with-go-test">Run tests with &ldquo;go test&rdquo;</h3>
 
 <p>Run all the tests concurrently (sequencially by default) and display errors.</p>
 
@@ -194,7 +188,6 @@ func TestAll(t *testing.T) {
 
 <pre><code class="language-bash">go test -focus 1/1
 </code></pre>
-
                 </div>
                 <div>
                     <div id="article-time">28 May 2014</div>

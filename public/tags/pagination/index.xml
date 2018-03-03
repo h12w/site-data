@@ -2,12 +2,11 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Pagination on h12.me</title>
-    <link>http://h12.me/tags/pagination/</link>
+    <link>http://h12.me/tags/pagination/index.xml</link>
     <description>Recent content in Pagination on h12.me</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <copyright>Copyright (c) 2012-2016, Hǎiliàng Wáng; all rights reserved.</copyright>
-    <lastBuildDate>Wed, 28 Feb 2018 13:38:45 +0800</lastBuildDate>
+    <copyright>Copyright (c) 2012-2018, Hǎiliàng Wáng; all rights reserved.</copyright>
     <atom:link href="http://h12.me/tags/pagination/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
@@ -31,7 +30,7 @@
 &lt;li&gt;the next page starts with value &amp;gt; continue-token || (value == continue-token &amp;amp;&amp;amp; value.id &amp;gt; continue-token.id)&lt;/li&gt;
 &lt;/ol&gt;
 
-&lt;h3 id=&#34;reference:b1a5991f8415a5880f5a91d74fe78fe3&#34;&gt;Reference&lt;/h3&gt;
+&lt;h3 id=&#34;reference&#34;&gt;Reference&lt;/h3&gt;
 
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;https://skelia.com/articles/pagination-with-dynamic-data-loading-2/&#34;&gt;Pagination with Dynamic Data Loading&lt;/a&gt;&lt;/li&gt;

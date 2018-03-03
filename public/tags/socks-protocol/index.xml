@@ -2,12 +2,11 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Socks Protocol on h12.me</title>
-    <link>http://h12.me/tags/socks-protocol/</link>
+    <link>http://h12.me/tags/socks-protocol/index.xml</link>
     <description>Recent content in Socks Protocol on h12.me</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <copyright>Copyright (c) 2012-2016, Hǎiliàng Wáng; all rights reserved.</copyright>
-    <lastBuildDate>Wed, 01 Aug 2012 23:57:54 +0000</lastBuildDate>
+    <copyright>Copyright (c) 2012-2018, Hǎiliàng Wáng; all rights reserved.</copyright>
     <atom:link href="http://h12.me/tags/socks-protocol/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
@@ -18,31 +17,30 @@
       <guid>http://h12.me/project/socks/</guid>
       <description>
 
-&lt;p&gt;&lt;a href=&#34;https://godoc.org/h12.me/socks&#34;&gt;&lt;img src=&#34;https://godoc.org/h12.me/socks?status.svg&#34; alt=&#34;GoDoc&#34; /&gt;
-&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://godoc.org/h12.me/socks&#34;&gt;&lt;img src=&#34;https://godoc.org/h12.me/socks?status.svg&#34; alt=&#34;GoDoc&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;SOCKS is a SOCKS4, SOCKS4A and SOCKS5 proxy package for Go.&lt;/p&gt;
 
-&lt;h2 id=&#34;quick-start:d77d00cbd213acbdf85f41426e5559a4&#34;&gt;Quick Start&lt;/h2&gt;
+&lt;h2 id=&#34;quick-start&#34;&gt;Quick Start&lt;/h2&gt;
 
-&lt;h3 id=&#34;get-the-package:d77d00cbd213acbdf85f41426e5559a4&#34;&gt;Get the package&lt;/h3&gt;
+&lt;h3 id=&#34;get-the-package&#34;&gt;Get the package&lt;/h3&gt;
 
 &lt;pre&gt;&lt;code&gt;go get -u &amp;quot;h12.me/socks&amp;quot;
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h3 id=&#34;import-the-package:d77d00cbd213acbdf85f41426e5559a4&#34;&gt;Import the package&lt;/h3&gt;
+&lt;h3 id=&#34;import-the-package&#34;&gt;Import the package&lt;/h3&gt;
 
 &lt;pre&gt;&lt;code&gt;import &amp;quot;h12.me/socks&amp;quot;
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h3 id=&#34;create-a-socks-proxy-dialing-function:d77d00cbd213acbdf85f41426e5559a4&#34;&gt;Create a SOCKS proxy dialing function&lt;/h3&gt;
+&lt;h3 id=&#34;create-a-socks-proxy-dialing-function&#34;&gt;Create a SOCKS proxy dialing function&lt;/h3&gt;
 
 &lt;pre&gt;&lt;code&gt;dialSocksProxy := socks.DialSocksProxy(socks.SOCKS5, &amp;quot;127.0.0.1:1080&amp;quot;)
 tr := &amp;amp;http.Transport{Dial: dialSocksProxy}
 httpClient := &amp;amp;http.Client{Transport: tr}
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h2 id=&#34;alternatives:d77d00cbd213acbdf85f41426e5559a4&#34;&gt;Alternatives&lt;/h2&gt;
+&lt;h2 id=&#34;alternatives&#34;&gt;Alternatives&lt;/h2&gt;
 
 &lt;p&gt;&lt;a href=&#34;http://code.google.com/p/go/source/browse/?repo=net#hg%2Fproxy&#34;&gt;http://code.google.com/p/go/source/browse/?repo=net#hg%2Fproxy&lt;/a&gt;&lt;/p&gt;
 </description>

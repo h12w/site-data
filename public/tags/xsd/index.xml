@@ -2,12 +2,11 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Xsd on h12.me</title>
-    <link>http://h12.me/tags/xsd/</link>
+    <link>http://h12.me/tags/xsd/index.xml</link>
     <description>Recent content in Xsd on h12.me</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <copyright>Copyright (c) 2012-2016, Hǎiliàng Wáng; all rights reserved.</copyright>
-    <lastBuildDate>Thu, 23 Apr 2015 15:41:12 +0800</lastBuildDate>
+    <copyright>Copyright (c) 2012-2018, Hǎiliàng Wáng; all rights reserved.</copyright>
     <atom:link href="http://h12.me/tags/xsd/index.xml" rel="self" type="application/rss+xml" />
     
     <item>

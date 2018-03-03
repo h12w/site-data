@@ -2,12 +2,11 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Gae on h12.me</title>
-    <link>http://h12.me/tags/gae/</link>
+    <link>http://h12.me/tags/gae/index.xml</link>
     <description>Recent content in Gae on h12.me</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <copyright>Copyright (c) 2012-2016, Hǎiliàng Wáng; all rights reserved.</copyright>
-    <lastBuildDate>Wed, 08 Jul 2015 07:58:34 +0000</lastBuildDate>
+    <copyright>Copyright (c) 2012-2018, Hǎiliàng Wáng; all rights reserved.</copyright>
     <atom:link href="http://h12.me/tags/gae/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
@@ -18,7 +17,7 @@
       <guid>http://h12.me/note/proxy-notes/</guid>
       <description>
 
-&lt;h2 id=&#34;git:98bdf1dc45f059ee4334ef1c195fb8bb&#34;&gt;Git&lt;/h2&gt;
+&lt;h2 id=&#34;git&#34;&gt;Git&lt;/h2&gt;
 
 &lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;&amp;gt; cat ~/.gitconfig
 [http]
@@ -27,18 +26,18 @@
 	proxy = socks5://[host]:[port]
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h2 id=&#34;curl-homebrew:98bdf1dc45f059ee4334ef1c195fb8bb&#34;&gt;Curl (Homebrew)&lt;/h2&gt;
+&lt;h2 id=&#34;curl-homebrew&#34;&gt;Curl (Homebrew)&lt;/h2&gt;
 
 &lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;&amp;gt; cat ~/.curlrc
 socks5 = &amp;quot;[host]:[port]&amp;quot;
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h2 id=&#34;docker-pull:98bdf1dc45f059ee4334ef1c195fb8bb&#34;&gt;Docker pull&lt;/h2&gt;
+&lt;h2 id=&#34;docker-pull&#34;&gt;Docker pull&lt;/h2&gt;
 
 &lt;pre&gt;&lt;code class=&#34;language-fish&#34;&gt;env HTTP_PROXY=http://xxx docker pull yyy
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h2 id=&#34;gae:98bdf1dc45f059ee4334ef1c195fb8bb&#34;&gt;GAE&lt;/h2&gt;
+&lt;h2 id=&#34;gae&#34;&gt;GAE&lt;/h2&gt;
 
 &lt;ol&gt;
 &lt;li&gt;&lt;p&gt;Set proxy&lt;/p&gt;

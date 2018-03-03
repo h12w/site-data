@@ -2,12 +2,11 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Haskell on h12.me</title>
-    <link>http://h12.me/tags/haskell/</link>
+    <link>http://h12.me/tags/haskell/index.xml</link>
     <description>Recent content in Haskell on h12.me</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <copyright>Copyright (c) 2012-2016, Hǎiliàng Wáng; all rights reserved.</copyright>
-    <lastBuildDate>Sat, 26 Jul 2014 08:12:39 +0000</lastBuildDate>
+    <copyright>Copyright (c) 2012-2018, Hǎiliàng Wáng; all rights reserved.</copyright>
     <atom:link href="http://h12.me/tags/haskell/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
@@ -29,7 +28,7 @@ systematically and clearly, but unfortunately none was found.&lt;/p&gt;
 directly and absorb it myself. To make the process less dull and record my
 progress, I will write down my learning notes here incrementally.&lt;/p&gt;
 
-&lt;h2 id=&#34;overview:f12ba4ec1e96d9d8ed4fe3dd41e7395e&#34;&gt;Overview&lt;/h2&gt;
+&lt;h2 id=&#34;overview&#34;&gt;Overview&lt;/h2&gt;
 
 &lt;p&gt;A Haskell program is organized with four levels: &lt;em&gt;modules&lt;/em&gt;, &lt;em&gt;declarations&lt;/em&gt;,
 &lt;em&gt;expressions&lt;/em&gt; &amp;amp; &lt;em&gt;lexical structures&lt;/em&gt;, but the specification is organized in the
@@ -60,7 +59,7 @@ reverse order.&lt;/p&gt;
 &lt;p&gt;The same name can be reused without conflicts as long as they are in different
 namespaces.&lt;/p&gt;
 
-&lt;h2 id=&#34;lexical-structure:f12ba4ec1e96d9d8ed4fe3dd41e7395e&#34;&gt;Lexical Structure&lt;/h2&gt;
+&lt;h2 id=&#34;lexical-structure&#34;&gt;Lexical Structure&lt;/h2&gt;
 
 &lt;p&gt;A Haskell program is composed of lexemes (tokens) and whitespaces.&lt;/p&gt;
 
@@ -124,13 +123,13 @@ term &amp;ldquo;x prime&amp;rdquo; can be represented as &lt;code&gt;x&#39;&lt;/
 &lt;p&gt;By using layout rule (indentation), symbols &lt;code&gt;{};&lt;/code&gt; can be omitted in sereral
 grammer productions.&lt;/p&gt;
 
-&lt;h2 id=&#34;expressions:f12ba4ec1e96d9d8ed4fe3dd41e7395e&#34;&gt;Expressions&lt;/h2&gt;
+&lt;h2 id=&#34;expressions&#34;&gt;Expressions&lt;/h2&gt;
 
-&lt;h3 id=&#34;parentheses:f12ba4ec1e96d9d8ed4fe3dd41e7395e&#34;&gt;Parentheses&lt;/h3&gt;
+&lt;h3 id=&#34;parentheses&#34;&gt;Parentheses&lt;/h3&gt;
 
 &lt;p&gt;&lt;code&gt;(exp)&lt;/code&gt; is a &lt;em&gt;parenthesized expression&lt;/em&gt;, and is equivalent to &lt;code&gt;exp&lt;/code&gt;.&lt;/p&gt;
 
-&lt;h3 id=&#34;function-operator-application:f12ba4ec1e96d9d8ed4fe3dd41e7395e&#34;&gt;Function &amp;amp; operator application&lt;/h3&gt;
+&lt;h3 id=&#34;function-operator-application&#34;&gt;Function &amp;amp; operator application&lt;/h3&gt;
 
 &lt;p&gt;Function is prefixed and curried, so &lt;code&gt;f x y&lt;/code&gt; means &lt;code&gt;(f x) y&lt;/code&gt;.&lt;/p&gt;
 
@@ -156,7 +155,7 @@ converted to an infix operator by backquotes.&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;x `op` y
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h3 id=&#34;list-tuple:f12ba4ec1e96d9d8ed4fe3dd41e7395e&#34;&gt;List &amp;amp; Tuple&lt;/h3&gt;
+&lt;h3 id=&#34;list-tuple&#34;&gt;List &amp;amp; Tuple&lt;/h3&gt;
 
 &lt;p&gt;List is constructed with &lt;code&gt;:&lt;/code&gt;.&lt;/p&gt;
 
@@ -174,7 +173,7 @@ converted to an infix operator by backquotes.&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;(1, 2, &amp;quot;a&amp;quot;)   or   (,,) 1 2 &amp;quot;a&amp;quot;
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h3 id=&#34;field-label:f12ba4ec1e96d9d8ed4fe3dd41e7395e&#34;&gt;Field label&lt;/h3&gt;
+&lt;h3 id=&#34;field-label&#34;&gt;Field label&lt;/h3&gt;
 
 &lt;p&gt;A field label is used to give a name to a field in a datatype. It can be used to
 construct, extract and update the field.&lt;/p&gt;
@@ -185,7 +184,7 @@ construct, extract and update the field.&lt;/p&gt;
 fbind   → qvar = exp 
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h3 id=&#34;pattern-matching:f12ba4ec1e96d9d8ed4fe3dd41e7395e&#34;&gt;Pattern matching&lt;/h3&gt;
+&lt;h3 id=&#34;pattern-matching&#34;&gt;Pattern matching&lt;/h3&gt;
 
 &lt;p&gt;A pattern itself is not an expression, but it is an important part of sereral
 expressions, including: &lt;em&gt;lambda abstractions&lt;/em&gt;, &lt;em&gt;function definitions&lt;/em&gt;,
@@ -262,7 +261,7 @@ is called a irrefutable pattern.&lt;/p&gt;
 &lt;code&gt;N apat&lt;/code&gt; where N is a constructor defined by newtype and apat is irrefutable,
 &lt;code&gt;var@apat&lt;/code&gt; where apat is irrefutable. All other patterns are refutable.&lt;/p&gt;
 
-&lt;h3 id=&#34;case-expression:f12ba4ec1e96d9d8ed4fe3dd41e7395e&#34;&gt;Case expression&lt;/h3&gt;
+&lt;h3 id=&#34;case-expression&#34;&gt;Case expression&lt;/h3&gt;
 
 &lt;p&gt;Case expression is very important because all other pattern matching expressions
 ultimately translate into case expressions.&lt;/p&gt;
@@ -309,7 +308,7 @@ guarded pattern or alternative is tried sequentially.&lt;/li&gt;
 &lt;li&gt;If no match can be found, the result is ⊥.&lt;/li&gt;
 &lt;/ol&gt;
 
-&lt;h3 id=&#34;lambda-expression:f12ba4ec1e96d9d8ed4fe3dd41e7395e&#34;&gt;Lambda expression&lt;/h3&gt;
+&lt;h3 id=&#34;lambda-expression&#34;&gt;Lambda expression&lt;/h3&gt;
 
 &lt;p&gt;Lambda is used to construct a function without a name. Besides a variable, the
 input can also be any pattern.&lt;/p&gt;
@@ -329,7 +328,7 @@ input can also be any pattern.&lt;/p&gt;
 Integer -&amp;gt; (Integer -&amp;gt; Integer)
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h3 id=&#34;let-expression:f12ba4ec1e96d9d8ed4fe3dd41e7395e&#34;&gt;Let expression&lt;/h3&gt;
+&lt;h3 id=&#34;let-expression&#34;&gt;Let expression&lt;/h3&gt;
 
 &lt;p&gt;A let expression introduces a nested, lexically-scoped, mutually-recursive list
 of declarations. &lt;code&gt;exp&lt;/code&gt; after keyword &lt;code&gt;in&lt;/code&gt; is the value of a let expression.&lt;/p&gt;
@@ -344,7 +343,7 @@ decls   → { decl1 ; … ; decln } (n ≥ 0)
 let {(x,y) = (1,2)} in x+y
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h3 id=&#34;list-comprehension:f12ba4ec1e96d9d8ed4fe3dd41e7395e&#34;&gt;List comprehension&lt;/h3&gt;
+&lt;h3 id=&#34;list-comprehension&#34;&gt;List comprehension&lt;/h3&gt;
 
 &lt;p&gt;A list comprehension constructs a list of elements represented by &lt;code&gt;exp&lt;/code&gt; qualified
 by one or more qualifiers.&lt;/p&gt;
@@ -371,11 +370,11 @@ boolean guard to exclude some elements from the list.&lt;/p&gt;
         | exp           (boolean guard) 
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h3 id=&#34;do-expression:f12ba4ec1e96d9d8ed4fe3dd41e7395e&#34;&gt;Do expression&lt;/h3&gt;
+&lt;h3 id=&#34;do-expression&#34;&gt;Do expression&lt;/h3&gt;
 
 &lt;p&gt;&lt;em&gt;Wait till monad is fully understood.&lt;/em&gt;&lt;/p&gt;
 
-&lt;h3 id=&#34;type-signature:f12ba4ec1e96d9d8ed4fe3dd41e7395e&#34;&gt;Type signature&lt;/h3&gt;
+&lt;h3 id=&#34;type-signature&#34;&gt;Type signature&lt;/h3&gt;
 
 &lt;p&gt;Haskell has type inference, but an expression can be optionally specified with a
 &lt;em&gt;type signature&lt;/em&gt;.&lt;/p&gt;
@@ -383,7 +382,7 @@ boolean guard to exclude some elements from the list.&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;exp     → infixexp :: [context =&amp;gt;] type
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h2 id=&#34;declarations:f12ba4ec1e96d9d8ed4fe3dd41e7395e&#34;&gt;Declarations&lt;/h2&gt;
+&lt;h2 id=&#34;declarations&#34;&gt;Declarations&lt;/h2&gt;
 
 &lt;p&gt;There are top declarations (&lt;code&gt;topdecl&lt;/code&gt;) that are only allowed at the top level of
 a module, and nested declarations (&lt;code&gt;decl&lt;/code&gt;) that may be used either at the top
@@ -394,7 +393,7 @@ level or in nested scopes.&lt;/p&gt;
         | decl 
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h3 id=&#34;top-declarations:f12ba4ec1e96d9d8ed4fe3dd41e7395e&#34;&gt;Top declarations&lt;/h3&gt;
+&lt;h3 id=&#34;top-declarations&#34;&gt;Top declarations&lt;/h3&gt;
 
 &lt;p&gt;A top declaration starts with one of the keywords: &lt;code&gt;data&lt;/code&gt;, &lt;code&gt;type&lt;/code&gt;, &lt;code&gt;newtype&lt;/code&gt;,
 &lt;code&gt;class&lt;/code&gt;, &lt;code&gt;instance&lt;/code&gt;, &lt;code&gt;default&lt;/code&gt; and &lt;code&gt;foreign&lt;/code&gt;.&lt;/p&gt;
@@ -405,7 +404,7 @@ types and typeclasses.&lt;/p&gt;
 
 &lt;p&gt;They are explained later one by one.&lt;/p&gt;
 
-&lt;h3 id=&#34;nested-declarations:f12ba4ec1e96d9d8ed4fe3dd41e7395e&#34;&gt;Nested declarations&lt;/h3&gt;
+&lt;h3 id=&#34;nested-declarations&#34;&gt;Nested declarations&lt;/h3&gt;
 
 &lt;p&gt;In the last section, &lt;code&gt;decl&lt;/code&gt; appears in the let expression and where clause
 without any explanations. Actually, they are nested declarations.&lt;/p&gt;
@@ -461,7 +460,7 @@ x ‘plus‘ y = \ z -&amp;gt; x+y+z
 (x ‘plus‘ y) z = x+y+z
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h3 id=&#34;type:f12ba4ec1e96d9d8ed4fe3dd41e7395e&#34;&gt;Type&lt;/h3&gt;
+&lt;h3 id=&#34;type&#34;&gt;Type&lt;/h3&gt;
 
 &lt;p&gt;Just as an &lt;em&gt;expression&lt;/em&gt; may contain variables and denotes a value, a
 &lt;em&gt;type expression&lt;/em&gt; may contain &lt;em&gt;type variables&lt;/em&gt; and denotes a type value (but it
@@ -501,13 +500,13 @@ gtycon  → qtycon
         | (,{,})        (tupling constructors) 
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h3 id=&#34;kind:f12ba4ec1e96d9d8ed4fe3dd41e7395e&#34;&gt;Kind&lt;/h3&gt;
+&lt;h3 id=&#34;kind&#34;&gt;Kind&lt;/h3&gt;
 
 &lt;p&gt;What is &lt;code&gt;*&lt;/code&gt;, &lt;code&gt;* -&amp;gt; *&lt;/code&gt;&amp;hellip;? An ordinary type has kind &lt;code&gt;*&lt;/code&gt;. A type constructor
 (template) that has one type argument has kind &lt;code&gt;* -&amp;gt; *&lt;/code&gt;, e.g. a list. So on and
 so forth.&lt;/p&gt;
 
-&lt;h3 id=&#34;context:f12ba4ec1e96d9d8ed4fe3dd41e7395e&#34;&gt;Context&lt;/h3&gt;
+&lt;h3 id=&#34;context&#34;&gt;Context&lt;/h3&gt;
 
 &lt;p&gt;The context (&lt;code&gt;context =&amp;gt; type&lt;/code&gt;) is used to indicate that type &lt;code&gt;tyvar&lt;/code&gt; belongs to
 class &lt;code&gt;qtycls&lt;/code&gt;.&lt;/p&gt;
@@ -528,7 +527,7 @@ tycls   → conid
 tyvar   → varid 
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h3 id=&#34;algebraic-data-type:f12ba4ec1e96d9d8ed4fe3dd41e7395e&#34;&gt;Algebraic data type&lt;/h3&gt;
+&lt;h3 id=&#34;algebraic-data-type&#34;&gt;Algebraic data type&lt;/h3&gt;
 
 &lt;p&gt;&lt;em&gt;algebraic data type&lt;/em&gt; is named so because it is composed of other types by
 product and sum (algebraic operations). It introduces a new type constructor
@@ -567,14 +566,14 @@ con     → conid | ( consym )    (constructor)
 &lt;p&gt;&lt;code&gt;!&lt;/code&gt; is strictness flag to indicate that the corresponding constructor argument
 is eagerly evaluated.&lt;/p&gt;
 
-&lt;h3 id=&#34;type-synonym:f12ba4ec1e96d9d8ed4fe3dd41e7395e&#34;&gt;Type synonym&lt;/h3&gt;
+&lt;h3 id=&#34;type-synonym&#34;&gt;Type synonym&lt;/h3&gt;
 
 &lt;p&gt;A type synonym is equivalent to its definition are completely interchangeable.&lt;/p&gt;
 
 &lt;pre&gt;&lt;code&gt;topdecl → type simpletype = type
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h3 id=&#34;newtype:f12ba4ec1e96d9d8ed4fe3dd41e7395e&#34;&gt;Newtype&lt;/h3&gt;
+&lt;h3 id=&#34;newtype&#34;&gt;Newtype&lt;/h3&gt;
 
 &lt;p&gt;A &lt;em&gt;newtype&lt;/em&gt; declaration introduces a distinct type whose representation is the
 same as an existing type.&lt;/p&gt;
@@ -592,13 +591,13 @@ defined for a type synonym.&lt;/li&gt;
 algebraic datatype, so the pattern matching rule is different.&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h3 id=&#34;ad-hoc-polymorphism:f12ba4ec1e96d9d8ed4fe3dd41e7395e&#34;&gt;Ad hoc polymorphism&lt;/h3&gt;
+&lt;h3 id=&#34;ad-hoc-polymorphism&#34;&gt;Ad hoc polymorphism&lt;/h3&gt;
 
 &lt;p&gt;Ad hoc polymorphism (overloading) is supported by &lt;em&gt;typeclasses&lt;/em&gt;.&lt;/p&gt;
 
 &lt;p&gt;A class declaration introduces a new class and the operations (methods) on it.&lt;/p&gt;
 
-&lt;h2 id=&#34;modules:f12ba4ec1e96d9d8ed4fe3dd41e7395e&#34;&gt;Modules&lt;/h2&gt;
+&lt;h2 id=&#34;modules&#34;&gt;Modules&lt;/h2&gt;
 
 &lt;p&gt;&lt;em&gt;To be continued&amp;hellip;&lt;/em&gt;&lt;/p&gt;
 </description>

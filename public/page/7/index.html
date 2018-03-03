@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
+	<meta name="generator" content="Hugo 0.19" />
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title> h12.me </title>
@@ -142,7 +143,7 @@ Go again (source:
 that need to be made. One of them is to decide the font size for each level of
 headings, i.e., typographic scale.</p>
 
-<h2 id="investigation:f9a358ee4dd031f5b9852a0d1cb742af">Investigation</h2>
+<h2 id="investigation">Investigation</h2>
 
 <p>The first thing I did was to read <a href="https://www.google.com/?#newwindow=1&amp;q=typographic+scale">everything online</a>
 about typographic scale. I will just skip the details and jump to my opinions:</p>
@@ -169,7 +170,7 @@ irrelevant factors, instead, we should consider the constraints from our
 <em>real problem</em>. The same reason applies to the golden ratio and double-stranded
 scale.</p>
 
-<h2 id="problem-constraints:f9a358ee4dd031f5b9852a0d1cb742af">Problem &amp; constraints</h2>
+<h2 id="problem-constraints">Problem &amp; constraints</h2>
 
 <p>What is a good typographic scale? For a Blog article, it should at least meet the
 following requirements:</p>
@@ -197,7 +198,7 @@ of body copy (vertical rhythm)</li>
 <li>The maximum acceptable size of the top heading</li>
 </ul>
 
-<h2 id="optimization:f9a358ee4dd031f5b9852a0d1cb742af">Optimization</h2>
+<h2 id="optimization">Optimization</h2>
 
 <p>Design is a process exploring all the possible solutions (the design space) to
 find an optimal one, i.e. an <a href="http://en.wikipedia.org/wiki/Optimization_problem">optimization problem</a>.
@@ -223,7 +224,7 @@ sorts all the solutions by the inconsistency and find the best solution.</p>
 <p>Here is the code (runable online):
 <a href="http://play.golang.org/p/rP09HJDUcz">a Go program to calculate optimal typographic scale</a>.</p>
 
-<h2 id="example:f9a358ee4dd031f5b9852a0d1cb742af">Example</h2>
+<h2 id="example">Example</h2>
 
 <p>In this site, I need to use maximum three levels of headings: H1, H2 &amp; H3. I
 choose 19px/30px as body copy. The search range for H3 is from 1.2*19px to
@@ -239,7 +240,7 @@ H1: 39px/1.5
 <p>Though the line height of H2 is still not ideal, it is already the best solution
 given the restrictions by vertical rhythm.</p>
 
-<h2 id="conclusion:f9a358ee4dd031f5b9852a0d1cb742af">Conclusion</h2>
+<h2 id="conclusion">Conclusion</h2>
 
 <p>The approach can sccessfully find the optimal typographic scale under the
 precise problem definition in this article. It does not rely on any mysterious

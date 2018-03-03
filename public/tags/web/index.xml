@@ -2,12 +2,11 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Web on h12.me</title>
-    <link>http://h12.me/tags/web/</link>
+    <link>http://h12.me/tags/web/index.xml</link>
     <description>Recent content in Web on h12.me</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <copyright>Copyright (c) 2012-2016, Hǎiliàng Wáng; all rights reserved.</copyright>
-    <lastBuildDate>Wed, 08 Jul 2015 07:58:34 +0000</lastBuildDate>
+    <copyright>Copyright (c) 2012-2018, Hǎiliàng Wáng; all rights reserved.</copyright>
     <atom:link href="http://h12.me/tags/web/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
@@ -18,7 +17,7 @@
       <guid>http://h12.me/note/proxy-notes/</guid>
       <description>
 
-&lt;h2 id=&#34;git:98bdf1dc45f059ee4334ef1c195fb8bb&#34;&gt;Git&lt;/h2&gt;
+&lt;h2 id=&#34;git&#34;&gt;Git&lt;/h2&gt;
 
 &lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;&amp;gt; cat ~/.gitconfig
 [http]
@@ -27,18 +26,18 @@
 	proxy = socks5://[host]:[port]
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h2 id=&#34;curl-homebrew:98bdf1dc45f059ee4334ef1c195fb8bb&#34;&gt;Curl (Homebrew)&lt;/h2&gt;
+&lt;h2 id=&#34;curl-homebrew&#34;&gt;Curl (Homebrew)&lt;/h2&gt;
 
 &lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;&amp;gt; cat ~/.curlrc
 socks5 = &amp;quot;[host]:[port]&amp;quot;
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h2 id=&#34;docker-pull:98bdf1dc45f059ee4334ef1c195fb8bb&#34;&gt;Docker pull&lt;/h2&gt;
+&lt;h2 id=&#34;docker-pull&#34;&gt;Docker pull&lt;/h2&gt;
 
 &lt;pre&gt;&lt;code class=&#34;language-fish&#34;&gt;env HTTP_PROXY=http://xxx docker pull yyy
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h2 id=&#34;gae:98bdf1dc45f059ee4334ef1c195fb8bb&#34;&gt;GAE&lt;/h2&gt;
+&lt;h2 id=&#34;gae&#34;&gt;GAE&lt;/h2&gt;
 
 &lt;ol&gt;
 &lt;li&gt;&lt;p&gt;Set proxy&lt;/p&gt;
@@ -68,7 +67,7 @@ make sure the proxy is safe before this step).&lt;/p&gt;&lt;/li&gt;
 
 &lt;p&gt;&lt;em&gt;Knowledge is power. Information is liberating. &amp;mdash; by Kofi Annan.&lt;/em&gt;&lt;/p&gt;
 
-&lt;h2 id=&#34;vps:ed389849b892ef1bb1002c7398bba070&#34;&gt;VPS&lt;/h2&gt;
+&lt;h2 id=&#34;vps&#34;&gt;VPS&lt;/h2&gt;
 
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;https://www.cloudsvm.com/billing/aff.php?aff=140&#34;&gt;CloudsVM&lt;/a&gt;&lt;/li&gt;
@@ -83,11 +82,11 @@ make sure the proxy is safe before this step).&lt;/p&gt;&lt;/li&gt;
 &lt;/ul&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h2 id=&#34;centos:ed389849b892ef1bb1002c7398bba070&#34;&gt;CentOS&lt;/h2&gt;
+&lt;h2 id=&#34;centos&#34;&gt;CentOS&lt;/h2&gt;
 
-&lt;h3 id=&#34;install-centos-7-64bit:ed389849b892ef1bb1002c7398bba070&#34;&gt;Install CentOS 7 (64bit)&lt;/h3&gt;
+&lt;h3 id=&#34;install-centos-7-64bit&#34;&gt;Install CentOS 7 (64bit)&lt;/h3&gt;
 
-&lt;h3 id=&#34;shadowsocks:ed389849b892ef1bb1002c7398bba070&#34;&gt;Shadowsocks&lt;/h3&gt;
+&lt;h3 id=&#34;shadowsocks&#34;&gt;Shadowsocks&lt;/h3&gt;
 
 &lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;cd /etc/yum.repos.d/
 wget https://copr.fedorainfracloud.org/coprs/librehat/shadowsocks/repo/epel-7/librehat-shadowsocks-epel-7.repo
@@ -104,7 +103,7 @@ systemctl enable shadowsocks-libev
 systemctl start shadowsocks-libev
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h3 id=&#34;pdnsd:ed389849b892ef1bb1002c7398bba070&#34;&gt;pdnsd&lt;/h3&gt;
+&lt;h3 id=&#34;pdnsd&#34;&gt;pdnsd&lt;/h3&gt;
 
 &lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;wget http://members.home.nl/p.a.rombouts/pdnsd/releases/pdnsd-1.2.9a-par_sl6.x86_64.rpm
 yum localinstall pdnsd-1.2.9a-par_sl6.x86_64.rpm
@@ -132,18 +131,18 @@ server {
 systemctl start pdnsd
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h2 id=&#34;docker:ed389849b892ef1bb1002c7398bba070&#34;&gt;Docker&lt;/h2&gt;
+&lt;h2 id=&#34;docker&#34;&gt;Docker&lt;/h2&gt;
 
 &lt;p&gt;Install &lt;a href=&#34;https://docs.docker.com/installation/&#34;&gt;Docker&lt;/a&gt; on VPS.&lt;/p&gt;
 
-&lt;h2 id=&#34;remote-proxy:ed389849b892ef1bb1002c7398bba070&#34;&gt;Remote Proxy&lt;/h2&gt;
+&lt;h2 id=&#34;remote-proxy&#34;&gt;Remote Proxy&lt;/h2&gt;
 
 &lt;p&gt;Install &lt;a href=&#34;https://github.com/shadowsocks/shadowsocks-go/releases&#34;&gt;shadowsocks&lt;/a&gt;:&lt;/p&gt;
 
 &lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;docker run -d -p &amp;lt;port&amp;gt;:&amp;lt;port&amp;gt; h12w/shadowsocks -p &amp;lt;port&amp;gt; -k &amp;lt;password&amp;gt; -m aes-128-cfb -t 60
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h2 id=&#34;remote-dns-server:ed389849b892ef1bb1002c7398bba070&#34;&gt;Remote DNS server&lt;/h2&gt;
+&lt;h2 id=&#34;remote-dns-server&#34;&gt;Remote DNS server&lt;/h2&gt;
 
 &lt;p&gt;Install &lt;a href=&#34;http://members.home.nl/p.a.rombouts/pdnsd/&#34;&gt;pdnsd&lt;/a&gt;:&lt;/p&gt;
 
@@ -155,7 +154,7 @@ systemctl start pdnsd
 &lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;dig @xxx.xxx.xxx.xxx -p xxxx www.linux.com
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h2 id=&#34;local-openwrt-router:ed389849b892ef1bb1002c7398bba070&#34;&gt;Local OpenWrt Router&lt;/h2&gt;
+&lt;h2 id=&#34;local-openwrt-router&#34;&gt;Local OpenWrt Router&lt;/h2&gt;
 
 &lt;p&gt;Install &lt;a href=&#34;https://github.com/shadowsocks/openwrt-shadowsocks&#34;&gt;openwrt-shadowsocks&lt;/a&gt; &amp;amp;
 &lt;a href=&#34;https://github.com/shadowsocks/ChinaDNS&#34;&gt;ChinaDNS&lt;/a&gt; on an &lt;a href=&#34;https://openwrt.org/&#34;&gt;OpenWrt&lt;/a&gt; router.&lt;/p&gt;
@@ -263,7 +262,7 @@ config chinadns
     option nohosts &#39;1&#39;
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h2 id=&#34;redsocks2:ed389849b892ef1bb1002c7398bba070&#34;&gt;RedSocks2&lt;/h2&gt;
+&lt;h2 id=&#34;redsocks2&#34;&gt;RedSocks2&lt;/h2&gt;
 
 &lt;p&gt;Use RedSocks2 to bypass the proxy when the target site is reachable.&lt;/p&gt;
 
@@ -286,7 +285,7 @@ opkg install xxx.ipk
 
 &lt;p&gt;RedSocks2 will take effect immediately.&lt;/p&gt;
 
-&lt;h2 id=&#34;upgrade-openwrt:ed389849b892ef1bb1002c7398bba070&#34;&gt;Upgrade OpenWRT&lt;/h2&gt;
+&lt;h2 id=&#34;upgrade-openwrt&#34;&gt;Upgrade OpenWRT&lt;/h2&gt;
 
 &lt;p&gt;Download latest &lt;code&gt;*.ipk&lt;/code&gt; above.&lt;/p&gt;
 
@@ -306,7 +305,7 @@ scp ignore.list root@192.168.2.1:/etc/shadowsocks/ignore.list
 &lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;reboot
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h2 id=&#34;android-client:ed389849b892ef1bb1002c7398bba070&#34;&gt;Android Client&lt;/h2&gt;
+&lt;h2 id=&#34;android-client&#34;&gt;Android Client&lt;/h2&gt;
 
 &lt;p&gt;&lt;a href=&#34;https://github.com/shadowsocks/shadowsocks-android/releases&#34;&gt;shadowsocks-android&lt;/a&gt;.&lt;/p&gt;
 </description>
@@ -397,7 +396,7 @@ or not, so the root path needs no redirection.&lt;/p&gt;
       <guid>http://h12.me/article/pagespeed-insights/</guid>
       <description>
 
-&lt;h2 id=&#34;indtroduction:679b7602d5a8b08073cea405cbeecd74&#34;&gt;Indtroduction&lt;/h2&gt;
+&lt;h2 id=&#34;indtroduction&#34;&gt;Indtroduction&lt;/h2&gt;
 
 &lt;p&gt;&lt;a href=&#34;https://developers.google.com/speed/pagespeed/insights/&#34;&gt;PageSpeed Insights&lt;/a&gt; is
 an online tool by Google to measure the performance of an web page for mobile
@@ -414,9 +413,9 @@ than 1 sec to about 500 ms in the &lt;a href=&#34;http://fpt.pingdom.com/&#34;&g
 In the following section, I would like to share what I have learned by
 optimizing this website to achieve a &lt;a href=&#34;https://developers.google.com/speed/pagespeed/insights/?url=http%3A%2F%2Fh12.me&#34;&gt;perfect score&lt;/a&gt;, rule by rule.&lt;/p&gt;
 
-&lt;h2 id=&#34;speed-rules:679b7602d5a8b08073cea405cbeecd74&#34;&gt;Speed rules&lt;/h2&gt;
+&lt;h2 id=&#34;speed-rules&#34;&gt;Speed rules&lt;/h2&gt;
 
-&lt;h3 id=&#34;avoid-landing-page-redirects:679b7602d5a8b08073cea405cbeecd74&#34;&gt;Avoid landing page redirects&lt;/h3&gt;
+&lt;h3 id=&#34;avoid-landing-page-redirects&#34;&gt;Avoid landing page redirects&lt;/h3&gt;
 
 &lt;p&gt;The redirection to mobile version can be avoided by responsive design (CSS media
 queries).&lt;/p&gt;
@@ -425,7 +424,7 @@ queries).&lt;/p&gt;
 subdomain to the naked domain, but the naked domain does not have any further
 redirection.&lt;/p&gt;
 
-&lt;h3 id=&#34;eliminate-render-blocking-javascript-and-css-in-above-the-fold-content:679b7602d5a8b08073cea405cbeecd74&#34;&gt;Eliminate render-blocking JavaScript and CSS in above-the-fold content&lt;/h3&gt;
+&lt;h3 id=&#34;eliminate-render-blocking-javascript-and-css-in-above-the-fold-content&#34;&gt;Eliminate render-blocking JavaScript and CSS in above-the-fold content&lt;/h3&gt;
 
 &lt;p&gt;This might be the hardest rule to fully comply with.&lt;/p&gt;
 
@@ -444,46 +443,46 @@ are loaded asychronously but executed in order.&lt;/p&gt;
 layout of above-the-fold content. You might have to make some trade off and cut
 off some functionality.&lt;/p&gt;
 
-&lt;h3 id=&#34;enable-compression-leverage-browser-caching-reduce-server-response-time:679b7602d5a8b08073cea405cbeecd74&#34;&gt;Enable compression, Leverage browser caching &amp;amp; Reduce server response time&lt;/h3&gt;
+&lt;h3 id=&#34;enable-compression-leverage-browser-caching-reduce-server-response-time&#34;&gt;Enable compression, Leverage browser caching &amp;amp; Reduce server response time&lt;/h3&gt;
 
 &lt;p&gt;Since I uses Google App Engine, the gzip compression should already been enabled
 by default, the expiration time for static resources are configurable via
 config.yaml and GAE responses fast enough.&lt;/p&gt;
 
-&lt;h3 id=&#34;minify-resources-html-css-and-javascript:679b7602d5a8b08073cea405cbeecd74&#34;&gt;Minify Resources (HTML, CSS, and JavaScript)&lt;/h3&gt;
+&lt;h3 id=&#34;minify-resources-html-css-and-javascript&#34;&gt;Minify Resources (HTML, CSS, and JavaScript)&lt;/h3&gt;
 
 &lt;p&gt;The CSS is minified by Compass, and scripts imported are already minified. The
 HTML file is not minified but it seems not serious enough to trigger a test
 warning by PageSpeed.&lt;/p&gt;
 
-&lt;h3 id=&#34;optimize-images:679b7602d5a8b08073cea405cbeecd74&#34;&gt;Optimize images&lt;/h3&gt;
+&lt;h3 id=&#34;optimize-images&#34;&gt;Optimize images&lt;/h3&gt;
 
 &lt;p&gt;I use font icons in my site. When there has to be an image, use PNG compressed with
 &lt;a href=&#34;http://optipng.sourceforge.net/&#34;&gt;OptiPNG&lt;/a&gt;.&lt;/p&gt;
 
-&lt;h3 id=&#34;reduce-the-size-of-the-above-the-fold-content:679b7602d5a8b08073cea405cbeecd74&#34;&gt;Reduce the size of the above-the-fold content&lt;/h3&gt;
+&lt;h3 id=&#34;reduce-the-size-of-the-above-the-fold-content&#34;&gt;Reduce the size of the above-the-fold content&lt;/h3&gt;
 
 &lt;p&gt;It basically depends on your design and just remember the YAGNI principle.&lt;/p&gt;
 
-&lt;h2 id=&#34;user-experience-rules:679b7602d5a8b08073cea405cbeecd74&#34;&gt;User experience rules&lt;/h2&gt;
+&lt;h2 id=&#34;user-experience-rules&#34;&gt;User experience rules&lt;/h2&gt;
 
 &lt;p&gt;These rule only applies to mobile platforms.&lt;/p&gt;
 
-&lt;h3 id=&#34;avoid-plugins:679b7602d5a8b08073cea405cbeecd74&#34;&gt;Avoid plugins&lt;/h3&gt;
+&lt;h3 id=&#34;avoid-plugins&#34;&gt;Avoid plugins&lt;/h3&gt;
 
 &lt;p&gt;None of them on my site.&lt;/p&gt;
 
-&lt;h3 id=&#34;configure-the-viewport:679b7602d5a8b08073cea405cbeecd74&#34;&gt;Configure the viewport&lt;/h3&gt;
+&lt;h3 id=&#34;configure-the-viewport&#34;&gt;Configure the viewport&lt;/h3&gt;
 
 &lt;p&gt;This is part of the responsive design.&lt;/p&gt;
 
-&lt;h3 id=&#34;size-content-to-viewport:679b7602d5a8b08073cea405cbeecd74&#34;&gt;Size content to viewport&lt;/h3&gt;
+&lt;h3 id=&#34;size-content-to-viewport&#34;&gt;Size content to viewport&lt;/h3&gt;
 
 &lt;p&gt;An important lesson: never write a URL directly in an article because URL does
 not wrap well and could overflow out of the viewport width. instead, give the
 URL a name composed of words.&lt;/p&gt;
 
-&lt;h3 id=&#34;size-tap-targets-appropriately-use-legible-font-sizes:679b7602d5a8b08073cea405cbeecd74&#34;&gt;Size tap targets appropriately &amp;amp; Use legible font sizes&lt;/h3&gt;
+&lt;h3 id=&#34;size-tap-targets-appropriately-use-legible-font-sizes&#34;&gt;Size tap targets appropriately &amp;amp; Use legible font sizes&lt;/h3&gt;
 
 &lt;p&gt;I have written some lists of links in my notes, which makes those links close to
 each other. To make them separate enough to pass this rule, the line height cannot
@@ -497,7 +496,7 @@ be too small, here is the minimal requirement from my tests (font-size/line-heig
 &lt;li&gt;20px/30px&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h2 id=&#34;conclusion:679b7602d5a8b08073cea405cbeecd74&#34;&gt;Conclusion&lt;/h2&gt;
+&lt;h2 id=&#34;conclusion&#34;&gt;Conclusion&lt;/h2&gt;
 
 &lt;p&gt;It is not rocket science to build a website with good performance. You just needs
 to tune and optimize every detail of your site patiently. In this process,
@@ -613,7 +612,7 @@ Go again (source:
 that need to be made. One of them is to decide the font size for each level of
 headings, i.e., typographic scale.&lt;/p&gt;
 
-&lt;h2 id=&#34;investigation:f9a358ee4dd031f5b9852a0d1cb742af&#34;&gt;Investigation&lt;/h2&gt;
+&lt;h2 id=&#34;investigation&#34;&gt;Investigation&lt;/h2&gt;
 
 &lt;p&gt;The first thing I did was to read &lt;a href=&#34;https://www.google.com/?#newwindow=1&amp;amp;q=typographic+scale&#34;&gt;everything online&lt;/a&gt;
 about typographic scale. I will just skip the details and jump to my opinions:&lt;/p&gt;
@@ -640,7 +639,7 @@ irrelevant factors, instead, we should consider the constraints from our
 &lt;em&gt;real problem&lt;/em&gt;. The same reason applies to the golden ratio and double-stranded
 scale.&lt;/p&gt;
 
-&lt;h2 id=&#34;problem-constraints:f9a358ee4dd031f5b9852a0d1cb742af&#34;&gt;Problem &amp;amp; constraints&lt;/h2&gt;
+&lt;h2 id=&#34;problem-constraints&#34;&gt;Problem &amp;amp; constraints&lt;/h2&gt;
 
 &lt;p&gt;What is a good typographic scale? For a Blog article, it should at least meet the
 following requirements:&lt;/p&gt;
@@ -668,7 +667,7 @@ of body copy (vertical rhythm)&lt;/li&gt;
 &lt;li&gt;The maximum acceptable size of the top heading&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h2 id=&#34;optimization:f9a358ee4dd031f5b9852a0d1cb742af&#34;&gt;Optimization&lt;/h2&gt;
+&lt;h2 id=&#34;optimization&#34;&gt;Optimization&lt;/h2&gt;
 
 &lt;p&gt;Design is a process exploring all the possible solutions (the design space) to
 find an optimal one, i.e. an &lt;a href=&#34;http://en.wikipedia.org/wiki/Optimization_problem&#34;&gt;optimization problem&lt;/a&gt;.
@@ -694,7 +693,7 @@ sorts all the solutions by the inconsistency and find the best solution.&lt;/p&g
 &lt;p&gt;Here is the code (runable online):
 &lt;a href=&#34;http://play.golang.org/p/rP09HJDUcz&#34;&gt;a Go program to calculate optimal typographic scale&lt;/a&gt;.&lt;/p&gt;
 
-&lt;h2 id=&#34;example:f9a358ee4dd031f5b9852a0d1cb742af&#34;&gt;Example&lt;/h2&gt;
+&lt;h2 id=&#34;example&#34;&gt;Example&lt;/h2&gt;
 
 &lt;p&gt;In this site, I need to use maximum three levels of headings: H1, H2 &amp;amp; H3. I
 choose 19px/30px as body copy. The search range for H3 is from 1.2*19px to
@@ -710,7 +709,7 @@ H1: 39px/1.5
 &lt;p&gt;Though the line height of H2 is still not ideal, it is already the best solution
 given the restrictions by vertical rhythm.&lt;/p&gt;
 
-&lt;h2 id=&#34;conclusion:f9a358ee4dd031f5b9852a0d1cb742af&#34;&gt;Conclusion&lt;/h2&gt;
+&lt;h2 id=&#34;conclusion&#34;&gt;Conclusion&lt;/h2&gt;
 
 &lt;p&gt;The approach can sccessfully find the optimal typographic scale under the
 precise problem definition in this article. It does not rely on any mysterious
@@ -780,21 +779,19 @@ process or magic numbers, but only reasoning and computation.&lt;/p&gt;
       <guid>http://h12.me/project/getgo/</guid>
       <description>
 
-&lt;p&gt;&lt;a href=&#34;https://godoc.org/github.com/h12w/getgo&#34;&gt;&lt;img src=&#34;https://godoc.org/github.com/h12w/getgo?status.png&#34; alt=&#34;GoDoc&#34; /&gt;
-&lt;/a&gt;
-&lt;a href=&#34;https://travis-ci.org/h12w/getgo&#34;&gt;&lt;img src=&#34;https://travis-ci.org/h12w/getgo.svg?branch=master&#34; alt=&#34;Build Status&#34; /&gt;
-&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://godoc.org/github.com/h12w/getgo&#34;&gt;&lt;img src=&#34;https://godoc.org/github.com/h12w/getgo?status.png&#34; alt=&#34;GoDoc&#34; /&gt;&lt;/a&gt;
+&lt;a href=&#34;https://travis-ci.org/h12w/getgo&#34;&gt;&lt;img src=&#34;https://travis-ci.org/h12w/getgo.svg?branch=master&#34; alt=&#34;Build Status&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;Getgo is a concurrent, simple and extensible web scraping framework written in &lt;a href=&#34;http://golang.org&#34;&gt;Go&lt;/a&gt;.&lt;/p&gt;
 
-&lt;h2 id=&#34;quick-start:36c27f8231c10e0173d2fc93d9342435&#34;&gt;Quick start&lt;/h2&gt;
+&lt;h2 id=&#34;quick-start&#34;&gt;Quick start&lt;/h2&gt;
 
-&lt;h3 id=&#34;get-getgo:36c27f8231c10e0173d2fc93d9342435&#34;&gt;Get Getgo&lt;/h3&gt;
+&lt;h3 id=&#34;get-getgo&#34;&gt;Get Getgo&lt;/h3&gt;
 
 &lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;go get -u github.com/h12w/getgo
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h3 id=&#34;define-a-task:36c27f8231c10e0173d2fc93d9342435&#34;&gt;Define a task&lt;/h3&gt;
+&lt;h3 id=&#34;define-a-task&#34;&gt;Define a task&lt;/h3&gt;
 
 &lt;p&gt;This example is under the examples/goblog directory. To use Getgo to scrap structured
 data from a web page, just define the structured data as a Go struct (golangBlogEntry),
@@ -827,7 +824,7 @@ func (t golangBlogIndexTask) Handle(root *query.Node, s getgo.Storer) (err error
 }
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h3 id=&#34;run-the-task:36c27f8231c10e0173d2fc93d9342435&#34;&gt;Run the task&lt;/h3&gt;
+&lt;h3 id=&#34;run-the-task&#34;&gt;Run the task&lt;/h3&gt;
 
 &lt;p&gt;Use util.Run to run the task and print all the result to standard output.&lt;/p&gt;
 
@@ -837,7 +834,7 @@ func (t golangBlogIndexTask) Handle(root *query.Node, s getgo.Storer) (err error
 &lt;p&gt;To store the parsed result to a database, a storage backend satisfying getgo.Tx
 interface should be provided to the getgo.Run method.&lt;/p&gt;
 
-&lt;h2 id=&#34;understand-getgo:36c27f8231c10e0173d2fc93d9342435&#34;&gt;Understand Getgo&lt;/h2&gt;
+&lt;h2 id=&#34;understand-getgo&#34;&gt;Understand Getgo&lt;/h2&gt;
 
 &lt;p&gt;A getgo.Task is an interface to represent an HTTP crawler task that provides an
 HTTP request and a method to handle the HTTP response.&lt;/p&gt;

@@ -2,12 +2,11 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>One Liner on h12.me</title>
-    <link>http://h12.me/tags/one-liner/</link>
+    <link>http://h12.me/tags/one-liner/index.xml</link>
     <description>Recent content in One Liner on h12.me</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <copyright>Copyright (c) 2012-2016, Hǎiliàng Wáng; all rights reserved.</copyright>
-    <lastBuildDate>Tue, 20 Jun 2017 12:40:10 +0800</lastBuildDate>
+    <copyright>Copyright (c) 2012-2018, Hǎiliàng Wáng; all rights reserved.</copyright>
     <atom:link href="http://h12.me/tags/one-liner/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
@@ -117,12 +116,12 @@ cut -c9- &amp;gt; words_desc.txt
       <guid>http://h12.me/note/tips-on-ssh/</guid>
       <description>
 
-&lt;h2 id=&#34;generate-ssh-keys:94a5150ca2ae26062cc82162c1b651e1&#34;&gt;Generate SSH keys&lt;/h2&gt;
+&lt;h2 id=&#34;generate-ssh-keys&#34;&gt;Generate SSH keys&lt;/h2&gt;
 
 &lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;ssh-keygen -C w@h12.me
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h2 id=&#34;authorize-public-key-at-remote-server:94a5150ca2ae26062cc82162c1b651e1&#34;&gt;Authorize public key at remote server&lt;/h2&gt;
+&lt;h2 id=&#34;authorize-public-key-at-remote-server&#34;&gt;Authorize public key at remote server&lt;/h2&gt;
 
 &lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;ssh-copy-id user@host
 &lt;/code&gt;&lt;/pre&gt;
@@ -132,12 +131,12 @@ cut -c9- &amp;gt; words_desc.txt
 &lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;brew install ssh-copy-id
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h2 id=&#34;generate-pem:94a5150ca2ae26062cc82162c1b651e1&#34;&gt;Generate PEM&lt;/h2&gt;
+&lt;h2 id=&#34;generate-pem&#34;&gt;Generate PEM&lt;/h2&gt;
 
 &lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;ssh-keygen -f ~/.ssh/id_rsa -e -m pem &amp;gt; ~/.ssh/id_rsa.pem
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h2 id=&#34;copy-file-by-base64:94a5150ca2ae26062cc82162c1b651e1&#34;&gt;Copy file by base64&lt;/h2&gt;
+&lt;h2 id=&#34;copy-file-by-base64&#34;&gt;Copy file by base64&lt;/h2&gt;
 
 &lt;p&gt;On remote session, run &lt;code&gt;base64 &amp;lt; myfile&lt;/code&gt; and copy the output.&lt;/p&gt;
 

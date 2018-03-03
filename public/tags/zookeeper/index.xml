@@ -2,12 +2,11 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Zookeeper on h12.me</title>
-    <link>http://h12.me/tags/zookeeper/</link>
+    <link>http://h12.me/tags/zookeeper/index.xml</link>
     <description>Recent content in Zookeeper on h12.me</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <copyright>Copyright (c) 2012-2016, Hǎiliàng Wáng; all rights reserved.</copyright>
-    <lastBuildDate>Sat, 14 Nov 2015 13:57:09 +0800</lastBuildDate>
+    <copyright>Copyright (c) 2012-2018, Hǎiliàng Wáng; all rights reserved.</copyright>
     <atom:link href="http://h12.me/tags/zookeeper/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
@@ -46,11 +45,11 @@
 &lt;/ul&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h2 id=&#34;author:392938f6c0ed47446e9bccc40e79ace3&#34;&gt;Author&lt;/h2&gt;
+&lt;h2 id=&#34;author&#34;&gt;Author&lt;/h2&gt;
 
 &lt;p&gt;&lt;a href=&#34;https://github.com/h12w&#34;&gt;Hǎiliàng Wáng&lt;/a&gt;&lt;/p&gt;
 
-&lt;h2 id=&#34;contributors:392938f6c0ed47446e9bccc40e79ace3&#34;&gt;Contributors&lt;/h2&gt;
+&lt;h2 id=&#34;contributors&#34;&gt;Contributors&lt;/h2&gt;
 
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;https://github.com/AnotherGoogleFans&#34;&gt;Tao Huang&lt;/a&gt;&lt;/li&gt;

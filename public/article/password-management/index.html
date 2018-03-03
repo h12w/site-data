@@ -97,7 +97,7 @@ and its open source implementation (<a href="https://gnupg.org">GnuPG</a>)</li>
 <li>A backup plan: do not put all your eggs in one basket</li>
 </ul>
 
-<h2 id="install-prerequisites:8870b417a59981bead20d1ef5c323841">Install Prerequisites</h2>
+<h2 id="install-prerequisites">Install Prerequisites</h2>
 
 <p>On Linux:</p>
 
@@ -125,7 +125,7 @@ sudo apt-get install pass
 <li><a href="https://github.com/rephorm/pass-ios">Pass for iOS</a></li>
 </ul>
 
-<h2 id="preparing-pgp-keys:8870b417a59981bead20d1ef5c323841">Preparing PGP Keys</h2>
+<h2 id="preparing-pgp-keys">Preparing PGP Keys</h2>
 
 <p>If you are already a PGP user, skip this step, otherwise, you are going to generate:</p>
 
@@ -184,7 +184,7 @@ sub   4096R/&lt;sub-key-id&gt; &lt;date&gt;
 save
 </code></pre>
 
-<h2 id="intialize-a-pass-store:8870b417a59981bead20d1ef5c323841">Intialize a Pass Store</h2>
+<h2 id="intialize-a-pass-store">Intialize a Pass Store</h2>
 
 <p>A password store is simply a directory including encrypted files, and each of them
 contains a password (the first line) and extra information (rest of the file).</p>
@@ -193,9 +193,9 @@ contains a password (the first line) and extra information (rest of the file).</
 pass init &lt;sub-key-id&gt;
 </code></pre>
 
-<h2 id="password-management-tips:8870b417a59981bead20d1ef5c323841">Password Management Tips</h2>
+<h2 id="password-management-tips">Password Management Tips</h2>
 
-<h3 id="replace-existing-passwords-with-strong-ones:8870b417a59981bead20d1ef5c323841">Replace Existing Passwords with Strong Ones</h3>
+<h3 id="replace-existing-passwords-with-strong-ones">Replace Existing Passwords with Strong Ones</h3>
 
 <p>Generate a random password (15 characters):</p>
 
@@ -212,12 +212,12 @@ line is the generated password.</p>
 
 <p>Then you can update the password online accordingly.</p>
 
-<h3 id="put-a-password-into-clipboard-for-45-seconds:8870b417a59981bead20d1ef5c323841">Put a password into Clipboard for 45 seconds</h3>
+<h3 id="put-a-password-into-clipboard-for-45-seconds">Put a password into Clipboard for 45 seconds</h3>
 
 <pre><code>pass -c &lt;account-name&gt;
 </code></pre>
 
-<h3 id="avoid-typing-master-passwords-repeatedly:8870b417a59981bead20d1ef5c323841">Avoid typing master passwords repeatedly</h3>
+<h3 id="avoid-typing-master-passwords-repeatedly">Avoid typing master passwords repeatedly</h3>
 
 <p>Add configuration file <code>$HOME/.gnupg/gpg-agent.conf</code> and remember the master
 password for 3600 seconds:</p>
@@ -227,7 +227,7 @@ default-cache-ttl 3600
 max-cache-ttl 3600
 </code></pre>
 
-<h3 id="store-ssh-keys:8870b417a59981bead20d1ef5c323841">Store SSH keys</h3>
+<h3 id="store-ssh-keys">Store SSH keys</h3>
 
 <p>Store SSH public key as the password in the pass store, and encrypt the private
 key in the rest of the file.</p>
@@ -237,7 +237,7 @@ key in the rest of the file.</p>
 <pre><code>git remote set-url origin git@&lt;domain-name&gt;:&lt;repo-path&gt;.git
 </code></pre>
 
-<h2 id="backup-plan:8870b417a59981bead20d1ef5c323841">Backup Plan</h2>
+<h2 id="backup-plan">Backup Plan</h2>
 
 <p>Prepare for the following extreme case:</p>
 
@@ -247,7 +247,7 @@ damaged or stolen.</li>
 <li>But you can still remember the master pass phrase.</li>
 </ul>
 
-<h3 id="use-a-remote-git-repository-to-backup-the-password-store:8870b417a59981bead20d1ef5c323841">Use a remote Git repository to backup the password store</h3>
+<h3 id="use-a-remote-git-repository-to-backup-the-password-store">Use a remote Git repository to backup the password store</h3>
 
 <pre><code>cd &lt;pass-store&gt;
 pass git init
@@ -255,7 +255,7 @@ pass git remote add origin &lt;remote-git-url&gt;
 pass git push
 </code></pre>
 
-<h3 id="backup-pgp-keys:8870b417a59981bead20d1ef5c323841">Backup PGP keys</h3>
+<h3 id="backup-pgp-keys">Backup PGP keys</h3>
 
 <p>Export all the key pairs (including both master and sub keys):</p>
 
@@ -270,7 +270,7 @@ gpg --export             --armor &lt;email-address&gt;  &gt;  &lt;public-key-fil
 <pre><code>gpg --import &lt;private-key-file&gt; &lt;public-key-file&gt;
 </code></pre>
 
-<h2 id="hide-pgp-master-private-key:8870b417a59981bead20d1ef5c323841">Hide PGP Master Private Key</h2>
+<h2 id="hide-pgp-master-private-key">Hide PGP Master Private Key</h2>
 
 <p>AFTER the full backup of your PGP keys, you can choose to delete the master
 private key on the device with the pass store, because only the sub key pair is
@@ -283,12 +283,12 @@ gpg   --import subkeys
 shred --remove subkeys
 </code></pre>
 
-<h2 id="security-limitation:8870b417a59981bead20d1ef5c323841">Security Limitation</h2>
+<h2 id="security-limitation">Security Limitation</h2>
 
 <p>PGP itself is secure and robust, but it all depends on how well you can preserve
 and protect your PGP key pair and master pass phrase.</p>
 
-<h2 id="references:8870b417a59981bead20d1ef5c323841">References</h2>
+<h2 id="references">References</h2>
 
 <ol>
 <li><a href="https://alexcabal.com/creating-the-perfect-gpg-keypair">Creating the Perfect GPG Keypair</a></li>

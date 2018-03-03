@@ -80,31 +80,30 @@
                 
                 
 
-<p><a href="https://godoc.org/h12.me/socks"><img src="https://godoc.org/h12.me/socks?status.svg" alt="GoDoc" />
-</a></p>
+<p><a href="https://godoc.org/h12.me/socks"><img src="https://godoc.org/h12.me/socks?status.svg" alt="GoDoc" /></a></p>
 
 <p>SOCKS is a SOCKS4, SOCKS4A and SOCKS5 proxy package for Go.</p>
 
-<h2 id="quick-start:d77d00cbd213acbdf85f41426e5559a4">Quick Start</h2>
+<h2 id="quick-start">Quick Start</h2>
 
-<h3 id="get-the-package:d77d00cbd213acbdf85f41426e5559a4">Get the package</h3>
+<h3 id="get-the-package">Get the package</h3>
 
 <pre><code>go get -u &quot;h12.me/socks&quot;
 </code></pre>
 
-<h3 id="import-the-package:d77d00cbd213acbdf85f41426e5559a4">Import the package</h3>
+<h3 id="import-the-package">Import the package</h3>
 
 <pre><code>import &quot;h12.me/socks&quot;
 </code></pre>
 
-<h3 id="create-a-socks-proxy-dialing-function:d77d00cbd213acbdf85f41426e5559a4">Create a SOCKS proxy dialing function</h3>
+<h3 id="create-a-socks-proxy-dialing-function">Create a SOCKS proxy dialing function</h3>
 
 <pre><code>dialSocksProxy := socks.DialSocksProxy(socks.SOCKS5, &quot;127.0.0.1:1080&quot;)
 tr := &amp;http.Transport{Dial: dialSocksProxy}
 httpClient := &amp;http.Client{Transport: tr}
 </code></pre>
 
-<h2 id="alternatives:d77d00cbd213acbdf85f41426e5559a4">Alternatives</h2>
+<h2 id="alternatives">Alternatives</h2>
 
 <p><a href="http://code.google.com/p/go/source/browse/?repo=net#hg%2Fproxy">http://code.google.com/p/go/source/browse/?repo=net#hg%2Fproxy</a></p>
 

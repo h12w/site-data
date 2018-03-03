@@ -2,12 +2,11 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Scraping on h12.me</title>
-    <link>http://h12.me/tags/scraping/</link>
+    <link>http://h12.me/tags/scraping/index.xml</link>
     <description>Recent content in Scraping on h12.me</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <copyright>Copyright (c) 2012-2016, Hǎiliàng Wáng; all rights reserved.</copyright>
-    <lastBuildDate>Mon, 02 Jun 2014 01:21:00 +0000</lastBuildDate>
+    <copyright>Copyright (c) 2012-2018, Hǎiliàng Wáng; all rights reserved.</copyright>
     <atom:link href="http://h12.me/tags/scraping/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
@@ -18,21 +17,19 @@
       <guid>http://h12.me/project/getgo/</guid>
       <description>
 
-&lt;p&gt;&lt;a href=&#34;https://godoc.org/github.com/h12w/getgo&#34;&gt;&lt;img src=&#34;https://godoc.org/github.com/h12w/getgo?status.png&#34; alt=&#34;GoDoc&#34; /&gt;
-&lt;/a&gt;
-&lt;a href=&#34;https://travis-ci.org/h12w/getgo&#34;&gt;&lt;img src=&#34;https://travis-ci.org/h12w/getgo.svg?branch=master&#34; alt=&#34;Build Status&#34; /&gt;
-&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://godoc.org/github.com/h12w/getgo&#34;&gt;&lt;img src=&#34;https://godoc.org/github.com/h12w/getgo?status.png&#34; alt=&#34;GoDoc&#34; /&gt;&lt;/a&gt;
+&lt;a href=&#34;https://travis-ci.org/h12w/getgo&#34;&gt;&lt;img src=&#34;https://travis-ci.org/h12w/getgo.svg?branch=master&#34; alt=&#34;Build Status&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;Getgo is a concurrent, simple and extensible web scraping framework written in &lt;a href=&#34;http://golang.org&#34;&gt;Go&lt;/a&gt;.&lt;/p&gt;
 
-&lt;h2 id=&#34;quick-start:36c27f8231c10e0173d2fc93d9342435&#34;&gt;Quick start&lt;/h2&gt;
+&lt;h2 id=&#34;quick-start&#34;&gt;Quick start&lt;/h2&gt;
 
-&lt;h3 id=&#34;get-getgo:36c27f8231c10e0173d2fc93d9342435&#34;&gt;Get Getgo&lt;/h3&gt;
+&lt;h3 id=&#34;get-getgo&#34;&gt;Get Getgo&lt;/h3&gt;
 
 &lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;go get -u github.com/h12w/getgo
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h3 id=&#34;define-a-task:36c27f8231c10e0173d2fc93d9342435&#34;&gt;Define a task&lt;/h3&gt;
+&lt;h3 id=&#34;define-a-task&#34;&gt;Define a task&lt;/h3&gt;
 
 &lt;p&gt;This example is under the examples/goblog directory. To use Getgo to scrap structured
 data from a web page, just define the structured data as a Go struct (golangBlogEntry),
@@ -65,7 +62,7 @@ func (t golangBlogIndexTask) Handle(root *query.Node, s getgo.Storer) (err error
 }
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h3 id=&#34;run-the-task:36c27f8231c10e0173d2fc93d9342435&#34;&gt;Run the task&lt;/h3&gt;
+&lt;h3 id=&#34;run-the-task&#34;&gt;Run the task&lt;/h3&gt;
 
 &lt;p&gt;Use util.Run to run the task and print all the result to standard output.&lt;/p&gt;
 
@@ -75,7 +72,7 @@ func (t golangBlogIndexTask) Handle(root *query.Node, s getgo.Storer) (err error
 &lt;p&gt;To store the parsed result to a database, a storage backend satisfying getgo.Tx
 interface should be provided to the getgo.Run method.&lt;/p&gt;
 
-&lt;h2 id=&#34;understand-getgo:36c27f8231c10e0173d2fc93d9342435&#34;&gt;Understand Getgo&lt;/h2&gt;
+&lt;h2 id=&#34;understand-getgo&#34;&gt;Understand Getgo&lt;/h2&gt;
 
 &lt;p&gt;A getgo.Task is an interface to represent an HTTP crawler task that provides an
 HTTP request and a method to handle the HTTP response.&lt;/p&gt;

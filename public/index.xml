@@ -2,13 +2,532 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>h12.me</title>
-    <link>http://h12.me/</link>
+    <link>http://h12.me/index.xml</link>
     <description>Recent content on h12.me</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <copyright>Copyright (c) 2012-2016, Hǎiliàng Wáng; all rights reserved.</copyright>
-    <lastBuildDate>Wed, 28 Feb 2018 13:38:45 +0800</lastBuildDate>
+    <copyright>Copyright (c) 2012-2018, Hǎiliàng Wáng; all rights reserved.</copyright>
+    <lastBuildDate>Thu, 10 Jul 2014 03:06:35 +0000</lastBuildDate>
     <atom:link href="http://h12.me/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Font size test for body copy</title>
+      <link>http://h12.me/test/size_test/</link>
+      <pubDate>Thu, 10 Jul 2014 03:06:35 +0000</pubDate>
+      
+      <guid>http://h12.me/test/size_test/</guid>
+      <description>
+
+&lt;h3 id=&#34;24px&#34;&gt;24px&lt;/h3&gt;
+
+&lt;p&gt;&lt;span style=&#34;font-size: 24px; line-height: 1.5&#34;&gt;A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I enjoy with my whole heart. I am alone, and feel the charm of existence in this spot, which was created for the bliss of souls like mine. I am so happy, my dear friend, so absorbed in the exquisite sense of mere tranquil existence, that I neglect my talents. I should be incapable of drawing a single stroke at the present moment; and yet I feel that I never was a greater artist than now. When, while the lovely valley teems with vapour around me, and the meridian sun strikes the upper surface of the impenetrable foliage of my trees, and but a few stray gleams steal into the inner sanctuary, I throw myself down among the tall grass by the trickling stream; and, as I lie close to the earth, a thousand unknown plants are noticed by me: when I hear the buzz of the little world among the stalks, and grow familiar with the countless indescribable forms of the insects and flies, then I feel the presence of the Almighty, who formed us in his own image.&lt;/span&gt;&lt;/p&gt;
+
+&lt;h3 id=&#34;23px&#34;&gt;23px&lt;/h3&gt;
+
+&lt;p&gt;&lt;span style=&#34;font-size: 23px; line-height: 1.5&#34;&gt;A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I enjoy with my whole heart. I am alone, and feel the charm of existence in this spot, which was created for the bliss of souls like mine. I am so happy, my dear friend, so absorbed in the exquisite sense of mere tranquil existence, that I neglect my talents. I should be incapable of drawing a single stroke at the present moment; and yet I feel that I never was a greater artist than now. When, while the lovely valley teems with vapour around me, and the meridian sun strikes the upper surface of the impenetrable foliage of my trees, and but a few stray gleams steal into the inner sanctuary, I throw myself down among the tall grass by the trickling stream; and, as I lie close to the earth, a thousand unknown plants are noticed by me: when I hear the buzz of the little world among the stalks, and grow familiar with the countless indescribable forms of the insects and flies, then I feel the presence of the Almighty, who formed us in his own image.&lt;/span&gt;&lt;/p&gt;
+
+&lt;h3 id=&#34;22px&#34;&gt;22px&lt;/h3&gt;
+
+&lt;p&gt;&lt;span style=&#34;font-size: 22px; line-height: 1.5&#34;&gt;A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I enjoy with my whole heart. I am alone, and feel the charm of existence in this spot, which was created for the bliss of souls like mine. I am so happy, my dear friend, so absorbed in the exquisite sense of mere tranquil existence, that I neglect my talents. I should be incapable of drawing a single stroke at the present moment; and yet I feel that I never was a greater artist than now. When, while the lovely valley teems with vapour around me, and the meridian sun strikes the upper surface of the impenetrable foliage of my trees, and but a few stray gleams steal into the inner sanctuary, I throw myself down among the tall grass by the trickling stream; and, as I lie close to the earth, a thousand unknown plants are noticed by me: when I hear the buzz of the little world among the stalks, and grow familiar with the countless indescribable forms of the insects and flies, then I feel the presence of the Almighty, who formed us in his own image.&lt;/span&gt;&lt;/p&gt;
+
+&lt;h3 id=&#34;21px&#34;&gt;21px&lt;/h3&gt;
+
+&lt;p&gt;&lt;span style=&#34;font-size: 21px; line-height: 1.5&#34;&gt;A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I enjoy with my whole heart. I am alone, and feel the charm of existence in this spot, which was created for the bliss of souls like mine. I am so happy, my dear friend, so absorbed in the exquisite sense of mere tranquil existence, that I neglect my talents. I should be incapable of drawing a single stroke at the present moment; and yet I feel that I never was a greater artist than now. When, while the lovely valley teems with vapour around me, and the meridian sun strikes the upper surface of the impenetrable foliage of my trees, and but a few stray gleams steal into the inner sanctuary, I throw myself down among the tall grass by the trickling stream; and, as I lie close to the earth, a thousand unknown plants are noticed by me: when I hear the buzz of the little world among the stalks, and grow familiar with the countless indescribable forms of the insects and flies, then I feel the presence of the Almighty, who formed us in his own image.&lt;/span&gt;&lt;/p&gt;
+
+&lt;h3 id=&#34;20px&#34;&gt;20px&lt;/h3&gt;
+
+&lt;p&gt;&lt;span style=&#34;font-size: 20px; line-height: 1.5&#34;&gt;A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I enjoy with my whole heart. I am alone, and feel the charm of existence in this spot, which was created for the bliss of souls like mine. I am so happy, my dear friend, so absorbed in the exquisite sense of mere tranquil existence, that I neglect my talents. I should be incapable of drawing a single stroke at the present moment; and yet I feel that I never was a greater artist than now. When, while the lovely valley teems with vapour around me, and the meridian sun strikes the upper surface of the impenetrable foliage of my trees, and but a few stray gleams steal into the inner sanctuary, I throw myself down among the tall grass by the trickling stream; and, as I lie close to the earth, a thousand unknown plants are noticed by me: when I hear the buzz of the little world among the stalks, and grow familiar with the countless indescribable forms of the insects and flies, then I feel the presence of the Almighty, who formed us in his own image.&lt;/span&gt;&lt;/p&gt;
+
+&lt;h3 id=&#34;19px&#34;&gt;19px&lt;/h3&gt;
+
+&lt;p&gt;&lt;span style=&#34;font-size: 19px; line-height: 1.5&#34;&gt;A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I enjoy with my whole heart. I am alone, and feel the charm of existence in this spot, which was created for the bliss of souls like mine. I am so happy, my dear friend, so absorbed in the exquisite sense of mere tranquil existence, that I neglect my talents. I should be incapable of drawing a single stroke at the present moment; and yet I feel that I never was a greater artist than now. When, while the lovely valley teems with vapour around me, and the meridian sun strikes the upper surface of the impenetrable foliage of my trees, and but a few stray gleams steal into the inner sanctuary, I throw myself down among the tall grass by the trickling stream; and, as I lie close to the earth, a thousand unknown plants are noticed by me: when I hear the buzz of the little world among the stalks, and grow familiar with the countless indescribable forms of the insects and flies, then I feel the presence of the Almighty, who formed us in his own image.&lt;/span&gt;&lt;/p&gt;
+
+&lt;h3 id=&#34;18px&#34;&gt;18px&lt;/h3&gt;
+
+&lt;p&gt;&lt;span style=&#34;font-size: 18px; line-height: 1.5&#34;&gt;A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I enjoy with my whole heart. I am alone, and feel the charm of existence in this spot, which was created for the bliss of souls like mine. I am so happy, my dear friend, so absorbed in the exquisite sense of mere tranquil existence, that I neglect my talents. I should be incapable of drawing a single stroke at the present moment; and yet I feel that I never was a greater artist than now. When, while the lovely valley teems with vapour around me, and the meridian sun strikes the upper surface of the impenetrable foliage of my trees, and but a few stray gleams steal into the inner sanctuary, I throw myself down among the tall grass by the trickling stream; and, as I lie close to the earth, a thousand unknown plants are noticed by me: when I hear the buzz of the little world among the stalks, and grow familiar with the countless indescribable forms of the insects and flies, then I feel the presence of the Almighty, who formed us in his own image.&lt;/span&gt;&lt;/p&gt;
+
+&lt;h3 id=&#34;17px&#34;&gt;17px&lt;/h3&gt;
+
+&lt;p&gt;&lt;span style=&#34;font-size: 17px; line-height: 1.5&#34;&gt;A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I enjoy with my whole heart. I am alone, and feel the charm of existence in this spot, which was created for the bliss of souls like mine. I am so happy, my dear friend, so absorbed in the exquisite sense of mere tranquil existence, that I neglect my talents. I should be incapable of drawing a single stroke at the present moment; and yet I feel that I never was a greater artist than now. When, while the lovely valley teems with vapour around me, and the meridian sun strikes the upper surface of the impenetrable foliage of my trees, and but a few stray gleams steal into the inner sanctuary, I throw myself down among the tall grass by the trickling stream; and, as I lie close to the earth, a thousand unknown plants are noticed by me: when I hear the buzz of the little world among the stalks, and grow familiar with the countless indescribable forms of the insects and flies, then I feel the presence of the Almighty, who formed us in his own image.&lt;/span&gt;&lt;/p&gt;
+
+&lt;h3 id=&#34;16px&#34;&gt;16px&lt;/h3&gt;
+
+&lt;p&gt;&lt;span style=&#34;font-size: 16px; line-height: 1.5&#34;&gt;A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I enjoy with my whole heart. I am alone, and feel the charm of existence in this spot, which was created for the bliss of souls like mine. I am so happy, my dear friend, so absorbed in the exquisite sense of mere tranquil existence, that I neglect my talents. I should be incapable of drawing a single stroke at the present moment; and yet I feel that I never was a greater artist than now. When, while the lovely valley teems with vapour around me, and the meridian sun strikes the upper surface of the impenetrable foliage of my trees, and but a few stray gleams steal into the inner sanctuary, I throw myself down among the tall grass by the trickling stream; and, as I lie close to the earth, a thousand unknown plants are noticed by me: when I hear the buzz of the little world among the stalks, and grow familiar with the countless indescribable forms of the insects and flies, then I feel the presence of the Almighty, who formed us in his own image.&lt;/span&gt;&lt;/p&gt;
+
+&lt;h3 id=&#34;15px&#34;&gt;15px&lt;/h3&gt;
+
+&lt;p&gt;&lt;span style=&#34;font-size: 15px; line-height: 1.5&#34;&gt;A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I enjoy with my whole heart. I am alone, and feel the charm of existence in this spot, which was created for the bliss of souls like mine. I am so happy, my dear friend, so absorbed in the exquisite sense of mere tranquil existence, that I neglect my talents. I should be incapable of drawing a single stroke at the present moment; and yet I feel that I never was a greater artist than now. When, while the lovely valley teems with vapour around me, and the meridian sun strikes the upper surface of the impenetrable foliage of my trees, and but a few stray gleams steal into the inner sanctuary, I throw myself down among the tall grass by the trickling stream; and, as I lie close to the earth, a thousand unknown plants are noticed by me: when I hear the buzz of the little world among the stalks, and grow familiar with the countless indescribable forms of the insects and flies, then I feel the presence of the Almighty, who formed us in his own image.&lt;/span&gt;&lt;/p&gt;
+
+&lt;h3 id=&#34;14px&#34;&gt;14px&lt;/h3&gt;
+
+&lt;p&gt;&lt;span style=&#34;font-size: 14px; line-height: 1.5&#34;&gt;A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I enjoy with my whole heart. I am alone, and feel the charm of existence in this spot, which was created for the bliss of souls like mine. I am so happy, my dear friend, so absorbed in the exquisite sense of mere tranquil existence, that I neglect my talents. I should be incapable of drawing a single stroke at the present moment; and yet I feel that I never was a greater artist than now. When, while the lovely valley teems with vapour around me, and the meridian sun strikes the upper surface of the impenetrable foliage of my trees, and but a few stray gleams steal into the inner sanctuary, I throw myself down among the tall grass by the trickling stream; and, as I lie close to the earth, a thousand unknown plants are noticed by me: when I hear the buzz of the little world among the stalks, and grow familiar with the countless indescribable forms of the insects and flies, then I feel the presence of the Almighty, who formed us in his own image.&lt;/span&gt;&lt;/p&gt;
+
+&lt;h3 id=&#34;13px&#34;&gt;13px&lt;/h3&gt;
+
+&lt;p&gt;&lt;span style=&#34;font-size: 13px; line-height: 1.5&#34;&gt;A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I enjoy with my whole heart. I am alone, and feel the charm of existence in this spot, which was created for the bliss of souls like mine. I am so happy, my dear friend, so absorbed in the exquisite sense of mere tranquil existence, that I neglect my talents. I should be incapable of drawing a single stroke at the present moment; and yet I feel that I never was a greater artist than now. When, while the lovely valley teems with vapour around me, and the meridian sun strikes the upper surface of the impenetrable foliage of my trees, and but a few stray gleams steal into the inner sanctuary, I throw myself down among the tall grass by the trickling stream; and, as I lie close to the earth, a thousand unknown plants are noticed by me: when I hear the buzz of the little world among the stalks, and grow familiar with the countless indescribable forms of the insects and flies, then I feel the presence of the Almighty, who formed us in his own image.&lt;/span&gt;&lt;/p&gt;
+
+&lt;h3 id=&#34;12px&#34;&gt;12px&lt;/h3&gt;
+
+&lt;p&gt;&lt;span style=&#34;font-size: 12px; line-height: 1.5&#34;&gt;A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I enjoy with my whole heart. I am alone, and feel the charm of existence in this spot, which was created for the bliss of souls like mine. I am so happy, my dear friend, so absorbed in the exquisite sense of mere tranquil existence, that I neglect my talents. I should be incapable of drawing a single stroke at the present moment; and yet I feel that I never was a greater artist than now. When, while the lovely valley teems with vapour around me, and the meridian sun strikes the upper surface of the impenetrable foliage of my trees, and but a few stray gleams steal into the inner sanctuary, I throw myself down among the tall grass by the trickling stream; and, as I lie close to the earth, a thousand unknown plants are noticed by me: when I hear the buzz of the little world among the stalks, and grow familiar with the countless indescribable forms of the insects and flies, then I feel the presence of the Almighty, who formed us in his own image.&lt;/span&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Line height test for body copy</title>
+      <link>http://h12.me/test/height_test/</link>
+      <pubDate>Thu, 10 Jul 2014 03:06:35 +0000</pubDate>
+      
+      <guid>http://h12.me/test/height_test/</guid>
+      <description>
+
+&lt;h3 id=&#34;1-7&#34;&gt;1.7&lt;/h3&gt;
+
+&lt;p&gt;&lt;span style=&#34;display: inline-block; font-size: 18px; line-height: 1.7&#34;&gt;A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I enjoy with my whole heart. I am alone, and feel the charm of existence in this spot, which was created for the bliss of souls like mine. I am so happy, my dear friend, so absorbed in the exquisite sense of mere tranquil existence, that I neglect my talents. I should be incapable of drawing a single stroke at the present moment; and yet I feel that I never was a greater artist than now. When, while the lovely valley teems with vapour around me, and the meridian sun strikes the upper surface of the impenetrable foliage of my trees, and but a few stray gleams steal into the inner sanctuary, I throw myself down among the tall grass by the trickling stream; and, as I lie close to the earth, a thousand unknown plants are noticed by me: when I hear the buzz of the little world among the stalks, and grow familiar with the countless indescribable forms of the insects and flies, then I feel the presence of the Almighty, who formed us in his own image.&lt;/span&gt;&lt;/p&gt;
+
+&lt;h3 id=&#34;1-65&#34;&gt;1.65&lt;/h3&gt;
+
+&lt;p&gt;&lt;span style=&#34;display: inline-block; font-size: 18px; line-height: 1.65&#34;&gt;A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I enjoy with my whole heart. I am alone, and feel the charm of existence in this spot, which was created for the bliss of souls like mine. I am so happy, my dear friend, so absorbed in the exquisite sense of mere tranquil existence, that I neglect my talents. I should be incapable of drawing a single stroke at the present moment; and yet I feel that I never was a greater artist than now. When, while the lovely valley teems with vapour around me, and the meridian sun strikes the upper surface of the impenetrable foliage of my trees, and but a few stray gleams steal into the inner sanctuary, I throw myself down among the tall grass by the trickling stream; and, as I lie close to the earth, a thousand unknown plants are noticed by me: when I hear the buzz of the little world among the stalks, and grow familiar with the countless indescribable forms of the insects and flies, then I feel the presence of the Almighty, who formed us in his own image.&lt;/span&gt;&lt;/p&gt;
+
+&lt;h3 id=&#34;1-6&#34;&gt;1.6&lt;/h3&gt;
+
+&lt;p&gt;&lt;span style=&#34;display: inline-block; font-size: 18px; line-height: 1.6&#34;&gt;A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I enjoy with my whole heart. I am alone, and feel the charm of existence in this spot, which was created for the bliss of souls like mine. I am so happy, my dear friend, so absorbed in the exquisite sense of mere tranquil existence, that I neglect my talents. I should be incapable of drawing a single stroke at the present moment; and yet I feel that I never was a greater artist than now. When, while the lovely valley teems with vapour around me, and the meridian sun strikes the upper surface of the impenetrable foliage of my trees, and but a few stray gleams steal into the inner sanctuary, I throw myself down among the tall grass by the trickling stream; and, as I lie close to the earth, a thousand unknown plants are noticed by me: when I hear the buzz of the little world among the stalks, and grow familiar with the countless indescribable forms of the insects and flies, then I feel the presence of the Almighty, who formed us in his own image.&lt;/span&gt;&lt;/p&gt;
+
+&lt;h3 id=&#34;1-55&#34;&gt;1.55&lt;/h3&gt;
+
+&lt;p&gt;&lt;span style=&#34;display: inline-block; font-size: 18px; line-height: 1.55&#34;&gt;A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I enjoy with my whole heart. I am alone, and feel the charm of existence in this spot, which was created for the bliss of souls like mine. I am so happy, my dear friend, so absorbed in the exquisite sense of mere tranquil existence, that I neglect my talents. I should be incapable of drawing a single stroke at the present moment; and yet I feel that I never was a greater artist than now. When, while the lovely valley teems with vapour around me, and the meridian sun strikes the upper surface of the impenetrable foliage of my trees, and but a few stray gleams steal into the inner sanctuary, I throw myself down among the tall grass by the trickling stream; and, as I lie close to the earth, a thousand unknown plants are noticed by me: when I hear the buzz of the little world among the stalks, and grow familiar with the countless indescribable forms of the insects and flies, then I feel the presence of the Almighty, who formed us in his own image.&lt;/span&gt;&lt;/p&gt;
+
+&lt;h3 id=&#34;1-5&#34;&gt;1.5&lt;/h3&gt;
+
+&lt;p&gt;&lt;span style=&#34;display: inline-block; font-size: 18px; line-height: 1.5&#34;&gt;A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I enjoy with my whole heart. I am alone, and feel the charm of existence in this spot, which was created for the bliss of souls like mine. I am so happy, my dear friend, so absorbed in the exquisite sense of mere tranquil existence, that I neglect my talents. I should be incapable of drawing a single stroke at the present moment; and yet I feel that I never was a greater artist than now. When, while the lovely valley teems with vapour around me, and the meridian sun strikes the upper surface of the impenetrable foliage of my trees, and but a few stray gleams steal into the inner sanctuary, I throw myself down among the tall grass by the trickling stream; and, as I lie close to the earth, a thousand unknown plants are noticed by me: when I hear the buzz of the little world among the stalks, and grow familiar with the countless indescribable forms of the insects and flies, then I feel the presence of the Almighty, who formed us in his own image.&lt;/span&gt;&lt;/p&gt;
+
+&lt;h3 id=&#34;1-45&#34;&gt;1.45&lt;/h3&gt;
+
+&lt;p&gt;&lt;span style=&#34;display: inline-block; font-size: 18px; line-height: 1.45&#34;&gt;A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I enjoy with my whole heart. I am alone, and feel the charm of existence in this spot, which was created for the bliss of souls like mine. I am so happy, my dear friend, so absorbed in the exquisite sense of mere tranquil existence, that I neglect my talents. I should be incapable of drawing a single stroke at the present moment; and yet I feel that I never was a greater artist than now. When, while the lovely valley teems with vapour around me, and the meridian sun strikes the upper surface of the impenetrable foliage of my trees, and but a few stray gleams steal into the inner sanctuary, I throw myself down among the tall grass by the trickling stream; and, as I lie close to the earth, a thousand unknown plants are noticed by me: when I hear the buzz of the little world among the stalks, and grow familiar with the countless indescribable forms of the insects and flies, then I feel the presence of the Almighty, who formed us in his own image.&lt;/span&gt;&lt;/p&gt;
+
+&lt;h3 id=&#34;1-4&#34;&gt;1.4&lt;/h3&gt;
+
+&lt;p&gt;&lt;span style=&#34;display: inline-block; font-size: 18px; line-height: 1.4&#34;&gt;A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I enjoy with my whole heart. I am alone, and feel the charm of existence in this spot, which was created for the bliss of souls like mine. I am so happy, my dear friend, so absorbed in the exquisite sense of mere tranquil existence, that I neglect my talents. I should be incapable of drawing a single stroke at the present moment; and yet I feel that I never was a greater artist than now. When, while the lovely valley teems with vapour around me, and the meridian sun strikes the upper surface of the impenetrable foliage of my trees, and but a few stray gleams steal into the inner sanctuary, I throw myself down among the tall grass by the trickling stream; and, as I lie close to the earth, a thousand unknown plants are noticed by me: when I hear the buzz of the little world among the stalks, and grow familiar with the countless indescribable forms of the insects and flies, then I feel the presence of the Almighty, who formed us in his own image.&lt;/span&gt;&lt;/p&gt;
+
+&lt;h3 id=&#34;1-35&#34;&gt;1.35&lt;/h3&gt;
+
+&lt;p&gt;&lt;span style=&#34;display: inline-block; font-size: 18px; line-height: 1.35&#34;&gt;A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I enjoy with my whole heart. I am alone, and feel the charm of existence in this spot, which was created for the bliss of souls like mine. I am so happy, my dear friend, so absorbed in the exquisite sense of mere tranquil existence, that I neglect my talents. I should be incapable of drawing a single stroke at the present moment; and yet I feel that I never was a greater artist than now. When, while the lovely valley teems with vapour around me, and the meridian sun strikes the upper surface of the impenetrable foliage of my trees, and but a few stray gleams steal into the inner sanctuary, I throw myself down among the tall grass by the trickling stream; and, as I lie close to the earth, a thousand unknown plants are noticed by me: when I hear the buzz of the little world among the stalks, and grow familiar with the countless indescribable forms of the insects and flies, then I feel the presence of the Almighty, who formed us in his own image.&lt;/span&gt;&lt;/p&gt;
+
+&lt;h3 id=&#34;1-3&#34;&gt;1.3&lt;/h3&gt;
+
+&lt;p&gt;&lt;span style=&#34;display: inline-block; font-size: 18px; line-height: 1.3&#34;&gt;A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I enjoy with my whole heart. I am alone, and feel the charm of existence in this spot, which was created for the bliss of souls like mine. I am so happy, my dear friend, so absorbed in the exquisite sense of mere tranquil existence, that I neglect my talents. I should be incapable of drawing a single stroke at the present moment; and yet I feel that I never was a greater artist than now. When, while the lovely valley teems with vapour around me, and the meridian sun strikes the upper surface of the impenetrable foliage of my trees, and but a few stray gleams steal into the inner sanctuary, I throw myself down among the tall grass by the trickling stream; and, as I lie close to the earth, a thousand unknown plants are noticed by me: when I hear the buzz of the little world among the stalks, and grow familiar with the countless indescribable forms of the insects and flies, then I feel the presence of the Almighty, who formed us in his own image.&lt;/span&gt;&lt;/p&gt;
+
+&lt;h3 id=&#34;1-25&#34;&gt;1.25&lt;/h3&gt;
+
+&lt;p&gt;&lt;span style=&#34;display: inline-block; font-size: 18px; line-height: 1.25&#34;&gt;A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I enjoy with my whole heart. I am alone, and feel the charm of existence in this spot, which was created for the bliss of souls like mine. I am so happy, my dear friend, so absorbed in the exquisite sense of mere tranquil existence, that I neglect my talents. I should be incapable of drawing a single stroke at the present moment; and yet I feel that I never was a greater artist than now. When, while the lovely valley teems with vapour around me, and the meridian sun strikes the upper surface of the impenetrable foliage of my trees, and but a few stray gleams steal into the inner sanctuary, I throw myself down among the tall grass by the trickling stream; and, as I lie close to the earth, a thousand unknown plants are noticed by me: when I hear the buzz of the little world among the stalks, and grow familiar with the countless indescribable forms of the insects and flies, then I feel the presence of the Almighty, who formed us in his own image.&lt;/span&gt;&lt;/p&gt;
+
+&lt;h3 id=&#34;1-2&#34;&gt;1.2&lt;/h3&gt;
+
+&lt;p&gt;&lt;span style=&#34;display: inline-block; font-size: 18px; line-height: 1.2&#34;&gt;A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I enjoy with my whole heart. I am alone, and feel the charm of existence in this spot, which was created for the bliss of souls like mine. I am so happy, my dear friend, so absorbed in the exquisite sense of mere tranquil existence, that I neglect my talents. I should be incapable of drawing a single stroke at the present moment; and yet I feel that I never was a greater artist than now. When, while the lovely valley teems with vapour around me, and the meridian sun strikes the upper surface of the impenetrable foliage of my trees, and but a few stray gleams steal into the inner sanctuary, I throw myself down among the tall grass by the trickling stream; and, as I lie close to the earth, a thousand unknown plants are noticed by me: when I hear the buzz of the little world among the stalks, and grow familiar with the countless indescribable forms of the insects and flies, then I feel the presence of the Almighty, who formed us in his own image.&lt;/span&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Lorem ipsum</title>
+      <link>http://h12.me/test/lorem/</link>
+      <pubDate>Sat, 05 Jul 2014 03:37:53 +0000</pubDate>
+      
+      <guid>http://h12.me/test/lorem/</guid>
+      <description>
+
+&lt;p&gt;Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim.&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Tortor, suscipit eget, imperdiet nec, imperdiet iaculis, ipsum.&lt;/li&gt;
+&lt;li&gt;Sed aliquam ultrices mauris. Integer ante arcu, accumsan a, consectetuer eget.&lt;/li&gt;
+&lt;li&gt;Posuere ut, mauris. Praesent adipiscing. Phasellus ullamcorper.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Hendrerit id, lorem. Maecenas nec odio et ante tincidunt tempus. Donec vitae sapien ut libero venenatis faucibus. Nullam quis ante.
+Etiam sit amet orci eget eros faucibus tincidunt. Duis leo. Sed fringilla mauris sit amet nibh. Donec sodales sagittis magna. Sed consequat, leo eget bibendum sodales, augue velit cursus nunc, quis gravida magna mi a libero. Fusce vulputate eleifend sapien. Vestibulum purus quam, scelerisque ut, mollis sed, nonummy id, metus.&lt;/p&gt;
+
+&lt;h2 id=&#34;1-donec-pede-justo-fringilla-vel-aliquet-nec&#34;&gt;1. Donec pede justo, fringilla vel, aliquet nec&lt;/h2&gt;
+
+&lt;p&gt;Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus.&lt;/p&gt;
+
+&lt;h3 id=&#34;1-1-maecenas-tempus-tellus-eget-condimentum-rhoncus&#34;&gt;1.1 Maecenas tempus, tellus eget condimentum rhoncus&lt;/h3&gt;
+
+&lt;p&gt;Hendrerit id, lorem. Maecenas nec odio et ante tincidunt tempus. Donec vitae sapien ut libero venenatis faucibus. Nullam quis ante.
+Etiam sit amet orci eget eros faucibus tincidunt. Duis leo. Sed fringilla mauris sit amet nibh. Donec sodales sagittis magna. Sed consequat, leo eget bibendum sodales, augue velit cursus nunc, quis gravida magna mi a libero. Fusce vulputate eleifend sapien. Vestibulum purus quam, scelerisque ut, mollis sed, nonummy id, metus.&lt;/p&gt;
+
+&lt;h4 id=&#34;1-1-1-nullam-accumsan-lorem-in-dui-cras-ultricies-mi-eu&#34;&gt;1.1.1 Nullam accumsan lorem in dui. Cras ultricies mi eu&lt;/h4&gt;
+
+&lt;p&gt;Tortor, suscipit eget, imperdiet nec, imperdiet iaculis, ipsum. Sed aliquam ultrices mauris.
+Integer ante arcu, accumsan a, consectetuer eget, posuere ut, mauris. Praesent adipiscing. Phasellus ullamcorper ipsum rutrum nunc. Nunc nonummy metus. Vestibulum volutpat pretium libero. Cras id dui. Aenean ut eros et nisl sagittis vestibulum. Nullam nulla eros, ultricies sit amet, nonummy id, imperdiet feugiat, pede. Sed lectus.&lt;/p&gt;
+
+&lt;h2 id=&#34;2-donec-pede-justo-fringilla-vel-aliquet-nec-vulputate-eget-arcu-in-enim-justo-rhoncus-ut-imperdiet-a&#34;&gt;2. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a&lt;/h2&gt;
+
+&lt;p&gt;Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus.&lt;/p&gt;
+
+&lt;h3 id=&#34;2-1-maecenas-tempus-tellus-eget-condimentum-rhoncus-sem-quam-semper-libero-sit-amet-adipiscing-sem-neque-sed-ipsum-nam-quam-nunc-blandit-vel&#34;&gt;2.1 Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed ipsum. Nam quam nunc, blandit vel&lt;/h3&gt;
+
+&lt;p&gt;Hendrerit id, lorem. Maecenas nec odio et ante tincidunt tempus. Donec vitae sapien ut libero venenatis faucibus. Nullam quis ante.
+Etiam sit amet orci eget eros faucibus tincidunt. Duis leo. Sed fringilla mauris sit amet nibh. Donec sodales sagittis magna. Sed consequat, leo eget bibendum sodales, augue velit cursus nunc, quis gravida magna mi a libero. Fusce vulputate eleifend sapien. Vestibulum purus quam, scelerisque ut, mollis sed, nonummy id, metus.&lt;/p&gt;
+
+&lt;h4 id=&#34;2-1-1-nullam-accumsan-lorem-in-dui-cras-ultricies-mi-eu-turpis-hendrerit-fringilla-vestibulum-ante-ipsum-primis-in-faucibus-orci-luctus-et-ultrices-posuere-cubilia-curae-in-ac-dui-quis-mi-consectetuer-lacinia&#34;&gt;2.1.1 Nullam accumsan lorem in dui. Cras ultricies mi eu turpis hendrerit fringilla. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; In ac dui quis mi consectetuer lacinia&lt;/h4&gt;
+
+&lt;p&gt;Tortor, suscipit eget, imperdiet nec, imperdiet iaculis, ipsum. Sed aliquam ultrices mauris.
+Integer ante arcu, accumsan a, consectetuer eget, posuere ut, mauris. Praesent adipiscing. Phasellus ullamcorper ipsum rutrum nunc. Nunc nonummy metus. Vestibulum volutpat pretium libero. Cras id dui. Aenean ut eros et nisl sagittis vestibulum. Nullam nulla eros, ultricies sit amet, nonummy id, imperdiet feugiat, pede. Sed lectus.&lt;/p&gt;
+
+&lt;h2 id=&#34;3-donec-mollis-hendrerit-risus-phasellus-nec-sem-in-justo-pellentesque-facilisis&#34;&gt;3. Donec mollis hendrerit risus. Phasellus nec sem in justo pellentesque facilisis&lt;/h2&gt;
+
+&lt;pre&gt;&lt;code&gt;Aenean tellus metus, bibendum sed, posuere ac, mattis non, nunc. Vestibulum fringilla pede sit amet augue. In turpis. Pellentesque posuere. Praesent turpis. Aenean posuere, tortor sed cursus feugiat, nunc augue blandit nunc, eu sollicitudin urna dolor sagittis lacus. Donec elit libero, sodales nec, volutpat a, suscipit non, turpis. Nullam sagittis.
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&#34;3-1-suspendisse-pulvinar-augue-ac-venenatis-condimentum-sem-libero-volutpat-nibh-nec-pellentesque-velit-pede-quis-nunc&#34;&gt;3.1 Suspendisse pulvinar, augue ac venenatis condimentum, sem libero volutpat nibh, nec pellentesque velit pede quis nunc&lt;/h3&gt;
+
+&lt;pre&gt;&lt;code&gt;Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. In dui magna, posuere eget, vestibulum et, tempor auctor, justo. In ac felis quis tortor malesuada pretium. Pellentesque auctor neque nec urna. Proin sapien ipsum, porta a, auctor quis, euismod ut, mi. Aenean viverra rhoncus pede.
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h4 id=&#34;3-1-1-pellentesque-habitant-morbi-tristique-senectus-et-netus-et-malesuada-fames-ac-turpis-egestas-ut-non-enim-eleifend-felis-pretium-feugiat-vivamus-quis-mi&#34;&gt;3.1.1 Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Ut non enim eleifend felis pretium feugiat. Vivamus quis mi&lt;/h4&gt;
+
+&lt;pre&gt;&lt;code&gt;Phasellus gravida semper nisi. Nullam vel sem. Pellentesque libero tortor, tincidunt et, tincidunt eget, semper nec, quam. Sed hendrerit. Morbi ac felis. Nunc egestas, augue at pellentesque laoreet, felis eros vehicula leo, at malesuada velit leo quis pede. Donec interdum, metus et hendrerit aliquet, dolor diam sagittis ligula, eget egestas libero turpis vel mi.
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;4-nunc-nulla-fusce-risus-nisl-viverra-et-tempor-et-pretium-in-sapien-donec-venenatis-vulputate-lorem&#34;&gt;4. Nunc nulla. Fusce risus nisl, viverra et, tempor et, pretium in, sapien. Donec venenatis vulputate lorem&lt;/h2&gt;
+
+&lt;h3 id=&#34;4-1-quisque-libero-metus-condimentum-nec-tempor-a-commodo-mollis-magna-vestibulum-ullamcorper-mauris-at-ligula-fusce-fermentum&#34;&gt;4.1 Quisque libero metus, condimentum nec, tempor a, commodo mollis, magna. Vestibulum ullamcorper mauris at ligula. Fusce fermentum&lt;/h3&gt;
+
+&lt;h4 id=&#34;4-1-1-ut-tincidunt-tincidunt-erat-etiam-feugiat-lorem-non-metus-vestibulum-dapibus-nunc-ac-augue-curabitur-vestibulum-aliquam-leo-praesent-egestas-neque-eu-enim&#34;&gt;4.1.1 Ut tincidunt tincidunt erat. Etiam feugiat lorem non metus. Vestibulum dapibus nunc ac augue. Curabitur vestibulum aliquam leo. Praesent egestas neque eu enim&lt;/h4&gt;
+
+&lt;p&gt;Nam ipsum risus, rutrum vitae, vestibulum eu, molestie vel, lacus. Sed augue ipsum, egestas nec, vestibulum et, malesuada adipiscing, dui. Vestibulum facilisis, purus nec pulvinar iaculis, ligula mi congue nunc, vitae euismod ligula urna in dolor. Mauris sollicitudin fermentum libero. Praesent nonummy mi in odio. Nunc interdum lacus sit amet orci.&lt;/p&gt;
+
+&lt;p&gt;Generated by &lt;a href=&#34;http://www.blindtextgenerator.com&#34;&gt;BlindTextGenerator&lt;/a&gt;.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>王海亮</title>
+      <link>http://h12.me/resume-zh/</link>
+      <pubDate>Wed, 27 Dec 2017 14:36:53 +0000</pubDate>
+      
+      <guid>http://h12.me/resume-zh/</guid>
+      <description>
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://h12.me&#34;&gt;https://h12.me&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/h12w&#34;&gt;https://github.com/h12w&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;软件开发深耕十余年，国内Go语言顶尖技术人才，Golang Meetup讲师，阿里SDK悬赏奖金获得者，百余项开源软件作者和积极贡献者，数据挖掘论文在悉尼ICC会议交流。对后端和分布式架构有深刻理解，如：API协议设计，消息系统，数据库引擎和实时分析等。&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;中国顶级Go语言开发者
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/aliyun-beta/aliyun-oss-go-sdk&#34;&gt;aliyun-oss-go-sdk&lt;/a&gt;: 赢取阿里云 OSS SDK 设计竞赛奖金&lt;/li&gt;
+&lt;li&gt;Github 超过 100个项目&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;后端架构和算法专家
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.appcoachs.com/appcoach-market&#34;&gt;Appcoach Market&lt;/a&gt;: CTR/CVR 估计模型和实时流分析&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://h12.me/sej&#34;&gt;h12.me/sej&lt;/a&gt;: 分布式消息系统&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://h12.me/kpax&#34;&gt;h12.me/kpax&lt;/a&gt;: 2个月内成为 Kafka 专家并实现 Go 语言客户端&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://h12.me/html-query&#34;&gt;h12.me/html-query&lt;/a&gt;: 函数式 HTML DOM 提取&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://h12.me/buid&#34;&gt;h12.me/buid&lt;/a&gt;: 分布式消息 BUID 生成器&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;执着写出测试正确且优雅的代码
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://h12.me/gspec&#34;&gt;h12.me/gspec&lt;/a&gt;: 并发可扩展Go测试框架&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://h12.me/realtest&#34;&gt;h12.me/realtest&lt;/a&gt;: 基于 Docker 的真实测试环境&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;在语法分析器和代码生成方面拥有丰富经验
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://h12.me/gombi&#34;&gt;h12.me/gombi&lt;/a&gt;: combinator-style 词法和语法分析库&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://h12.me/ua&#34;&gt;h12.me/ua&lt;/a&gt;: User Agent 解析和和设备检测&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://h12.me/wipro&#34;&gt;h12.me/wipro&lt;/a&gt;: 解析 BNF 生成二进制协议代码&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://h12.me/xsd&#34;&gt;h12.me/xsd&lt;/a&gt;: XSD 解析生成器&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://h12.me/json-schema&#34;&gt;h12.me/json-schema&lt;/a&gt;: JSON Schema 解析生成器&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;工作经历&#34;&gt;工作经历&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;Appcoach&lt;/strong&gt; (2015 - present)&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://www.appcoachs.com/appcoach-around-the-world&#34;&gt;广告平台产品技术负责人&lt;/a&gt; &amp;amp; 后端开发主管&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;http://www.appcoachs.com/appcoach-market&#34;&gt;&lt;em&gt;Appcoach Market&lt;/em&gt;&lt;/a&gt; 是一个跨数据中心, 水平可扩展和高可用的广告投放平台，支持:
+
+&lt;ul&gt;
+&lt;li&gt;自动竞价和规则投放策略&lt;/li&gt;
+&lt;li&gt;实时数据分析和报表&lt;/li&gt;
+&lt;li&gt;集成多家 public/private DSPs/SSPs&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;技术:
+
+&lt;ul&gt;
+&lt;li&gt;高可用，高吞吐率和低延迟的 API (Go, 亚马逊 AWS &amp;amp; 腾讯云)&lt;/li&gt;
+&lt;li&gt;分布式消息系统 (sej)&lt;/li&gt;
+&lt;li&gt;分布式实时分析 (基于BadgerDB)&lt;/li&gt;
+&lt;li&gt;内存数据库和规则引擎 (CQRS架构)&lt;/li&gt;
+&lt;li&gt;服务自动部署系统 (基于Saltstack &amp;amp; Go)&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;IBM/SPSS&lt;/strong&gt; (2009 - 2011)&lt;/p&gt;
+
+&lt;p&gt;软件工程师&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;市场调研分析产品: Data Collection (C#)&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;Qimonda&lt;/strong&gt; (2006 - 2009)&lt;/p&gt;
+
+&lt;p&gt;软件工程师&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;晶元测试系统 (C++, Ruby, Python)&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;教育&#34;&gt;教育&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;西安交通大学&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;博士生, 2011 - 2015&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;从 2012 起积极参与开源软件的开发 (Go)&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;Exploring the Efficiency and Mechanism of Whistleblowing System on
+Social Networking Site&lt;/em&gt; (论文发表于 IEEE ICC 2014)&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;西安交通大学&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;系统工程硕士, 2004 - 2007&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;Xi&amp;rsquo;an Jiaotong University&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;信息与工信工程学士, 2000 - 2004&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Resume</title>
+      <link>http://h12.me/resume/</link>
+      <pubDate>Wed, 07 Jun 2017 14:36:53 +0000</pubDate>
+      
+      <guid>http://h12.me/resume/</guid>
+      <description>
+
+&lt;h2 id=&#34;span-class-my-name-wáng-hǎiliàng-hal-span&#34;&gt;&lt;span class=&#34;my-name&#34;&gt;Wáng Hǎiliàng (Hal)&lt;/span&gt;&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://h12.me&#34;&gt;https://h12.me&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/h12w&#34;&gt;https://github.com/h12w&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;highlights&#34;&gt;Highlights&lt;/h2&gt;
+
+&lt;p&gt;A software developer that has been passionate about programming for more than ten years. He has a deep understanding on backend and distributed technologies, like API protocol design, messaging systems, database engines and real-time analytics. He is also a Go expert, an open source author and contributor of dozens of projects.&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;One of the top Go developers in China
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/aliyun-beta/aliyun-oss-go-sdk&#34;&gt;aliyun-oss-go-sdk&lt;/a&gt;: winner in the open contest for Aliyun OSS Go SDK&lt;/li&gt;
+&lt;li&gt;Open source projects exceed one hundred&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;Backend architecture &amp;amp; algorithm expert
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.appcoachs.com/appcoach-market&#34;&gt;Appcoach Market&lt;/a&gt;: CTR/CVR estimation model and real-time analytics in Go&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://h12.me/sej&#34;&gt;h12.me/sej&lt;/a&gt;: distributed messaging system&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://h12.me/kpax&#34;&gt;h12.me/kpax&lt;/a&gt;: became a Kafka expert and wrote the Kafka client in 2 months&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://h12.me/html-query&#34;&gt;h12.me/html-query&lt;/a&gt;: fluent &amp;amp; functional HTML DOM extraction&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://h12.me/buid&#34;&gt;h12.me/buid&lt;/a&gt;: bipartite unique identifier generator&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;Obsessed with writing well-tested, elegant code
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://h12.me/gspec&#34;&gt;h12.me/gspec&lt;/a&gt;: an expressive, reliable, concurrent and extensible Go test framework&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://h12.me/realtest&#34;&gt;h12.me/realtest&lt;/a&gt;: real test environment for Go unit testing, based on Docker&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;Strong Experience in parser and generator
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://h12.me/gombi&#34;&gt;h12.me/gombi&lt;/a&gt;: combinator-style scanner &amp;amp; parser library&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://h12.me/ua&#34;&gt;h12.me/ua&lt;/a&gt;: User Agent parser and device detection&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://h12.me/xsd&#34;&gt;h12.me/xsd&lt;/a&gt;: generate Go struct from XSD spec&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://h12.me/json-schema&#34;&gt;h12.me/json-schema&lt;/a&gt;: generate Go struct from JSON Schema&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://h12.me/schemata&#34;&gt;h12.me/schemata&lt;/a&gt;: database scheme extractor &amp;amp; code generator&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;experience&#34;&gt;Experience&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;Appcoach&lt;/strong&gt; (2015 - present)&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://www.appcoachs.com/appcoach-around-the-world&#34;&gt;Technical Director of Ad Network Product&lt;/a&gt; &amp;amp; Backend Lead of R&amp;amp;D&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;http://www.appcoachs.com/appcoach-market&#34;&gt;&lt;em&gt;Appcoach Market&lt;/em&gt;&lt;/a&gt; is a multi-regional, horizontal scalable and fault tolerant ad network that supports:
+
+&lt;ul&gt;
+&lt;li&gt;automatic bidding algorithm and rule-based campaign strategy&lt;/li&gt;
+&lt;li&gt;instant data analysis and reporting capability&lt;/li&gt;
+&lt;li&gt;rich protocols to integrate with public/private DSPs/SSPs&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;Technologies:
+
+&lt;ul&gt;
+&lt;li&gt;API with high availibility, high throughput and low latency (Go, AWS &amp;amp; Tencent Cloud)&lt;/li&gt;
+&lt;li&gt;distriubted messaging system in Go (h12.me/sej)&lt;/li&gt;
+&lt;li&gt;distributed real-time analytics (based on sej &amp;amp; BadgerDB)&lt;/li&gt;
+&lt;li&gt;in-memory database &amp;amp; rule engine in Go (CQRS architecture)&lt;/li&gt;
+&lt;li&gt;automatic service deployment (Saltstack &amp;amp; Go)&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;IBM/SPSS&lt;/strong&gt; (2009 - 2011)&lt;/p&gt;
+
+&lt;p&gt;Software Engineer&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Market research product: Data Collection (C#)&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;Qimonda&lt;/strong&gt; (2006 - 2009)&lt;/p&gt;
+
+&lt;p&gt;Software Engineer&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Testing system for DRAM wafer. (C++, Ruby, Python)&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;education&#34;&gt;Education&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;Xi&amp;rsquo;an Jiaotong University&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;PhD Student, 2011 - 2015&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Open source programmer since 2012 (Go)&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;Exploring the Efficiency and Mechanism of Whistleblowing System on
+Social Networking Site&lt;/em&gt; (published on IEEE ICC 2014)&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;Xi&amp;rsquo;an Jiaotong University&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;M.S. in Systems Engineering, 2004 - 2007&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;Xi&amp;rsquo;an Jiaotong University&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;B.S. in Information and Communication Engineering, 2000 - 2004&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Search</title>
+      <link>http://h12.me/search/</link>
+      <pubDate>Sat, 05 Jul 2014 00:00:00 +0000</pubDate>
+      
+      <guid>http://h12.me/search/</guid>
+      <description>&lt;script&gt;
+  (function() {
+    var cx = &#39;014669057665099905978:wi8dtak3l8q&#39;;
+    var gcse = document.createElement(&#39;script&#39;);
+    gcse.type = &#39;text/javascript&#39;;
+    gcse.async = true;
+    gcse.src = (document.location.protocol == &#39;https:&#39; ? &#39;https:&#39; : &#39;http:&#39;) +
+        &#39;//cse.google.com/cse.js?cx=&#39; + cx;
+    var s = document.getElementsByTagName(&#39;script&#39;)[0];
+    s.parentNode.insertBefore(gcse, s);
+  })();
+&lt;/script&gt;
+&lt;gcse:searchresults-only&gt;&lt;/gcse:searchresults-only&gt;
+
+</description>
+    </item>
+    
+    <item>
+      <title>BSD License</title>
+      <link>http://h12.me/bsd/</link>
+      <pubDate>Mon, 30 Jun 2014 00:00:00 +0000</pubDate>
+      
+      <guid>http://h12.me/bsd/</guid>
+      <description>&lt;p&gt;Copyright &amp;copy; 2012-2015, Wáng Hǎiliàng. All rights reserved.&lt;/p&gt;
+
+&lt;p&gt;Redistribution and use in source and binary forms, with or without modification,
+are permitted provided that the following conditions are met:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Redistributions of source code must retain the above copyright notice, this
+list of conditions and the following disclaimer.&lt;/li&gt;
+&lt;li&gt;Redistributions in binary form must reproduce the above copyright notice,
+this list of conditions and the following disclaimer in the documentation
+and/or other materials provided with the distribution.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS &amp;ldquo;AS IS&amp;rdquo; AND
+ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED
+WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
+DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR
+ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES
+(INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES;
+LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON
+ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+(INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
+SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>About</title>
+      <link>http://h12.me/about/</link>
+      <pubDate>Thu, 29 May 2014 11:01:21 +0000</pubDate>
+      
+      <guid>http://h12.me/about/</guid>
+      <description>
+
+&lt;h2 id=&#34;the-author&#34;&gt;The Author&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://h12.me/resume&#34;&gt;&lt;span class=&#34;my-name&#34;&gt;Wáng Hǎiliàng&lt;/span&gt;&lt;/a&gt; is a software developer that has been passionate about programming for more than ten years. He is an open source author and contributor of &lt;a href=&#34;https://github.com/h12w&#34;&gt;dozens of projects&lt;/a&gt;. You can reach him by email at &lt;strong&gt;&amp;#x77;&amp;#x40;&amp;#x68;&amp;#x31;&amp;#x32;&amp;#x2e;&amp;#x6d;&amp;#x65;&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;h2 id=&#34;this-site&#34;&gt;This Site&lt;/h2&gt;
+
+&lt;h3 id=&#34;tools&#34;&gt;Tools&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Container: &lt;a href=&#34;https://www.docker.com/&#34;&gt;Docker&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;CSS: &lt;a href=&#34;http://sass-lang.com/&#34;&gt;Sass&lt;/a&gt;, &lt;a href=&#34;http://compass-style.org/&#34;&gt;Compass&lt;/a&gt; &amp;amp; &lt;a href=&#34;http://susy.oddbird.net/&#34;&gt;Susy&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Font: &lt;a href=&#34;https://fonts.google.com/selection?selection.family=Alegreya:400,400i|Open+Sans+Condensed:300,300i&#34;&gt;Google Fonts&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Icon: &lt;a href=&#34;http://fortawesome.github.io/Font-Awesome/&#34;&gt;Font Awesome&lt;/a&gt; &amp;amp; &lt;a href=&#34;http://fontello.com/&#34;&gt;Fontello&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Image editting: &lt;a href=&#34;http://www.inkscape.org/&#34;&gt;Inkscape&lt;/a&gt;, &lt;a href=&#34;http://www.gimp.org/&#34;&gt;GIMP&lt;/a&gt; &amp;amp; &lt;a href=&#34;http://optipng.sourceforge.net/&#34;&gt;OptiPNG&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Resource loading: &lt;a href=&#34;http://headjs.com/&#34;&gt;HeadJS&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Static page generator: &lt;a href=&#34;http://hugo.spf13.com/&#34;&gt;Hugo&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Syntax highlight: &lt;a href=&#34;http://highlightjs.org/&#34;&gt;Highlight.js&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&#34;services&#34;&gt;Services&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;CDN: &lt;a href=&#34;https://www.cloudflare.com/&#34;&gt;CloudFlare&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Continuous deployment: &lt;a href=&#34;https://hub.docker.com/&#34;&gt;Docker Hub&lt;/a&gt; &amp;amp; &lt;a href=&#34;https://cloud.docker.com&#34;&gt;Docker Cloud&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Domain name &amp;amp; email: &lt;a href=&#34;https://domains.google.com/&#34;&gt;Google Domains&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Full text search: &lt;a href=&#34;https://www.google.com/cse/&#34;&gt;Google Custom Search&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Host: &lt;a href=&#34;http://www.vultr.com/?ref=6837862&#34;&gt;Vultr&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Version control: &lt;a href=&#34;https://github.com/h12w/site&#34;&gt;Github&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
     
     <item>
       <title>Pagination Done Right</title>
@@ -31,7 +550,7 @@
 &lt;li&gt;the next page starts with value &amp;gt; continue-token || (value == continue-token &amp;amp;&amp;amp; value.id &amp;gt; continue-token.id)&lt;/li&gt;
 &lt;/ol&gt;
 
-&lt;h3 id=&#34;reference:b1a5991f8415a5880f5a91d74fe78fe3&#34;&gt;Reference&lt;/h3&gt;
+&lt;h3 id=&#34;reference&#34;&gt;Reference&lt;/h3&gt;
 
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;https://skelia.com/articles/pagination-with-dynamic-data-loading-2/&#34;&gt;Pagination with Dynamic Data Loading&lt;/a&gt;&lt;/li&gt;
@@ -132,1023 +651,6 @@ sed &#39;s/\(.*\):.*/\1/&#39; \
 &lt;li&gt;trim port&lt;/li&gt;
 &lt;li&gt;sort IPs by freqencies&lt;/li&gt;
 &lt;/ul&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>kpax</title>
-      <link>http://h12.me/slide/kpax/</link>
-      <pubDate>Sun, 21 Aug 2016 13:00:00 +0000</pubDate>
-      
-      <guid>http://h12.me/slide/kpax/</guid>
-      <description>&lt;section class=&#39;slides layout-widescreen&#39;&gt;
-
-      &lt;article&gt;
-        &lt;h1&gt;kpax&lt;/h1&gt;
-        &lt;h3&gt;a modular &amp;amp; idiomatic Kafka client in Go&lt;/h3&gt;
-        &lt;h3&gt;21 August 2016&lt;/h3&gt;
-        
-          &lt;div class=&#34;presenter&#34;&gt;
-            
-  
-  &lt;p&gt;
-    Wáng Hǎiliàng
-  &lt;/p&gt;
-  
-
-  
-  &lt;p&gt;
-    Gopher at Appcoach
-  &lt;/p&gt;
-  
-
-          &lt;/div&gt;
-        
-      &lt;/article&gt;
-
-  
-  
-      &lt;article&gt;
-      
-        &lt;h3&gt;Introduction&lt;/h3&gt;
-        
-  
-  &lt;p&gt;
-    About Me
-  &lt;/p&gt;
-  
-
-  &lt;ul&gt;
-  
-    &lt;li&gt;Pure Gopher since 2012&lt;/li&gt;
-  
-    &lt;li&gt;Backend Lead at Appcoach&lt;/li&gt;
-  
-    &lt;li&gt;https://h12.me&lt;/li&gt;
-  
-  &lt;/ul&gt;
-
-  
-  &lt;p&gt;
-    About Appcoach
-  &lt;/p&gt;
-  
-
-  &lt;ul&gt;
-  
-    &lt;li&gt;Global mobile advertising agency founded in 2014&lt;/li&gt;
-  
-    &lt;li&gt;All backend services are written in Go&lt;/li&gt;
-  
-    &lt;li&gt;http://www.appcoachs.com&lt;/li&gt;
-  
-  &lt;/ul&gt;
-
-      
-      &lt;/article&gt;
-  
-  
-  
-      &lt;article&gt;
-      
-        &lt;h2&gt;Rationale&lt;/h2&gt;
-      
-      &lt;/article&gt;
-  
-  
-  
-      &lt;article&gt;
-      
-        &lt;h3&gt;Why Kafka?&lt;/h3&gt;
-        
-  
-  &lt;p&gt;
-    No resources to build our own messaging system from scratch :-)
-  &lt;/p&gt;
-  
-
-  
-  &lt;p&gt;
-    Kafka has excellent design and robust implementation:
-  &lt;/p&gt;
-  
-
-  &lt;ul&gt;
-  
-    &lt;li&gt;A distributed, persisted, replicated messaging system&lt;/li&gt;
-  
-    &lt;li&gt;Key concepts: topic, partition, offset, retention, replication-factor, partition leader, consumer group, broker/cluster&lt;/li&gt;
-  
-  &lt;/ul&gt;
-
-&lt;div class=&#34;image&#34;&gt;
-  &lt;img src=&#34;http://h12.me/img/kpax/kafka.png&#34;&gt;
-&lt;/div&gt;
-
-      
-      &lt;/article&gt;
-  
-  
-  
-      &lt;article&gt;
-      
-        &lt;h3&gt;Why yet another Go client for Kafka?&lt;/h3&gt;
-        
-  
-  &lt;p&gt;
-    Disappointed about the unnecessary complexity of
-  &lt;/p&gt;
-  
-
-  &lt;ul&gt;
-  
-    &lt;li&gt;&lt;code&gt;sarama&lt;/code&gt;&lt;/li&gt;
-  
-    &lt;li&gt;&lt;code&gt;siesta&lt;/code&gt; &amp;amp; &lt;code&gt;go_kafka_client&lt;/code&gt;&lt;/li&gt;
-  
-  &lt;/ul&gt;
-
-  
-  &lt;p&gt;
-    Gain better understanding about Kafka by writing a client and know how to troubleshoot when problems occur
-  &lt;/p&gt;
-  
-
-      
-      &lt;/article&gt;
-  
-  
-  
-      &lt;article&gt;
-      
-        &lt;h3&gt;Goal&lt;/h3&gt;
-        
-  &lt;ul&gt;
-  
-    &lt;li&gt;Simplicity: a thin layer above Kafka Wire Protocol, avoiding abuse of goroutines and channels&lt;/li&gt;
-  
-    &lt;li&gt;Modularity: separation of mechanism and policy, allowing the policy code to be easily replaced&lt;/li&gt;
-  
-    &lt;li&gt;Verifiability: unit test, manual checking with CLI and online data tracing&lt;/li&gt;
-  
-  &lt;/ul&gt;
-
-      
-      &lt;/article&gt;
-  
-  
-  
-      &lt;article&gt;
-      
-        &lt;h2&gt;Kafka Wire Protocol&lt;/h2&gt;
-      
-      &lt;/article&gt;
-  
-  
-  
-      &lt;article&gt;
-      
-        &lt;h3&gt;BNF&lt;/h3&gt;
-        
-  
-  &lt;p&gt;
-    From http://kafka.apache.org/protocol.html:
-  &lt;/p&gt;
-  
-
-  
-  &lt;div class=&#34;code&#34;&gt;&lt;pre&gt;MessageSet =&amp;gt; &amp;lt;OffsetMessage&amp;gt;
-    OffsetMessage =&amp;gt; Offset SizedMessage
-    Offset =&amp;gt; int64
-    SizedMessage =&amp;gt; Size CrcMessage
-    Size =&amp;gt; int32
-    CrcMessage =&amp;gt; Crc Message
-    Crc =&amp;gt; uint32
-
-Message =&amp;gt; MagicByte Attributes Key Value
-    MagicByte =&amp;gt; int8
-    Attributes =&amp;gt; int8
-    Key =&amp;gt; bytes
-    Value =&amp;gt; bytes&lt;/pre&gt;&lt;/div&gt;
-  
-
-      
-      &lt;/article&gt;
-  
-  
-  
-      &lt;article&gt;
-      
-        &lt;h3&gt;Code Generation&lt;/h3&gt;
-        
-  
-  &lt;p&gt;
-    By h12.me/wipro:
-  &lt;/p&gt;
-  
-
-  
-  &lt;div class=&#34;code&#34;&gt;&lt;pre&gt;func (t *MessageSet) Marshal(w *wipro.Writer) {
-    offset := len(w.B)
-    w.WriteInt32(0)
-    start := len(w.B)
-    for i := range *t {
-        (*t)[i].Marshal(w)
-    }
-    w.SetInt32(offset, int32(len(w.B)-start))
-}
-
-func (t *Message) Marshal(w *wipro.Writer) {
-    w.WriteInt8(t.MagicByte)
-    w.WriteInt8(t.Attributes)
-    w.WriteBytes(t.Key)
-    w.WriteBytes(t.Value)
-}&lt;/pre&gt;&lt;/div&gt;
-  
-
-      
-      &lt;/article&gt;
-  
-  
-  
-      &lt;article&gt;
-      
-        &lt;h3&gt;Broker&lt;/h3&gt;
-        
-  
-  &lt;p&gt;
-    Kafka Wire Protocol:
-  &lt;/p&gt;
-  
-
-  
-  &lt;p&gt;
-    &amp;#34;It should not generally be necessary to maintain multiple connections to a single broker from a single client instance (i.e. connection pooling)&amp;#34;
-  &lt;/p&gt;
-  
-
-  
-  &lt;p&gt;
-    &amp;#34;Clients can (and ideally should) use non-blocking IO to implement request pipelining and achieve higher throughput&amp;#34;
-  &lt;/p&gt;
-  
-
-&lt;div class=&#34;image&#34;&gt;
-  &lt;img src=&#34;http://h12.me/img/kpax/async-io.png&#34; height=&#34;250&#34;&gt;
-&lt;/div&gt;
-
-      
-      &lt;/article&gt;
-  
-  
-  
-      &lt;article&gt;
-      
-        &lt;h2&gt;Wrap It Up&lt;/h2&gt;
-      
-      &lt;/article&gt;
-  
-  
-  
-      &lt;article&gt;
-      
-        &lt;h3&gt;Code Organization&lt;/h3&gt;
-        
-  
-  &lt;p&gt;
-    Modular and reusable sub-packages:
-  &lt;/p&gt;
-  
-
-  
-  &lt;div class=&#34;code&#34;&gt;&lt;pre&gt;h12.me/kpax/
-    proto
-    broker
-    cluster
-    producer
-    consumer
-    log&lt;/pre&gt;&lt;/div&gt;
-  
-
-      
-      &lt;/article&gt;
-  
-  
-  
-      &lt;article&gt;
-      
-        &lt;h3&gt;A Simple &amp;amp; Naive Approach&lt;/h3&gt;
-        
-  
-  &lt;p&gt;
-    Broker &amp;gt; Cluster &amp;gt; Producer
-  &lt;/p&gt;
-  
-
-  
-  &lt;p&gt;
-    Produce Methods:
-  &lt;/p&gt;
-  
-
-  
-  &lt;div class=&#34;code&#34;&gt;&lt;pre&gt;func (b *Broker) Produce(.......)
-func (b *Cluster) Produce(.......)
-func (b *Producer) Produce(.......)&lt;/pre&gt;&lt;/div&gt;
-  
-
-  
-  &lt;p&gt;
-    Constructers:
-  &lt;/p&gt;
-  
-
-  
-  &lt;div class=&#34;code&#34;&gt;&lt;pre&gt;broker.New(cfg *BrokerConfig)
-cluster.New(cfg *ClusterConfig)
-producer.New(cfg *ProducerConfig)&lt;/pre&gt;&lt;/div&gt;
-  
-
-  
-  &lt;p&gt;
-    Problems of this approach
-  &lt;/p&gt;
-  
-
-  &lt;ul&gt;
-  
-    &lt;li&gt;Duplicated code&lt;/li&gt;
-  
-    &lt;li&gt;Low and high level are tightly coupled&lt;/li&gt;
-  
-    &lt;li&gt;Policies in lower level components cannot be replaced&lt;/li&gt;
-  
-  &lt;/ul&gt;
-
-      
-      &lt;/article&gt;
-  
-  
-  
-      &lt;article&gt;
-      
-        &lt;h3&gt;Dependency Inversion Principle&lt;/h3&gt;
-        
-  
-  &lt;p&gt;
-    DIP:
-  &lt;/p&gt;
-  
-
-  &lt;ul&gt;
-  
-    &lt;li&gt;High-level modules should not depend on low-level modules. Both should depend on abstractions.&lt;/li&gt;
-  
-    &lt;li&gt;Abstractions should not depend on details. Details should depend on abstractions.&lt;/li&gt;
-  
-  &lt;/ul&gt;
-
-  
-  &lt;p&gt;
-    In our case:
-  &lt;/p&gt;
-  
-
-  &lt;ul&gt;
-  
-    &lt;li&gt;Broker/Cluster level should not depend on protocol-level details&lt;/li&gt;
-  
-    &lt;li&gt;Protocol-level details should depend on abstract broker/cluster&lt;/li&gt;
-  
-  &lt;/ul&gt;
-
-      
-      &lt;/article&gt;
-  
-  
-  
-      &lt;article&gt;
-      
-        &lt;h3&gt;Abstraction&lt;/h3&gt;
-        
-  
-  &lt;div class=&#34;code&#34;&gt;&lt;pre&gt;type Broker interface {
-    Do(Request, Response) error
-    Close()
-}
-
-type Cluster interface {
-    Coordinator(group string) (Broker, error)
-    CoordinatorIsDown(group string)
-    Leader(topic string, partition int32) (Broker, error)
-    LeaderIsDown(topic string, partition int32)
-    Partitions(topic string) ([]int32, error)
-}
-
-type Request interface {
-    Send(io.Writer) error
-    ID() int32
-    SetID(int32)
-}
-
-type Response interface {
-    Receive(io.Reader) error
-    ID() int32
-}&lt;/pre&gt;&lt;/div&gt;
-  
-
-      
-      &lt;/article&gt;
-  
-  
-  
-      &lt;article&gt;
-      
-        &lt;h3&gt;Details&lt;/h3&gt;
-        
-  
-  &lt;p&gt;
-    Payload.Produce
-  &lt;/p&gt;
-  
-
-  
-  &lt;div class=&#34;code&#34;&gt;&lt;pre&gt;func (p *Payload) Produce(c model.Cluster) error {
-    leader, err := c.Leader(p.Topic, p.Partition)
-    if err != nil {
-        return err
-    }
-    if err := p.DoProduce(leader); err != nil {
-        if IsNotLeader(err) {
-            c.LeaderIsDown(p.Topic, p.Partition)
-        }
-        return err
-    }
-    return nil
-}
-
-func (p *Payload) DoProduce(b model.Broker) error {
-    ......
-    if err := b.Do(&amp;amp;req, &amp;amp;resp); err != nil {
-        return err
-    }
-    ......
-}&lt;/pre&gt;&lt;/div&gt;
-  
-
-      
-      &lt;/article&gt;
-  
-  
-  
-      &lt;article&gt;
-      
-        &lt;h3&gt;Configuration&lt;/h3&gt;
-        
-  
-  &lt;div class=&#34;code&#34;&gt;&lt;pre&gt;type Payload struct {
-    Topic        string
-    Partition    int32
-    MessageSet   MessageSet
-    RequiredAcks ProduceAckType
-    AckTimeout   time.Duration
-}
-
-type Broker struct {
-    Addr     string
-    Timeout  time.Duration
-}
-
-type Producer struct {
-    Cluster      model.Cluster
-    RequiredAcks proto.ProduceAckType
-    AckTimeout   time.Duration
-}
-
-NewCluster(newBroker NewBrokerFunc, brokers []string) model.Cluster&lt;/pre&gt;&lt;/div&gt;
-  
-
-  
-  &lt;p&gt;
-    &amp;#34;New&amp;#34; constructor returns an object with default configuration.
-  &lt;/p&gt;
-  
-
-      
-      &lt;/article&gt;
-  
-  
-  
-      &lt;article&gt;
-      
-        &lt;h3&gt;Command Line Tool&lt;/h3&gt;
-        
-  
-  &lt;div class=&#34;code&#34;&gt;&lt;pre&gt;go install h12.me/kpax/cmd/kpax&lt;/pre&gt;&lt;/div&gt;
-  
-
-  
-  &lt;p&gt;
-    Sub-commands:
-  &lt;/p&gt;
-  
-
-  &lt;ul&gt;
-  
-    &lt;li&gt;tail: print recent n messages&lt;/li&gt;
-  
-    &lt;li&gt;consume: print or count messages within a time range&lt;/li&gt;
-  
-    &lt;li&gt;produce: send a test message&lt;/li&gt;
-  
-    &lt;li&gt;offset: print latest/earliest/current offset&lt;/li&gt;
-  
-    &lt;li&gt;rollback: reset offset to a previous time&lt;/li&gt;
-  
-    &lt;li&gt;meta: print topic metadata&lt;/li&gt;
-  
-  &lt;/ul&gt;
-
-      
-      &lt;/article&gt;
-  
-  
-  
-      &lt;article&gt;
-      
-        &lt;h2&gt;Verification&lt;/h2&gt;
-      
-      &lt;/article&gt;
-  
-  
-  
-      &lt;article&gt;
-      
-        &lt;h3&gt;Unit Testing with Docker&lt;/h3&gt;
-        
-  
-  &lt;p&gt;
-    Using h12.me/realtest/kafka:
-  &lt;/p&gt;
-  
-
-  
-  &lt;div class=&#34;code&#34;&gt;&lt;pre&gt;func TestXXX(t *testing.T) {
-    k, err := kafka.New()
-    if err != nil {
-        t.Fatal(err)
-    }
-    partitionCount := 2
-    topic, err := k.NewRandomTopic(partitionCount)
-    if err != nil {
-        t.Fatal(err)
-    }
-    defer k.DeleteTopic(topic)
-
-    // Your test code goes here
-}&lt;/pre&gt;&lt;/div&gt;
-  
-
-      
-      &lt;/article&gt;
-  
-  
-  
-      &lt;article&gt;
-      
-        &lt;h3&gt;Message Counting&lt;/h3&gt;
-        
-  
-  &lt;p&gt;
-    Manual checking:
-  &lt;/p&gt;
-  
-
-  &lt;ul&gt;
-  
-    &lt;li&gt;use kpax command line tool&lt;/li&gt;
-  
-  &lt;/ul&gt;
-
-  
-  &lt;p&gt;
-    Continuous monitoring:
-  &lt;/p&gt;
-  
-
-  &lt;ul&gt;
-  
-    &lt;li&gt;Consume and count all messages&lt;/li&gt;
-  
-    &lt;li&gt;Collect statistics from API&lt;/li&gt;
-  
-    &lt;li&gt;Send all the statistics to InfluxDB&lt;/li&gt;
-  
-    &lt;li&gt;Visualize and compare with Grafana&lt;/li&gt;
-  
-  &lt;/ul&gt;
-
-      
-      &lt;/article&gt;
-  
-  
-  
-      &lt;article&gt;
-      
-        &lt;h2&gt;Some Thoughts on Messaging System&lt;/h2&gt;
-      
-      &lt;/article&gt;
-  
-  
-  
-      &lt;article&gt;
-      
-        &lt;h3&gt;When a Messaging System could be Overkill?&lt;/h3&gt;
-        
-  &lt;ul&gt;
-  
-    &lt;li&gt;Data is disposable&lt;/li&gt;
-  
-    &lt;li&gt;Asynchronous: goroutine&lt;/li&gt;
-  
-    &lt;li&gt;Batch buffer: buffered channel&lt;/li&gt;
-  
-    &lt;li&gt;Decoupling: backend API&lt;/li&gt;
-  
-    &lt;li&gt;Resiliency/Scalability: distributed backend API&lt;/li&gt;
-  
-  &lt;/ul&gt;
-
-      
-      &lt;/article&gt;
-  
-  
-  
-      &lt;article&gt;
-      
-        &lt;h3&gt;When a Messaging System INDEED useful?&lt;/h3&gt;
-        
-  &lt;ul&gt;
-  
-    &lt;li&gt;Delivery guarantees: provide &amp;#34;commit&amp;#34; semantics to the writer (i.e. acknowledging only when your write guaranteed not to be lost)&lt;/li&gt;
-  
-    &lt;li&gt;Order guarantees: handle data consistency by sequencing concurrent updates to nodes&lt;/li&gt;
-  
-    &lt;li&gt;Multiple subscribers: provide the external data subscription feed from the system&lt;/li&gt;
-  
-  &lt;/ul&gt;
-
-      
-      &lt;/article&gt;
-  
-  
-  
-      &lt;article&gt;
-      
-        &lt;h3&gt;How to achieve reliable persistence?&lt;/h3&gt;
-        
-  
-  &lt;p&gt;
-    Crash consistency is hard but possible at a huge performance cost (fsync)
-  &lt;/p&gt;
-  
-
-  
-  &lt;p&gt;
-    To get short response time, perhaps we should either give up persistence,
-  &lt;/p&gt;
-  
-
-  
-  &lt;p&gt;
-    or we could just give up manual fsync and rely on replication:
-  &lt;/p&gt;
-  
-
-  &lt;ul&gt;
-  
-    &lt;li&gt;OS background flush&lt;/li&gt;
-  
-    &lt;li&gt;replication&lt;/li&gt;
-  
-    &lt;li&gt;corruption detection &amp;amp; correction at startup&lt;/li&gt;
-  
-  &lt;/ul&gt;
-
-      
-      &lt;/article&gt;
-  
-  
-
-      &lt;article&gt;
-        &lt;h3&gt;Thank you&lt;/h3&gt;
-        
-          &lt;div class=&#34;presenter&#34;&gt;
-            
-  
-  &lt;p&gt;
-    Wáng Hǎiliàng
-  &lt;/p&gt;
-  
-
-  
-  &lt;p&gt;
-    Gopher at Appcoach
-  &lt;/p&gt;
-  
-&lt;p class=&#34;link&#34;&gt;&lt;a href=&#34;mailto:w@h12.me&#34; target=&#34;_blank&#34;&gt;w@h12.me&lt;/a&gt;&lt;/p&gt;
-          &lt;/div&gt;
-        
-      &lt;/article&gt;
-
-    &lt;/section&gt;
-
-    
-
-</description>
-    </item>
-    
-    <item>
-      <title>Counting Word Frequencies in One Line</title>
-      <link>http://h12.me/note/count-word-freq/</link>
-      <pubDate>Tue, 09 Aug 2016 18:31:04 +0800</pubDate>
-      
-      <guid>http://h12.me/note/count-word-freq/</guid>
-      <description>&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;cat book.txt | \
-tr &#39;!()[]{};:&amp;quot;,&amp;lt;.&amp;gt;?“”‘’*/\r&#39; &#39; &#39; | \
-tr &#39; &#39; &#39;\n&#39; | \
-grep -a -P &amp;quot;^[\p{L}\p{N}\-&#39;]+\$&amp;quot; | \
-grep -a -P -v &amp;quot;^[\p{N}\-&#39;]+\$&amp;quot; | \
-sed &amp;quot;s/&#39;s\$//&amp;quot; | \
-sed &amp;quot;s/^&#39;//&amp;quot; | sed &amp;quot;s/&#39;\$//&amp;quot; &amp;gt; words.txt
-
-cat words.txt | \
-sort | uniq -c | \
-sort -nr | \
-cut -c9- &amp;gt; words_desc.txt
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;ul&gt;
-&lt;li&gt;replace punctuations with space; remove &lt;code&gt;\r&lt;/code&gt; from `\r\n&amp;rsquo;&lt;/li&gt;
-&lt;li&gt;one word per line&lt;/li&gt;
-&lt;li&gt;keep only words composed of unicode letters, numbers, hyphen and apostrophe&lt;/li&gt;
-&lt;li&gt;remove pure numbers&lt;/li&gt;
-&lt;li&gt;remove &amp;rsquo;s&lt;/li&gt;
-&lt;li&gt;remove starting and ending apostrophe&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;output words.txt&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;sort and count unique words&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;sort by freqency in descending order&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;trim the frequency column&lt;/p&gt;&lt;/li&gt;
-&lt;/ul&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>A Note on Mobi Format</title>
-      <link>http://h12.me/note/mobi/</link>
-      <pubDate>Wed, 03 Aug 2016 08:51:30 +0800</pubDate>
-      
-      <guid>http://h12.me/note/mobi/</guid>
-      <description>&lt;ul&gt;
-&lt;li&gt;Mobi Format Description: &lt;a href=&#34;http://wiki.mobileread.com/wiki/MOBI&#34;&gt;http://wiki.mobileread.com/wiki/MOBI&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Python lib: &lt;a href=&#34;https://github.com/kroo/mobi-python&#34;&gt;https://github.com/kroo/mobi-python&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>A Manager&#39;s FAQ</title>
-      <link>http://h12.me/note/manager-faq/</link>
-      <pubDate>Sun, 03 Jul 2016 21:16:34 +0800</pubDate>
-      
-      <guid>http://h12.me/note/manager-faq/</guid>
-      <description>&lt;p&gt;This is an &lt;a href=&#34;https://readthink.com/a-managers-faq-35858a229f84#.7a4wlb9qy&#34;&gt;insightful list&lt;/a&gt;
-from &lt;a href=&#34;Henry Ward&#34;&gt;Henry Ward&lt;/a&gt;:&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;How do I get employees to perform better?&lt;/strong&gt; Tell them what they are doing well.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;How do I give negative feedback?&lt;/strong&gt; By being curious.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;How do I decide what to delegate?&lt;/strong&gt; Delegate the work you want to do.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;How should I prioritize?&lt;/strong&gt; Fix problems. Then prevent problems.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;How should I grade employees?&lt;/strong&gt; Don’t. Teach them to self-evaluate.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;When do I fire somebody?&lt;/strong&gt; When you know they can’t succeed.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;How do I fire somebody?&lt;/strong&gt; By apologizing for our failures.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Why can’t I just tell people what to do?&lt;/strong&gt; Because the more responsibility you have, the less authority you have.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;How do I know if I am a good manager?&lt;/strong&gt; Employees ask you for advice.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;How do I know if I have good management team?&lt;/strong&gt; Shit rolls uphill.&lt;/li&gt;
-&lt;/ul&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>On Reliable Persistence</title>
-      <link>http://h12.me/note/on-reliable-persistence/</link>
-      <pubDate>Sat, 02 Jul 2016 19:03:40 +0800</pubDate>
-      
-      <guid>http://h12.me/note/on-reliable-persistence/</guid>
-      <description>&lt;p&gt;A short investigation on reliable persistence:&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;p&gt;Crash consistency is &lt;a href=&#34;http://danluu.com/file-consistency/&#34;&gt;hard&lt;/a&gt; but
-&lt;a href=&#34;https://www.flamingspork.com/talks/&#34;&gt;possible&lt;/a&gt; at a huge performance
-&lt;a href=&#34;https://www.google.com/#q=fsync+performance&#34;&gt;cost&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;Data safty must rely on distributed solution&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://raft.github.io&#34;&gt;Raft&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;Perhaps we should just give up manual fsync and rely on&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;OS background flush&lt;/li&gt;
-&lt;li&gt;corruption detection &amp;amp; correction at startup&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://kafka.apache.org/08/ops.html&#34;&gt;replication&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;/ul&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Note on OpenWRT</title>
-      <link>http://h12.me/note/openwrt-note/</link>
-      <pubDate>Sat, 27 Feb 2016 14:59:54 +0800</pubDate>
-      
-      <guid>http://h12.me/note/openwrt-note/</guid>
-      <description>
-
-&lt;h2 id=&#34;obtain-openwrt:fba9a0f50fdb02ecc398287f8a6d0f68&#34;&gt;Obtain OpenWRT&lt;/h2&gt;
-
-&lt;ul&gt;
-&lt;li&gt;Find the device model at the &lt;a href=&#34;https://wiki.openwrt.org/toh/start&#34;&gt;Table of Hardware&lt;/a&gt; (Huawei HG556a C)&lt;/li&gt;
-&lt;li&gt;Open &lt;em&gt;Device Techdata&lt;/em&gt; for &lt;em&gt;Firmware OpenWrt Install URL&lt;/em&gt;&lt;/li&gt;
-&lt;li&gt;Open &lt;em&gt;Device Page&lt;/em&gt; for &lt;em&gt;Installation&lt;/em&gt; instructions&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&#34;computer-cable-router:fba9a0f50fdb02ecc398287f8a6d0f68&#34;&gt;Computer - Cable - Router&lt;/h2&gt;
-
-&lt;p&gt;Connect the computer to the router with a cable.&lt;/p&gt;
-
-&lt;h2 id=&#34;install-openwrt:fba9a0f50fdb02ecc398287f8a6d0f68&#34;&gt;Install OpenWRT&lt;/h2&gt;
-
-&lt;p&gt;Follow the instructions to install OpenWRT.&lt;/p&gt;
-
-&lt;h2 id=&#34;ssh:fba9a0f50fdb02ecc398287f8a6d0f68&#34;&gt;SSH&lt;/h2&gt;
-
-&lt;p&gt;First login:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;telnet 192.168.1.1
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Change password to enable SSH:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;passwd
-exit
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;For public key authentication, add the public key:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;ssh-copy-id root@192.168.1.1
-ssh root@192.168.1.1
-mv ~/.ssh/authorized_keys /etc/dropbear
-exit
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h2 id=&#34;wifi:fba9a0f50fdb02ecc398287f8a6d0f68&#34;&gt;WiFi&lt;/h2&gt;
-
-&lt;p&gt;In &lt;code&gt;/etc/config/wireless&lt;/code&gt;:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;config wifi-device  radio0
-	......
-	# REMOVE THIS LINE TO ENABLE WIFI:
-	# option disabled 1
-
-config wifi-iface
-	option device     radio0
-	option network    lan
-	option mode       ap
-	option encryption psk2
-	option hidden     1
-	option ssid       [SSID]
-	option key        [WiFi password]
-	option macaddr    [00:0A:4B:3C:6D:02]
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Execute:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;wifi
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h2 id=&#34;computer-wifi-router:fba9a0f50fdb02ecc398287f8a6d0f68&#34;&gt;Computer - WiFi - Router&lt;/h2&gt;
-
-&lt;p&gt;Disconnect the cable to the router. Try SSH via WiFi.&lt;/p&gt;
-
-&lt;h2 id=&#34;internet:fba9a0f50fdb02ecc398287f8a6d0f68&#34;&gt;Internet&lt;/h2&gt;
-
-&lt;p&gt;In &lt;code&gt;/etc/config/network&lt;/code&gt;:&lt;/p&gt;
-
-&lt;p&gt;It is better to change the lan address so that it will not be conflicted with the upstream address.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;config interface &#39;lan&#39;
-	option ipaddr &#39;192.168.2.1&#39;
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;pre&gt;&lt;code&gt;# lan switch
-config switch_vlan
-	option device 	eth0
-	option vlan 	1
-	option ports 	&amp;quot;1 2 5t&amp;quot;
-
-# wan switch
-config switch_vlan
-	option device 	eth0
-	option vlan 	2
-	option ports 	&amp;quot;0 5t&amp;quot;
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;For DHCP wan:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;config interface wan
-	option ifname eth0.2
-	option proto  dhcp
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;For PPPOE wan:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;config interface wan
-	option ifname   eth0.2
-	option proto    pppoe
-	option username [PPPOE user name]
-	option password [password]
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h2 id=&#34;computer-wifi-router-cable-internet:fba9a0f50fdb02ecc398287f8a6d0f68&#34;&gt;Computer - WiFi - Router - Cable - Internet&lt;/h2&gt;
-
-&lt;p&gt;Connect the internet cable to the router, reboot the router.&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>About Pretty Printing</title>
-      <link>http://h12.me/note/about-pretty-print/</link>
-      <pubDate>Mon, 01 Feb 2016 18:11:29 +0800</pubDate>
-      
-      <guid>http://h12.me/note/about-pretty-print/</guid>
-      <description>
-
-&lt;h2 id=&#34;json:1197732d8fa443c2a3177ffc1bd0267c&#34;&gt;JSON&lt;/h2&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;cat xxx.json | jq .
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h2 id=&#34;xml:1197732d8fa443c2a3177ffc1bd0267c&#34;&gt;XML&lt;/h2&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;cat xxx.xml | xmllint --format -
-&lt;/code&gt;&lt;/pre&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Sending Email from Gmail using Go</title>
-      <link>http://h12.me/note/send-email-from-gmail/</link>
-      <pubDate>Sun, 31 Jan 2016 20:31:06 +0800</pubDate>
-      
-      <guid>http://h12.me/note/send-email-from-gmail/</guid>
-      <description>&lt;ol&gt;
-&lt;li&gt;&lt;p&gt;Turn on &lt;a href=&#34;http://accounts.google.com/SmsAuthConfig&#34;&gt;&amp;ldquo;2-Step Verification&amp;rdquo;&lt;/a&gt; so
-that an &lt;a href=&#34;https://security.google.com/settings/security/apppasswords&#34;&gt;&amp;ldquo;App password&amp;rdquo;&lt;/a&gt; can be generated&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;&lt;code&gt;go get gopkg.in/gomail.v2&lt;/code&gt;&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;Send your Email like the example below:&lt;/p&gt;&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-go&#34;&gt;package main
-
-import (
-	&amp;quot;gopkg.in/gomail.v2&amp;quot;
-)
-
-func main() {
-	m := gomail.NewMessage()
-	m.SetHeader(&amp;quot;From&amp;quot;, &amp;quot;from_address@gmail.com&amp;quot;)
-	m.SetAddressHeader(&amp;quot;To&amp;quot;, &amp;quot;to_adress@xxx&amp;quot;, &amp;quot;to_name&amp;quot;)
-	m.SetAddressHeader(&amp;quot;Cc&amp;quot;, &amp;quot;cc_adress@xxx&amp;quot;, &amp;quot;cc_name&amp;quot;)
-	m.SetHeader(&amp;quot;Subject&amp;quot;, &amp;quot;Hello! TEST!&amp;quot;)
-	m.SetBody(&amp;quot;text/html&amp;quot;, &amp;quot;Hello! &amp;lt;b&amp;gt;TEST&amp;lt;/b&amp;gt;!&amp;quot;)
-
-	d := gomail.NewPlainDialer(&amp;quot;smtp.gmail.com&amp;quot;, 587, &amp;quot;from_address@gmail.com&amp;quot;, &amp;quot;the App password&amp;quot;)
-
-	if err := d.DialAndSend(m); err != nil {
-		panic(err)
-	}
-}
-&lt;/code&gt;&lt;/pre&gt;
 </description>
     </item>
     

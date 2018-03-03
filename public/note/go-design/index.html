@@ -75,16 +75,16 @@
                 <div class="article-body hyphenate">
                 
 
-<h3 id="refusing-new-features:152b3ca9eaa5f9a2262d95ae2b1b15be">Refusing new features</h3>
+<h3 id="refusing-new-features">Refusing new features</h3>
 
 <p>Avoid <a href="https://en.wikipedia.org/wiki/Leaky_abstraction">leaky abstraction</a> as much as possible. If an abstraction is not solid enough, you’d rather not use them at all. Go is designed like this, the features are carefully selected. If a feature is not solid enough, it will not be allowed to enter Go.</p>
 
-<h3 id="no-implicit-string-concatenation:152b3ca9eaa5f9a2262d95ae2b1b15be">No implicit string concatenation</h3>
+<h3 id="no-implicit-string-concatenation">No implicit string concatenation</h3>
 
 <p><a href="https://groups.google.com/d/msg/golang-nuts/S6a3bg65TBE/ikyNMzUSnXsJ">Rob</a>:
 That used to be in the language but was dropped when the semicolon insertion rules went in. You need the + to be able to span lines, and if you can&rsquo;t span lines operatorless concatenation is close to pointless.</p>
 
-<h3 id="no-implicit-conversion:152b3ca9eaa5f9a2262d95ae2b1b15be">No Implicit conversion</h3>
+<h3 id="no-implicit-conversion">No Implicit conversion</h3>
 
 <p><a href="https://groups.google.com/d/msg/golang-nuts/S6a3bg65TBE/ikyNMzUSnXsJ">Rob</a>:
 In any case the clarity of Go&rsquo;s strictness is worth the occasional conversion. A huge class of bugs is simply gone, and a huge piece of tricky language in the specification never needed to be written.</p>
@@ -92,13 +92,13 @@ In any case the clarity of Go&rsquo;s strictness is worth the occasional convers
 <p><a href="https://groups.google.com/d/msg/golang-nuts/S6a3bg65TBE/KUNfj8L4H4IJ">Russ</a>:
 Inserting automatic widening means giving up the &ldquo;named types are not the same&rdquo; rule, which makes it pretty much a non-starter.</p>
 
-<h3 id="octal-literal:152b3ca9eaa5f9a2262d95ae2b1b15be">Octal literal</h3>
+<h3 id="octal-literal">Octal literal</h3>
 
 <p>Octal numeric system is rarely used, why does Go support them?</p>
 
 <p>From Wikipedia “Octal”: Octal representation of non-ASCII bytes may be particularly handy with UTF-8, where any start byte has octal value \3nn and any continuation byte has octal value \2nn.</p>
 
-<h3 id="null-pointer-billion-dollar-mistake:152b3ca9eaa5f9a2262d95ae2b1b15be">Null pointer (billion-dollar mistake)</h3>
+<h3 id="null-pointer-billion-dollar-mistake">Null pointer (billion-dollar mistake)</h3>
 
 <p><a href="https://groups.google.com/d/msg/golang-nuts/Vxpuc37S8tQ/2zGB1QgjmbAJ">Jonathan</a>:
 in the eyes of the Go designers, who clearly don&rsquo;t view it as a billion-dollar mistake, and in my eyes as well,
@@ -107,19 +107,19 @@ in the eyes of the Go designers, who clearly don&rsquo;t view it as a billion-do
 <p><a href="https://groups.google.com/d/msg/golang-nuts/SskXyc9D5Sk/-EKHAIFBRXEJ">rog</a>:
 even in languages with no nil, such as Haskell, you can still get exceptions from using things that have an unexpected form. e.g. head [] that&rsquo;s not too different from a nil pointer exception. so even if you go the non-nil route, you may still end up paying a good proportion of the &ldquo;billion dollar&rdquo; price.</p>
 
-<h3 id="return-errors-rather-than-exceptions:152b3ca9eaa5f9a2262d95ae2b1b15be">Return errors rather than exceptions</h3>
+<h3 id="return-errors-rather-than-exceptions">Return errors rather than exceptions</h3>
 
 <p><a href="http://blogs.msdn.com/b/oldnewthing/archive/2005/01/14/352949.aspx">Raymond Chen</a>:
 It&rsquo;s easy to write bad code, regardless of the error model. It&rsquo;s hard to write good error-code-based code since you have to check every error code and think about what you should do when an error occurs. It&rsquo;s really hard to write good exception-based code since you have to check every single line of code (indeed, every sub-expression) and think about what exceptions it might raise and how your code will react to it. (In C++ it&rsquo;s not quite so bad because C++ exceptions are raised only at specific points during execution. In C#, exceptions can be raised at any time.)</p>
 
-<h3 id="nil-channel-always-blocks-both-send-and-receive:152b3ca9eaa5f9a2262d95ae2b1b15be">Nil channel always blocks (both send and receive)</h3>
+<h3 id="nil-channel-always-blocks-both-send-and-receive">Nil channel always blocks (both send and receive)</h3>
 
 <p><a href="https://groups.google.com/d/msg/golang-nuts/QltQ0nd9HvE/VvDhLO07Oq4J">Rob</a>:
 It&rsquo;s for consistency with select. The semantics of a nil channel are
 the same regardless of how it is used. It&rsquo;s useful that it blocks in a
 select, so that&rsquo;s what it does outside a select.</p>
 
-<h3 id="reading-a-closed-channel-always-succeeds-with-zero-value:152b3ca9eaa5f9a2262d95ae2b1b15be">Reading a closed channel always succeeds with zero value</h3>
+<h3 id="reading-a-closed-channel-always-succeeds-with-zero-value">Reading a closed channel always succeeds with zero value</h3>
 
 <ol>
 <li>the read cannot block because then it will not be distinguishable with nil channel.</li>
@@ -128,11 +128,11 @@ select, so that&rsquo;s what it does outside a select.</p>
 e.g. v, ok := &lt;-ch.</li>
 </ol>
 
-<h3 id="writing-a-closed-channel-panics:152b3ca9eaa5f9a2262d95ae2b1b15be">Writing a closed channel panics</h3>
+<h3 id="writing-a-closed-channel-panics">Writing a closed channel panics</h3>
 
 <p>The channel should only be closed by the writer(not reader), so if a writer close the channel and then write it again, it should be a programming bug and panic is the right behavior.</p>
 
-<h3 id="full-qualified-package-name:152b3ca9eaa5f9a2262d95ae2b1b15be">Full qualified package name</h3>
+<h3 id="full-qualified-package-name">Full qualified package name</h3>
 
 <p><a href="https://groups.google.com/d/msg/golang-nuts/-tyo4o1uVTQ/FbDSkH9kq_oJ">Rob</a>:</p>
 
@@ -150,21 +150,21 @@ e.g. v, ok := &lt;-ch.</li>
 
 <p>This convention we have, using the package names always, is deliberate.  Yes, sometimes it makes for more typing but we believe in the long run it means less typing.</p>
 
-<h3 id="slice-type-is-a-builtin-type:152b3ca9eaa5f9a2262d95ae2b1b15be">Slice type is a builtin type</h3>
+<h3 id="slice-type-is-a-builtin-type">Slice type is a builtin type</h3>
 
 <p>To support variadic arguments.</p>
 
-<h3 id="len-returns-int-rather-than-uint:152b3ca9eaa5f9a2262d95ae2b1b15be">len returns int rather than uint</h3>
+<h3 id="len-returns-int-rather-than-uint">len returns int rather than uint</h3>
 
 <p><a href="https://groups.google.com/d/msg/golang-nuts/jJWAAMdquwQ/jhWhxJJbzVYJ">Ian</a>:</p>
 
 <p>Unsigned types are not a good choice for counts, because they have odd behaviour at 0, a common case.  Signed types have odd behaviour at very large and very small values, an uncommon case.</p>
 
-<h3 id="what-is-type-t-t:152b3ca9eaa5f9a2262d95ae2b1b15be">What is <code>type T []T</code></h3>
+<h3 id="what-is-type-t-t">What is <code>type T []T</code></h3>
 
 <p>A slice is a small object containing a pointer to the underlying array, so T is the slice object containing a pointer to the underlying array, whose element is T itself.</p>
 
-<h3 id="each-if-for-and-switch-statement-is-considered-to-be-in-its-own-implicit-block-https-golang-org-ref-spec-blocks:152b3ca9eaa5f9a2262d95ae2b1b15be"><a href="https://golang.org/ref/spec#Blocks">Each <code>if</code>, <code>for</code>, and <code>switch</code> statement is considered to be in its own implicit block</a></h3>
+<h3 id="each-if-for-and-switch-statement-is-considered-to-be-in-its-own-implicit-block-https-golang-org-ref-spec-blocks"><a href="https://golang.org/ref/spec#Blocks">Each <code>if</code>, <code>for</code>, and <code>switch</code> statement is considered to be in its own implicit block</a></h3>
 
 <p>It means a for loop has two nested blocks, the outer implicit block is for the loop variable, and the inner block for the loop body:</p>
 

@@ -83,7 +83,7 @@
 <p>html-query is a Go package that provides a fluent and functional interface for
 querying HTML DOM. It is based on <a href="http://code.google.com/p/go.net/html">go.net/html</a>.</p>
 
-<h2 id="examples:07fd2986486b663fc679cbfeabbf5621">Examples</h2>
+<h2 id="examples">Examples</h2>
 
 <ol>
 <li><p>A simple example (under &ldquo;examples&rdquo; directory)</p>
@@ -106,11 +106,11 @@ root.Div(Id(&quot;content&quot;)).Children(Class(&quot;blogtitle&quot;)).For(fun
 <p>A large part of html-query is automatically generated from HTML spec. The
 spec is in HTML format, so the generator parses it using html-query itself.</p>
 
-<h2 id="design:07fd2986486b663fc679cbfeabbf5621">Design</h2>
+<h2 id="design">Design</h2>
 
 <p>Here is a simple explanation of the design of html-query.</p>
 
-<h3 id="functional-query-expressions:07fd2986486b663fc679cbfeabbf5621">Functional query expressions</h3>
+<h3 id="functional-query-expressions">Functional query expressions</h3>
 
 <p>All functional definitions are defined in html-query/expr package.</p>
 
@@ -145,7 +145,7 @@ builder builder (function that returns a checker builder) defined in
 html-query when needed.</p></li>
 </ol>
 
-<h3 id="fluent-interface:07fd2986486b663fc679cbfeabbf5621">Fluent interface</h3>
+<h3 id="fluent-interface">Fluent interface</h3>
 
 <p>Fluent interface (<a href="http://en.wikipedia.org/wiki/Fluent_interface">http://en.wikipedia.org/wiki/Fluent_interface</a>) are defined in
 html-query package.</p>
@@ -184,7 +184,7 @@ Method Node.Children and Node.Descendants each returns a node iterator
 (NodeIter). Method NodeIter.For can be used to loop through these nodes.</p></li>
 </ol>
 
-<h2 id="alternative:07fd2986486b663fc679cbfeabbf5621">Alternative</h2>
+<h2 id="alternative">Alternative</h2>
 
 <p>If you prefer a jquery like DSL rather than functional way, you might want to
 try <a href="https://github.com/PuerkitoBio/goquery">goquery</a>.</p>

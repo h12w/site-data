@@ -2,12 +2,11 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>File Io on h12.me</title>
-    <link>http://h12.me/tags/file-io/</link>
+    <link>http://h12.me/tags/file-io/index.xml</link>
     <description>Recent content in File Io on h12.me</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <copyright>Copyright (c) 2012-2016, Hǎiliàng Wáng; all rights reserved.</copyright>
-    <lastBuildDate>Sat, 02 Jul 2016 19:03:40 +0800</lastBuildDate>
+    <copyright>Copyright (c) 2012-2018, Hǎiliàng Wáng; all rights reserved.</copyright>
     <atom:link href="http://h12.me/tags/file-io/index.xml" rel="self" type="application/rss+xml" />
     
     <item>

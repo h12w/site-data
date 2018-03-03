@@ -2,12 +2,11 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Pdf on h12.me</title>
-    <link>http://h12.me/tags/pdf/</link>
+    <link>http://h12.me/tags/pdf/index.xml</link>
     <description>Recent content in Pdf on h12.me</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <copyright>Copyright (c) 2012-2016, Hǎiliàng Wáng; all rights reserved.</copyright>
-    <lastBuildDate>Thu, 04 Jun 2015 14:19:38 +0800</lastBuildDate>
+    <copyright>Copyright (c) 2012-2018, Hǎiliàng Wáng; all rights reserved.</copyright>
     <atom:link href="http://h12.me/tags/pdf/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
@@ -24,20 +23,18 @@
 
 &lt;li&gt;&lt;p&gt;PDF editing &lt;a href=&#34;http://xournal.sourceforge.net&#34;&gt;Xournal&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
 
-&lt;li&gt;&lt;p&gt;convert images to PDF&lt;/p&gt;&lt;/li&gt;
-&lt;/ul&gt;
+&lt;li&gt;&lt;p&gt;convert images to PDF&lt;/p&gt;
 
 &lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;	sudo apt-get install imagemagick
 	convert *.jpg pictures.pdf
-&lt;/code&gt;&lt;/pre&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
 
-&lt;ul&gt;
-&lt;li&gt;convert between different formats:&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;convert between different formats:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;    sudo apt-get install calibre
+    ebook-convert xxx.mobi xxx.txt --unsmarten-punctuation
+&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
 &lt;/ul&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;        sudo apt-get install calibre
-        ebook-convert xxx.mobi xxx.txt --unsmarten-punctuation
-&lt;/code&gt;&lt;/pre&gt;
 </description>
     </item>
     

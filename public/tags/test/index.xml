@@ -2,12 +2,11 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Test on h12.me</title>
-    <link>http://h12.me/tags/test/</link>
+    <link>http://h12.me/tags/test/index.xml</link>
     <description>Recent content in Test on h12.me</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <copyright>Copyright (c) 2012-2016, Hǎiliàng Wáng; all rights reserved.</copyright>
-    <lastBuildDate>Sat, 14 Nov 2015 13:57:09 +0800</lastBuildDate>
+    <copyright>Copyright (c) 2012-2018, Hǎiliàng Wáng; all rights reserved.</copyright>
     <atom:link href="http://h12.me/tags/test/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
@@ -46,11 +45,11 @@
 &lt;/ul&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h2 id=&#34;author:392938f6c0ed47446e9bccc40e79ace3&#34;&gt;Author&lt;/h2&gt;
+&lt;h2 id=&#34;author&#34;&gt;Author&lt;/h2&gt;
 
 &lt;p&gt;&lt;a href=&#34;https://github.com/h12w&#34;&gt;Hǎiliàng Wáng&lt;/a&gt;&lt;/p&gt;
 
-&lt;h2 id=&#34;contributors:392938f6c0ed47446e9bccc40e79ace3&#34;&gt;Contributors&lt;/h2&gt;
+&lt;h2 id=&#34;contributors&#34;&gt;Contributors&lt;/h2&gt;
 
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;https://github.com/AnotherGoogleFans&#34;&gt;Tao Huang&lt;/a&gt;&lt;/li&gt;
@@ -80,35 +79,29 @@
       <pubDate>Wed, 28 May 2014 00:00:00 +0000</pubDate>
       
       <guid>http://h12.me/project/gspec/</guid>
-      <description>
-
-&lt;p&gt;&lt;a href=&#34;https://app.wercker.com/project/bykey/d5ed30f0d03d4a5210f65659ead13888&#34;&gt;&lt;img src=&#34;https://app.wercker.com/status/d5ed30f0d03d4a5210f65659ead13888/s&#34; alt=&#34;wercker status&#34; title=&#34;wercker status&#34; /&gt;
-&lt;/a&gt;
-&lt;a href=&#34;https://godoc.org/h12.me/gspec&#34;&gt;&lt;img src=&#34;https://godoc.org/h12.me/gspec?status.png&#34; alt=&#34;GoDoc&#34; /&gt;
-&lt;/a&gt;&lt;/p&gt;
+      <description>&lt;p&gt;&lt;a href=&#34;https://app.wercker.com/project/bykey/d5ed30f0d03d4a5210f65659ead13888&#34;&gt;&lt;img src=&#34;https://app.wercker.com/status/d5ed30f0d03d4a5210f65659ead13888/s&#34; alt=&#34;wercker status&#34; title=&#34;wercker status&#34; /&gt;&lt;/a&gt;
+&lt;a href=&#34;https://godoc.org/h12.me/gspec&#34;&gt;&lt;img src=&#34;https://godoc.org/h12.me/gspec?status.png&#34; alt=&#34;GoDoc&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;GSpec is an &lt;em&gt;expressive, reliable, concurrent and extensible&lt;/em&gt; Go test framework
-that makes it productive to organize and verify the mind model of software.&lt;/p&gt;
+that makes it productive to organize and verify the mind model of software.
 
-&lt;ul&gt;
-&lt;li&gt;&lt;em&gt;Expressive&lt;/em&gt;: a complete runnable specification can be organized via both BDD
-            and table driven styles.&lt;/li&gt;
-&lt;li&gt;&lt;em&gt;Reliable&lt;/em&gt;:   the implementation has minimal footprint and is tested with 100%
-            coverage.&lt;/li&gt;
-&lt;li&gt;&lt;em&gt;Concurrent&lt;/em&gt;: test cases can be executed concurrently or sequentially.&lt;/li&gt;
-&lt;li&gt;&lt;em&gt;Extensible&lt;/em&gt;: customizable BDD cue words, expectations and test reporters.&lt;/li&gt;
-&lt;li&gt;&lt;em&gt;Compatible&lt;/em&gt;: &amp;ldquo;go test&amp;rdquo; is sufficient but not mandatory to run GSpec tests.&lt;/li&gt;
-&lt;/ul&gt;
+* &lt;em&gt;Expressive&lt;/em&gt;: a complete runnable specification can be organized via both BDD
+                and table driven styles.
+* &lt;em&gt;Reliable&lt;/em&gt;:   the implementation has minimal footprint and is tested with 100%
+                coverage.
+* &lt;em&gt;Concurrent&lt;/em&gt;: test cases can be executed concurrently or sequentially.
+* &lt;em&gt;Extensible&lt;/em&gt;: customizable BDD cue words, expectations and test reporters.
+* &lt;em&gt;Compatible&lt;/em&gt;: &amp;ldquo;go test&amp;rdquo; is sufficient but not mandatory to run GSpec tests.&lt;/p&gt;
 
-&lt;h2 id=&#34;quick-start:4a2050c4ac0cfa42fab8c8cafa02e158&#34;&gt;Quick start&lt;/h2&gt;
+&lt;h2 id=&#34;quick-start&#34;&gt;Quick start&lt;/h2&gt;
 
-&lt;h3 id=&#34;get-gspec:4a2050c4ac0cfa42fab8c8cafa02e158&#34;&gt;Get GSpec&lt;/h3&gt;
+&lt;h3 id=&#34;get-gspec&#34;&gt;Get GSpec&lt;/h3&gt;
 
 &lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;go get -u -f h12.me/gspec
 go test h12.me/gspec/...
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h3 id=&#34;write-tests-with-gspec:4a2050c4ac0cfa42fab8c8cafa02e158&#34;&gt;Write tests with GSpec&lt;/h3&gt;
+&lt;h3 id=&#34;write-tests-with-gspec&#34;&gt;Write tests with GSpec&lt;/h3&gt;
 
 &lt;p&gt;According to the &lt;a href=&#34;http://golang.org/doc/code.html#Testing&#34;&gt;convention of Go&lt;/a&gt;,
 write GSpec tests in file xxx_test.go to test code in xxx.go.&lt;/p&gt;
@@ -180,7 +173,7 @@ func TestAll(t *testing.T) {
 }
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h3 id=&#34;run-tests-with-go-test:4a2050c4ac0cfa42fab8c8cafa02e158&#34;&gt;Run tests with &amp;ldquo;go test&amp;rdquo;&lt;/h3&gt;
+&lt;h3 id=&#34;run-tests-with-go-test&#34;&gt;Run tests with &amp;ldquo;go test&amp;rdquo;&lt;/h3&gt;
 
 &lt;p&gt;Run all the tests concurrently (sequencially by default) and display errors.&lt;/p&gt;
 
@@ -195,8 +188,7 @@ func TestAll(t *testing.T) {
 &lt;p&gt;Run only a failing test case (even it is an entry in the driven table):&lt;/p&gt;
 
 &lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;go test -focus 1/1
-&lt;/code&gt;&lt;/pre&gt;
-</description>
+&lt;/code&gt;&lt;/pre&gt;</description>
     </item>
     
   </channel>

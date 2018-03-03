@@ -2,12 +2,11 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Vps on h12.me</title>
-    <link>http://h12.me/tags/vps/</link>
+    <link>http://h12.me/tags/vps/index.xml</link>
     <description>Recent content in Vps on h12.me</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <copyright>Copyright (c) 2012-2016, Hǎiliàng Wáng; all rights reserved.</copyright>
-    <lastBuildDate>Sat, 14 Feb 2015 09:30:55 +0000</lastBuildDate>
+    <copyright>Copyright (c) 2012-2018, Hǎiliàng Wáng; all rights reserved.</copyright>
     <atom:link href="http://h12.me/tags/vps/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
@@ -20,7 +19,7 @@
 
 &lt;p&gt;&lt;em&gt;Knowledge is power. Information is liberating. &amp;mdash; by Kofi Annan.&lt;/em&gt;&lt;/p&gt;
 
-&lt;h2 id=&#34;vps:ed389849b892ef1bb1002c7398bba070&#34;&gt;VPS&lt;/h2&gt;
+&lt;h2 id=&#34;vps&#34;&gt;VPS&lt;/h2&gt;
 
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;https://www.cloudsvm.com/billing/aff.php?aff=140&#34;&gt;CloudsVM&lt;/a&gt;&lt;/li&gt;
@@ -35,11 +34,11 @@
 &lt;/ul&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h2 id=&#34;centos:ed389849b892ef1bb1002c7398bba070&#34;&gt;CentOS&lt;/h2&gt;
+&lt;h2 id=&#34;centos&#34;&gt;CentOS&lt;/h2&gt;
 
-&lt;h3 id=&#34;install-centos-7-64bit:ed389849b892ef1bb1002c7398bba070&#34;&gt;Install CentOS 7 (64bit)&lt;/h3&gt;
+&lt;h3 id=&#34;install-centos-7-64bit&#34;&gt;Install CentOS 7 (64bit)&lt;/h3&gt;
 
-&lt;h3 id=&#34;shadowsocks:ed389849b892ef1bb1002c7398bba070&#34;&gt;Shadowsocks&lt;/h3&gt;
+&lt;h3 id=&#34;shadowsocks&#34;&gt;Shadowsocks&lt;/h3&gt;
 
 &lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;cd /etc/yum.repos.d/
 wget https://copr.fedorainfracloud.org/coprs/librehat/shadowsocks/repo/epel-7/librehat-shadowsocks-epel-7.repo
@@ -56,7 +55,7 @@ systemctl enable shadowsocks-libev
 systemctl start shadowsocks-libev
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h3 id=&#34;pdnsd:ed389849b892ef1bb1002c7398bba070&#34;&gt;pdnsd&lt;/h3&gt;
+&lt;h3 id=&#34;pdnsd&#34;&gt;pdnsd&lt;/h3&gt;
 
 &lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;wget http://members.home.nl/p.a.rombouts/pdnsd/releases/pdnsd-1.2.9a-par_sl6.x86_64.rpm
 yum localinstall pdnsd-1.2.9a-par_sl6.x86_64.rpm
@@ -84,18 +83,18 @@ server {
 systemctl start pdnsd
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h2 id=&#34;docker:ed389849b892ef1bb1002c7398bba070&#34;&gt;Docker&lt;/h2&gt;
+&lt;h2 id=&#34;docker&#34;&gt;Docker&lt;/h2&gt;
 
 &lt;p&gt;Install &lt;a href=&#34;https://docs.docker.com/installation/&#34;&gt;Docker&lt;/a&gt; on VPS.&lt;/p&gt;
 
-&lt;h2 id=&#34;remote-proxy:ed389849b892ef1bb1002c7398bba070&#34;&gt;Remote Proxy&lt;/h2&gt;
+&lt;h2 id=&#34;remote-proxy&#34;&gt;Remote Proxy&lt;/h2&gt;
 
 &lt;p&gt;Install &lt;a href=&#34;https://github.com/shadowsocks/shadowsocks-go/releases&#34;&gt;shadowsocks&lt;/a&gt;:&lt;/p&gt;
 
 &lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;docker run -d -p &amp;lt;port&amp;gt;:&amp;lt;port&amp;gt; h12w/shadowsocks -p &amp;lt;port&amp;gt; -k &amp;lt;password&amp;gt; -m aes-128-cfb -t 60
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h2 id=&#34;remote-dns-server:ed389849b892ef1bb1002c7398bba070&#34;&gt;Remote DNS server&lt;/h2&gt;
+&lt;h2 id=&#34;remote-dns-server&#34;&gt;Remote DNS server&lt;/h2&gt;
 
 &lt;p&gt;Install &lt;a href=&#34;http://members.home.nl/p.a.rombouts/pdnsd/&#34;&gt;pdnsd&lt;/a&gt;:&lt;/p&gt;
 
@@ -107,7 +106,7 @@ systemctl start pdnsd
 &lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;dig @xxx.xxx.xxx.xxx -p xxxx www.linux.com
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h2 id=&#34;local-openwrt-router:ed389849b892ef1bb1002c7398bba070&#34;&gt;Local OpenWrt Router&lt;/h2&gt;
+&lt;h2 id=&#34;local-openwrt-router&#34;&gt;Local OpenWrt Router&lt;/h2&gt;
 
 &lt;p&gt;Install &lt;a href=&#34;https://github.com/shadowsocks/openwrt-shadowsocks&#34;&gt;openwrt-shadowsocks&lt;/a&gt; &amp;amp;
 &lt;a href=&#34;https://github.com/shadowsocks/ChinaDNS&#34;&gt;ChinaDNS&lt;/a&gt; on an &lt;a href=&#34;https://openwrt.org/&#34;&gt;OpenWrt&lt;/a&gt; router.&lt;/p&gt;
@@ -215,7 +214,7 @@ config chinadns
     option nohosts &#39;1&#39;
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h2 id=&#34;redsocks2:ed389849b892ef1bb1002c7398bba070&#34;&gt;RedSocks2&lt;/h2&gt;
+&lt;h2 id=&#34;redsocks2&#34;&gt;RedSocks2&lt;/h2&gt;
 
 &lt;p&gt;Use RedSocks2 to bypass the proxy when the target site is reachable.&lt;/p&gt;
 
@@ -238,7 +237,7 @@ opkg install xxx.ipk
 
 &lt;p&gt;RedSocks2 will take effect immediately.&lt;/p&gt;
 
-&lt;h2 id=&#34;upgrade-openwrt:ed389849b892ef1bb1002c7398bba070&#34;&gt;Upgrade OpenWRT&lt;/h2&gt;
+&lt;h2 id=&#34;upgrade-openwrt&#34;&gt;Upgrade OpenWRT&lt;/h2&gt;
 
 &lt;p&gt;Download latest &lt;code&gt;*.ipk&lt;/code&gt; above.&lt;/p&gt;
 
@@ -258,7 +257,7 @@ scp ignore.list root@192.168.2.1:/etc/shadowsocks/ignore.list
 &lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;reboot
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h2 id=&#34;android-client:ed389849b892ef1bb1002c7398bba070&#34;&gt;Android Client&lt;/h2&gt;
+&lt;h2 id=&#34;android-client&#34;&gt;Android Client&lt;/h2&gt;
 
 &lt;p&gt;&lt;a href=&#34;https://github.com/shadowsocks/shadowsocks-android/releases&#34;&gt;shadowsocks-android&lt;/a&gt;.&lt;/p&gt;
 </description>

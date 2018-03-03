@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
+	<meta name="generator" content="Hugo 0.19" />
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title> h12.me </title>
@@ -195,7 +196,7 @@ from <a href="Henry Ward">Henry Ward</a>:</p>
                 <div class="article-body hyphenate">
                     
 
-<h2 id="obtain-openwrt:fba9a0f50fdb02ecc398287f8a6d0f68">Obtain OpenWRT</h2>
+<h2 id="obtain-openwrt">Obtain OpenWRT</h2>
 
 <ul>
 <li>Find the device model at the <a href="https://wiki.openwrt.org/toh/start">Table of Hardware</a> (Huawei HG556a C)</li>
@@ -203,15 +204,15 @@ from <a href="Henry Ward">Henry Ward</a>:</p>
 <li>Open <em>Device Page</em> for <em>Installation</em> instructions</li>
 </ul>
 
-<h2 id="computer-cable-router:fba9a0f50fdb02ecc398287f8a6d0f68">Computer - Cable - Router</h2>
+<h2 id="computer-cable-router">Computer - Cable - Router</h2>
 
 <p>Connect the computer to the router with a cable.</p>
 
-<h2 id="install-openwrt:fba9a0f50fdb02ecc398287f8a6d0f68">Install OpenWRT</h2>
+<h2 id="install-openwrt">Install OpenWRT</h2>
 
 <p>Follow the instructions to install OpenWRT.</p>
 
-<h2 id="ssh:fba9a0f50fdb02ecc398287f8a6d0f68">SSH</h2>
+<h2 id="ssh">SSH</h2>
 
 <p>First login:</p>
 
@@ -232,7 +233,7 @@ mv ~/.ssh/authorized_keys /etc/dropbear
 exit
 </code></pre>
 
-<h2 id="wifi:fba9a0f50fdb02ecc398287f8a6d0f68">WiFi</h2>
+<h2 id="wifi">WiFi</h2>
 
 <p>In <code>/etc/config/wireless</code>:</p>
 
@@ -257,11 +258,11 @@ config wifi-iface
 <pre><code class="language-bash">wifi
 </code></pre>
 
-<h2 id="computer-wifi-router:fba9a0f50fdb02ecc398287f8a6d0f68">Computer - WiFi - Router</h2>
+<h2 id="computer-wifi-router">Computer - WiFi - Router</h2>
 
 <p>Disconnect the cable to the router. Try SSH via WiFi.</p>
 
-<h2 id="internet:fba9a0f50fdb02ecc398287f8a6d0f68">Internet</h2>
+<h2 id="internet">Internet</h2>
 
 <p>In <code>/etc/config/network</code>:</p>
 
@@ -300,7 +301,7 @@ config switch_vlan
 	option password [password]
 </code></pre>
 
-<h2 id="computer-wifi-router-cable-internet:fba9a0f50fdb02ecc398287f8a6d0f68">Computer - WiFi - Router - Cable - Internet</h2>
+<h2 id="computer-wifi-router-cable-internet">Computer - WiFi - Router - Cable - Internet</h2>
 
 <p>Connect the internet cable to the router, reboot the router.</p>
 
@@ -316,12 +317,12 @@ config switch_vlan
                 <div class="article-body hyphenate">
                     
 
-<h2 id="json:1197732d8fa443c2a3177ffc1bd0267c">JSON</h2>
+<h2 id="json">JSON</h2>
 
 <pre><code class="language-bash">cat xxx.json | jq .
 </code></pre>
 
-<h2 id="xml:1197732d8fa443c2a3177ffc1bd0267c">XML</h2>
+<h2 id="xml">XML</h2>
 
 <pre><code class="language-bash">cat xxx.xml | xmllint --format -
 </code></pre>

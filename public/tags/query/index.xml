@@ -2,12 +2,11 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Query on h12.me</title>
-    <link>http://h12.me/tags/query/</link>
+    <link>http://h12.me/tags/query/index.xml</link>
     <description>Recent content in Query on h12.me</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <copyright>Copyright (c) 2012-2016, Hǎiliàng Wáng; all rights reserved.</copyright>
-    <lastBuildDate>Mon, 20 Jan 2014 01:49:08 +0000</lastBuildDate>
+    <copyright>Copyright (c) 2012-2018, Hǎiliàng Wáng; all rights reserved.</copyright>
     <atom:link href="http://h12.me/tags/query/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
@@ -21,7 +20,7 @@
 &lt;p&gt;html-query is a Go package that provides a fluent and functional interface for
 querying HTML DOM. It is based on &lt;a href=&#34;http://code.google.com/p/go.net/html&#34;&gt;go.net/html&lt;/a&gt;.&lt;/p&gt;
 
-&lt;h2 id=&#34;examples:07fd2986486b663fc679cbfeabbf5621&#34;&gt;Examples&lt;/h2&gt;
+&lt;h2 id=&#34;examples&#34;&gt;Examples&lt;/h2&gt;
 
 &lt;ol&gt;
 &lt;li&gt;&lt;p&gt;A simple example (under &amp;ldquo;examples&amp;rdquo; directory)&lt;/p&gt;
@@ -44,11 +43,11 @@ root.Div(Id(&amp;quot;content&amp;quot;)).Children(Class(&amp;quot;blogtitle&amp
 &lt;p&gt;A large part of html-query is automatically generated from HTML spec. The
 spec is in HTML format, so the generator parses it using html-query itself.&lt;/p&gt;
 
-&lt;h2 id=&#34;design:07fd2986486b663fc679cbfeabbf5621&#34;&gt;Design&lt;/h2&gt;
+&lt;h2 id=&#34;design&#34;&gt;Design&lt;/h2&gt;
 
 &lt;p&gt;Here is a simple explanation of the design of html-query.&lt;/p&gt;
 
-&lt;h3 id=&#34;functional-query-expressions:07fd2986486b663fc679cbfeabbf5621&#34;&gt;Functional query expressions&lt;/h3&gt;
+&lt;h3 id=&#34;functional-query-expressions&#34;&gt;Functional query expressions&lt;/h3&gt;
 
 &lt;p&gt;All functional definitions are defined in html-query/expr package.&lt;/p&gt;
 
@@ -83,7 +82,7 @@ builder builder (function that returns a checker builder) defined in
 html-query when needed.&lt;/p&gt;&lt;/li&gt;
 &lt;/ol&gt;
 
-&lt;h3 id=&#34;fluent-interface:07fd2986486b663fc679cbfeabbf5621&#34;&gt;Fluent interface&lt;/h3&gt;
+&lt;h3 id=&#34;fluent-interface&#34;&gt;Fluent interface&lt;/h3&gt;
 
 &lt;p&gt;Fluent interface (&lt;a href=&#34;http://en.wikipedia.org/wiki/Fluent_interface&#34;&gt;http://en.wikipedia.org/wiki/Fluent_interface&lt;/a&gt;) are defined in
 html-query package.&lt;/p&gt;
@@ -122,7 +121,7 @@ Method Node.Children and Node.Descendants each returns a node iterator
 (NodeIter). Method NodeIter.For can be used to loop through these nodes.&lt;/p&gt;&lt;/li&gt;
 &lt;/ol&gt;
 
-&lt;h2 id=&#34;alternative:07fd2986486b663fc679cbfeabbf5621&#34;&gt;Alternative&lt;/h2&gt;
+&lt;h2 id=&#34;alternative&#34;&gt;Alternative&lt;/h2&gt;
 
 &lt;p&gt;If you prefer a jquery like DSL rather than functional way, you might want to
 try &lt;a href=&#34;https://github.com/PuerkitoBio/goquery&#34;&gt;goquery&lt;/a&gt;.&lt;/p&gt;

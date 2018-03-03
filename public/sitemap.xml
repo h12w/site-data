@@ -2,9 +2,43 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>http://h12.me/</loc>
-    <lastmod>2018-02-28T13:38:45+08:00</lastmod>
-    <priority>0</priority>
+    <loc>http://h12.me/test/size_test/</loc>
+    <lastmod>2014-07-10T03:06:35+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://h12.me/test/height_test/</loc>
+    <lastmod>2014-07-10T03:06:35+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://h12.me/test/lorem/</loc>
+    <lastmod>2014-07-05T03:37:53+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://h12.me/resume-zh/</loc>
+    <lastmod>2017-12-27T14:36:53+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://h12.me/resume/</loc>
+    <lastmod>2017-06-07T14:36:53+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://h12.me/search/</loc>
+    <lastmod>2014-07-05T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://h12.me/bsd/</loc>
+    <lastmod>2014-06-30T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://h12.me/about/</loc>
+    <lastmod>2014-05-29T11:01:21+00:00</lastmod>
   </url>
   
   <url>
@@ -293,43 +327,614 @@
   </url>
   
   <url>
-    <loc>http://h12.me/test/height_test/</loc>
+    <loc>http://h12.me/tags/301/</loc>
+    <lastmod>2014-07-25T03:39:05+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://h12.me/tags/aliyun-oss/</loc>
+    <lastmod>2015-10-22T15:32:58+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://h12.me/tags/android/</loc>
+    <lastmod>2015-01-17T18:13:09+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://h12.me/tags/app-engine/</loc>
+    <lastmod>2014-07-06T06:39:27+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://h12.me/article/</loc>
+    <lastmod>2015-02-18T17:23:24+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://h12.me/tags/atlassian/</loc>
+    <lastmod>2016-09-05T10:30:49+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://h12.me/tags/automatic-deployment/</loc>
+    <lastmod>2014-07-17T14:54:26+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://h12.me/tags/build/</loc>
+    <lastmod>2015-01-29T03:55:08+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://h12.me/tags/ca-certificate/</loc>
+    <lastmod>2015-01-17T18:13:09+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://h12.me/tags/cgo/</loc>
+    <lastmod>2014-01-01T01:30:04+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://h12.me/tags/china/</loc>
+    <lastmod>2015-02-14T09:30:55+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://h12.me/tags/code-block/</loc>
+    <lastmod>2016-09-05T10:30:49+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://h12.me/tags/combinator/</loc>
+    <lastmod>2014-01-20T01:49:08+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://h12.me/tags/compass/</loc>
+    <lastmod>2014-07-17T02:29:57+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://h12.me/tags/connection-leak/</loc>
+    <lastmod>2016-09-02T15:40:41+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://h12.me/tags/continuous-integration/</loc>
+    <lastmod>2014-07-17T14:54:26+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://h12.me/tags/crawler/</loc>
+    <lastmod>2017-04-09T14:30:03+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://h12.me/tags/css/</loc>
+    <lastmod>2016-09-05T10:30:49+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://h12.me/tags/curl/</loc>
+    <lastmod>2017-06-20T12:40:10+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://h12.me/tags/custom-domain/</loc>
+    <lastmod>2015-01-19T09:32:04+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://h12.me/tags/design/</loc>
+    <lastmod>2015-06-29T16:34:59+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://h12.me/tags/dictionary/</loc>
+    <lastmod>2015-06-30T12:43:19+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://h12.me/tags/docker/</loc>
+    <lastmod>2015-11-14T13:57:09+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://h12.me/tags/domain-name/</loc>
+    <lastmod>2014-12-16T09:43:40+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://h12.me/tags/ebook/</loc>
+    <lastmod>2016-08-09T18:31:04+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://h12.me/tags/email/</loc>
+    <lastmod>2016-01-31T20:31:06+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://h12.me/tags/failure/</loc>
+    <lastmod>2015-01-29T03:55:08+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://h12.me/tags/file-io/</loc>
+    <lastmod>2016-07-02T19:03:40+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://h12.me/tags/firewall/</loc>
+    <lastmod>2015-02-14T09:30:55+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://h12.me/tags/font/</loc>
+    <lastmod>2014-07-17T03:19:18+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://h12.me/tags/fsync/</loc>
+    <lastmod>2016-07-02T19:03:40+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://h12.me/tags/functional/</loc>
+    <lastmod>2014-01-20T01:49:08+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://h12.me/tags/functional-programming/</loc>
+    <lastmod>2014-08-04T15:12:55+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://h12.me/tags/gae/</loc>
+    <lastmod>2015-07-08T07:58:34+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://h12.me/tags/git/</loc>
+    <lastmod>2017-06-09T13:41:44+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://h12.me/tags/gmail/</loc>
+    <lastmod>2016-01-31T20:31:06+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://h12.me/tags/go-get/</loc>
+    <lastmod>2015-05-06T12:01:11+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://h12.me/tags/golang/</loc>
+    <lastmod>2018-02-28T13:38:45+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://h12.me/tags/haskell/</loc>
+    <lastmod>2014-07-26T08:12:39+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://h12.me/tags/htc-one/</loc>
+    <lastmod>2014-06-11T12:24:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://h12.me/tags/html/</loc>
+    <lastmod>2015-06-04T14:19:38+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://h12.me/tags/html-dom/</loc>
+    <lastmod>2014-01-20T01:49:08+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://h12.me/tags/hyphenation/</loc>
+    <lastmod>2014-07-30T08:29:57+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://h12.me/tags/ie/</loc>
+    <lastmod>2014-07-09T05:42:42+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://h12.me/tags/ipa/</loc>
+    <lastmod>2015-06-30T12:43:19+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://h12.me/tags/jira/</loc>
+    <lastmod>2016-09-05T10:30:49+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://h12.me/tags/json/</loc>
+    <lastmod>2016-02-01T18:11:29+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://h12.me/tags/kafka/</loc>
+    <lastmod>2015-11-14T13:57:09+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://h12.me/tags/linux/</loc>
+    <lastmod>2016-09-10T09:08:10+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://h12.me/tags/management/</loc>
+    <lastmod>2016-07-03T21:16:34+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://h12.me/tags/mercurial/</loc>
+    <lastmod>2015-05-06T12:01:11+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://h12.me/tags/messaging-system/</loc>
+    <lastmod>2015-07-23T13:36:25+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://h12.me/tags/mobi/</loc>
+    <lastmod>2016-08-03T08:51:30+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://h12.me/tags/mongodb/</loc>
+    <lastmod>2016-09-02T15:40:41+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://h12.me/tags/mysql/</loc>
+    <lastmod>2015-11-14T13:57:09+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://h12.me/note/</loc>
+    <lastmod>2018-02-28T13:38:45+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://h12.me/tags/one-liner/</loc>
+    <lastmod>2017-06-20T12:40:10+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://h12.me/tags/openpgp/</loc>
+    <lastmod>2015-02-18T17:23:24+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://h12.me/tags/openwrt/</loc>
+    <lastmod>2016-02-27T14:59:54+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://h12.me/tags/pagespeed-insights/</loc>
+    <lastmod>2014-07-24T03:42:01+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://h12.me/tags/pagination/</loc>
+    <lastmod>2018-02-28T13:38:45+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://h12.me/tags/parser-combinator/</loc>
+    <lastmod>2014-08-04T15:12:55+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://h12.me/tags/password-management/</loc>
+    <lastmod>2015-02-18T17:23:24+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://h12.me/tags/pdf/</loc>
+    <lastmod>2015-06-04T14:19:38+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://h12.me/tags/persistence/</loc>
+    <lastmod>2016-07-02T19:03:40+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://h12.me/tags/phonetic-notation/</loc>
+    <lastmod>2015-06-30T12:43:19+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://h12.me/tags/pretty-print/</loc>
+    <lastmod>2016-02-01T18:11:29+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://h12.me/project/</loc>
+    <lastmod>2015-11-14T13:57:09+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://h12.me/tags/proxy/</loc>
+    <lastmod>2015-07-08T07:58:34+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://h12.me/tags/query/</loc>
+    <lastmod>2014-01-20T01:49:08+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://h12.me/tags/redirection/</loc>
+    <lastmod>2014-07-25T03:39:05+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://h12.me/tags/redis/</loc>
+    <lastmod>2015-11-14T13:57:09+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://h12.me/tags/reliability/</loc>
+    <lastmod>2016-07-02T19:03:40+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://h12.me/tags/rom/</loc>
+    <lastmod>2014-06-11T12:24:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://h12.me/tags/router/</loc>
+    <lastmod>2016-02-27T14:59:54+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://h12.me/tags/rsa/</loc>
+    <lastmod>2015-02-18T17:23:24+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://h12.me/tags/scale/</loc>
+    <lastmod>2014-07-05T15:03:04+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://h12.me/tags/scientific-web-surfing/</loc>
+    <lastmod>2015-02-14T09:30:55+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://h12.me/tags/scraping/</loc>
+    <lastmod>2014-06-02T01:21:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://h12.me/tags/security/</loc>
+    <lastmod>2015-02-18T17:23:24+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://h12.me/slide/</loc>
+    <lastmod>2016-08-21T13:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://h12.me/tags/socks-protocol/</loc>
+    <lastmod>2012-08-01T23:57:54+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://h12.me/tags/source-code-pro/</loc>
+    <lastmod>2014-07-17T03:19:18+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://h12.me/tags/ssh/</loc>
+    <lastmod>2015-04-28T10:59:02+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://h12.me/tags/susy/</loc>
+    <lastmod>2014-07-17T02:29:57+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://h12.me/tags/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://h12.me/tags/test/</loc>
+    <lastmod>2015-11-14T13:57:09+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://h12.me/test/</loc>
     <lastmod>2014-07-10T03:06:35+00:00</lastmod>
+    <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://h12.me/test/size_test/</loc>
+    <loc>http://h12.me/tags/touchpad/</loc>
+    <lastmod>2014-06-10T23:00:24+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://h12.me/tags/tutorial/</loc>
+    <lastmod>2014-07-24T03:42:01+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://h12.me/tags/typography/</loc>
+    <lastmod>2014-07-30T08:29:57+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://h12.me/tags/ubuntu/</loc>
+    <lastmod>2016-09-10T09:08:10+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://h12.me/tags/vps/</loc>
+    <lastmod>2015-02-14T09:30:55+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://h12.me/tags/web/</loc>
+    <lastmod>2015-07-08T07:58:34+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://h12.me/tags/word-frequency/</loc>
+    <lastmod>2016-08-09T18:31:04+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://h12.me/tags/wrap/</loc>
+    <lastmod>2016-09-05T10:30:49+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://h12.me/tags/wrapper-generator/</loc>
+    <lastmod>2014-01-01T01:30:04+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://h12.me/tags/xml/</loc>
+    <lastmod>2016-02-01T18:11:29+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://h12.me/tags/xmlbeans/</loc>
+    <lastmod>2015-04-23T15:41:12+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://h12.me/tags/xsd/</loc>
+    <lastmod>2015-04-23T15:41:12+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://h12.me/tags/zookeeper/</loc>
+    <lastmod>2015-11-14T13:57:09+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://h12.me/</loc>
     <lastmod>2014-07-10T03:06:35+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://h12.me/test/lorem/</loc>
-    <lastmod>2014-07-05T03:37:53+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://h12.me/resume-zh/</loc>
-    <lastmod>2017-12-27T14:36:53+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://h12.me/resume/</loc>
-    <lastmod>2017-06-07T14:36:53+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://h12.me/search/</loc>
-    <lastmod>2014-07-05T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://h12.me/bsd/</loc>
-    <lastmod>2014-06-30T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://h12.me/about/</loc>
-    <lastmod>2014-05-29T11:01:21+00:00</lastmod>
+    <priority>0</priority>
   </url>
   
 </urlset>

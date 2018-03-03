@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
+	<meta name="generator" content="Hugo 0.19" />
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title> h12.me </title>
@@ -92,7 +93,7 @@ systematically and clearly, but unfortunately none was found.</p>
 directly and absorb it myself. To make the process less dull and record my
 progress, I will write down my learning notes here incrementally.</p>
 
-<h2 id="overview:f12ba4ec1e96d9d8ed4fe3dd41e7395e">Overview</h2>
+<h2 id="overview">Overview</h2>
 
 <p>A Haskell program is organized with four levels: <em>modules</em>, <em>declarations</em>,
 <em>expressions</em> &amp; <em>lexical structures</em>, but the specification is organized in the
@@ -123,7 +124,7 @@ reverse order.</p>
 <p>The same name can be reused without conflicts as long as they are in different
 namespaces.</p>
 
-<h2 id="lexical-structure:f12ba4ec1e96d9d8ed4fe3dd41e7395e">Lexical Structure</h2>
+<h2 id="lexical-structure">Lexical Structure</h2>
 
 <p>A Haskell program is composed of lexemes (tokens) and whitespaces.</p>
 
@@ -187,13 +188,13 @@ term &ldquo;x prime&rdquo; can be represented as <code>x'</code>.</p>
 <p>By using layout rule (indentation), symbols <code>{};</code> can be omitted in sereral
 grammer productions.</p>
 
-<h2 id="expressions:f12ba4ec1e96d9d8ed4fe3dd41e7395e">Expressions</h2>
+<h2 id="expressions">Expressions</h2>
 
-<h3 id="parentheses:f12ba4ec1e96d9d8ed4fe3dd41e7395e">Parentheses</h3>
+<h3 id="parentheses">Parentheses</h3>
 
 <p><code>(exp)</code> is a <em>parenthesized expression</em>, and is equivalent to <code>exp</code>.</p>
 
-<h3 id="function-operator-application:f12ba4ec1e96d9d8ed4fe3dd41e7395e">Function &amp; operator application</h3>
+<h3 id="function-operator-application">Function &amp; operator application</h3>
 
 <p>Function is prefixed and curried, so <code>f x y</code> means <code>(f x) y</code>.</p>
 
@@ -219,7 +220,7 @@ converted to an infix operator by backquotes.</p>
 <pre><code>x `op` y
 </code></pre>
 
-<h3 id="list-tuple:f12ba4ec1e96d9d8ed4fe3dd41e7395e">List &amp; Tuple</h3>
+<h3 id="list-tuple">List &amp; Tuple</h3>
 
 <p>List is constructed with <code>:</code>.</p>
 
@@ -237,7 +238,7 @@ converted to an infix operator by backquotes.</p>
 <pre><code>(1, 2, &quot;a&quot;)   or   (,,) 1 2 &quot;a&quot;
 </code></pre>
 
-<h3 id="field-label:f12ba4ec1e96d9d8ed4fe3dd41e7395e">Field label</h3>
+<h3 id="field-label">Field label</h3>
 
 <p>A field label is used to give a name to a field in a datatype. It can be used to
 construct, extract and update the field.</p>
@@ -248,7 +249,7 @@ construct, extract and update the field.</p>
 fbind   → qvar = exp 
 </code></pre>
 
-<h3 id="pattern-matching:f12ba4ec1e96d9d8ed4fe3dd41e7395e">Pattern matching</h3>
+<h3 id="pattern-matching">Pattern matching</h3>
 
 <p>A pattern itself is not an expression, but it is an important part of sereral
 expressions, including: <em>lambda abstractions</em>, <em>function definitions</em>,
@@ -325,7 +326,7 @@ is called a irrefutable pattern.</p>
 <code>N apat</code> where N is a constructor defined by newtype and apat is irrefutable,
 <code>var@apat</code> where apat is irrefutable. All other patterns are refutable.</p>
 
-<h3 id="case-expression:f12ba4ec1e96d9d8ed4fe3dd41e7395e">Case expression</h3>
+<h3 id="case-expression">Case expression</h3>
 
 <p>Case expression is very important because all other pattern matching expressions
 ultimately translate into case expressions.</p>
@@ -372,7 +373,7 @@ guarded pattern or alternative is tried sequentially.</li>
 <li>If no match can be found, the result is ⊥.</li>
 </ol>
 
-<h3 id="lambda-expression:f12ba4ec1e96d9d8ed4fe3dd41e7395e">Lambda expression</h3>
+<h3 id="lambda-expression">Lambda expression</h3>
 
 <p>Lambda is used to construct a function without a name. Besides a variable, the
 input can also be any pattern.</p>
@@ -392,7 +393,7 @@ input can also be any pattern.</p>
 Integer -&gt; (Integer -&gt; Integer)
 </code></pre>
 
-<h3 id="let-expression:f12ba4ec1e96d9d8ed4fe3dd41e7395e">Let expression</h3>
+<h3 id="let-expression">Let expression</h3>
 
 <p>A let expression introduces a nested, lexically-scoped, mutually-recursive list
 of declarations. <code>exp</code> after keyword <code>in</code> is the value of a let expression.</p>
@@ -407,7 +408,7 @@ decls   → { decl1 ; … ; decln } (n ≥ 0)
 let {(x,y) = (1,2)} in x+y
 </code></pre>
 
-<h3 id="list-comprehension:f12ba4ec1e96d9d8ed4fe3dd41e7395e">List comprehension</h3>
+<h3 id="list-comprehension">List comprehension</h3>
 
 <p>A list comprehension constructs a list of elements represented by <code>exp</code> qualified
 by one or more qualifiers.</p>
@@ -434,11 +435,11 @@ boolean guard to exclude some elements from the list.</p>
         | exp           (boolean guard) 
 </code></pre>
 
-<h3 id="do-expression:f12ba4ec1e96d9d8ed4fe3dd41e7395e">Do expression</h3>
+<h3 id="do-expression">Do expression</h3>
 
 <p><em>Wait till monad is fully understood.</em></p>
 
-<h3 id="type-signature:f12ba4ec1e96d9d8ed4fe3dd41e7395e">Type signature</h3>
+<h3 id="type-signature">Type signature</h3>
 
 <p>Haskell has type inference, but an expression can be optionally specified with a
 <em>type signature</em>.</p>
@@ -446,7 +447,7 @@ boolean guard to exclude some elements from the list.</p>
 <pre><code>exp     → infixexp :: [context =&gt;] type
 </code></pre>
 
-<h2 id="declarations:f12ba4ec1e96d9d8ed4fe3dd41e7395e">Declarations</h2>
+<h2 id="declarations">Declarations</h2>
 
 <p>There are top declarations (<code>topdecl</code>) that are only allowed at the top level of
 a module, and nested declarations (<code>decl</code>) that may be used either at the top
@@ -457,7 +458,7 @@ level or in nested scopes.</p>
         | decl 
 </code></pre>
 
-<h3 id="top-declarations:f12ba4ec1e96d9d8ed4fe3dd41e7395e">Top declarations</h3>
+<h3 id="top-declarations">Top declarations</h3>
 
 <p>A top declaration starts with one of the keywords: <code>data</code>, <code>type</code>, <code>newtype</code>,
 <code>class</code>, <code>instance</code>, <code>default</code> and <code>foreign</code>.</p>
@@ -468,7 +469,7 @@ types and typeclasses.</p>
 
 <p>They are explained later one by one.</p>
 
-<h3 id="nested-declarations:f12ba4ec1e96d9d8ed4fe3dd41e7395e">Nested declarations</h3>
+<h3 id="nested-declarations">Nested declarations</h3>
 
 <p>In the last section, <code>decl</code> appears in the let expression and where clause
 without any explanations. Actually, they are nested declarations.</p>
@@ -524,7 +525,7 @@ x ‘plus‘ y = \ z -&gt; x+y+z
 (x ‘plus‘ y) z = x+y+z
 </code></pre>
 
-<h3 id="type:f12ba4ec1e96d9d8ed4fe3dd41e7395e">Type</h3>
+<h3 id="type">Type</h3>
 
 <p>Just as an <em>expression</em> may contain variables and denotes a value, a
 <em>type expression</em> may contain <em>type variables</em> and denotes a type value (but it
@@ -564,13 +565,13 @@ gtycon  → qtycon
         | (,{,})        (tupling constructors) 
 </code></pre>
 
-<h3 id="kind:f12ba4ec1e96d9d8ed4fe3dd41e7395e">Kind</h3>
+<h3 id="kind">Kind</h3>
 
 <p>What is <code>*</code>, <code>* -&gt; *</code>&hellip;? An ordinary type has kind <code>*</code>. A type constructor
 (template) that has one type argument has kind <code>* -&gt; *</code>, e.g. a list. So on and
 so forth.</p>
 
-<h3 id="context:f12ba4ec1e96d9d8ed4fe3dd41e7395e">Context</h3>
+<h3 id="context">Context</h3>
 
 <p>The context (<code>context =&gt; type</code>) is used to indicate that type <code>tyvar</code> belongs to
 class <code>qtycls</code>.</p>
@@ -591,7 +592,7 @@ tycls   → conid
 tyvar   → varid 
 </code></pre>
 
-<h3 id="algebraic-data-type:f12ba4ec1e96d9d8ed4fe3dd41e7395e">Algebraic data type</h3>
+<h3 id="algebraic-data-type">Algebraic data type</h3>
 
 <p><em>algebraic data type</em> is named so because it is composed of other types by
 product and sum (algebraic operations). It introduces a new type constructor
@@ -630,14 +631,14 @@ con     → conid | ( consym )    (constructor)
 <p><code>!</code> is strictness flag to indicate that the corresponding constructor argument
 is eagerly evaluated.</p>
 
-<h3 id="type-synonym:f12ba4ec1e96d9d8ed4fe3dd41e7395e">Type synonym</h3>
+<h3 id="type-synonym">Type synonym</h3>
 
 <p>A type synonym is equivalent to its definition are completely interchangeable.</p>
 
 <pre><code>topdecl → type simpletype = type
 </code></pre>
 
-<h3 id="newtype:f12ba4ec1e96d9d8ed4fe3dd41e7395e">Newtype</h3>
+<h3 id="newtype">Newtype</h3>
 
 <p>A <em>newtype</em> declaration introduces a distinct type whose representation is the
 same as an existing type.</p>
@@ -655,13 +656,13 @@ defined for a type synonym.</li>
 algebraic datatype, so the pattern matching rule is different.</li>
 </ul>
 
-<h3 id="ad-hoc-polymorphism:f12ba4ec1e96d9d8ed4fe3dd41e7395e">Ad hoc polymorphism</h3>
+<h3 id="ad-hoc-polymorphism">Ad hoc polymorphism</h3>
 
 <p>Ad hoc polymorphism (overloading) is supported by <em>typeclasses</em>.</p>
 
 <p>A class declaration introduces a new class and the operations (methods) on it.</p>
 
-<h2 id="modules:f12ba4ec1e96d9d8ed4fe3dd41e7395e">Modules</h2>
+<h2 id="modules">Modules</h2>
 
 <p><em>To be continued&hellip;</em></p>
 
@@ -708,7 +709,7 @@ or not, so the root path needs no redirection.</p>
                 <div class="article-body hyphenate">
                     
 
-<h2 id="indtroduction:679b7602d5a8b08073cea405cbeecd74">Indtroduction</h2>
+<h2 id="indtroduction">Indtroduction</h2>
 
 <p><a href="https://developers.google.com/speed/pagespeed/insights/">PageSpeed Insights</a> is
 an online tool by Google to measure the performance of an web page for mobile
@@ -725,9 +726,9 @@ than 1 sec to about 500 ms in the <a href="http://fpt.pingdom.com/">Pingdom Webs
 In the following section, I would like to share what I have learned by
 optimizing this website to achieve a <a href="https://developers.google.com/speed/pagespeed/insights/?url=http%3A%2F%2Fh12.me">perfect score</a>, rule by rule.</p>
 
-<h2 id="speed-rules:679b7602d5a8b08073cea405cbeecd74">Speed rules</h2>
+<h2 id="speed-rules">Speed rules</h2>
 
-<h3 id="avoid-landing-page-redirects:679b7602d5a8b08073cea405cbeecd74">Avoid landing page redirects</h3>
+<h3 id="avoid-landing-page-redirects">Avoid landing page redirects</h3>
 
 <p>The redirection to mobile version can be avoided by responsive design (CSS media
 queries).</p>
@@ -736,7 +737,7 @@ queries).</p>
 subdomain to the naked domain, but the naked domain does not have any further
 redirection.</p>
 
-<h3 id="eliminate-render-blocking-javascript-and-css-in-above-the-fold-content:679b7602d5a8b08073cea405cbeecd74">Eliminate render-blocking JavaScript and CSS in above-the-fold content</h3>
+<h3 id="eliminate-render-blocking-javascript-and-css-in-above-the-fold-content">Eliminate render-blocking JavaScript and CSS in above-the-fold content</h3>
 
 <p>This might be the hardest rule to fully comply with.</p>
 
@@ -755,46 +756,46 @@ are loaded asychronously but executed in order.</p>
 layout of above-the-fold content. You might have to make some trade off and cut
 off some functionality.</p>
 
-<h3 id="enable-compression-leverage-browser-caching-reduce-server-response-time:679b7602d5a8b08073cea405cbeecd74">Enable compression, Leverage browser caching &amp; Reduce server response time</h3>
+<h3 id="enable-compression-leverage-browser-caching-reduce-server-response-time">Enable compression, Leverage browser caching &amp; Reduce server response time</h3>
 
 <p>Since I uses Google App Engine, the gzip compression should already been enabled
 by default, the expiration time for static resources are configurable via
 config.yaml and GAE responses fast enough.</p>
 
-<h3 id="minify-resources-html-css-and-javascript:679b7602d5a8b08073cea405cbeecd74">Minify Resources (HTML, CSS, and JavaScript)</h3>
+<h3 id="minify-resources-html-css-and-javascript">Minify Resources (HTML, CSS, and JavaScript)</h3>
 
 <p>The CSS is minified by Compass, and scripts imported are already minified. The
 HTML file is not minified but it seems not serious enough to trigger a test
 warning by PageSpeed.</p>
 
-<h3 id="optimize-images:679b7602d5a8b08073cea405cbeecd74">Optimize images</h3>
+<h3 id="optimize-images">Optimize images</h3>
 
 <p>I use font icons in my site. When there has to be an image, use PNG compressed with
 <a href="http://optipng.sourceforge.net/">OptiPNG</a>.</p>
 
-<h3 id="reduce-the-size-of-the-above-the-fold-content:679b7602d5a8b08073cea405cbeecd74">Reduce the size of the above-the-fold content</h3>
+<h3 id="reduce-the-size-of-the-above-the-fold-content">Reduce the size of the above-the-fold content</h3>
 
 <p>It basically depends on your design and just remember the YAGNI principle.</p>
 
-<h2 id="user-experience-rules:679b7602d5a8b08073cea405cbeecd74">User experience rules</h2>
+<h2 id="user-experience-rules">User experience rules</h2>
 
 <p>These rule only applies to mobile platforms.</p>
 
-<h3 id="avoid-plugins:679b7602d5a8b08073cea405cbeecd74">Avoid plugins</h3>
+<h3 id="avoid-plugins">Avoid plugins</h3>
 
 <p>None of them on my site.</p>
 
-<h3 id="configure-the-viewport:679b7602d5a8b08073cea405cbeecd74">Configure the viewport</h3>
+<h3 id="configure-the-viewport">Configure the viewport</h3>
 
 <p>This is part of the responsive design.</p>
 
-<h3 id="size-content-to-viewport:679b7602d5a8b08073cea405cbeecd74">Size content to viewport</h3>
+<h3 id="size-content-to-viewport">Size content to viewport</h3>
 
 <p>An important lesson: never write a URL directly in an article because URL does
 not wrap well and could overflow out of the viewport width. instead, give the
 URL a name composed of words.</p>
 
-<h3 id="size-tap-targets-appropriately-use-legible-font-sizes:679b7602d5a8b08073cea405cbeecd74">Size tap targets appropriately &amp; Use legible font sizes</h3>
+<h3 id="size-tap-targets-appropriately-use-legible-font-sizes">Size tap targets appropriately &amp; Use legible font sizes</h3>
 
 <p>I have written some lists of links in my notes, which makes those links close to
 each other. To make them separate enough to pass this rule, the line height cannot
@@ -808,7 +809,7 @@ be too small, here is the minimal requirement from my tests (font-size/line-heig
 <li>20px/30px</li>
 </ul>
 
-<h2 id="conclusion:679b7602d5a8b08073cea405cbeecd74">Conclusion</h2>
+<h2 id="conclusion">Conclusion</h2>
 
 <p>It is not rocket science to build a website with good performance. You just needs
 to tune and optimize every detail of your site patiently. In this process,
@@ -834,7 +835,7 @@ Furthermore, a Wercker Box can inherit from another box and can be stored and
 published in Wercker directories as the starting point for any projects,
 increasing the performance significantly.</p>
 
-<h2 id="price:da5a5acea4f1038004bb9cb6ce226ffd">Price</h2>
+<h2 id="price">Price</h2>
 
 <p>Open source friendly:</p>
 

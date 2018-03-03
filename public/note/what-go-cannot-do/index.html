@@ -77,13 +77,13 @@
 
 <p>This is a list about the corner cases that Go cannot do, and their work arounds.</p>
 
-<h2 id="run-all-deferred-functions-of-other-goroutines-when-a-goroutine-panics:9e386c4da73e9ffc81b3d6aaf29abff9">Run all deferred functions of other goroutines when a goroutine panics</h2>
+<h2 id="run-all-deferred-functions-of-other-goroutines-when-a-goroutine-panics">Run all deferred functions of other goroutines when a goroutine panics</h2>
 
 <p>Uncaught panicking of one goroutine will exit the program without executing deferred functions of other goroutines.</p>
 
 <p>Workaround: this is the standard behavior, C++ with RAII also has the same problem. Persist your data in a way that crashing will not cause data integrity issue.</p>
 
-<h2 id="assigning-to-fields-with-short-declaration-notation:9e386c4da73e9ffc81b3d6aaf29abff9">Assigning to fields with short declaration notation</h2>
+<h2 id="assigning-to-fields-with-short-declaration-notation">Assigning to fields with short declaration notation</h2>
 
 <ul>
 <li>Issue: <a href="https://github.com/golang/go/issues/6842">6842</a></li>
@@ -105,7 +105,7 @@ if x.f, ok = f(); !ok {
 }
 </code></pre>
 
-<h2 id="accessing-unexported-fields-with-reflect-value-interface-method:9e386c4da73e9ffc81b3d6aaf29abff9">Accessing unexported fields with reflect.Value.Interface method</h2>
+<h2 id="accessing-unexported-fields-with-reflect-value-interface-method">Accessing unexported fields with reflect.Value.Interface method</h2>
 
 <p>When it is useful:</p>
 
@@ -133,7 +133,7 @@ if v.Kind() == reflect.String {
 }
 </code></pre>
 
-<h2 id="slice-of-array-literal:9e386c4da73e9ffc81b3d6aaf29abff9">Slice of array literal</h2>
+<h2 id="slice-of-array-literal">Slice of array literal</h2>
 
 <p>e.g.</p>
 

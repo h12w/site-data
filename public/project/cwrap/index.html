@@ -82,7 +82,7 @@
 
 <p>Cwrap is a Go wrapper generator for C libraries.</p>
 
-<h2 id="features:21057ccf4628b2bc6e763170c8e0103a">Features</h2>
+<h2 id="features">Features</h2>
 
 <ul>
 <li>No Cgo types exposed out of the wrapper package, and uses as less allocation/copy as possible.</li>
@@ -101,7 +101,7 @@
 <li>Stay out of the way when you need to do it manually for specified declarations.</li>
 </ul>
 
-<h2 id="usage:21057ccf4628b2bc6e763170c8e0103a">Usage</h2>
+<h2 id="usage">Usage</h2>
 
 <p>Cwrap itself is a Go package rather than an executable program. Just fill a cwrap.Package struct literal and call its Wrap method to generate your wrapper package under $GOPATH. Here is a simple example:</p>
 
@@ -133,7 +133,7 @@
 <pre><code class="language-go">err := sdl.Wrap()
 </code></pre>
 
-<h2 id="examples:21057ccf4628b2bc6e763170c8e0103a">Examples</h2>
+<h2 id="examples">Examples</h2>
 
 <p>In the examples directory, there are C libraries that I have successfully applied Cwrap, including:</p>
 
@@ -147,13 +147,13 @@
 
 <p>You are very welcome to submit examples you think useful to others.</p>
 
-<h2 id="applications:21057ccf4628b2bc6e763170c8e0103a">Applications</h2>
+<h2 id="applications">Applications</h2>
 
 <ul>
 <li>gr: A minimal PDF viewer based on SDL2 and MuPDF (<a href="https://github.com/h12w/gr">https://github.com/h12w/gr</a>)</li>
 </ul>
 
-<h2 id="issue-report:21057ccf4628b2bc6e763170c8e0103a">Issue Report</h2>
+<h2 id="issue-report">Issue Report</h2>
 
 <p>Cwrap may not cover every possible case and fails to come up with a corrresonding Go type or convertion, then the generated code may not be able to compile. When this happens, do the following steps:</p>
 
@@ -163,13 +163,13 @@
 <li>Submit the generator example to me. I cannot guarantee anything but I will try to fix critical issues.</li>
 </ol>
 
-<h2 id="limitations:21057ccf4628b2bc6e763170c8e0103a">Limitations</h2>
+<h2 id="limitations">Limitations</h2>
 
 <ul>
 <li>C variadic functions (&hellip;) are not supported.</li>
 </ul>
 
-<h2 id="acknowledgement:21057ccf4628b2bc6e763170c8e0103a">Acknowledgement</h2>
+<h2 id="acknowledgement">Acknowledgement</h2>
 
 <p>Cwrap uses gccxml (<a href="http://gccxml.github.io">http://gccxml.github.io</a>) to parse C headers to an XML file. Thanks very much for their excellent work.</p>
 

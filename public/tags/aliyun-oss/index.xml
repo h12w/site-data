@@ -2,12 +2,11 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Aliyun Oss on h12.me</title>
-    <link>http://h12.me/tags/aliyun-oss/</link>
+    <link>http://h12.me/tags/aliyun-oss/index.xml</link>
     <description>Recent content in Aliyun Oss on h12.me</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <copyright>Copyright (c) 2012-2016, Hǎiliàng Wáng; all rights reserved.</copyright>
-    <lastBuildDate>Thu, 22 Oct 2015 15:32:58 +0800</lastBuildDate>
+    <copyright>Copyright (c) 2012-2018, Hǎiliàng Wáng; all rights reserved.</copyright>
     <atom:link href="http://h12.me/tags/aliyun-oss/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
@@ -19,24 +18,21 @@
       <description>
 
 &lt;p&gt;&lt;a href=&#34;https://drone.io/github.com/h12w/aliyun-oss-go-sdk/latest&#34;&gt;&lt;img src=&#34;https://drone.io/github.com/h12w/aliyun-oss-go-sdk/status.png&#34; alt=&#34;Build
-Status&#34; /&gt;
-&lt;/a&gt;
+Status&#34; /&gt;&lt;/a&gt;
 &lt;a href=&#34;https://coveralls.io/github/h12w/aliyun-oss-go-sdk?branch=master&#34;&gt;&lt;img src=&#34;https://coveralls.io/repos/h12w/aliyun-oss-go-sdk/badge.svg?branch=master&amp;amp;service=github&#34; alt=&#34;Coverage
-Status&#34; /&gt;
-&lt;/a&gt;
-&lt;a href=&#34;https://godoc.org/github.com/aliyun/aliyun-oss-go-sdk/oss&#34;&gt;&lt;img src=&#34;https://godoc.org/github.com/aliyun/aliyun-oss-go-sdk/oss?status.svg&#34; alt=&#34;GoDoc&#34; /&gt;
-&lt;/a&gt;&lt;/p&gt;
+Status&#34; /&gt;&lt;/a&gt;
+&lt;a href=&#34;https://godoc.org/github.com/aliyun/aliyun-oss-go-sdk/oss&#34;&gt;&lt;img src=&#34;https://godoc.org/github.com/aliyun/aliyun-oss-go-sdk/oss?status.svg&#34; alt=&#34;GoDoc&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;Aliyun OSS (Object Storage Service) Go SDK is a client SDK to access Aliyun OSS
 API, implemented in the Go programming language.&lt;/p&gt;
 
-&lt;h2 id=&#34;installation:f87687907588b3c94606277d316d7263&#34;&gt;Installation&lt;/h2&gt;
+&lt;h2 id=&#34;installation&#34;&gt;Installation&lt;/h2&gt;
 
 &lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;go get -u github.com/aliyun/aliyun-oss-go-sdk/oss
 go test -v -cover github.com/aliyun/aliyun-oss-go-sdk/oss
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h2 id=&#34;highlights:f87687907588b3c94606277d316d7263&#34;&gt;Highlights&lt;/h2&gt;
+&lt;h2 id=&#34;highlights&#34;&gt;Highlights&lt;/h2&gt;
 
 &lt;ul&gt;
 &lt;li&gt;Complete set of Aliyun OSS API&lt;/li&gt;
@@ -72,7 +68,7 @@ go test -v -cover github.com/aliyun/aliyun-oss-go-sdk/oss
 &lt;li&gt;No third party dependencies&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h2 id=&#34;documentation:f87687907588b3c94606277d316d7263&#34;&gt;Documentation&lt;/h2&gt;
+&lt;h2 id=&#34;documentation&#34;&gt;Documentation&lt;/h2&gt;
 
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;doc/overview.md&#34;&gt;Overview&lt;/a&gt;&lt;/li&gt;
@@ -86,7 +82,7 @@ go test -v -cover github.com/aliyun/aliyun-oss-go-sdk/oss
 &lt;li&gt;&lt;a href=&#34;doc/extend.md&#34;&gt;Extending the SDK&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h2 id=&#34;differences-with-python-sdk:f87687907588b3c94606277d316d7263&#34;&gt;Differences with Python SDK&lt;/h2&gt;
+&lt;h2 id=&#34;differences-with-python-sdk&#34;&gt;Differences with Python SDK&lt;/h2&gt;
 
 &lt;ul&gt;
 &lt;li&gt;HTTP header User-Agent, e.g. aliyun-sdk-go/0.1.1 (Linux/3.16.0-51-generic/x86_64;go1.5.1)&lt;/li&gt;
@@ -98,15 +94,15 @@ x-oss-acl becomes X-Oss-Acl&lt;/li&gt;
 &lt;li&gt;Go always sends URL parameters and headers in canonical order&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h2 id=&#34;author:f87687907588b3c94606277d316d7263&#34;&gt;Author&lt;/h2&gt;
+&lt;h2 id=&#34;author&#34;&gt;Author&lt;/h2&gt;
 
 &lt;p&gt;&lt;a href=&#34;https://github.com/h12w&#34;&gt;Hǎiliàng Wáng&lt;/a&gt;&lt;/p&gt;
 
-&lt;h2 id=&#34;license:f87687907588b3c94606277d316d7263&#34;&gt;License&lt;/h2&gt;
+&lt;h2 id=&#34;license&#34;&gt;License&lt;/h2&gt;
 
 &lt;p&gt;licensed under the &lt;a href=&#34;https://www.apache.org/licenses/LICENSE-2.0.html&#34;&gt;Apache License 2.0&lt;/a&gt;&lt;/p&gt;
 
-&lt;h2 id=&#34;references:f87687907588b3c94606277d316d7263&#34;&gt;References&lt;/h2&gt;
+&lt;h2 id=&#34;references&#34;&gt;References&lt;/h2&gt;
 
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;https://docs.aliyun.com/#/pub/oss&#34;&gt;OSS Document (Chinese)&lt;/a&gt;&lt;/li&gt;

@@ -2,11 +2,11 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Notes on h12.me</title>
-    <link>http://h12.me/note/</link>
+    <link>http://h12.me/note/index.xml</link>
     <description>Recent content in Notes on h12.me</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <copyright>Copyright (c) 2012-2016, Hǎiliàng Wáng; all rights reserved.</copyright>
+    <copyright>Copyright (c) 2012-2018, Hǎiliàng Wáng; all rights reserved.</copyright>
     <lastBuildDate>Wed, 28 Feb 2018 13:38:45 +0800</lastBuildDate>
     <atom:link href="http://h12.me/note/index.xml" rel="self" type="application/rss+xml" />
     
@@ -31,7 +31,7 @@
 &lt;li&gt;the next page starts with value &amp;gt; continue-token || (value == continue-token &amp;amp;&amp;amp; value.id &amp;gt; continue-token.id)&lt;/li&gt;
 &lt;/ol&gt;
 
-&lt;h3 id=&#34;reference:b1a5991f8415a5880f5a91d74fe78fe3&#34;&gt;Reference&lt;/h3&gt;
+&lt;h3 id=&#34;reference&#34;&gt;Reference&lt;/h3&gt;
 
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;https://skelia.com/articles/pagination-with-dynamic-data-loading-2/&#34;&gt;Pagination with Dynamic Data Loading&lt;/a&gt;&lt;/li&gt;
@@ -249,7 +249,7 @@ from &lt;a href=&#34;Henry Ward&#34;&gt;Henry Ward&lt;/a&gt;:&lt;/p&gt;
       <guid>http://h12.me/note/openwrt-note/</guid>
       <description>
 
-&lt;h2 id=&#34;obtain-openwrt:fba9a0f50fdb02ecc398287f8a6d0f68&#34;&gt;Obtain OpenWRT&lt;/h2&gt;
+&lt;h2 id=&#34;obtain-openwrt&#34;&gt;Obtain OpenWRT&lt;/h2&gt;
 
 &lt;ul&gt;
 &lt;li&gt;Find the device model at the &lt;a href=&#34;https://wiki.openwrt.org/toh/start&#34;&gt;Table of Hardware&lt;/a&gt; (Huawei HG556a C)&lt;/li&gt;
@@ -257,15 +257,15 @@ from &lt;a href=&#34;Henry Ward&#34;&gt;Henry Ward&lt;/a&gt;:&lt;/p&gt;
 &lt;li&gt;Open &lt;em&gt;Device Page&lt;/em&gt; for &lt;em&gt;Installation&lt;/em&gt; instructions&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h2 id=&#34;computer-cable-router:fba9a0f50fdb02ecc398287f8a6d0f68&#34;&gt;Computer - Cable - Router&lt;/h2&gt;
+&lt;h2 id=&#34;computer-cable-router&#34;&gt;Computer - Cable - Router&lt;/h2&gt;
 
 &lt;p&gt;Connect the computer to the router with a cable.&lt;/p&gt;
 
-&lt;h2 id=&#34;install-openwrt:fba9a0f50fdb02ecc398287f8a6d0f68&#34;&gt;Install OpenWRT&lt;/h2&gt;
+&lt;h2 id=&#34;install-openwrt&#34;&gt;Install OpenWRT&lt;/h2&gt;
 
 &lt;p&gt;Follow the instructions to install OpenWRT.&lt;/p&gt;
 
-&lt;h2 id=&#34;ssh:fba9a0f50fdb02ecc398287f8a6d0f68&#34;&gt;SSH&lt;/h2&gt;
+&lt;h2 id=&#34;ssh&#34;&gt;SSH&lt;/h2&gt;
 
 &lt;p&gt;First login:&lt;/p&gt;
 
@@ -286,7 +286,7 @@ mv ~/.ssh/authorized_keys /etc/dropbear
 exit
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h2 id=&#34;wifi:fba9a0f50fdb02ecc398287f8a6d0f68&#34;&gt;WiFi&lt;/h2&gt;
+&lt;h2 id=&#34;wifi&#34;&gt;WiFi&lt;/h2&gt;
 
 &lt;p&gt;In &lt;code&gt;/etc/config/wireless&lt;/code&gt;:&lt;/p&gt;
 
@@ -311,11 +311,11 @@ config wifi-iface
 &lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;wifi
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h2 id=&#34;computer-wifi-router:fba9a0f50fdb02ecc398287f8a6d0f68&#34;&gt;Computer - WiFi - Router&lt;/h2&gt;
+&lt;h2 id=&#34;computer-wifi-router&#34;&gt;Computer - WiFi - Router&lt;/h2&gt;
 
 &lt;p&gt;Disconnect the cable to the router. Try SSH via WiFi.&lt;/p&gt;
 
-&lt;h2 id=&#34;internet:fba9a0f50fdb02ecc398287f8a6d0f68&#34;&gt;Internet&lt;/h2&gt;
+&lt;h2 id=&#34;internet&#34;&gt;Internet&lt;/h2&gt;
 
 &lt;p&gt;In &lt;code&gt;/etc/config/network&lt;/code&gt;:&lt;/p&gt;
 
@@ -354,7 +354,7 @@ config switch_vlan
 	option password [password]
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h2 id=&#34;computer-wifi-router-cable-internet:fba9a0f50fdb02ecc398287f8a6d0f68&#34;&gt;Computer - WiFi - Router - Cable - Internet&lt;/h2&gt;
+&lt;h2 id=&#34;computer-wifi-router-cable-internet&#34;&gt;Computer - WiFi - Router - Cable - Internet&lt;/h2&gt;
 
 &lt;p&gt;Connect the internet cable to the router, reboot the router.&lt;/p&gt;
 </description>
@@ -368,12 +368,12 @@ config switch_vlan
       <guid>http://h12.me/note/about-pretty-print/</guid>
       <description>
 
-&lt;h2 id=&#34;json:1197732d8fa443c2a3177ffc1bd0267c&#34;&gt;JSON&lt;/h2&gt;
+&lt;h2 id=&#34;json&#34;&gt;JSON&lt;/h2&gt;
 
 &lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;cat xxx.json | jq .
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h2 id=&#34;xml:1197732d8fa443c2a3177ffc1bd0267c&#34;&gt;XML&lt;/h2&gt;
+&lt;h2 id=&#34;xml&#34;&gt;XML&lt;/h2&gt;
 
 &lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;cat xxx.xml | xmllint --format -
 &lt;/code&gt;&lt;/pre&gt;

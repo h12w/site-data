@@ -75,7 +75,7 @@
                 <div class="article-body hyphenate">
                 
 
-<h2 id="indtroduction:679b7602d5a8b08073cea405cbeecd74">Indtroduction</h2>
+<h2 id="indtroduction">Indtroduction</h2>
 
 <p><a href="https://developers.google.com/speed/pagespeed/insights/">PageSpeed Insights</a> is
 an online tool by Google to measure the performance of an web page for mobile
@@ -92,9 +92,9 @@ than 1 sec to about 500 ms in the <a href="http://fpt.pingdom.com/">Pingdom Webs
 In the following section, I would like to share what I have learned by
 optimizing this website to achieve a <a href="https://developers.google.com/speed/pagespeed/insights/?url=http%3A%2F%2Fh12.me">perfect score</a>, rule by rule.</p>
 
-<h2 id="speed-rules:679b7602d5a8b08073cea405cbeecd74">Speed rules</h2>
+<h2 id="speed-rules">Speed rules</h2>
 
-<h3 id="avoid-landing-page-redirects:679b7602d5a8b08073cea405cbeecd74">Avoid landing page redirects</h3>
+<h3 id="avoid-landing-page-redirects">Avoid landing page redirects</h3>
 
 <p>The redirection to mobile version can be avoided by responsive design (CSS media
 queries).</p>
@@ -103,7 +103,7 @@ queries).</p>
 subdomain to the naked domain, but the naked domain does not have any further
 redirection.</p>
 
-<h3 id="eliminate-render-blocking-javascript-and-css-in-above-the-fold-content:679b7602d5a8b08073cea405cbeecd74">Eliminate render-blocking JavaScript and CSS in above-the-fold content</h3>
+<h3 id="eliminate-render-blocking-javascript-and-css-in-above-the-fold-content">Eliminate render-blocking JavaScript and CSS in above-the-fold content</h3>
 
 <p>This might be the hardest rule to fully comply with.</p>
 
@@ -122,46 +122,46 @@ are loaded asychronously but executed in order.</p>
 layout of above-the-fold content. You might have to make some trade off and cut
 off some functionality.</p>
 
-<h3 id="enable-compression-leverage-browser-caching-reduce-server-response-time:679b7602d5a8b08073cea405cbeecd74">Enable compression, Leverage browser caching &amp; Reduce server response time</h3>
+<h3 id="enable-compression-leverage-browser-caching-reduce-server-response-time">Enable compression, Leverage browser caching &amp; Reduce server response time</h3>
 
 <p>Since I uses Google App Engine, the gzip compression should already been enabled
 by default, the expiration time for static resources are configurable via
 config.yaml and GAE responses fast enough.</p>
 
-<h3 id="minify-resources-html-css-and-javascript:679b7602d5a8b08073cea405cbeecd74">Minify Resources (HTML, CSS, and JavaScript)</h3>
+<h3 id="minify-resources-html-css-and-javascript">Minify Resources (HTML, CSS, and JavaScript)</h3>
 
 <p>The CSS is minified by Compass, and scripts imported are already minified. The
 HTML file is not minified but it seems not serious enough to trigger a test
 warning by PageSpeed.</p>
 
-<h3 id="optimize-images:679b7602d5a8b08073cea405cbeecd74">Optimize images</h3>
+<h3 id="optimize-images">Optimize images</h3>
 
 <p>I use font icons in my site. When there has to be an image, use PNG compressed with
 <a href="http://optipng.sourceforge.net/">OptiPNG</a>.</p>
 
-<h3 id="reduce-the-size-of-the-above-the-fold-content:679b7602d5a8b08073cea405cbeecd74">Reduce the size of the above-the-fold content</h3>
+<h3 id="reduce-the-size-of-the-above-the-fold-content">Reduce the size of the above-the-fold content</h3>
 
 <p>It basically depends on your design and just remember the YAGNI principle.</p>
 
-<h2 id="user-experience-rules:679b7602d5a8b08073cea405cbeecd74">User experience rules</h2>
+<h2 id="user-experience-rules">User experience rules</h2>
 
 <p>These rule only applies to mobile platforms.</p>
 
-<h3 id="avoid-plugins:679b7602d5a8b08073cea405cbeecd74">Avoid plugins</h3>
+<h3 id="avoid-plugins">Avoid plugins</h3>
 
 <p>None of them on my site.</p>
 
-<h3 id="configure-the-viewport:679b7602d5a8b08073cea405cbeecd74">Configure the viewport</h3>
+<h3 id="configure-the-viewport">Configure the viewport</h3>
 
 <p>This is part of the responsive design.</p>
 
-<h3 id="size-content-to-viewport:679b7602d5a8b08073cea405cbeecd74">Size content to viewport</h3>
+<h3 id="size-content-to-viewport">Size content to viewport</h3>
 
 <p>An important lesson: never write a URL directly in an article because URL does
 not wrap well and could overflow out of the viewport width. instead, give the
 URL a name composed of words.</p>
 
-<h3 id="size-tap-targets-appropriately-use-legible-font-sizes:679b7602d5a8b08073cea405cbeecd74">Size tap targets appropriately &amp; Use legible font sizes</h3>
+<h3 id="size-tap-targets-appropriately-use-legible-font-sizes">Size tap targets appropriately &amp; Use legible font sizes</h3>
 
 <p>I have written some lists of links in my notes, which makes those links close to
 each other. To make them separate enough to pass this rule, the line height cannot
@@ -175,7 +175,7 @@ be too small, here is the minimal requirement from my tests (font-size/line-heig
 <li>20px/30px</li>
 </ul>
 
-<h2 id="conclusion:679b7602d5a8b08073cea405cbeecd74">Conclusion</h2>
+<h2 id="conclusion">Conclusion</h2>
 
 <p>It is not rocket science to build a website with good performance. You just needs
 to tune and optimize every detail of your site patiently. In this process,

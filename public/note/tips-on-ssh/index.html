@@ -75,12 +75,12 @@
                 <div class="article-body hyphenate">
                 
 
-<h2 id="generate-ssh-keys:94a5150ca2ae26062cc82162c1b651e1">Generate SSH keys</h2>
+<h2 id="generate-ssh-keys">Generate SSH keys</h2>
 
 <pre><code class="language-bash">ssh-keygen -C w@h12.me
 </code></pre>
 
-<h2 id="authorize-public-key-at-remote-server:94a5150ca2ae26062cc82162c1b651e1">Authorize public key at remote server</h2>
+<h2 id="authorize-public-key-at-remote-server">Authorize public key at remote server</h2>
 
 <pre><code class="language-bash">ssh-copy-id user@host
 </code></pre>
@@ -90,12 +90,12 @@
 <pre><code class="language-bash">brew install ssh-copy-id
 </code></pre>
 
-<h2 id="generate-pem:94a5150ca2ae26062cc82162c1b651e1">Generate PEM</h2>
+<h2 id="generate-pem">Generate PEM</h2>
 
 <pre><code class="language-bash">ssh-keygen -f ~/.ssh/id_rsa -e -m pem &gt; ~/.ssh/id_rsa.pem
 </code></pre>
 
-<h2 id="copy-file-by-base64:94a5150ca2ae26062cc82162c1b651e1">Copy file by base64</h2>
+<h2 id="copy-file-by-base64">Copy file by base64</h2>
 
 <p>On remote session, run <code>base64 &lt; myfile</code> and copy the output.</p>
 
