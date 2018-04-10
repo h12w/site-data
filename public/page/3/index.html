@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-	<meta name="generator" content="Hugo 0.37" />
+	<meta name="generator" content="Hugo 0.37.1" />
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title> h12.me </title>
@@ -72,6 +72,47 @@
 
         <main class="container">
         
+        
+            <article class="frontpage">
+                <h1>
+                    <a href="http://h12.me/note/send-email-from-gmail/">Sending Email from Gmail using Go</a>
+                    <span class="line"></span>
+                </h1>
+                <span class="time">31 January 2016</span>
+                <div class="article-body hyphenate">
+                    <ol>
+<li><p>Turn on <a href="http://accounts.google.com/SmsAuthConfig">&ldquo;2-Step Verification&rdquo;</a> so
+that an <a href="https://security.google.com/settings/security/apppasswords">&ldquo;App password&rdquo;</a> can be generated</p></li>
+
+<li><p><code>go get gopkg.in/gomail.v2</code></p></li>
+
+<li><p>Send your Email like the example below:</p></li>
+</ol>
+
+<pre><code class="language-go">package main
+
+import (
+	&quot;gopkg.in/gomail.v2&quot;
+)
+
+func main() {
+	m := gomail.NewMessage()
+	m.SetHeader(&quot;From&quot;, &quot;from_address@gmail.com&quot;)
+	m.SetAddressHeader(&quot;To&quot;, &quot;to_adress@xxx&quot;, &quot;to_name&quot;)
+	m.SetAddressHeader(&quot;Cc&quot;, &quot;cc_adress@xxx&quot;, &quot;cc_name&quot;)
+	m.SetHeader(&quot;Subject&quot;, &quot;Hello! TEST!&quot;)
+	m.SetBody(&quot;text/html&quot;, &quot;Hello! &lt;b&gt;TEST&lt;/b&gt;!&quot;)
+
+	d := gomail.NewPlainDialer(&quot;smtp.gmail.com&quot;, 587, &quot;from_address@gmail.com&quot;, &quot;the App password&quot;)
+
+	if err := d.DialAndSend(m); err != nil {
+		panic(err)
+	}
+}
+</code></pre>
+
+                </div>
+            </article>
         
             <article class="frontpage">
                 <h1>
@@ -417,26 +458,6 @@ make sure the proxy is safe before this step).</p></li>
 <pre><code class="language-bash">appcfg.py . --email=[address] --passin
 </code></pre></li>
 </ol>
-
-                </div>
-            </article>
-        
-            <article class="frontpage">
-                <h1>
-                    <a href="http://h12.me/note/phonetic-notations/">Phonetic Notations</a>
-                    <span class="line"></span>
-                </h1>
-                <span class="time">30 June 2015</span>
-                <div class="article-body hyphenate">
-                    
-
-<h2 id="google-dictionary">Google Dictionary</h2>
-
-<p>Google dictionary uses a phonetic notation same as <a href="http://en.wikipedia.org/wiki/Pronunciation_respelling_for_English">NORD (New Oxford American Dictionary)</a>.</p>
-
-<p>To figure out an unknown phonetic notation, the simple way is to look up a few words that you know how to pronounce:
-church, hat, which, judge, game, thing, ship, thin, this, yes, pleasure
-cat, pay, care, father, arm, let, see, here, city, my, pot, no, caught, war, force, boy, put, tour, boot, out, cut, word, item, rabbit, winner, pupil</p>
 
                 </div>
             </article>

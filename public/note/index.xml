@@ -7,10 +7,21 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>Copyright (c) 2012-2018, Hǎiliàng Wáng; all rights reserved.</copyright>
-    <lastBuildDate>Wed, 28 Feb 2018 13:38:45 +0800</lastBuildDate>
+    <lastBuildDate>Tue, 10 Apr 2018 12:07:27 +0800</lastBuildDate>
     
 	<atom:link href="http://h12.me/note/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>How to Diff two JSON Files</title>
+      <link>http://h12.me/note/how-to-diff-json-files/</link>
+      <pubDate>Tue, 10 Apr 2018 12:07:27 +0800</pubDate>
+      
+      <guid>http://h12.me/note/how-to-diff-json-files/</guid>
+      <description>Just sort the keys first!
+Example:
+cat a.json | jq --sort-keys . &amp;gt; aa.json cat b.json | jq --sort-keys . &amp;gt; bb.json vimdiff aa.json bb.json  </description>
+    </item>
     
     <item>
       <title>Pagination Done Right</title>

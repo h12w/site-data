@@ -43,6 +43,11 @@
   </url>
   
   <url>
+    <loc>http://h12.me/note/how-to-diff-json-files/</loc>
+    <lastmod>2018-04-10T12:07:27+08:00</lastmod>
+  </url>
+  
+  <url>
     <loc>http://h12.me/note/pagination-done-right/</loc>
     <lastmod>2018-02-28T13:38:45+08:00</lastmod>
   </url>
@@ -460,6 +465,12 @@
   </url>
   
   <url>
+    <loc>http://h12.me/tags/diff/</loc>
+    <lastmod>2018-04-10T12:07:27+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>http://h12.me/tags/docker/</loc>
     <lastmod>2015-11-14T13:57:09+08:00</lastmod>
     <priority>0</priority>
@@ -604,8 +615,14 @@
   </url>
   
   <url>
+    <loc>http://h12.me/tags/jq/</loc>
+    <lastmod>2018-04-10T12:07:27+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>http://h12.me/tags/json/</loc>
-    <lastmod>2016-02-01T18:11:29+08:00</lastmod>
+    <lastmod>2018-04-10T12:07:27+08:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -659,7 +676,7 @@
   
   <url>
     <loc>http://h12.me/note/</loc>
-    <lastmod>2018-02-28T13:38:45+08:00</lastmod>
+    <lastmod>2018-04-10T12:07:27+08:00</lastmod>
     <priority>0</priority>
   </url>
   

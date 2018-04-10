@@ -75,297 +75,54 @@
         
             <article class="frontpage">
                 <h1>
-                    <a href="http://h12.me/note/mongodb-conn/">One-liner to check MongoDB Connections</a>
+                    <a href="http://h12.me/project/socks/">SOCKS: a SOCKS Proxy Package for Go</a>
                     <span class="line"></span>
                 </h1>
-                <span class="time">2 September 2016</span>
-                <div class="article-body hyphenate">
-                    <pre><code>mongo --eval &quot;JSON.stringify(db.currentOp(true))&quot; | \
-tail -n +3 | \
-jq -r .inprog[].client | \
-sed 's/\(.*\):.*/\1/' \
-| sort | uniq -c | sort -nr
-</code></pre>
-
-<ul>
-<li>dump connection information in standard JSON format</li>
-<li>remove MongoDB header</li>
-<li>extract IP:port as a list</li>
-<li>trim port</li>
-<li>sort IPs by freqencies</li>
-</ul>
-
-                </div>
-            </article>
-        
-            <article class="frontpage">
-                <h1>
-                    <a href="http://h12.me/note/count-word-freq/">Counting Word Frequencies in One Line</a>
-                    <span class="line"></span>
-                </h1>
-                <span class="time">9 August 2016</span>
-                <div class="article-body hyphenate">
-                    <pre><code class="language-bash">cat book.txt | \
-tr '!()[]{};:&quot;,&lt;.&gt;?“”‘’*/\r' ' ' | \
-tr ' ' '\n' | \
-grep -a -P &quot;^[\p{L}\p{N}\-']+\$&quot; | \
-grep -a -P -v &quot;^[\p{N}\-']+\$&quot; | \
-sed &quot;s/'s\$//&quot; | \
-sed &quot;s/^'//&quot; | sed &quot;s/'\$//&quot; &gt; words.txt
-
-cat words.txt | \
-sort | uniq -c | \
-sort -nr | \
-cut -c9- &gt; words_desc.txt
-</code></pre>
-
-<ul>
-<li>replace punctuations with space; remove <code>\r</code> from `\r\n&rsquo;</li>
-<li>one word per line</li>
-<li>keep only words composed of unicode letters, numbers, hyphen and apostrophe</li>
-<li>remove pure numbers</li>
-<li>remove &rsquo;s</li>
-<li>remove starting and ending apostrophe</li>
-
-<li><p>output words.txt</p></li>
-
-<li><p>sort and count unique words</p></li>
-
-<li><p>sort by freqency in descending order</p></li>
-
-<li><p>trim the frequency column</p></li>
-</ul>
-
-                </div>
-            </article>
-        
-            <article class="frontpage">
-                <h1>
-                    <a href="http://h12.me/note/mobi/">A Note on Mobi Format</a>
-                    <span class="line"></span>
-                </h1>
-                <span class="time">3 August 2016</span>
-                <div class="article-body hyphenate">
-                    <ul>
-<li>Mobi Format Description: <a href="http://wiki.mobileread.com/wiki/MOBI">http://wiki.mobileread.com/wiki/MOBI</a></li>
-<li>Python lib: <a href="https://github.com/kroo/mobi-python">https://github.com/kroo/mobi-python</a></li>
-</ul>
-
-                </div>
-            </article>
-        
-            <article class="frontpage">
-                <h1>
-                    <a href="http://h12.me/note/manager-faq/">A Manager&#39;s FAQ</a>
-                    <span class="line"></span>
-                </h1>
-                <span class="time">3 July 2016</span>
-                <div class="article-body hyphenate">
-                    <p>This is an <a href="https://readthink.com/a-managers-faq-35858a229f84#.7a4wlb9qy">insightful list</a>
-from <a href="Henry Ward">Henry Ward</a>:</p>
-
-<ul>
-<li><strong>How do I get employees to perform better?</strong> Tell them what they are doing well.</li>
-<li><strong>How do I give negative feedback?</strong> By being curious.</li>
-<li><strong>How do I decide what to delegate?</strong> Delegate the work you want to do.</li>
-<li><strong>How should I prioritize?</strong> Fix problems. Then prevent problems.</li>
-<li><strong>How should I grade employees?</strong> Don’t. Teach them to self-evaluate.</li>
-<li><strong>When do I fire somebody?</strong> When you know they can’t succeed.</li>
-<li><strong>How do I fire somebody?</strong> By apologizing for our failures.</li>
-<li><strong>Why can’t I just tell people what to do?</strong> Because the more responsibility you have, the less authority you have.</li>
-<li><strong>How do I know if I am a good manager?</strong> Employees ask you for advice.</li>
-<li><strong>How do I know if I have good management team?</strong> Shit rolls uphill.</li>
-</ul>
-
-                </div>
-            </article>
-        
-            <article class="frontpage">
-                <h1>
-                    <a href="http://h12.me/note/on-reliable-persistence/">On Reliable Persistence</a>
-                    <span class="line"></span>
-                </h1>
-                <span class="time">2 July 2016</span>
-                <div class="article-body hyphenate">
-                    <p>A short investigation on reliable persistence:</p>
-
-<ul>
-<li><p>Crash consistency is <a href="http://danluu.com/file-consistency/">hard</a> but
-<a href="https://www.flamingspork.com/talks/">possible</a> at a huge performance
-<a href="https://www.google.com/#q=fsync+performance">cost</a></p></li>
-
-<li><p>Data safty must rely on distributed solution</p>
-
-<ul>
-<li><a href="https://raft.github.io">Raft</a></li>
-</ul></li>
-
-<li><p>Perhaps we should just give up manual fsync and rely on</p>
-
-<ul>
-<li>OS background flush</li>
-<li>corruption detection &amp; correction at startup</li>
-<li><a href="https://kafka.apache.org/08/ops.html">replication</a></li>
-</ul></li>
-</ul>
-
-                </div>
-            </article>
-        
-            <article class="frontpage">
-                <h1>
-                    <a href="http://h12.me/note/openwrt-note/">Note on OpenWRT</a>
-                    <span class="line"></span>
-                </h1>
-                <span class="time">27 February 2016</span>
+                <span class="time">1 August 2012</span>
                 <div class="article-body hyphenate">
                     
 
-<h2 id="obtain-openwrt">Obtain OpenWRT</h2>
+<p><a href="https://godoc.org/h12.me/socks"><img src="https://godoc.org/h12.me/socks?status.svg" alt="GoDoc" /></a></p>
 
-<ul>
-<li>Find the device model at the <a href="https://wiki.openwrt.org/toh/start">Table of Hardware</a> (Huawei HG556a C)</li>
-<li>Open <em>Device Techdata</em> for <em>Firmware OpenWrt Install URL</em></li>
-<li>Open <em>Device Page</em> for <em>Installation</em> instructions</li>
-</ul>
+<p>SOCKS is a SOCKS4, SOCKS4A and SOCKS5 proxy package for Go.</p>
 
-<h2 id="computer-cable-router">Computer - Cable - Router</h2>
+<h2 id="quick-start">Quick Start</h2>
 
-<p>Connect the computer to the router with a cable.</p>
+<h3 id="get-the-package">Get the package</h3>
 
-<h2 id="install-openwrt">Install OpenWRT</h2>
-
-<p>Follow the instructions to install OpenWRT.</p>
-
-<h2 id="ssh">SSH</h2>
-
-<p>First login:</p>
-
-<pre><code class="language-bash">telnet 192.168.1.1
+<pre><code>go get -u &quot;h12.me/socks&quot;
 </code></pre>
 
-<p>Change password to enable SSH:</p>
+<h3 id="import-the-package">Import the package</h3>
 
-<pre><code class="language-bash">passwd
-exit
+<pre><code>import &quot;h12.me/socks&quot;
 </code></pre>
 
-<p>For public key authentication, add the public key:</p>
+<h3 id="create-a-socks-proxy-dialing-function">Create a SOCKS proxy dialing function</h3>
 
-<pre><code class="language-bash">ssh-copy-id root@192.168.1.1
-ssh root@192.168.1.1
-mv ~/.ssh/authorized_keys /etc/dropbear
-exit
+<pre><code>dialSocksProxy := socks.DialSocksProxy(socks.SOCKS5, &quot;127.0.0.1:1080&quot;)
+tr := &amp;http.Transport{Dial: dialSocksProxy}
+httpClient := &amp;http.Client{Transport: tr}
 </code></pre>
 
-<h2 id="wifi">WiFi</h2>
+<h2 id="alternatives">Alternatives</h2>
 
-<p>In <code>/etc/config/wireless</code>:</p>
-
-<pre><code>config wifi-device  radio0
-	......
-	# REMOVE THIS LINE TO ENABLE WIFI:
-	# option disabled 1
-
-config wifi-iface
-	option device     radio0
-	option network    lan
-	option mode       ap
-	option encryption psk2
-	option hidden     1
-	option ssid       [SSID]
-	option key        [WiFi password]
-	option macaddr    [00:0A:4B:3C:6D:02]
-</code></pre>
-
-<p>Execute:</p>
-
-<pre><code class="language-bash">wifi
-</code></pre>
-
-<h2 id="computer-wifi-router">Computer - WiFi - Router</h2>
-
-<p>Disconnect the cable to the router. Try SSH via WiFi.</p>
-
-<h2 id="internet">Internet</h2>
-
-<p>In <code>/etc/config/network</code>:</p>
-
-<p>It is better to change the lan address so that it will not be conflicted with the upstream address.</p>
-
-<pre><code>config interface 'lan'
-	option ipaddr '192.168.2.1'
-</code></pre>
-
-<pre><code># lan switch
-config switch_vlan
-	option device 	eth0
-	option vlan 	1
-	option ports 	&quot;1 2 5t&quot;
-
-# wan switch
-config switch_vlan
-	option device 	eth0
-	option vlan 	2
-	option ports 	&quot;0 5t&quot;
-</code></pre>
-
-<p>For DHCP wan:</p>
-
-<pre><code>config interface wan
-	option ifname eth0.2
-	option proto  dhcp
-</code></pre>
-
-<p>For PPPOE wan:</p>
-
-<pre><code>config interface wan
-	option ifname   eth0.2
-	option proto    pppoe
-	option username [PPPOE user name]
-	option password [password]
-</code></pre>
-
-<h2 id="computer-wifi-router-cable-internet">Computer - WiFi - Router - Cable - Internet</h2>
-
-<p>Connect the internet cable to the router, reboot the router.</p>
-
-                </div>
-            </article>
-        
-            <article class="frontpage">
-                <h1>
-                    <a href="http://h12.me/note/about-pretty-print/">About Pretty Printing</a>
-                    <span class="line"></span>
-                </h1>
-                <span class="time">1 February 2016</span>
-                <div class="article-body hyphenate">
-                    
-
-<h2 id="json">JSON</h2>
-
-<pre><code class="language-bash">cat xxx.json | jq .
-</code></pre>
-
-<h2 id="xml">XML</h2>
-
-<pre><code class="language-bash">cat xxx.xml | xmllint --format -
-</code></pre>
+<p><a href="http://code.google.com/p/go/source/browse/?repo=net#hg%2Fproxy">http://code.google.com/p/go/source/browse/?repo=net#hg%2Fproxy</a></p>
 
                 </div>
             </article>
         
         <nav class="pagination">
-            <span>- 2 -</span>
+            <span>- 9 -</span>
             <ul>
                 <li>
             
-                    <a href="/">« Prev</a>
+                    <a href="/page/8">« Prev</a>
             
                 </li>
                 <li>
             
-                    <a href="/page/3">Next »</a>
+                    <span class="disabled">Next »</span>
             
                 </li>
             </ul>

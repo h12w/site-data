@@ -202,6 +202,15 @@
     </item>
     
     <item>
+      <title>Diff</title>
+      <link>http://h12.me/tags/diff/</link>
+      <pubDate>Tue, 10 Apr 2018 12:07:27 +0800</pubDate>
+      
+      <guid>http://h12.me/tags/diff/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>Docker</title>
       <link>http://h12.me/tags/docker/</link>
       <pubDate>Sat, 14 Nov 2015 13:57:09 +0800</pubDate>
@@ -418,9 +427,18 @@
     </item>
     
     <item>
+      <title>Jq</title>
+      <link>http://h12.me/tags/jq/</link>
+      <pubDate>Tue, 10 Apr 2018 12:07:27 +0800</pubDate>
+      
+      <guid>http://h12.me/tags/jq/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>Json</title>
       <link>http://h12.me/tags/json/</link>
-      <pubDate>Mon, 01 Feb 2016 18:11:29 +0800</pubDate>
+      <pubDate>Tue, 10 Apr 2018 12:07:27 +0800</pubDate>
       
       <guid>http://h12.me/tags/json/</guid>
       <description></description>
