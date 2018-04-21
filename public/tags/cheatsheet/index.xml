@@ -18,7 +18,7 @@
       <pubDate>Fri, 20 Apr 2018 10:14:06 +0800</pubDate>
       
       <guid>http://h12.me/note/tmux-cheatsheet/</guid>
-      <description> create a new session with iTerm2 integration tmux -CC new -s [session-name]  attach to a session with iTerm2 integration tmux -CC attach -t [session-name]  </description>
+      <description> Create a new session with iTerm2 integration tmux -CC new -s [session-name]  Attach to a session with iTerm2 integration tmux -CC attach -t [session-name]  </description>
     </item>
     
   </channel>
