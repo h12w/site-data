@@ -1,8 +1,8 @@
 # site/config.yml: DO NOT EDIT the copy in docker repo
 
 domain_names:
-  h12.io
-  h12.me
+  - h12.io
+  - h12.me
 
 git_host: https://github.com/h12w
 
