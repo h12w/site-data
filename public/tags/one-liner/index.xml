@@ -7,10 +7,21 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>Copyright (c) 2012-2018, Hǎiliàng Wáng; all rights reserved.</copyright>
-    <lastBuildDate>Tue, 20 Jun 2017 12:40:10 +0800</lastBuildDate>
+    <lastBuildDate>Sat, 05 May 2018 16:02:07 +0800</lastBuildDate>
     
 	<atom:link href="http://h12.me/tags/one-liner/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>How to Start Godoc on Mac</title>
+      <link>http://h12.me/note/start-godoc/</link>
+      <pubDate>Sat, 05 May 2018 16:02:07 +0800</pubDate>
+      
+      <guid>http://h12.me/note/start-godoc/</guid>
+      <description>Fish:
+godoc -http=:6060 &amp;amp;; disown (pidof godoc)  Bash:
+godoc -http=:6060 &amp;amp;; disown `pidof godoc`  And pidof can be installed with Homebrew.</description>
+    </item>
     
     <item>
       <title>How to Measure Response Time with Curl</title>

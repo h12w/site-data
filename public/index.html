@@ -75,6 +75,28 @@
         
             <article class="frontpage">
                 <h1>
+                    <a href="http://h12.me/note/start-godoc/">How to Start Godoc on Mac</a>
+                    <span class="line"></span>
+                </h1>
+                <span class="time">5 May 2018</span>
+                <div class="article-body hyphenate">
+                    <p>Fish:</p>
+
+<pre><code class="language-fish">godoc -http=:6060 &amp;; disown (pidof godoc)
+</code></pre>
+
+<p>Bash:</p>
+
+<pre><code>godoc -http=:6060 &amp;; disown `pidof godoc`
+</code></pre>
+
+<p>And pidof can be installed with Homebrew.</p>
+
+                </div>
+            </article>
+        
+            <article class="frontpage">
+                <h1>
                     <a href="http://h12.me/note/tmux-cheatsheet/">Tmux Cheatsheet on Mac</a>
                     <span class="line"></span>
                 </h1>
@@ -183,26 +205,6 @@ git push origin --delete [branch-name]
                     <pre><code class="language-bash">wget --recursive --level=2 --no-parent --no-clobber --convert-links --continue
 [URL]
 </code></pre>
-
-                </div>
-            </article>
-        
-            <article class="frontpage">
-                <h1>
-                    <a href="http://h12.me/note/ubuntu-remove-old-kernels/">How to Remove Old Kernels in Ubuntu</a>
-                    <span class="line"></span>
-                </h1>
-                <span class="time">10 September 2016</span>
-                <div class="article-body hyphenate">
-                    <pre><code class="language-bash">sudo apt install byobu
-sudo purge-old-kernels
-</code></pre>
-
-<p>Reference:</p>
-
-<ul>
-<li>Remove Old Kernels (<a href="https://help.ubuntu.com/community/Lubuntu/Documentation/RemoveOldKernels">https://help.ubuntu.com/community/Lubuntu/Documentation/RemoveOldKernels</a>)</li>
-</ul>
 
                 </div>
             </article>

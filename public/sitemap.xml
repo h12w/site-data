@@ -43,6 +43,11 @@
   </url>
   
   <url>
+    <loc>http://h12.me/note/start-godoc/</loc>
+    <lastmod>2018-05-05T16:02:07+08:00</lastmod>
+  </url>
+  
+  <url>
     <loc>http://h12.me/note/tmux-cheatsheet/</loc>
     <lastmod>2018-04-20T10:14:06+08:00</lastmod>
   </url>
@@ -572,6 +577,12 @@
   </url>
   
   <url>
+    <loc>http://h12.me/tags/godoc/</loc>
+    <lastmod>2018-05-05T16:02:07+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>http://h12.me/tags/golang/</loc>
     <lastmod>2018-02-28T13:38:45+08:00</lastmod>
     <priority>0</priority>
@@ -657,7 +668,7 @@
   
   <url>
     <loc>http://h12.me/tags/mac/</loc>
-    <lastmod>2018-04-20T10:14:06+08:00</lastmod>
+    <lastmod>2018-05-05T16:02:07+08:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -699,13 +710,13 @@
   
   <url>
     <loc>http://h12.me/note/</loc>
-    <lastmod>2018-04-20T10:14:06+08:00</lastmod>
+    <lastmod>2018-05-05T16:02:07+08:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>http://h12.me/tags/one-liner/</loc>
-    <lastmod>2017-06-20T12:40:10+08:00</lastmod>
+    <lastmod>2018-05-05T16:02:07+08:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -718,6 +729,12 @@
   <url>
     <loc>http://h12.me/tags/openwrt/</loc>
     <lastmod>2016-02-27T14:59:54+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://h12.me/tags/osx/</loc>
+    <lastmod>2018-05-05T16:02:07+08:00</lastmod>
     <priority>0</priority>
   </url>
   

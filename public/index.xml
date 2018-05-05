@@ -91,6 +91,17 @@ This Site Tools  Container: Docker CSS: Sass, Compass &amp;amp; Susy Font: Googl
     </item>
     
     <item>
+      <title>How to Start Godoc on Mac</title>
+      <link>http://h12.me/note/start-godoc/</link>
+      <pubDate>Sat, 05 May 2018 16:02:07 +0800</pubDate>
+      
+      <guid>http://h12.me/note/start-godoc/</guid>
+      <description>Fish:
+godoc -http=:6060 &amp;amp;; disown (pidof godoc)  Bash:
+godoc -http=:6060 &amp;amp;; disown `pidof godoc`  And pidof can be installed with Homebrew.</description>
+    </item>
+    
+    <item>
       <title>Tmux Cheatsheet on Mac</title>
       <link>http://h12.me/note/tmux-cheatsheet/</link>
       <pubDate>Fri, 20 Apr 2018 10:14:06 +0800</pubDate>
