@@ -1,52 +1,52 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Font on h12.me</title>
-    <link>http://h12.me/tags/font/</link>
-    <description>Recent content in Font on h12.me</description>
+    <title>Font on h12</title>
+    <link>http://h12.io/tags/font/</link>
+    <description>Recent content in Font on h12</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <copyright>Copyright (c) 2012-2018, Hǎiliàng Wáng; all rights reserved.</copyright>
+    <language>en-US</language>
+    <copyright>Copyright (c) 2012-2018, Wáng Hǎiliàng (Hal); all rights reserved.</copyright>
     <lastBuildDate>Thu, 17 Jul 2014 03:19:18 +0000</lastBuildDate>
     
-	<atom:link href="http://h12.me/tags/font/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="http://h12.io/tags/font/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Installing Source Code Pro</title>
-      <link>http://h12.me/note/install-scp/</link>
+      <link>http://h12.io/note/install-scp/</link>
       <pubDate>Thu, 17 Jul 2014 03:19:18 +0000</pubDate>
       
-      <guid>http://h12.me/note/install-scp/</guid>
+      <guid>http://h12.io/note/install-scp/</guid>
       <description>Source Code Pro is one of the best monospace fonts and it is open sourced.
 Here is the script for installing it on Linux.</description>
     </item>
     
     <item>
       <title>Why My Web Font Looks Ugly on IE?</title>
-      <link>http://h12.me/note/ugly-font/</link>
+      <link>http://h12.io/note/ugly-font/</link>
       <pubDate>Wed, 09 Jul 2014 05:42:42 +0000</pubDate>
       
-      <guid>http://h12.me/note/ugly-font/</guid>
+      <guid>http://h12.io/note/ugly-font/</guid>
       <description>Windows needs hand-tuned hinting which is missing in many web fonts. To solve this problem, there is a tool called ttfautohint which can automatically add hinting to font files.
 There is a tutorial, and an online tool called Fontie.</description>
     </item>
     
     <item>
       <title>A List of Narrow Fonts for Titles</title>
-      <link>http://h12.me/note/narrow-fonts/</link>
+      <link>http://h12.io/note/narrow-fonts/</link>
       <pubDate>Tue, 01 Jul 2014 08:39:42 +0000</pubDate>
       
-      <guid>http://h12.me/note/narrow-fonts/</guid>
+      <guid>http://h12.io/note/narrow-fonts/</guid>
       <description> Economica Fjalla One League Gothic Medula One Open Sans Condensed Oswald Pathway Gothic One PT Sans Narrow Rationale Six Caps Tulpen One Yanone Kaffeesatz  </description>
     </item>
     
     <item>
       <title>Links about Font Choosing</title>
-      <link>http://h12.me/note/font-links/</link>
+      <link>http://h12.io/note/font-links/</link>
       <pubDate>Sun, 22 Jun 2014 14:09:45 +0000</pubDate>
       
-      <guid>http://h12.me/note/font-links/</guid>
+      <guid>http://h12.io/note/font-links/</guid>
       <description> The Best Font Styles for Blogging Size Doesn’t Matter, and What Does Using Media Queries To Improve Readability 8 Definitive Web Font Stacks  </description>
     </item>
     

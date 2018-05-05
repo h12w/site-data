@@ -1,41 +1,41 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Tests on h12.me</title>
-    <link>http://h12.me/test/</link>
-    <description>Recent content in Tests on h12.me</description>
+    <title>Tests on h12</title>
+    <link>http://h12.io/test/</link>
+    <description>Recent content in Tests on h12</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <copyright>Copyright (c) 2012-2018, Hǎiliàng Wáng; all rights reserved.</copyright>
+    <language>en-US</language>
+    <copyright>Copyright (c) 2012-2018, Wáng Hǎiliàng (Hal); all rights reserved.</copyright>
     <lastBuildDate>Thu, 10 Jul 2014 03:06:35 +0000</lastBuildDate>
     
-	<atom:link href="http://h12.me/test/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="http://h12.io/test/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Font size test for body copy</title>
-      <link>http://h12.me/test/size_test/</link>
+      <link>http://h12.io/test/size_test/</link>
       <pubDate>Thu, 10 Jul 2014 03:06:35 +0000</pubDate>
       
-      <guid>http://h12.me/test/size_test/</guid>
+      <guid>http://h12.io/test/size_test/</guid>
       <description>24px A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I enjoy with my whole heart. I am alone, and feel the charm of existence in this spot, which was created for the bliss of souls like mine. I am so happy, my dear friend, so absorbed in the exquisite sense of mere tranquil existence, that I neglect my talents. I should be incapable of drawing a single stroke at the present moment; and yet I feel that I never was a greater artist than now.</description>
     </item>
     
     <item>
       <title>Line height test for body copy</title>
-      <link>http://h12.me/test/height_test/</link>
+      <link>http://h12.io/test/height_test/</link>
       <pubDate>Thu, 10 Jul 2014 03:06:35 +0000</pubDate>
       
-      <guid>http://h12.me/test/height_test/</guid>
+      <guid>http://h12.io/test/height_test/</guid>
       <description>1.7 A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I enjoy with my whole heart. I am alone, and feel the charm of existence in this spot, which was created for the bliss of souls like mine. I am so happy, my dear friend, so absorbed in the exquisite sense of mere tranquil existence, that I neglect my talents. I should be incapable of drawing a single stroke at the present moment; and yet I feel that I never was a greater artist than now.</description>
     </item>
     
     <item>
       <title>Lorem ipsum</title>
-      <link>http://h12.me/test/lorem/</link>
+      <link>http://h12.io/test/lorem/</link>
       <pubDate>Sat, 05 Jul 2014 03:37:53 +0000</pubDate>
       
-      <guid>http://h12.me/test/lorem/</guid>
+      <guid>http://h12.io/test/lorem/</guid>
       <description>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim.
  Tortor, suscipit eget, imperdiet nec, imperdiet iaculis, ipsum. Sed aliquam ultrices mauris. Integer ante arcu, accumsan a, consectetuer eget. Posuere ut, mauris. Praesent adipiscing. Phasellus ullamcorper.  Hendrerit id, lorem.</description>
     </item>

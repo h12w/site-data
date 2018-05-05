@@ -1,23 +1,23 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Cheatsheet on h12.me</title>
-    <link>http://h12.me/tags/cheatsheet/</link>
-    <description>Recent content in Cheatsheet on h12.me</description>
+    <title>Cheatsheet on h12</title>
+    <link>http://h12.io/tags/cheatsheet/</link>
+    <description>Recent content in Cheatsheet on h12</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <copyright>Copyright (c) 2012-2018, Hǎiliàng Wáng; all rights reserved.</copyright>
+    <language>en-US</language>
+    <copyright>Copyright (c) 2012-2018, Wáng Hǎiliàng (Hal); all rights reserved.</copyright>
     <lastBuildDate>Fri, 20 Apr 2018 10:14:06 +0800</lastBuildDate>
     
-	<atom:link href="http://h12.me/tags/cheatsheet/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="http://h12.io/tags/cheatsheet/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Tmux Cheatsheet on Mac</title>
-      <link>http://h12.me/note/tmux-cheatsheet/</link>
+      <link>http://h12.io/note/tmux-cheatsheet/</link>
       <pubDate>Fri, 20 Apr 2018 10:14:06 +0800</pubDate>
       
-      <guid>http://h12.me/note/tmux-cheatsheet/</guid>
+      <guid>http://h12.io/note/tmux-cheatsheet/</guid>
       <description> Create a new session with iTerm2 integration tmux -CC new -s [session-name]  Attach to a session with iTerm2 integration tmux -CC attach -t [session-name]  </description>
     </item>
     

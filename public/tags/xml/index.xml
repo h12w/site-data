@@ -1,32 +1,32 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Xml on h12.me</title>
-    <link>http://h12.me/tags/xml/</link>
-    <description>Recent content in Xml on h12.me</description>
+    <title>Xml on h12</title>
+    <link>http://h12.io/tags/xml/</link>
+    <description>Recent content in Xml on h12</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <copyright>Copyright (c) 2012-2018, Hǎiliàng Wáng; all rights reserved.</copyright>
+    <language>en-US</language>
+    <copyright>Copyright (c) 2012-2018, Wáng Hǎiliàng (Hal); all rights reserved.</copyright>
     <lastBuildDate>Mon, 01 Feb 2016 18:11:29 +0800</lastBuildDate>
     
-	<atom:link href="http://h12.me/tags/xml/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="http://h12.io/tags/xml/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>About Pretty Printing</title>
-      <link>http://h12.me/note/about-pretty-print/</link>
+      <link>http://h12.io/note/about-pretty-print/</link>
       <pubDate>Mon, 01 Feb 2016 18:11:29 +0800</pubDate>
       
-      <guid>http://h12.me/note/about-pretty-print/</guid>
+      <guid>http://h12.io/note/about-pretty-print/</guid>
       <description> JSON cat xxx.json | jq .  XML cat xxx.xml | xmllint --format -  </description>
     </item>
     
     <item>
       <title>How to Generate XSD Schema from XML?</title>
-      <link>http://h12.me/note/generate-xsd-from-xml/</link>
+      <link>http://h12.io/note/generate-xsd-from-xml/</link>
       <pubDate>Thu, 23 Apr 2015 15:41:12 +0800</pubDate>
       
-      <guid>http://h12.me/note/generate-xsd-from-xml/</guid>
+      <guid>http://h12.io/note/generate-xsd-from-xml/</guid>
       <description>Apache XMLBeans is an old tool but still functioning. Download and uncompress the latest binary release, then run inst2xsd under bin folder (needs JDK).
 inst2xsd xxx.xml  </description>
     </item>

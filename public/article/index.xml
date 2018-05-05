@@ -1,61 +1,61 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Articles on h12.me</title>
-    <link>http://h12.me/article/</link>
-    <description>Recent content in Articles on h12.me</description>
+    <title>Articles on h12</title>
+    <link>http://h12.io/article/</link>
+    <description>Recent content in Articles on h12</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <copyright>Copyright (c) 2012-2018, Hǎiliàng Wáng; all rights reserved.</copyright>
+    <language>en-US</language>
+    <copyright>Copyright (c) 2012-2018, Wáng Hǎiliàng (Hal); all rights reserved.</copyright>
     <lastBuildDate>Wed, 18 Feb 2015 17:23:24 +0000</lastBuildDate>
     
-	<atom:link href="http://h12.me/article/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="http://h12.io/article/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>A Developer&#39;s Guide to Password Management</title>
-      <link>http://h12.me/article/password-management/</link>
+      <link>http://h12.io/article/password-management/</link>
       <pubDate>Wed, 18 Feb 2015 17:23:24 +0000</pubDate>
       
-      <guid>http://h12.me/article/password-management/</guid>
+      <guid>http://h12.io/article/password-management/</guid>
       <description>This article is intended to be a comprehensive recipe to password management, assuming:
  You are a developer You have to manage dozens of passwords, ssh key pairs and possibly some secret documents You want strong security on each of them You do not want to forget any of them but do not either want to spend too much time memorizing them You want to access your passwords from both your computers and mobile devices  The proposed solution includes:</description>
     </item>
     
     <item>
       <title>A Brief Note on Scientific Web Surfing</title>
-      <link>http://h12.me/article/scientific-web-surfing/</link>
+      <link>http://h12.io/article/scientific-web-surfing/</link>
       <pubDate>Sat, 14 Feb 2015 09:30:55 +0000</pubDate>
       
-      <guid>http://h12.me/article/scientific-web-surfing/</guid>
+      <guid>http://h12.io/article/scientific-web-surfing/</guid>
       <description>Knowledge is power. Information is liberating. &amp;mdash; by Kofi Annan.
 VPS  CloudsVM Vultr DigitalOcean BandwagonHOST  Client Area -&amp;gt; Services -&amp;gt; Order New Services 64MB RAM is enough for running both ShadowSocks and pdnsd Install Ubuntu LTS 32bit (x86, i686) or CentOS 7.   CentOS Install CentOS 7 (64bit) Shadowsocks cd /etc/yum.repos.d/ wget https://copr.fedorainfracloud.org/coprs/librehat/shadowsocks/repo/epel-7/librehat-shadowsocks-epel-7.repo yum update yum install shadowsocks-libev cd /etc/shadowsocks-libev/ vim config.json # server should be 0.</description>
     </item>
     
     <item>
       <title>Learning Haskell the Hard Way</title>
-      <link>http://h12.me/article/learn-haskell/</link>
+      <link>http://h12.io/article/learn-haskell/</link>
       <pubDate>Sat, 26 Jul 2014 08:12:39 +0000</pubDate>
       
-      <guid>http://h12.me/article/learn-haskell/</guid>
+      <guid>http://h12.io/article/learn-haskell/</guid>
       <description>When I was reading the collection of learning resources on Haskell and tried to find a good start, I quickly realized that none of the books or tutorials are suitable for me: the easier a tutorial claims to be, the harder to really understand Haskell by reading it. What I need is a terse documentation that introduces the syntax and semantics of Haskell systematically and clearly, but unfortunately none was found.</description>
     </item>
     
     <item>
       <title>How to Achieve a Perfect PageSpeed Insights Score</title>
-      <link>http://h12.me/article/pagespeed-insights/</link>
+      <link>http://h12.io/article/pagespeed-insights/</link>
       <pubDate>Thu, 24 Jul 2014 03:42:01 +0000</pubDate>
       
-      <guid>http://h12.me/article/pagespeed-insights/</guid>
+      <guid>http://h12.io/article/pagespeed-insights/</guid>
       <description>Indtroduction PageSpeed Insights is an online tool by Google to measure the performance of an web page for mobile and desktop devices. It has a set of heuristic rules considering the network-independent aspects of page performance. Each rule has a weight and the total score ranges from 0 to 100 points. The desktop and mobile tests have the same set of rules for performance and mobile test has some extra rules about user experience.</description>
     </item>
     
     <item>
       <title>Finding Optimal Typographic Scale</title>
-      <link>http://h12.me/article/optimal-font-scale/</link>
+      <link>http://h12.io/article/optimal-font-scale/</link>
       <pubDate>Sat, 05 Jul 2014 15:03:04 +0000</pubDate>
       
-      <guid>http://h12.me/article/optimal-font-scale/</guid>
+      <guid>http://h12.io/article/optimal-font-scale/</guid>
       <description>During the construction of this site, there are many important design decisions that need to be made. One of them is to decide the font size for each level of headings, i.e., typographic scale.
 Investigation The first thing I did was to read everything online about typographic scale. I will just skip the details and jump to my opinions:
  Modular scale should be followed Traditional scale is obsolete Golden ratio or double-stranded scale do not make any sense Vertical rhythm should be considered  Then a little explanation.</description>

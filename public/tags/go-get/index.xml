@@ -1,23 +1,23 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Go Get on h12.me</title>
-    <link>http://h12.me/tags/go-get/</link>
-    <description>Recent content in Go Get on h12.me</description>
+    <title>Go Get on h12</title>
+    <link>http://h12.io/tags/go-get/</link>
+    <description>Recent content in Go Get on h12</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <copyright>Copyright (c) 2012-2018, Hǎiliàng Wáng; all rights reserved.</copyright>
+    <language>en-US</language>
+    <copyright>Copyright (c) 2012-2018, Wáng Hǎiliàng (Hal); all rights reserved.</copyright>
     <lastBuildDate>Wed, 06 May 2015 12:01:11 +0800</lastBuildDate>
     
-	<atom:link href="http://h12.me/tags/go-get/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="http://h12.io/tags/go-get/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>How to &#34;go get&#34; Behind a Proxy</title>
-      <link>http://h12.me/note/go-get-behind-proxy/</link>
+      <link>http://h12.io/note/go-get-behind-proxy/</link>
       <pubDate>Wed, 06 May 2015 12:01:11 +0800</pubDate>
       
-      <guid>http://h12.me/note/go-get-behind-proxy/</guid>
+      <guid>http://h12.io/note/go-get-behind-proxy/</guid>
       <description> Proxy for &amp;ldquo;go get&amp;rdquo; https_proxy=http://user:pass@proxy_host:port go get ...  Proxy for Git In $HOME/.gitconfig:
 [https] proxy = proxy_url  Proxy for Mercurial In $HOME/.hgrc:
 [http_proxy] host = host:port user = ... passwd = ...  </description>

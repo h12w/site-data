@@ -1,23 +1,23 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Custom Domain on h12.me</title>
-    <link>http://h12.me/tags/custom-domain/</link>
-    <description>Recent content in Custom Domain on h12.me</description>
+    <title>Custom Domain on h12</title>
+    <link>http://h12.io/tags/custom-domain/</link>
+    <description>Recent content in Custom Domain on h12</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <copyright>Copyright (c) 2012-2018, Hǎiliàng Wáng; all rights reserved.</copyright>
+    <language>en-US</language>
+    <copyright>Copyright (c) 2012-2018, Wáng Hǎiliàng (Hal); all rights reserved.</copyright>
     <lastBuildDate>Mon, 19 Jan 2015 09:32:04 +0000</lastBuildDate>
     
-	<atom:link href="http://h12.me/tags/custom-domain/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="http://h12.io/tags/custom-domain/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>How to configure a custom domain name in GAE?</title>
-      <link>http://h12.me/note/gae-custom-domain/</link>
+      <link>http://h12.io/note/gae-custom-domain/</link>
       <pubDate>Mon, 19 Jan 2015 09:32:04 +0000</pubDate>
       
-      <guid>http://h12.me/note/gae-custom-domain/</guid>
+      <guid>http://h12.io/note/gae-custom-domain/</guid>
       <description>Steps:
  Visit Developers Console. In your project: Compute -&amp;gt; App Engine -&amp;gt; Settings. On the tab labelled CUSTOM DOMAINS, you can verify your domain and assign it and/or its subdomains to your GAE project. Add the DNS settings provided by Google into the DNS server of your domain provider.  Notes:
  Only HTTP is supported, HTTPS is not. It will not work if you only modify the DNS record without actually assigning the custom domain in the Developer Console.</description>

@@ -1,80 +1,80 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>h12.me</title>
-    <link>http://h12.me/</link>
-    <description>Recent content on h12.me</description>
+    <title>h12</title>
+    <link>http://h12.io/</link>
+    <description>Recent content on h12</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <copyright>Copyright (c) 2012-2018, Hǎiliàng Wáng; all rights reserved.</copyright>
+    <language>en-US</language>
+    <copyright>Copyright (c) 2012-2018, Wáng Hǎiliàng (Hal); all rights reserved.</copyright>
     <lastBuildDate>Thu, 10 Jul 2014 03:06:35 +0000</lastBuildDate>
     
-	<atom:link href="http://h12.me/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="http://h12.io/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Font size test for body copy</title>
-      <link>http://h12.me/test/size_test/</link>
+      <link>http://h12.io/test/size_test/</link>
       <pubDate>Thu, 10 Jul 2014 03:06:35 +0000</pubDate>
       
-      <guid>http://h12.me/test/size_test/</guid>
+      <guid>http://h12.io/test/size_test/</guid>
       <description>24px A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I enjoy with my whole heart. I am alone, and feel the charm of existence in this spot, which was created for the bliss of souls like mine. I am so happy, my dear friend, so absorbed in the exquisite sense of mere tranquil existence, that I neglect my talents. I should be incapable of drawing a single stroke at the present moment; and yet I feel that I never was a greater artist than now.</description>
     </item>
     
     <item>
       <title>Line height test for body copy</title>
-      <link>http://h12.me/test/height_test/</link>
+      <link>http://h12.io/test/height_test/</link>
       <pubDate>Thu, 10 Jul 2014 03:06:35 +0000</pubDate>
       
-      <guid>http://h12.me/test/height_test/</guid>
+      <guid>http://h12.io/test/height_test/</guid>
       <description>1.7 A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I enjoy with my whole heart. I am alone, and feel the charm of existence in this spot, which was created for the bliss of souls like mine. I am so happy, my dear friend, so absorbed in the exquisite sense of mere tranquil existence, that I neglect my talents. I should be incapable of drawing a single stroke at the present moment; and yet I feel that I never was a greater artist than now.</description>
     </item>
     
     <item>
       <title>Lorem ipsum</title>
-      <link>http://h12.me/test/lorem/</link>
+      <link>http://h12.io/test/lorem/</link>
       <pubDate>Sat, 05 Jul 2014 03:37:53 +0000</pubDate>
       
-      <guid>http://h12.me/test/lorem/</guid>
+      <guid>http://h12.io/test/lorem/</guid>
       <description>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim.
  Tortor, suscipit eget, imperdiet nec, imperdiet iaculis, ipsum. Sed aliquam ultrices mauris. Integer ante arcu, accumsan a, consectetuer eget. Posuere ut, mauris. Praesent adipiscing. Phasellus ullamcorper.  Hendrerit id, lorem.</description>
     </item>
     
     <item>
       <title>王海亮</title>
-      <link>http://h12.me/resume-zh/</link>
+      <link>http://h12.io/resume-zh/</link>
       <pubDate>Wed, 27 Dec 2017 14:36:53 +0000</pubDate>
       
-      <guid>http://h12.me/resume-zh/</guid>
-      <description>https://h12.me https://github.com/h12w  软件开发深耕十余年，国内Go语言顶尖技术人才，Golang Meetup讲师，阿里SDK悬赏奖金获得者，百余项开源软件作者和积极贡献者，数据挖掘论文在悉尼ICC会议交流。对后端和分布式架构有深刻理解，如：API协议设计，消息系统，数据库引擎和实时分析等。
- 中国顶级Go语言开发者  aliyun-oss-go-sdk: 赢取阿里云 OSS SDK 设计竞赛奖金 Github 超过 100个项目  后端架构和算法专家  Appcoach Market: CTR/CVR 估计模型和实时流分析 h12.me/sej: 分布式消息系统 h12.me/kpax: 2个月内成为 Kafka 专家并实现 Go 语言客户端 h12.me/html-query: 函数式 HTML DOM 提取 h12.me/buid: 分布式消息 BUID 生成器  执着写出测试正确且优雅的代码  h12.me/gspec: 并发可扩展Go测试框架 h12.me/realtest: 基于 Docker 的真实测试环境  在语法分析器和代码生成方面拥有丰富经验  h12.me/gombi: combinator-style 词法和语法分析库 h12.me/ua: User Agent 解析和和设备检测 h12.me/wipro: 解析 BNF 生成二进制协议代码 h12.me/xsd: XSD 解析生成器 h12.me/json-schema: JSON Schema 解析生成器   工作经历  Appcoach (2015 - present)</description>
+      <guid>http://h12.io/resume-zh/</guid>
+      <description>https://h12.io https://github.com/h12w  软件开发深耕十余年，国内Go语言顶尖技术人才，Golang Meetup讲师，阿里SDK悬赏奖金获得者，百余项开源软件作者和积极贡献者，数据挖掘论文在悉尼ICC会议交流。对后端和分布式架构有深刻理解，如：API协议设计，消息系统，数据库引擎和实时分析等。
+ 中国顶级Go语言开发者  aliyun-oss-go-sdk: 赢取阿里云 OSS SDK 设计竞赛奖金 Github 超过 100个项目  后端架构和算法专家  Appcoach Market: CTR/CVR 估计模型和实时流分析 h12.io/sej: 分布式消息系统 h12.io/kpax: 2个月内成为 Kafka 专家并实现 Go 语言客户端 h12.io/html-query: 函数式 HTML DOM 提取 h12.io/buid: 分布式消息 BUID 生成器  执着写出测试正确且优雅的代码  h12.io/gspec: 并发可扩展Go测试框架 h12.io/realtest: 基于 Docker 的真实测试环境  在语法分析器和代码生成方面拥有丰富经验  h12.io/gombi: combinator-style 词法和语法分析库 h12.io/ua: User Agent 解析和和设备检测 h12.io/wipro: 解析 BNF 生成二进制协议代码 h12.io/xsd: XSD 解析生成器 h12.io/json-schema: JSON Schema 解析生成器   工作经历  Appcoach (2015 - present)</description>
     </item>
     
     <item>
       <title>Resume</title>
-      <link>http://h12.me/resume/</link>
+      <link>http://h12.io/resume/</link>
       <pubDate>Wed, 07 Jun 2017 14:36:53 +0000</pubDate>
       
-      <guid>http://h12.me/resume/</guid>
-      <description>Wáng Hǎiliàng (Hal)  https://h12.me https://github.com/h12w  Highlights A software developer that has been passionate about programming for more than ten years. He has a deep understanding on backend and distributed technologies, like API protocol design, messaging systems, database engines and real-time analytics. He is also a Go expert, an open source author and contributor of dozens of projects.
+      <guid>http://h12.io/resume/</guid>
+      <description>Wáng Hǎiliàng (Hal)  https://h12.io https://github.com/h12w  Highlights A software developer that has been passionate about programming for more than ten years. He has a deep understanding on backend and distributed technologies, like API protocol design, messaging systems, database engines and real-time analytics. He is also a Go expert, an open source author and contributor of dozens of projects.
  One of the top Go developers in China  aliyun-oss-go-sdk: winner in the open contest for Aliyun OSS Go SDK Open source projects exceed one hundred  Backend architecture &amp;amp; algorithm expert  Appcoach Market: CTR/CVR estimation model and real-time analytics in Go h12.</description>
     </item>
     
     <item>
       <title>Search</title>
-      <link>http://h12.me/search/</link>
+      <link>http://h12.io/search/</link>
       <pubDate>Sat, 05 Jul 2014 00:00:00 +0000</pubDate>
       
-      <guid>http://h12.me/search/</guid>
+      <guid>http://h12.io/search/</guid>
       <description> (function() { var cx = &#39;014669057665099905978:wi8dtak3l8q&#39;; var gcse = document.createElement(&#39;script&#39;); gcse.type = &#39;text/javascript&#39;; gcse.async = true; gcse.src = (document.location.protocol == &#39;https:&#39; ? &#39;https:&#39; : &#39;http:&#39;) + &#39;//cse.google.com/cse.js?cx=&#39; + cx; var s = document.getElementsByTagName(&#39;script&#39;)[0]; s.parentNode.insertBefore(gcse, s); })();   </description>
     </item>
     
     <item>
       <title>BSD License</title>
-      <link>http://h12.me/bsd/</link>
+      <link>http://h12.io/bsd/</link>
       <pubDate>Mon, 30 Jun 2014 00:00:00 +0000</pubDate>
       
-      <guid>http://h12.me/bsd/</guid>
+      <guid>http://h12.io/bsd/</guid>
       <description>Copyright &amp;copy; 2012-2015, Wáng Hǎiliàng. All rights reserved.
 Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met:
  Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer. Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution.</description>
@@ -82,20 +82,20 @@ Redistribution and use in source and binary forms, with or without modification,
     
     <item>
       <title>About</title>
-      <link>http://h12.me/about/</link>
+      <link>http://h12.io/about/</link>
       <pubDate>Thu, 29 May 2014 11:01:21 +0000</pubDate>
       
-      <guid>http://h12.me/about/</guid>
+      <guid>http://h12.io/about/</guid>
       <description>The Author Wáng Hǎiliàng (Hal) is a software developer that has been passionate about programming for more than ten years. He is an open source author and contributor of dozens of projects. You can reach him by email at &amp;#x77;&amp;#x40;&amp;#x68;&amp;#x31;&amp;#x32;&amp;#x2e;&amp;#x6d;&amp;#x65;.
 This Site Tools  Container: Docker CSS: Sass, Compass &amp;amp; Susy Font: Google Fonts Icon: Font Awesome &amp;amp; Fontello Image editting: Inkscape, GIMP &amp;amp; OptiPNG Resource loading: HeadJS Static page generator: Hugo Syntax highlight: Highlight.</description>
     </item>
     
     <item>
       <title>How to Start Godoc on Mac</title>
-      <link>http://h12.me/note/start-godoc/</link>
+      <link>http://h12.io/note/start-godoc/</link>
       <pubDate>Sat, 05 May 2018 16:02:07 +0800</pubDate>
       
-      <guid>http://h12.me/note/start-godoc/</guid>
+      <guid>http://h12.io/note/start-godoc/</guid>
       <description>Fish:
 godoc -http=:6060 &amp;amp;; disown (pidof godoc)  Bash:
 godoc -http=:6060 &amp;amp;; disown `pidof godoc`  And pidof can be installed with Homebrew.</description>
@@ -103,19 +103,19 @@ godoc -http=:6060 &amp;amp;; disown `pidof godoc`  And pidof can be installed wi
     
     <item>
       <title>Tmux Cheatsheet on Mac</title>
-      <link>http://h12.me/note/tmux-cheatsheet/</link>
+      <link>http://h12.io/note/tmux-cheatsheet/</link>
       <pubDate>Fri, 20 Apr 2018 10:14:06 +0800</pubDate>
       
-      <guid>http://h12.me/note/tmux-cheatsheet/</guid>
+      <guid>http://h12.io/note/tmux-cheatsheet/</guid>
       <description> Create a new session with iTerm2 integration tmux -CC new -s [session-name]  Attach to a session with iTerm2 integration tmux -CC attach -t [session-name]  </description>
     </item>
     
     <item>
       <title>How to Diff two JSON Files</title>
-      <link>http://h12.me/note/how-to-diff-json-files/</link>
+      <link>http://h12.io/note/how-to-diff-json-files/</link>
       <pubDate>Tue, 10 Apr 2018 12:07:27 +0800</pubDate>
       
-      <guid>http://h12.me/note/how-to-diff-json-files/</guid>
+      <guid>http://h12.io/note/how-to-diff-json-files/</guid>
       <description>Just sort the keys first!
 Example:
 cat a.json | jq --sort-keys . &amp;gt; aa.json cat b.json | jq --sort-keys . &amp;gt; bb.json vimdiff aa.json bb.json  </description>
@@ -123,10 +123,10 @@ cat a.json | jq --sort-keys . &amp;gt; aa.json cat b.json | jq --sort-keys . &am
     
     <item>
       <title>Pagination Done Right</title>
-      <link>http://h12.me/note/pagination-done-right/</link>
+      <link>http://h12.io/note/pagination-done-right/</link>
       <pubDate>Wed, 28 Feb 2018 13:38:45 +0800</pubDate>
       
-      <guid>http://h12.me/note/pagination-done-right/</guid>
+      <guid>http://h12.io/note/pagination-done-right/</guid>
       <description>Server side pagination is intrinsically not accurate, as long as the data is dynamic.
 The data items could be inserted, deleted or changed on the server side while the user goes forward and backward among the pages.
 However, there is an algorithm that can keep the pagination as stable as possible:
@@ -135,47 +135,47 @@ However, there is an algorithm that can keep the pagination as stable as possibl
     
     <item>
       <title>How to Measure Response Time with Curl</title>
-      <link>http://h12.me/note/measure-response-time-with-curl/</link>
+      <link>http://h12.io/note/measure-response-time-with-curl/</link>
       <pubDate>Tue, 20 Jun 2017 12:40:10 +0800</pubDate>
       
-      <guid>http://h12.me/note/measure-response-time-with-curl/</guid>
+      <guid>http://h12.io/note/measure-response-time-with-curl/</guid>
       <description>curl [args] --write-out &amp;quot;%{time_total}s&amp;quot; --output /dev/null --silent [URL]  </description>
     </item>
     
     <item>
       <title>How to Delete a Git Branch</title>
-      <link>http://h12.me/note/delete-git-branch/</link>
+      <link>http://h12.io/note/delete-git-branch/</link>
       <pubDate>Fri, 09 Jun 2017 13:41:44 +0800</pubDate>
       
-      <guid>http://h12.me/note/delete-git-branch/</guid>
+      <guid>http://h12.io/note/delete-git-branch/</guid>
       <description>git fetch --prune origin git branch --delete [branch-name] git push origin --delete [branch-name]  </description>
     </item>
     
     <item>
       <title>A Single Command to Download a Website</title>
-      <link>http://h12.me/note/download-website/</link>
+      <link>http://h12.io/note/download-website/</link>
       <pubDate>Sun, 09 Apr 2017 14:30:03 +0800</pubDate>
       
-      <guid>http://h12.me/note/download-website/</guid>
+      <guid>http://h12.io/note/download-website/</guid>
       <description>wget --recursive --level=2 --no-parent --no-clobber --convert-links --continue [URL]  </description>
     </item>
     
     <item>
       <title>How to Remove Old Kernels in Ubuntu</title>
-      <link>http://h12.me/note/ubuntu-remove-old-kernels/</link>
+      <link>http://h12.io/note/ubuntu-remove-old-kernels/</link>
       <pubDate>Sat, 10 Sep 2016 09:08:10 +0800</pubDate>
       
-      <guid>http://h12.me/note/ubuntu-remove-old-kernels/</guid>
+      <guid>http://h12.io/note/ubuntu-remove-old-kernels/</guid>
       <description>sudo apt install byobu sudo purge-old-kernels  Reference:
  Remove Old Kernels (https://help.ubuntu.com/community/Lubuntu/Documentation/RemoveOldKernels)  </description>
     </item>
     
     <item>
       <title>Making Code Block Wrap in Jira</title>
-      <link>http://h12.me/note/make-jira-code-wrap/</link>
+      <link>http://h12.io/note/make-jira-code-wrap/</link>
       <pubDate>Mon, 05 Sep 2016 10:30:49 +0800</pubDate>
       
-      <guid>http://h12.me/note/make-jira-code-wrap/</guid>
+      <guid>http://h12.io/note/make-jira-code-wrap/</guid>
       <description>It is a hack.
 Set Jira Administration -&amp;gt; System -&amp;gt; Announcement Banner -&amp;gt; Announcement:
 &amp;lt;style type=&amp;quot;text/css&amp;quot;&amp;gt; pre { white-space: pre-wrap!important; } &amp;lt;/style&amp;gt;  </description>
@@ -183,56 +183,56 @@ Set Jira Administration -&amp;gt; System -&amp;gt; Announcement Banner -&amp;gt;
     
     <item>
       <title>One-liner to check MongoDB Connections</title>
-      <link>http://h12.me/note/mongodb-conn/</link>
+      <link>http://h12.io/note/mongodb-conn/</link>
       <pubDate>Fri, 02 Sep 2016 15:40:41 +0800</pubDate>
       
-      <guid>http://h12.me/note/mongodb-conn/</guid>
+      <guid>http://h12.io/note/mongodb-conn/</guid>
       <description>mongo --eval &amp;quot;JSON.stringify(db.currentOp(true))&amp;quot; | \ tail -n +3 | \ jq -r .inprog[].client | \ sed &#39;s/\(.*\):.*/\1/&#39; \ | sort | uniq -c | sort -nr   dump connection information in standard JSON format remove MongoDB header extract IP:port as a list trim port sort IPs by freqencies  </description>
     </item>
     
     <item>
       <title>kpax</title>
-      <link>http://h12.me/slide/kpax/</link>
+      <link>http://h12.io/slide/kpax/</link>
       <pubDate>Sun, 21 Aug 2016 13:00:00 +0000</pubDate>
       
-      <guid>http://h12.me/slide/kpax/</guid>
-      <description>kpax a modular &amp;amp; idiomatic Kafka client in Go 21 August 2016  Wáng Hǎiliàng  Gopher at Appcoach    Introduction  About Me  Pure Gopher since 2012 Backend Lead at Appcoach https://h12.me   About Appcoach  Global mobile advertising agency founded in 2014 All backend services are written in Go http://www.appcoachs.com    Rationale   Why Kafka?  No resources to build our own messaging system from scratch :-)  Kafka has excellent design and robust implementation:  A distributed, persisted, replicated messaging system Key concepts: topic, partition, offset, retention, replication-factor, partition leader, consumer group, broker/cluster     Why yet another Go client for Kafka?</description>
+      <guid>http://h12.io/slide/kpax/</guid>
+      <description>kpax a modular &amp;amp; idiomatic Kafka client in Go 21 August 2016  Wáng Hǎiliàng  Gopher at Appcoach    Introduction  About Me  Pure Gopher since 2012 Backend Lead at Appcoach https://h12.io   About Appcoach  Global mobile advertising agency founded in 2014 All backend services are written in Go http://www.appcoachs.com    Rationale   Why Kafka?  No resources to build our own messaging system from scratch :-)  Kafka has excellent design and robust implementation:  A distributed, persisted, replicated messaging system Key concepts: topic, partition, offset, retention, replication-factor, partition leader, consumer group, broker/cluster     Why yet another Go client for Kafka?</description>
     </item>
     
     <item>
       <title>Counting Word Frequencies in One Line</title>
-      <link>http://h12.me/note/count-word-freq/</link>
+      <link>http://h12.io/note/count-word-freq/</link>
       <pubDate>Tue, 09 Aug 2016 18:31:04 +0800</pubDate>
       
-      <guid>http://h12.me/note/count-word-freq/</guid>
+      <guid>http://h12.io/note/count-word-freq/</guid>
       <description>cat book.txt | \ tr &#39;!()[]{};:&amp;quot;,&amp;lt;.&amp;gt;?“”‘’*/\r&#39; &#39; &#39; | \ tr &#39; &#39; &#39;\n&#39; | \ grep -a -P &amp;quot;^[\p{L}\p{N}\-&#39;]+\$&amp;quot; | \ grep -a -P -v &amp;quot;^[\p{N}\-&#39;]+\$&amp;quot; | \ sed &amp;quot;s/&#39;s\$//&amp;quot; | \ sed &amp;quot;s/^&#39;//&amp;quot; | sed &amp;quot;s/&#39;\$//&amp;quot; &amp;gt; words.txt cat words.txt | \ sort | uniq -c | \ sort -nr | \ cut -c9- &amp;gt; words_desc.txt   replace punctuations with space; remove \r from `\r\n&amp;rsquo; one word per line keep only words composed of unicode letters, numbers, hyphen and apostrophe remove pure numbers remove &amp;rsquo;s remove starting and ending apostrophe output words.</description>
     </item>
     
     <item>
       <title>A Note on Mobi Format</title>
-      <link>http://h12.me/note/mobi/</link>
+      <link>http://h12.io/note/mobi/</link>
       <pubDate>Wed, 03 Aug 2016 08:51:30 +0800</pubDate>
       
-      <guid>http://h12.me/note/mobi/</guid>
+      <guid>http://h12.io/note/mobi/</guid>
       <description> Mobi Format Description: http://wiki.mobileread.com/wiki/MOBI Python lib: https://github.com/kroo/mobi-python  </description>
     </item>
     
     <item>
       <title>A Manager&#39;s FAQ</title>
-      <link>http://h12.me/note/manager-faq/</link>
+      <link>http://h12.io/note/manager-faq/</link>
       <pubDate>Sun, 03 Jul 2016 21:16:34 +0800</pubDate>
       
-      <guid>http://h12.me/note/manager-faq/</guid>
+      <guid>http://h12.io/note/manager-faq/</guid>
       <description>This is an insightful list from Henry Ward:
  How do I get employees to perform better? Tell them what they are doing well. How do I give negative feedback? By being curious. How do I decide what to delegate? Delegate the work you want to do. How should I prioritize? Fix problems. Then prevent problems. How should I grade employees? Don’t. Teach them to self-evaluate. When do I fire somebody?</description>
     </item>
     
     <item>
       <title>On Reliable Persistence</title>
-      <link>http://h12.me/note/on-reliable-persistence/</link>
+      <link>http://h12.io/note/on-reliable-persistence/</link>
       <pubDate>Sat, 02 Jul 2016 19:03:40 +0800</pubDate>
       
-      <guid>http://h12.me/note/on-reliable-persistence/</guid>
+      <guid>http://h12.io/note/on-reliable-persistence/</guid>
       <description>A short investigation on reliable persistence:
  Crash consistency is hard but possible at a huge performance cost
  Data safty must rely on distributed solution
@@ -242,10 +242,10 @@ Set Jira Administration -&amp;gt; System -&amp;gt; Announcement Banner -&amp;gt;
     
     <item>
       <title>Note on OpenWRT</title>
-      <link>http://h12.me/note/openwrt-note/</link>
+      <link>http://h12.io/note/openwrt-note/</link>
       <pubDate>Sat, 27 Feb 2016 14:59:54 +0800</pubDate>
       
-      <guid>http://h12.me/note/openwrt-note/</guid>
+      <guid>http://h12.io/note/openwrt-note/</guid>
       <description>Obtain OpenWRT  Find the device model at the Table of Hardware (Huawei HG556a C) Open Device Techdata for Firmware OpenWrt Install URL Open Device Page for Installation instructions  Computer - Cable - Router Connect the computer to the router with a cable.
 Install OpenWRT Follow the instructions to install OpenWRT.
 SSH First login:
@@ -255,19 +255,19 @@ passwd exit  For public key authentication, add the public key:</description>
     
     <item>
       <title>About Pretty Printing</title>
-      <link>http://h12.me/note/about-pretty-print/</link>
+      <link>http://h12.io/note/about-pretty-print/</link>
       <pubDate>Mon, 01 Feb 2016 18:11:29 +0800</pubDate>
       
-      <guid>http://h12.me/note/about-pretty-print/</guid>
+      <guid>http://h12.io/note/about-pretty-print/</guid>
       <description> JSON cat xxx.json | jq .  XML cat xxx.xml | xmllint --format -  </description>
     </item>
     
     <item>
       <title>Sending Email from Gmail using Go</title>
-      <link>http://h12.me/note/send-email-from-gmail/</link>
+      <link>http://h12.io/note/send-email-from-gmail/</link>
       <pubDate>Sun, 31 Jan 2016 20:31:06 +0800</pubDate>
       
-      <guid>http://h12.me/note/send-email-from-gmail/</guid>
+      <guid>http://h12.io/note/send-email-from-gmail/</guid>
       <description> Turn on &amp;ldquo;2-Step Verification&amp;rdquo; so that an &amp;ldquo;App password&amp;rdquo; can be generated
  go get gopkg.in/gomail.v2
  Send your Email like the example below:
@@ -276,21 +276,21 @@ passwd exit  For public key authentication, add the public key:</description>
     
     <item>
       <title>SSH Resources in Go</title>
-      <link>http://h12.me/note/go-ssh-resources/</link>
+      <link>http://h12.io/note/go-ssh-resources/</link>
       <pubDate>Sun, 31 Jan 2016 14:49:01 +0800</pubDate>
       
-      <guid>http://h12.me/note/go-ssh-resources/</guid>
+      <guid>http://h12.io/note/go-ssh-resources/</guid>
       <description> golang.org/x/crypto/ssh github.com/YuriyNasretdinov/GoSSHa  Articles:
  SSH Client connection in Golang Using Go to Execute Commands on Hundreds of Servers with SSH  </description>
     </item>
     
     <item>
       <title>RealTest: real test environment for Go</title>
-      <link>http://h12.me/project/realtest/</link>
+      <link>http://h12.io/project/realtest/</link>
       <pubDate>Sat, 14 Nov 2015 13:57:09 +0800</pubDate>
       
-      <guid>http://h12.me/project/realtest/</guid>
-      <description> h12.me/realtest provides real test environment for Go unit testing, based on Docker.
+      <guid>http://h12.io/project/realtest/</guid>
+      <description> h12.io/realtest provides real test environment for Go unit testing, based on Docker.
 Includes:
  Queue  Kafka cluster (with zookeeper)  Database:  MySQL MongoDB  Cache  Redis  Configuration service  ZooKeeper   Author Hǎiliàng Wáng
 Contributors  Tao Huang  </description>
@@ -298,40 +298,40 @@ Contributors  Tao Huang  </description>
     
     <item>
       <title>Aliyun OSS Go SDK</title>
-      <link>http://h12.me/project/aliyun-oss-go-sdk/</link>
+      <link>http://h12.io/project/aliyun-oss-go-sdk/</link>
       <pubDate>Thu, 22 Oct 2015 15:32:58 +0800</pubDate>
       
-      <guid>http://h12.me/project/aliyun-oss-go-sdk/</guid>
+      <guid>http://h12.io/project/aliyun-oss-go-sdk/</guid>
       <description>Aliyun OSS (Object Storage Service) Go SDK is a client SDK to access Aliyun OSS API, implemented in the Go programming language.
 Installation go get -u github.com/aliyun/aliyun-oss-go-sdk/oss go test -v -cover github.com/aliyun/aliyun-oss-go-sdk/oss  Highlights  Complete set of Aliyun OSS API Thouroughly tested  100% test coverage intuitive table driven tests full test suite completes within 2 seconds  Lint clean  golint go fmt goimports go vet race detector  Idiomatic &amp;amp; elegant  response is returned as a parsed object error is returned as a Go error named options for setting headers &amp;amp; parameters  Great extensibility  clean and orthogonal implementation users can easily extend the SDK when a new API method is supported  No third party dependencies  Documentation  Overview API Object Bucket Object Optional Headers and Parameters Multipart Upload Cross-Origin Resource Sharing (CORS) Object Lifecycle Management Extending the SDK  Differences with Python SDK  HTTP header User-Agent, e.</description>
     </item>
     
     <item>
       <title>How to Remove All Exited Containers &amp; Dangling Images for Docker?</title>
-      <link>http://h12.me/note/remove-all-exited-docker-containers/</link>
+      <link>http://h12.io/note/remove-all-exited-docker-containers/</link>
       <pubDate>Mon, 03 Aug 2015 16:55:49 +0800</pubDate>
       
-      <guid>http://h12.me/note/remove-all-exited-docker-containers/</guid>
+      <guid>http://h12.io/note/remove-all-exited-docker-containers/</guid>
       <description>docker ps --quiet --filter=status=exited | xargs docker rm  docker images --no-trunc=true --filter=&amp;quot;dangling=true&amp;quot; --quiet=true | xargs docker rmi  </description>
     </item>
     
     <item>
       <title>kpax: a modular &amp; idiomatic Kafka client in Go</title>
-      <link>http://h12.me/project/kpax/</link>
+      <link>http://h12.io/project/kpax/</link>
       <pubDate>Thu, 23 Jul 2015 13:36:25 +0800</pubDate>
       
-      <guid>http://h12.me/project/kpax/</guid>
-      <description>Install go get -u h12.me/kpax  Design The client is built on top of Kafka Wire Protocol (i.e. low-level API). The protocol related types &amp;amp; marshal/unmarshal functions are automatically generated by wipro from the HTML spec).
+      <guid>http://h12.io/project/kpax/</guid>
+      <description>Install go get -u h12.io/kpax  Design The client is built on top of Kafka Wire Protocol (i.e. low-level API). The protocol related types &amp;amp; marshal/unmarshal functions are automatically generated by wipro from the HTML spec).
 (-) means to be done.
 Sub packages  model is an abstraction model for request, response, broker and cluster broker is a lazy, asynchronous and recoverable round tripper that talks to a single Kafka broker cluster is a metadata manager that talks to a Kafka cluster proto contains both low level API and a &amp;ldquo;middle&amp;rdquo; level facade producer: fault tolerant high-level producer (batching and partitioning strategy) consumer: fault tolerant high-level consumer (consumer group and offset commit) log: replaceable global logger cmd  kpax: command line tool to help with Kafka programming   Compatibility Compatible with Kafka Server 0.</description>
     </item>
     
     <item>
       <title>A Comprehensive Note about Proxy Settings</title>
-      <link>http://h12.me/note/proxy-notes/</link>
+      <link>http://h12.io/note/proxy-notes/</link>
       <pubDate>Wed, 08 Jul 2015 07:58:34 +0000</pubDate>
       
-      <guid>http://h12.me/note/proxy-notes/</guid>
+      <guid>http://h12.io/note/proxy-notes/</guid>
       <description> Git &amp;gt; cat ~/.gitconfig [http] proxy = socks5://[host]:[port] [https] proxy = socks5://[host]:[port]  Curl (Homebrew) &amp;gt; cat ~/.curlrc socks5 = &amp;quot;[host]:[port]&amp;quot;  Docker pull env HTTP_PROXY=http://xxx docker pull yyy  GAE  Set proxy
 export HTTP_PROXY http://[host]:[port] export HTTPS_PROXY http://[host]:[port]  Delete cacerts.txt under GAE SDK installation to disable SSL verification ( make sure the proxy is safe before this step).
  Deploy.
@@ -340,30 +340,30 @@ appcfg.py . --email=[address] --passin   </description>
     
     <item>
       <title>Phonetic Notations</title>
-      <link>http://h12.me/note/phonetic-notations/</link>
+      <link>http://h12.io/note/phonetic-notations/</link>
       <pubDate>Tue, 30 Jun 2015 12:43:19 +0800</pubDate>
       
-      <guid>http://h12.me/note/phonetic-notations/</guid>
+      <guid>http://h12.io/note/phonetic-notations/</guid>
       <description>Google Dictionary Google dictionary uses a phonetic notation same as NORD (New Oxford American Dictionary).
 To figure out an unknown phonetic notation, the simple way is to look up a few words that you know how to pronounce: church, hat, which, judge, game, thing, ship, thin, this, yes, pleasure cat, pay, care, father, arm, let, see, here, city, my, pot, no, caught, war, force, boy, put, tour, boot, out, cut, word, item, rabbit, winner, pupil</description>
     </item>
     
     <item>
       <title>Notes on the Design of Go</title>
-      <link>http://h12.me/note/go-design/</link>
+      <link>http://h12.io/note/go-design/</link>
       <pubDate>Mon, 29 Jun 2015 16:34:59 +0800</pubDate>
       
-      <guid>http://h12.me/note/go-design/</guid>
+      <guid>http://h12.io/note/go-design/</guid>
       <description>Refusing new features Avoid leaky abstraction as much as possible. If an abstraction is not solid enough, you’d rather not use them at all. Go is designed like this, the features are carefully selected. If a feature is not solid enough, it will not be allowed to enter Go.
 No implicit string concatenation Rob: That used to be in the language but was dropped when the semicolon insertion rules went in.</description>
     </item>
     
     <item>
       <title>What Go cannot Do</title>
-      <link>http://h12.me/note/what-go-cannot-do/</link>
+      <link>http://h12.io/note/what-go-cannot-do/</link>
       <pubDate>Tue, 16 Jun 2015 00:00:00 +0000</pubDate>
       
-      <guid>http://h12.me/note/what-go-cannot-do/</guid>
+      <guid>http://h12.io/note/what-go-cannot-do/</guid>
       <description>This is a list about the corner cases that Go cannot do, and their work arounds.
 Run all deferred functions of other goroutines when a goroutine panics Uncaught panicking of one goroutine will exit the program without executing deferred functions of other goroutines.
 Workaround: this is the standard behavior, C++ with RAII also has the same problem. Persist your data in a way that crashing will not cause data integrity issue.</description>
@@ -371,10 +371,10 @@ Workaround: this is the standard behavior, C++ with RAII also has the same probl
     
     <item>
       <title>Ebook Manipulation Tools</title>
-      <link>http://h12.me/note/ebook-tools/</link>
+      <link>http://h12.io/note/ebook-tools/</link>
       <pubDate>Thu, 04 Jun 2015 14:19:38 +0800</pubDate>
       
-      <guid>http://h12.me/note/ebook-tools/</guid>
+      <guid>http://h12.io/note/ebook-tools/</guid>
       <description> Ebook manager: Calibre Kindle PDF optimizer: k2pdfopt PDF Border Cropper Briss CHM File Extractor archmage PDF editing Xournal
  convert images to PDF
 sudo apt-get install imagemagick convert *.jpg pictures.pdf  convert between different formats:
@@ -383,10 +383,10 @@ sudo apt-get install calibre ebook-convert xxx.mobi xxx.txt --unsmarten-punctuat
     
     <item>
       <title>How to &#34;go get&#34; Behind a Proxy</title>
-      <link>http://h12.me/note/go-get-behind-proxy/</link>
+      <link>http://h12.io/note/go-get-behind-proxy/</link>
       <pubDate>Wed, 06 May 2015 12:01:11 +0800</pubDate>
       
-      <guid>http://h12.me/note/go-get-behind-proxy/</guid>
+      <guid>http://h12.io/note/go-get-behind-proxy/</guid>
       <description> Proxy for &amp;ldquo;go get&amp;rdquo; https_proxy=http://user:pass@proxy_host:port go get ...  Proxy for Git In $HOME/.gitconfig:
 [https] proxy = proxy_url  Proxy for Mercurial In $HOME/.hgrc:
 [http_proxy] host = host:port user = ... passwd = ...  </description>
@@ -394,51 +394,51 @@ sudo apt-get install calibre ebook-convert xxx.mobi xxx.txt --unsmarten-punctuat
     
     <item>
       <title>Tips on SSH</title>
-      <link>http://h12.me/note/tips-on-ssh/</link>
+      <link>http://h12.io/note/tips-on-ssh/</link>
       <pubDate>Tue, 28 Apr 2015 10:59:02 +0800</pubDate>
       
-      <guid>http://h12.me/note/tips-on-ssh/</guid>
-      <description>Generate SSH keys ssh-keygen -C w@h12.me  Authorize public key at remote server ssh-copy-id user@host  On Mac OSX, ssh-copy-id should be installed first.
+      <guid>http://h12.io/note/tips-on-ssh/</guid>
+      <description>Generate SSH keys ssh-keygen -C w@h12.io  Authorize public key at remote server ssh-copy-id user@host  On Mac OSX, ssh-copy-id should be installed first.
 brew install ssh-copy-id  Generate PEM ssh-keygen -f ~/.ssh/id_rsa -e -m pem &amp;gt; ~/.ssh/id_rsa.pem  Copy file by base64 On remote session, run base64 &amp;lt; myfile and copy the output.
 On local terminal, run base64 -d &amp;gt; myfile, paste the content and press ctrl+D.</description>
     </item>
     
     <item>
       <title>How to Generate XSD Schema from XML?</title>
-      <link>http://h12.me/note/generate-xsd-from-xml/</link>
+      <link>http://h12.io/note/generate-xsd-from-xml/</link>
       <pubDate>Thu, 23 Apr 2015 15:41:12 +0800</pubDate>
       
-      <guid>http://h12.me/note/generate-xsd-from-xml/</guid>
+      <guid>http://h12.io/note/generate-xsd-from-xml/</guid>
       <description>Apache XMLBeans is an old tool but still functioning. Download and uncompress the latest binary release, then run inst2xsd under bin folder (needs JDK).
 inst2xsd xxx.xml  </description>
     </item>
     
     <item>
       <title>A Developer&#39;s Guide to Password Management</title>
-      <link>http://h12.me/article/password-management/</link>
+      <link>http://h12.io/article/password-management/</link>
       <pubDate>Wed, 18 Feb 2015 17:23:24 +0000</pubDate>
       
-      <guid>http://h12.me/article/password-management/</guid>
+      <guid>http://h12.io/article/password-management/</guid>
       <description>This article is intended to be a comprehensive recipe to password management, assuming:
  You are a developer You have to manage dozens of passwords, ssh key pairs and possibly some secret documents You want strong security on each of them You do not want to forget any of them but do not either want to spend too much time memorizing them You want to access your passwords from both your computers and mobile devices  The proposed solution includes:</description>
     </item>
     
     <item>
       <title>A Brief Note on Scientific Web Surfing</title>
-      <link>http://h12.me/article/scientific-web-surfing/</link>
+      <link>http://h12.io/article/scientific-web-surfing/</link>
       <pubDate>Sat, 14 Feb 2015 09:30:55 +0000</pubDate>
       
-      <guid>http://h12.me/article/scientific-web-surfing/</guid>
+      <guid>http://h12.io/article/scientific-web-surfing/</guid>
       <description>Knowledge is power. Information is liberating. &amp;mdash; by Kofi Annan.
 VPS  CloudsVM Vultr DigitalOcean BandwagonHOST  Client Area -&amp;gt; Services -&amp;gt; Order New Services 64MB RAM is enough for running both ShadowSocks and pdnsd Install Ubuntu LTS 32bit (x86, i686) or CentOS 7.   CentOS Install CentOS 7 (64bit) Shadowsocks cd /etc/yum.repos.d/ wget https://copr.fedorainfracloud.org/coprs/librehat/shadowsocks/repo/epel-7/librehat-shadowsocks-epel-7.repo yum update yum install shadowsocks-libev cd /etc/shadowsocks-libev/ vim config.json # server should be 0.</description>
     </item>
     
     <item>
       <title>Go 1.4.1 Build Failure and Solution</title>
-      <link>http://h12.me/note/go-build-failure/</link>
+      <link>http://h12.io/note/go-build-failure/</link>
       <pubDate>Thu, 29 Jan 2015 03:55:08 +0000</pubDate>
       
-      <guid>http://h12.me/note/go-build-failure/</guid>
+      <guid>http://h12.io/note/go-build-failure/</guid>
       <description>Today I tried to build Go 1.4.1 from source but it failed with this error:
  go/src/liblink/anames9.c:6:29: fatal error: ../cmd/9l/9.out.h: No such file or directory  At first I thought the building routine might have be changed so I opened and read Installing Go from Source again, carefully, and found nothing special.
 Then I searched for the error source and it turned out that I should deleted anames*.c, manually. There is no document and no automatic cleaning script, and you would have to figure it out yourself if no one ever mentioned it (source).</description>
@@ -446,10 +446,10 @@ Then I searched for the error source and it turned out that I should deleted ana
     
     <item>
       <title>How to configure a custom domain name in GAE?</title>
-      <link>http://h12.me/note/gae-custom-domain/</link>
+      <link>http://h12.io/note/gae-custom-domain/</link>
       <pubDate>Mon, 19 Jan 2015 09:32:04 +0000</pubDate>
       
-      <guid>http://h12.me/note/gae-custom-domain/</guid>
+      <guid>http://h12.io/note/gae-custom-domain/</guid>
       <description>Steps:
  Visit Developers Console. In your project: Compute -&amp;gt; App Engine -&amp;gt; Settings. On the tab labelled CUSTOM DOMAINS, you can verify your domain and assign it and/or its subdomains to your GAE project. Add the DNS settings provided by Google into the DNS server of your domain provider.  Notes:
  Only HTTP is supported, HTTPS is not. It will not work if you only modify the DNS record without actually assigning the custom domain in the Developer Console.</description>
@@ -457,38 +457,38 @@ Then I searched for the error source and it turned out that I should deleted ana
     
     <item>
       <title>How to install a self-signed CA Certificate to Android 4.4</title>
-      <link>http://h12.me/note/install-ca-android/</link>
+      <link>http://h12.io/note/install-ca-android/</link>
       <pubDate>Sat, 17 Jan 2015 18:13:09 +0000</pubDate>
       
-      <guid>http://h12.me/note/install-ca-android/</guid>
+      <guid>http://h12.io/note/install-ca-android/</guid>
       <description>See this blog Remove &amp;ldquo;Network May Be Monitored by an Unknown Third Party&amp;rdquo; in Android 4.4 KitKat.</description>
     </item>
     
     <item>
       <title>A Shorter Domain Name</title>
-      <link>http://h12.me/note/new-domain-h12/</link>
+      <link>http://h12.io/note/new-domain-h12/</link>
       <pubDate>Tue, 16 Dec 2014 09:43:40 +0000</pubDate>
       
-      <guid>http://h12.me/note/new-domain-h12/</guid>
+      <guid>http://h12.io/note/new-domain-h12/</guid>
       <description>This year, I decided not to renewal the previous domain name (hailiang.ws) last year, but to register a shorter one. There are two reasons:
- Both the site URL and the email address will be cleaner. A more friendly Go import path will be possible for my repositories on Github.  After comparing various choices on major domain providers, I chose h12.me as the new domain. It is the shortest but still meaningful domain that I can afford.</description>
+ Both the site URL and the email address will be cleaner. A more friendly Go import path will be possible for my repositories on Github.  After comparing various choices on major domain providers, I chose h12.io as the new domain. It is the shortest but still meaningful domain that I can afford.</description>
     </item>
     
     <item>
       <title>Learning Resources on Parser Combinator</title>
-      <link>http://h12.me/note/parser-combinator-links/</link>
+      <link>http://h12.io/note/parser-combinator-links/</link>
       <pubDate>Mon, 04 Aug 2014 15:12:55 +0000</pubDate>
       
-      <guid>http://h12.me/note/parser-combinator-links/</guid>
+      <guid>http://h12.io/note/parser-combinator-links/</guid>
       <description> Monadic Parser Combinators Parsec: Direct Style Monadic Parser Combinators for the Real World Combinator Parsing: A Short Tutorial  </description>
     </item>
     
     <item>
       <title>Resources on Offline Hyphenation</title>
-      <link>http://h12.me/note/hyphen-res/</link>
+      <link>http://h12.io/note/hyphen-res/</link>
       <pubDate>Wed, 30 Jul 2014 08:29:57 +0000</pubDate>
       
-      <guid>http://h12.me/note/hyphen-res/</guid>
+      <guid>http://h12.io/note/hyphen-res/</guid>
       <description>CSS hyphenation is supported by latest version of Firefox, Safari &amp;amp; IE. However, Chrome does not support it. Though Hyphenator.js can solve this problem, it runs in the browser and affects the rendering speed of above-the-fold content. So there is only one option left: soft hyphen (U+00AD, &amp;amp;shy;).
 Here is a list of resources that leads to its implementation:
  An article about CSS3 hyphenation by Hyphenator.js Hunspell: the spell checker &amp;amp; hyphenator used by LibreOffice English Dictionary of LibreOffice Pyphen: A Python hyphenator using Hunspell dictionary file A test page for soft hyphen  </description>
@@ -496,19 +496,19 @@ Here is a list of resources that leads to its implementation:
     
     <item>
       <title>Learning Haskell the Hard Way</title>
-      <link>http://h12.me/article/learn-haskell/</link>
+      <link>http://h12.io/article/learn-haskell/</link>
       <pubDate>Sat, 26 Jul 2014 08:12:39 +0000</pubDate>
       
-      <guid>http://h12.me/article/learn-haskell/</guid>
+      <guid>http://h12.io/article/learn-haskell/</guid>
       <description>When I was reading the collection of learning resources on Haskell and tried to find a good start, I quickly realized that none of the books or tutorials are suitable for me: the easier a tutorial claims to be, the harder to really understand Haskell by reading it. What I need is a terse documentation that introduces the syntax and semantics of Haskell systematically and clearly, but unfortunately none was found.</description>
     </item>
     
     <item>
       <title>About 301 Moved Permanently</title>
-      <link>http://h12.me/note/301-redirect/</link>
+      <link>http://h12.io/note/301-redirect/</link>
       <pubDate>Fri, 25 Jul 2014 03:39:05 +0000</pubDate>
       
-      <guid>http://h12.me/note/301-redirect/</guid>
+      <guid>http://h12.io/note/301-redirect/</guid>
       <description>When building a website, there is one inevitable thing: 301 permanent redirection. The cases that have to involve 301 includes:
  Redirection from www subdomain to naked domain or vise versa. Redirection from slashed pretty URL to unslashed URL or vise versa.  301 is easy to implement with Go:
 func redirect301(w http.ResponseWriter, url string) { w.Header().Set(&amp;quot;Location&amp;quot;, url) w.WriteHeader(http.StatusMovedPermanently) }  There is one more thing that needs attention: The root path of a domain always contains a slash (GET / in HTTP request), regardless the user enters the slash or not, so the root path needs no redirection.</description>
@@ -516,38 +516,38 @@ func redirect301(w http.ResponseWriter, url string) { w.Header().Set(&amp;quot;L
     
     <item>
       <title>How to Achieve a Perfect PageSpeed Insights Score</title>
-      <link>http://h12.me/article/pagespeed-insights/</link>
+      <link>http://h12.io/article/pagespeed-insights/</link>
       <pubDate>Thu, 24 Jul 2014 03:42:01 +0000</pubDate>
       
-      <guid>http://h12.me/article/pagespeed-insights/</guid>
+      <guid>http://h12.io/article/pagespeed-insights/</guid>
       <description>Indtroduction PageSpeed Insights is an online tool by Google to measure the performance of an web page for mobile and desktop devices. It has a set of heuristic rules considering the network-independent aspects of page performance. Each rule has a weight and the total score ranges from 0 to 100 points. The desktop and mobile tests have the same set of rules for performance and mobile test has some extra rules about user experience.</description>
     </item>
     
     <item>
       <title>An Overview of Continuous Integration Services</title>
-      <link>http://h12.me/note/ci-overview/</link>
+      <link>http://h12.io/note/ci-overview/</link>
       <pubDate>Thu, 17 Jul 2014 14:54:26 +0000</pubDate>
       
-      <guid>http://h12.me/note/ci-overview/</guid>
+      <guid>http://h12.io/note/ci-overview/</guid>
       <description>After reviewing many continuous integration services below, there is no doubt that Wercker is the winner. The Wercker Box (virtual container) is based on Ubuntu and any packages can be easily installed with &amp;ldquo;apt-get&amp;rdquo;. This flexibility basically allows running any test suites and deploying to any cloud platforms. Furthermore, a Wercker Box can inherit from another box and can be stored and published in Wercker directories as the starting point for any projects, increasing the performance significantly.</description>
     </item>
     
     <item>
       <title>Installing Source Code Pro</title>
-      <link>http://h12.me/note/install-scp/</link>
+      <link>http://h12.io/note/install-scp/</link>
       <pubDate>Thu, 17 Jul 2014 03:19:18 +0000</pubDate>
       
-      <guid>http://h12.me/note/install-scp/</guid>
+      <guid>http://h12.io/note/install-scp/</guid>
       <description>Source Code Pro is one of the best monospace fonts and it is open sourced.
 Here is the script for installing it on Linux.</description>
     </item>
     
     <item>
       <title>Installing Susy</title>
-      <link>http://h12.me/note/install-susy/</link>
+      <link>http://h12.io/note/install-susy/</link>
       <pubDate>Thu, 17 Jul 2014 02:29:57 +0000</pubDate>
       
-      <guid>http://h12.me/note/install-susy/</guid>
+      <guid>http://h12.io/note/install-susy/</guid>
       <description>The script:
 sudo apt-get install ruby sudo apt-get install ruby-dev sudo gem install susy -V sudo gem install compass --pre -V sudo gem lnstall breakpoint -V  Notes:
  The current version of Susy uses a higher version of Sass than Compass, so the corresponding Compass version has to be a prerelease (&amp;ndash;pre). The installing process is slow and it feels better to print it out (-V). You may have to run &amp;ldquo;compass watch&amp;rdquo; with sudo (issue 1497).</description>
@@ -555,29 +555,29 @@ sudo apt-get install ruby sudo apt-get install ruby-dev sudo gem install susy -V
     
     <item>
       <title>A List of URLs about Web Design</title>
-      <link>http://h12.me/note/web-design-site/</link>
+      <link>http://h12.io/note/web-design-site/</link>
       <pubDate>Thu, 10 Jul 2014 04:04:00 +0000</pubDate>
       
-      <guid>http://h12.me/note/web-design-site/</guid>
+      <guid>http://h12.io/note/web-design-site/</guid>
       <description> The Elements of Typographic Style Applied to the Web Smashing Magazine Trentwalton Inkwell  </description>
     </item>
     
     <item>
       <title>Why My Web Font Looks Ugly on IE?</title>
-      <link>http://h12.me/note/ugly-font/</link>
+      <link>http://h12.io/note/ugly-font/</link>
       <pubDate>Wed, 09 Jul 2014 05:42:42 +0000</pubDate>
       
-      <guid>http://h12.me/note/ugly-font/</guid>
+      <guid>http://h12.io/note/ugly-font/</guid>
       <description>Windows needs hand-tuned hinting which is missing in many web fonts. To solve this problem, there is a tool called ttfautohint which can automatically add hinting to font files.
 There is a tutorial, and an online tool called Fontie.</description>
     </item>
     
     <item>
       <title>Serving Static Pages on App Engine with Go</title>
-      <link>http://h12.me/note/serve-static/</link>
+      <link>http://h12.io/note/serve-static/</link>
       <pubDate>Sun, 06 Jul 2014 06:39:27 +0000</pubDate>
       
-      <guid>http://h12.me/note/serve-static/</guid>
+      <guid>http://h12.io/note/serve-static/</guid>
       <description>It is straightforward to serve static pages with Go or config file on App Engine, but how to serve static pages on App Engine with Go?
 I got the following error when I tried to customize the 404 page with Go:
 No such file or directory  The solution turns out to be simple: do not do both.
@@ -586,10 +586,10 @@ The file will not be accessible to Go if there is already a rule for it in confi
     
     <item>
       <title>Finding Optimal Typographic Scale</title>
-      <link>http://h12.me/article/optimal-font-scale/</link>
+      <link>http://h12.io/article/optimal-font-scale/</link>
       <pubDate>Sat, 05 Jul 2014 15:03:04 +0000</pubDate>
       
-      <guid>http://h12.me/article/optimal-font-scale/</guid>
+      <guid>http://h12.io/article/optimal-font-scale/</guid>
       <description>During the construction of this site, there are many important design decisions that need to be made. One of them is to decide the font size for each level of headings, i.e., typographic scale.
 Investigation The first thing I did was to read everything online about typographic scale. I will just skip the details and jump to my opinions:
  Modular scale should be followed Traditional scale is obsolete Golden ratio or double-stranded scale do not make any sense Vertical rhythm should be considered  Then a little explanation.</description>
@@ -597,55 +597,55 @@ Investigation The first thing I did was to read everything online about typograp
     
     <item>
       <title>A List of Website Testing Services</title>
-      <link>http://h12.me/note/site-test/</link>
+      <link>http://h12.io/note/site-test/</link>
       <pubDate>Thu, 03 Jul 2014 06:21:58 +0000</pubDate>
       
-      <guid>http://h12.me/note/site-test/</guid>
+      <guid>http://h12.io/note/site-test/</guid>
       <description> The W3C Markup Validation Service Google PageSpeed Insights Pingdom Website Speed Test Nibbler BrowserStack  </description>
     </item>
     
     <item>
       <title>A List of Narrow Fonts for Titles</title>
-      <link>http://h12.me/note/narrow-fonts/</link>
+      <link>http://h12.io/note/narrow-fonts/</link>
       <pubDate>Tue, 01 Jul 2014 08:39:42 +0000</pubDate>
       
-      <guid>http://h12.me/note/narrow-fonts/</guid>
+      <guid>http://h12.io/note/narrow-fonts/</guid>
       <description> Economica Fjalla One League Gothic Medula One Open Sans Condensed Oswald Pathway Gothic One PT Sans Narrow Rationale Six Caps Tulpen One Yanone Kaffeesatz  </description>
     </item>
     
     <item>
       <title>Links about Font Choosing</title>
-      <link>http://h12.me/note/font-links/</link>
+      <link>http://h12.io/note/font-links/</link>
       <pubDate>Sun, 22 Jun 2014 14:09:45 +0000</pubDate>
       
-      <guid>http://h12.me/note/font-links/</guid>
+      <guid>http://h12.io/note/font-links/</guid>
       <description> The Best Font Styles for Blogging Size Doesn’t Matter, and What Does Using Media Queries To Improve Readability 8 Definitive Web Font Stacks  </description>
     </item>
     
     <item>
       <title>How to Make Web Pages Searchable by Meta Data?</title>
-      <link>http://h12.me/note/searchable-meta-data/</link>
+      <link>http://h12.io/note/searchable-meta-data/</link>
       <pubDate>Sun, 22 Jun 2014 12:34:02 +0000</pubDate>
       
-      <guid>http://h12.me/note/searchable-meta-data/</guid>
+      <guid>http://h12.io/note/searchable-meta-data/</guid>
       <description>Providing Structured Data</description>
     </item>
     
     <item>
       <title>Upgrading 4.4.3 ROM for HTC One</title>
-      <link>http://h12.me/note/htc-upgrade/</link>
+      <link>http://h12.io/note/htc-upgrade/</link>
       <pubDate>Wed, 11 Jun 2014 12:24:00 +0000</pubDate>
       
-      <guid>http://h12.me/note/htc-upgrade/</guid>
+      <guid>http://h12.io/note/htc-upgrade/</guid>
       <description>Upgrade your rooted Google Play Edition</description>
     </item>
     
     <item>
       <title>How to Disable the Touchpad in Linux?</title>
-      <link>http://h12.me/note/disable-touchpad/</link>
+      <link>http://h12.io/note/disable-touchpad/</link>
       <pubDate>Tue, 10 Jun 2014 23:00:24 +0000</pubDate>
       
-      <guid>http://h12.me/note/disable-touchpad/</guid>
+      <guid>http://h12.io/note/disable-touchpad/</guid>
       <description>Have you ever been annoyed by accidentally touching the touchpad on your laptop when you are typing?
 I am using a Linux laptop with both trackpoint and touchpad so the touchpad is just an annoying redundant thing. Here is the one-liner to disable it:
 xinput list | grep TouchPad | grep -Po &#39;id=\K([0-9]+)&#39; | xargs xinput disable  </description>
@@ -653,10 +653,10 @@ xinput list | grep TouchPad | grep -Po &#39;id=\K([0-9]+)&#39; | xargs xinput di
     
     <item>
       <title>Getgo: a concurrent, simple and extensible web scraping framework</title>
-      <link>http://h12.me/project/getgo/</link>
+      <link>http://h12.io/project/getgo/</link>
       <pubDate>Mon, 02 Jun 2014 01:21:00 +0000</pubDate>
       
-      <guid>http://h12.me/project/getgo/</guid>
+      <guid>http://h12.io/project/getgo/</guid>
       <description>Getgo is a concurrent, simple and extensible web scraping framework written in Go.
 Quick start Get Getgo go get -u github.com/h12w/getgo  Define a task This example is under the examples/goblog directory. To use Getgo to scrap structured data from a web page, just define the structured data as a Go struct (golangBlogEntry), and define a corresponding task (golangBlogIndexTask).
 type golangBlogEntry struct { Title string URL string Tags *string } type golangBlogIndexTask struct { // Variables in task URL, e.</description>
@@ -664,20 +664,20 @@ type golangBlogEntry struct { Title string URL string Tags *string } type golang
     
     <item>
       <title>GSpec: a productive Go test framework</title>
-      <link>http://h12.me/project/gspec/</link>
+      <link>http://h12.io/project/gspec/</link>
       <pubDate>Wed, 28 May 2014 00:00:00 +0000</pubDate>
       
-      <guid>http://h12.me/project/gspec/</guid>
+      <guid>http://h12.io/project/gspec/</guid>
       <description>&lt;p&gt;&lt;a href=&#34;https://app.wercker.com/project/bykey/d5ed30f0d03d4a5210f65659ead13888&#34;&gt;&lt;img src=&#34;https://app.wercker.com/status/d5ed30f0d03d4a5210f65659ead13888/s&#34; alt=&#34;wercker status&#34; title=&#34;wercker status&#34; /&gt;&lt;/a&gt;
-&lt;a href=&#34;https://godoc.org/h12.me/gspec&#34;&gt;&lt;img src=&#34;https://godoc.org/h12.me/gspec?status.png&#34; alt=&#34;GoDoc&#34; /&gt;&lt;/a&gt;&lt;/p&gt;</description>
+&lt;a href=&#34;https://godoc.org/h12.io/gspec&#34;&gt;&lt;img src=&#34;https://godoc.org/h12.io/gspec?status.png&#34; alt=&#34;GoDoc&#34; /&gt;&lt;/a&gt;&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>html-query: a fluent and functional approach to querying HTML DOM</title>
-      <link>http://h12.me/project/html-query/</link>
+      <link>http://h12.io/project/html-query/</link>
       <pubDate>Mon, 20 Jan 2014 01:49:08 +0000</pubDate>
       
-      <guid>http://h12.me/project/html-query/</guid>
+      <guid>http://h12.io/project/html-query/</guid>
       <description>html-query is a Go package that provides a fluent and functional interface for querying HTML DOM. It is based on go.net/html.
 Examples  A simple example (under &amp;ldquo;examples&amp;rdquo; directory)
 r := get(`http://blog.golang.org/index`) defer r.Close() root, err := query.Parse(r) checkError(err) root.Div(Id(&amp;quot;content&amp;quot;)).Children(Class(&amp;quot;blogtitle&amp;quot;)).For(func(item *query.Node) { href := item.Ahref().Href() date := item.Span(Class(&amp;quot;date&amp;quot;)).Text() tags := item.Span(Class(&amp;quot;tags&amp;quot;)).Text() // ...... })  Generator of html-query (under &amp;ldquo;gen&amp;rdquo; directory)
@@ -686,22 +686,22 @@ r := get(`http://blog.golang.org/index`) defer r.Close() root, err := query.Pars
     
     <item>
       <title>Cwrap: wraps C libraries in Go</title>
-      <link>http://h12.me/project/cwrap/</link>
+      <link>http://h12.io/project/cwrap/</link>
       <pubDate>Wed, 01 Jan 2014 01:30:04 +0000</pubDate>
       
-      <guid>http://h12.me/project/cwrap/</guid>
+      <guid>http://h12.io/project/cwrap/</guid>
       <description>Cwrap is a Go wrapper generator for C libraries.
 Features  No Cgo types exposed out of the wrapper package, and uses as less allocation/copy as possible. C name prefix mapped to Go packages, and a wrapper package can import another wrapper package. Follows Go naming conventions. C union. Use Go language features when possible:  string and bool. Multiple return values. Slice, slice of slice and slice of string.</description>
     </item>
     
     <item>
       <title>SOCKS: a SOCKS Proxy Package for Go</title>
-      <link>http://h12.me/project/socks/</link>
+      <link>http://h12.io/project/socks/</link>
       <pubDate>Wed, 01 Aug 2012 23:57:54 +0000</pubDate>
       
-      <guid>http://h12.me/project/socks/</guid>
+      <guid>http://h12.io/project/socks/</guid>
       <description>SOCKS is a SOCKS4, SOCKS4A and SOCKS5 proxy package for Go.
-Quick Start Get the package go get -u &amp;quot;h12.me/socks&amp;quot;  Import the package import &amp;quot;h12.me/socks&amp;quot;  Create a SOCKS proxy dialing function dialSocksProxy := socks.DialSocksProxy(socks.SOCKS5, &amp;quot;127.0.0.1:1080&amp;quot;) tr := &amp;amp;http.Transport{Dial: dialSocksProxy} httpClient := &amp;amp;http.Client{Transport: tr}  Alternatives http://code.google.com/p/go/source/browse/?repo=net#hg%2Fproxy</description>
+Quick Start Get the package go get -u &amp;quot;h12.io/socks&amp;quot;  Import the package import &amp;quot;h12.io/socks&amp;quot;  Create a SOCKS proxy dialing function dialSocksProxy := socks.DialSocksProxy(socks.SOCKS5, &amp;quot;127.0.0.1:1080&amp;quot;) tr := &amp;amp;http.Transport{Dial: dialSocksProxy} httpClient := &amp;amp;http.Client{Transport: tr}  Alternatives http://code.google.com/p/go/source/browse/?repo=net#hg%2Fproxy</description>
     </item>
     
   </channel>

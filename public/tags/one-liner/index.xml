@@ -1,23 +1,23 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>One Liner on h12.me</title>
-    <link>http://h12.me/tags/one-liner/</link>
-    <description>Recent content in One Liner on h12.me</description>
+    <title>One Liner on h12</title>
+    <link>http://h12.io/tags/one-liner/</link>
+    <description>Recent content in One Liner on h12</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <copyright>Copyright (c) 2012-2018, Hǎiliàng Wáng; all rights reserved.</copyright>
+    <language>en-US</language>
+    <copyright>Copyright (c) 2012-2018, Wáng Hǎiliàng (Hal); all rights reserved.</copyright>
     <lastBuildDate>Sat, 05 May 2018 16:02:07 +0800</lastBuildDate>
     
-	<atom:link href="http://h12.me/tags/one-liner/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="http://h12.io/tags/one-liner/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>How to Start Godoc on Mac</title>
-      <link>http://h12.me/note/start-godoc/</link>
+      <link>http://h12.io/note/start-godoc/</link>
       <pubDate>Sat, 05 May 2018 16:02:07 +0800</pubDate>
       
-      <guid>http://h12.me/note/start-godoc/</guid>
+      <guid>http://h12.io/note/start-godoc/</guid>
       <description>Fish:
 godoc -http=:6060 &amp;amp;; disown (pidof godoc)  Bash:
 godoc -http=:6060 &amp;amp;; disown `pidof godoc`  And pidof can be installed with Homebrew.</description>
@@ -25,66 +25,66 @@ godoc -http=:6060 &amp;amp;; disown `pidof godoc`  And pidof can be installed wi
     
     <item>
       <title>How to Measure Response Time with Curl</title>
-      <link>http://h12.me/note/measure-response-time-with-curl/</link>
+      <link>http://h12.io/note/measure-response-time-with-curl/</link>
       <pubDate>Tue, 20 Jun 2017 12:40:10 +0800</pubDate>
       
-      <guid>http://h12.me/note/measure-response-time-with-curl/</guid>
+      <guid>http://h12.io/note/measure-response-time-with-curl/</guid>
       <description>curl [args] --write-out &amp;quot;%{time_total}s&amp;quot; --output /dev/null --silent [URL]  </description>
     </item>
     
     <item>
       <title>A Single Command to Download a Website</title>
-      <link>http://h12.me/note/download-website/</link>
+      <link>http://h12.io/note/download-website/</link>
       <pubDate>Sun, 09 Apr 2017 14:30:03 +0800</pubDate>
       
-      <guid>http://h12.me/note/download-website/</guid>
+      <guid>http://h12.io/note/download-website/</guid>
       <description>wget --recursive --level=2 --no-parent --no-clobber --convert-links --continue [URL]  </description>
     </item>
     
     <item>
       <title>One-liner to check MongoDB Connections</title>
-      <link>http://h12.me/note/mongodb-conn/</link>
+      <link>http://h12.io/note/mongodb-conn/</link>
       <pubDate>Fri, 02 Sep 2016 15:40:41 +0800</pubDate>
       
-      <guid>http://h12.me/note/mongodb-conn/</guid>
+      <guid>http://h12.io/note/mongodb-conn/</guid>
       <description>mongo --eval &amp;quot;JSON.stringify(db.currentOp(true))&amp;quot; | \ tail -n +3 | \ jq -r .inprog[].client | \ sed &#39;s/\(.*\):.*/\1/&#39; \ | sort | uniq -c | sort -nr   dump connection information in standard JSON format remove MongoDB header extract IP:port as a list trim port sort IPs by freqencies  </description>
     </item>
     
     <item>
       <title>Counting Word Frequencies in One Line</title>
-      <link>http://h12.me/note/count-word-freq/</link>
+      <link>http://h12.io/note/count-word-freq/</link>
       <pubDate>Tue, 09 Aug 2016 18:31:04 +0800</pubDate>
       
-      <guid>http://h12.me/note/count-word-freq/</guid>
+      <guid>http://h12.io/note/count-word-freq/</guid>
       <description>cat book.txt | \ tr &#39;!()[]{};:&amp;quot;,&amp;lt;.&amp;gt;?“”‘’*/\r&#39; &#39; &#39; | \ tr &#39; &#39; &#39;\n&#39; | \ grep -a -P &amp;quot;^[\p{L}\p{N}\-&#39;]+\$&amp;quot; | \ grep -a -P -v &amp;quot;^[\p{N}\-&#39;]+\$&amp;quot; | \ sed &amp;quot;s/&#39;s\$//&amp;quot; | \ sed &amp;quot;s/^&#39;//&amp;quot; | sed &amp;quot;s/&#39;\$//&amp;quot; &amp;gt; words.txt cat words.txt | \ sort | uniq -c | \ sort -nr | \ cut -c9- &amp;gt; words_desc.txt   replace punctuations with space; remove \r from `\r\n&amp;rsquo; one word per line keep only words composed of unicode letters, numbers, hyphen and apostrophe remove pure numbers remove &amp;rsquo;s remove starting and ending apostrophe output words.</description>
     </item>
     
     <item>
       <title>How to Remove All Exited Containers &amp; Dangling Images for Docker?</title>
-      <link>http://h12.me/note/remove-all-exited-docker-containers/</link>
+      <link>http://h12.io/note/remove-all-exited-docker-containers/</link>
       <pubDate>Mon, 03 Aug 2015 16:55:49 +0800</pubDate>
       
-      <guid>http://h12.me/note/remove-all-exited-docker-containers/</guid>
+      <guid>http://h12.io/note/remove-all-exited-docker-containers/</guid>
       <description>docker ps --quiet --filter=status=exited | xargs docker rm  docker images --no-trunc=true --filter=&amp;quot;dangling=true&amp;quot; --quiet=true | xargs docker rmi  </description>
     </item>
     
     <item>
       <title>Tips on SSH</title>
-      <link>http://h12.me/note/tips-on-ssh/</link>
+      <link>http://h12.io/note/tips-on-ssh/</link>
       <pubDate>Tue, 28 Apr 2015 10:59:02 +0800</pubDate>
       
-      <guid>http://h12.me/note/tips-on-ssh/</guid>
-      <description>Generate SSH keys ssh-keygen -C w@h12.me  Authorize public key at remote server ssh-copy-id user@host  On Mac OSX, ssh-copy-id should be installed first.
+      <guid>http://h12.io/note/tips-on-ssh/</guid>
+      <description>Generate SSH keys ssh-keygen -C w@h12.io  Authorize public key at remote server ssh-copy-id user@host  On Mac OSX, ssh-copy-id should be installed first.
 brew install ssh-copy-id  Generate PEM ssh-keygen -f ~/.ssh/id_rsa -e -m pem &amp;gt; ~/.ssh/id_rsa.pem  Copy file by base64 On remote session, run base64 &amp;lt; myfile and copy the output.
 On local terminal, run base64 -d &amp;gt; myfile, paste the content and press ctrl+D.</description>
     </item>
     
     <item>
       <title>How to Disable the Touchpad in Linux?</title>
-      <link>http://h12.me/note/disable-touchpad/</link>
+      <link>http://h12.io/note/disable-touchpad/</link>
       <pubDate>Tue, 10 Jun 2014 23:00:24 +0000</pubDate>
       
-      <guid>http://h12.me/note/disable-touchpad/</guid>
+      <guid>http://h12.io/note/disable-touchpad/</guid>
       <description>Have you ever been annoyed by accidentally touching the touchpad on your laptop when you are typing?
 I am using a Linux laptop with both trackpoint and touchpad so the touchpad is just an annoying redundant thing. Here is the one-liner to disable it:
 xinput list | grep TouchPad | grep -Po &#39;id=\K([0-9]+)&#39; | xargs xinput disable  </description>

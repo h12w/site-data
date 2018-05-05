@@ -1,32 +1,32 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Android on h12.me</title>
-    <link>http://h12.me/tags/android/</link>
-    <description>Recent content in Android on h12.me</description>
+    <title>Android on h12</title>
+    <link>http://h12.io/tags/android/</link>
+    <description>Recent content in Android on h12</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <copyright>Copyright (c) 2012-2018, Hǎiliàng Wáng; all rights reserved.</copyright>
+    <language>en-US</language>
+    <copyright>Copyright (c) 2012-2018, Wáng Hǎiliàng (Hal); all rights reserved.</copyright>
     <lastBuildDate>Sat, 17 Jan 2015 18:13:09 +0000</lastBuildDate>
     
-	<atom:link href="http://h12.me/tags/android/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="http://h12.io/tags/android/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>How to install a self-signed CA Certificate to Android 4.4</title>
-      <link>http://h12.me/note/install-ca-android/</link>
+      <link>http://h12.io/note/install-ca-android/</link>
       <pubDate>Sat, 17 Jan 2015 18:13:09 +0000</pubDate>
       
-      <guid>http://h12.me/note/install-ca-android/</guid>
+      <guid>http://h12.io/note/install-ca-android/</guid>
       <description>See this blog Remove &amp;ldquo;Network May Be Monitored by an Unknown Third Party&amp;rdquo; in Android 4.4 KitKat.</description>
     </item>
     
     <item>
       <title>Upgrading 4.4.3 ROM for HTC One</title>
-      <link>http://h12.me/note/htc-upgrade/</link>
+      <link>http://h12.io/note/htc-upgrade/</link>
       <pubDate>Wed, 11 Jun 2014 12:24:00 +0000</pubDate>
       
-      <guid>http://h12.me/note/htc-upgrade/</guid>
+      <guid>http://h12.io/note/htc-upgrade/</guid>
       <description>Upgrade your rooted Google Play Edition</description>
     </item>
     

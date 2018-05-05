@@ -1,24 +1,24 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Ssh on h12.me</title>
-    <link>http://h12.me/tags/ssh/</link>
-    <description>Recent content in Ssh on h12.me</description>
+    <title>Ssh on h12</title>
+    <link>http://h12.io/tags/ssh/</link>
+    <description>Recent content in Ssh on h12</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <copyright>Copyright (c) 2012-2018, Hǎiliàng Wáng; all rights reserved.</copyright>
+    <language>en-US</language>
+    <copyright>Copyright (c) 2012-2018, Wáng Hǎiliàng (Hal); all rights reserved.</copyright>
     <lastBuildDate>Tue, 28 Apr 2015 10:59:02 +0800</lastBuildDate>
     
-	<atom:link href="http://h12.me/tags/ssh/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="http://h12.io/tags/ssh/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Tips on SSH</title>
-      <link>http://h12.me/note/tips-on-ssh/</link>
+      <link>http://h12.io/note/tips-on-ssh/</link>
       <pubDate>Tue, 28 Apr 2015 10:59:02 +0800</pubDate>
       
-      <guid>http://h12.me/note/tips-on-ssh/</guid>
-      <description>Generate SSH keys ssh-keygen -C w@h12.me  Authorize public key at remote server ssh-copy-id user@host  On Mac OSX, ssh-copy-id should be installed first.
+      <guid>http://h12.io/note/tips-on-ssh/</guid>
+      <description>Generate SSH keys ssh-keygen -C w@h12.io  Authorize public key at remote server ssh-copy-id user@host  On Mac OSX, ssh-copy-id should be installed first.
 brew install ssh-copy-id  Generate PEM ssh-keygen -f ~/.ssh/id_rsa -e -m pem &amp;gt; ~/.ssh/id_rsa.pem  Copy file by base64 On remote session, run base64 &amp;lt; myfile and copy the output.
 On local terminal, run base64 -d &amp;gt; myfile, paste the content and press ctrl+D.</description>
     </item>

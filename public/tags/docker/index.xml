@@ -1,24 +1,24 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Docker on h12.me</title>
-    <link>http://h12.me/tags/docker/</link>
-    <description>Recent content in Docker on h12.me</description>
+    <title>Docker on h12</title>
+    <link>http://h12.io/tags/docker/</link>
+    <description>Recent content in Docker on h12</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <copyright>Copyright (c) 2012-2018, Hǎiliàng Wáng; all rights reserved.</copyright>
+    <language>en-US</language>
+    <copyright>Copyright (c) 2012-2018, Wáng Hǎiliàng (Hal); all rights reserved.</copyright>
     <lastBuildDate>Sat, 14 Nov 2015 13:57:09 +0800</lastBuildDate>
     
-	<atom:link href="http://h12.me/tags/docker/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="http://h12.io/tags/docker/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>RealTest: real test environment for Go</title>
-      <link>http://h12.me/project/realtest/</link>
+      <link>http://h12.io/project/realtest/</link>
       <pubDate>Sat, 14 Nov 2015 13:57:09 +0800</pubDate>
       
-      <guid>http://h12.me/project/realtest/</guid>
-      <description> h12.me/realtest provides real test environment for Go unit testing, based on Docker.
+      <guid>http://h12.io/project/realtest/</guid>
+      <description> h12.io/realtest provides real test environment for Go unit testing, based on Docker.
 Includes:
  Queue  Kafka cluster (with zookeeper)  Database:  MySQL MongoDB  Cache  Redis  Configuration service  ZooKeeper   Author Hǎiliàng Wáng
 Contributors  Tao Huang  </description>
@@ -26,19 +26,19 @@ Contributors  Tao Huang  </description>
     
     <item>
       <title>How to Remove All Exited Containers &amp; Dangling Images for Docker?</title>
-      <link>http://h12.me/note/remove-all-exited-docker-containers/</link>
+      <link>http://h12.io/note/remove-all-exited-docker-containers/</link>
       <pubDate>Mon, 03 Aug 2015 16:55:49 +0800</pubDate>
       
-      <guid>http://h12.me/note/remove-all-exited-docker-containers/</guid>
+      <guid>http://h12.io/note/remove-all-exited-docker-containers/</guid>
       <description>docker ps --quiet --filter=status=exited | xargs docker rm  docker images --no-trunc=true --filter=&amp;quot;dangling=true&amp;quot; --quiet=true | xargs docker rmi  </description>
     </item>
     
     <item>
       <title>A Brief Note on Scientific Web Surfing</title>
-      <link>http://h12.me/article/scientific-web-surfing/</link>
+      <link>http://h12.io/article/scientific-web-surfing/</link>
       <pubDate>Sat, 14 Feb 2015 09:30:55 +0000</pubDate>
       
-      <guid>http://h12.me/article/scientific-web-surfing/</guid>
+      <guid>http://h12.io/article/scientific-web-surfing/</guid>
       <description>Knowledge is power. Information is liberating. &amp;mdash; by Kofi Annan.
 VPS  CloudsVM Vultr DigitalOcean BandwagonHOST  Client Area -&amp;gt; Services -&amp;gt; Order New Services 64MB RAM is enough for running both ShadowSocks and pdnsd Install Ubuntu LTS 32bit (x86, i686) or CentOS 7.   CentOS Install CentOS 7 (64bit) Shadowsocks cd /etc/yum.repos.d/ wget https://copr.fedorainfracloud.org/coprs/librehat/shadowsocks/repo/epel-7/librehat-shadowsocks-epel-7.repo yum update yum install shadowsocks-libev cd /etc/shadowsocks-libev/ vim config.json # server should be 0.</description>
     </item>

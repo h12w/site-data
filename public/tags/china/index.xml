@@ -1,23 +1,23 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>China on h12.me</title>
-    <link>http://h12.me/tags/china/</link>
-    <description>Recent content in China on h12.me</description>
+    <title>China on h12</title>
+    <link>http://h12.io/tags/china/</link>
+    <description>Recent content in China on h12</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <copyright>Copyright (c) 2012-2018, Hǎiliàng Wáng; all rights reserved.</copyright>
+    <language>en-US</language>
+    <copyright>Copyright (c) 2012-2018, Wáng Hǎiliàng (Hal); all rights reserved.</copyright>
     <lastBuildDate>Sat, 14 Feb 2015 09:30:55 +0000</lastBuildDate>
     
-	<atom:link href="http://h12.me/tags/china/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="http://h12.io/tags/china/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>A Brief Note on Scientific Web Surfing</title>
-      <link>http://h12.me/article/scientific-web-surfing/</link>
+      <link>http://h12.io/article/scientific-web-surfing/</link>
       <pubDate>Sat, 14 Feb 2015 09:30:55 +0000</pubDate>
       
-      <guid>http://h12.me/article/scientific-web-surfing/</guid>
+      <guid>http://h12.io/article/scientific-web-surfing/</guid>
       <description>Knowledge is power. Information is liberating. &amp;mdash; by Kofi Annan.
 VPS  CloudsVM Vultr DigitalOcean BandwagonHOST  Client Area -&amp;gt; Services -&amp;gt; Order New Services 64MB RAM is enough for running both ShadowSocks and pdnsd Install Ubuntu LTS 32bit (x86, i686) or CentOS 7.   CentOS Install CentOS 7 (64bit) Shadowsocks cd /etc/yum.repos.d/ wget https://copr.fedorainfracloud.org/coprs/librehat/shadowsocks/repo/epel-7/librehat-shadowsocks-epel-7.repo yum update yum install shadowsocks-libev cd /etc/shadowsocks-libev/ vim config.json # server should be 0.</description>
     </item>

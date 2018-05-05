@@ -1,23 +1,23 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Aliyun Oss on h12.me</title>
-    <link>http://h12.me/tags/aliyun-oss/</link>
-    <description>Recent content in Aliyun Oss on h12.me</description>
+    <title>Aliyun Oss on h12</title>
+    <link>http://h12.io/tags/aliyun-oss/</link>
+    <description>Recent content in Aliyun Oss on h12</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <copyright>Copyright (c) 2012-2018, Hǎiliàng Wáng; all rights reserved.</copyright>
+    <language>en-US</language>
+    <copyright>Copyright (c) 2012-2018, Wáng Hǎiliàng (Hal); all rights reserved.</copyright>
     <lastBuildDate>Thu, 22 Oct 2015 15:32:58 +0800</lastBuildDate>
     
-	<atom:link href="http://h12.me/tags/aliyun-oss/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="http://h12.io/tags/aliyun-oss/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Aliyun OSS Go SDK</title>
-      <link>http://h12.me/project/aliyun-oss-go-sdk/</link>
+      <link>http://h12.io/project/aliyun-oss-go-sdk/</link>
       <pubDate>Thu, 22 Oct 2015 15:32:58 +0800</pubDate>
       
-      <guid>http://h12.me/project/aliyun-oss-go-sdk/</guid>
+      <guid>http://h12.io/project/aliyun-oss-go-sdk/</guid>
       <description>Aliyun OSS (Object Storage Service) Go SDK is a client SDK to access Aliyun OSS API, implemented in the Go programming language.
 Installation go get -u github.com/aliyun/aliyun-oss-go-sdk/oss go test -v -cover github.com/aliyun/aliyun-oss-go-sdk/oss  Highlights  Complete set of Aliyun OSS API Thouroughly tested  100% test coverage intuitive table driven tests full test suite completes within 2 seconds  Lint clean  golint go fmt goimports go vet race detector  Idiomatic &amp;amp; elegant  response is returned as a parsed object error is returned as a Go error named options for setting headers &amp;amp; parameters  Great extensibility  clean and orthogonal implementation users can easily extend the SDK when a new API method is supported  No third party dependencies  Documentation  Overview API Object Bucket Object Optional Headers and Parameters Multipart Upload Cross-Origin Resource Sharing (CORS) Object Lifecycle Management Extending the SDK  Differences with Python SDK  HTTP header User-Agent, e.</description>
     </item>

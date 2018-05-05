@@ -1,43 +1,43 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Linux on h12.me</title>
-    <link>http://h12.me/tags/linux/</link>
-    <description>Recent content in Linux on h12.me</description>
+    <title>Linux on h12</title>
+    <link>http://h12.io/tags/linux/</link>
+    <description>Recent content in Linux on h12</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <copyright>Copyright (c) 2012-2018, Hǎiliàng Wáng; all rights reserved.</copyright>
+    <language>en-US</language>
+    <copyright>Copyright (c) 2012-2018, Wáng Hǎiliàng (Hal); all rights reserved.</copyright>
     <lastBuildDate>Sat, 10 Sep 2016 09:08:10 +0800</lastBuildDate>
     
-	<atom:link href="http://h12.me/tags/linux/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="http://h12.io/tags/linux/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>How to Remove Old Kernels in Ubuntu</title>
-      <link>http://h12.me/note/ubuntu-remove-old-kernels/</link>
+      <link>http://h12.io/note/ubuntu-remove-old-kernels/</link>
       <pubDate>Sat, 10 Sep 2016 09:08:10 +0800</pubDate>
       
-      <guid>http://h12.me/note/ubuntu-remove-old-kernels/</guid>
+      <guid>http://h12.io/note/ubuntu-remove-old-kernels/</guid>
       <description>sudo apt install byobu sudo purge-old-kernels  Reference:
  Remove Old Kernels (https://help.ubuntu.com/community/Lubuntu/Documentation/RemoveOldKernels)  </description>
     </item>
     
     <item>
       <title>Installing Source Code Pro</title>
-      <link>http://h12.me/note/install-scp/</link>
+      <link>http://h12.io/note/install-scp/</link>
       <pubDate>Thu, 17 Jul 2014 03:19:18 +0000</pubDate>
       
-      <guid>http://h12.me/note/install-scp/</guid>
+      <guid>http://h12.io/note/install-scp/</guid>
       <description>Source Code Pro is one of the best monospace fonts and it is open sourced.
 Here is the script for installing it on Linux.</description>
     </item>
     
     <item>
       <title>How to Disable the Touchpad in Linux?</title>
-      <link>http://h12.me/note/disable-touchpad/</link>
+      <link>http://h12.io/note/disable-touchpad/</link>
       <pubDate>Tue, 10 Jun 2014 23:00:24 +0000</pubDate>
       
-      <guid>http://h12.me/note/disable-touchpad/</guid>
+      <guid>http://h12.io/note/disable-touchpad/</guid>
       <description>Have you ever been annoyed by accidentally touching the touchpad on your laptop when you are typing?
 I am using a Linux laptop with both trackpoint and touchpad so the touchpad is just an annoying redundant thing. Here is the one-liner to disable it:
 xinput list | grep TouchPad | grep -Po &#39;id=\K([0-9]+)&#39; | xargs xinput disable  </description>

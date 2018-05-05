@@ -1,23 +1,23 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Query on h12.me</title>
-    <link>http://h12.me/tags/query/</link>
-    <description>Recent content in Query on h12.me</description>
+    <title>Query on h12</title>
+    <link>http://h12.io/tags/query/</link>
+    <description>Recent content in Query on h12</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <copyright>Copyright (c) 2012-2018, Hǎiliàng Wáng; all rights reserved.</copyright>
+    <language>en-US</language>
+    <copyright>Copyright (c) 2012-2018, Wáng Hǎiliàng (Hal); all rights reserved.</copyright>
     <lastBuildDate>Mon, 20 Jan 2014 01:49:08 +0000</lastBuildDate>
     
-	<atom:link href="http://h12.me/tags/query/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="http://h12.io/tags/query/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>html-query: a fluent and functional approach to querying HTML DOM</title>
-      <link>http://h12.me/project/html-query/</link>
+      <link>http://h12.io/project/html-query/</link>
       <pubDate>Mon, 20 Jan 2014 01:49:08 +0000</pubDate>
       
-      <guid>http://h12.me/project/html-query/</guid>
+      <guid>http://h12.io/project/html-query/</guid>
       <description>html-query is a Go package that provides a fluent and functional interface for querying HTML DOM. It is based on go.net/html.
 Examples  A simple example (under &amp;ldquo;examples&amp;rdquo; directory)
 r := get(`http://blog.golang.org/index`) defer r.Close() root, err := query.Parse(r) checkError(err) root.Div(Id(&amp;quot;content&amp;quot;)).Children(Class(&amp;quot;blogtitle&amp;quot;)).For(func(item *query.Node) { href := item.Ahref().Href() date := item.Span(Class(&amp;quot;date&amp;quot;)).Text() tags := item.Span(Class(&amp;quot;tags&amp;quot;)).Text() // ...... })  Generator of html-query (under &amp;ldquo;gen&amp;rdquo; directory)

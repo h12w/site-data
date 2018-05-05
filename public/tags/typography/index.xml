@@ -1,23 +1,23 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Typography on h12.me</title>
-    <link>http://h12.me/tags/typography/</link>
-    <description>Recent content in Typography on h12.me</description>
+    <title>Typography on h12</title>
+    <link>http://h12.io/tags/typography/</link>
+    <description>Recent content in Typography on h12</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <copyright>Copyright (c) 2012-2018, Hǎiliàng Wáng; all rights reserved.</copyright>
+    <language>en-US</language>
+    <copyright>Copyright (c) 2012-2018, Wáng Hǎiliàng (Hal); all rights reserved.</copyright>
     <lastBuildDate>Wed, 30 Jul 2014 08:29:57 +0000</lastBuildDate>
     
-	<atom:link href="http://h12.me/tags/typography/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="http://h12.io/tags/typography/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Resources on Offline Hyphenation</title>
-      <link>http://h12.me/note/hyphen-res/</link>
+      <link>http://h12.io/note/hyphen-res/</link>
       <pubDate>Wed, 30 Jul 2014 08:29:57 +0000</pubDate>
       
-      <guid>http://h12.me/note/hyphen-res/</guid>
+      <guid>http://h12.io/note/hyphen-res/</guid>
       <description>CSS hyphenation is supported by latest version of Firefox, Safari &amp;amp; IE. However, Chrome does not support it. Though Hyphenator.js can solve this problem, it runs in the browser and affects the rendering speed of above-the-fold content. So there is only one option left: soft hyphen (U+00AD, &amp;amp;shy;).
 Here is a list of resources that leads to its implementation:
  An article about CSS3 hyphenation by Hyphenator.js Hunspell: the spell checker &amp;amp; hyphenator used by LibreOffice English Dictionary of LibreOffice Pyphen: A Python hyphenator using Hunspell dictionary file A test page for soft hyphen  </description>
@@ -25,10 +25,10 @@ Here is a list of resources that leads to its implementation:
     
     <item>
       <title>Finding Optimal Typographic Scale</title>
-      <link>http://h12.me/article/optimal-font-scale/</link>
+      <link>http://h12.io/article/optimal-font-scale/</link>
       <pubDate>Sat, 05 Jul 2014 15:03:04 +0000</pubDate>
       
-      <guid>http://h12.me/article/optimal-font-scale/</guid>
+      <guid>http://h12.io/article/optimal-font-scale/</guid>
       <description>During the construction of this site, there are many important design decisions that need to be made. One of them is to decide the font size for each level of headings, i.e., typographic scale.
 Investigation The first thing I did was to read everything online about typographic scale. I will just skip the details and jump to my opinions:
  Modular scale should be followed Traditional scale is obsolete Golden ratio or double-stranded scale do not make any sense Vertical rhythm should be considered  Then a little explanation.</description>

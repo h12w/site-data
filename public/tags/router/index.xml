@@ -1,23 +1,23 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Router on h12.me</title>
-    <link>http://h12.me/tags/router/</link>
-    <description>Recent content in Router on h12.me</description>
+    <title>Router on h12</title>
+    <link>http://h12.io/tags/router/</link>
+    <description>Recent content in Router on h12</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <copyright>Copyright (c) 2012-2018, Hǎiliàng Wáng; all rights reserved.</copyright>
+    <language>en-US</language>
+    <copyright>Copyright (c) 2012-2018, Wáng Hǎiliàng (Hal); all rights reserved.</copyright>
     <lastBuildDate>Sat, 27 Feb 2016 14:59:54 +0800</lastBuildDate>
     
-	<atom:link href="http://h12.me/tags/router/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="http://h12.io/tags/router/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Note on OpenWRT</title>
-      <link>http://h12.me/note/openwrt-note/</link>
+      <link>http://h12.io/note/openwrt-note/</link>
       <pubDate>Sat, 27 Feb 2016 14:59:54 +0800</pubDate>
       
-      <guid>http://h12.me/note/openwrt-note/</guid>
+      <guid>http://h12.io/note/openwrt-note/</guid>
       <description>Obtain OpenWRT  Find the device model at the Table of Hardware (Huawei HG556a C) Open Device Techdata for Firmware OpenWrt Install URL Open Device Page for Installation instructions  Computer - Cable - Router Connect the computer to the router with a cable.
 Install OpenWRT Follow the instructions to install OpenWRT.
 SSH First login:

@@ -1,23 +1,23 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Ubuntu on h12.me</title>
-    <link>http://h12.me/tags/ubuntu/</link>
-    <description>Recent content in Ubuntu on h12.me</description>
+    <title>Ubuntu on h12</title>
+    <link>http://h12.io/tags/ubuntu/</link>
+    <description>Recent content in Ubuntu on h12</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <copyright>Copyright (c) 2012-2018, Hǎiliàng Wáng; all rights reserved.</copyright>
+    <language>en-US</language>
+    <copyright>Copyright (c) 2012-2018, Wáng Hǎiliàng (Hal); all rights reserved.</copyright>
     <lastBuildDate>Sat, 10 Sep 2016 09:08:10 +0800</lastBuildDate>
     
-	<atom:link href="http://h12.me/tags/ubuntu/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="http://h12.io/tags/ubuntu/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>How to Remove Old Kernels in Ubuntu</title>
-      <link>http://h12.me/note/ubuntu-remove-old-kernels/</link>
+      <link>http://h12.io/note/ubuntu-remove-old-kernels/</link>
       <pubDate>Sat, 10 Sep 2016 09:08:10 +0800</pubDate>
       
-      <guid>http://h12.me/note/ubuntu-remove-old-kernels/</guid>
+      <guid>http://h12.io/note/ubuntu-remove-old-kernels/</guid>
       <description>sudo apt install byobu sudo purge-old-kernels  Reference:
  Remove Old Kernels (https://help.ubuntu.com/community/Lubuntu/Documentation/RemoveOldKernels)  </description>
     </item>

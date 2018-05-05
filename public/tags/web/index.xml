@@ -1,23 +1,23 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Web on h12.me</title>
-    <link>http://h12.me/tags/web/</link>
-    <description>Recent content in Web on h12.me</description>
+    <title>Web on h12</title>
+    <link>http://h12.io/tags/web/</link>
+    <description>Recent content in Web on h12</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <copyright>Copyright (c) 2012-2018, Hǎiliàng Wáng; all rights reserved.</copyright>
+    <language>en-US</language>
+    <copyright>Copyright (c) 2012-2018, Wáng Hǎiliàng (Hal); all rights reserved.</copyright>
     <lastBuildDate>Wed, 08 Jul 2015 07:58:34 +0000</lastBuildDate>
     
-	<atom:link href="http://h12.me/tags/web/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="http://h12.io/tags/web/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>A Comprehensive Note about Proxy Settings</title>
-      <link>http://h12.me/note/proxy-notes/</link>
+      <link>http://h12.io/note/proxy-notes/</link>
       <pubDate>Wed, 08 Jul 2015 07:58:34 +0000</pubDate>
       
-      <guid>http://h12.me/note/proxy-notes/</guid>
+      <guid>http://h12.io/note/proxy-notes/</guid>
       <description> Git &amp;gt; cat ~/.gitconfig [http] proxy = socks5://[host]:[port] [https] proxy = socks5://[host]:[port]  Curl (Homebrew) &amp;gt; cat ~/.curlrc socks5 = &amp;quot;[host]:[port]&amp;quot;  Docker pull env HTTP_PROXY=http://xxx docker pull yyy  GAE  Set proxy
 export HTTP_PROXY http://[host]:[port] export HTTPS_PROXY http://[host]:[port]  Delete cacerts.txt under GAE SDK installation to disable SSL verification ( make sure the proxy is safe before this step).
  Deploy.
@@ -26,30 +26,30 @@ appcfg.py . --email=[address] --passin   </description>
     
     <item>
       <title>A Brief Note on Scientific Web Surfing</title>
-      <link>http://h12.me/article/scientific-web-surfing/</link>
+      <link>http://h12.io/article/scientific-web-surfing/</link>
       <pubDate>Sat, 14 Feb 2015 09:30:55 +0000</pubDate>
       
-      <guid>http://h12.me/article/scientific-web-surfing/</guid>
+      <guid>http://h12.io/article/scientific-web-surfing/</guid>
       <description>Knowledge is power. Information is liberating. &amp;mdash; by Kofi Annan.
 VPS  CloudsVM Vultr DigitalOcean BandwagonHOST  Client Area -&amp;gt; Services -&amp;gt; Order New Services 64MB RAM is enough for running both ShadowSocks and pdnsd Install Ubuntu LTS 32bit (x86, i686) or CentOS 7.   CentOS Install CentOS 7 (64bit) Shadowsocks cd /etc/yum.repos.d/ wget https://copr.fedorainfracloud.org/coprs/librehat/shadowsocks/repo/epel-7/librehat-shadowsocks-epel-7.repo yum update yum install shadowsocks-libev cd /etc/shadowsocks-libev/ vim config.json # server should be 0.</description>
     </item>
     
     <item>
       <title>A Shorter Domain Name</title>
-      <link>http://h12.me/note/new-domain-h12/</link>
+      <link>http://h12.io/note/new-domain-h12/</link>
       <pubDate>Tue, 16 Dec 2014 09:43:40 +0000</pubDate>
       
-      <guid>http://h12.me/note/new-domain-h12/</guid>
+      <guid>http://h12.io/note/new-domain-h12/</guid>
       <description>This year, I decided not to renewal the previous domain name (hailiang.ws) last year, but to register a shorter one. There are two reasons:
- Both the site URL and the email address will be cleaner. A more friendly Go import path will be possible for my repositories on Github.  After comparing various choices on major domain providers, I chose h12.me as the new domain. It is the shortest but still meaningful domain that I can afford.</description>
+ Both the site URL and the email address will be cleaner. A more friendly Go import path will be possible for my repositories on Github.  After comparing various choices on major domain providers, I chose h12.io as the new domain. It is the shortest but still meaningful domain that I can afford.</description>
     </item>
     
     <item>
       <title>Resources on Offline Hyphenation</title>
-      <link>http://h12.me/note/hyphen-res/</link>
+      <link>http://h12.io/note/hyphen-res/</link>
       <pubDate>Wed, 30 Jul 2014 08:29:57 +0000</pubDate>
       
-      <guid>http://h12.me/note/hyphen-res/</guid>
+      <guid>http://h12.io/note/hyphen-res/</guid>
       <description>CSS hyphenation is supported by latest version of Firefox, Safari &amp;amp; IE. However, Chrome does not support it. Though Hyphenator.js can solve this problem, it runs in the browser and affects the rendering speed of above-the-fold content. So there is only one option left: soft hyphen (U+00AD, &amp;amp;shy;).
 Here is a list of resources that leads to its implementation:
  An article about CSS3 hyphenation by Hyphenator.js Hunspell: the spell checker &amp;amp; hyphenator used by LibreOffice English Dictionary of LibreOffice Pyphen: A Python hyphenator using Hunspell dictionary file A test page for soft hyphen  </description>
@@ -57,10 +57,10 @@ Here is a list of resources that leads to its implementation:
     
     <item>
       <title>About 301 Moved Permanently</title>
-      <link>http://h12.me/note/301-redirect/</link>
+      <link>http://h12.io/note/301-redirect/</link>
       <pubDate>Fri, 25 Jul 2014 03:39:05 +0000</pubDate>
       
-      <guid>http://h12.me/note/301-redirect/</guid>
+      <guid>http://h12.io/note/301-redirect/</guid>
       <description>When building a website, there is one inevitable thing: 301 permanent redirection. The cases that have to involve 301 includes:
  Redirection from www subdomain to naked domain or vise versa. Redirection from slashed pretty URL to unslashed URL or vise versa.  301 is easy to implement with Go:
 func redirect301(w http.ResponseWriter, url string) { w.Header().Set(&amp;quot;Location&amp;quot;, url) w.WriteHeader(http.StatusMovedPermanently) }  There is one more thing that needs attention: The root path of a domain always contains a slash (GET / in HTTP request), regardless the user enters the slash or not, so the root path needs no redirection.</description>
@@ -68,19 +68,19 @@ func redirect301(w http.ResponseWriter, url string) { w.Header().Set(&amp;quot;L
     
     <item>
       <title>How to Achieve a Perfect PageSpeed Insights Score</title>
-      <link>http://h12.me/article/pagespeed-insights/</link>
+      <link>http://h12.io/article/pagespeed-insights/</link>
       <pubDate>Thu, 24 Jul 2014 03:42:01 +0000</pubDate>
       
-      <guid>http://h12.me/article/pagespeed-insights/</guid>
+      <guid>http://h12.io/article/pagespeed-insights/</guid>
       <description>Indtroduction PageSpeed Insights is an online tool by Google to measure the performance of an web page for mobile and desktop devices. It has a set of heuristic rules considering the network-independent aspects of page performance. Each rule has a weight and the total score ranges from 0 to 100 points. The desktop and mobile tests have the same set of rules for performance and mobile test has some extra rules about user experience.</description>
     </item>
     
     <item>
       <title>Installing Susy</title>
-      <link>http://h12.me/note/install-susy/</link>
+      <link>http://h12.io/note/install-susy/</link>
       <pubDate>Thu, 17 Jul 2014 02:29:57 +0000</pubDate>
       
-      <guid>http://h12.me/note/install-susy/</guid>
+      <guid>http://h12.io/note/install-susy/</guid>
       <description>The script:
 sudo apt-get install ruby sudo apt-get install ruby-dev sudo gem install susy -V sudo gem install compass --pre -V sudo gem lnstall breakpoint -V  Notes:
  The current version of Susy uses a higher version of Sass than Compass, so the corresponding Compass version has to be a prerelease (&amp;ndash;pre). The installing process is slow and it feels better to print it out (-V). You may have to run &amp;ldquo;compass watch&amp;rdquo; with sudo (issue 1497).</description>
@@ -88,29 +88,29 @@ sudo apt-get install ruby sudo apt-get install ruby-dev sudo gem install susy -V
     
     <item>
       <title>A List of URLs about Web Design</title>
-      <link>http://h12.me/note/web-design-site/</link>
+      <link>http://h12.io/note/web-design-site/</link>
       <pubDate>Thu, 10 Jul 2014 04:04:00 +0000</pubDate>
       
-      <guid>http://h12.me/note/web-design-site/</guid>
+      <guid>http://h12.io/note/web-design-site/</guid>
       <description> The Elements of Typographic Style Applied to the Web Smashing Magazine Trentwalton Inkwell  </description>
     </item>
     
     <item>
       <title>Why My Web Font Looks Ugly on IE?</title>
-      <link>http://h12.me/note/ugly-font/</link>
+      <link>http://h12.io/note/ugly-font/</link>
       <pubDate>Wed, 09 Jul 2014 05:42:42 +0000</pubDate>
       
-      <guid>http://h12.me/note/ugly-font/</guid>
+      <guid>http://h12.io/note/ugly-font/</guid>
       <description>Windows needs hand-tuned hinting which is missing in many web fonts. To solve this problem, there is a tool called ttfautohint which can automatically add hinting to font files.
 There is a tutorial, and an online tool called Fontie.</description>
     </item>
     
     <item>
       <title>Serving Static Pages on App Engine with Go</title>
-      <link>http://h12.me/note/serve-static/</link>
+      <link>http://h12.io/note/serve-static/</link>
       <pubDate>Sun, 06 Jul 2014 06:39:27 +0000</pubDate>
       
-      <guid>http://h12.me/note/serve-static/</guid>
+      <guid>http://h12.io/note/serve-static/</guid>
       <description>It is straightforward to serve static pages with Go or config file on App Engine, but how to serve static pages on App Engine with Go?
 I got the following error when I tried to customize the 404 page with Go:
 No such file or directory  The solution turns out to be simple: do not do both.
@@ -119,10 +119,10 @@ The file will not be accessible to Go if there is already a rule for it in confi
     
     <item>
       <title>Finding Optimal Typographic Scale</title>
-      <link>http://h12.me/article/optimal-font-scale/</link>
+      <link>http://h12.io/article/optimal-font-scale/</link>
       <pubDate>Sat, 05 Jul 2014 15:03:04 +0000</pubDate>
       
-      <guid>http://h12.me/article/optimal-font-scale/</guid>
+      <guid>http://h12.io/article/optimal-font-scale/</guid>
       <description>During the construction of this site, there are many important design decisions that need to be made. One of them is to decide the font size for each level of headings, i.e., typographic scale.
 Investigation The first thing I did was to read everything online about typographic scale. I will just skip the details and jump to my opinions:
  Modular scale should be followed Traditional scale is obsolete Golden ratio or double-stranded scale do not make any sense Vertical rhythm should be considered  Then a little explanation.</description>
@@ -130,37 +130,37 @@ Investigation The first thing I did was to read everything online about typograp
     
     <item>
       <title>A List of Website Testing Services</title>
-      <link>http://h12.me/note/site-test/</link>
+      <link>http://h12.io/note/site-test/</link>
       <pubDate>Thu, 03 Jul 2014 06:21:58 +0000</pubDate>
       
-      <guid>http://h12.me/note/site-test/</guid>
+      <guid>http://h12.io/note/site-test/</guid>
       <description> The W3C Markup Validation Service Google PageSpeed Insights Pingdom Website Speed Test Nibbler BrowserStack  </description>
     </item>
     
     <item>
       <title>A List of Narrow Fonts for Titles</title>
-      <link>http://h12.me/note/narrow-fonts/</link>
+      <link>http://h12.io/note/narrow-fonts/</link>
       <pubDate>Tue, 01 Jul 2014 08:39:42 +0000</pubDate>
       
-      <guid>http://h12.me/note/narrow-fonts/</guid>
+      <guid>http://h12.io/note/narrow-fonts/</guid>
       <description> Economica Fjalla One League Gothic Medula One Open Sans Condensed Oswald Pathway Gothic One PT Sans Narrow Rationale Six Caps Tulpen One Yanone Kaffeesatz  </description>
     </item>
     
     <item>
       <title>Links about Font Choosing</title>
-      <link>http://h12.me/note/font-links/</link>
+      <link>http://h12.io/note/font-links/</link>
       <pubDate>Sun, 22 Jun 2014 14:09:45 +0000</pubDate>
       
-      <guid>http://h12.me/note/font-links/</guid>
+      <guid>http://h12.io/note/font-links/</guid>
       <description> The Best Font Styles for Blogging Size Doesn’t Matter, and What Does Using Media Queries To Improve Readability 8 Definitive Web Font Stacks  </description>
     </item>
     
     <item>
       <title>Getgo: a concurrent, simple and extensible web scraping framework</title>
-      <link>http://h12.me/project/getgo/</link>
+      <link>http://h12.io/project/getgo/</link>
       <pubDate>Mon, 02 Jun 2014 01:21:00 +0000</pubDate>
       
-      <guid>http://h12.me/project/getgo/</guid>
+      <guid>http://h12.io/project/getgo/</guid>
       <description>Getgo is a concurrent, simple and extensible web scraping framework written in Go.
 Quick start Get Getgo go get -u github.com/h12w/getgo  Define a task This example is under the examples/goblog directory. To use Getgo to scrap structured data from a web page, just define the structured data as a Go struct (golangBlogEntry), and define a corresponding task (golangBlogIndexTask).
 type golangBlogEntry struct { Title string URL string Tags *string } type golangBlogIndexTask struct { // Variables in task URL, e.</description>
