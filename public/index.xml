@@ -66,7 +66,7 @@
       <pubDate>Sat, 05 Jul 2014 00:00:00 +0000</pubDate>
       
       <guid>http://h12.io/search/</guid>
-      <description> (function() { var cx = &#39;014669057665099905978:wi8dtak3l8q&#39;; var gcse = document.createElement(&#39;script&#39;); gcse.type = &#39;text/javascript&#39;; gcse.async = true; gcse.src = (document.location.protocol == &#39;https:&#39; ? &#39;https:&#39; : &#39;http:&#39;) + &#39;//cse.google.com/cse.js?cx=&#39; + cx; var s = document.getElementsByTagName(&#39;script&#39;)[0]; s.parentNode.insertBefore(gcse, s); })();   </description>
+      <description> (function() { var cx = &#39;014669057665099905978:mgo7b8sc23g&#39;; var gcse = document.createElement(&#39;script&#39;); gcse.type = &#39;text/javascript&#39;; gcse.async = true; gcse.src = &#39;https://cse.google.com/cse.js?cx=&#39; + cx; var s = document.getElementsByTagName(&#39;script&#39;)[0]; s.parentNode.insertBefore(gcse, s); })();   </description>
     </item>
     
     <item>
