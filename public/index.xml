@@ -46,7 +46,7 @@
       <pubDate>Tue, 29 May 2018 00:00:00 +0000</pubDate>
       
       <guid>http://h12.io/krypto/</guid>
-      <description>  function krypto_run() { koutput = document.getElementById(&#34;koutput&#34;); kinput = document.getElementById(&#34;kinput&#34;); koutput.value = JSMain(kinput.value); koutput.style.height = (koutput.scrollHeight)+&#34;px&#34;; }   #kinput, #koutput { display: block; margin-left: auto; margin-right: auto; font-size: .89474rem; height: 1.25rem; font-family: Menlo,Consolas,&#34;Ubuntu Mono&#34;,monospace,sans; background-color: #1a1a1a; color: #d9d9d9; } #kbutton { display: block; margin-left: auto; margin-right: auto; margin-top: 0.5rem; margin-bottom: 0.5rem; border: none; background-color: #4CAF50; color: white; padding: 15px 32px; text-align: center; text-decoration: none; font-size: 16px; }  6 6 6 6 24 6+6+6+6 </description>
+      <description>  function krypto_run() { koutput = document.getElementById(&#34;koutput&#34;); kinput = document.getElementById(&#34;kinput&#34;); koutput.value = JSMain(kinput.value); koutput.style.height = (koutput.scrollHeight)+&#34;px&#34;; }   #kinput, #koutput { display: block; margin-left: auto; margin-right: auto; font-size: .89474rem; height: 1.25rem; font-family: Menlo,Consolas,&#34;Ubuntu Mono&#34;,monospace,sans; background-color: #1a1a1a; color: #d9d9d9; } #kbutton { display: block; margin-left: auto; margin-right: auto; margin-top: 0.5rem; margin-bottom: 0.5rem; border: none; background-color: #4CAF50; color: white; padding: 15px 32px; text-align: center; text-decoration: none; font-size: 16px; }  6 9 9 10 24 9/6*10+9 </description>
     </item>
     
     <item>
