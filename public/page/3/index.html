@@ -75,6 +75,64 @@
         
             <article class="frontpage">
                 <h1>
+                    <a href="http://h12.io/note/manager-faq/">A Manager&#39;s FAQ</a>
+                    <span class="line"></span>
+                </h1>
+                <span class="time">3 July 2016</span>
+                <div class="article-body hyphenate">
+                    <p>This is an <a href="https://readthink.com/a-managers-faq-35858a229f84#.7a4wlb9qy">insightful list</a>
+from <a href="Henry Ward">Henry Ward</a>:</p>
+
+<ul>
+<li><strong>How do I get employees to perform better?</strong> Tell them what they are doing well.</li>
+<li><strong>How do I give negative feedback?</strong> By being curious.</li>
+<li><strong>How do I decide what to delegate?</strong> Delegate the work you want to do.</li>
+<li><strong>How should I prioritize?</strong> Fix problems. Then prevent problems.</li>
+<li><strong>How should I grade employees?</strong> Don’t. Teach them to self-evaluate.</li>
+<li><strong>When do I fire somebody?</strong> When you know they can’t succeed.</li>
+<li><strong>How do I fire somebody?</strong> By apologizing for our failures.</li>
+<li><strong>Why can’t I just tell people what to do?</strong> Because the more responsibility you have, the less authority you have.</li>
+<li><strong>How do I know if I am a good manager?</strong> Employees ask you for advice.</li>
+<li><strong>How do I know if I have good management team?</strong> Shit rolls uphill.</li>
+</ul>
+
+                </div>
+            </article>
+        
+            <article class="frontpage">
+                <h1>
+                    <a href="http://h12.io/note/on-reliable-persistence/">On Reliable Persistence</a>
+                    <span class="line"></span>
+                </h1>
+                <span class="time">2 July 2016</span>
+                <div class="article-body hyphenate">
+                    <p>A short investigation on reliable persistence:</p>
+
+<ul>
+<li><p>Crash consistency is <a href="http://danluu.com/file-consistency/">hard</a> but
+<a href="https://www.flamingspork.com/talks/">possible</a> at a huge performance
+<a href="https://www.google.com/#q=fsync+performance">cost</a></p></li>
+
+<li><p>Data safty must rely on distributed solution</p>
+
+<ul>
+<li><a href="https://raft.github.io">Raft</a></li>
+</ul></li>
+
+<li><p>Perhaps we should just give up manual fsync and rely on</p>
+
+<ul>
+<li>OS background flush</li>
+<li>corruption detection &amp; correction at startup</li>
+<li><a href="https://kafka.apache.org/08/ops.html">replication</a></li>
+</ul></li>
+</ul>
+
+                </div>
+            </article>
+        
+            <article class="frontpage">
+                <h1>
                     <a href="http://h12.io/note/openwrt-note/">Note on OpenWRT</a>
                     <span class="line"></span>
                 </h1>
@@ -281,169 +339,157 @@ func main() {
         
             <article class="frontpage">
                 <h1>
-                    <a href="http://h12.io/project/realtest/">RealTest: real test environment for Go</a>
+                    <a href="http://h12.io/project/sej/">SEJ: Segmented Journals</a>
                     <span class="line"></span>
                 </h1>
                 <span class="time">14 November 2015</span>
                 <div class="article-body hyphenate">
                     
 
-<p>h12.io/realtest provides real test environment for Go unit testing, based on Docker.</p>
+<p><code>h12.io/sej</code> provides composable components of distributed, persisted message queue and allows trading off between reliablilty, latency and throughput with minimal devops overhead.</p>
 
-<p>Includes:</p>
-
-<ul>
-<li>Queue
+<h2 id="package-organization">Package Organization</h2>
 
 <ul>
-<li>Kafka cluster (with zookeeper)</li>
-</ul></li>
-<li>Database:
+<li>h12.io/sej: writer, scanner and offset
 
 <ul>
-<li>MySQL</li>
-<li>MongoDB</li>
-</ul></li>
-<li>Cache
-
-<ul>
-<li>Redis</li>
-</ul></li>
-<li>Configuration service
-
-<ul>
-<li>ZooKeeper</li>
+<li>shard: sharding</li>
+<li>hub: copying across machines</li>
+<li>cmd/sej: command line tool</li>
 </ul></li>
 </ul>
 
-<h2 id="author">Author</h2>
+<h2 id="sej-directory">SEJ Directory</h2>
 
-<p><a href="https://github.com/h12w">Hǎiliàng Wáng</a></p>
-
-<h2 id="contributors">Contributors</h2>
-
-<ul>
-<li><a href="https://github.com/AnotherGoogleFans">Tao Huang</a></li>
-</ul>
-
-                </div>
-            </article>
-        
-            <article class="frontpage">
-                <h1>
-                    <a href="http://h12.io/project/aliyun-oss-go-sdk/">Aliyun OSS Go SDK</a>
-                    <span class="line"></span>
-                </h1>
-                <span class="time">22 October 2015</span>
-                <div class="article-body hyphenate">
-                    
-
-<p><a href="https://drone.io/github.com/h12w/aliyun-oss-go-sdk/latest"><img src="https://drone.io/github.com/h12w/aliyun-oss-go-sdk/status.png" alt="Build
-Status" /></a>
-<a href="https://coveralls.io/github/h12w/aliyun-oss-go-sdk?branch=master"><img src="https://coveralls.io/repos/h12w/aliyun-oss-go-sdk/badge.svg?branch=master&amp;service=github" alt="Coverage
-Status" /></a>
-<a href="https://godoc.org/github.com/aliyun/aliyun-oss-go-sdk/oss"><img src="https://godoc.org/github.com/aliyun/aliyun-oss-go-sdk/oss?status.svg" alt="GoDoc" /></a></p>
-
-<p>Aliyun OSS (Object Storage Service) Go SDK is a client SDK to access Aliyun OSS
-API, implemented in the Go programming language.</p>
-
-<h2 id="installation">Installation</h2>
-
-<pre><code class="language-bash">go get -u github.com/aliyun/aliyun-oss-go-sdk/oss
-go test -v -cover github.com/aliyun/aliyun-oss-go-sdk/oss
+<pre><code>[root-dir]/
+    [sej-dir]/
+        jnl.lck
+        jnl/
+            0000000000000000.jnl
+            000000001f9e521e.jnl
+            ......
+        ofs/
+            reader1.ofs
+            reader1.lck
+            reader2.ofs
+            reader2.lck
+            ......
 </code></pre>
 
-<h2 id="highlights">Highlights</h2>
+<h2 id="journal-file-format">Journal File format</h2>
 
-<ul>
-<li>Complete set of Aliyun OSS API</li>
-<li>Thouroughly tested
-
-<ul>
-<li>100% test coverage</li>
-<li>intuitive table driven tests</li>
-<li>full test suite completes within 2 seconds</li>
-</ul></li>
-<li>Lint clean
-
-<ul>
-<li>golint</li>
-<li>go fmt</li>
-<li>goimports</li>
-<li>go vet</li>
-<li>race detector</li>
-</ul></li>
-<li>Idiomatic &amp; elegant
-
-<ul>
-<li>response is returned as a parsed object</li>
-<li>error is returned as a Go error</li>
-<li>named options for setting headers &amp; parameters</li>
-</ul></li>
-<li>Great extensibility
-
-<ul>
-<li>clean and orthogonal implementation</li>
-<li>users can easily extend the SDK when a new API method is supported</li>
-</ul></li>
-<li>No third party dependencies</li>
-</ul>
-
-<h2 id="documentation">Documentation</h2>
-
-<ul>
-<li><a href="doc/overview.md">Overview</a></li>
-<li><a href="doc/api-object.md">API Object</a></li>
-<li><a href="doc/bucket.md">Bucket</a></li>
-<li><a href="doc/object.md">Object</a></li>
-<li><a href="doc/options.md">Optional Headers and Parameters</a></li>
-<li><a href="doc/upload.md">Multipart Upload</a></li>
-<li><a href="doc/cors.md">Cross-Origin Resource Sharing (CORS)</a></li>
-<li><a href="doc/lifecycle.md">Object Lifecycle Management</a></li>
-<li><a href="doc/extend.md">Extending the SDK</a></li>
-</ul>
-
-<h2 id="differences-with-python-sdk">Differences with Python SDK</h2>
-
-<ul>
-<li>HTTP header User-Agent, e.g. aliyun-sdk-go/0.1.1 (Linux/3.16.0-51-generic/x86_64;go1.5.1)</li>
-<li>Go HTTP client does not support 100-Continue (will be supported after Go 1.6, see <a href="https://github.com/golang/go/issues/3665">https://github.com/golang/go/issues/3665</a>)</li>
-<li>HTTP header keys are automatically converted into canonical format, e.g.
-x-oss-acl becomes X-Oss-Acl</li>
-<li>Go GET request does not have redundant &ldquo;Content-Length: 0&rdquo; header</li>
-<li>Parameters will be omitted if the argument is not set</li>
-<li>Go always sends URL parameters and headers in canonical order</li>
-</ul>
-
-<h2 id="author">Author</h2>
-
-<p><a href="https://github.com/h12w">Hǎiliàng Wáng</a></p>
-
-<h2 id="license">License</h2>
-
-<p>licensed under the <a href="https://www.apache.org/licenses/LICENSE-2.0.html">Apache License 2.0</a></p>
-
-<h2 id="references">References</h2>
-
-<ul>
-<li><a href="https://docs.aliyun.com/#/pub/oss">OSS Document (Chinese)</a></li>
-</ul>
-
-                </div>
-            </article>
-        
-            <article class="frontpage">
-                <h1>
-                    <a href="http://h12.io/note/remove-all-exited-docker-containers/">How to Remove All Exited Containers &amp; Dangling Images for Docker?</a>
-                    <span class="line"></span>
-                </h1>
-                <span class="time">3 August 2015</span>
-                <div class="article-body hyphenate">
-                    <pre><code class="language-bash">docker ps --quiet --filter=status=exited | xargs docker rm
+<pre><code>segment_file = { message }                          .
+message      = offset timestamp type key value size .
+offset       = uint64                               .
+timestamp    = int64                                .
+type         = uint8                                .
+key          = key_size { uint8 }                   .
+key_size     = int8                                 .
+value        = value_size { uint8 }                 .
+value_size   = int32                                .
+size         = int32                                .
 </code></pre>
 
-<pre><code class="language-bash">docker images --no-trunc=true --filter=&quot;dangling=true&quot; --quiet=true | xargs docker rmi
+<p>All integers are written in the big endian format.</p>
+
+<table>
+<thead>
+<tr>
+<th>name</th>
+<th>description</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>offset</td>
+<td>the position of the message in the queue</td>
+</tr>
+
+<tr>
+<td>timestamp</td>
+<td>the timestamp represented in nanoseconds since Unix Epoch</td>
+</tr>
+
+<tr>
+<td>type</td>
+<td>an int8 value that could be used to indicate the type of the message</td>
+</tr>
+
+<tr>
+<td>key</td>
+<td>the encoded key</td>
+</tr>
+
+<tr>
+<td>value</td>
+<td>the encoded value</td>
+</tr>
+
+<tr>
+<td>size</td>
+<td>the size of the whole message including itself, allowing reading backward</td>
+</tr>
+</tbody>
+</table>
+
+<h2 id="writer">Writer</h2>
+
+<ul>
+<li>Append from the last offset in segmented journal files</li>
+<li>File lock to prevent other writers from opening the journal files</li>
+<li>Startup corruption detection &amp; truncation</li>
+</ul>
+
+<h2 id="scanner">Scanner</h2>
+
+<ul>
+<li>Read from an offset in segmented journal files</li>
+<li>Change monitoring
+
+<ul>
+<li>directory</li>
+<li>file append</li>
+</ul></li>
+<li>Handle incomplete last message</li>
+<li>Truncation detection &amp; fail fast</li>
+<li>Timeout</li>
+</ul>
+
+<h2 id="offset">Offset</h2>
+
+<ul>
+<li>First/last offset</li>
+<li>Offset persistence</li>
+</ul>
+
+<h2 id="sharding">Sharding</h2>
+
+<pre><code>[root-dir]/
+    [shard0]/
+    [shard1]/
+    ......
 </code></pre>
+
+<p>Each shard directory is a SEJ directory with a name in the form of <code>[prefix].[shard-bit].[shard-index]</code>.</p>
+
+<ul>
+<li>prefix must satisfy [a-zA-Z0-9_-]*</li>
+<li>when prefix is empty, <code>[prefix].</code> including the dot is omitted</li>
+<li>shard-bit: 1, 2, &hellip;, 9, a</li>
+<li>shard-index: 000, 001, &hellip;, 3ff</li>
+</ul>
+
+<h2 id="hub">Hub</h2>
+
+<pre><code>[root-dir]/
+    [client-id0].[shard0]/
+    [client-id1].[shard0]/
+    ......
+</code></pre>
+
+<p>client-dir is the SEJ directory name belonging to a client.</p>
 
                 </div>
             </article>

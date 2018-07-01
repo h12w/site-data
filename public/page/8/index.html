@@ -75,6 +75,247 @@
         
             <article class="frontpage">
                 <h1>
+                    <a href="http://h12.io/note/install-susy/">Installing Susy</a>
+                    <span class="line"></span>
+                </h1>
+                <span class="time">17 July 2014</span>
+                <div class="article-body hyphenate">
+                    <p>The script:</p>
+
+<pre><code class="language-bash">sudo apt-get install ruby
+sudo apt-get install ruby-dev
+sudo gem install susy -V
+sudo gem install compass --pre -V
+sudo gem lnstall breakpoint -V
+</code></pre>
+
+<p>Notes:</p>
+
+<ul>
+<li>The current version of Susy uses a higher version of Sass than Compass, so the
+corresponding Compass version has to be a prerelease (&ndash;pre).</li>
+<li>The installing process is slow and it feels better to print it out (-V).</li>
+<li>You may have to run &ldquo;compass watch&rdquo; with sudo (<a href="https://github.com/Compass/compass/issues/1497">issue 1497</a>).</li>
+<li>An alternative <a href="https://ruby.taobao.org/">RubyGems source</a> that is close to
+your location might help.</li>
+</ul>
+
+                </div>
+            </article>
+        
+            <article class="frontpage">
+                <h1>
+                    <a href="http://h12.io/note/web-design-site/">A List of URLs about Web Design</a>
+                    <span class="line"></span>
+                </h1>
+                <span class="time">10 July 2014</span>
+                <div class="article-body hyphenate">
+                    <ul>
+<li><a href="http://webtypography.net/">The Elements of Typographic Style Applied to the Web</a></li>
+<li><a href="http://www.smashingmagazine.com/">Smashing Magazine</a></li>
+<li><a href="http://trentwalton.com/">Trentwalton</a></li>
+<li><a href="http://www.inkwell.ie/">Inkwell</a></li>
+</ul>
+
+                </div>
+            </article>
+        
+            <article class="frontpage">
+                <h1>
+                    <a href="http://h12.io/note/ugly-font/">Why My Web Font Looks Ugly on IE?</a>
+                    <span class="line"></span>
+                </h1>
+                <span class="time">9 July 2014</span>
+                <div class="article-body hyphenate">
+                    <p>Windows needs hand-tuned hinting which is missing in many web fonts. To solve this
+problem, there is a tool called <a href="http://www.freetype.org/ttfautohint/index.html">ttfautohint</a>
+which can automatically add hinting to font files.</p>
+
+<p>There is a <a href="http://pixelsvsbytes.com/blog/2013/11/how-to-create-perfect-web-fonts-in-3-steps/">tutorial</a>,
+and an online tool called <a href="http://fontie.flowyapps.com/">Fontie</a>.</p>
+
+                </div>
+            </article>
+        
+            <article class="frontpage">
+                <h1>
+                    <a href="http://h12.io/note/serve-static/">Serving Static Pages on App Engine with Go</a>
+                    <span class="line"></span>
+                </h1>
+                <span class="time">6 July 2014</span>
+                <div class="article-body hyphenate">
+                    <p>It is straightforward to serve static pages with <a href="http://golang.org/pkg/net/http/">Go</a>
+or <a href="https://developers.google.com/appengine/docs/go/config/appconfig">config file</a>
+on App Engine, but how to serve static pages on App Engine with Go?</p>
+
+<p>I got the following error when I tried to customize the 404 page with Go:</p>
+
+<pre><code>No such file or directory
+</code></pre>
+
+<p>The solution turns out to be simple: do not do both.</p>
+
+<p>The file will not be accessible to Go if there is already a rule for it in
+config.yaml. Remove the rule from config.yaml and the file will be available to
+Go again (source:
+<a href="https://groups.google.com/d/msg/google-appengine-go/DmfDPUBkmrg/SvJ1dwjC0_EJ">google-appengine-go</a>).</p>
+
+<p>Here is an exmaple to serve a custom 404 not found page:</p>
+
+<pre><code class="language-go">func serve404(w http.ResponseWriter, r *http.Request) {
+	w.WriteHeader(http.StatusNotFound)
+	f, err := http.Dir(&quot;public&quot;).Open(&quot;404.html&quot;)
+	if err != nil {
+		serveError(w, r, err)
+		return
+	}
+	defer f.Close()
+	io.Copy(w, f)
+}
+</code></pre>
+
+                </div>
+            </article>
+        
+            <article class="frontpage">
+                <h1>
+                    <a href="http://h12.io/article/optimal-font-scale/">Finding Optimal Typographic Scale</a>
+                    <span class="line"></span>
+                </h1>
+                <span class="time">5 July 2014</span>
+                <div class="article-body hyphenate">
+                    
+
+<p>During the construction of this site, there are many important design decisions
+that need to be made. One of them is to decide the font size for each level of
+headings, i.e., typographic scale.</p>
+
+<h2 id="investigation">Investigation</h2>
+
+<p>The first thing I did was to read <a href="https://www.google.com/?#newwindow=1&amp;q=typographic+scale">everything online</a>
+about typographic scale. I will just skip the details and jump to my opinions:</p>
+
+<ul>
+<li>Modular scale should be followed</li>
+<li>Traditional scale is obsolete</li>
+<li>Golden ratio or double-stranded scale do not make any sense</li>
+<li>Vertical rhythm should be considered</li>
+</ul>
+
+<p>Then a little explanation.</p>
+
+<p>Modular scale (geometric series) is the way how our visual perception understands
+relative size. When a page is zoomed in or out, the perceived aboslue length
+changes, but the ratio remains the same. Rather than choosing modular scale, we
+actually think in terms of modular scale.  There is no hard rule that the ratio
+of modular scale must be a constant, but a constant modular ratio is the simplest
+and provides consistency.</p>
+
+<p>Traditional scale is actually modular scale of ratio 2 for size 6 7 8 9, with some
+extra and missing sizes. There is no reason why we restraint ourselves to
+irrelevant factors, instead, we should consider the constraints from our
+<em>real problem</em>. The same reason applies to the golden ratio and double-stranded
+scale.</p>
+
+<h2 id="problem-constraints">Problem &amp; constraints</h2>
+
+<p>What is a good typographic scale? For a Blog article, it should at least meet the
+following requirements:</p>
+
+<ul>
+<li>Discrimination: different headings can be easily distingushed</li>
+<li>Consistency: all the headings looks consistent by the same principle</li>
+</ul>
+
+<p>Besides font size, line height of each level of headings should also be adjusted
+to meet the requirement of vertical rhythm. Line height affects the appearance
+of a heading, especially when the heading is wrapped and takes up multiple lines.</p>
+
+<p>Modular scale solves part of the problem, but we still have to determine the
+value of the modular ratio and to make the line height as consistent as possible
+while maintaining vertical rhythm.</p>
+
+<p>The typographic scale should also satisfy these constraints:</p>
+
+<ul>
+<li>The line height of each heading must be an integral multiple of the line height
+of body copy (vertical rhythm)</li>
+<li>The smallest heading must not smaller than the body copy</li>
+<li>The number of heading levels</li>
+<li>The maximum acceptable size of the top heading</li>
+</ul>
+
+<h2 id="optimization">Optimization</h2>
+
+<p>Design is a process exploring all the possible solutions (the design space) to
+find an optimal one, i.e. an <a href="http://en.wikipedia.org/wiki/Optimization_problem">optimization problem</a>.
+If we can express the problem in a mathematical form, we can solve it by
+computation.</p>
+
+<p>The constraints are already listed. The next thing is to express the objective
+function, which is the inconsistency of headings from each other. What is it?</p>
+
+<p>Short answer: the standard deviation of relative line height.</p>
+
+<p>Long answer: The line height of each heading is different, but the relative line
+height (line height divided by font size) of different headings can be the same,
+and when they are the same, the headings look consistent. To compare two numbers,
+you can just use the absolute value of the difference of the two numbers, but for
+a list of numbers, standard deviation is an effective measure for their inconsistency.</p>
+
+<p>The caculation is easy for a computer, and can be done with brute force. The
+program just needs to exhaustively tries each possible heading sizes that
+satisifies all the constraints and evaluates the inconsistency. Finally, it
+sorts all the solutions by the inconsistency and find the best solution.</p>
+
+<p>Here is the code (runable online):
+<a href="http://play.golang.org/p/rP09HJDUcz">a Go program to calculate optimal typographic scale</a>.</p>
+
+<h2 id="example">Example</h2>
+
+<p>In this site, I need to use maximum three levels of headings: H1, H2 &amp; H3. I
+choose 19px/30px as body copy. The search range for H3 is from 1.2*19px to
+1.5*19px, and the range for H3 is from 35 to 50.
+Finally the solution is:</p>
+
+<pre><code>Ratio: 1.3079
+H3: 23px/1.3
+H2: 30px/1.0
+H1: 39px/1.5
+</code></pre>
+
+<p>Though the line height of H2 is still not ideal, it is already the best solution
+given the restrictions by vertical rhythm.</p>
+
+<h2 id="conclusion">Conclusion</h2>
+
+<p>The approach can sccessfully find the optimal typographic scale under the
+precise problem definition in this article. It does not rely on any mysterious
+process or magic numbers, but only reasoning and computation.</p>
+
+                </div>
+            </article>
+        
+            <article class="frontpage">
+                <h1>
+                    <a href="http://h12.io/note/site-test/">A List of Website Testing Services</a>
+                    <span class="line"></span>
+                </h1>
+                <span class="time">3 July 2014</span>
+                <div class="article-body hyphenate">
+                    <ul>
+<li><a href="http://validator.w3.org/">The W3C Markup Validation Service</a></li>
+<li><a href="http://developers.google.com/speed/pagespeed/insights/">Google PageSpeed Insights</a></li>
+<li><a href="http://tools.pingdom.com/fpt/">Pingdom Website Speed Test</a></li>
+<li><a href="http://nibbler.silktide.com">Nibbler</a></li>
+<li><a href="http://www.browserstack.com/screenshots">BrowserStack</a></li>
+</ul>
+
+                </div>
+            </article>
+        
+            <article class="frontpage">
+                <h1>
                     <a href="http://h12.io/note/narrow-fonts/">A List of Narrow Fonts for Titles</a>
                     <span class="line"></span>
                 </h1>
@@ -95,325 +336,6 @@
 <li>Yanone Kaffeesatz</li>
 </ul>
 
-                </div>
-            </article>
-        
-            <article class="frontpage">
-                <h1>
-                    <a href="http://h12.io/note/font-links/">Links about Font Choosing</a>
-                    <span class="line"></span>
-                </h1>
-                <span class="time">22 June 2014</span>
-                <div class="article-body hyphenate">
-                    <ul>
-<li><a href="http://www.snapily.com/blog/the-best-font-styles-for-blogging/">The Best Font Styles for Blogging</a></li>
-<li><a href="http://www.bigbrandsystem.com/best-font-size/">Size Doesn’t Matter, and What Does</a></li>
-<li><a href="http://blog.mailchimp.com/using-media-queries-to-improve-readability/">Using Media Queries To Improve Readability</a></li>
-<li><a href="http://www.sitepoint.com/eight-definitive-font-stacks/">8 Definitive Web Font Stacks</a></li>
-</ul>
-
-                </div>
-            </article>
-        
-            <article class="frontpage">
-                <h1>
-                    <a href="http://h12.io/note/searchable-meta-data/">How to Make Web Pages Searchable by Meta Data?</a>
-                    <span class="line"></span>
-                </h1>
-                <span class="time">22 June 2014</span>
-                <div class="article-body hyphenate">
-                    <p><a href="https://developers.google.com/custom-search/docs/structured_data">Providing Structured Data</a></p>
-
-                </div>
-            </article>
-        
-            <article class="frontpage">
-                <h1>
-                    <a href="http://h12.io/note/htc-upgrade/">Upgrading 4.4.3 ROM for HTC One</a>
-                    <span class="line"></span>
-                </h1>
-                <span class="time">11 June 2014</span>
-                <div class="article-body hyphenate">
-                    <p><a href="http://htc-one.wonderhowto.com/how-to/update-your-rooted-google-play-edition-htc-one-4-4-3-without-losing-any-data-0155404/">Upgrade your rooted Google Play Edition</a></p>
-
-                </div>
-            </article>
-        
-            <article class="frontpage">
-                <h1>
-                    <a href="http://h12.io/note/disable-touchpad/">How to Disable the Touchpad in Linux?</a>
-                    <span class="line"></span>
-                </h1>
-                <span class="time">10 June 2014</span>
-                <div class="article-body hyphenate">
-                    <p>Have you ever been annoyed by accidentally touching the touchpad on your laptop
-when you are typing?</p>
-
-<p>I am using a Linux laptop with both trackpoint and touchpad so the touchpad is
-just an annoying redundant thing. Here is the one-liner to disable it:</p>
-
-<pre><code class="language-bash">xinput list | grep TouchPad | grep -Po 'id=\K([0-9]+)' | xargs xinput disable
-</code></pre>
-
-                </div>
-            </article>
-        
-            <article class="frontpage">
-                <h1>
-                    <a href="http://h12.io/project/getgo/">Getgo: a concurrent, simple and extensible web scraping framework</a>
-                    <span class="line"></span>
-                </h1>
-                <span class="time">2 June 2014</span>
-                <div class="article-body hyphenate">
-                    
-
-<p><a href="https://godoc.org/github.com/h12w/getgo"><img src="https://godoc.org/github.com/h12w/getgo?status.png" alt="GoDoc" /></a>
-<a href="https://travis-ci.org/h12w/getgo"><img src="https://travis-ci.org/h12w/getgo.svg?branch=master" alt="Build Status" /></a></p>
-
-<p>Getgo is a concurrent, simple and extensible web scraping framework written in <a href="http://golang.org">Go</a>.</p>
-
-<h2 id="quick-start">Quick start</h2>
-
-<h3 id="get-getgo">Get Getgo</h3>
-
-<pre><code class="language-bash">go get -u github.com/h12w/getgo
-</code></pre>
-
-<h3 id="define-a-task">Define a task</h3>
-
-<p>This example is under the examples/goblog directory. To use Getgo to scrap structured
-data from a web page, just define the structured data as a Go struct (golangBlogEntry),
-and define a corresponding task (golangBlogIndexTask).</p>
-
-<pre><code class="language-go">type golangBlogEntry struct {
-	Title string
-	URL   string
-	Tags  *string
-}
-
-type golangBlogIndexTask struct {
-	// Variables in task URL, e.g. page number
-}
-
-func (t golangBlogIndexTask) Request() *http.Request {
-	return getReq(`http://blog.golang.org/index`)
-}
-
-func (t golangBlogIndexTask) Handle(root *query.Node, s getgo.Storer) (err error) {
-	root.Div(_Id(&quot;content&quot;)).Children(_Class(&quot;blogtitle&quot;)).For(func(item *query.Node) {
-		title := item.Ahref().Text()
-		url := item.Ahref().Href()
-		tags := item.Span(_Class(&quot;tags&quot;)).Text()
-		if url != nil &amp;&amp; title != nil {
-			store(&amp;golangBlogEntry{Title: *title, URL: *url, Tags: tags}, s, &amp;err)
-		}
-	})
-	return
-}
-</code></pre>
-
-<h3 id="run-the-task">Run the task</h3>
-
-<p>Use util.Run to run the task and print all the result to standard output.</p>
-
-<pre><code class="language-go">	util.Run(golangBlogIndexTask{})
-</code></pre>
-
-<p>To store the parsed result to a database, a storage backend satisfying getgo.Tx
-interface should be provided to the getgo.Run method.</p>
-
-<h2 id="understand-getgo">Understand Getgo</h2>
-
-<p>A getgo.Task is an interface to represent an HTTP crawler task that provides an
-HTTP request and a method to handle the HTTP response.</p>
-
-<pre><code class="language-go">type Task interface {
-	Requester
-	Handle(resp *http.Response) error
-}
-
-type Requester interface {
-	Request() *http.Request
-}
-</code></pre>
-
-<p>A getgo.Runner is responsible to run a getgo.Task. There are two concrete runners
-provided: SequentialRunner and ConcurrentRunner.</p>
-
-<pre><code class="language-go">type Runner interface {
-	Run(task Task) error // Run runs a task
-	Close()              // Close closes the runner
-}
-</code></pre>
-
-<p>A task that stores data into a storage backend should satisfy getgo.StorableTask
-interface.</p>
-
-<pre><code class="language-go">type StorableTask interface {
-	Requester
-	Handle(resp *http.Response, s Storer) error
-}
-</code></pre>
-
-<p>A storage backend is simply an object satisfying getgo.Tx interface.</p>
-
-<pre><code class="language-go">type Storer interface {
-	Store(v interface{}) error
-}
-
-type Tx interface {
-	Storer
-	Commit() error
-	Rollback() error
-}
-</code></pre>
-
-<p>See getgo.Run method to understand how a StorableTask is combined with a storage
-backend and adapted to become a normal Task to allow a Runner to run it.</p>
-
-<p>There are currently a PostgreSQL storage backend provided by Getgo, and it is
-not hard to support more backends (See getgo/db package for details).</p>
-
-<p>The easier way to define a task for an HTML page is to define a task satisfying
-getgo.HTMLTask rather than getgo.Task, there are adapters to convert internally
-an HTMLTask to a Task so that a Runner can run an HTMLTask. The Handle method of
-HTMLTask provides an already parsed HTML DOM object (by html-query package).</p>
-
-<pre><code class="language-go">type HTMLTask interface {
-	Requester
-	Handle(root *query.Node, s Storer) error
-}
-</code></pre>
-
-<p>Similarly, a task for retrieving a JSON page should satisfy getgo.TextTask
-interface. An io.Reader is provided to be decoded by the encoding/json package.</p>
-
-<pre><code class="language-go">type TextTask interface {
-	Requester
-	Handle(r io.Reader, s Storer) error
-}
-</code></pre>
-
-                </div>
-            </article>
-        
-            <article class="frontpage">
-                <h1>
-                    <a href="http://h12.io/project/gspec/">GSpec: a productive Go test framework</a>
-                    <span class="line"></span>
-                </h1>
-                <span class="time">28 May 2014</span>
-                <div class="article-body hyphenate">
-                    <p><a href="https://app.wercker.com/project/bykey/d5ed30f0d03d4a5210f65659ead13888"><img src="https://app.wercker.com/status/d5ed30f0d03d4a5210f65659ead13888/s" alt="wercker status" title="wercker status" /></a>
-<a href="https://godoc.org/h12.io/gspec"><img src="https://godoc.org/h12.io/gspec?status.png" alt="GoDoc" /></a></p>
-
-<p>GSpec is an <em>expressive, reliable, concurrent and extensible</em> Go test framework
-that makes it productive to organize and verify the mind model of software.
-
-* <em>Expressive</em>: a complete runnable specification can be organized via both BDD
-                and table driven styles.
-* <em>Reliable</em>:   the implementation has minimal footprint and is tested with 100%
-                coverage.
-* <em>Concurrent</em>: test cases can be executed concurrently or sequentially.
-* <em>Extensible</em>: customizable BDD cue words, expectations and test reporters.
-* <em>Compatible</em>: &ldquo;go test&rdquo; is sufficient but not mandatory to run GSpec tests.</p>
-
-<h2 id="quick-start">Quick start</h2>
-
-<h3 id="get-gspec">Get GSpec</h3>
-
-<pre><code class="language-bash">go get -u -f h12.io/gspec
-go test h12.io/gspec/...
-</code></pre>
-
-<h3 id="write-tests-with-gspec">Write tests with GSpec</h3>
-
-<p>According to the <a href="http://golang.org/doc/code.html#Testing">convention of Go</a>,
-write GSpec tests in file xxx_test.go to test code in xxx.go.</p>
-
-<pre><code class="language-go">import (
-	&quot;fmt&quot;
-
-	&quot;h12.io/gspec&quot;
-)
-
-// Only one suite.Add is needed for each xxx_test.go file.
-var _ = gspec.Add(func(s gspec.S) {
-	// BDD cue word is customizible.
-	describe, given, when, it := s.Alias(&quot;describe&quot;), s.Alias(&quot;given&quot;), s.Alias(&quot;when&quot;), s.Alias(&quot;it&quot;)
-	// expectation cue word is customizible too.
-	expect := gspec.Alias(s.FailNow)
-
-	// A BDD example.
-	describe(&quot;an integer i&quot;, func() {
-		// setup
-		i := 2
-		defer func() {
-			// teardown (if any)
-		}()
-		given(&quot;another integer j&quot;, func() {
-			j := 3
-			when(&quot;j is added to i&quot;, func() {
-				i += j
-				it(&quot;should become the sum of original i and j&quot;, func() {
-					expect(i).Equal(5) // a passing case
-				})
-			})
-			when(&quot;j is minused from i&quot;, func() {
-				i -= j
-				it(&quot;should become the difference of j minus i&quot;, func() {
-					expect(i).Equal(4) // a failing case
-				})
-			})
-			when(&quot;j is multiplied to i&quot;, nil) // a pending case
-		})
-	})
-
-	// A table-driven example.
-	testcase := s.Alias(&quot;testcase&quot;)
-	describe(&quot;integer summation&quot;, func() {
-		for _, c := range []struct{ i, j, sum int }{
-			{1, 2, 3}, // a passing case
-			{1, 1, 0}, // a failing case
-		} {
-			testcase(fmt.Sprintf(`%d + %d = %d`, c.i, c.j, c.sum), func() {
-				expect(c.i + c.j).Equal(c.sum)
-			})
-		}
-	})
-})
-</code></pre>
-
-<p>Write the following go test function for only once in any test file within the
-package (e.g. all_test.go).</p>
-
-<pre><code class="language-go">import (
-	&quot;testing&quot;
-	&quot;h12.io/gspec&quot;
-)
-
-// Defined only once within a package.
-func TestAll(t *testing.T) {
-	gspec.Test(t)
-}
-</code></pre>
-
-<h3 id="run-tests-with-go-test">Run tests with &ldquo;go test&rdquo;</h3>
-
-<p>Run all the tests concurrently (sequencially by default) and display errors.</p>
-
-<pre><code class="language-bash">go test -concurrent
-</code></pre>
-
-<p>Run all the tests and view the complete specification.</p>
-
-<pre><code class="language-bash">go test -v
-</code></pre>
-
-<p>Run only a failing test case (even it is an entry in the driven table):</p>
-
-<pre><code class="language-bash">go test -focus 1/1
-</code></pre>
                 </div>
             </article>
         

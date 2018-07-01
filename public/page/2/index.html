@@ -75,6 +75,20 @@
         
             <article class="frontpage">
                 <h1>
+                    <a href="http://h12.io/note/download-website/">A Single Command to Download a Website</a>
+                    <span class="line"></span>
+                </h1>
+                <span class="time">9 April 2017</span>
+                <div class="article-body hyphenate">
+                    <pre><code class="language-bash">wget --recursive --level=2 --no-parent --no-clobber --convert-links --continue
+[URL]
+</code></pre>
+
+                </div>
+            </article>
+        
+            <article class="frontpage">
+                <h1>
                     <a href="http://h12.io/note/ubuntu-remove-old-kernels/">How to Remove Old Kernels in Ubuntu</a>
                     <span class="line"></span>
                 </h1>
@@ -197,57 +211,99 @@ cut -c9- &gt; words_desc.txt
         
             <article class="frontpage">
                 <h1>
-                    <a href="http://h12.io/note/manager-faq/">A Manager&#39;s FAQ</a>
+                    <a href="http://h12.io/project/ua/">ua: UA parser in Go</a>
                     <span class="line"></span>
                 </h1>
-                <span class="time">3 July 2016</span>
+                <span class="time">18 July 2016</span>
                 <div class="article-body hyphenate">
-                    <p>This is an <a href="https://readthink.com/a-managers-faq-35858a229f84#.7a4wlb9qy">insightful list</a>
-from <a href="Henry Ward">Henry Ward</a>:</p>
+                    
+
+<h2 id="design">Design</h2>
+
+<p>The UA detection algorithm is a pipeline containing 3 steps:</p>
+
+<ol>
+<li>Scan: scan products and its corresponding comments from a UA string.</li>
+<li>Parse: parse device info from products.</li>
+<li>Detect: detect device model by looking up in a database and get related info, e.g. screen resolution.</li>
+</ol>
+
+<h3 id="scan">Scan</h3>
+
+<p>The scanner scans the user agent string into products. Each product has its own name, version and comments. e.g.</p>
+
+<p>For user agent string:</p>
+
+<pre><code>Mozilla/5.0 (Linux; U; Android ROM v3; en-us; ALCATEL ONE TOUCH 991 Build/GRK39F) AppleWebKit/533.1 (KHTML, like Gecko) Version/4.0 Mobile Safari/533.1
+</code></pre>
+
+<p>Its products are:</p>
 
 <ul>
-<li><strong>How do I get employees to perform better?</strong> Tell them what they are doing well.</li>
-<li><strong>How do I give negative feedback?</strong> By being curious.</li>
-<li><strong>How do I decide what to delegate?</strong> Delegate the work you want to do.</li>
-<li><strong>How should I prioritize?</strong> Fix problems. Then prevent problems.</li>
-<li><strong>How should I grade employees?</strong> Don’t. Teach them to self-evaluate.</li>
-<li><strong>When do I fire somebody?</strong> When you know they can’t succeed.</li>
-<li><strong>How do I fire somebody?</strong> By apologizing for our failures.</li>
-<li><strong>Why can’t I just tell people what to do?</strong> Because the more responsibility you have, the less authority you have.</li>
-<li><strong>How do I know if I am a good manager?</strong> Employees ask you for advice.</li>
-<li><strong>How do I know if I have good management team?</strong> Shit rolls uphill.</li>
+<li>Mozilla/5.0
+
+<ul>
+<li>Linux</li>
+<li>U</li>
+<li>Android ROM v3</li>
+<li>en-us</li>
+<li>ALCATEL ONE TOUCH 991 Build/GRK39F</li>
+</ul></li>
+<li>AppleWebKit/533.1
+
+<ul>
+<li>KHTML, like Gecko</li>
+</ul></li>
+<li>Version/4.0</li>
+<li>Mobile</li>
+<li>Safari/533.1</li>
 </ul>
 
-                </div>
-            </article>
-        
-            <article class="frontpage">
-                <h1>
-                    <a href="http://h12.io/note/on-reliable-persistence/">On Reliable Persistence</a>
-                    <span class="line"></span>
-                </h1>
-                <span class="time">2 July 2016</span>
-                <div class="article-body hyphenate">
-                    <p>A short investigation on reliable persistence:</p>
+<h3 id="parse">Parse</h3>
+
+<p>The parser then parses the scanned products and fill the information into a Device struct, e.g.</p>
+
+<pre><code>Mozilla:  5.0
+Linux:    true
+Security: U
+Android:  ROM v3
+Locale:   en-us
+Model:    ALCATEL ONE TOUCH 991
+Build:    GRK39F
+Webkit:   533.1
+Version:  4.0
+Mobile:   true
+Safari:   533.1
+</code></pre>
+
+<h3 id="detect">Detect</h3>
+
+<p>The detector is then able to use the parsed Device structure to detect the device type &amp; related info: vendor, screen resolution, tablet-or-not, etc, by searching in a device database.</p>
+
+<h2 id="design-goals">Design Goals</h2>
+
+<h3 id="accuracy">Accuracy</h3>
+
+<p>The accuracy of the detection is determined by the completeness of the device database, then we might have to migrate the data from multiple sources. Automatic tests will be adapted from those resources.</p>
+
+<h2 id="references">References</h2>
+
+<h3 id="detectors">Detectors</h3>
 
 <ul>
-<li><p>Crash consistency is <a href="http://danluu.com/file-consistency/">hard</a> but
-<a href="https://www.flamingspork.com/talks/">possible</a> at a huge performance
-<a href="https://www.google.com/#q=fsync+performance">cost</a></p></li>
+<li><a href="wurfl.sourceforge.net">WURFL</a></li>
+<li><a href="http://www.handsetdetection.com">HandsetDetection</a></li>
+<li><a href="https://devicemap.apache.org">DeviceMap</a></li>
+<li><a href="https://github.com/serbanghita/Mobile-Detect">Mobile-Detect</a></li>
+<li><a href="https://github.com/piwik/device-detector">Device-Detector</a></li>
+<li><a href="https://github.com/dmolsen/Detector">Detector</a>.</li>
+</ul>
 
-<li><p>Data safty must rely on distributed solution</p>
-
-<ul>
-<li><a href="https://raft.github.io">Raft</a></li>
-</ul></li>
-
-<li><p>Perhaps we should just give up manual fsync and rely on</p>
+<h3 id="parsers">Parsers</h3>
 
 <ul>
-<li>OS background flush</li>
-<li>corruption detection &amp; correction at startup</li>
-<li><a href="https://kafka.apache.org/08/ops.html">replication</a></li>
-</ul></li>
+<li><a href="https://github.com/mssola/user_agent">user agent</a></li>
+<li><a href="https://github.com/varstr/uaparser">uaparser</a></li>
 </ul>
 
                 </div>

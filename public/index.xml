@@ -143,6 +143,17 @@ However, there is an algorithm that can keep the pagination as stable as possibl
     </item>
     
     <item>
+      <title>buid: Bipartite Unique Identifier</title>
+      <link>http://h12.io/project/buid/</link>
+      <pubDate>Wed, 15 Nov 2017 20:00:00 +0800</pubDate>
+      
+      <guid>http://h12.io/project/buid/</guid>
+      <description>A BUID is a 128-bit unique ID composed of two 64-bit parts: shard and key.
+It is not only a unique ID, but also contains the sharding information, so that the messages with the same BUID could be stored together within the same DB shard.
+Also, when a message is stored in a shard, the shard part of the BUID can be trimmed off to save the space, and only the key part needs to be stored as the primary key.</description>
+    </item>
+    
+    <item>
       <title>How to Measure Response Time with Curl</title>
       <link>http://h12.io/note/measure-response-time-with-curl/</link>
       <pubDate>Tue, 20 Jun 2017 12:40:10 +0800</pubDate>
@@ -227,6 +238,17 @@ Set Jira Administration -&amp;gt; System -&amp;gt; Announcement Banner -&amp;gt;
     </item>
     
     <item>
+      <title>ua: UA parser in Go</title>
+      <link>http://h12.io/project/ua/</link>
+      <pubDate>Mon, 18 Jul 2016 06:00:00 +0800</pubDate>
+      
+      <guid>http://h12.io/project/ua/</guid>
+      <description>Design The UA detection algorithm is a pipeline containing 3 steps:
+ Scan: scan products and its corresponding comments from a UA string. Parse: parse device info from products. Detect: detect device model by looking up in a database and get related info, e.g. screen resolution.  Scan The scanner scans the user agent string into products. Each product has its own name, version and comments. e.g.
+For user agent string:</description>
+    </item>
+    
+    <item>
       <title>A Manager&#39;s FAQ</title>
       <link>http://h12.io/note/manager-faq/</link>
       <pubDate>Sun, 03 Jul 2016 21:16:34 +0800</pubDate>
@@ -294,6 +316,16 @@ passwd exit  For public key authentication, add the public key:</description>
     </item>
     
     <item>
+      <title>SEJ: Segmented Journals</title>
+      <link>http://h12.io/project/sej/</link>
+      <pubDate>Sat, 14 Nov 2015 15:00:00 +0800</pubDate>
+      
+      <guid>http://h12.io/project/sej/</guid>
+      <description>h12.io/sej provides composable components of distributed, persisted message queue and allows trading off between reliablilty, latency and throughput with minimal devops overhead.
+Package Organization  h12.io/sej: writer, scanner and offset  shard: sharding hub: copying across machines cmd/sej: command line tool   SEJ Directory [root-dir]/ [sej-dir]/ jnl.lck jnl/ 0000000000000000.jnl 000000001f9e521e.jnl ...... ofs/ reader1.ofs reader1.lck reader2.ofs reader2.lck ......  Journal File format segment_file = { message } . message = offset timestamp type key value size .</description>
+    </item>
+    
+    <item>
       <title>RealTest: real test environment for Go</title>
       <link>http://h12.io/project/realtest/</link>
       <pubDate>Sat, 14 Nov 2015 13:57:09 +0800</pubDate>
@@ -303,6 +335,16 @@ passwd exit  For public key authentication, add the public key:</description>
 Includes:
  Queue  Kafka cluster (with zookeeper)  Database:  MySQL MongoDB  Cache  Redis  Configuration service  ZooKeeper   Author Hǎiliàng Wáng
 Contributors  Tao Huang  </description>
+    </item>
+    
+    <item>
+      <title>JSON Schema parser &amp; code generator</title>
+      <link>http://h12.io/project/json-schema/</link>
+      <pubDate>Wed, 04 Nov 2015 19:00:00 +0800</pubDate>
+      
+      <guid>http://h12.io/project/json-schema/</guid>
+      <description>json-schema generates Go struct from a JSON Schema specification.
+Decimal types are supported for accurate currency calculation.</description>
     </item>
     
     <item>
@@ -388,6 +430,16 @@ Workaround: this is the standard behavior, C++ with RAII also has the same probl
  convert images to PDF
 sudo apt-get install imagemagick convert *.jpg pictures.pdf  convert between different formats:
 sudo apt-get install calibre ebook-convert xxx.mobi xxx.txt --unsmarten-punctuation   </description>
+    </item>
+    
+    <item>
+      <title>Schemata: database scheme extractor &amp; code generator in Go</title>
+      <link>http://h12.io/project/schemata/</link>
+      <pubDate>Tue, 19 May 2015 18:00:00 +0800</pubDate>
+      
+      <guid>http://h12.io/project/schemata/</guid>
+      <description>Database scheme extractor &amp;amp; code generator in Go. Supported database:
+ MySQL SQLite  </description>
     </item>
     
     <item>
@@ -481,6 +533,17 @@ Then I searched for the error source and it turned out that I should deleted ana
       <guid>http://h12.io/note/new-domain-h12/</guid>
       <description>This year, I decided not to renewal the previous domain name (hailiang.ws) last year, but to register a shorter one. There are two reasons:
  Both the site URL and the email address will be cleaner. A more friendly Go import path will be possible for my repositories on Github.  After comparing various choices on major domain providers, I chose h12.io as the new domain. It is the shortest but still meaningful domain that I can afford.</description>
+    </item>
+    
+    <item>
+      <title>Gombi: Creating Your Own Parser is Easier than Regular Expressions</title>
+      <link>http://h12.io/project/gombi/</link>
+      <pubDate>Thu, 07 Aug 2014 00:00:00 +0800</pubDate>
+      
+      <guid>http://h12.io/project/gombi/</guid>
+      <description>Gombi is a combinator-style scanner &amp;amp; parser library written in Go. It is practical, reasonably fast and extremely easy to use.
+Quick start go get -u h12.io/gombi  Design Combinator parsers are straightforward to construct, modular and easily maintainable, compared to parser generators like Lex/Yacc.
+ Internal DSL  no additional code generation and compilation.  Composable  a subset of the syntax tree is also a parser. a language can be easily embedded into another one.</description>
     </item>
     
     <item>
@@ -701,6 +764,15 @@ r := get(`http://blog.golang.org/index`) defer r.Close() root, err := query.Pars
       <guid>http://h12.io/project/cwrap/</guid>
       <description>Cwrap is a Go wrapper generator for C libraries.
 Features  No Cgo types exposed out of the wrapper package, and uses as less allocation/copy as possible. C name prefix mapped to Go packages, and a wrapper package can import another wrapper package. Follows Go naming conventions. C union. Use Go language features when possible:  string and bool. Multiple return values. Slice, slice of slice and slice of string.</description>
+    </item>
+    
+    <item>
+      <title>xsd: XML tagged struct generator for Go</title>
+      <link>http://h12.io/project/xsd/</link>
+      <pubDate>Wed, 01 Jan 2014 00:00:00 +0800</pubDate>
+      
+      <guid>http://h12.io/project/xsd/</guid>
+      <description>xsd is a Go package that generates tagged struct from XML Schema (xsd). When only the XML file is available, an xsd file can be automatically generated by a XML Schema learner, such as &amp;ldquo;github.com/kore/XML-Schema-learner&amp;rdquo;.</description>
     </item>
     
     <item>

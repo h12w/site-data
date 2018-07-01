@@ -75,6 +75,845 @@
         
             <article class="frontpage">
                 <h1>
+                    <a href="http://h12.io/note/parser-combinator-links/">Learning Resources on Parser Combinator</a>
+                    <span class="line"></span>
+                </h1>
+                <span class="time">4 August 2014</span>
+                <div class="article-body hyphenate">
+                    <ul>
+<li><a href="http://eprints.nottingham.ac.uk/237/"><em>Monadic Parser Combinators</em></a></li>
+<li><a href="http://legacy.cs.uu.nl/daan/pubs.html#parsec"><em>Parsec: Direct Style Monadic Parser Combinators for the Real World</em></a></li>
+<li><a href="http://www.cs.tufts.edu/~nr/cs257/archive/doaitse-swierstra/combinator-parsing-tutorial.pdf"><em>Combinator Parsing: A Short Tutorial</em></a></li>
+</ul>
+
+                </div>
+            </article>
+        
+            <article class="frontpage">
+                <h1>
+                    <a href="http://h12.io/note/hyphen-res/">Resources on Offline Hyphenation</a>
+                    <span class="line"></span>
+                </h1>
+                <span class="time">30 July 2014</span>
+                <div class="article-body hyphenate">
+                    <p><a href="http://caniuse.com/css-hyphens">CSS hyphenation</a> is supported by latest version
+of Firefox, Safari &amp; IE. However, Chrome does not support it. Though
+<a href="https://code.google.com/p/hyphenator/">Hyphenator.js</a> can solve this problem,
+it runs in the browser and affects the rendering speed of above-the-fold content.
+So there is only one option left: soft hyphen (<code>U+00AD</code>, <code>&amp;shy;</code>).</p>
+
+<p>Here is a list of resources that leads to its implementation:</p>
+
+<ul>
+<li>An <a href="https://code.google.com/p/hyphenator/wiki/en_CSS3Hyphenation">article</a> about CSS3 hyphenation by Hyphenator.js</li>
+<li><a href="http://hunspell.sourceforge.net/">Hunspell</a>: the spell checker &amp; hyphenator
+used by LibreOffice</li>
+<li><a href="http://extensions.libreoffice.org/extension-center/american-british-canadian-spelling-hyphen-thesaurus-dictionaries">English Dictionary</a> of LibreOffice</li>
+<li><a href="https://github.com/Kozea/Pyphen">Pyphen</a>: A Python hyphenator using Hunspell
+dictionary file</li>
+<li>A test <a href="http://clagnut.com/sandbox/softhyphen/">page</a> for soft hyphen</li>
+</ul>
+
+                </div>
+            </article>
+        
+            <article class="frontpage">
+                <h1>
+                    <a href="http://h12.io/article/learn-haskell/">Learning Haskell the Hard Way</a>
+                    <span class="line"></span>
+                </h1>
+                <span class="time">26 July 2014</span>
+                <div class="article-body hyphenate">
+                    
+
+<p>When I was reading the <a href="http://www.haskell.org/haskellwiki/Learning_Haskell">collection</a> of learning resources on Haskell and tried to find a good start, I quickly realized that
+none of the books or tutorials are suitable for me: the easier a tutorial claims
+to be, the harder to really understand Haskell by reading it. What I need is a
+terse documentation that introduces the syntax and semantics of Haskell
+systematically and clearly, but unfortunately none was found.</p>
+
+<p>I know I have to try the hard way: reading the
+<a href="http://www.haskell.org/haskellwiki/Language_and_library_specification">Haskell language specification</a>
+directly and absorb it myself. To make the process less dull and record my
+progress, I will write down my learning notes here incrementally.</p>
+
+<h2 id="overview">Overview</h2>
+
+<p>A Haskell program is organized with four levels: <em>modules</em>, <em>declarations</em>,
+<em>expressions</em> &amp; <em>lexical structures</em>, but the specification is organized in the
+reverse order.</p>
+
+<p>Haskell has <em>ad hoc</em> polymorphism (<em>overloading</em>) and <em>parametric</em> polymorphism
+(Hindley-Milner type structure).</p>
+
+<p>Haskell has six namespaces:</p>
+
+<ul>
+<li>for value
+
+<ul>
+<li>variable</li>
+<li>constructor</li>
+</ul></li>
+<li>for type entity
+
+<ul>
+<li>type variable</li>
+<li>type constructor</li>
+<li>type class</li>
+</ul></li>
+<li>module</li>
+</ul>
+
+<p>The same name can be reused without conflicts as long as they are in different
+namespaces.</p>
+
+<h2 id="lexical-structure">Lexical Structure</h2>
+
+<p>A Haskell program is composed of lexemes (tokens) and whitespaces.</p>
+
+<pre><code>program → { lexeme | whitespace } 
+</code></pre>
+
+<p>Whitespace includes:</p>
+
+<ul>
+<li>The complete set of whitespace in both ASCII &amp; Unicode</li>
+<li>Two kinds of comments
+
+<ul>
+<li>inline comment starts with <code>--</code></li>
+<li>nested comment wrapped by <code>{- -}</code></li>
+</ul></li>
+</ul>
+
+<p>A lexeme is one of the following:</p>
+
+<ul>
+<li>identifier
+
+<ul>
+<li>qvarid: (qualified) variable identifier</li>
+<li>qconid: (qualified) constructor identifier</li>
+<li>reservedid: reserved identifier</li>
+</ul></li>
+<li>operator
+
+<ul>
+<li>qvarsym: (qualified) variable (symbolic) operator</li>
+<li>qconsym: (qualified) constructor (symbolic) operator</li>
+<li>reservedop: reserved operator</li>
+</ul></li>
+<li>literal: integer, float, character or string literal</li>
+<li>special: one of special symbols <code>()[]{}`,;</code></li>
+</ul>
+
+<p>A variable and a constructor is distinguished by the first character and put into
+different namespaces:</p>
+
+<ul>
+<li>identifier
+
+<ul>
+<li>variable: lower case (including underscore)</li>
+<li>constructor: upper case</li>
+</ul></li>
+<li>operator
+
+<ul>
+<li>variable: non-colon</li>
+<li>constructor: colon <code>:</code></li>
+</ul></li>
+</ul>
+
+<p>A variable or constructor can contain symbol <code>'</code>, so the common mathematical
+term &ldquo;x prime&rdquo; can be represented as <code>x'</code>.</p>
+
+<p>By using layout rule (indentation), symbols <code>{};</code> can be omitted in sereral
+grammer productions.</p>
+
+<h2 id="expressions">Expressions</h2>
+
+<h3 id="parentheses">Parentheses</h3>
+
+<p><code>(exp)</code> is a <em>parenthesized expression</em>, and is equivalent to <code>exp</code>.</p>
+
+<h3 id="function-operator-application">Function &amp; operator application</h3>
+
+<p>Function is prefixed and curried, so <code>f x y</code> means <code>(f x) y</code>.</p>
+
+<pre><code>fexp    → [fexp] aexp
+</code></pre>
+
+<p>All operators are infixed except prefix negation <code>-</code>.</p>
+
+<pre><code>infixexp→ lexp qop infixexp
+        | - infixexp    (prefix negation)
+        | lexp
+qop     → qvarop | qconop
+</code></pre>
+
+<p>An operator can be converted to prefix notation by parentheses. e.g.</p>
+
+<pre><code>(+) x y
+</code></pre>
+
+<p>Reversely, a function identifier (either variable or constructor) can be
+converted to an infix operator by backquotes.</p>
+
+<pre><code>x `op` y
+</code></pre>
+
+<h3 id="list-tuple">List &amp; Tuple</h3>
+
+<p>List is constructed with <code>:</code>.</p>
+
+<pre><code>1:2:3:[]   or   (:) 1 ((:) 2 ((:) 3 []))
+</code></pre>
+
+<p><em>Arithmetic sequence</em> is another way to construct a list.</p>
+
+<pre><code>[1,3..6] == [1,3,5]
+  [1..6] == [1,2,3,4,5,6]
+</code></pre>
+
+<p>Tuple is constructed with <code>(,...,)</code>.</p>
+
+<pre><code>(1, 2, &quot;a&quot;)   or   (,,) 1 2 &quot;a&quot;
+</code></pre>
+
+<h3 id="field-label">Field label</h3>
+
+<p>A field label is used to give a name to a field in a datatype. It can be used to
+construct, extract and update the field.</p>
+
+<p>A constructor with labeled fields:</p>
+
+<pre><code>aexp    → qcon { fbind1 , … , fbindn }  (n ≥ 0)
+fbind   → qvar = exp 
+</code></pre>
+
+<h3 id="pattern-matching">Pattern matching</h3>
+
+<p>A pattern itself is not an expression, but it is an important part of sereral
+expressions, including: <em>lambda abstractions</em>, <em>function definitions</em>,
+<em>let expressions</em>, <em>list comprehensions</em>, <em>do expressions</em> and <em>case expressions</em>.</p>
+
+<p>Pattern matching is used to deconstruct values according to their type
+specification. It proceeds from left to right, and outside to inside. Attempting
+to match a pattern can have one of three results:</p>
+
+<ul>
+<li>Fail</li>
+<li>Succeed: returning a binding for each variable in the pattern</li>
+<li>Diverge: i.e. return ⊥</li>
+</ul>
+
+<p>The syntax for patterns covers a subset of expressions.</p>
+
+<p>A pattern can match against infix expressions, but limited to infix constructors
+(the operator must be <code>qconop</code>).</p>
+
+<pre><code>pat     → lpat qconop pat (infix constructor)
+</code></pre>
+
+<p>A pattern can match against constructor functions (with or without field labels).</p>
+
+<pre><code>pat     → ...
+        | lpat
+
+lpat    → apat
+        | gcon apat1 … apatk    (arity gcon  =  k, k ≥ 1) 
+
+apat    → ...
+        | gcon  (arity gcon  =  0)
+        | qcon { fpat1 , … , fpatk }    (labeled pattern, k ≥ 0)
+
+fpat    → qvar = pat 
+</code></pre>
+
+<p>A pattern can match against a variable, a literal, a parenthesized expression,
+a tuple or a list.</p>
+
+<pre><code>lpat    → var ...
+        | - (integer | float)   (negative literal) 
+
+apat    → ...
+        | literal
+        | ( pat )               (parenthesized pattern)
+        | ( pat1 , … , patk )   (tuple pattern, k ≥ 2)
+        | [ pat1 , … , patk ]   (list pattern, k ≥ 1)
+</code></pre>
+
+<p>The variables defined within the pattern can be binded, but how to name and bind
+the whole pattern? This is exactly what an <em>as pattern</em> does (<code>var</code> before <code>@</code>
+is the name for the whole pattern).</p>
+
+<pre><code>apat    → var [ @ apat] (as pattern) 
+</code></pre>
+
+<p>Wildcard is used when you need a variable placeholder but do not want to bind
+the value to a name.</p>
+
+<pre><code>apat    → ...
+        | _     (wildcard)
+</code></pre>
+
+<p>Sometimes you need a pattern that can never fail (only succeed or diverge), it
+is called a irrefutable pattern.</p>
+
+<pre><code>apat    → ...
+        | ~ apat        (irrefutable pattern)
+</code></pre>
+
+<p>Besides <code>~apat</code>, these patterns are also irrefutable: a variable, a wildcard,
+<code>N apat</code> where N is a constructor defined by newtype and apat is irrefutable,
+<code>var@apat</code> where apat is irrefutable. All other patterns are refutable.</p>
+
+<h3 id="case-expression">Case expression</h3>
+
+<p>Case expression is very important because all other pattern matching expressions
+ultimately translate into case expressions.</p>
+
+<p>A case expression has one or more alternatives.</p>
+
+<pre><code>lexp    → case exp of { alts }
+alts    → alt1 ; … ; altn       (n ≥ 1) 
+</code></pre>
+
+<p>An alternative is either a pattern or empty. The pattern either coresponds to
+an expression (body) directly, or has one or more guarded patterns (note an
+optional gdpat appears at the right side of itself). A guarded pattern starts
+with <code>|</code> and is composed of one or more guards.</p>
+
+<pre><code>alt     → pat -&gt; exp [where decls]
+        | pat  gdpat [where decls]
+        | (empty alternative) 
+gdpat   → guards -&gt; exp [ gdpat ]
+guards  → | guard1, …, guardn   (n ≥ 1)
+decls   → { decl1 ; … ; decln } (n ≥ 0) 
+</code></pre>
+
+<p>Note that each alternative can optionally have a <code>where</code> declaration. It is used
+to bind extra variables to be used in the local scope.</p>
+
+<p>There are two types of guards: <em>pattern guard</em> &amp; <em>boolean guard</em>, and local
+declarations can also be introduced together with guards.</p>
+
+<pre><code>guard   → pat &lt;- infixexp     (pattern guard)
+        | let decls           (local declaration)
+        | infixexp            (boolean guard)
+</code></pre>
+
+<p>This is how a case expression works:</p>
+
+<ol>
+<li>The expression after <code>case</code> is matched against each alternative till a match
+is found.</li>
+<li>Then each guarded pattern in the matched alterantive is tested till one
+passes. A guarded pattern passes if and only if all of its guards pass.</li>
+<li>If successful, the conresponding expression is returned, otherwise, the next
+guarded pattern or alternative is tried sequentially.</li>
+<li>If no match can be found, the result is ⊥.</li>
+</ol>
+
+<h3 id="lambda-expression">Lambda expression</h3>
+
+<p>Lambda is used to construct a function without a name. Besides a variable, the
+input can also be any pattern.</p>
+
+<pre><code>lexp    → \ apat1 … apatn -&gt; exp        (n ≥ 1)
+</code></pre>
+
+<p>An example:</p>
+
+<pre><code>(\ (x, y) -&gt; x+y) (3, 7)
+</code></pre>
+
+<p>Also note that lambda <code>-&gt;</code> associates to the right, e.g.</p>
+
+<pre><code>Integer -&gt;  Integer -&gt; Integer
+    is equivalent to
+Integer -&gt; (Integer -&gt; Integer)
+</code></pre>
+
+<h3 id="let-expression">Let expression</h3>
+
+<p>A let expression introduces a nested, lexically-scoped, mutually-recursive list
+of declarations. <code>exp</code> after keyword <code>in</code> is the value of a let expression.</p>
+
+<pre><code>lexp    → let decls in exp
+decls   → { decl1 ; … ; decln } (n ≥ 0) 
+</code></pre>
+
+<p>Some examples:</p>
+
+<pre><code>let {} in 42
+let {(x,y) = (1,2)} in x+y
+</code></pre>
+
+<h3 id="list-comprehension">List comprehension</h3>
+
+<p>A list comprehension constructs a list of elements represented by <code>exp</code> qualified
+by one or more qualifiers.</p>
+
+<pre><code>aexp    → [ exp | qual1 , … , qualn ]   (n ≥ 1)
+</code></pre>
+
+<p>There are three kinds of qualifiers.</p>
+
+<p>A generator is composed of a pattern (<code>pat</code> with type <code>t</code>) and a list (<code>e</code> with
+type <code>[t]</code>). The pattern is matched against and binded to each element of the
+list one by one, so the binded variables can be used to generate each element of
+the result list. The generators are evaluated in a nested, depth-first order,
+and a failed match is just skipped over.</p>
+
+<pre><code>qual    → pat &lt;- e      (generator)
+</code></pre>
+
+<p>A qualifier can also be a local declaration to bind auxiliary variables, or a
+boolean guard to exclude some elements from the list.</p>
+
+<pre><code>qual    → ...
+        | let decls     (local declaration)
+        | exp           (boolean guard) 
+</code></pre>
+
+<h3 id="do-expression">Do expression</h3>
+
+<p><em>Wait till monad is fully understood.</em></p>
+
+<h3 id="type-signature">Type signature</h3>
+
+<p>Haskell has type inference, but an expression can be optionally specified with a
+<em>type signature</em>.</p>
+
+<pre><code>exp     → infixexp :: [context =&gt;] type
+</code></pre>
+
+<h2 id="declarations">Declarations</h2>
+
+<p>There are top declarations (<code>topdecl</code>) that are only allowed at the top level of
+a module, and nested declarations (<code>decl</code>) that may be used either at the top
+level or in nested scopes.</p>
+
+<pre><code>topdecl → ...
+        | ...
+        | decl 
+</code></pre>
+
+<h3 id="top-declarations">Top declarations</h3>
+
+<p>A top declaration starts with one of the keywords: <code>data</code>, <code>type</code>, <code>newtype</code>,
+<code>class</code>, <code>instance</code>, <code>default</code> and <code>foreign</code>.</p>
+
+<p><code>data</code>, <code>type</code> and <code>newtype</code> is for declaring new types. <code>class</code> is for
+declaring typeclasses and <code>instance</code> is for declaring the membership between
+types and typeclasses.</p>
+
+<p>They are explained later one by one.</p>
+
+<h3 id="nested-declarations">Nested declarations</h3>
+
+<p>In the last section, <code>decl</code> appears in the let expression and where clause
+without any explanations. Actually, they are nested declarations.</p>
+
+<p>There are five kinds of nested declarations: <em>type signature</em>, <em>fixity</em>,
+<em>function binding</em>, <em>pattern binding</em> and <em>empty</em> declartions.</p>
+
+<p>A <em>type signature</em> simply specifies types for variables.</p>
+
+<pre><code>decl    → gendecl
+        | ...
+gendecl → vars :: [context =&gt;] type
+vars    → var1 , …, varn        (n ≥ 1)
+</code></pre>
+
+<p>A <em>fixity</em> declaration gives the fixity and binding precedence of one or more
+operators.</p>
+
+<pre><code>gendecl → ...
+        | fixity [integer] ops
+fixity  → infixl | infixr | infix
+ops     → op1 , … , opn         (n ≥ 1)
+op      → varop | conop 
+</code></pre>
+
+<p>The right hand side (<code>rhs</code>) of function and pattern bindings are the same.</p>
+
+<pre><code>decl    → ...
+        | (funlhs | pat) rhs
+</code></pre>
+
+<p>The syntax of <code>rhs</code> is almost the same as <em>case expression</em>, except <code>-&gt;</code> is
+replaced by <code>=</code>.</p>
+
+<pre><code>rhs     → = exp [where decls]
+        | gdrhs [where decls]
+gdrhs   → guards = exp [gdrhs]
+</code></pre>
+
+<p>A function can be binded in multiple function binding declarations, as long as
+they are contiguous and the number of patterns is the same. In each of the
+declaration, the left hand side supports three alternative syntaxes.</p>
+
+<pre><code>funlhs  → var apat { apat }
+        | pat varop pat
+        | ( funlhs ) apat { apat }
+</code></pre>
+
+<p>And an example:</p>
+
+<pre><code>plus x y z = x+y+z
+x ‘plus‘ y = \ z -&gt; x+y+z
+(x ‘plus‘ y) z = x+y+z
+</code></pre>
+
+<h3 id="type">Type</h3>
+
+<p>Just as an <em>expression</em> may contain variables and denotes a value, a
+<em>type expression</em> may contain <em>type variables</em> and denotes a type value (but it
+is evaluated at compile time, unlike an expression evaluated at run time).</p>
+
+<p>Type expressions are designed to have similar representations as their
+corresponding expressions.</p>
+
+<p>Function type can be represented in infix or prefix notation.
+Like function application, <em>type application</em> (<code>btype</code>) is also prefixed and
+curried. <code>atype</code> is the type expression excluding infix function type and
+type application.</p>
+
+<pre><code>type    → btype [-&gt; type]       (function type)
+btype   → [btype] atype         (type application)
+atype   → gtycon
+        | ...
+gtycon  → ...
+        | (-&gt;)  (function constructor)
+</code></pre>
+
+<p>A <em>type variable</em> is an identifier beginning with a lowercase letter.
+A <em>parenthesized type</em> <code>(t)</code> is identical to the type <code>t</code>.
+A <em>type constructor</em> (type template) as an identifier begins with an uppercase
+letter.
+Besides function type, the syntaxes for tuple and list are also special syntaxes.</p>
+
+<pre><code>atype   → gtycon
+        | tyvar
+        | ( type1 , … , typek ) (tuple type, k ≥ 2)
+        | [ type ]              (list type)
+        | ( type )              (parenthesised constructor)
+gtycon  → qtycon
+        | ()            (unit type)
+        | []            (list constructor)
+        | (-&gt;)          (function constructor)
+        | (,{,})        (tupling constructors) 
+</code></pre>
+
+<h3 id="kind">Kind</h3>
+
+<p>What is <code>*</code>, <code>* -&gt; *</code>&hellip;? An ordinary type has kind <code>*</code>. A type constructor
+(template) that has one type argument has kind <code>* -&gt; *</code>, e.g. a list. So on and
+so forth.</p>
+
+<h3 id="context">Context</h3>
+
+<p>The context (<code>context =&gt; type</code>) is used to indicate that type <code>tyvar</code> belongs to
+class <code>qtycls</code>.</p>
+
+<p>A context is composed of zero or more class assertions.</p>
+
+<pre><code>context → class
+        | ( class1 , … , classn )               (n ≥ 0)
+</code></pre>
+
+<p>And a class assertion is either either a type variable, or the application of
+type variable to one or more types.</p>
+
+<pre><code>class   → qtycls tyvar
+        | qtycls ( tyvar atype1 … atypen )      (n ≥ 1)
+qtycls  → [ modid . ] tycls
+tycls   → conid
+tyvar   → varid 
+</code></pre>
+
+<h3 id="algebraic-data-type">Algebraic data type</h3>
+
+<p><em>algebraic data type</em> is named so because it is composed of other types by
+product and sum (algebraic operations). It introduces a new type constructor
+(<code>simpletype</code>) with zero or more constituent data constructors (<code>constrs</code>).</p>
+
+<pre><code>topdecl → ...
+        | data [context =&gt;] simpletype [= constrs] [deriving]
+</code></pre>
+
+<p>The type constructor begins with upper case letter and may have zero to more
+type variables as parameters. The type constructor then can be used in curried
+type application in a type expression.</p>
+
+<pre><code>simpletype      → tycon tyvar1 … tyvark         (k ≥ 0) 
+</code></pre>
+
+<p>On the right side of <code>=</code>, sum (alternative) types are separated by <code>|</code>.</p>
+
+<pre><code>constrs → constr1 | … | constrn         (n ≥ 1)
+</code></pre>
+
+<p>For each <code>constr</code>, there are three alternative syntaxes.</p>
+
+<ol>
+<li>A data constructor followed by zero or more <code>atype</code>.</li>
+<li>An infix data constructor operator between two <code>btype</code>.</li>
+<li>A data constructor followed by field declarations.</li>
+</ol>
+
+<pre><code>constr  → con [!] atype1 … [!] atypek   (arity con  =  k, k ≥ 0)
+        | (btype | ! atype) conop (btype | ! atype) (infix conop)
+        | con { fielddecl1 , … , fielddecln }       (n ≥ 0) 
+con     → conid | ( consym )    (constructor) 
+</code></pre>
+
+<p><code>!</code> is strictness flag to indicate that the corresponding constructor argument
+is eagerly evaluated.</p>
+
+<h3 id="type-synonym">Type synonym</h3>
+
+<p>A type synonym is equivalent to its definition are completely interchangeable.</p>
+
+<pre><code>topdecl → type simpletype = type
+</code></pre>
+
+<h3 id="newtype">Newtype</h3>
+
+<p>A <em>newtype</em> declaration introduces a distinct type whose representation is the
+same as an existing type.</p>
+
+<pre><code>topdecl     → newtype [context =&gt;] simpletype = newconstr [deriving]
+newconstr   → con atype
+            | con { var :: type }
+</code></pre>
+
+<ul>
+<li>Unlike type synonyms, <code>newtype</code> may be used to define recursive types.</li>
+<li>New instances can be defined for a type defined by <code>newtype</code> but may not be
+defined for a type synonym.</li>
+<li>A type created by <code>newtype</code> has an extra level of indirection compared to an
+algebraic datatype, so the pattern matching rule is different.</li>
+</ul>
+
+<h3 id="ad-hoc-polymorphism">Ad hoc polymorphism</h3>
+
+<p>Ad hoc polymorphism (overloading) is supported by <em>typeclasses</em>.</p>
+
+<p>A class declaration introduces a new class and the operations (methods) on it.</p>
+
+<h2 id="modules">Modules</h2>
+
+<p><em>To be continued&hellip;</em></p>
+
+                </div>
+            </article>
+        
+            <article class="frontpage">
+                <h1>
+                    <a href="http://h12.io/note/301-redirect/">About 301 Moved Permanently</a>
+                    <span class="line"></span>
+                </h1>
+                <span class="time">25 July 2014</span>
+                <div class="article-body hyphenate">
+                    <p>When building a website, there is one inevitable thing:
+<a href="http://en.wikipedia.org/wiki/HTTP_301">301 permanent redirection</a>. The cases
+that have to involve 301 includes:</p>
+
+<ul>
+<li>Redirection from www subdomain to naked domain or vise versa.</li>
+<li>Redirection from slashed pretty URL to unslashed URL or vise versa.</li>
+</ul>
+
+<p>301 is easy to implement with Go:</p>
+
+<pre><code class="language-go">func redirect301(w http.ResponseWriter, url string) {
+    w.Header().Set(&quot;Location&quot;, url)
+    w.WriteHeader(http.StatusMovedPermanently)
+}
+</code></pre>
+
+<p>There is one more thing that needs attention: The root path of a domain always
+contains a slash (GET / in HTTP request), regardless the user enters the slash
+or not, so the root path needs no redirection.</p>
+
+                </div>
+            </article>
+        
+            <article class="frontpage">
+                <h1>
+                    <a href="http://h12.io/article/pagespeed-insights/">How to Achieve a Perfect PageSpeed Insights Score</a>
+                    <span class="line"></span>
+                </h1>
+                <span class="time">24 July 2014</span>
+                <div class="article-body hyphenate">
+                    
+
+<h2 id="indtroduction">Indtroduction</h2>
+
+<p><a href="https://developers.google.com/speed/pagespeed/insights/">PageSpeed Insights</a> is
+an online tool by Google to measure the performance of an web page for mobile
+and desktop devices. It has a set of heuristic rules considering the
+network-independent aspects of page performance. Each rule has a weight and the
+total score ranges from 0 to 100 points. The desktop and mobile tests have the
+same set of rules for performance and mobile test has some extra rules
+about user experience.</p>
+
+<p>Though it might be too rigorous to require <sup>100</sup>&frasl;<sub>100</sub> score for a web site, it is a
+good way to learn those rules to actually achieve it, and it does have a
+significant improvement to the load time of my site (load time reduces from more
+than 1 sec to about 500 ms in the <a href="http://fpt.pingdom.com/">Pingdom Website Speed Test</a>).
+In the following section, I would like to share what I have learned by
+optimizing this website to achieve a <a href="https://developers.google.com/speed/pagespeed/insights/?url=http%3A%2F%2Fh12.io">perfect score</a>, rule by rule.</p>
+
+<h2 id="speed-rules">Speed rules</h2>
+
+<h3 id="avoid-landing-page-redirects">Avoid landing page redirects</h3>
+
+<p>The redirection to mobile version can be avoided by responsive design (CSS media
+queries).</p>
+
+<p>You cannot avoid redirections completely, e.g. I have a 301 redirection from www
+subdomain to the naked domain, but the naked domain does not have any further
+redirection.</p>
+
+<h3 id="eliminate-render-blocking-javascript-and-css-in-above-the-fold-content">Eliminate render-blocking JavaScript and CSS in above-the-fold content</h3>
+
+<p>This might be the hardest rule to fully comply with.</p>
+
+<p>Firstly, you need to minimize and fully inline your CSS into HTML, and your CSS
+cannot be too large. (My CSS is 22kB after minimization). If you use web fonts,
+you should directly write the @font-face in your inlined CSS, rather than
+importing an external CSS.</p>
+
+<p>Secondly, you need to inline or asynchronously load all your scripts. The
+&ldquo;async&rdquo; attribute is not very useful because it cannot control the order of
+the execution of multiple scripts. I have found <a href="http://headjs.com/">HeadJS</a>
+to solve the problem. HeadJS is inlined into the HTML (3.7kB), and other scripts
+are loaded asychronously but executed in order.</p>
+
+<p>Finally, you have to make sure the delayed scripts will not affect the
+layout of above-the-fold content. You might have to make some trade off and cut
+off some functionality.</p>
+
+<h3 id="enable-compression-leverage-browser-caching-reduce-server-response-time">Enable compression, Leverage browser caching &amp; Reduce server response time</h3>
+
+<p>Since I uses Google App Engine, the gzip compression should already been enabled
+by default, the expiration time for static resources are configurable via
+config.yaml and GAE responses fast enough.</p>
+
+<h3 id="minify-resources-html-css-and-javascript">Minify Resources (HTML, CSS, and JavaScript)</h3>
+
+<p>The CSS is minified by Compass, and scripts imported are already minified. The
+HTML file is not minified but it seems not serious enough to trigger a test
+warning by PageSpeed.</p>
+
+<h3 id="optimize-images">Optimize images</h3>
+
+<p>I use font icons in my site. When there has to be an image, use PNG compressed with
+<a href="http://optipng.sourceforge.net/">OptiPNG</a>.</p>
+
+<h3 id="reduce-the-size-of-the-above-the-fold-content">Reduce the size of the above-the-fold content</h3>
+
+<p>It basically depends on your design and just remember the YAGNI principle.</p>
+
+<h2 id="user-experience-rules">User experience rules</h2>
+
+<p>These rule only applies to mobile platforms.</p>
+
+<h3 id="avoid-plugins">Avoid plugins</h3>
+
+<p>None of them on my site.</p>
+
+<h3 id="configure-the-viewport">Configure the viewport</h3>
+
+<p>This is part of the responsive design.</p>
+
+<h3 id="size-content-to-viewport">Size content to viewport</h3>
+
+<p>An important lesson: never write a URL directly in an article because URL does
+not wrap well and could overflow out of the viewport width. instead, give the
+URL a name composed of words.</p>
+
+<h3 id="size-tap-targets-appropriately-use-legible-font-sizes">Size tap targets appropriately &amp; Use legible font sizes</h3>
+
+<p>I have written some lists of links in my notes, which makes those links close to
+each other. To make them separate enough to pass this rule, the line height cannot
+be too small, here is the minimal requirement from my tests (font-size/line-height):</p>
+
+<ul>
+<li>16px/28px</li>
+<li>17px/28px</li>
+<li>18px/29px</li>
+<li>19px/30px</li>
+<li>20px/30px</li>
+</ul>
+
+<h2 id="conclusion">Conclusion</h2>
+
+<p>It is not rocket science to build a website with good performance. You just needs
+to tune and optimize every detail of your site patiently. In this process,
+PageSpeed Insights can help a lot.</p>
+
+                </div>
+            </article>
+        
+            <article class="frontpage">
+                <h1>
+                    <a href="http://h12.io/note/ci-overview/">An Overview of Continuous Integration Services</a>
+                    <span class="line"></span>
+                </h1>
+                <span class="time">17 July 2014</span>
+                <div class="article-body hyphenate">
+                    
+
+<p>After reviewing many continuous integration services below, there is no doubt
+that Wercker is the winner. The Wercker Box (virtual container) is based on
+Ubuntu and any packages can be easily installed with &ldquo;apt-get&rdquo;. This flexibility
+basically allows running any test suites and deploying to any cloud platforms.
+Furthermore, a Wercker Box can inherit from another box and can be stored and
+published in Wercker directories as the starting point for any projects,
+increasing the performance significantly.</p>
+
+<h2 id="price">Price</h2>
+
+<p>Open source friendly:</p>
+
+<ul>
+<li><a href="https://drone.io/">Drone.io</a></li>
+<li><a href="https://www.shippable.com/">Shippable</a></li>
+<li><a href="https://snap-ci.com/">Snap</a></li>
+<li><a href="https://travis-ci.org/">Travis-CI</a></li>
+<li><a href="http://wercker.com/">Wercker</a></li>
+</ul>
+
+<p>Has free plan:</p>
+
+<ul>
+<li><a href="http://www.cloudbees.com/">CloudBees</a></li>
+<li><a href="https://codeship.io/">Codeship</a></li>
+<li><a href="https://ship.io/">Ship.io</a></li>
+</ul>
+
+<p>No fee plan:</p>
+
+<ul>
+<li><a href="https://circleci.com/">CircleCI</a></li>
+<li><a href="https://hosted-ci.com/">Hosted CI</a></li>
+<li><a href="https://semaphoreapp.com/">Semaphore</a></li>
+<li><a href="https://www.solanolabs.com/">Solano Labs</a></li>
+<li><a href="https://www.atlassian.com/software/bamboo">Bamboo</a></li>
+</ul>
+
+                </div>
+            </article>
+        
+            <article class="frontpage">
+                <h1>
                     <a href="http://h12.io/note/install-scp/">Installing Source Code Pro</a>
                     <span class="line"></span>
                 </h1>
@@ -83,247 +922,6 @@
                     <p><em>Source Code Pro</em> is one of the best monospace fonts and it is <a href="https://github.com/adobe/source-code-pro">open sourced</a>.</p>
 
 <p>Here is the <a href="https://github.com/h12w/linux/blob/master/install_scp.sh">script</a> for installing it on Linux.</p>
-
-                </div>
-            </article>
-        
-            <article class="frontpage">
-                <h1>
-                    <a href="http://h12.io/note/install-susy/">Installing Susy</a>
-                    <span class="line"></span>
-                </h1>
-                <span class="time">17 July 2014</span>
-                <div class="article-body hyphenate">
-                    <p>The script:</p>
-
-<pre><code class="language-bash">sudo apt-get install ruby
-sudo apt-get install ruby-dev
-sudo gem install susy -V
-sudo gem install compass --pre -V
-sudo gem lnstall breakpoint -V
-</code></pre>
-
-<p>Notes:</p>
-
-<ul>
-<li>The current version of Susy uses a higher version of Sass than Compass, so the
-corresponding Compass version has to be a prerelease (&ndash;pre).</li>
-<li>The installing process is slow and it feels better to print it out (-V).</li>
-<li>You may have to run &ldquo;compass watch&rdquo; with sudo (<a href="https://github.com/Compass/compass/issues/1497">issue 1497</a>).</li>
-<li>An alternative <a href="https://ruby.taobao.org/">RubyGems source</a> that is close to
-your location might help.</li>
-</ul>
-
-                </div>
-            </article>
-        
-            <article class="frontpage">
-                <h1>
-                    <a href="http://h12.io/note/web-design-site/">A List of URLs about Web Design</a>
-                    <span class="line"></span>
-                </h1>
-                <span class="time">10 July 2014</span>
-                <div class="article-body hyphenate">
-                    <ul>
-<li><a href="http://webtypography.net/">The Elements of Typographic Style Applied to the Web</a></li>
-<li><a href="http://www.smashingmagazine.com/">Smashing Magazine</a></li>
-<li><a href="http://trentwalton.com/">Trentwalton</a></li>
-<li><a href="http://www.inkwell.ie/">Inkwell</a></li>
-</ul>
-
-                </div>
-            </article>
-        
-            <article class="frontpage">
-                <h1>
-                    <a href="http://h12.io/note/ugly-font/">Why My Web Font Looks Ugly on IE?</a>
-                    <span class="line"></span>
-                </h1>
-                <span class="time">9 July 2014</span>
-                <div class="article-body hyphenate">
-                    <p>Windows needs hand-tuned hinting which is missing in many web fonts. To solve this
-problem, there is a tool called <a href="http://www.freetype.org/ttfautohint/index.html">ttfautohint</a>
-which can automatically add hinting to font files.</p>
-
-<p>There is a <a href="http://pixelsvsbytes.com/blog/2013/11/how-to-create-perfect-web-fonts-in-3-steps/">tutorial</a>,
-and an online tool called <a href="http://fontie.flowyapps.com/">Fontie</a>.</p>
-
-                </div>
-            </article>
-        
-            <article class="frontpage">
-                <h1>
-                    <a href="http://h12.io/note/serve-static/">Serving Static Pages on App Engine with Go</a>
-                    <span class="line"></span>
-                </h1>
-                <span class="time">6 July 2014</span>
-                <div class="article-body hyphenate">
-                    <p>It is straightforward to serve static pages with <a href="http://golang.org/pkg/net/http/">Go</a>
-or <a href="https://developers.google.com/appengine/docs/go/config/appconfig">config file</a>
-on App Engine, but how to serve static pages on App Engine with Go?</p>
-
-<p>I got the following error when I tried to customize the 404 page with Go:</p>
-
-<pre><code>No such file or directory
-</code></pre>
-
-<p>The solution turns out to be simple: do not do both.</p>
-
-<p>The file will not be accessible to Go if there is already a rule for it in
-config.yaml. Remove the rule from config.yaml and the file will be available to
-Go again (source:
-<a href="https://groups.google.com/d/msg/google-appengine-go/DmfDPUBkmrg/SvJ1dwjC0_EJ">google-appengine-go</a>).</p>
-
-<p>Here is an exmaple to serve a custom 404 not found page:</p>
-
-<pre><code class="language-go">func serve404(w http.ResponseWriter, r *http.Request) {
-	w.WriteHeader(http.StatusNotFound)
-	f, err := http.Dir(&quot;public&quot;).Open(&quot;404.html&quot;)
-	if err != nil {
-		serveError(w, r, err)
-		return
-	}
-	defer f.Close()
-	io.Copy(w, f)
-}
-</code></pre>
-
-                </div>
-            </article>
-        
-            <article class="frontpage">
-                <h1>
-                    <a href="http://h12.io/article/optimal-font-scale/">Finding Optimal Typographic Scale</a>
-                    <span class="line"></span>
-                </h1>
-                <span class="time">5 July 2014</span>
-                <div class="article-body hyphenate">
-                    
-
-<p>During the construction of this site, there are many important design decisions
-that need to be made. One of them is to decide the font size for each level of
-headings, i.e., typographic scale.</p>
-
-<h2 id="investigation">Investigation</h2>
-
-<p>The first thing I did was to read <a href="https://www.google.com/?#newwindow=1&amp;q=typographic+scale">everything online</a>
-about typographic scale. I will just skip the details and jump to my opinions:</p>
-
-<ul>
-<li>Modular scale should be followed</li>
-<li>Traditional scale is obsolete</li>
-<li>Golden ratio or double-stranded scale do not make any sense</li>
-<li>Vertical rhythm should be considered</li>
-</ul>
-
-<p>Then a little explanation.</p>
-
-<p>Modular scale (geometric series) is the way how our visual perception understands
-relative size. When a page is zoomed in or out, the perceived aboslue length
-changes, but the ratio remains the same. Rather than choosing modular scale, we
-actually think in terms of modular scale.  There is no hard rule that the ratio
-of modular scale must be a constant, but a constant modular ratio is the simplest
-and provides consistency.</p>
-
-<p>Traditional scale is actually modular scale of ratio 2 for size 6 7 8 9, with some
-extra and missing sizes. There is no reason why we restraint ourselves to
-irrelevant factors, instead, we should consider the constraints from our
-<em>real problem</em>. The same reason applies to the golden ratio and double-stranded
-scale.</p>
-
-<h2 id="problem-constraints">Problem &amp; constraints</h2>
-
-<p>What is a good typographic scale? For a Blog article, it should at least meet the
-following requirements:</p>
-
-<ul>
-<li>Discrimination: different headings can be easily distingushed</li>
-<li>Consistency: all the headings looks consistent by the same principle</li>
-</ul>
-
-<p>Besides font size, line height of each level of headings should also be adjusted
-to meet the requirement of vertical rhythm. Line height affects the appearance
-of a heading, especially when the heading is wrapped and takes up multiple lines.</p>
-
-<p>Modular scale solves part of the problem, but we still have to determine the
-value of the modular ratio and to make the line height as consistent as possible
-while maintaining vertical rhythm.</p>
-
-<p>The typographic scale should also satisfy these constraints:</p>
-
-<ul>
-<li>The line height of each heading must be an integral multiple of the line height
-of body copy (vertical rhythm)</li>
-<li>The smallest heading must not smaller than the body copy</li>
-<li>The number of heading levels</li>
-<li>The maximum acceptable size of the top heading</li>
-</ul>
-
-<h2 id="optimization">Optimization</h2>
-
-<p>Design is a process exploring all the possible solutions (the design space) to
-find an optimal one, i.e. an <a href="http://en.wikipedia.org/wiki/Optimization_problem">optimization problem</a>.
-If we can express the problem in a mathematical form, we can solve it by
-computation.</p>
-
-<p>The constraints are already listed. The next thing is to express the objective
-function, which is the inconsistency of headings from each other. What is it?</p>
-
-<p>Short answer: the standard deviation of relative line height.</p>
-
-<p>Long answer: The line height of each heading is different, but the relative line
-height (line height divided by font size) of different headings can be the same,
-and when they are the same, the headings look consistent. To compare two numbers,
-you can just use the absolute value of the difference of the two numbers, but for
-a list of numbers, standard deviation is an effective measure for their inconsistency.</p>
-
-<p>The caculation is easy for a computer, and can be done with brute force. The
-program just needs to exhaustively tries each possible heading sizes that
-satisifies all the constraints and evaluates the inconsistency. Finally, it
-sorts all the solutions by the inconsistency and find the best solution.</p>
-
-<p>Here is the code (runable online):
-<a href="http://play.golang.org/p/rP09HJDUcz">a Go program to calculate optimal typographic scale</a>.</p>
-
-<h2 id="example">Example</h2>
-
-<p>In this site, I need to use maximum three levels of headings: H1, H2 &amp; H3. I
-choose 19px/30px as body copy. The search range for H3 is from 1.2*19px to
-1.5*19px, and the range for H3 is from 35 to 50.
-Finally the solution is:</p>
-
-<pre><code>Ratio: 1.3079
-H3: 23px/1.3
-H2: 30px/1.0
-H1: 39px/1.5
-</code></pre>
-
-<p>Though the line height of H2 is still not ideal, it is already the best solution
-given the restrictions by vertical rhythm.</p>
-
-<h2 id="conclusion">Conclusion</h2>
-
-<p>The approach can sccessfully find the optimal typographic scale under the
-precise problem definition in this article. It does not rely on any mysterious
-process or magic numbers, but only reasoning and computation.</p>
-
-                </div>
-            </article>
-        
-            <article class="frontpage">
-                <h1>
-                    <a href="http://h12.io/note/site-test/">A List of Website Testing Services</a>
-                    <span class="line"></span>
-                </h1>
-                <span class="time">3 July 2014</span>
-                <div class="article-body hyphenate">
-                    <ul>
-<li><a href="http://validator.w3.org/">The W3C Markup Validation Service</a></li>
-<li><a href="http://developers.google.com/speed/pagespeed/insights/">Google PageSpeed Insights</a></li>
-<li><a href="http://tools.pingdom.com/fpt/">Pingdom Website Speed Test</a></li>
-<li><a href="http://nibbler.silktide.com">Nibbler</a></li>
-<li><a href="http://www.browserstack.com/screenshots">BrowserStack</a></li>
-</ul>
 
                 </div>
             </article>

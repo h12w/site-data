@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Json Schema on h12</title>
+    <link>http://h12.io/tags/json-schema/</link>
+    <description>Recent content in Json Schema on h12</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-US</language>
+    <copyright>Copyright (c) 2012-2018, Wáng Hǎiliàng (Hal); all rights reserved.</copyright>
+    <lastBuildDate>Wed, 04 Nov 2015 19:00:00 +0800</lastBuildDate>
+    
+	<atom:link href="http://h12.io/tags/json-schema/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>JSON Schema parser &amp; code generator</title>
+      <link>http://h12.io/project/json-schema/</link>
+      <pubDate>Wed, 04 Nov 2015 19:00:00 +0800</pubDate>
+      
+      <guid>http://h12.io/project/json-schema/</guid>
+      <description>json-schema generates Go struct from a JSON Schema specification.
+Decimal types are supported for accurate currency calculation.</description>
+    </item>
+    
+  </channel>
+</rss>
