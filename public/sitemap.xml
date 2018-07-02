@@ -353,6 +353,11 @@
   </url>
   
   <url>
+    <loc>http://h12.io/project/gosweep/</loc>
+    <lastmod>2014-06-05T23:00:00+08:00</lastmod>
+  </url>
+  
+  <url>
     <loc>http://h12.io/project/getgo/</loc>
     <lastmod>2014-06-02T01:21:00+00:00</lastmod>
   </url>
@@ -421,6 +426,12 @@
   <url>
     <loc>http://h12.io/tags/automatic-deployment/</loc>
     <lastmod>2014-07-17T14:54:26+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://h12.io/tags/bash/</loc>
+    <lastmod>2014-06-05T23:00:00+08:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -733,6 +744,12 @@
   <url>
     <loc>http://h12.io/tags/lexer/</loc>
     <lastmod>2014-08-07T00:00:00+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://h12.io/tags/linter/</loc>
+    <lastmod>2014-06-05T23:00:00+08:00</lastmod>
     <priority>0</priority>
   </url>
   

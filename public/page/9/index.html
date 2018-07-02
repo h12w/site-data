@@ -135,6 +135,101 @@ just an annoying redundant thing. Here is the one-liner to disable it:</p>
         
             <article class="frontpage">
                 <h1>
+                    <a href="http://h12.io/project/gosweep/">gosweep: A shell script to do various checks on Go code</a>
+                    <span class="line"></span>
+                </h1>
+                <span class="time">5 June 2014</span>
+                <div class="article-body hyphenate">
+                    
+
+<p>This script performs the build, test and automatic checking of a Go package and its sub-packages using:</p>
+
+<ol>
+<li><a href="http://golang.org/cmd/gofmt/" title="gofmt">gofmt</a></li>
+<li><a href="https://godoc.org/golang.org/x/tools/cmd/goimports" title="golang.org/x/tools/cmd/goimports">goimports</a></li>
+<li><a href="https://github.com/golang/lint" title="golang/lint">golint</a></li>
+<li><a href="http://golang.org/cmd/vet" title="go vet">go vet</a></li>
+<li><a href="https://github.com/gordonklaus/ineffassign" title="ineffassign">ineffassign</a></li>
+<li><a href="http://blog.golang.org/race-detector" title="race detector">race detector</a></li>
+<li><a href="http://blog.golang.org/cover" title="test coverage">test coverage</a> on package and its sub-packages, <code>/vendor</code> directories excluded</li>
+<li><a href="https://github.com/mattn/goveralls" title="mattn/goveralls">goveralls</a></li>
+<li><a href="https://github.com/fzipp/gocyclo" title="gocyclo">gocyclo</a></li>
+<li><a href="https://github.com/client9/misspell" title="misspell">misspell</a></li>
+</ol>
+
+<p>Migrated from my <a href="https://gist.github.com/h12w/0f22736320abe6be71ce">Gist</a>.</p>
+
+<h2 id="dependencies">Dependencies</h2>
+
+<p>To setup all the dependencies need to run the script do:</p>
+
+<pre><code>$ go get -v github.com/client9/misspell/cmd/misspell
+$ go get -v github.com/fzipp/gocyclo
+$ go get -v github.com/golang/lint/golint
+$ go get -v github.com/gordonklaus/ineffassign
+$ go get -v github.com/h12w/gosweep
+$ go get -v github.com/mattn/goveralls
+$ go get -v golang.org/x/tools/cmd/goimports
+</code></pre>
+
+<h2 id="environment-variables">Environment variables</h2>
+
+<ul>
+<li><strong>GOCYCLO_COMPLEXITY</strong>: maximum allowed function complexity threshold (default: <code>5</code>).</li>
+<li><strong>MISSPELL_LOCALE</strong>: English locale (default: <code>US</code>).</li>
+</ul>
+
+<p>If you wish to set this for a project you can create a <code>.gosweep</code> file.
+For example:</p>
+
+<pre><code class="language-bash">$ cat .gosweep
+GOCYCLO_COMPLEXITY=5
+MISSPELL_LOCALE='US'
+</code></pre>
+
+<h2 id="continuous-integration">Continuous Integration</h2>
+
+<h3 id="travis-ci">travis-ci</h3>
+
+<p>Example of <code>.travis.yml</code> file for Go:</p>
+
+<pre><code class="language-yaml">language: go
+cache:
+  directories:
+    - ${GOPATH}/src/github.com/${TRAVIS_REPO_SLUG}/vendor
+    - ${GOPATH}/src/github.com/fzipp
+    - ${GOPATH}/src/github.com/golang
+    - ${GOPATH}/src/github.com/gordonklaus
+    - ${GOPATH}/src/github.com/h12w
+    - ${GOPATH}/src/github.com/mattn
+go:
+  - tip
+  - 1.8
+  - 1.7
+  - 1.6
+sudo: false
+
+env:
+    CI_SERVICE=travis-ci
+
+install:
+  - go get -v github.com/client9/misspell/cmd/misspell
+  - go get -v github.com/fzipp/gocyclo
+  - go get -v github.com/golang/lint/golint
+  - go get -v github.com/gordonklaus/ineffassign
+  - go get -v github.com/h12w/gosweep
+  - go get -v github.com/mattn/goveralls
+  - go get -v -u golang.org/x/tools/cmd/goimports
+
+script:
+  - bash ${GOPATH}/src/github.com/h12w/gosweep/gosweep.sh
+</code></pre>
+
+                </div>
+            </article>
+        
+            <article class="frontpage">
+                <h1>
                     <a href="http://h12.io/project/getgo/">Getgo: a concurrent, simple and extensible web scraping framework</a>
                     <span class="line"></span>
                 </h1>
@@ -389,127 +484,6 @@ func TestAll(t *testing.T) {
 
 <pre><code class="language-bash">go test -focus 1/1
 </code></pre>
-                </div>
-            </article>
-        
-            <article class="frontpage">
-                <h1>
-                    <a href="http://h12.io/project/html-query/">html-query: a fluent and functional approach to querying HTML DOM</a>
-                    <span class="line"></span>
-                </h1>
-                <span class="time">20 January 2014</span>
-                <div class="article-body hyphenate">
-                    
-
-<p>html-query is a Go package that provides a fluent and functional interface for
-querying HTML DOM. It is based on <a href="http://code.google.com/p/go.net/html">go.net/html</a>.</p>
-
-<h2 id="examples">Examples</h2>
-
-<ol>
-<li><p>A simple example (under &ldquo;examples&rdquo; directory)</p>
-
-<pre><code class="language-go">r := get(`http://blog.golang.org/index`)
-defer r.Close()
-root, err := query.Parse(r)
-checkError(err)
-root.Div(Id(&quot;content&quot;)).Children(Class(&quot;blogtitle&quot;)).For(func(item *query.Node) {
-    href := item.Ahref().Href()
-    date := item.Span(Class(&quot;date&quot;)).Text()
-    tags := item.Span(Class(&quot;tags&quot;)).Text()
-    // ......
-})
-</code></pre></li>
-
-<li><p>Generator of html-query (under &ldquo;gen&rdquo; directory)</p></li>
-</ol>
-
-<p>A large part of html-query is automatically generated from HTML spec. The
-spec is in HTML format, so the generator parses it using html-query itself.</p>
-
-<h2 id="design">Design</h2>
-
-<p>Here is a simple explanation of the design of html-query.</p>
-
-<h3 id="functional-query-expressions">Functional query expressions</h3>
-
-<p>All functional definitions are defined in html-query/expr package.</p>
-
-<ol>
-<li><p>Checker and checker composition<br />
-A checker is a function that accept and conditionally returns a *html.Node.</p>
-
-<pre><code class="language-go">type Checker func(*html.Node) *html.Node
-</code></pre>
-
-<p>Here are some checker examples:</p>
-
-<pre><code>Id(&quot;id1&quot;)
-Class(&quot;c1&quot;)
-Div
-Abbr
-H1
-H2
-</code></pre>
-
-<p>Checkers can be combined as boolean expressions:</p>
-
-<pre><code class="language-go">And(Id(&quot;id1&quot;), Class(&quot;c1&quot;))
-Or(Class(&quot;c1&quot;), Class(&quot;c2&quot;))
-And(Class(&quot;c1&quot;), Not(Class(&quot;c2&quot;)))
-</code></pre></li>
-
-<li><p>Checker builder<br />
-A checker builder is a function that returns a checker. &ldquo;Id&rdquo;, &ldquo;Class&rdquo;, &ldquo;And&rdquo;,
-&ldquo;Or&rdquo;, &ldquo;Not&rdquo; shown above are all checker builders. There are also some checker
-builder builder (function that returns a checker builder) defined in
-html-query when needed.</p></li>
-</ol>
-
-<h3 id="fluent-interface">Fluent interface</h3>
-
-<p>Fluent interface (<a href="http://en.wikipedia.org/wiki/Fluent_interface">http://en.wikipedia.org/wiki/Fluent_interface</a>) are defined in
-html-query package.</p>
-
-<ol>
-<li><p>Root node<br />
-Function Parse returns the root node of an html document.</p></li>
-
-<li><p>Node finder<br />
-Method Node.Find implements a BFS search for a node, e.g.</p>
-
-<pre><code class="language-go">node.Find(Div, Class(&quot;id1&quot;))
-</code></pre>
-
-<p>But usually you can write the short form:</p>
-
-<pre><code class="language-go">node.Div(Class(&quot;id1&quot;))
-</code></pre></li>
-
-<li><p>Attribute getter
-Method Node.Attr can be used to get the value (or a regular expression
-submatch of the value) of a node, e.g.</p>
-
-<pre><code class="language-go">node.Attr(&quot;Id&quot;)
-node.Attr(&quot;href&quot;, &quot;\(.*)&quot;)
-</code></pre>
-
-<p>But usually you can write the short form:</p>
-
-<pre><code class="language-go">node.Id()
-node.Href(&quot;\(.*)&quot;)
-</code></pre></li>
-
-<li><p>Node iterator<br />
-Method Node.Children and Node.Descendants each returns a node iterator
-(NodeIter). Method NodeIter.For can be used to loop through these nodes.</p></li>
-</ol>
-
-<h2 id="alternative">Alternative</h2>
-
-<p>If you prefer a jquery like DSL rather than functional way, you might want to
-try <a href="https://github.com/PuerkitoBio/goquery">goquery</a>.</p>
-
                 </div>
             </article>
         

@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title> SEJ: Message Queue Based on Segmented Journals </title>
+        <title> Linter </title>
         <link rel="shortcut icon" href="/img/favicon.png" />
 
         <style>
@@ -69,177 +69,17 @@
             </div>
         </header>
 
-        <div id="github-ribbon">
-            <a href="https://github.com/h12w/sej">Fork me on GitHub</a>
-        </div>
         <main class="container">
-            <article class="single">
-                <h1>SEJ: Message Queue Based on Segmented Journals</h1>
-                <div class="article-body hyphenate">
-                
-                
-                
-
-<p><code>h12.io/sej</code> provides composable components of distributed, persisted message queue and allows trading off between reliablilty, latency and throughput with minimal devops overhead.</p>
-
-<h2 id="package-organization">Package Organization</h2>
-
-<ul>
-<li>h12.io/sej: writer, scanner and offset
-
-<ul>
-<li>shard: sharding</li>
-<li>hub: copying across machines</li>
-<li>cmd/sej: command line tool</li>
-</ul></li>
-</ul>
-
-<h2 id="sej-directory">SEJ Directory</h2>
-
-<pre><code>[root-dir]/
-    [sej-dir]/
-        jnl.lck
-        jnl/
-            0000000000000000.jnl
-            000000001f9e521e.jnl
-            ......
-        ofs/
-            reader1.ofs
-            reader1.lck
-            reader2.ofs
-            reader2.lck
-            ......
-</code></pre>
-
-<h2 id="journal-file-format">Journal File format</h2>
-
-<pre><code>segment_file = { message }                          .
-message      = offset timestamp type key value size .
-offset       = uint64                               .
-timestamp    = int64                                .
-type         = uint8                                .
-key          = key_size { uint8 }                   .
-key_size     = int8                                 .
-value        = value_size { uint8 }                 .
-value_size   = int32                                .
-size         = int32                                .
-</code></pre>
-
-<p>All integers are written in the big endian format.</p>
-
-<table>
-<thead>
-<tr>
-<th>name</th>
-<th>description</th>
-</tr>
-</thead>
-
-<tbody>
-<tr>
-<td>offset</td>
-<td>the position of the message in the queue</td>
-</tr>
-
-<tr>
-<td>timestamp</td>
-<td>the timestamp represented in nanoseconds since Unix Epoch</td>
-</tr>
-
-<tr>
-<td>type</td>
-<td>an int8 value that could be used to indicate the type of the message</td>
-</tr>
-
-<tr>
-<td>key</td>
-<td>the encoded key</td>
-</tr>
-
-<tr>
-<td>value</td>
-<td>the encoded value</td>
-</tr>
-
-<tr>
-<td>size</td>
-<td>the size of the whole message including itself, allowing reading backward</td>
-</tr>
-</tbody>
-</table>
-
-<h2 id="writer">Writer</h2>
-
-<ul>
-<li>Append from the last offset in segmented journal files</li>
-<li>File lock to prevent other writers from opening the journal files</li>
-<li>Startup corruption detection &amp; truncation</li>
-</ul>
-
-<h2 id="scanner">Scanner</h2>
-
-<ul>
-<li>Read from an offset in segmented journal files</li>
-<li>Change monitoring
-
-<ul>
-<li>directory</li>
-<li>file append</li>
-</ul></li>
-<li>Handle incomplete last message</li>
-<li>Truncation detection &amp; fail fast</li>
-<li>Timeout</li>
-</ul>
-
-<h2 id="offset">Offset</h2>
-
-<ul>
-<li>First/last offset</li>
-<li>Offset persistence</li>
-</ul>
-
-<h2 id="sharding">Sharding</h2>
-
-<pre><code>[root-dir]/
-    [shard0]/
-    [shard1]/
-    ......
-</code></pre>
-
-<p>Each shard directory is a SEJ directory with a name in the form of <code>[prefix].[shard-bit].[shard-index]</code>.</p>
-
-<ul>
-<li>prefix must satisfy [a-zA-Z0-9_-]*</li>
-<li>when prefix is empty, <code>[prefix].</code> including the dot is omitted</li>
-<li>shard-bit: 1, 2, &hellip;, 9, a</li>
-<li>shard-index: 000, 001, &hellip;, 3ff</li>
-</ul>
-
-<h2 id="hub">Hub</h2>
-
-<pre><code>[root-dir]/
-    [client-id0].[shard0]/
-    [client-id1].[shard0]/
-    ......
-</code></pre>
-
-<p>client-dir is the SEJ directory name belonging to a client.</p>
-
-                </div>
-                <div>
-                    <div id="article-time">14 November 2015</div>
-                    <ul id="tags">
-  
-    <li><a href="/tags/golang">Golang</a> </li>
-  
-    <li><a href="/tags/message-queue">message queue</a> </li>
-  
-    <li><a href="/tags/journal">journal</a> </li>
-  
-</ul>
-
-                </div>
+        <h1 class="list">Linter</h1>
+            
+            <article class="list">
+                <h2>
+                    <a href="http://h12.io/project/gosweep/">gosweep: A shell script to do various checks on Go code</a><br>
+                </h2>
+                <span class="time">5 June 2014</span>
+                <span class="tags"></span>
             </article>
+            
         </main>
         <footer id="site-footer">
             <hr>

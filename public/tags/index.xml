@@ -67,6 +67,15 @@
     </item>
     
     <item>
+      <title>Bash</title>
+      <link>http://h12.io/tags/bash/</link>
+      <pubDate>Thu, 05 Jun 2014 23:00:00 +0800</pubDate>
+      
+      <guid>http://h12.io/tags/bash/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>Build</title>
       <link>http://h12.io/tags/build/</link>
       <pubDate>Thu, 29 Jan 2015 03:55:08 +0000</pubDate>
@@ -531,6 +540,15 @@
       <pubDate>Thu, 07 Aug 2014 00:00:00 +0800</pubDate>
       
       <guid>http://h12.io/tags/lexer/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Linter</title>
+      <link>http://h12.io/tags/linter/</link>
+      <pubDate>Thu, 05 Jun 2014 23:00:00 +0800</pubDate>
+      
+      <guid>http://h12.io/tags/linter/</guid>
       <description></description>
     </item>
     

@@ -238,7 +238,7 @@ Set Jira Administration -&amp;gt; System -&amp;gt; Announcement Banner -&amp;gt;
     </item>
     
     <item>
-      <title>ua: UA parser in Go</title>
+      <title>ua: User-Agent parser in Go</title>
       <link>http://h12.io/project/ua/</link>
       <pubDate>Mon, 18 Jul 2016 06:00:00 +0800</pubDate>
       
@@ -316,7 +316,7 @@ passwd exit  For public key authentication, add the public key:</description>
     </item>
     
     <item>
-      <title>SEJ: Segmented Journals</title>
+      <title>SEJ: Message Queue Based on Segmented Journals</title>
       <link>http://h12.io/project/sej/</link>
       <pubDate>Sat, 14 Nov 2015 15:00:00 +0800</pubDate>
       
@@ -721,6 +721,18 @@ Investigation The first thing I did was to read everything online about typograp
       <description>Have you ever been annoyed by accidentally touching the touchpad on your laptop when you are typing?
 I am using a Linux laptop with both trackpoint and touchpad so the touchpad is just an annoying redundant thing. Here is the one-liner to disable it:
 xinput list | grep TouchPad | grep -Po &#39;id=\K([0-9]+)&#39; | xargs xinput disable  </description>
+    </item>
+    
+    <item>
+      <title>gosweep: A shell script to do various checks on Go code</title>
+      <link>http://h12.io/project/gosweep/</link>
+      <pubDate>Thu, 05 Jun 2014 23:00:00 +0800</pubDate>
+      
+      <guid>http://h12.io/project/gosweep/</guid>
+      <description>This script performs the build, test and automatic checking of a Go package and its sub-packages using:
+ gofmt goimports golint go vet ineffassign race detector test coverage on package and its sub-packages, /vendor directories excluded goveralls gocyclo misspell  Migrated from my Gist.
+Dependencies To setup all the dependencies need to run the script do:
+$ go get -v github.com/client9/misspell/cmd/misspell $ go get -v github.com/fzipp/gocyclo $ go get -v github.</description>
     </item>
     
     <item>
