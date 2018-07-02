@@ -41,6 +41,16 @@
     </item>
     
     <item>
+      <title>Resume</title>
+      <link>http://h12.io/resume/</link>
+      <pubDate>Mon, 02 Jul 2018 00:00:00 +0000</pubDate>
+      
+      <guid>http://h12.io/resume/</guid>
+      <description>Wáng Hǎiliàng (Hal)  https://h12.io https://github.com/h12w  Highlights A software developer that has been passionate about programming for more than ten years. He has a deep understanding on backend and distributed technologies, like API protocol design, messaging systems, database engines and real-time analytics. He is also a Go expert, an open source author and contributor of dozens of projects.
+ One of the top Go developers in China  Senior architect of Tik Tok &amp;amp; Musical.</description>
+    </item>
+    
+    <item>
       <title>Krypto</title>
       <link>http://h12.io/krypto/</link>
       <pubDate>Tue, 29 May 2018 00:00:00 +0000</pubDate>
@@ -57,16 +67,6 @@
       <guid>http://h12.io/resume-zh/</guid>
       <description>https://h12.io https://github.com/h12w  软件开发深耕十余年，国内Go语言顶尖技术人才，Golang Meetup讲师，阿里SDK悬赏奖金获得者，百余项开源软件作者和积极贡献者，数据挖掘论文在悉尼ICC会议交流。对后端和分布式架构有深刻理解，如：API协议设计，消息系统，数据库引擎和实时分析等。
  中国顶级Go语言开发者  aliyun-oss-go-sdk: 赢取阿里云 OSS SDK 设计竞赛奖金 Github 超过 100个项目  后端架构和算法专家  Appcoach Market: CTR/CVR 估计模型和实时流分析 h12.io/sej: 分布式消息系统 h12.io/kpax: 2个月内成为 Kafka 专家并实现 Go 语言客户端 h12.io/html-query: 函数式 HTML DOM 提取 h12.io/buid: 分布式消息 BUID 生成器  执着写出测试正确且优雅的代码  h12.io/gspec: 并发可扩展Go测试框架 h12.io/realtest: 基于 Docker 的真实测试环境  在语法分析器和代码生成方面拥有丰富经验  h12.io/gombi: combinator-style 词法和语法分析库 h12.io/ua: User Agent 解析和和设备检测 h12.io/wipro: 解析 BNF 生成二进制协议代码 h12.io/xsd: XSD 解析生成器 h12.io/json-schema: JSON Schema 解析生成器   工作经历  Appcoach (2015 - present)</description>
-    </item>
-    
-    <item>
-      <title>Resume</title>
-      <link>http://h12.io/resume/</link>
-      <pubDate>Wed, 07 Jun 2017 14:36:53 +0000</pubDate>
-      
-      <guid>http://h12.io/resume/</guid>
-      <description>Wáng Hǎiliàng (Hal)  https://h12.io https://github.com/h12w  Highlights A software developer that has been passionate about programming for more than ten years. He has a deep understanding on backend and distributed technologies, like API protocol design, messaging systems, database engines and real-time analytics. He is also a Go expert, an open source author and contributor of dozens of projects.
- One of the top Go developers in China  aliyun-oss-go-sdk: winner in the open contest for Aliyun OSS Go SDK Open source projects exceed one hundred  Backend architecture &amp;amp; algorithm expert  Appcoach Market: CTR/CVR estimation model and real-time analytics in Go h12.</description>
     </item>
     
     <item>
