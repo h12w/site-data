@@ -6,7 +6,7 @@
     <description>Recent content in Slides on h12</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
-    <copyright>Copyright (c) 2012-2018, Wáng Hǎiliàng (Hal); all rights reserved.</copyright>
+    <copyright>Copyright (c) 2012-2018, Hǎiliàng &#34;Hal&#34; Wáng; all rights reserved.</copyright>
     <lastBuildDate>Sun, 21 Aug 2016 13:00:00 +0000</lastBuildDate>
     
 	<atom:link href="http://h12.io/slide/index.xml" rel="self" type="application/rss+xml" />
@@ -18,7 +18,7 @@
       <pubDate>Sun, 21 Aug 2016 13:00:00 +0000</pubDate>
       
       <guid>http://h12.io/slide/kpax/</guid>
-      <description>kpax a modular &amp;amp; idiomatic Kafka client in Go 21 August 2016  Wáng Hǎiliàng  Gopher at Appcoach    Introduction  About Me  Pure Gopher since 2012 Backend Lead at Appcoach https://h12.io   About Appcoach  Global mobile advertising agency founded in 2014 All backend services are written in Go http://www.appcoachs.com    Rationale   Why Kafka?  No resources to build our own messaging system from scratch :-)  Kafka has excellent design and robust implementation:  A distributed, persisted, replicated messaging system Key concepts: topic, partition, offset, retention, replication-factor, partition leader, consumer group, broker/cluster     Why yet another Go client for Kafka?</description>
+      <description>kpax a modular &amp;amp; idiomatic Kafka client in Go 21 August 2016  Hǎiliàng &amp;#34;Hal&amp;#34; Wáng  Gopher at Appcoach    Introduction  About Me  Pure Gopher since 2012 Backend Lead at Appcoach https://h12.io   About Appcoach  Global mobile advertising agency founded in 2014 All backend services are written in Go http://www.appcoachs.com    Rationale   Why Kafka?  No resources to build our own messaging system from scratch :-)  Kafka has excellent design and robust implementation:  A distributed, persisted, replicated messaging system Key concepts: topic, partition, offset, retention, replication-factor, partition leader, consumer group, broker/cluster     Why yet another Go client for Kafka?</description>
     </item>
     
   </channel>
