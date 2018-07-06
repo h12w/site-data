@@ -6,7 +6,7 @@
     <description>Recent content on h12</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
-    <copyright>Copyright (c) 2012-2018, Hǎiliàng &#34;Hal&#34; Wáng; all rights reserved.</copyright>
+    <copyright>Copyright (c) 2012-2018, Hǎi-Liàng &#34;Hal&#34; Wáng; all rights reserved.</copyright>
     <lastBuildDate>Thu, 10 Jul 2014 03:06:35 +0000</lastBuildDate>
     
 	<atom:link href="http://h12.io/index.xml" rel="self" type="application/rss+xml" />
@@ -46,7 +46,7 @@
       <pubDate>Mon, 02 Jul 2018 00:00:00 +0000</pubDate>
       
       <guid>http://h12.io/resume/</guid>
-      <description>Hǎiliàng &amp;ldquo;Hal&amp;rdquo; Wáng  https://h12.io https://github.com/h12w  Highlights A software developer that has been passionate about programming for more than ten years. He has a deep understanding on backend and distributed technologies, like API protocol design, messaging systems, database engines and real-time analytics. He is also a Go expert, an open source author and contributor of dozens of projects.
+      <description>Hǎi-Liàng &amp;ldquo;Hal&amp;rdquo; Wáng  https://h12.io https://github.com/h12w  Highlights A software developer that has been passionate about programming for more than ten years. He has a deep understanding on backend and distributed technologies, like API protocol design, messaging systems, database engines and real-time analytics. He is also a Go expert, an open source author and contributor of dozens of projects.
  One of the top Go developers in China  Senior architect at Tik Tok &amp;amp; Musical.</description>
     </item>
     
@@ -84,7 +84,7 @@
       <pubDate>Mon, 30 Jun 2014 00:00:00 +0000</pubDate>
       
       <guid>http://h12.io/bsd/</guid>
-      <description>Copyright &amp;copy; 2012-2018, Hǎiliàng &amp;ldquo;Hal&amp;rdquo; Wáng. All rights reserved.
+      <description>Copyright &amp;copy; 2012-2018, Hǎi-Liàng &amp;ldquo;Hal&amp;rdquo; Wáng. All rights reserved.
 Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met:
  Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer. Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution.</description>
     </item>
@@ -95,7 +95,7 @@ Redistribution and use in source and binary forms, with or without modification,
       <pubDate>Thu, 29 May 2014 11:01:21 +0000</pubDate>
       
       <guid>http://h12.io/about/</guid>
-      <description>The Author Hǎiliàng &amp;ldquo;Hal&amp;rdquo; Wáng is a software developer that has been passionate about programming for more than ten years. He is an open source author and contributor of dozens of projects. You can reach him by email at &amp;#119;&amp;#064;&amp;#104;&amp;#049;&amp;#050;&amp;#046;&amp;#105;&amp;#111;.
+      <description>The Author Hǎi-Liàng &amp;ldquo;Hal&amp;rdquo; Wáng is a software developer that has been passionate about programming for more than ten years. He is an open source author and contributor of dozens of projects. You can reach him by email at &amp;#119;&amp;#064;&amp;#104;&amp;#049;&amp;#050;&amp;#046;&amp;#105;&amp;#111;.
 This Site Tools  Container: Docker CSS: Sass, Compass &amp;amp; Susy Font: Google Fonts Icon: Font Awesome &amp;amp; Fontello Image editting: Inkscape, GIMP &amp;amp; OptiPNG Resource loading: HeadJS Static page generator: Hugo Syntax highlight: Highlight.</description>
     </item>
     
@@ -216,7 +216,7 @@ Set Jira Administration -&amp;gt; System -&amp;gt; Announcement Banner -&amp;gt;
       <pubDate>Sun, 21 Aug 2016 13:00:00 +0000</pubDate>
       
       <guid>http://h12.io/slide/kpax/</guid>
-      <description>kpax a modular &amp;amp; idiomatic Kafka client in Go 21 August 2016  Hǎiliàng &amp;#34;Hal&amp;#34; Wáng  Gopher at Appcoach    Introduction  About Me  Pure Gopher since 2012 Backend Lead at Appcoach https://h12.io   About Appcoach  Global mobile advertising agency founded in 2014 All backend services are written in Go http://www.appcoachs.com    Rationale   Why Kafka?  No resources to build our own messaging system from scratch :-)  Kafka has excellent design and robust implementation:  A distributed, persisted, replicated messaging system Key concepts: topic, partition, offset, retention, replication-factor, partition leader, consumer group, broker/cluster     Why yet another Go client for Kafka?</description>
+      <description>kpax a modular &amp;amp; idiomatic Kafka client in Go 21 August 2016  Hǎi-Liàng &amp;#34;Hal&amp;#34; Wáng  Gopher at Appcoach    Introduction  About Me  Pure Gopher since 2012 Backend Lead at Appcoach https://h12.io   About Appcoach  Global mobile advertising agency founded in 2014 All backend services are written in Go http://www.appcoachs.com    Rationale   Why Kafka?  No resources to build our own messaging system from scratch :-)  Kafka has excellent design and robust implementation:  A distributed, persisted, replicated messaging system Key concepts: topic, partition, offset, retention, replication-factor, partition leader, consumer group, broker/cluster     Why yet another Go client for Kafka?</description>
     </item>
     
     <item>
