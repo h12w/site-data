@@ -51,6 +51,7 @@ packages:
   mitm:
   mongodb-json:
   mongoschema:
+  practice:
   realtest:
   retracer:
   schemata:
