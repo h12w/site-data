@@ -51,6 +51,7 @@ packages:
   mitm:
   mongodb-json:
   mongoschema:
+  msa:
   practice:
   realtest:
   retracer:
@@ -58,6 +59,7 @@ packages:
   script:
   sej:
   site:
+  sited:
   snippets:
   socks:
   state:

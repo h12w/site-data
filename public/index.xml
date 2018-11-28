@@ -56,7 +56,7 @@
       <pubDate>Tue, 29 May 2018 00:00:00 +0000</pubDate>
       
       <guid>http://h12.io/krypto/</guid>
-      <description>  function krypto_run() { koutput = document.getElementById(&#34;koutput&#34;); kinput = document.getElementById(&#34;kinput&#34;); koutput.value = JSMain(kinput.value); koutput.style.height = (koutput.scrollHeight)+&#34;px&#34;; }   #kinput, #koutput { display: block; margin-left: auto; margin-right: auto; font-size: .89474rem; height: 1.25rem; font-family: Menlo,Consolas,&#34;Ubuntu Mono&#34;,monospace,sans; background-color: #1a1a1a; color: #d9d9d9; } #kbutton { display: block; margin-left: auto; margin-right: auto; margin-top: 0.5rem; margin-bottom: 0.5rem; border: none; background-color: #4CAF50; color: white; padding: 15px 32px; text-align: center; text-decoration: none; font-size: 1rem; font-family: Alegreya,sans-serif; }  6 9 9 10 24 9/6*10+9 </description>
+      <description>   function krypto_run() { koutput = document.getElementById(&#34;koutput&#34;); kinput = document.getElementById(&#34;kinput&#34;); koutput.value = JSMain(kinput.value); koutput.style.height = (koutput.scrollHeight)+&#34;px&#34;; }   #kinput, #koutput { display: block; margin-left: auto; margin-right: auto; font-size: .89474rem; height: 1.25rem; font-family: Menlo,Consolas,&#34;Ubuntu Mono&#34;,monospace,sans; background-color: #1a1a1a; color: #d9d9d9; } #kbutton { display: block; margin-left: auto; margin-right: auto; margin-top: 0.5rem; margin-bottom: 0.5rem; border: none; background-color: #4CAF50; color: white; padding: 15px 32px; text-align: center; text-decoration: none; font-size: 1rem; font-family: Alegreya,sans-serif; }  6 9 9 10 24 9/6*10+9 </description>
     </item>
     
     <item>
@@ -75,7 +75,7 @@
       <pubDate>Sat, 05 Jul 2014 00:00:00 +0000</pubDate>
       
       <guid>http://h12.io/search/</guid>
-      <description> (function() { var cx = &#39;014669057665099905978:mgo7b8sc23g&#39;; var gcse = document.createElement(&#39;script&#39;); gcse.type = &#39;text/javascript&#39;; gcse.async = true; gcse.src = &#39;https://cse.google.com/cse.js?cx=&#39; + cx; var s = document.getElementsByTagName(&#39;script&#39;)[0]; s.parentNode.insertBefore(gcse, s); })();   </description>
+      <description>  (function() { var cx = &#39;014669057665099905978:mgo7b8sc23g&#39;; var gcse = document.createElement(&#39;script&#39;); gcse.type = &#39;text/javascript&#39;; gcse.async = true; gcse.src = &#39;https://cse.google.com/cse.js?cx=&#39; + cx; var s = document.getElementsByTagName(&#39;script&#39;)[0]; s.parentNode.insertBefore(gcse, s); })();   </description>
     </item>
     
     <item>
@@ -753,7 +753,10 @@ type golangBlogEntry struct { Title string URL string Tags *string } type golang
       
       <guid>http://h12.io/project/gspec/</guid>
       <description>&lt;p&gt;&lt;a href=&#34;https://app.wercker.com/project/bykey/d5ed30f0d03d4a5210f65659ead13888&#34;&gt;&lt;img src=&#34;https://app.wercker.com/status/d5ed30f0d03d4a5210f65659ead13888/s&#34; alt=&#34;wercker status&#34; title=&#34;wercker status&#34; /&gt;&lt;/a&gt;
-&lt;a href=&#34;https://godoc.org/h12.io/gspec&#34;&gt;&lt;img src=&#34;https://godoc.org/h12.io/gspec?status.png&#34; alt=&#34;GoDoc&#34; /&gt;&lt;/a&gt;&lt;/p&gt;</description>
+&lt;a href=&#34;https://godoc.org/h12.io/gspec&#34;&gt;&lt;img src=&#34;https://godoc.org/h12.io/gspec?status.png&#34; alt=&#34;GoDoc&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;GSpec is an &lt;em&gt;expressive, reliable, concurrent and extensible&lt;/em&gt; Go test framework
+that makes it productive to organize and verify the mind model of software.&lt;/p&gt;</description>
     </item>
     
     <item>
