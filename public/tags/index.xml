@@ -393,9 +393,18 @@
     <item>
       <title>Golang</title>
       <link>http://h12.io/tags/golang/</link>
-      <pubDate>Wed, 28 Feb 2018 13:38:45 +0800</pubDate>
+      <pubDate>Fri, 14 Dec 2018 00:00:00 +0000</pubDate>
       
       <guid>http://h12.io/tags/golang/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Goroutine</title>
+      <link>http://h12.io/tags/goroutine/</link>
+      <pubDate>Fri, 14 Dec 2018 00:00:00 +0000</pubDate>
+      
+      <guid>http://h12.io/tags/goroutine/</guid>
       <description></description>
     </item>
     
@@ -657,6 +666,15 @@
       <pubDate>Sat, 27 Feb 2016 14:59:54 +0800</pubDate>
       
       <guid>http://h12.io/tags/openwrt/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Orchestration</title>
+      <link>http://h12.io/tags/orchestration/</link>
+      <pubDate>Fri, 14 Dec 2018 00:00:00 +0000</pubDate>
+      
+      <guid>http://h12.io/tags/orchestration/</guid>
       <description></description>
     </item>
     

@@ -7,10 +7,21 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
     <copyright>Copyright (c) 2012-2018, Hǎi-Liàng &#34;Hal&#34; Wáng; all rights reserved.</copyright>
-    <lastBuildDate>Wed, 28 Feb 2018 13:38:45 +0800</lastBuildDate>
+    <lastBuildDate>Fri, 14 Dec 2018 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="http://h12.io/tags/golang/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>h12.io/run: Graceful Goroutine Orchestration</title>
+      <link>http://h12.io/project/run/</link>
+      <pubDate>Fri, 14 Dec 2018 00:00:00 +0000</pubDate>
+      
+      <guid>http://h12.io/project/run/</guid>
+      <description>Overview While Go provides goroutines, channels and selects as first-class citizens to support concurrent programming, it is not trivial to combine these elements to address important concerns of goroutine orchestration, e.g. error handling, panic recovery, goroutine leak prevention, goroutine reuse, goroutine throttle and logging.
+The package provides a mini-framework to address those cross-cutting concerns.
+Quick start go get -u h12.io/run  Here is an example illustrating the usage of the goroutine pool and the group.</description>
+    </item>
     
     <item>
       <title>Pagination Done Right</title>

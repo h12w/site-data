@@ -75,6 +75,106 @@
         
             <article class="frontpage">
                 <h1>
+                    <a href="http://h12.io/project/ua/">ua: User-Agent parser in Go</a>
+                    <span class="line"></span>
+                </h1>
+                <span class="time">18 July 2016</span>
+                <div class="article-body hyphenate">
+                    
+
+<h2 id="design">Design</h2>
+
+<p>The UA detection algorithm is a pipeline containing 3 steps:</p>
+
+<ol>
+<li>Scan: scan products and its corresponding comments from a UA string.</li>
+<li>Parse: parse device info from products.</li>
+<li>Detect: detect device model by looking up in a database and get related info, e.g. screen resolution.</li>
+</ol>
+
+<h3 id="scan">Scan</h3>
+
+<p>The scanner scans the user agent string into products. Each product has its own name, version and comments. e.g.</p>
+
+<p>For user agent string:</p>
+
+<pre><code>Mozilla/5.0 (Linux; U; Android ROM v3; en-us; ALCATEL ONE TOUCH 991 Build/GRK39F) AppleWebKit/533.1 (KHTML, like Gecko) Version/4.0 Mobile Safari/533.1
+</code></pre>
+
+<p>Its products are:</p>
+
+<ul>
+<li>Mozilla/5.0
+
+<ul>
+<li>Linux</li>
+<li>U</li>
+<li>Android ROM v3</li>
+<li>en-us</li>
+<li>ALCATEL ONE TOUCH 991 Build/GRK39F</li>
+</ul></li>
+<li>AppleWebKit/533.1
+
+<ul>
+<li>KHTML, like Gecko</li>
+</ul></li>
+<li>Version/4.0</li>
+<li>Mobile</li>
+<li>Safari/533.1</li>
+</ul>
+
+<h3 id="parse">Parse</h3>
+
+<p>The parser then parses the scanned products and fill the information into a Device struct, e.g.</p>
+
+<pre><code>Mozilla:  5.0
+Linux:    true
+Security: U
+Android:  ROM v3
+Locale:   en-us
+Model:    ALCATEL ONE TOUCH 991
+Build:    GRK39F
+Webkit:   533.1
+Version:  4.0
+Mobile:   true
+Safari:   533.1
+</code></pre>
+
+<h3 id="detect">Detect</h3>
+
+<p>The detector is then able to use the parsed Device structure to detect the device type &amp; related info: vendor, screen resolution, tablet-or-not, etc, by searching in a device database.</p>
+
+<h2 id="design-goals">Design Goals</h2>
+
+<h3 id="accuracy">Accuracy</h3>
+
+<p>The accuracy of the detection is determined by the completeness of the device database, then we might have to migrate the data from multiple sources. Automatic tests will be adapted from those resources.</p>
+
+<h2 id="references">References</h2>
+
+<h3 id="detectors">Detectors</h3>
+
+<ul>
+<li><a href="wurfl.sourceforge.net">WURFL</a></li>
+<li><a href="http://www.handsetdetection.com">HandsetDetection</a></li>
+<li><a href="https://devicemap.apache.org">DeviceMap</a></li>
+<li><a href="https://github.com/serbanghita/Mobile-Detect">Mobile-Detect</a></li>
+<li><a href="https://github.com/piwik/device-detector">Device-Detector</a></li>
+<li><a href="https://github.com/dmolsen/Detector">Detector</a>.</li>
+</ul>
+
+<h3 id="parsers">Parsers</h3>
+
+<ul>
+<li><a href="https://github.com/mssola/user_agent">user agent</a></li>
+<li><a href="https://github.com/varstr/uaparser">uaparser</a></li>
+</ul>
+
+                </div>
+            </article>
+        
+            <article class="frontpage">
+                <h1>
                     <a href="http://h12.io/note/manager-faq/">A Manager&#39;s FAQ</a>
                     <span class="line"></span>
                 </h1>
@@ -333,163 +433,6 @@ func main() {
 <li><a href="http://blog.ralch.com/tutorial/golang-ssh-connection/">SSH Client connection in Golang</a></li>
 <li><a href="http://kukuruku.co/hub/golang/ssh-commands-execution-on-hundreds-of-servers-via-go">Using Go to Execute Commands on Hundreds of Servers with SSH</a></li>
 </ul>
-
-                </div>
-            </article>
-        
-            <article class="frontpage">
-                <h1>
-                    <a href="http://h12.io/project/sej/">SEJ: Message Queue Based on Segmented Journals</a>
-                    <span class="line"></span>
-                </h1>
-                <span class="time">14 November 2015</span>
-                <div class="article-body hyphenate">
-                    
-
-<p><code>h12.io/sej</code> provides composable components of distributed, persisted message queue and allows trading off between reliablilty, latency and throughput with minimal devops overhead.</p>
-
-<h2 id="package-organization">Package Organization</h2>
-
-<ul>
-<li>h12.io/sej: writer, scanner and offset
-
-<ul>
-<li>shard: sharding</li>
-<li>hub: copying across machines</li>
-<li>cmd/sej: command line tool</li>
-</ul></li>
-</ul>
-
-<h2 id="sej-directory">SEJ Directory</h2>
-
-<pre><code>[root-dir]/
-    [sej-dir]/
-        jnl.lck
-        jnl/
-            0000000000000000.jnl
-            000000001f9e521e.jnl
-            ......
-        ofs/
-            reader1.ofs
-            reader1.lck
-            reader2.ofs
-            reader2.lck
-            ......
-</code></pre>
-
-<h2 id="journal-file-format">Journal File format</h2>
-
-<pre><code>segment_file = { message }                          .
-message      = offset timestamp type key value size .
-offset       = uint64                               .
-timestamp    = int64                                .
-type         = uint8                                .
-key          = key_size { uint8 }                   .
-key_size     = int8                                 .
-value        = value_size { uint8 }                 .
-value_size   = int32                                .
-size         = int32                                .
-</code></pre>
-
-<p>All integers are written in the big endian format.</p>
-
-<table>
-<thead>
-<tr>
-<th>name</th>
-<th>description</th>
-</tr>
-</thead>
-
-<tbody>
-<tr>
-<td>offset</td>
-<td>the position of the message in the queue</td>
-</tr>
-
-<tr>
-<td>timestamp</td>
-<td>the timestamp represented in nanoseconds since Unix Epoch</td>
-</tr>
-
-<tr>
-<td>type</td>
-<td>an int8 value that could be used to indicate the type of the message</td>
-</tr>
-
-<tr>
-<td>key</td>
-<td>the encoded key</td>
-</tr>
-
-<tr>
-<td>value</td>
-<td>the encoded value</td>
-</tr>
-
-<tr>
-<td>size</td>
-<td>the size of the whole message including itself, allowing reading backward</td>
-</tr>
-</tbody>
-</table>
-
-<h2 id="writer">Writer</h2>
-
-<ul>
-<li>Append from the last offset in segmented journal files</li>
-<li>File lock to prevent other writers from opening the journal files</li>
-<li>Startup corruption detection &amp; truncation</li>
-</ul>
-
-<h2 id="scanner">Scanner</h2>
-
-<ul>
-<li>Read from an offset in segmented journal files</li>
-<li>Change monitoring
-
-<ul>
-<li>directory</li>
-<li>file append</li>
-</ul></li>
-<li>Handle incomplete last message</li>
-<li>Truncation detection &amp; fail fast</li>
-<li>Timeout</li>
-</ul>
-
-<h2 id="offset">Offset</h2>
-
-<ul>
-<li>First/last offset</li>
-<li>Offset persistence</li>
-</ul>
-
-<h2 id="sharding">Sharding</h2>
-
-<pre><code>[root-dir]/
-    [shard0]/
-    [shard1]/
-    ......
-</code></pre>
-
-<p>Each shard directory is a SEJ directory with a name in the form of <code>[prefix].[shard-bit].[shard-index]</code>.</p>
-
-<ul>
-<li>prefix must satisfy [a-zA-Z0-9_-]*</li>
-<li>when prefix is empty, <code>[prefix].</code> including the dot is omitted</li>
-<li>shard-bit: 1, 2, &hellip;, 9, a</li>
-<li>shard-index: 000, 001, &hellip;, 3ff</li>
-</ul>
-
-<h2 id="hub">Hub</h2>
-
-<pre><code>[root-dir]/
-    [client-id0].[shard0]/
-    [client-id1].[shard0]/
-    ......
-</code></pre>
-
-<p>client-dir is the SEJ directory name belonging to a client.</p>
 
                 </div>
             </article>

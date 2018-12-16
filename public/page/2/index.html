@@ -75,6 +75,21 @@
         
             <article class="frontpage">
                 <h1>
+                    <a href="http://h12.io/note/delete-git-branch/">How to Delete a Git Branch</a>
+                    <span class="line"></span>
+                </h1>
+                <span class="time">9 June 2017</span>
+                <div class="article-body hyphenate">
+                    <pre><code class="language-bash">git fetch       --prune  origin
+git branch      --delete [branch-name]
+git push origin --delete [branch-name]
+</code></pre>
+
+                </div>
+            </article>
+        
+            <article class="frontpage">
+                <h1>
                     <a href="http://h12.io/note/download-website/">A Single Command to Download a Website</a>
                     <span class="line"></span>
                 </h1>
@@ -204,106 +219,6 @@ cut -c9- &gt; words_desc.txt
                     <ul>
 <li>Mobi Format Description: <a href="http://wiki.mobileread.com/wiki/MOBI">http://wiki.mobileread.com/wiki/MOBI</a></li>
 <li>Python lib: <a href="https://github.com/kroo/mobi-python">https://github.com/kroo/mobi-python</a></li>
-</ul>
-
-                </div>
-            </article>
-        
-            <article class="frontpage">
-                <h1>
-                    <a href="http://h12.io/project/ua/">ua: User-Agent parser in Go</a>
-                    <span class="line"></span>
-                </h1>
-                <span class="time">18 July 2016</span>
-                <div class="article-body hyphenate">
-                    
-
-<h2 id="design">Design</h2>
-
-<p>The UA detection algorithm is a pipeline containing 3 steps:</p>
-
-<ol>
-<li>Scan: scan products and its corresponding comments from a UA string.</li>
-<li>Parse: parse device info from products.</li>
-<li>Detect: detect device model by looking up in a database and get related info, e.g. screen resolution.</li>
-</ol>
-
-<h3 id="scan">Scan</h3>
-
-<p>The scanner scans the user agent string into products. Each product has its own name, version and comments. e.g.</p>
-
-<p>For user agent string:</p>
-
-<pre><code>Mozilla/5.0 (Linux; U; Android ROM v3; en-us; ALCATEL ONE TOUCH 991 Build/GRK39F) AppleWebKit/533.1 (KHTML, like Gecko) Version/4.0 Mobile Safari/533.1
-</code></pre>
-
-<p>Its products are:</p>
-
-<ul>
-<li>Mozilla/5.0
-
-<ul>
-<li>Linux</li>
-<li>U</li>
-<li>Android ROM v3</li>
-<li>en-us</li>
-<li>ALCATEL ONE TOUCH 991 Build/GRK39F</li>
-</ul></li>
-<li>AppleWebKit/533.1
-
-<ul>
-<li>KHTML, like Gecko</li>
-</ul></li>
-<li>Version/4.0</li>
-<li>Mobile</li>
-<li>Safari/533.1</li>
-</ul>
-
-<h3 id="parse">Parse</h3>
-
-<p>The parser then parses the scanned products and fill the information into a Device struct, e.g.</p>
-
-<pre><code>Mozilla:  5.0
-Linux:    true
-Security: U
-Android:  ROM v3
-Locale:   en-us
-Model:    ALCATEL ONE TOUCH 991
-Build:    GRK39F
-Webkit:   533.1
-Version:  4.0
-Mobile:   true
-Safari:   533.1
-</code></pre>
-
-<h3 id="detect">Detect</h3>
-
-<p>The detector is then able to use the parsed Device structure to detect the device type &amp; related info: vendor, screen resolution, tablet-or-not, etc, by searching in a device database.</p>
-
-<h2 id="design-goals">Design Goals</h2>
-
-<h3 id="accuracy">Accuracy</h3>
-
-<p>The accuracy of the detection is determined by the completeness of the device database, then we might have to migrate the data from multiple sources. Automatic tests will be adapted from those resources.</p>
-
-<h2 id="references">References</h2>
-
-<h3 id="detectors">Detectors</h3>
-
-<ul>
-<li><a href="wurfl.sourceforge.net">WURFL</a></li>
-<li><a href="http://www.handsetdetection.com">HandsetDetection</a></li>
-<li><a href="https://devicemap.apache.org">DeviceMap</a></li>
-<li><a href="https://github.com/serbanghita/Mobile-Detect">Mobile-Detect</a></li>
-<li><a href="https://github.com/piwik/device-detector">Device-Detector</a></li>
-<li><a href="https://github.com/dmolsen/Detector">Detector</a>.</li>
-</ul>
-
-<h3 id="parsers">Parsers</h3>
-
-<ul>
-<li><a href="https://github.com/mssola/user_agent">user agent</a></li>
-<li><a href="https://github.com/varstr/uaparser">uaparser</a></li>
 </ul>
 
                 </div>

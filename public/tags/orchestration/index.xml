@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Orchestration on Hai-Liang &#34;Hal&#34; Wang</title>
+    <link>http://h12.io/tags/orchestration/</link>
+    <description>Recent content in Orchestration on Hai-Liang &#34;Hal&#34; Wang</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-US</language>
+    <copyright>Copyright (c) 2012-2018, Hǎi-Liàng &#34;Hal&#34; Wáng; all rights reserved.</copyright>
+    <lastBuildDate>Fri, 14 Dec 2018 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="http://h12.io/tags/orchestration/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>h12.io/run: Graceful Goroutine Orchestration</title>
+      <link>http://h12.io/project/run/</link>
+      <pubDate>Fri, 14 Dec 2018 00:00:00 +0000</pubDate>
+      
+      <guid>http://h12.io/project/run/</guid>
+      <description>Overview While Go provides goroutines, channels and selects as first-class citizens to support concurrent programming, it is not trivial to combine these elements to address important concerns of goroutine orchestration, e.g. error handling, panic recovery, goroutine leak prevention, goroutine reuse, goroutine throttle and logging.
+The package provides a mini-framework to address those cross-cutting concerns.
+Quick start go get -u h12.io/run  Here is an example illustrating the usage of the goroutine pool and the group.</description>
+    </item>
+    
+  </channel>
+</rss>
