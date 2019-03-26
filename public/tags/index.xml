@@ -310,6 +310,15 @@
     </item>
     
     <item>
+      <title>Frontend</title>
+      <link>http://h12.io/tags/frontend/</link>
+      <pubDate>Fri, 15 Feb 2019 14:08:01 +0000</pubDate>
+      
+      <guid>http://h12.io/tags/frontend/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>Fsync</title>
       <link>http://h12.io/tags/fsync/</link>
       <pubDate>Sat, 02 Jul 2016 19:03:40 +0800</pubDate>
@@ -369,6 +378,15 @@
       <pubDate>Sun, 31 Jan 2016 20:31:06 +0800</pubDate>
       
       <guid>http://h12.io/tags/gmail/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Go</title>
+      <link>http://h12.io/tags/go/</link>
+      <pubDate>Tue, 12 Feb 2019 11:32:07 +0000</pubDate>
+      
+      <guid>http://h12.io/tags/go/</guid>
       <description></description>
     </item>
     
@@ -486,6 +504,15 @@
       <pubDate>Fri, 20 Apr 2018 10:14:06 +0800</pubDate>
       
       <guid>http://h12.io/tags/iterm2/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Javascript</title>
+      <link>http://h12.io/tags/javascript/</link>
+      <pubDate>Fri, 15 Feb 2019 14:08:01 +0000</pubDate>
+      
+      <guid>http://h12.io/tags/javascript/</guid>
       <description></description>
     </item>
     
@@ -783,6 +810,15 @@
       <pubDate>Mon, 20 Jan 2014 01:49:08 +0000</pubDate>
       
       <guid>http://h12.io/tags/query/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>React</title>
+      <link>http://h12.io/tags/react/</link>
+      <pubDate>Fri, 15 Feb 2019 14:08:01 +0000</pubDate>
+      
+      <guid>http://h12.io/tags/react/</guid>
       <description></description>
     </item>
     

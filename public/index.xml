@@ -100,6 +100,28 @@ This Site Tools  Container: Docker CSS: Sass, Compass &amp;amp; Susy Font: Googl
     </item>
     
     <item>
+      <title>Learning Frontend</title>
+      <link>http://h12.io/note/learn-frontend/</link>
+      <pubDate>Fri, 15 Feb 2019 14:08:01 +0000</pubDate>
+      
+      <guid>http://h12.io/note/learn-frontend/</guid>
+      <description> Vanilla JavaScript React Emotion  </description>
+    </item>
+    
+    <item>
+      <title>JavaScript Surprises to a Go Developer</title>
+      <link>http://h12.io/note/js-surprises/</link>
+      <pubDate>Tue, 12 Feb 2019 11:32:07 +0000</pubDate>
+      
+      <guid>http://h12.io/note/js-surprises/</guid>
+      <description>The scope of var is wrong Never use var to declare variables, use let instead.
+REF
+== is conversion and comparison What you really need is ===, which is similar to comparing two interface{}.
+=== is shallow {a:1}==={a:1} is false, while Go struct with string are compared by contents (but not for slice).
+Also this affects map key comparison. So object key is not so useful in JS as struct key in Go.</description>
+    </item>
+    
+    <item>
       <title>Run: Graceful Goroutine Orchestration</title>
       <link>http://h12.io/project/run/</link>
       <pubDate>Fri, 14 Dec 2018 00:00:00 +0000</pubDate>
