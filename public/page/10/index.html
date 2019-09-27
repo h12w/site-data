@@ -75,6 +75,25 @@
         
             <article class="frontpage">
                 <h1>
+                    <a href="http://h12.io/note/disable-touchpad/">How to Disable the Touchpad in Linux?</a>
+                    <span class="line"></span>
+                </h1>
+                <span class="time">10 June 2014</span>
+                <div class="article-body hyphenate">
+                    <p>Have you ever been annoyed by accidentally touching the touchpad on your laptop
+when you are typing?</p>
+
+<p>I am using a Linux laptop with both trackpoint and touchpad so the touchpad is
+just an annoying redundant thing. Here is the one-liner to disable it:</p>
+
+<pre><code class="language-bash">xinput list | grep TouchPad | grep -Po 'id=\K([0-9]+)' | xargs xinput disable
+</code></pre>
+
+                </div>
+            </article>
+        
+            <article class="frontpage">
+                <h1>
                     <a href="http://h12.io/project/gosweep/">gosweep: A shell script to do various checks on Go code</a>
                     <span class="line"></span>
                 </h1>
@@ -669,45 +688,6 @@ Schema learner, such as &ldquo;github.com/kore/XML-Schema-learner&rdquo;.</p>
                 </div>
             </article>
         
-            <article class="frontpage">
-                <h1>
-                    <a href="http://h12.io/project/socks/">SOCKS: a SOCKS Proxy Package for Go</a>
-                    <span class="line"></span>
-                </h1>
-                <span class="time">1 August 2012</span>
-                <div class="article-body hyphenate">
-                    
-
-<p><a href="https://godoc.org/h12.io/socks"><img src="https://godoc.org/h12.io/socks?status.svg" alt="GoDoc" /></a></p>
-
-<p>SOCKS is a SOCKS4, SOCKS4A and SOCKS5 proxy package for Go.</p>
-
-<h2 id="quick-start">Quick Start</h2>
-
-<h3 id="get-the-package">Get the package</h3>
-
-<pre><code>go get -u &quot;h12.io/socks&quot;
-</code></pre>
-
-<h3 id="import-the-package">Import the package</h3>
-
-<pre><code>import &quot;h12.io/socks&quot;
-</code></pre>
-
-<h3 id="create-a-socks-proxy-dialing-function">Create a SOCKS proxy dialing function</h3>
-
-<pre><code>dialSocksProxy := socks.DialSocksProxy(socks.SOCKS5, &quot;127.0.0.1:1080&quot;)
-tr := &amp;http.Transport{Dial: dialSocksProxy}
-httpClient := &amp;http.Client{Transport: tr}
-</code></pre>
-
-<h2 id="alternatives">Alternatives</h2>
-
-<p><a href="http://code.google.com/p/go/source/browse/?repo=net#hg%2Fproxy">http://code.google.com/p/go/source/browse/?repo=net#hg%2Fproxy</a></p>
-
-                </div>
-            </article>
-        
         <nav class="pagination">
             <span>- 10 -</span>
             <ul>
@@ -718,7 +698,7 @@ httpClient := &amp;http.Client{Transport: tr}
                 </li>
                 <li>
             
-                    <span class="disabled">Next »</span>
+                    <a href="/page/11">Next »</a>
             
                 </li>
             </ul>

@@ -7,10 +7,21 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
     <copyright>Copyright (c) 2012-2018, Hǎi-Liàng &#34;Hal&#34; Wáng; all rights reserved.</copyright>
-    <lastBuildDate>Fri, 15 Feb 2019 14:08:01 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 27 Sep 2019 13:58:41 +0100</lastBuildDate>
     
 	<atom:link href="http://h12.io/note/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Go vs Python</title>
+      <link>http://h12.io/note/go-vs-python/</link>
+      <pubDate>Fri, 27 Sep 2019 13:58:41 +0100</pubDate>
+      
+      <guid>http://h12.io/note/go-vs-python/</guid>
+      <description>Slices Go slice and Python slice have very similar syntax, but Python slice is a shallow copy of part of the original list, while Go slice is just a new range within the same underlying array of the original slice.
+Let&amp;rsquo;s try:
+a = [1, 2, 3] b = a[:2] b[0] = 9 print(a) print(b) # output: # [1, 2, 3] # [9, 2]  See a[0] remains the same.</description>
+    </item>
     
     <item>
       <title>Learning Frontend</title>

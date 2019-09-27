@@ -75,6 +75,22 @@
         
             <article class="frontpage">
                 <h1>
+                    <a href="http://h12.io/note/remove-all-exited-docker-containers/">How to Remove All Exited Containers &amp; Dangling Images for Docker?</a>
+                    <span class="line"></span>
+                </h1>
+                <span class="time">3 August 2015</span>
+                <div class="article-body hyphenate">
+                    <pre><code class="language-bash">docker ps --quiet --filter=status=exited | xargs docker rm
+</code></pre>
+
+<pre><code class="language-bash">docker images --no-trunc=true --filter=&quot;dangling=true&quot; --quiet=true | xargs docker rmi
+</code></pre>
+
+                </div>
+            </article>
+        
+            <article class="frontpage">
+                <h1>
                     <a href="http://h12.io/project/kpax/">kpax: a modular &amp; idiomatic Kafka client in Go</a>
                     <span class="line"></span>
                 </h1>
@@ -464,23 +480,6 @@ if v.Kind() == reflect.String {
     ebook-convert xxx.mobi xxx.txt --unsmarten-punctuation
 </code></pre></li>
 </ul>
-
-                </div>
-            </article>
-        
-            <article class="frontpage">
-                <h1>
-                    <a href="http://h12.io/project/schemata/">Schemata: database scheme extractor &amp; code generator in Go</a>
-                    <span class="line"></span>
-                </h1>
-                <span class="time">19 May 2015</span>
-                <div class="article-body hyphenate">
-                    <p>Database scheme extractor &amp; code generator in Go. Supported database:</p>
-
-<ol>
-<li>MySQL</li>
-<li>SQLite</li>
-</ol>
 
                 </div>
             </article>

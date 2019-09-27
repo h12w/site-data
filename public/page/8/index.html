@@ -75,6 +75,37 @@
         
             <article class="frontpage">
                 <h1>
+                    <a href="http://h12.io/note/301-redirect/">About 301 Moved Permanently</a>
+                    <span class="line"></span>
+                </h1>
+                <span class="time">25 July 2014</span>
+                <div class="article-body hyphenate">
+                    <p>When building a website, there is one inevitable thing:
+<a href="http://en.wikipedia.org/wiki/HTTP_301">301 permanent redirection</a>. The cases
+that have to involve 301 includes:</p>
+
+<ul>
+<li>Redirection from www subdomain to naked domain or vise versa.</li>
+<li>Redirection from slashed pretty URL to unslashed URL or vise versa.</li>
+</ul>
+
+<p>301 is easy to implement with Go:</p>
+
+<pre><code class="language-go">func redirect301(w http.ResponseWriter, url string) {
+    w.Header().Set(&quot;Location&quot;, url)
+    w.WriteHeader(http.StatusMovedPermanently)
+}
+</code></pre>
+
+<p>There is one more thing that needs attention: The root path of a domain always
+contains a slash (GET / in HTTP request), regardless the user enters the slash
+or not, so the root path needs no redirection.</p>
+
+                </div>
+            </article>
+        
+            <article class="frontpage">
+                <h1>
                     <a href="http://h12.io/article/pagespeed-insights/">How to Achieve a Perfect PageSpeed Insights Score</a>
                     <span class="line"></span>
                 </h1>
@@ -315,46 +346,6 @@ which can automatically add hinting to font files.</p>
 
 <p>There is a <a href="http://pixelsvsbytes.com/blog/2013/11/how-to-create-perfect-web-fonts-in-3-steps/">tutorial</a>,
 and an online tool called <a href="http://fontie.flowyapps.com/">Fontie</a>.</p>
-
-                </div>
-            </article>
-        
-            <article class="frontpage">
-                <h1>
-                    <a href="http://h12.io/note/serve-static/">Serving Static Pages on App Engine with Go</a>
-                    <span class="line"></span>
-                </h1>
-                <span class="time">6 July 2014</span>
-                <div class="article-body hyphenate">
-                    <p>It is straightforward to serve static pages with <a href="http://golang.org/pkg/net/http/">Go</a>
-or <a href="https://developers.google.com/appengine/docs/go/config/appconfig">config file</a>
-on App Engine, but how to serve static pages on App Engine with Go?</p>
-
-<p>I got the following error when I tried to customize the 404 page with Go:</p>
-
-<pre><code>No such file or directory
-</code></pre>
-
-<p>The solution turns out to be simple: do not do both.</p>
-
-<p>The file will not be accessible to Go if there is already a rule for it in
-config.yaml. Remove the rule from config.yaml and the file will be available to
-Go again (source:
-<a href="https://groups.google.com/d/msg/google-appengine-go/DmfDPUBkmrg/SvJ1dwjC0_EJ">google-appengine-go</a>).</p>
-
-<p>Here is an exmaple to serve a custom 404 not found page:</p>
-
-<pre><code class="language-go">func serve404(w http.ResponseWriter, r *http.Request) {
-	w.WriteHeader(http.StatusNotFound)
-	f, err := http.Dir(&quot;public&quot;).Open(&quot;404.html&quot;)
-	if err != nil {
-		serveError(w, r, err)
-		return
-	}
-	defer f.Close()
-	io.Copy(w, f)
-}
-</code></pre>
 
                 </div>
             </article>

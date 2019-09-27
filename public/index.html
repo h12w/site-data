@@ -75,6 +75,58 @@
         
             <article class="frontpage">
                 <h1>
+                    <a href="http://h12.io/note/go-vs-python/">Go vs Python</a>
+                    <span class="line"></span>
+                </h1>
+                <span class="time">27 September 2019</span>
+                <div class="article-body hyphenate">
+                    
+
+<h3 id="slices">Slices</h3>
+
+<p>Go slice and Python slice have very similar syntax, but Python slice is a shallow copy of part of the original list, while Go slice is just a new range within the same underlying array of the original slice.</p>
+
+<p>Let&rsquo;s try:</p>
+
+<pre><code class="language-python">a = [1, 2, 3]
+b = a[:2]
+b[0] = 9
+print(a)
+print(b)
+
+# output:
+# [1, 2, 3]
+# [9, 2]
+</code></pre>
+
+<p>See <code>a[0]</code> remains the same.</p>
+
+<pre><code class="language-go">package main
+
+import (
+    &quot;fmt&quot;
+)
+
+func main() {
+	a := []int{1, 2, 3}
+	b := a[:2]
+	b[0] = 9
+	fmt.Println(a)
+	fmt.Println(b)
+
+	# output:
+	# [9 2 3]
+	# [9 2]
+}
+</code></pre>
+
+<p>See <code>a[0]</code> changes because slice <code>a</code> and <code>b</code> shares the same underlying array.</p>
+
+                </div>
+            </article>
+        
+            <article class="frontpage">
+                <h1>
                     <a href="http://h12.io/note/learn-frontend/">Learning Frontend</a>
                     <span class="line"></span>
                 </h1>
@@ -354,37 +406,6 @@ cancelled when the task is cancelled).</p>
 cat b.json | jq --sort-keys . &gt; bb.json
 vimdiff aa.json bb.json
 </code></pre>
-
-                </div>
-            </article>
-        
-            <article class="frontpage">
-                <h1>
-                    <a href="http://h12.io/note/pagination-done-right/">Pagination Done Right</a>
-                    <span class="line"></span>
-                </h1>
-                <span class="time">28 February 2018</span>
-                <div class="article-body hyphenate">
-                    
-
-<p>Server side pagination is intrinsically not accurate, as long as the data is dynamic.</p>
-
-<p>The data items could be inserted, deleted or changed on the server side while the user goes forward and backward among the pages.</p>
-
-<p>However, there is an algorithm that can keep the pagination as stable as possible:</p>
-
-<ol>
-<li>encode the id and sorting fields of last value in a page as the continue-token</li>
-<li>return the continue-token along with each page</li>
-<li>the client must pass the continue-token to fetch the next page</li>
-<li>the next page starts with value &gt; continue-token || (value == continue-token &amp;&amp; value.id &gt; continue-token.id)</li>
-</ol>
-
-<h3 id="reference">Reference</h3>
-
-<ul>
-<li><a href="https://skelia.com/articles/pagination-with-dynamic-data-loading-2/">Pagination with Dynamic Data Loading</a></li>
-</ul>
 
                 </div>
             </article>

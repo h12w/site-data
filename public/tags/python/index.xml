@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Go on Hai-Liang &#34;Hal&#34; Wang</title>
-    <link>http://h12.io/tags/go/</link>
-    <description>Recent content in Go on Hai-Liang &#34;Hal&#34; Wang</description>
+    <title>Python on Hai-Liang &#34;Hal&#34; Wang</title>
+    <link>http://h12.io/tags/python/</link>
+    <description>Recent content in Python on Hai-Liang &#34;Hal&#34; Wang</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
     <copyright>Copyright (c) 2012-2018, Hǎi-Liàng &#34;Hal&#34; Wáng; all rights reserved.</copyright>
     <lastBuildDate>Fri, 27 Sep 2019 13:58:41 +0100</lastBuildDate>
     
-	<atom:link href="http://h12.io/tags/go/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="http://h12.io/tags/python/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
@@ -21,19 +21,6 @@
       <description>Slices Go slice and Python slice have very similar syntax, but Python slice is a shallow copy of part of the original list, while Go slice is just a new range within the same underlying array of the original slice.
 Let&amp;rsquo;s try:
 a = [1, 2, 3] b = a[:2] b[0] = 9 print(a) print(b) # output: # [1, 2, 3] # [9, 2]  See a[0] remains the same.</description>
-    </item>
-    
-    <item>
-      <title>JavaScript Surprises to a Go Developer</title>
-      <link>http://h12.io/note/js-surprises/</link>
-      <pubDate>Tue, 12 Feb 2019 11:32:07 +0000</pubDate>
-      
-      <guid>http://h12.io/note/js-surprises/</guid>
-      <description>The scope of var is wrong Never use var to declare variables, use let instead.
-REF
-== is conversion and comparison What you really need is ===, which is similar to comparing two interface{}.
-=== is shallow {a:1}==={a:1} is false, while Go struct with string are compared by contents (but not for slice).
-Also this affects map key comparison. So object key is not so useful in JS as struct key in Go.</description>
     </item>
     
   </channel>
