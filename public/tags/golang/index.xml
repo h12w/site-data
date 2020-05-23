@@ -305,7 +305,7 @@ Features  No Cgo types exposed out of the wrapper package, and uses as less allo
       
       <guid>http://h12.io/project/socks/</guid>
       <description>SOCKS is a SOCKS4, SOCKS4A and SOCKS5 proxy package for Go.
-Quick Start Get the package go get -u &amp;quot;h12.io/socks&amp;quot;  Import the package import &amp;quot;h12.io/socks&amp;quot;  Create a SOCKS proxy dialing function dialSocksProxy := socks.DialSocksProxy(socks.SOCKS5, &amp;quot;127.0.0.1:1080&amp;quot;) tr := &amp;amp;http.Transport{Dial: dialSocksProxy} httpClient := &amp;amp;http.Client{Transport: tr}  Alternatives http://code.google.com/p/go/source/browse/?repo=net#hg%2Fproxy</description>
+Quick Start Get the package go get -u &amp;quot;h12.io/socks&amp;quot;  Import the package import &amp;quot;h12.io/socks&amp;quot;  Create a SOCKS proxy dialling function dialSocksProxy := socks.Dial(&amp;quot;socks5://127.0.0.1:1080?timeout=5s&amp;quot;) tr := &amp;amp;http.Transport{Dial: dialSocksProxy} httpClient := &amp;amp;http.Client{Transport: tr}  User/password authentication dialSocksProxy := socks.Dial(&amp;quot;socks5://user:password@127.0.0.1:1080?timeout=5s&amp;quot;)  Example package main import ( &amp;quot;fmt&amp;quot; &amp;quot;io/ioutil&amp;quot; &amp;quot;log&amp;quot; &amp;quot;net/http&amp;quot; &amp;quot;h12.io/socks&amp;quot; ) func main() { dialSocksProxy := socks.Dial(&amp;quot;socks5://127.0.0.1:1080?timeout=5s&amp;quot;) tr := &amp;amp;http.</description>
     </item>
     
   </channel>
