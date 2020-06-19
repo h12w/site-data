@@ -48,6 +48,11 @@
   </url>
   
   <url>
+    <loc>http://h12.io/article/value-vs-pointer-receivers/</loc>
+    <lastmod>2020-06-19T13:58:46+01:00</lastmod>
+  </url>
+  
+  <url>
     <loc>http://h12.io/note/go-vs-python/</loc>
     <lastmod>2019-09-27T13:58:41+01:00</lastmod>
   </url>
@@ -433,7 +438,7 @@
   
   <url>
     <loc>http://h12.io/article/</loc>
-    <lastmod>2015-02-18T17:23:24+00:00</lastmod>
+    <lastmod>2020-06-19T13:58:46+01:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -452,6 +457,12 @@
   <url>
     <loc>http://h12.io/tags/bash/</loc>
     <lastmod>2014-06-05T23:00:00+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://h12.io/tags/benchmark/</loc>
+    <lastmod>2020-06-19T13:58:46+01:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -661,7 +672,7 @@
   
   <url>
     <loc>http://h12.io/tags/go/</loc>
-    <lastmod>2019-09-27T13:58:41+01:00</lastmod>
+    <lastmod>2020-06-19T13:58:46+01:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -942,6 +953,12 @@
   </url>
   
   <url>
+    <loc>http://h12.io/tags/pointer/</loc>
+    <lastmod>2020-06-19T13:58:46+01:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>http://h12.io/tags/pretty-print/</loc>
     <lastmod>2016-02-01T18:11:29+08:00</lastmod>
     <priority>0</priority>
@@ -974,6 +991,12 @@
   <url>
     <loc>http://h12.io/tags/react/</loc>
     <lastmod>2019-02-15T14:08:01+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://h12.io/tags/receivers/</loc>
+    <lastmod>2020-06-19T13:58:46+01:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -1130,6 +1153,12 @@
   <url>
     <loc>http://h12.io/tags/uuid/</loc>
     <lastmod>2017-11-15T20:00:00+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://h12.io/tags/value/</loc>
+    <lastmod>2020-06-19T13:58:46+01:00</lastmod>
     <priority>0</priority>
   </url>
   

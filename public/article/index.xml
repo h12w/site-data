@@ -7,10 +7,22 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
     <copyright>Copyright (c) 2012-2018, Hǎi-Liàng &#34;Hal&#34; Wáng; all rights reserved.</copyright>
-    <lastBuildDate>Wed, 18 Feb 2015 17:23:24 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 19 Jun 2020 13:58:46 +0100</lastBuildDate>
     
 	<atom:link href="http://h12.io/article/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Value vs Pointer Receivers</title>
+      <link>http://h12.io/article/value-vs-pointer-receivers/</link>
+      <pubDate>Fri, 19 Jun 2020 13:58:46 +0100</pubDate>
+      
+      <guid>http://h12.io/article/value-vs-pointer-receivers/</guid>
+      <description>Should I use value receivers or pointer receivers?
+Value receivers have some benefits include immutability, concurrent safety and clean logic (not always, often true). But to what extend can I use value receivers without an issue or performance penalty?
+In the Go FAQ, there are 3 rules:
+ most important, does the method need to modify the receiver? If it does, the receiver must be a pointer if the receiver is large, a big struct for instance, it will be much cheaper to use a pointer receiver if some of the methods of the type must have pointer receivers, the rest should too, so the method set is consistent regardless of how the type is used  Let&amp;rsquo;s look at rule 1.</description>
+    </item>
     
     <item>
       <title>A Developer&#39;s Guide to Password Management</title>

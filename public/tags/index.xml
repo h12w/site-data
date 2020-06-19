@@ -76,6 +76,15 @@
     </item>
     
     <item>
+      <title>Benchmark</title>
+      <link>http://h12.io/tags/benchmark/</link>
+      <pubDate>Fri, 19 Jun 2020 13:58:46 +0100</pubDate>
+      
+      <guid>http://h12.io/tags/benchmark/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>Build</title>
       <link>http://h12.io/tags/build/</link>
       <pubDate>Thu, 29 Jan 2015 03:55:08 +0000</pubDate>
@@ -384,7 +393,7 @@
     <item>
       <title>Go</title>
       <link>http://h12.io/tags/go/</link>
-      <pubDate>Fri, 27 Sep 2019 13:58:41 +0100</pubDate>
+      <pubDate>Fri, 19 Jun 2020 13:58:46 +0100</pubDate>
       
       <guid>http://h12.io/tags/go/</guid>
       <description></description>
@@ -787,6 +796,15 @@
     </item>
     
     <item>
+      <title>Pointer</title>
+      <link>http://h12.io/tags/pointer/</link>
+      <pubDate>Fri, 19 Jun 2020 13:58:46 +0100</pubDate>
+      
+      <guid>http://h12.io/tags/pointer/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>Pretty Print</title>
       <link>http://h12.io/tags/pretty-print/</link>
       <pubDate>Mon, 01 Feb 2016 18:11:29 +0800</pubDate>
@@ -828,6 +846,15 @@
       <pubDate>Fri, 15 Feb 2019 14:08:01 +0000</pubDate>
       
       <guid>http://h12.io/tags/react/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Receivers</title>
+      <link>http://h12.io/tags/receivers/</link>
+      <pubDate>Fri, 19 Jun 2020 13:58:46 +0100</pubDate>
+      
+      <guid>http://h12.io/tags/receivers/</guid>
       <description></description>
     </item>
     
@@ -1035,6 +1062,15 @@
       <pubDate>Wed, 15 Nov 2017 20:00:00 +0800</pubDate>
       
       <guid>http://h12.io/tags/uuid/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Value</title>
+      <link>http://h12.io/tags/value/</link>
+      <pubDate>Fri, 19 Jun 2020 13:58:46 +0100</pubDate>
+      
+      <guid>http://h12.io/tags/value/</guid>
       <description></description>
     </item>
     
