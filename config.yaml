@@ -56,6 +56,7 @@ packages:
   mongoschema:
   msa:
   practice:
+  proto2json:
   realtest:
   retracer:
   run:

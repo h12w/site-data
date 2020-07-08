@@ -179,7 +179,14 @@ x-oss-acl becomes X-Oss-Acl</li>
                 </h1>
                 <span class="time">3 August 2015</span>
                 <div class="article-body hyphenate">
-                    <pre><code class="language-bash">docker ps --quiet --filter=status=exited | xargs docker rm
+                    <p>Updates at 2020-07-08:</p>
+
+<pre><code class="language-bash">docker system prune
+</code></pre>
+
+<p>Old tricks:</p>
+
+<pre><code class="language-bash">docker ps --quiet --filter=status=exited | xargs docker rm
 </code></pre>
 
 <pre><code class="language-bash">docker images --no-trunc=true --filter=&quot;dangling=true&quot; --quiet=true | xargs docker rmi

@@ -418,7 +418,9 @@ Installation go get -u github.com/aliyun/aliyun-oss-go-sdk/oss go test -v -cover
       <pubDate>Mon, 03 Aug 2015 16:55:49 +0800</pubDate>
       
       <guid>http://h12.io/note/remove-all-exited-docker-containers/</guid>
-      <description>docker ps --quiet --filter=status=exited | xargs docker rm  docker images --no-trunc=true --filter=&amp;quot;dangling=true&amp;quot; --quiet=true | xargs docker rmi  </description>
+      <description>Updates at 2020-07-08:
+docker system prune  Old tricks:
+docker ps --quiet --filter=status=exited | xargs docker rm  docker images --no-trunc=true --filter=&amp;quot;dangling=true&amp;quot; --quiet=true | xargs docker rmi  </description>
     </item>
     
     <item>
