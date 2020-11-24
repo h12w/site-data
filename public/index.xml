@@ -100,6 +100,17 @@ This Site Tools  Container: Docker CSS: Sass, Compass &amp;amp; Susy Font: Googl
     </item>
     
     <item>
+      <title>Go Patterns: Writer</title>
+      <link>http://h12.io/article/go-patterns-writer/</link>
+      <pubDate>Sun, 22 Nov 2020 17:38:34 +0000</pubDate>
+      
+      <guid>http://h12.io/article/go-patterns-writer/</guid>
+      <description>A writer is so ubiquitous that we do not usually consider it as a pattern, but sometimes we reinvent it or even do it in an inferior way. Let us look at a real use case first.
+Batch processor What would you do to improve the throughput of a service? The answer is short: batching.
+By processing and sending in a batch of multiple items instead of a single item at a time, you are amortizing the network overhead from the request-response round trip among all the items in the batch.</description>
+    </item>
+    
+    <item>
       <title>Value vs Pointer Receivers</title>
       <link>http://h12.io/article/value-vs-pointer-receivers/</link>
       <pubDate>Fri, 19 Jun 2020 13:58:46 +0100</pubDate>

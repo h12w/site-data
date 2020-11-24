@@ -1,10 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-	<meta name="generator" content="Hugo 0.53" />
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title> Hai-Liang &#34;Hal&#34; Wang </title>
+        <title> Go Patterns: Writer </title>
         <link rel="shortcut icon" href="/img/favicon.png" />
 
         <style>
@@ -71,433 +70,118 @@
         </header>
 
         <main class="container">
-        
-        
-            <article class="frontpage">
-                <h1>
-                    <a href="http://h12.io/article/scientific-web-surfing/">A Brief Note on Scientific Web Surfing</a>
-                    <span class="line"></span>
-                </h1>
-                <span class="time">14 February 2015</span>
+            <article class="single">
+                <h1>Go Patterns: Writer</h1>
                 <div class="article-body hyphenate">
-                    
+                
 
-<p><em>Knowledge is power. Information is liberating. &mdash; by Kofi Annan.</em></p>
+<p>A writer is so ubiquitous that we do not usually consider it as a pattern, but sometimes we reinvent it or even do it in an inferior way. Let us look at a real use case first.</p>
 
-<h2 id="vps">VPS</h2>
+<h2 id="batch-processor">Batch processor</h2>
 
-<ul>
-<li><a href="https://www.cloudsvm.com/billing/aff.php?aff=140">CloudsVM</a></li>
-<li><a href="http://www.vultr.com/?ref=6837862">Vultr</a></li>
-<li><a href="https://www.digitalocean.com/?refcode=56202ab61fb7">DigitalOcean</a></li>
-<li><a href="https://bandwagonhost.com/aff.php?aff=2128">BandwagonHOST</a>
+<p>What would you do to improve the throughput of a service? The answer is short: batching.</p>
 
-<ul>
-<li>Client Area -&gt; Services -&gt; Order New Services</li>
-<li>64MB RAM is enough for running both ShadowSocks and pdnsd</li>
-<li>Install Ubuntu LTS 32bit (x86, i686) or CentOS 7.</li>
-</ul></li>
-</ul>
+<p>By processing and sending in a batch of multiple items instead of a single item at a time, you are amortizing the network overhead from the request-response round trip among all the items in the batch.</p>
 
-<h2 id="centos">CentOS</h2>
+<p>Then how would you design a client interface to do that batching?</p>
 
-<h3 id="install-centos-7-64bit">Install CentOS 7 (64bit)</h3>
+<p>How about this?</p>
 
-<h3 id="shadowsocks">Shadowsocks</h3>
-
-<pre><code class="language-bash">cd /etc/yum.repos.d/
-wget https://copr.fedorainfracloud.org/coprs/librehat/shadowsocks/repo/epel-7/librehat-shadowsocks-epel-7.repo
-yum update
-yum install shadowsocks-libev
-cd /etc/shadowsocks-libev/
-vim config.json
-# server should be 0.0.0.0
-
-vi /usr/lib/systemd/system/shadowsocks-libev.service
-# replace all $variables to constant values to fix the bug
-
-systemctl enable shadowsocks-libev
-systemctl start shadowsocks-libev
-</code></pre>
-
-<h3 id="pdnsd">pdnsd</h3>
-
-<pre><code class="language-bash">wget http://members.home.nl/p.a.rombouts/pdnsd/releases/pdnsd-1.2.9a-par_sl6.x86_64.rpm
-yum localinstall pdnsd-1.2.9a-par_sl6.x86_64.rpm
-vim /etc/pdnsd.conf
-</code></pre>
-
-<p>pdnsd.conf (replace the port)</p>
-
-<pre><code>global {
-	run_as      = &quot;pdnsd&quot;;
-	server_ip   = 0.0.0.0;
-	server_port = [xxxx];
-}
-
-server {
-	label   = &quot;GoogleDNS&quot;;
-	ip      = 8.8.8.8, 8.8.4.4;
-	timeout = 3;
+<pre><code class="language-go">type BatchProcessor interface {
+    Process(items []Item) error
 }
 </code></pre>
 
-<p>Then run:</p>
+<p>It looks like a straightforward solution, but in reality, it introduces unnecessary complexity in both business logic and error handling.</p>
 
-<pre><code class="language-bash">systemctl enable pdnsd
-systemctl start pdnsd
+<p>The processing is often composed of multiple steps working on the items, e.g. transformations and encoding.</p>
+
+<pre><code>items -&gt; transformations -&gt; encoding -&gt; bytes
 </code></pre>
 
-<h2 id="docker">Docker</h2>
+<p>With a batch processor interface like above, each step has to loop around the items, and each step has to deal with the errors from multiple items. Not only there is more complexity but also less flexibility. What if the client would like to send the rest of the items, even if some of the items return errors? What if the client instead would like to discard the whole batch if any one of them is erroneous?</p>
 
-<p>Install <a href="https://docs.docker.com/installation/">Docker</a> on VPS.</p>
+<p>There must be a better way.</p>
 
-<h2 id="remote-proxy">Remote Proxy</h2>
+<h2 id="end-to-end-principle">End-to-end principle</h2>
 
-<p>Install <a href="https://github.com/shadowsocks/shadowsocks-go/releases">shadowsocks</a>:</p>
+<p>&ldquo;Smart terminals, dumb network&rdquo;. The <a href="https://en.wikipedia.org/wiki/End-to-end_principle">end-to-end (e2e) principle</a>, articulated in the field of computer network, basically says any smart features should reside in the communicating end nodes, rather than in intermediary nodes.</p>
 
-<pre><code class="language-bash">docker run -d -p &lt;port&gt;:&lt;port&gt; h12w/shadowsocks -p &lt;port&gt; -k &lt;password&gt; -m aes-128-cfb -t 60
-</code></pre>
+<p>In our use case, the smart feature is batching. By e2e, we make sure each step should only process a single item, and only the initial sender and the final receiver knows about the batching.</p>
 
-<h2 id="remote-dns-server">Remote DNS server</h2>
+<p>There are various examples In Go&rsquo;s standard packages that already do this, e.g. <a href="https://golang.org/pkg/bufio/#Writer">bufio.Writer</a>. The basic idea is an interface similar to below:</p>
 
-<p>Install <a href="http://members.home.nl/p.a.rombouts/pdnsd/">pdnsd</a>:</p>
-
-<pre><code class="language-bash">docker run -d -p [port]:53 -p [port]:53/udp h12w/pdnsd
-</code></pre>
-
-<p>To test the DNS server:</p>
-
-<pre><code class="language-bash">dig @xxx.xxx.xxx.xxx -p xxxx www.linux.com
-</code></pre>
-
-<h2 id="local-openwrt-router">Local OpenWrt Router</h2>
-
-<p>Install <a href="https://github.com/shadowsocks/openwrt-shadowsocks">openwrt-shadowsocks</a> &amp;
-<a href="https://github.com/shadowsocks/ChinaDNS">ChinaDNS</a> on an <a href="https://openwrt.org/">OpenWrt</a> router.</p>
-
-<p>Follow the instructions on <a href="http://openwrt-dist.sourceforge.net">OpenWrt-Dist</a>:</p>
-
-<p>Check CPU model of the router:</p>
-
-<pre><code class="language-bash">cat /proc/cpuinfo
-</code></pre>
-
-<p>add the following to <code>/etc/opkg.conf</code>:</p>
-
-<pre><code>src/gz openwrt_dist http://openwrt-dist.sourceforge.net/releases/[cpu model]/packages
-src/gz openwrt_dist_luci http://openwrt-dist.sourceforge.net/releases/luci/packages
-</code></pre>
-
-<p>and install:</p>
-
-<pre><code class="language-bash">opkg update
-opkg install ChinaDNS
-opkg install luci-app-chinadns
-opkg install shadowsocks-libev-spec
-opkg install luci-app-shadowsocks-spec
-
-opkg install bind-dig
-</code></pre>
-
-<p>Or manually download IPKs of the corresponding CPU:</p>
-
-<ul>
-<li><a href="http://sourceforge.net/projects/openwrt-dist/files/shadowsocks-libev/">shadowsocks-libev-spec</a>
-
-<ul>
-<li><a href="http://sourceforge.net/projects/openwrt-dist/files/luci-app/shadowsocks-spec/">luci-shadowsocks</a></li>
-</ul></li>
-<li><a href="http://sourceforge.net/projects/openwrt-dist/files/chinadns/">chinadns</a>
-
-<ul>
-<li><a href="http://sourceforge.net/projects/openwrt-dist/files/luci-app/chinadns/">luci-chinadns</a></li>
-</ul></li>
-</ul>
-
-<p>Copy <code>*.ipk</code> to router:</p>
-
-<pre><code class="language-bash">scp *.ipk root@192.168.2.1:/tmp
-</code></pre>
-
-<p>And install:</p>
-
-<pre><code class="language-bash">opkg install shadowsocks-libev-spec_xxx.ipk
-opkg install ChinaDNS_xxx.ipk
-/etc/init.d/shadowsocks enable
-/etc/init.d/chinadns enable
-</code></pre>
-
-<p>ShadowSocks configuration in <code>/etc/config/shadowsocks</code>:</p>
-
-<pre><code>config shadowsocks
-	...
-	option config_file '/etc/shadowsocks/config.json'
-	...
-	option tunnel_enable '0'
-	...
-</code></pre>
-
-<p>It refers to <code>/etc/shadowsocks/config.json</code>:</p>
-
-<pre><code>{
-    &quot;server&quot;:      &quot;xxx.xxx.xxx.xxx&quot;,
-    &quot;server_port&quot;: xxxx,
-    &quot;local_port&quot;:  xxxx,
-    &quot;password&quot;:    &quot;xxxxxx&quot;,
-    &quot;method&quot;:      &quot;aes-128-cfb&quot;,
-    &quot;timeout&quot;:     60
+<pre><code class="language-go">type Writer interface {
+    Write(item Item) error
+    Flush() error
 }
 </code></pre>
 
-<p>ChinaDNS configuration in <code>/etc/config/chinadns</code>:</p>
+<p>The caller issues multiple writes to make a batch and a flush to mark the end of the batch. The writer chains the transformation and encoding steps of an item in a single write method and returns the error for the item. When the flush method is called, the writer flushes the whole batch and completes the batch.</p>
 
-<pre><code>config chinadns
-    ...
-    option chnroute '/etc/shadowsocks/ignore.list'
-    ...
-    option server '[isp_dns],[private_pdnsd_dns]'
-    ...
+<h2 id="stateless-vs-stateful">Stateless vs Stateful</h2>
+
+<p>On the surface, <code>BatchProcessor</code> is stateless while <code>Writer</code> is stateful, but the former only pushes to its caller the responsibility of aggregating a batch, which is a stateful operation. On the other hand, the final step of the processing - the underlying driver regardless it is of file or network IO - is stateful too. So <code>Writer</code> does not add additional burden to its caller for managing a stateful interface.</p>
+
+<p>Rather, <code>Writer</code> not only simplifies the chain of processing within it, but also simplifies the batching logic on its caller side.</p>
+
+<h2 id="concurrency">Concurrency</h2>
+
+<p>A <code>Writer</code> can become concurrently safe by locking both <code>Write</code> and <code>Flush</code> methods. However, the ideal way of calling a <code>Writer</code> is from a single goroutine so that the caller is able to control exactly what are in the batch, and we can get rid of the overhead of the lock.</p>
+
+<p>If multiple goroutines must share a single underlying writer and at the same time want to control its own batches, then we could return an object instead of flushing, as below:</p>
+
+<pre><code class="language-go">type Builder interface {
+    Write(item Item) error
+    Bytes() []byte // return bytes
+    Object() Batch // or a batch object
+}
 </code></pre>
 
-<p>Make sure <code>[private_pdnsd_dns]</code> is the same IP:PORT as the remote pdnsd server.</p>
+<p>In fact, it becomes the <a href="https://en.wikipedia.org/wiki/Builder_pattern"><em>Builder Pattern</em></a>. Each goroutine has its own builder, building its own batches, and then sending those batches to a shared driver.</p>
 
-<p>ucitrack configuration in <code>/etc/config/ucitrack</code>:</p>
+<p>In addition, we could even have various write methods, each for its own item type.</p>
 
-<pre><code>config shadowsocks
-    option init 'shadowsocks'
+<h2 id="transaction">Transaction</h2>
 
-config chinadns
-    option init 'chinadns'
+<p>If the caller needs to discard a batch, we could extend it with a rollback method, similar to <a href="https://golang.org/pkg/database/sql/#Tx">sql.Tx</a>:</p>
+
+<pre><code class="language-go">type TxWriter interface {
+    Write(item Item) error
+    Commit() error
+    Rollback() error
+}
 </code></pre>
 
-<p>DHCP configuration in <code>/etc/config/dhcp</code>:</p>
+<p>Then it becomes the <a href="https://martinfowler.com/eaaCatalog/unitOfWork.html"><em>Unit of Work Pattern</em></a>.</p>
 
-<pre><code>config dnsmasq
-    list server '127.0.0.1#5353'
-    option noresolv '1'
-    option nohosts '1'
-</code></pre>
+<h2 id="conclusion">Conclusion</h2>
 
-<h2 id="redsocks2">RedSocks2</h2>
-
-<p>Use RedSocks2 to bypass the proxy when the target site is reachable.</p>
-
-<p>Download RedSocks2:</p>
-
-<ul>
-<li><a href="http://sourceforge.net/projects/openwrt-dist/files/redsocks2/">RedSocks2</a>
-
-<ul>
-<li><a href="http://sourceforge.net/projects/openwrt-dist/files/luci-app/redsocks2/">luci-redsocks2</a></li>
-</ul></li>
-</ul>
-
-<p>Install RedSocks2:</p>
-
-<pre><code>scp *.ipk root@192.168.2.1:/tmp
-opkg update
-opkg install xxx.ipk
-</code></pre>
-
-<p>RedSocks2 will take effect immediately.</p>
-
-<h2 id="upgrade-openwrt">Upgrade OpenWRT</h2>
-
-<p>Download latest <code>*.ipk</code> above.</p>
-
-<pre><code class="language-bash">opkg update
-opkg upgrade ipset libopenssl resolveip iptables-mod-tproxy
-opkg install xxx.ipk
-</code></pre>
-
-<p>Merge configuration files manually.</p>
-
-<p>Update <code>ignore.list</code>:</p>
-
-<pre><code>wget -O- 'http://ftp.apnic.net/apnic/stats/apnic/delegated-apnic-latest' | awk -F\| '/CN\|ipv4/ { printf(&quot;%s/%d\n&quot;, $4, 32-log($5)/log(2)) }' &gt; ignore.list
-scp ignore.list root@192.168.2.1:/etc/shadowsocks/ignore.list
-</code></pre>
-
-<pre><code class="language-bash">reboot
-</code></pre>
-
-<h2 id="android-client">Android Client</h2>
-
-<p><a href="https://github.com/shadowsocks/shadowsocks-android/releases">shadowsocks-android</a>.</p>
+<p>Whenever we want to process and send multiple items, consider this Writer Pattern and its variants and see if it can better suit our needs.</p>
 
                 </div>
-            </article>
-        
-            <article class="frontpage">
-                <h1>
-                    <a href="http://h12.io/note/go-build-failure/">Go 1.4.1 Build Failure and Solution</a>
-                    <span class="line"></span>
-                </h1>
-                <span class="time">29 January 2015</span>
-                <div class="article-body hyphenate">
-                    <p>Today I tried to build Go 1.4.1 from source but it failed with this error:</p>
-
-<pre><code>    go/src/liblink/anames9.c:6:29: fatal error: ../cmd/9l/9.out.h: No such file or directory
-</code></pre>
-
-<p>At first I thought the building routine might have be changed so I opened and read
-<a href="http://golang.org/doc/install/source"><em>Installing Go from Source</em></a> again, carefully,
-and found nothing special.</p>
-
-<p>Then I searched for the error source and it turned out that I should deleted
-<code>anames*.c</code>, manually. There is no document and no automatic cleaning script, and
-you would have to figure it out yourself if no one ever mentioned it (<a href="https://groups.google.com/d/msg/golang-nuts/wQoQqXOnOTo/QbubO2UebpUJ">source</a>).</p>
-
-                </div>
-            </article>
-        
-            <article class="frontpage">
-                <h1>
-                    <a href="http://h12.io/note/gae-custom-domain/">How to configure a custom domain name in GAE?</a>
-                    <span class="line"></span>
-                </h1>
-                <span class="time">19 January 2015</span>
-                <div class="article-body hyphenate">
-                    <p>Steps:</p>
-
-<ol>
-<li>Visit <a href="https://console.developers.google.com">Developers Console</a>.</li>
-<li>In your project: Compute -&gt; App Engine -&gt; Settings.</li>
-<li>On the tab labelled CUSTOM DOMAINS, you can verify your domain and assign it
-and/or its subdomains to your GAE project.</li>
-<li>Add the DNS settings provided by Google into the DNS server of your domain
-provider.</li>
-</ol>
-
-<p>Notes:</p>
-
-<ol>
-<li>Only HTTP is supported, HTTPS is not.</li>
-<li>It will not work if you only modify the DNS record without actually assigning
-the custom domain in the Developer Console.</li>
-</ol>
-
-                </div>
-            </article>
-        
-            <article class="frontpage">
-                <h1>
-                    <a href="http://h12.io/note/install-ca-android/">How to install a self-signed CA Certificate to Android 4.4</a>
-                    <span class="line"></span>
-                </h1>
-                <span class="time">17 January 2015</span>
-                <div class="article-body hyphenate">
-                    <p>See this blog <a href="https://samhobbs.co.uk/2013/12/remove-network-may-be-monitored-by-an-unknown-third-party-in-android-4-4-kitkat"><em>Remove &ldquo;Network May Be Monitored by an Unknown Third Party&rdquo; in Android 4.4 KitKat</em></a>.</p>
-
-                </div>
-            </article>
-        
-            <article class="frontpage">
-                <h1>
-                    <a href="http://h12.io/note/new-domain-h12/">A Shorter Domain Name</a>
-                    <span class="line"></span>
-                </h1>
-                <span class="time">16 December 2014</span>
-                <div class="article-body hyphenate">
-                    <p>This year, I decided not to renewal the previous domain name (hailiang.ws) last
-year, but to register a shorter one. There are two reasons:</p>
-
-<ol>
-<li>Both the site URL and the email address will be cleaner.</li>
-<li>A more friendly Go import path will be possible for my repositories on Github.</li>
-</ol>
-
-<p>After comparing various choices on major domain providers, I chose <code>h12.io</code> as
-the new domain. It is the shortest but still meaningful domain that I can afford.
-<code>H</code> is the initial letter of my given name, <code>12</code> is simply the number of letters
-of my full name, and <code>.me</code> is a top level domain quite suitable for a personal
-website.</p>
-
-                </div>
-            </article>
-        
-            <article class="frontpage">
-                <h1>
-                    <a href="http://h12.io/project/gombi/">Gombi: Creating Your Own Parser is Easier than Regular Expressions</a>
-                    <span class="line"></span>
-                </h1>
-                <span class="time">7 August 2014</span>
-                <div class="article-body hyphenate">
-                    
-
-<p>Gombi is a combinator-style scanner &amp; parser library written in Go. It is
-practical, reasonably fast and extremely easy to use.</p>
-
-<h2 id="quick-start">Quick start</h2>
-
-<pre><code class="language-bash">go get -u h12.io/gombi
-</code></pre>
-
-<h2 id="design">Design</h2>
-
-<p><a href="http://en.wikipedia.org/wiki/Parser_combinator">Combinator parsers</a> are
-straightforward to construct, modular and easily maintainable, compared to
-parser generators like Lex/Yacc.</p>
-
-<ul>
-<li>Internal DSL
-
-<ul>
-<li>no additional code generation and compilation.</li>
-</ul></li>
-<li>Composable
-
-<ul>
-<li>a subset of the syntax tree is also a parser.</li>
-<li>a language can be easily embedded into another one.</li>
-</ul></li>
-</ul>
-
-<p>Gombi is inspired by but not limited to parser combinators. Unlike a combinator
-parser, Gombi neither limits its API to functional only, nor limits its
-implementation to functional combinators. Go is not a pure functional language
-as Haskell, so cloning a combinator parser like Parsec to Go will only lead to
-an implementaion much worse than Parsec. Instead, Gombi is free to choose any Go
-language structures that are suitable for a modular and convenient API, and any
-algorithms that can be efficiently implemented in Go.</p>
-
-<p><em>Under development</em></p>
-
-                </div>
-            </article>
-        
-            <article class="frontpage">
-                <h1>
-                    <a href="http://h12.io/note/parser-combinator-links/">Learning Resources on Parser Combinator</a>
-                    <span class="line"></span>
-                </h1>
-                <span class="time">4 August 2014</span>
-                <div class="article-body hyphenate">
-                    <ul>
-<li><a href="http://eprints.nottingham.ac.uk/237/"><em>Monadic Parser Combinators</em></a></li>
-<li><a href="http://legacy.cs.uu.nl/daan/pubs.html#parsec"><em>Parsec: Direct Style Monadic Parser Combinators for the Real World</em></a></li>
-<li><a href="http://www.cs.tufts.edu/~nr/cs257/archive/doaitse-swierstra/combinator-parsing-tutorial.pdf"><em>Combinator Parsing: A Short Tutorial</em></a></li>
+                <div>
+                    <div id="article-time">22 November 2020</div>
+                    <ul id="tags">
+  
+    <li><a href="/tags/go">Go</a> </li>
+  
+    <li><a href="/tags/pattern">pattern</a> </li>
+  
+    <li><a href="/tags/writer">writer</a> </li>
+  
+    <li><a href="/tags/batch">batch</a> </li>
+  
+    <li><a href="/tags/end-to-end-principle">end-to-end principle</a> </li>
+  
+    <li><a href="/tags/builder">builder</a> </li>
+  
+    <li><a href="/tags/unit-of-work">unit of work</a> </li>
+  
 </ul>
 
                 </div>
             </article>
-        
-        <nav class="pagination">
-            <span>- 7 -</span>
-            <ul>
-                <li>
-            
-                    <a href="/page/6">« Prev</a>
-            
-                </li>
-                <li>
-            
-                    <a href="/page/8">Next »</a>
-            
-                </li>
-            </ul>
-        </nav>
         </main>
         <footer id="site-footer">
             <hr>

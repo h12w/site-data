@@ -75,6 +75,18 @@
         
             <article class="frontpage">
                 <h1>
+                    <a href="http://h12.io/note/searchable-meta-data/">How to Make Web Pages Searchable by Meta Data?</a>
+                    <span class="line"></span>
+                </h1>
+                <span class="time">22 June 2014</span>
+                <div class="article-body hyphenate">
+                    <p><a href="https://developers.google.com/custom-search/docs/structured_data">Providing Structured Data</a></p>
+
+                </div>
+            </article>
+        
+            <article class="frontpage">
+                <h1>
                     <a href="http://h12.io/note/htc-upgrade/">Upgrading 4.4.3 ROM for HTC One</a>
                     <span class="line"></span>
                 </h1>
@@ -577,111 +589,6 @@ Method Node.Children and Node.Descendants each returns a node iterator
 
 <p>If you prefer a jquery like DSL rather than functional way, you might want to
 try <a href="https://github.com/PuerkitoBio/goquery">goquery</a>.</p>
-
-                </div>
-            </article>
-        
-            <article class="frontpage">
-                <h1>
-                    <a href="http://h12.io/project/cwrap/">Cwrap: wraps C libraries in Go</a>
-                    <span class="line"></span>
-                </h1>
-                <span class="time">1 January 2014</span>
-                <div class="article-body hyphenate">
-                    
-
-<p>Cwrap is a Go wrapper generator for C libraries.</p>
-
-<h2 id="features">Features</h2>
-
-<ul>
-<li>No Cgo types exposed out of the wrapper package, and uses as less allocation/copy as possible.</li>
-<li>C name prefix mapped to Go packages, and a wrapper package can import another wrapper package.</li>
-<li>Follows Go naming conventions.</li>
-<li>C union.</li>
-<li>Use Go language features when possible:
-
-<ul>
-<li>string and bool.</li>
-<li>Multiple return values.</li>
-<li>Slice, slice of slice and slice of string.</li>
-<li>struct with methods.</li>
-<li>Go closures as callbacks.</li>
-</ul></li>
-<li>Stay out of the way when you need to do it manually for specified declarations.</li>
-</ul>
-
-<h2 id="usage">Usage</h2>
-
-<p>Cwrap itself is a Go package rather than an executable program. Just fill a cwrap.Package struct literal and call its Wrap method to generate your wrapper package under $GOPATH. Here is a simple example:</p>
-
-<p>Say you want to generate a wrapper package for SDL2, and its header is at</p>
-
-<pre><code>/usr/local/include/SDL2/SDL2.h
-</code></pre>
-
-<p>So the cwrap.Package literal looks like:</p>
-
-<pre><code class="language-go">var sdl = &amp;Package{
-	PacName: &quot;sdl&quot;,
-	PacPath: &quot;go-sdl&quot;,
-	From: Header{
-		Dir:           &quot;/usr/local/include/&quot;,
-		File:          &quot;SDL2/SDL.h&quot;,
-		OtherCode:     &quot;#define _SDL_main_h&quot;,
-		NamePattern:   `\ASDL(.*)`,
-		Excluded:      []string{},
-		CgoDirectives: []string{&quot;pkg-config: sdl2&quot;},
-		BoolTypes:     []string{&quot;SDL_bool&quot;},
-	},
-	Included: []*Package{},
-}
-</code></pre>
-
-<p>Then just call</p>
-
-<pre><code class="language-go">err := sdl.Wrap()
-</code></pre>
-
-<h2 id="examples">Examples</h2>
-
-<p>In the examples directory, there are C libraries that I have successfully applied Cwrap, including:</p>
-
-<ul>
-<li>Cairo</li>
-<li>GSL (GNU Scientific Library)</li>
-<li>MuPDF</li>
-<li>PLplot</li>
-<li>SDL2 (Simple DirectMedia Layer)</li>
-</ul>
-
-<p>You are very welcome to submit examples you think useful to others.</p>
-
-<h2 id="applications">Applications</h2>
-
-<ul>
-<li>gr: A minimal PDF viewer based on SDL2 and MuPDF (<a href="https://github.com/h12w/gr">https://github.com/h12w/gr</a>)</li>
-</ul>
-
-<h2 id="issue-report">Issue Report</h2>
-
-<p>Cwrap may not cover every possible case and fails to come up with a corrresonding Go type or convertion, then the generated code may not be able to compile. When this happens, do the following steps:</p>
-
-<ol>
-<li>Comment out the failed function wrappers till it compiles.</li>
-<li>Add the C names of these failed functions to the excluded list (Package.From.Excluded).</li>
-<li>Submit the generator example to me. I cannot guarantee anything but I will try to fix critical issues.</li>
-</ol>
-
-<h2 id="limitations">Limitations</h2>
-
-<ul>
-<li>C variadic functions (&hellip;) are not supported.</li>
-</ul>
-
-<h2 id="acknowledgement">Acknowledgement</h2>
-
-<p>Cwrap uses gccxml (<a href="http://gccxml.github.io">http://gccxml.github.io</a>) to parse C headers to an XML file. Thanks very much for their excellent work.</p>
 
                 </div>
             </article>

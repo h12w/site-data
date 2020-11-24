@@ -75,6 +75,102 @@
         
             <article class="frontpage">
                 <h1>
+                    <a href="http://h12.io/article/go-patterns-writer/">Go Patterns: Writer</a>
+                    <span class="line"></span>
+                </h1>
+                <span class="time">22 November 2020</span>
+                <div class="article-body hyphenate">
+                    
+
+<p>A writer is so ubiquitous that we do not usually consider it as a pattern, but sometimes we reinvent it or even do it in an inferior way. Let us look at a real use case first.</p>
+
+<h2 id="batch-processor">Batch processor</h2>
+
+<p>What would you do to improve the throughput of a service? The answer is short: batching.</p>
+
+<p>By processing and sending in a batch of multiple items instead of a single item at a time, you are amortizing the network overhead from the request-response round trip among all the items in the batch.</p>
+
+<p>Then how would you design a client interface to do that batching?</p>
+
+<p>How about this?</p>
+
+<pre><code class="language-go">type BatchProcessor interface {
+    Process(items []Item) error
+}
+</code></pre>
+
+<p>It looks like a straightforward solution, but in reality, it introduces unnecessary complexity in both business logic and error handling.</p>
+
+<p>The processing is often composed of multiple steps working on the items, e.g. transformations and encoding.</p>
+
+<pre><code>items -&gt; transformations -&gt; encoding -&gt; bytes
+</code></pre>
+
+<p>With a batch processor interface like above, each step has to loop around the items, and each step has to deal with the errors from multiple items. Not only there is more complexity but also less flexibility. What if the client would like to send the rest of the items, even if some of the items return errors? What if the client instead would like to discard the whole batch if any one of them is erroneous?</p>
+
+<p>There must be a better way.</p>
+
+<h2 id="end-to-end-principle">End-to-end principle</h2>
+
+<p>&ldquo;Smart terminals, dumb network&rdquo;. The <a href="https://en.wikipedia.org/wiki/End-to-end_principle">end-to-end (e2e) principle</a>, articulated in the field of computer network, basically says any smart features should reside in the communicating end nodes, rather than in intermediary nodes.</p>
+
+<p>In our use case, the smart feature is batching. By e2e, we make sure each step should only process a single item, and only the initial sender and the final receiver knows about the batching.</p>
+
+<p>There are various examples In Go&rsquo;s standard packages that already do this, e.g. <a href="https://golang.org/pkg/bufio/#Writer">bufio.Writer</a>. The basic idea is an interface similar to below:</p>
+
+<pre><code class="language-go">type Writer interface {
+    Write(item Item) error
+    Flush() error
+}
+</code></pre>
+
+<p>The caller issues multiple writes to make a batch and a flush to mark the end of the batch. The writer chains the transformation and encoding steps of an item in a single write method and returns the error for the item. When the flush method is called, the writer flushes the whole batch and completes the batch.</p>
+
+<h2 id="stateless-vs-stateful">Stateless vs Stateful</h2>
+
+<p>On the surface, <code>BatchProcessor</code> is stateless while <code>Writer</code> is stateful, but the former only pushes to its caller the responsibility of aggregating a batch, which is a stateful operation. On the other hand, the final step of the processing - the underlying driver regardless it is of file or network IO - is stateful too. So <code>Writer</code> does not add additional burden to its caller for managing a stateful interface.</p>
+
+<p>Rather, <code>Writer</code> not only simplifies the chain of processing within it, but also simplifies the batching logic on its caller side.</p>
+
+<h2 id="concurrency">Concurrency</h2>
+
+<p>A <code>Writer</code> can become concurrently safe by locking both <code>Write</code> and <code>Flush</code> methods. However, the ideal way of calling a <code>Writer</code> is from a single goroutine so that the caller is able to control exactly what are in the batch, and we can get rid of the overhead of the lock.</p>
+
+<p>If multiple goroutines must share a single underlying writer and at the same time want to control its own batches, then we could return an object instead of flushing, as below:</p>
+
+<pre><code class="language-go">type Builder interface {
+    Write(item Item) error
+    Bytes() []byte // return bytes
+    Object() Batch // or a batch object
+}
+</code></pre>
+
+<p>In fact, it becomes the <a href="https://en.wikipedia.org/wiki/Builder_pattern"><em>Builder Pattern</em></a>. Each goroutine has its own builder, building its own batches, and then sending those batches to a shared driver.</p>
+
+<p>In addition, we could even have various write methods, each for its own item type.</p>
+
+<h2 id="transaction">Transaction</h2>
+
+<p>If the caller needs to discard a batch, we could extend it with a rollback method, similar to <a href="https://golang.org/pkg/database/sql/#Tx">sql.Tx</a>:</p>
+
+<pre><code class="language-go">type TxWriter interface {
+    Write(item Item) error
+    Commit() error
+    Rollback() error
+}
+</code></pre>
+
+<p>Then it becomes the <a href="https://martinfowler.com/eaaCatalog/unitOfWork.html"><em>Unit of Work Pattern</em></a>.</p>
+
+<h2 id="conclusion">Conclusion</h2>
+
+<p>Whenever we want to process and send multiple items, consider this Writer Pattern and its variants and see if it can better suit our needs.</p>
+
+                </div>
+            </article>
+        
+            <article class="frontpage">
+                <h1>
                     <a href="http://h12.io/article/value-vs-pointer-receivers/">Value vs Pointer Receivers</a>
                     <span class="line"></span>
                 </h1>
@@ -423,28 +519,6 @@ cancelled when the task is cancelled).</p>
 </code></pre>
 
 <p>And pidof can be installed with Homebrew.</p>
-
-                </div>
-            </article>
-        
-            <article class="frontpage">
-                <h1>
-                    <a href="http://h12.io/note/tmux-cheatsheet/">Tmux Cheatsheet on Mac</a>
-                    <span class="line"></span>
-                </h1>
-                <span class="time">20 April 2018</span>
-                <div class="article-body hyphenate">
-                    
-
-<h3 id="create-a-new-session-with-iterm2-integration">Create a new session with iTerm2 integration</h3>
-
-<pre><code class="language-bash">tmux -CC new -s [session-name]
-</code></pre>
-
-<h3 id="attach-to-a-session-with-iterm2-integration">Attach to a session with iTerm2 integration</h3>
-
-<pre><code class="language-bash">tmux -CC attach -t [session-name]
-</code></pre>
 
                 </div>
             </article>

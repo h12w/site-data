@@ -75,6 +75,85 @@
         
             <article class="frontpage">
                 <h1>
+                    <a href="http://h12.io/note/what-go-cannot-do/">What Go cannot Do</a>
+                    <span class="line"></span>
+                </h1>
+                <span class="time">16 June 2015</span>
+                <div class="article-body hyphenate">
+                    
+
+<p>This is a list about the corner cases that Go cannot do, and their work arounds.</p>
+
+<h2 id="run-all-deferred-functions-of-other-goroutines-when-a-goroutine-panics">Run all deferred functions of other goroutines when a goroutine panics</h2>
+
+<p>Uncaught panicking of one goroutine will exit the program without executing deferred functions of other goroutines.</p>
+
+<p>Workaround: this is the standard behavior, C++ with RAII also has the same problem. Persist your data in a way that crashing will not cause data integrity issue.</p>
+
+<h2 id="assigning-to-fields-with-short-declaration-notation">Assigning to fields with short declaration notation</h2>
+
+<ul>
+<li>Issue: <a href="https://github.com/golang/go/issues/6842">6842</a></li>
+<li>Status: Open &amp; Unplanned</li>
+</ul>
+
+<p>When it is useful:</p>
+
+<pre><code class="language-go">if x.f, ok := f(); !ok {
+	...
+}
+</code></pre>
+
+<p>Workaround:</p>
+
+<pre><code class="language-go">var ok bool
+if x.f, ok = f(); !ok {
+	...
+}
+</code></pre>
+
+<h2 id="accessing-unexported-fields-with-reflect-value-interface-method">Accessing unexported fields with reflect.Value.Interface method</h2>
+
+<p>When it is useful:</p>
+
+<pre><code class="language-go">type S struct {
+   val string
+}
+
+...
+
+var s S
+
+reflect.Value(s).Fields(0).Interface()
+</code></pre>
+
+<p>The code will panics with message:</p>
+
+<pre><code>reflect.Value.Interface: cannot return value obtained from unexported field or method
+</code></pre>
+
+<p>Workaround:</p>
+
+<pre><code class="language-go">v := reflect.Value(s).Fields(0)
+if v.Kind() == reflect.String {
+	s := v.String()
+}
+</code></pre>
+
+<h2 id="slice-of-array-literal">Slice of array literal</h2>
+
+<p>e.g.</p>
+
+<pre><code class="language-go">[3]int{1, 2, 3}[:]
+</code></pre>
+
+<p>Just use slice literal instead!</p>
+
+                </div>
+            </article>
+        
+            <article class="frontpage">
+                <h1>
                     <a href="http://h12.io/note/ebook-tools/">Ebook Manipulation Tools</a>
                     <span class="line"></span>
                 </h1>
@@ -437,262 +516,6 @@ and protect your PGP key pair and master pass phrase.</p>
 <li><a href="https://alexcabal.com/creating-the-perfect-gpg-keypair">Creating the Perfect GPG Keypair</a></li>
 <li><a href="http://www.passwordstore.org">Pass: the standard unix password manager</a></li>
 </ol>
-
-                </div>
-            </article>
-        
-            <article class="frontpage">
-                <h1>
-                    <a href="http://h12.io/article/scientific-web-surfing/">A Brief Note on Scientific Web Surfing</a>
-                    <span class="line"></span>
-                </h1>
-                <span class="time">14 February 2015</span>
-                <div class="article-body hyphenate">
-                    
-
-<p><em>Knowledge is power. Information is liberating. &mdash; by Kofi Annan.</em></p>
-
-<h2 id="vps">VPS</h2>
-
-<ul>
-<li><a href="https://www.cloudsvm.com/billing/aff.php?aff=140">CloudsVM</a></li>
-<li><a href="http://www.vultr.com/?ref=6837862">Vultr</a></li>
-<li><a href="https://www.digitalocean.com/?refcode=56202ab61fb7">DigitalOcean</a></li>
-<li><a href="https://bandwagonhost.com/aff.php?aff=2128">BandwagonHOST</a>
-
-<ul>
-<li>Client Area -&gt; Services -&gt; Order New Services</li>
-<li>64MB RAM is enough for running both ShadowSocks and pdnsd</li>
-<li>Install Ubuntu LTS 32bit (x86, i686) or CentOS 7.</li>
-</ul></li>
-</ul>
-
-<h2 id="centos">CentOS</h2>
-
-<h3 id="install-centos-7-64bit">Install CentOS 7 (64bit)</h3>
-
-<h3 id="shadowsocks">Shadowsocks</h3>
-
-<pre><code class="language-bash">cd /etc/yum.repos.d/
-wget https://copr.fedorainfracloud.org/coprs/librehat/shadowsocks/repo/epel-7/librehat-shadowsocks-epel-7.repo
-yum update
-yum install shadowsocks-libev
-cd /etc/shadowsocks-libev/
-vim config.json
-# server should be 0.0.0.0
-
-vi /usr/lib/systemd/system/shadowsocks-libev.service
-# replace all $variables to constant values to fix the bug
-
-systemctl enable shadowsocks-libev
-systemctl start shadowsocks-libev
-</code></pre>
-
-<h3 id="pdnsd">pdnsd</h3>
-
-<pre><code class="language-bash">wget http://members.home.nl/p.a.rombouts/pdnsd/releases/pdnsd-1.2.9a-par_sl6.x86_64.rpm
-yum localinstall pdnsd-1.2.9a-par_sl6.x86_64.rpm
-vim /etc/pdnsd.conf
-</code></pre>
-
-<p>pdnsd.conf (replace the port)</p>
-
-<pre><code>global {
-	run_as      = &quot;pdnsd&quot;;
-	server_ip   = 0.0.0.0;
-	server_port = [xxxx];
-}
-
-server {
-	label   = &quot;GoogleDNS&quot;;
-	ip      = 8.8.8.8, 8.8.4.4;
-	timeout = 3;
-}
-</code></pre>
-
-<p>Then run:</p>
-
-<pre><code class="language-bash">systemctl enable pdnsd
-systemctl start pdnsd
-</code></pre>
-
-<h2 id="docker">Docker</h2>
-
-<p>Install <a href="https://docs.docker.com/installation/">Docker</a> on VPS.</p>
-
-<h2 id="remote-proxy">Remote Proxy</h2>
-
-<p>Install <a href="https://github.com/shadowsocks/shadowsocks-go/releases">shadowsocks</a>:</p>
-
-<pre><code class="language-bash">docker run -d -p &lt;port&gt;:&lt;port&gt; h12w/shadowsocks -p &lt;port&gt; -k &lt;password&gt; -m aes-128-cfb -t 60
-</code></pre>
-
-<h2 id="remote-dns-server">Remote DNS server</h2>
-
-<p>Install <a href="http://members.home.nl/p.a.rombouts/pdnsd/">pdnsd</a>:</p>
-
-<pre><code class="language-bash">docker run -d -p [port]:53 -p [port]:53/udp h12w/pdnsd
-</code></pre>
-
-<p>To test the DNS server:</p>
-
-<pre><code class="language-bash">dig @xxx.xxx.xxx.xxx -p xxxx www.linux.com
-</code></pre>
-
-<h2 id="local-openwrt-router">Local OpenWrt Router</h2>
-
-<p>Install <a href="https://github.com/shadowsocks/openwrt-shadowsocks">openwrt-shadowsocks</a> &amp;
-<a href="https://github.com/shadowsocks/ChinaDNS">ChinaDNS</a> on an <a href="https://openwrt.org/">OpenWrt</a> router.</p>
-
-<p>Follow the instructions on <a href="http://openwrt-dist.sourceforge.net">OpenWrt-Dist</a>:</p>
-
-<p>Check CPU model of the router:</p>
-
-<pre><code class="language-bash">cat /proc/cpuinfo
-</code></pre>
-
-<p>add the following to <code>/etc/opkg.conf</code>:</p>
-
-<pre><code>src/gz openwrt_dist http://openwrt-dist.sourceforge.net/releases/[cpu model]/packages
-src/gz openwrt_dist_luci http://openwrt-dist.sourceforge.net/releases/luci/packages
-</code></pre>
-
-<p>and install:</p>
-
-<pre><code class="language-bash">opkg update
-opkg install ChinaDNS
-opkg install luci-app-chinadns
-opkg install shadowsocks-libev-spec
-opkg install luci-app-shadowsocks-spec
-
-opkg install bind-dig
-</code></pre>
-
-<p>Or manually download IPKs of the corresponding CPU:</p>
-
-<ul>
-<li><a href="http://sourceforge.net/projects/openwrt-dist/files/shadowsocks-libev/">shadowsocks-libev-spec</a>
-
-<ul>
-<li><a href="http://sourceforge.net/projects/openwrt-dist/files/luci-app/shadowsocks-spec/">luci-shadowsocks</a></li>
-</ul></li>
-<li><a href="http://sourceforge.net/projects/openwrt-dist/files/chinadns/">chinadns</a>
-
-<ul>
-<li><a href="http://sourceforge.net/projects/openwrt-dist/files/luci-app/chinadns/">luci-chinadns</a></li>
-</ul></li>
-</ul>
-
-<p>Copy <code>*.ipk</code> to router:</p>
-
-<pre><code class="language-bash">scp *.ipk root@192.168.2.1:/tmp
-</code></pre>
-
-<p>And install:</p>
-
-<pre><code class="language-bash">opkg install shadowsocks-libev-spec_xxx.ipk
-opkg install ChinaDNS_xxx.ipk
-/etc/init.d/shadowsocks enable
-/etc/init.d/chinadns enable
-</code></pre>
-
-<p>ShadowSocks configuration in <code>/etc/config/shadowsocks</code>:</p>
-
-<pre><code>config shadowsocks
-	...
-	option config_file '/etc/shadowsocks/config.json'
-	...
-	option tunnel_enable '0'
-	...
-</code></pre>
-
-<p>It refers to <code>/etc/shadowsocks/config.json</code>:</p>
-
-<pre><code>{
-    &quot;server&quot;:      &quot;xxx.xxx.xxx.xxx&quot;,
-    &quot;server_port&quot;: xxxx,
-    &quot;local_port&quot;:  xxxx,
-    &quot;password&quot;:    &quot;xxxxxx&quot;,
-    &quot;method&quot;:      &quot;aes-128-cfb&quot;,
-    &quot;timeout&quot;:     60
-}
-</code></pre>
-
-<p>ChinaDNS configuration in <code>/etc/config/chinadns</code>:</p>
-
-<pre><code>config chinadns
-    ...
-    option chnroute '/etc/shadowsocks/ignore.list'
-    ...
-    option server '[isp_dns],[private_pdnsd_dns]'
-    ...
-</code></pre>
-
-<p>Make sure <code>[private_pdnsd_dns]</code> is the same IP:PORT as the remote pdnsd server.</p>
-
-<p>ucitrack configuration in <code>/etc/config/ucitrack</code>:</p>
-
-<pre><code>config shadowsocks
-    option init 'shadowsocks'
-
-config chinadns
-    option init 'chinadns'
-</code></pre>
-
-<p>DHCP configuration in <code>/etc/config/dhcp</code>:</p>
-
-<pre><code>config dnsmasq
-    list server '127.0.0.1#5353'
-    option noresolv '1'
-    option nohosts '1'
-</code></pre>
-
-<h2 id="redsocks2">RedSocks2</h2>
-
-<p>Use RedSocks2 to bypass the proxy when the target site is reachable.</p>
-
-<p>Download RedSocks2:</p>
-
-<ul>
-<li><a href="http://sourceforge.net/projects/openwrt-dist/files/redsocks2/">RedSocks2</a>
-
-<ul>
-<li><a href="http://sourceforge.net/projects/openwrt-dist/files/luci-app/redsocks2/">luci-redsocks2</a></li>
-</ul></li>
-</ul>
-
-<p>Install RedSocks2:</p>
-
-<pre><code>scp *.ipk root@192.168.2.1:/tmp
-opkg update
-opkg install xxx.ipk
-</code></pre>
-
-<p>RedSocks2 will take effect immediately.</p>
-
-<h2 id="upgrade-openwrt">Upgrade OpenWRT</h2>
-
-<p>Download latest <code>*.ipk</code> above.</p>
-
-<pre><code class="language-bash">opkg update
-opkg upgrade ipset libopenssl resolveip iptables-mod-tproxy
-opkg install xxx.ipk
-</code></pre>
-
-<p>Merge configuration files manually.</p>
-
-<p>Update <code>ignore.list</code>:</p>
-
-<pre><code>wget -O- 'http://ftp.apnic.net/apnic/stats/apnic/delegated-apnic-latest' | awk -F\| '/CN\|ipv4/ { printf(&quot;%s/%d\n&quot;, $4, 32-log($5)/log(2)) }' &gt; ignore.list
-scp ignore.list root@192.168.2.1:/etc/shadowsocks/ignore.list
-</code></pre>
-
-<pre><code class="language-bash">reboot
-</code></pre>
-
-<h2 id="android-client">Android Client</h2>
-
-<p><a href="https://github.com/shadowsocks/shadowsocks-android/releases">shadowsocks-android</a>.</p>
 
                 </div>
             </article>

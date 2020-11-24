@@ -76,6 +76,15 @@
     </item>
     
     <item>
+      <title>Batch</title>
+      <link>http://h12.io/tags/batch/</link>
+      <pubDate>Sun, 22 Nov 2020 17:38:34 +0000</pubDate>
+      
+      <guid>http://h12.io/tags/batch/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>Benchmark</title>
       <link>http://h12.io/tags/benchmark/</link>
       <pubDate>Fri, 19 Jun 2020 13:58:46 +0100</pubDate>
@@ -90,6 +99,15 @@
       <pubDate>Thu, 29 Jan 2015 03:55:08 +0000</pubDate>
       
       <guid>http://h12.io/tags/build/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Builder</title>
+      <link>http://h12.io/tags/builder/</link>
+      <pubDate>Sun, 22 Nov 2020 17:38:34 +0000</pubDate>
+      
+      <guid>http://h12.io/tags/builder/</guid>
       <description></description>
     </item>
     
@@ -283,6 +301,15 @@
     </item>
     
     <item>
+      <title>End to End Principle</title>
+      <link>http://h12.io/tags/end-to-end-principle/</link>
+      <pubDate>Sun, 22 Nov 2020 17:38:34 +0000</pubDate>
+      
+      <guid>http://h12.io/tags/end-to-end-principle/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>Failure</title>
       <link>http://h12.io/tags/failure/</link>
       <pubDate>Thu, 29 Jan 2015 03:55:08 +0000</pubDate>
@@ -393,7 +420,7 @@
     <item>
       <title>Go</title>
       <link>http://h12.io/tags/go/</link>
-      <pubDate>Fri, 19 Jun 2020 13:58:46 +0100</pubDate>
+      <pubDate>Sun, 22 Nov 2020 17:38:34 +0000</pubDate>
       
       <guid>http://h12.io/tags/go/</guid>
       <description></description>
@@ -769,6 +796,15 @@
     </item>
     
     <item>
+      <title>Pattern</title>
+      <link>http://h12.io/tags/pattern/</link>
+      <pubDate>Sun, 22 Nov 2020 17:38:34 +0000</pubDate>
+      
+      <guid>http://h12.io/tags/pattern/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>Pdf</title>
       <link>http://h12.io/tags/pdf/</link>
       <pubDate>Thu, 04 Jun 2015 14:19:38 +0800</pubDate>
@@ -1048,6 +1084,15 @@
     </item>
     
     <item>
+      <title>Unit of Work</title>
+      <link>http://h12.io/tags/unit-of-work/</link>
+      <pubDate>Sun, 22 Nov 2020 17:38:34 +0000</pubDate>
+      
+      <guid>http://h12.io/tags/unit-of-work/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>User Agent</title>
       <link>http://h12.io/tags/user-agent/</link>
       <pubDate>Mon, 18 Jul 2016 06:00:00 +0800</pubDate>
@@ -1116,6 +1161,15 @@
       <pubDate>Wed, 01 Jan 2014 01:30:04 +0000</pubDate>
       
       <guid>http://h12.io/tags/wrapper-generator/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Writer</title>
+      <link>http://h12.io/tags/writer/</link>
+      <pubDate>Sun, 22 Nov 2020 17:38:34 +0000</pubDate>
+      
+      <guid>http://h12.io/tags/writer/</guid>
       <description></description>
     </item>
     
