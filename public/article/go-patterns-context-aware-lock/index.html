@@ -1,10 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-	<meta name="generator" content="Hugo 0.53" />
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title> Hai-Liang &#34;Hal&#34; Wang </title>
+        <title> Go Patterns: Context-aware Lock </title>
         <link rel="shortcut icon" href="/img/favicon.png" />
 
         <style>
@@ -71,439 +70,64 @@
         </header>
 
         <main class="container">
-        
-        
-            <article class="frontpage">
-                <h1>
-                    <a href="http://h12.io/note/font-links/">Links about Font Choosing</a>
-                    <span class="line"></span>
-                </h1>
-                <span class="time">22 June 2014</span>
+            <article class="single">
+                <h1>Go Patterns: Context-aware Lock</h1>
                 <div class="article-body hyphenate">
-                    <ul>
-<li><a href="http://www.snapily.com/blog/the-best-font-styles-for-blogging/">The Best Font Styles for Blogging</a></li>
-<li><a href="http://www.bigbrandsystem.com/best-font-size/">Size Doesn’t Matter, and What Does</a></li>
-<li><a href="http://blog.mailchimp.com/using-media-queries-to-improve-readability/">Using Media Queries To Improve Readability</a></li>
-<li><a href="http://www.sitepoint.com/eight-definitive-font-stacks/">8 Definitive Web Font Stacks</a></li>
+                <p>We often use <code>Mutex</code> or <code>RWMutex</code> as locks in Go, but sometimes we need a lock that can be cancelled by a context during the lock attempt.</p>
+
+<p>The pattern is simple - we use a channel with length 1:</p>
+
+<pre><code class="language-go">lockChan := make(chan struct{}, 1)
+lockChan &lt;- struct{}{} // lock
+&lt;- lockChan            // unlock
+</code></pre>
+
+<p>When multiple goroutines try to obtain the lock, only one of them is able to fill into the only slot, and the rest are blocked until the slot is empty again after a readout.</p>
+
+<p>Unlike mutexes, we could easily cancel the lock attempt with a context:</p>
+
+<pre><code class="language-go">select {
+    case &lt;-ctx.Done():
+        // cancelled
+    case &lt;-lockChan:
+        // locked
+}
+</code></pre>
+
+<p>Or cancel the lock with a timeout:</p>
+
+<pre><code class="language-go">select {
+    case &lt;-time.After(timeout):
+        // timeout
+    case &lt;-lockChan:
+        // locked
+}
+</code></pre>
+
+<p>Or even check if it is locked or not:</p>
+
+<pre><code class="language-go">return len(lockChan) &gt; 0 // locked or not
+</code></pre>
+
+                </div>
+                <div>
+                    <div id="article-time">30 November 2020</div>
+                    <ul id="tags">
+  
+    <li><a href="/tags/go">Go</a> </li>
+  
+    <li><a href="/tags/pattern">pattern</a> </li>
+  
+    <li><a href="/tags/context">context</a> </li>
+  
+    <li><a href="/tags/lock">lock</a> </li>
+  
+    <li><a href="/tags/mutex">mutex</a> </li>
+  
 </ul>
 
                 </div>
             </article>
-        
-            <article class="frontpage">
-                <h1>
-                    <a href="http://h12.io/note/searchable-meta-data/">How to Make Web Pages Searchable by Meta Data?</a>
-                    <span class="line"></span>
-                </h1>
-                <span class="time">22 June 2014</span>
-                <div class="article-body hyphenate">
-                    <p><a href="https://developers.google.com/custom-search/docs/structured_data">Providing Structured Data</a></p>
-
-                </div>
-            </article>
-        
-            <article class="frontpage">
-                <h1>
-                    <a href="http://h12.io/note/htc-upgrade/">Upgrading 4.4.3 ROM for HTC One</a>
-                    <span class="line"></span>
-                </h1>
-                <span class="time">11 June 2014</span>
-                <div class="article-body hyphenate">
-                    <p><a href="http://htc-one.wonderhowto.com/how-to/update-your-rooted-google-play-edition-htc-one-4-4-3-without-losing-any-data-0155404/">Upgrade your rooted Google Play Edition</a></p>
-
-                </div>
-            </article>
-        
-            <article class="frontpage">
-                <h1>
-                    <a href="http://h12.io/note/disable-touchpad/">How to Disable the Touchpad in Linux?</a>
-                    <span class="line"></span>
-                </h1>
-                <span class="time">10 June 2014</span>
-                <div class="article-body hyphenate">
-                    <p>Have you ever been annoyed by accidentally touching the touchpad on your laptop
-when you are typing?</p>
-
-<p>I am using a Linux laptop with both trackpoint and touchpad so the touchpad is
-just an annoying redundant thing. Here is the one-liner to disable it:</p>
-
-<pre><code class="language-bash">xinput list | grep TouchPad | grep -Po 'id=\K([0-9]+)' | xargs xinput disable
-</code></pre>
-
-                </div>
-            </article>
-        
-            <article class="frontpage">
-                <h1>
-                    <a href="http://h12.io/project/gosweep/">gosweep: A shell script to do various checks on Go code</a>
-                    <span class="line"></span>
-                </h1>
-                <span class="time">5 June 2014</span>
-                <div class="article-body hyphenate">
-                    
-
-<p>This script performs the build, test and automatic checking of a Go package and its sub-packages using:</p>
-
-<ol>
-<li><a href="http://golang.org/cmd/gofmt/" title="gofmt">gofmt</a></li>
-<li><a href="https://godoc.org/golang.org/x/tools/cmd/goimports" title="golang.org/x/tools/cmd/goimports">goimports</a></li>
-<li><a href="https://github.com/golang/lint" title="golang/lint">golint</a></li>
-<li><a href="http://golang.org/cmd/vet" title="go vet">go vet</a></li>
-<li><a href="https://github.com/gordonklaus/ineffassign" title="ineffassign">ineffassign</a></li>
-<li><a href="http://blog.golang.org/race-detector" title="race detector">race detector</a></li>
-<li><a href="http://blog.golang.org/cover" title="test coverage">test coverage</a> on package and its sub-packages, <code>/vendor</code> directories excluded</li>
-<li><a href="https://github.com/mattn/goveralls" title="mattn/goveralls">goveralls</a></li>
-<li><a href="https://github.com/fzipp/gocyclo" title="gocyclo">gocyclo</a></li>
-<li><a href="https://github.com/client9/misspell" title="misspell">misspell</a></li>
-</ol>
-
-<p>Migrated from my <a href="https://gist.github.com/h12w/0f22736320abe6be71ce">Gist</a>.</p>
-
-<h2 id="dependencies">Dependencies</h2>
-
-<p>To setup all the dependencies need to run the script do:</p>
-
-<pre><code>$ go get -v github.com/client9/misspell/cmd/misspell
-$ go get -v github.com/fzipp/gocyclo
-$ go get -v github.com/golang/lint/golint
-$ go get -v github.com/gordonklaus/ineffassign
-$ go get -v github.com/h12w/gosweep
-$ go get -v github.com/mattn/goveralls
-$ go get -v golang.org/x/tools/cmd/goimports
-</code></pre>
-
-<h2 id="environment-variables">Environment variables</h2>
-
-<ul>
-<li><strong>GOCYCLO_COMPLEXITY</strong>: maximum allowed function complexity threshold (default: <code>5</code>).</li>
-<li><strong>MISSPELL_LOCALE</strong>: English locale (default: <code>US</code>).</li>
-</ul>
-
-<p>If you wish to set this for a project you can create a <code>.gosweep</code> file.
-For example:</p>
-
-<pre><code class="language-bash">$ cat .gosweep
-GOCYCLO_COMPLEXITY=5
-MISSPELL_LOCALE='US'
-</code></pre>
-
-<h2 id="continuous-integration">Continuous Integration</h2>
-
-<h3 id="travis-ci">travis-ci</h3>
-
-<p>Example of <code>.travis.yml</code> file for Go:</p>
-
-<pre><code class="language-yaml">language: go
-cache:
-  directories:
-    - ${GOPATH}/src/github.com/${TRAVIS_REPO_SLUG}/vendor
-    - ${GOPATH}/src/github.com/fzipp
-    - ${GOPATH}/src/github.com/golang
-    - ${GOPATH}/src/github.com/gordonklaus
-    - ${GOPATH}/src/github.com/h12w
-    - ${GOPATH}/src/github.com/mattn
-go:
-  - tip
-  - 1.8
-  - 1.7
-  - 1.6
-sudo: false
-
-env:
-    CI_SERVICE=travis-ci
-
-install:
-  - go get -v github.com/client9/misspell/cmd/misspell
-  - go get -v github.com/fzipp/gocyclo
-  - go get -v github.com/golang/lint/golint
-  - go get -v github.com/gordonklaus/ineffassign
-  - go get -v github.com/h12w/gosweep
-  - go get -v github.com/mattn/goveralls
-  - go get -v -u golang.org/x/tools/cmd/goimports
-
-script:
-  - bash ${GOPATH}/src/github.com/h12w/gosweep/gosweep.sh
-</code></pre>
-
-                </div>
-            </article>
-        
-            <article class="frontpage">
-                <h1>
-                    <a href="http://h12.io/project/getgo/">Getgo: a concurrent, simple and extensible web scraping framework</a>
-                    <span class="line"></span>
-                </h1>
-                <span class="time">2 June 2014</span>
-                <div class="article-body hyphenate">
-                    
-
-<p><a href="https://godoc.org/github.com/h12w/getgo"><img src="https://godoc.org/github.com/h12w/getgo?status.png" alt="GoDoc" /></a>
-<a href="https://travis-ci.org/h12w/getgo"><img src="https://travis-ci.org/h12w/getgo.svg?branch=master" alt="Build Status" /></a></p>
-
-<p>Getgo is a concurrent, simple and extensible web scraping framework written in <a href="http://golang.org">Go</a>.</p>
-
-<h2 id="quick-start">Quick start</h2>
-
-<h3 id="get-getgo">Get Getgo</h3>
-
-<pre><code class="language-bash">go get -u github.com/h12w/getgo
-</code></pre>
-
-<h3 id="define-a-task">Define a task</h3>
-
-<p>This example is under the examples/goblog directory. To use Getgo to scrap structured
-data from a web page, just define the structured data as a Go struct (golangBlogEntry),
-and define a corresponding task (golangBlogIndexTask).</p>
-
-<pre><code class="language-go">type golangBlogEntry struct {
-	Title string
-	URL   string
-	Tags  *string
-}
-
-type golangBlogIndexTask struct {
-	// Variables in task URL, e.g. page number
-}
-
-func (t golangBlogIndexTask) Request() *http.Request {
-	return getReq(`http://blog.golang.org/index`)
-}
-
-func (t golangBlogIndexTask) Handle(root *query.Node, s getgo.Storer) (err error) {
-	root.Div(_Id(&quot;content&quot;)).Children(_Class(&quot;blogtitle&quot;)).For(func(item *query.Node) {
-		title := item.Ahref().Text()
-		url := item.Ahref().Href()
-		tags := item.Span(_Class(&quot;tags&quot;)).Text()
-		if url != nil &amp;&amp; title != nil {
-			store(&amp;golangBlogEntry{Title: *title, URL: *url, Tags: tags}, s, &amp;err)
-		}
-	})
-	return
-}
-</code></pre>
-
-<h3 id="run-the-task">Run the task</h3>
-
-<p>Use util.Run to run the task and print all the result to standard output.</p>
-
-<pre><code class="language-go">	util.Run(golangBlogIndexTask{})
-</code></pre>
-
-<p>To store the parsed result to a database, a storage backend satisfying getgo.Tx
-interface should be provided to the getgo.Run method.</p>
-
-<h2 id="understand-getgo">Understand Getgo</h2>
-
-<p>A getgo.Task is an interface to represent an HTTP crawler task that provides an
-HTTP request and a method to handle the HTTP response.</p>
-
-<pre><code class="language-go">type Task interface {
-	Requester
-	Handle(resp *http.Response) error
-}
-
-type Requester interface {
-	Request() *http.Request
-}
-</code></pre>
-
-<p>A getgo.Runner is responsible to run a getgo.Task. There are two concrete runners
-provided: SequentialRunner and ConcurrentRunner.</p>
-
-<pre><code class="language-go">type Runner interface {
-	Run(task Task) error // Run runs a task
-	Close()              // Close closes the runner
-}
-</code></pre>
-
-<p>A task that stores data into a storage backend should satisfy getgo.StorableTask
-interface.</p>
-
-<pre><code class="language-go">type StorableTask interface {
-	Requester
-	Handle(resp *http.Response, s Storer) error
-}
-</code></pre>
-
-<p>A storage backend is simply an object satisfying getgo.Tx interface.</p>
-
-<pre><code class="language-go">type Storer interface {
-	Store(v interface{}) error
-}
-
-type Tx interface {
-	Storer
-	Commit() error
-	Rollback() error
-}
-</code></pre>
-
-<p>See getgo.Run method to understand how a StorableTask is combined with a storage
-backend and adapted to become a normal Task to allow a Runner to run it.</p>
-
-<p>There are currently a PostgreSQL storage backend provided by Getgo, and it is
-not hard to support more backends (See getgo/db package for details).</p>
-
-<p>The easier way to define a task for an HTML page is to define a task satisfying
-getgo.HTMLTask rather than getgo.Task, there are adapters to convert internally
-an HTMLTask to a Task so that a Runner can run an HTMLTask. The Handle method of
-HTMLTask provides an already parsed HTML DOM object (by html-query package).</p>
-
-<pre><code class="language-go">type HTMLTask interface {
-	Requester
-	Handle(root *query.Node, s Storer) error
-}
-</code></pre>
-
-<p>Similarly, a task for retrieving a JSON page should satisfy getgo.TextTask
-interface. An io.Reader is provided to be decoded by the encoding/json package.</p>
-
-<pre><code class="language-go">type TextTask interface {
-	Requester
-	Handle(r io.Reader, s Storer) error
-}
-</code></pre>
-
-                </div>
-            </article>
-        
-            <article class="frontpage">
-                <h1>
-                    <a href="http://h12.io/project/gspec/">GSpec: a productive Go test framework</a>
-                    <span class="line"></span>
-                </h1>
-                <span class="time">28 May 2014</span>
-                <div class="article-body hyphenate">
-                    <p><a href="https://app.wercker.com/project/bykey/d5ed30f0d03d4a5210f65659ead13888"><img src="https://app.wercker.com/status/d5ed30f0d03d4a5210f65659ead13888/s" alt="wercker status" title="wercker status" /></a>
-<a href="https://godoc.org/h12.io/gspec"><img src="https://godoc.org/h12.io/gspec?status.png" alt="GoDoc" /></a></p>
-
-<p>GSpec is an <em>expressive, reliable, concurrent and extensible</em> Go test framework
-that makes it productive to organize and verify the mind model of software.</p>
-
-<ul>
-<li><em>Expressive</em>: a complete runnable specification can be organized via both BDD
-            and table driven styles.</li>
-<li><em>Reliable</em>:   the implementation has minimal footprint and is tested with 100%
-            coverage.</li>
-<li><em>Concurrent</em>: test cases can be executed concurrently or sequentially.</li>
-<li><em>Extensible</em>: customizable BDD cue words, expectations and test reporters.</li>
-<li><em>Compatible</em>: &ldquo;go test&rdquo; is sufficient but not mandatory to run GSpec tests.</li>
-</ul>
-
-<h2 id="quick-start">Quick start</h2>
-
-<h3 id="get-gspec">Get GSpec</h3>
-
-<pre><code class="language-bash">go get -u -f h12.io/gspec
-go test h12.io/gspec/...
-</code></pre>
-
-<h3 id="write-tests-with-gspec">Write tests with GSpec</h3>
-
-<p>According to the <a href="http://golang.org/doc/code.html#Testing">convention of Go</a>,
-write GSpec tests in file xxx_test.go to test code in xxx.go.</p>
-
-<pre><code class="language-go">import (
-	&quot;fmt&quot;
-
-	&quot;h12.io/gspec&quot;
-)
-
-// Only one suite.Add is needed for each xxx_test.go file.
-var _ = gspec.Add(func(s gspec.S) {
-	// BDD cue word is customizible.
-	describe, given, when, it := s.Alias(&quot;describe&quot;), s.Alias(&quot;given&quot;), s.Alias(&quot;when&quot;), s.Alias(&quot;it&quot;)
-	// expectation cue word is customizible too.
-	expect := gspec.Alias(s.FailNow)
-
-	// A BDD example.
-	describe(&quot;an integer i&quot;, func() {
-		// setup
-		i := 2
-		defer func() {
-			// teardown (if any)
-		}()
-		given(&quot;another integer j&quot;, func() {
-			j := 3
-			when(&quot;j is added to i&quot;, func() {
-				i += j
-				it(&quot;should become the sum of original i and j&quot;, func() {
-					expect(i).Equal(5) // a passing case
-				})
-			})
-			when(&quot;j is minused from i&quot;, func() {
-				i -= j
-				it(&quot;should become the difference of j minus i&quot;, func() {
-					expect(i).Equal(4) // a failing case
-				})
-			})
-			when(&quot;j is multiplied to i&quot;, nil) // a pending case
-		})
-	})
-
-	// A table-driven example.
-	testcase := s.Alias(&quot;testcase&quot;)
-	describe(&quot;integer summation&quot;, func() {
-		for _, c := range []struct{ i, j, sum int }{
-			{1, 2, 3}, // a passing case
-			{1, 1, 0}, // a failing case
-		} {
-			testcase(fmt.Sprintf(`%d + %d = %d`, c.i, c.j, c.sum), func() {
-				expect(c.i + c.j).Equal(c.sum)
-			})
-		}
-	})
-})
-</code></pre>
-
-<p>Write the following go test function for only once in any test file within the
-package (e.g. all_test.go).</p>
-
-<pre><code class="language-go">import (
-	&quot;testing&quot;
-	&quot;h12.io/gspec&quot;
-)
-
-// Defined only once within a package.
-func TestAll(t *testing.T) {
-	gspec.Test(t)
-}
-</code></pre>
-
-<h3 id="run-tests-with-go-test">Run tests with &ldquo;go test&rdquo;</h3>
-
-<p>Run all the tests concurrently (sequencially by default) and display errors.</p>
-
-<pre><code class="language-bash">go test -concurrent
-</code></pre>
-
-<p>Run all the tests and view the complete specification.</p>
-
-<pre><code class="language-bash">go test -v
-</code></pre>
-
-<p>Run only a failing test case (even it is an entry in the driven table):</p>
-
-<pre><code class="language-bash">go test -focus 1/1
-</code></pre>
-                </div>
-            </article>
-        
-        <nav class="pagination">
-            <span>- 10 -</span>
-            <ul>
-                <li>
-            
-                    <a href="/page/9">« Prev</a>
-            
-                </li>
-                <li>
-            
-                    <a href="/page/11">Next »</a>
-            
-                </li>
-            </ul>
-        </nav>
         </main>
         <footer id="site-footer">
             <hr>

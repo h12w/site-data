@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Pattern on Hai-Liang &#34;Hal&#34; Wang</title>
-    <link>http://h12.io/tags/pattern/</link>
-    <description>Recent content in Pattern on Hai-Liang &#34;Hal&#34; Wang</description>
+    <title>Context on Hai-Liang &#34;Hal&#34; Wang</title>
+    <link>http://h12.io/tags/context/</link>
+    <description>Recent content in Context on Hai-Liang &#34;Hal&#34; Wang</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
     <copyright>Copyright (c) 2012-2018, Hǎi-Liàng &#34;Hal&#34; Wáng; all rights reserved.</copyright>
     <lastBuildDate>Mon, 30 Nov 2020 17:45:31 +0000</lastBuildDate>
     
-	<atom:link href="http://h12.io/tags/pattern/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="http://h12.io/tags/context/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
@@ -21,17 +21,6 @@
       <description>We often use Mutex or RWMutex as locks in Go, but sometimes we need a lock that can be cancelled by a context during the lock attempt.
 The pattern is simple - we use a channel with length 1:
 lockChan := make(chan struct{}, 1) lockChan &amp;lt;- struct{}{} // lock &amp;lt;- lockChan // unlock  When multiple goroutines try to obtain the lock, only one of them is able to fill into the only slot, and the rest are blocked until the slot is empty again after a readout.</description>
-    </item>
-    
-    <item>
-      <title>Go Patterns: Writer</title>
-      <link>http://h12.io/article/go-patterns-writer/</link>
-      <pubDate>Sun, 22 Nov 2020 17:38:34 +0000</pubDate>
-      
-      <guid>http://h12.io/article/go-patterns-writer/</guid>
-      <description>A writer is so ubiquitous that we do not usually consider it as a pattern, but sometimes we reinvent it or even do it in an inferior way. Let us look at a real use case first.
-Batch processor What would you do to improve the throughput of a service? The answer is short: batching.
-By processing and sending in a batch of multiple items instead of a single item at a time, you are amortizing the network overhead from the request-response round trip among all the items in the batch.</description>
     </item>
     
   </channel>

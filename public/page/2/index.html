@@ -75,6 +75,28 @@
         
             <article class="frontpage">
                 <h1>
+                    <a href="http://h12.io/note/start-godoc/">How to Start Godoc on Mac</a>
+                    <span class="line"></span>
+                </h1>
+                <span class="time">5 May 2018</span>
+                <div class="article-body hyphenate">
+                    <p>Fish:</p>
+
+<pre><code class="language-fish">godoc -http=:6060 &amp;; disown (pidof godoc)
+</code></pre>
+
+<p>Bash:</p>
+
+<pre><code>godoc -http=:6060 &amp;; disown `pidof godoc`
+</code></pre>
+
+<p>And pidof can be installed with Homebrew.</p>
+
+                </div>
+            </article>
+        
+            <article class="frontpage">
+                <h1>
                     <a href="http://h12.io/note/tmux-cheatsheet/">Tmux Cheatsheet on Mac</a>
                     <span class="line"></span>
                 </h1>
@@ -188,20 +210,6 @@ vimdiff aa.json bb.json
                     <pre><code class="language-bash">git fetch       --prune  origin
 git branch      --delete [branch-name]
 git push origin --delete [branch-name]
-</code></pre>
-
-                </div>
-            </article>
-        
-            <article class="frontpage">
-                <h1>
-                    <a href="http://h12.io/note/download-website/">A Single Command to Download a Website</a>
-                    <span class="line"></span>
-                </h1>
-                <span class="time">9 April 2017</span>
-                <div class="article-body hyphenate">
-                    <pre><code class="language-bash">wget --recursive --level=2 --no-parent --no-clobber --convert-links --continue
-[URL]
 </code></pre>
 
                 </div>

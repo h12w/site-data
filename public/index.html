@@ -75,6 +75,52 @@
         
             <article class="frontpage">
                 <h1>
+                    <a href="http://h12.io/article/go-patterns-context-aware-lock/">Go Patterns: Context-aware Lock</a>
+                    <span class="line"></span>
+                </h1>
+                <span class="time">30 November 2020</span>
+                <div class="article-body hyphenate">
+                    <p>We often use <code>Mutex</code> or <code>RWMutex</code> as locks in Go, but sometimes we need a lock that can be cancelled by a context during the lock attempt.</p>
+
+<p>The pattern is simple - we use a channel with length 1:</p>
+
+<pre><code class="language-go">lockChan := make(chan struct{}, 1)
+lockChan &lt;- struct{}{} // lock
+&lt;- lockChan            // unlock
+</code></pre>
+
+<p>When multiple goroutines try to obtain the lock, only one of them is able to fill into the only slot, and the rest are blocked until the slot is empty again after a readout.</p>
+
+<p>Unlike mutexes, we could easily cancel the lock attempt with a context:</p>
+
+<pre><code class="language-go">select {
+    case &lt;-ctx.Done():
+        // cancelled
+    case &lt;-lockChan:
+        // locked
+}
+</code></pre>
+
+<p>Or cancel the lock with a timeout:</p>
+
+<pre><code class="language-go">select {
+    case &lt;-time.After(timeout):
+        // timeout
+    case &lt;-lockChan:
+        // locked
+}
+</code></pre>
+
+<p>Or even check if it is locked or not:</p>
+
+<pre><code class="language-go">return len(lockChan) &gt; 0 // locked or not
+</code></pre>
+
+                </div>
+            </article>
+        
+            <article class="frontpage">
+                <h1>
                     <a href="http://h12.io/article/go-patterns-writer/">Go Patterns: Writer</a>
                     <span class="line"></span>
                 </h1>
@@ -497,28 +543,6 @@ cancelled when the task is cancelled).</p>
 <p>A Pool is useful when there are many short-lived gorotuines.</p>
 
 <p>Group can be built upon pool, not vice versa.</p>
-
-                </div>
-            </article>
-        
-            <article class="frontpage">
-                <h1>
-                    <a href="http://h12.io/note/start-godoc/">How to Start Godoc on Mac</a>
-                    <span class="line"></span>
-                </h1>
-                <span class="time">5 May 2018</span>
-                <div class="article-body hyphenate">
-                    <p>Fish:</p>
-
-<pre><code class="language-fish">godoc -http=:6060 &amp;; disown (pidof godoc)
-</code></pre>
-
-<p>Bash:</p>
-
-<pre><code>godoc -http=:6060 &amp;; disown `pidof godoc`
-</code></pre>
-
-<p>And pidof can be installed with Homebrew.</p>
 
                 </div>
             </article>

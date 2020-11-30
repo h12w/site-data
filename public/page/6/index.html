@@ -75,6 +75,120 @@
         
             <article class="frontpage">
                 <h1>
+                    <a href="http://h12.io/note/go-design/">Notes on the Design of Go</a>
+                    <span class="line"></span>
+                </h1>
+                <span class="time">29 June 2015</span>
+                <div class="article-body hyphenate">
+                    
+
+<h3 id="refusing-new-features">Refusing new features</h3>
+
+<p>Avoid <a href="https://en.wikipedia.org/wiki/Leaky_abstraction">leaky abstraction</a> as much as possible. If an abstraction is not solid enough, you’d rather not use them at all. Go is designed like this, the features are carefully selected. If a feature is not solid enough, it will not be allowed to enter Go.</p>
+
+<h3 id="no-implicit-string-concatenation">No implicit string concatenation</h3>
+
+<p><a href="https://groups.google.com/d/msg/golang-nuts/S6a3bg65TBE/ikyNMzUSnXsJ">Rob</a>:
+That used to be in the language but was dropped when the semicolon insertion rules went in. You need the + to be able to span lines, and if you can&rsquo;t span lines operatorless concatenation is close to pointless.</p>
+
+<h3 id="no-implicit-conversion">No Implicit conversion</h3>
+
+<p><a href="https://groups.google.com/d/msg/golang-nuts/S6a3bg65TBE/ikyNMzUSnXsJ">Rob</a>:
+In any case the clarity of Go&rsquo;s strictness is worth the occasional conversion. A huge class of bugs is simply gone, and a huge piece of tricky language in the specification never needed to be written.</p>
+
+<p><a href="https://groups.google.com/d/msg/golang-nuts/S6a3bg65TBE/KUNfj8L4H4IJ">Russ</a>:
+Inserting automatic widening means giving up the &ldquo;named types are not the same&rdquo; rule, which makes it pretty much a non-starter.</p>
+
+<h3 id="octal-literal">Octal literal</h3>
+
+<p>Octal numeric system is rarely used, why does Go support them?</p>
+
+<p>From Wikipedia “Octal”: Octal representation of non-ASCII bytes may be particularly handy with UTF-8, where any start byte has octal value \3nn and any continuation byte has octal value \2nn.</p>
+
+<h3 id="null-pointer-billion-dollar-mistake">Null pointer (billion-dollar mistake)</h3>
+
+<p><a href="https://groups.google.com/d/msg/golang-nuts/Vxpuc37S8tQ/2zGB1QgjmbAJ">Jonathan</a>:
+in the eyes of the Go designers, who clearly don&rsquo;t view it as a billion-dollar mistake, and in my eyes as well,
+ having spent days debugging (or failing to debug) race conditions, but rarely more than an hour per null-pointer bug).</p>
+
+<p><a href="https://groups.google.com/d/msg/golang-nuts/SskXyc9D5Sk/-EKHAIFBRXEJ">rog</a>:
+even in languages with no nil, such as Haskell, you can still get exceptions from using things that have an unexpected form. e.g. head [] that&rsquo;s not too different from a nil pointer exception. so even if you go the non-nil route, you may still end up paying a good proportion of the &ldquo;billion dollar&rdquo; price.</p>
+
+<h3 id="return-errors-rather-than-exceptions">Return errors rather than exceptions</h3>
+
+<p><a href="http://blogs.msdn.com/b/oldnewthing/archive/2005/01/14/352949.aspx">Raymond Chen</a>:
+It&rsquo;s easy to write bad code, regardless of the error model. It&rsquo;s hard to write good error-code-based code since you have to check every error code and think about what you should do when an error occurs. It&rsquo;s really hard to write good exception-based code since you have to check every single line of code (indeed, every sub-expression) and think about what exceptions it might raise and how your code will react to it. (In C++ it&rsquo;s not quite so bad because C++ exceptions are raised only at specific points during execution. In C#, exceptions can be raised at any time.)</p>
+
+<h3 id="nil-channel-always-blocks-both-send-and-receive">Nil channel always blocks (both send and receive)</h3>
+
+<p><a href="https://groups.google.com/d/msg/golang-nuts/QltQ0nd9HvE/VvDhLO07Oq4J">Rob</a>:
+It&rsquo;s for consistency with select. The semantics of a nil channel are
+the same regardless of how it is used. It&rsquo;s useful that it blocks in a
+select, so that&rsquo;s what it does outside a select.</p>
+
+<h3 id="reading-a-closed-channel-always-succeeds-with-zero-value">Reading a closed channel always succeeds with zero value</h3>
+
+<ol>
+<li>the read cannot block because then it will not be distinguishable with nil channel.</li>
+<li>the read cannot panic because the writer close the channel to signal that it has been closed, not to panicking the reader.</li>
+<li>Then the read has to return, which value to return? Since the channel has been closed, so the only possible value is a fake one &ndash; default zero value. an additional result of type bool reporting whether the communication succeeded.
+e.g. v, ok := &lt;-ch.</li>
+</ol>
+
+<h3 id="writing-a-closed-channel-panics">Writing a closed channel panics</h3>
+
+<p>The channel should only be closed by the writer(not reader), so if a writer close the channel and then write it again, it should be a programming bug and panic is the right behavior.</p>
+
+<h3 id="full-qualified-package-name">Full qualified package name</h3>
+
+<p><a href="https://groups.google.com/d/msg/golang-nuts/-tyo4o1uVTQ/FbDSkH9kq_oJ">Rob</a>:</p>
+
+<p>Using . as an import name is part of the language and necessary in some cases to solve difficult naming issues but it&rsquo;s not the intended style.  Package authors can depend on the fact that their code lives in its own name space.  If . becomes standard, then all packages in effect become a global name space and the style changes. Instead of</p>
+
+<pre><code>foo.New
+</code></pre>
+
+<p>the function must be called something like</p>
+
+<pre><code>foo.NewFoo
+</code></pre>
+
+<p>to avoid colliding with New from other packages.  And then what if Foo is itself a common name such as Buffer?  You rapidly end up in the Java space of very long names for everything.</p>
+
+<p>This convention we have, using the package names always, is deliberate.  Yes, sometimes it makes for more typing but we believe in the long run it means less typing.</p>
+
+<h3 id="slice-type-is-a-builtin-type">Slice type is a builtin type</h3>
+
+<p>To support variadic arguments.</p>
+
+<h3 id="len-returns-int-rather-than-uint">len returns int rather than uint</h3>
+
+<p><a href="https://groups.google.com/d/msg/golang-nuts/jJWAAMdquwQ/jhWhxJJbzVYJ">Ian</a>:</p>
+
+<p>Unsigned types are not a good choice for counts, because they have odd behaviour at 0, a common case.  Signed types have odd behaviour at very large and very small values, an uncommon case.</p>
+
+<h3 id="what-is-type-t-t">What is <code>type T []T</code></h3>
+
+<p>A slice is a small object containing a pointer to the underlying array, so T is the slice object containing a pointer to the underlying array, whose element is T itself.</p>
+
+<h3 id="each-if-for-and-switch-statement-is-considered-to-be-in-its-own-implicit-block-https-golang-org-ref-spec-blocks"><a href="https://golang.org/ref/spec#Blocks">Each <code>if</code>, <code>for</code>, and <code>switch</code> statement is considered to be in its own implicit block</a></h3>
+
+<p>It means a for loop has two nested blocks, the outer implicit block is for the loop variable, and the inner block for the loop body:</p>
+
+<pre><code class="language-go">for i := 0; i &lt; 5; i++ {
+	fmt.Println(&quot;outer i:&quot;, i)
+	i := 999
+	fmt.Println(&quot;inner i:&quot;, i)
+}
+</code></pre>
+
+<p>The implicit block has to be introduced to <code>for statement</code> so that the the value of the loop variable can be shared between iterations, but I am not sure why it is useful for <code>if</code> and <code>switch</code>.</p>
+
+                </div>
+            </article>
+        
+            <article class="frontpage">
+                <h1>
                     <a href="http://h12.io/note/what-go-cannot-do/">What Go cannot Do</a>
                     <span class="line"></span>
                 </h1>
@@ -284,238 +398,6 @@ passwd = ...
 
 <pre><code>inst2xsd xxx.xml
 </code></pre>
-
-                </div>
-            </article>
-        
-            <article class="frontpage">
-                <h1>
-                    <a href="http://h12.io/article/password-management/">A Developer&#39;s Guide to Password Management</a>
-                    <span class="line"></span>
-                </h1>
-                <span class="time">18 February 2015</span>
-                <div class="article-body hyphenate">
-                    
-
-<p>This article is intended to be a comprehensive recipe to password management,
-assuming:</p>
-
-<ul>
-<li>You are a developer</li>
-<li>You have to manage dozens of passwords, ssh key pairs and possibly some secret
-documents</li>
-<li>You want strong security on each of them</li>
-<li>You do not want to forget any of them but do not either want to spend too much time memorizing them</li>
-<li>You want to access your passwords from both your computers and mobile devices</li>
-</ul>
-
-<p>The proposed solution includes:</p>
-
-<ul>
-<li>An unbreakable encryption standard (<a href="http://en.wikipedia.org/wiki/Pretty_Good_Privacy">OpenPGP</a>)
-and its open source implementation (<a href="https://gnupg.org">GnuPG</a>)</li>
-<li>An open source password manager built on top of it (<a href="http://www.passwordstore.org">pass</a>)</li>
-<li>Memorizing one strong master pass phrase</li>
-<li>A backup plan: do not put all your eggs in one basket</li>
-</ul>
-
-<h2 id="install-prerequisites">Install Prerequisites</h2>
-
-<p>On Linux:</p>
-
-<ul>
-<li><a href="https://gnupg.org">GnuPG</a></li>
-<li><a href="http://www.passwordstore.org">pass</a></li>
-</ul>
-
-<p>(Ubuntu)</p>
-
-<pre><code class="language-bash">sudo apt-get install gnupg
-sudo apt-get install pass
-</code></pre>
-
-<p>On Android:</p>
-
-<ul>
-<li><a href="http://www.openkeychain.org">OpenKeyChain</a></li>
-<li><a href="https://github.com/zeapo/Android-Password-Store">Password Store</a></li>
-</ul>
-
-<p>On iOS:</p>
-
-<ul>
-<li><a href="https://github.com/rephorm/pass-ios">Pass for iOS</a></li>
-</ul>
-
-<h2 id="preparing-pgp-keys">Preparing PGP Keys</h2>
-
-<p>If you are already a PGP user, skip this step, otherwise, you are going to generate:</p>
-
-<ul>
-<li>A master keypair (public/private keys)</li>
-<li>A sub keypair for password encryption/decryption</li>
-</ul>
-
-<pre><code class="language-bash">gpg --gen-key
-</code></pre>
-
-<p>This command will generate a master keypair associated with your true identity (
-you may later want to use the PGP key pair for encrypted, digitally signed email).</p>
-
-<p>Choose:</p>
-
-<ul>
-<li>Kind: RSA and RSA</li>
-<li>Bits: 4096</li>
-<li>Expire: key does not expire</li>
-<li>Real name: &lt;real-name&gt;</li>
-<li>Email address: &lt;email-address&gt;</li>
-<li>Comment: &lt;comment&gt;</li>
-<li>Pass phrase: &lt;master-pass-phrase&gt;</li>
-</ul>
-
-<p>To make the process faster, you shouse increase the system randomness. Run in
-another terminal:</p>
-
-<pre><code class="language-bash">sudo rngd -f -r /dev/urandom
-</code></pre>
-
-<p>When finished, a master key pair and an associated sub key pair will be created.
-To see a list of your keys, type:</p>
-
-<pre><code class="language-bash">gpg --list-keys
-</code></pre>
-
-<p>You will see:</p>
-
-<pre><code>pub   4096R/&lt;master-key-id&gt; &lt;date&gt;
-uid                  &lt;real-name&gt; &lt;&lt;email-address&gt;&gt;
-sub   4096R/&lt;sub-key-id&gt; &lt;date&gt; 
-</code></pre>
-
-<p>The <code>&lt;sub-key-id&gt;</code> is the name of the key to encrypt/decrypt your stored passwords.</p>
-
-<p>Optionally, you can strengthen it by changing the encryption preferences.</p>
-
-<pre><code>gpg --edit-key &lt;email-address&gt;
-</code></pre>
-
-<p>And type:</p>
-
-<pre><code>setpref SHA512 SHA384 SHA256 SHA224 AES256 AES192 AES CAST5 ZLIB BZIP2 ZIP Uncompressed 
-save
-</code></pre>
-
-<h2 id="intialize-a-pass-store">Intialize a Pass Store</h2>
-
-<p>A password store is simply a directory including encrypted files, and each of them
-contains a password (the first line) and extra information (rest of the file).</p>
-
-<pre><code>cd &lt;pass-store&gt;
-pass init &lt;sub-key-id&gt;
-</code></pre>
-
-<h2 id="password-management-tips">Password Management Tips</h2>
-
-<h3 id="replace-existing-passwords-with-strong-ones">Replace Existing Passwords with Strong Ones</h3>
-
-<p>Generate a random password (15 characters):</p>
-
-<pre><code>pass generate &lt;account-name&gt; 15
-</code></pre>
-
-<p>An encrypted file <account-name>.gpg is created. In decrypted form, the first
-line is the generated password.</p>
-
-<p>To add extra information like user name or URL for the service:</p>
-
-<pre><code>pass edit &lt;account-name&gt;
-</code></pre>
-
-<p>Then you can update the password online accordingly.</p>
-
-<h3 id="put-a-password-into-clipboard-for-45-seconds">Put a password into Clipboard for 45 seconds</h3>
-
-<pre><code>pass -c &lt;account-name&gt;
-</code></pre>
-
-<h3 id="avoid-typing-master-passwords-repeatedly">Avoid typing master passwords repeatedly</h3>
-
-<p>Add configuration file <code>$HOME/.gnupg/gpg-agent.conf</code> and remember the master
-password for 3600 seconds:</p>
-
-<pre><code>pinentry-program /usr/bin/pinentry-gtk-2
-default-cache-ttl 3600
-max-cache-ttl 3600
-</code></pre>
-
-<h3 id="store-ssh-keys">Store SSH keys</h3>
-
-<p>Store SSH public key as the password in the pass store, and encrypt the private
-key in the rest of the file.</p>
-
-<p>To change a Git remote from HTTPS to SSH:</p>
-
-<pre><code>git remote set-url origin git@&lt;domain-name&gt;:&lt;repo-path&gt;.git
-</code></pre>
-
-<h2 id="backup-plan">Backup Plan</h2>
-
-<p>Prepare for the following extreme case:</p>
-
-<ul>
-<li>Both your laptop and cell phone containing the pass store and PGP keys are
-damaged or stolen.</li>
-<li>But you can still remember the master pass phrase.</li>
-</ul>
-
-<h3 id="use-a-remote-git-repository-to-backup-the-password-store">Use a remote Git repository to backup the password store</h3>
-
-<pre><code>cd &lt;pass-store&gt;
-pass git init
-pass git remote add origin &lt;remote-git-url&gt;
-pass git push
-</code></pre>
-
-<h3 id="backup-pgp-keys">Backup PGP keys</h3>
-
-<p>Export all the key pairs (including both master and sub keys):</p>
-
-<pre><code>gpg --export-secret-keys --armor &lt;email-address&gt;  &gt;  &lt;private-key-file&gt;
-gpg --export             --armor &lt;email-address&gt;  &gt;  &lt;public-key-file&gt;
-</code></pre>
-
-<p>Keep the files in a <a href="https://www.google.com/search?q=PGP+key+backup">safe, secret place</a>!</p>
-
-<p>To restore the keys from backup:</p>
-
-<pre><code>gpg --import &lt;private-key-file&gt; &lt;public-key-file&gt;
-</code></pre>
-
-<h2 id="hide-pgp-master-private-key">Hide PGP Master Private Key</h2>
-
-<p>AFTER the full backup of your PGP keys, you can choose to delete the master
-private key on the device with the pass store, because only the sub key pair is
-needed for encryption/decryption. The deletion will not protect your pass store,
-but it will protect your identity associated with the master key.</p>
-
-<pre><code class="language-bash">gpg --export-secret-subkeys &lt;email-address&gt;   &gt;   subkeys
-gpg --delete-secret-key     &lt;email-address&gt;
-gpg   --import subkeys
-shred --remove subkeys
-</code></pre>
-
-<h2 id="security-limitation">Security Limitation</h2>
-
-<p>PGP itself is secure and robust, but it all depends on how well you can preserve
-and protect your PGP key pair and master pass phrase.</p>
-
-<h2 id="references">References</h2>
-
-<ol>
-<li><a href="https://alexcabal.com/creating-the-perfect-gpg-keypair">Creating the Perfect GPG Keypair</a></li>
-<li><a href="http://www.passwordstore.org">Pass: the standard unix password manager</a></li>
-</ol>
 
                 </div>
             </article>
