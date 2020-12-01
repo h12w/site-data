@@ -96,25 +96,37 @@ lockChan &lt;- struct{}{} // lock
 <pre><code class="language-go">select {
     case &lt;-ctx.Done():
         // cancelled
-    case &lt;-lockChan:
+    case lockChan &lt;- struct{}{}:
         // locked
 }
 </code></pre>
 
-<p>Or cancel the lock with a timeout:</p>
+<p>Let&rsquo;s wrap it up:</p>
 
-<pre><code class="language-go">select {
-    case &lt;-time.After(timeout):
-        // timeout
-    case &lt;-lockChan:
-        // locked
+<pre><code class="language-go">type CtxMutex struct {
+    ch chan struct{}
+}
+
+func (mu *CtxMutex) Lock(ctx context.Context) bool {
+    select {
+        case &lt;-ctx.Done():
+            return false
+        case mu.ch &lt;- struct{}{}:
+            return true
+    }
+}
+
+func (mu *CtxMutex) Unlock() {
+    &lt;- mu.ch
+}
+
+
+func (mu *CtxMutex) Locked() bool {
+    return len(mu.ch) &gt; 0 // locked or not
 }
 </code></pre>
 
-<p>Or even check if it is locked or not:</p>
-
-<pre><code class="language-go">return len(lockChan) &gt; 0 // locked or not
-</code></pre>
+<p>Further, <code>context.WithTimeout</code> could be used to apply a timeout to the lock.</p>
 
                 </div>
             </article>
