@@ -53,7 +53,7 @@
   </url>
   
   <url>
-    <loc>http://h12.io/article/go-patterns-writer/</loc>
+    <loc>http://h12.io/article/go-patterns-buffered-writer/</loc>
     <lastmod>2020-11-22T17:38:34+00:00</lastmod>
   </url>
   
@@ -479,6 +479,12 @@
   <url>
     <loc>http://h12.io/tags/benchmark/</loc>
     <lastmod>2020-06-19T13:58:46+01:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://h12.io/tags/buffered-writer/</loc>
+    <lastmod>2020-11-22T17:38:34+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -1247,12 +1253,6 @@
   <url>
     <loc>http://h12.io/tags/wrapper-generator/</loc>
     <lastmod>2014-01-01T01:30:04+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://h12.io/tags/writer/</loc>
-    <lastmod>2020-11-22T17:38:34+00:00</lastmod>
     <priority>0</priority>
   </url>
   
