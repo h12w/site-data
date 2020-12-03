@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Boolean Algebra on Hai-Liang &#34;Hal&#34; Wang</title>
+    <link>http://h12.io/tags/boolean-algebra/</link>
+    <description>Recent content in Boolean Algebra on Hai-Liang &#34;Hal&#34; Wang</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-US</language>
+    <copyright>Copyright (c) 2012-2018, Hǎi-Liàng &#34;Hal&#34; Wáng; all rights reserved.</copyright>
+    <lastBuildDate>Mon, 14 Dec 2020 10:46:33 +0000</lastBuildDate>
+    
+	<atom:link href="http://h12.io/tags/boolean-algebra/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Probability as a Generalisation of Boolean Algebra</title>
+      <link>http://h12.io/article/probability-as-a-generalisation-of-boolean-algebra/</link>
+      <pubDate>Mon, 14 Dec 2020 10:46:33 +0000</pubDate>
+      
+      <guid>http://h12.io/article/probability-as-a-generalisation-of-boolean-algebra/</guid>
+      <description>A summary of Boolean algebra Given the following notations:
+ a proposition is denoted as a lowercase letter, e.g. $p$, $q$ the truth value of a proposition $p$ is denoted as $ B(p) \in \set{0, 1} $, where $B(p)=1$ if $p$ is true or $B(p)=0$ if $p$ is false  Negation (not) is defined as: $$ B(¬p) = 1 - B(p) $$
+Conjunction (and) is defined as: $$ B(p∧q) = B(p) \times B(q) $$</description>
+    </item>
+    
+  </channel>
+</rss>

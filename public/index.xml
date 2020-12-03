@@ -96,7 +96,7 @@ Redistribution and use in source and binary forms, with or without modification,
       
       <guid>http://h12.io/about/</guid>
       <description>The Author Hǎi-Liàng &amp;ldquo;Hal&amp;rdquo; Wáng is a technical architect focused on delivering scalable and reliable solutions that bring strategic vision to reality, a senior backend lead with specialty in designing distributed systems: API protocols, microservices, messaging systems, database engines and real-time analytics. He is a Go expert, open source author and contributor of dozens of projects. You can reach him by email at &amp;#104;&amp;#097;&amp;#108;&amp;#064;&amp;#104;&amp;#049;&amp;#050;&amp;#046;&amp;#105;&amp;#111;.
-This Site Tools  Container: Docker CSS: Sass, Compass &amp;amp; Susy Font: Google Fonts Icon: Font Awesome &amp;amp; Fontello Image editting: Inkscape, GIMP &amp;amp; OptiPNG Resource loading: HeadJS Static page generator: Hugo Syntax highlight: Highlight.</description>
+This Site Tools  Container: Docker CSS: Sass, Compass &amp;amp; Susy Font: Google Fonts Icon: Font Awesome &amp;amp; Fontello Image editting: Inkscape, GIMP &amp;amp; OptiPNG Static page generator: Hugo Syntax highlight: Highlight.</description>
     </item>
     
     <item>
@@ -111,7 +111,7 @@ lockChan := make(chan struct{}, 1) lockChan &amp;lt;- struct{}{} // lock &amp;lt
     </item>
     
     <item>
-      <title>Go Patterns: Writer</title>
+      <title>Go Patterns: Buffered Writer</title>
       <link>http://h12.io/article/go-patterns-buffered-writer/</link>
       <pubDate>Sun, 22 Nov 2020 17:38:34 +0000</pubDate>
       

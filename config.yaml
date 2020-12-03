@@ -18,6 +18,7 @@ packages:
   decimal:
   dfa:
   egress:
+  envutil:
   errors:
   exercise:
   expay:
