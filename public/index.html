@@ -75,6 +75,211 @@
         
             <article class="frontpage">
                 <h1>
+                    <a href="http://h12.io/article/probability-as-a-generalisation-of-boolean-algebra/">Probability as a Generalisation of Boolean Algebra</a>
+                    <span class="line"></span>
+                </h1>
+                <span class="time">14 December 2020</span>
+                <div class="article-body hyphenate">
+                    
+
+<h2 id="a-summary-of-boolean-algebra">A summary of Boolean algebra</h2>
+
+<p>Given the following notations:</p>
+
+<ul>
+<li>a proposition is denoted as a lowercase letter, e.g. $p$, $q$</li>
+<li>the truth value of a proposition $p$ is denoted as $ B(p) \in \set{0, 1} $, where $B(p)=1$ if $p$ is true or $B(p)=0$ if $p$ is false</li>
+</ul>
+
+<p>Negation (<code>not</code>, $¬$), conjunction (<code>and</code>, $∧$) and disjunction (<code>or</code>, $∨$) are defined by the truth tables below:</p>
+
+<table>
+<thead>
+<tr>
+<th>$B(p)$</th>
+<th>$B(¬p)$</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>0</td>
+<td>1</td>
+</tr>
+
+<tr>
+<td>1</td>
+<td>0</td>
+</tr>
+</tbody>
+</table>
+
+<p></p>
+
+<table>
+<thead>
+<tr>
+<th>$B(p)$</th>
+<th>$B(q)$</th>
+<th>$B(p∧q)$</th>
+<th>$B(p∨q)$</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+</tr>
+
+<tr>
+<td>0</td>
+<td>1</td>
+<td>0</td>
+<td>1</td>
+</tr>
+
+<tr>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+<td>1</td>
+</tr>
+
+<tr>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+</tr>
+</tbody>
+</table>
+
+<h2 id="truth-value-allocation-as-an-intuitive-picture-of-boolean-algebra">Truth value allocation as an intuitive picture of Boolean algebra</h2>
+
+<p>Intuitively, we can derive the same truth tables by following the process of the truth value allocation with the two steps below:</p>
+
+<ul>
+<li>List all mutually exclusive results from propositions under consideration</li>
+<li>Allocate the truth value to them so that their truth-values sum up to $1$</li>
+</ul>
+
+<p>Note that the second step actually requires only one of result has a truth value $1$, given $ B(p) \in \set{0, 1} $.</p>
+
+<h3 id="negation">Negation</h3>
+
+<p>For a single proposition $p$, there are two mutually exclusive results $p$ (is true) or $¬p$ (is true), as follows:</p>
+
+<table>
+<thead>
+<tr>
+<th>$¬p$</th>
+<th>$p$</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>$B(¬p)$</td>
+<td>$B(p)$</td>
+</tr>
+</tbody>
+</table>
+
+<p>Where we can allocate the truth value:</p>
+
+<p>$$B(¬p) + B(p) = 1$$</p>
+
+<p>Thus we get an equivalent equation to the negation truth table.</p>
+
+<h3 id="conjunction">Conjunction</h3>
+
+<p>Now let&rsquo;s consider two propositions $p$ and $q$ at the same time. There are four mutually exclusive results: $(p∧q)$, $(¬p∧q)$, $(p∧¬q)$ or $(¬p∧¬q)$. Thus we have the truth value allocation table:</p>
+
+<p></p>
+<table>
+<tr>
+    <th></th>
+    <td>$¬p$</td>
+    <td>$p$</td>
+</tr>
+<tr>
+    <th>$¬q$</th>
+    <td>$B(¬p∧¬q)$</td>
+    <td>$B(p∧¬q)$</td>
+</tr>
+<tr>
+    <th>$q$</th>
+    <td>$B(¬p∧q)$</td>
+    <td>$B(p∧q)$</td>
+</tr>
+</table>
+<p></p>
+
+<p>Where we can allocate the truth value:</p>
+
+<p>$$ B(¬p∧¬q) + B(p∧¬q) + B(¬p∧q) + B(p∧q) = 1 $$</p>
+
+<p>From the allocation we can easily get $B(p)$ as the sum of the second column:</p>
+
+<p>$$ B(p) = B(p∧q) + B(p∧¬q) $$</p>
+
+<p>And $B(q)$ as the sum of the second row:</p>
+
+<p>$$ B(q) = B(p∧q) + B(¬p∧q) $$</p>
+
+<p>Similar equations can be derived for $B(¬p)$ as the sum of the first column and $B(¬q)$ as the sum of the first row.</p>
+
+<p>If we use the notation $B(q|p)$ as the ratio of truth value &ldquo;q is true&rdquo; given &ldquo;p is true&rdquo;, the conjunction $B(p∧q)$ can be expressed as:</p>
+
+<p>$$ B(p∧q) = B(p) \times B(q|p)  $$</p>
+
+<p>This equation can be read from the allocation table as &ldquo;the sum of the first column where $p$ is true&rdquo; times &ldquo;the ratio of $q$ is true given $p$ is true&rdquo;.</p>
+
+<p>Also, note that $B(q|p) = B(q)$, which can be easily derived from the allocation table. Thus we have the equivalent equation for the conjunction:</p>
+
+<p>$$ B(p∧q) = B(p) \times B(q) $$</p>
+
+<h3 id="disjunction">Disjunction</h3>
+
+<p>The disjunction $B(p∨q)$ can be calculated by summing up the second column (where $p$ is true) and the second row (where $q$ is true) but subtracting $B(p∧q)$ (which is summed twice):</p>
+
+<p>$$ B(p∨q) = B(p) + B(q) - B(p∧q) $$</p>
+
+<h2 id="from-boolean-algebra-to-probability">From Boolean algebra to probability</h2>
+
+<p>The probability can be generalised from the similar notations and intuitive allocation picture, by replacing the truth value with the probability value.</p>
+
+<p>Given the following notations:</p>
+
+<ul>
+<li>a proposition is denoted as a lowercase letter, e.g. $p$, $q$</li>
+<li>the probability of a proposition $p$ is denoted as $ P(p) \in [0, 1] $, where $P(p)$ represents our belief in the truthfulness of the proposition $p$</li>
+</ul>
+
+<p>If we enumerate all possible mutually exclusive outcomes and allocate the probability value $1$ to them. We will get similar equations as the Boolean algebra.</p>
+
+<p>Notably the product (chain) rule:</p>
+
+<p>$$ P(p∧q) = P(p) \times P(q|p) $$</p>
+
+<p>Where $P(q|p)$ is called the conditional probability of $q$ given $p$.</p>
+
+<p>And the sum rule:</p>
+
+<p>$$ P(p∨q) = P(p) + P(q) - P(p∧q) $$</p>
+
+<p>Then all the rest of the probability could be derived from the definitions above.</p>
+
+<p>Also note that the notations above are equivalent to the Kolmogorov first and second axioms and the probability allocation is the third axiom, only expressed more intuitively but less formally.</p>
+
+                </div>
+            </article>
+        
+            <article class="frontpage">
+                <h1>
                     <a href="http://h12.io/article/go-patterns-context-aware-lock/">Go Patterns: Context-aware Lock</a>
                     <span class="line"></span>
                 </h1>
@@ -454,107 +659,6 @@ object properties return a value called <code>undefined</code>.</p>
     }
 }
 </code></pre>
-
-                </div>
-            </article>
-        
-            <article class="frontpage">
-                <h1>
-                    <a href="http://h12.io/project/run/">Run: Graceful Goroutine Orchestration</a>
-                    <span class="line"></span>
-                </h1>
-                <span class="time">14 December 2018</span>
-                <div class="article-body hyphenate">
-                    
-
-<p><a href="https://godoc.org/h12.io/run"><img src="https://godoc.org/h12.io/run?status.svg" alt="GoDoc" /></a></p>
-
-<h2 id="overview">Overview</h2>
-
-<p>While Go provides goroutines, channels and selects as first-class citizens to
-support concurrent programming, it is not trivial to combine these elements
-to address important concerns of goroutine orchestration, e.g. error handling,
-panic recovery, goroutine leak prevention, goroutine reuse, goroutine throttle
-and logging.</p>
-
-<p>The package provides a mini-framework to address those cross-cutting concerns.</p>
-
-<h2 id="quick-start">Quick start</h2>
-
-<pre><code class="language-bash">go get -u h12.io/run
-</code></pre>
-
-<p>Here is an example illustrating the usage of the goroutine pool and the group.
-The task is described in the &ldquo;Google Search 2.0&rdquo; page from <a href="https://talks.golang.org/2012/concurrency.slide#46">this slide</a>.</p>
-
-<pre><code class="language-go">// the goroutine pool
-pool := run.NewGoroutinePool(
-	run.Max(8),                // the pool contains maximum 8 goroutines
-	run.IdleTime(time.Minute), // a goroutine will stay in idle for maximum 1 minute before exiting
-)
-
-// the group
-// the goroutine pool might have longer lifespan than the group
-group := run.NewGroup(
-	context.Background(), // a context that can cancel the whole group
-	run.Pool(pool),       // the goroutine pool used by the group
-	run.Recover(true),    // recover from panic and returns the PanicError
-	run.Log(func(info *run.LogInfo) { // a log function for all starts/stops
-		log.Print(info)
-	}),
-)
-
-searches := []*GoogleSearch{
-	{Search: Web, Query: &quot;golang&quot;},
-	{Search: Image, Query: &quot;golang&quot;},
-	{Search: Video, Query: &quot;golang&quot;},
-}
-for _, search := range searches {
-	// start searching in parallel
-	if err := group.Go(search); err != nil {
-		log.Fatal(err)
-	}
-}
-
-// wait for all searches stop
-if err := group.Wait(); err != nil {
-	log.Fatal(err)
-}
-
-for _, search := range searches {
-	fmt.Println(search.Result)
-}
-</code></pre>
-
-<p>See the full example <a href="https://github.com/h12w/run/blob/master/example/search/main.go">here</a>.</p>
-
-<h2 id="design">Design</h2>
-
-<p>The package is built around the concept of a runner.</p>
-
-<pre><code class="language-go">type Runner interface {
-	Run(context.Context) error
-}
-</code></pre>
-
-<p>A correct implementation of a runner should satisify the following conditions:</p>
-
-<ul>
-<li>blocks when the work is on going</li>
-<li>returns when all work is done, an error occurred or context is cancelled</li>
-</ul>
-
-<p>With goroutine pool and group in the package, the user does not need to use
-the go statement explicitly, but only needs to implement their objects
-satisfying the Runner interface.</p>
-
-<p>A Group is useful when multiple concurrent sub-tasks needed to be combined as
-a single task (the task failed when one of them failed, every sub-task should be
-cancelled when the task is cancelled).</p>
-
-<p>A Pool is useful when there are many short-lived gorotuines.</p>
-
-<p>Group can be built upon pool, not vice versa.</p>
 
                 </div>
             </article>

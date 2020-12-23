@@ -75,6 +75,56 @@
         
             <article class="frontpage">
                 <h1>
+                    <a href="http://h12.io/project/gombi/">Gombi: Creating Your Own Parser is Easier than Regular Expressions</a>
+                    <span class="line"></span>
+                </h1>
+                <span class="time">7 August 2014</span>
+                <div class="article-body hyphenate">
+                    
+
+<p>Gombi is a combinator-style scanner &amp; parser library written in Go. It is
+practical, reasonably fast and extremely easy to use.</p>
+
+<h2 id="quick-start">Quick start</h2>
+
+<pre><code class="language-bash">go get -u h12.io/gombi
+</code></pre>
+
+<h2 id="design">Design</h2>
+
+<p><a href="http://en.wikipedia.org/wiki/Parser_combinator">Combinator parsers</a> are
+straightforward to construct, modular and easily maintainable, compared to
+parser generators like Lex/Yacc.</p>
+
+<ul>
+<li>Internal DSL
+
+<ul>
+<li>no additional code generation and compilation.</li>
+</ul></li>
+<li>Composable
+
+<ul>
+<li>a subset of the syntax tree is also a parser.</li>
+<li>a language can be easily embedded into another one.</li>
+</ul></li>
+</ul>
+
+<p>Gombi is inspired by but not limited to parser combinators. Unlike a combinator
+parser, Gombi neither limits its API to functional only, nor limits its
+implementation to functional combinators. Go is not a pure functional language
+as Haskell, so cloning a combinator parser like Parsec to Go will only lead to
+an implementaion much worse than Parsec. Instead, Gombi is free to choose any Go
+language structures that are suitable for a modular and convenient API, and any
+algorithms that can be efficiently implemented in Go.</p>
+
+<p><em>Under development</em></p>
+
+                </div>
+            </article>
+        
+            <article class="frontpage">
+                <h1>
                     <a href="http://h12.io/note/parser-combinator-links/">Learning Resources on Parser Combinator</a>
                     <span class="line"></span>
                 </h1>
@@ -908,20 +958,6 @@ increasing the performance significantly.</p>
 <li><a href="https://www.solanolabs.com/">Solano Labs</a></li>
 <li><a href="https://www.atlassian.com/software/bamboo">Bamboo</a></li>
 </ul>
-
-                </div>
-            </article>
-        
-            <article class="frontpage">
-                <h1>
-                    <a href="http://h12.io/note/install-scp/">Installing Source Code Pro</a>
-                    <span class="line"></span>
-                </h1>
-                <span class="time">17 July 2014</span>
-                <div class="article-body hyphenate">
-                    <p><em>Source Code Pro</em> is one of the best monospace fonts and it is <a href="https://github.com/adobe/source-code-pro">open sourced</a>.</p>
-
-<p>Here is the <a href="https://github.com/h12w/linux/blob/master/install_scp.sh">script</a> for installing it on Linux.</p>
 
                 </div>
             </article>

@@ -75,6 +75,107 @@
         
             <article class="frontpage">
                 <h1>
+                    <a href="http://h12.io/project/run/">Run: Graceful Goroutine Orchestration</a>
+                    <span class="line"></span>
+                </h1>
+                <span class="time">14 December 2018</span>
+                <div class="article-body hyphenate">
+                    
+
+<p><a href="https://godoc.org/h12.io/run"><img src="https://godoc.org/h12.io/run?status.svg" alt="GoDoc" /></a></p>
+
+<h2 id="overview">Overview</h2>
+
+<p>While Go provides goroutines, channels and selects as first-class citizens to
+support concurrent programming, it is not trivial to combine these elements
+to address important concerns of goroutine orchestration, e.g. error handling,
+panic recovery, goroutine leak prevention, goroutine reuse, goroutine throttle
+and logging.</p>
+
+<p>The package provides a mini-framework to address those cross-cutting concerns.</p>
+
+<h2 id="quick-start">Quick start</h2>
+
+<pre><code class="language-bash">go get -u h12.io/run
+</code></pre>
+
+<p>Here is an example illustrating the usage of the goroutine pool and the group.
+The task is described in the &ldquo;Google Search 2.0&rdquo; page from <a href="https://talks.golang.org/2012/concurrency.slide#46">this slide</a>.</p>
+
+<pre><code class="language-go">// the goroutine pool
+pool := run.NewGoroutinePool(
+	run.Max(8),                // the pool contains maximum 8 goroutines
+	run.IdleTime(time.Minute), // a goroutine will stay in idle for maximum 1 minute before exiting
+)
+
+// the group
+// the goroutine pool might have longer lifespan than the group
+group := run.NewGroup(
+	context.Background(), // a context that can cancel the whole group
+	run.Pool(pool),       // the goroutine pool used by the group
+	run.Recover(true),    // recover from panic and returns the PanicError
+	run.Log(func(info *run.LogInfo) { // a log function for all starts/stops
+		log.Print(info)
+	}),
+)
+
+searches := []*GoogleSearch{
+	{Search: Web, Query: &quot;golang&quot;},
+	{Search: Image, Query: &quot;golang&quot;},
+	{Search: Video, Query: &quot;golang&quot;},
+}
+for _, search := range searches {
+	// start searching in parallel
+	if err := group.Go(search); err != nil {
+		log.Fatal(err)
+	}
+}
+
+// wait for all searches stop
+if err := group.Wait(); err != nil {
+	log.Fatal(err)
+}
+
+for _, search := range searches {
+	fmt.Println(search.Result)
+}
+</code></pre>
+
+<p>See the full example <a href="https://github.com/h12w/run/blob/master/example/search/main.go">here</a>.</p>
+
+<h2 id="design">Design</h2>
+
+<p>The package is built around the concept of a runner.</p>
+
+<pre><code class="language-go">type Runner interface {
+	Run(context.Context) error
+}
+</code></pre>
+
+<p>A correct implementation of a runner should satisify the following conditions:</p>
+
+<ul>
+<li>blocks when the work is on going</li>
+<li>returns when all work is done, an error occurred or context is cancelled</li>
+</ul>
+
+<p>With goroutine pool and group in the package, the user does not need to use
+the go statement explicitly, but only needs to implement their objects
+satisfying the Runner interface.</p>
+
+<p>A Group is useful when multiple concurrent sub-tasks needed to be combined as
+a single task (the task failed when one of them failed, every sub-task should be
+cancelled when the task is cancelled).</p>
+
+<p>A Pool is useful when there are many short-lived gorotuines.</p>
+
+<p>Group can be built upon pool, not vice versa.</p>
+
+                </div>
+            </article>
+        
+            <article class="frontpage">
+                <h1>
                     <a href="http://h12.io/note/start-godoc/">How to Start Godoc on Mac</a>
                     <span class="line"></span>
                 </h1>
@@ -195,21 +296,6 @@ vimdiff aa.json bb.json
                 <span class="time">20 June 2017</span>
                 <div class="article-body hyphenate">
                     <pre><code class="language-bash">curl [args] --write-out &quot;%{time_total}s&quot; --output /dev/null --silent [URL] 
-</code></pre>
-
-                </div>
-            </article>
-        
-            <article class="frontpage">
-                <h1>
-                    <a href="http://h12.io/note/delete-git-branch/">How to Delete a Git Branch</a>
-                    <span class="line"></span>
-                </h1>
-                <span class="time">9 June 2017</span>
-                <div class="article-body hyphenate">
-                    <pre><code class="language-bash">git fetch       --prune  origin
-git branch      --delete [branch-name]
-git push origin --delete [branch-name]
 </code></pre>
 
                 </div>

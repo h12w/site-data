@@ -75,6 +75,21 @@
         
             <article class="frontpage">
                 <h1>
+                    <a href="http://h12.io/note/generate-xsd-from-xml/">How to Generate XSD Schema from XML?</a>
+                    <span class="line"></span>
+                </h1>
+                <span class="time">23 April 2015</span>
+                <div class="article-body hyphenate">
+                    <p><a href="http://archive.apache.org/dist/xmlbeans/binaries">Apache XMLBeans</a> is an old tool but still functioning. Download and uncompress the latest binary release, then run inst2xsd under bin folder (needs JDK).</p>
+
+<pre><code>inst2xsd xxx.xml
+</code></pre>
+
+                </div>
+            </article>
+        
+            <article class="frontpage">
+                <h1>
                     <a href="http://h12.io/article/password-management/">A Developer&#39;s Guide to Password Management</a>
                     <span class="line"></span>
                 </h1>
@@ -645,56 +660,6 @@ the new domain. It is the shortest but still meaningful domain that I can afford
 <code>H</code> is the initial letter of my given name, <code>12</code> is simply the number of letters
 of my full name, and <code>.me</code> is a top level domain quite suitable for a personal
 website.</p>
-
-                </div>
-            </article>
-        
-            <article class="frontpage">
-                <h1>
-                    <a href="http://h12.io/project/gombi/">Gombi: Creating Your Own Parser is Easier than Regular Expressions</a>
-                    <span class="line"></span>
-                </h1>
-                <span class="time">7 August 2014</span>
-                <div class="article-body hyphenate">
-                    
-
-<p>Gombi is a combinator-style scanner &amp; parser library written in Go. It is
-practical, reasonably fast and extremely easy to use.</p>
-
-<h2 id="quick-start">Quick start</h2>
-
-<pre><code class="language-bash">go get -u h12.io/gombi
-</code></pre>
-
-<h2 id="design">Design</h2>
-
-<p><a href="http://en.wikipedia.org/wiki/Parser_combinator">Combinator parsers</a> are
-straightforward to construct, modular and easily maintainable, compared to
-parser generators like Lex/Yacc.</p>
-
-<ul>
-<li>Internal DSL
-
-<ul>
-<li>no additional code generation and compilation.</li>
-</ul></li>
-<li>Composable
-
-<ul>
-<li>a subset of the syntax tree is also a parser.</li>
-<li>a language can be easily embedded into another one.</li>
-</ul></li>
-</ul>
-
-<p>Gombi is inspired by but not limited to parser combinators. Unlike a combinator
-parser, Gombi neither limits its API to functional only, nor limits its
-implementation to functional combinators. Go is not a pure functional language
-as Haskell, so cloning a combinator parser like Parsec to Go will only lead to
-an implementaion much worse than Parsec. Instead, Gombi is free to choose any Go
-language structures that are suitable for a modular and convenient API, and any
-algorithms that can be efficiently implemented in Go.</p>
-
-<p><em>Under development</em></p>
 
                 </div>
             </article>

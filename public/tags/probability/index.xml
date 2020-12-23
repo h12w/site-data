@@ -19,8 +19,8 @@
       
       <guid>http://h12.io/article/probability-as-a-generalisation-of-boolean-algebra/</guid>
       <description>A summary of Boolean algebra Given the following notations:
- a proposition is denoted as a lowercase letter, e.g. $p$, $q$ the truth value of a proposition $p$ is denoted as $ B(p) \in \set{0, 1} $, where $B(p)=1$ if $p$ is true or $B(p)=0$ if $p$ is false  Negation (not) is defined as: $$ B(¬p) = 1 - B(p) $$
-Conjunction (and) is defined as: $$ B(p∧q) = B(p) \times B(q) $$</description>
+ a proposition is denoted as a lowercase letter, e.g. $p$, $q$ the truth value of a proposition $p$ is denoted as $ B(p) \in \set{0, 1} $, where $B(p)=1$ if $p$ is true or $B(p)=0$ if $p$ is false  Negation (not, $¬$), conjunction (and, $∧$) and disjunction (or, $∨$) are defined by the truth tables below:
+   $B(p)$ $B(¬p)$     0 1   1 0</description>
     </item>
     
   </channel>
