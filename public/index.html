@@ -190,70 +190,6 @@ func run() error {
         
             <article class="frontpage">
                 <h1>
-                    <a href="http://h12.io/note/d-separation/">D Separation</a>
-                    <span class="line"></span>
-                </h1>
-                <span class="time">30 December 2020</span>
-                <div class="article-body hyphenate">
-                    
-
-<p>P(ABC) = P((AB)C) = P(AB)P(C|AB) = P(A)P(B|A)P(C|AB)
-P(ABC) = P(B(AC)) = P(B)P(AC|B) = P(B)P(A|B)P(C|AB)
-P(ABC) = P(A(BC)) = P(A)P(BC|A) = P(A)P(C|A)P(B|AC)</p>
-
-<h3 id="cascade">Cascade</h3>
-
-<p>A-&gt;B-&gt;C</p>
-
-<p>P(ABC) = P(A)P(B|A)P(C|B)</p>
-
-<p>P(C|AB) = P(C|B)</p>
-
-<p>P(C|AB) = P(ABC)/P(AB) = P(B)P(AC|B) / P(B)P(A|B) = P(AC|B)/P(A|B)</p>
-
-<p>P(AC|B)/P(A|B) = P(C|B)
-P(AC|B) = P(A|B)P(C|B)</p>
-
-<p>Given B, A and C are independent</p>
-
-<h3 id="common-parent">Common parent</h3>
-
-<p>A&lt;-B-&gt;C</p>
-
-<p>P(ABC) = P(A|B)P(B)P(C|B)</p>
-
-<p>P(C|AB) = P(C|B)</p>
-
-<p>Given B, A and C are independent</p>
-
-<h3 id="v-structure">V-structure</h3>
-
-<p>A-&gt;B&lt;-C</p>
-
-<p>Consider P(ABC):</p>
-
-<p>P(ABC) = P(A)P(B|AC)P&copy;
-P(C|A) = P&copy;</p>
-
-<p>A, C are independent</p>
-
-<p>Consider P(ABC|B):
-P(ABC|B) = P(AC|B)
-         = P(A|B)P(C|B)</p>
-
-<h3 id="i-equivalence">I-equivalence</h3>
-
-<p>Cascade and common parent are equivalent.</p>
-
-<p>From Prob to Density:</p>
-
-<p>\Pr(t&lt;X&lt;t+dt)=f(t)\,dt.</p>
-
-                </div>
-            </article>
-        
-            <article class="frontpage">
-                <h1>
                     <a href="http://h12.io/article/probability-as-a-generalisation-of-boolean-algebra/">Probability as a Generalisation of Boolean Algebra</a>
                     <span class="line"></span>
                 </h1>
@@ -719,6 +655,22 @@ func main() {
 </code></pre>
 
 <p>See <code>a[0]</code> changes because slice <code>a</code> and <code>b</code> shares the same underlying array.</p>
+
+                </div>
+            </article>
+        
+            <article class="frontpage">
+                <h1>
+                    <a href="http://h12.io/note/learn-frontend/">Learning Frontend</a>
+                    <span class="line"></span>
+                </h1>
+                <span class="time">15 February 2019</span>
+                <div class="article-body hyphenate">
+                    <ul>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript">Vanilla JavaScript</a></li>
+<li><a href="https://reactjs.org/docs/getting-started.html">React</a></li>
+<li><a href="https://emotion.sh/docs/introduction">Emotion</a></li>
+</ul>
 
                 </div>
             </article>
