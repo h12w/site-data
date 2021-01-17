@@ -7,10 +7,19 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
     <copyright>Copyright (c) 2012-2018, Hǎi-Liàng &#34;Hal&#34; Wáng; all rights reserved.</copyright>
-    <lastBuildDate>Fri, 25 Jul 2014 03:39:05 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 30 Dec 2020 17:19:06 +0000</lastBuildDate>
     
 	<atom:link href="http://h12.io/tags/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title></title>
+      <link>http://h12.io/tags/</link>
+      <pubDate>Wed, 30 Dec 2020 17:19:06 +0000</pubDate>
+      
+      <guid>http://h12.io/tags/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>301</title>
@@ -36,6 +45,15 @@
       <pubDate>Sat, 17 Jan 2015 18:13:09 +0000</pubDate>
       
       <guid>http://h12.io/tags/android/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Anti Pattern</title>
+      <link>http://h12.io/tags/anti-pattern/</link>
+      <pubDate>Fri, 08 Jan 2021 10:48:26 +0000</pubDate>
+      
+      <guid>http://h12.io/tags/anti-pattern/</guid>
       <description></description>
     </item>
     
@@ -162,6 +180,15 @@
       <pubDate>Sat, 14 Feb 2015 09:30:55 +0000</pubDate>
       
       <guid>http://h12.io/tags/china/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Closer</title>
+      <link>http://h12.io/tags/closer/</link>
+      <pubDate>Fri, 08 Jan 2021 10:48:26 +0000</pubDate>
+      
+      <guid>http://h12.io/tags/closer/</guid>
       <description></description>
     </item>
     
@@ -447,7 +474,7 @@
     <item>
       <title>Go</title>
       <link>http://h12.io/tags/go/</link>
-      <pubDate>Mon, 30 Nov 2020 17:45:31 +0000</pubDate>
+      <pubDate>Fri, 08 Jan 2021 10:48:26 +0000</pubDate>
       
       <guid>http://h12.io/tags/go/</guid>
       <description></description>
@@ -852,7 +879,7 @@
     <item>
       <title>Pattern</title>
       <link>http://h12.io/tags/pattern/</link>
-      <pubDate>Mon, 30 Nov 2020 17:45:31 +0000</pubDate>
+      <pubDate>Fri, 08 Jan 2021 10:48:26 +0000</pubDate>
       
       <guid>http://h12.io/tags/pattern/</guid>
       <description></description>

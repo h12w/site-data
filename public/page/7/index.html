@@ -76,6 +76,79 @@
         
             <article class="frontpage">
                 <h1>
+                    <a href="http://h12.io/note/go-get-behind-proxy/">How to &#34;go get&#34; Behind a Proxy</a>
+                    <span class="line"></span>
+                </h1>
+                <span class="time">6 May 2015</span>
+                <div class="article-body hyphenate">
+                    
+
+<h2 id="proxy-for-go-get">Proxy for &ldquo;go get&rdquo;</h2>
+
+<pre><code>https_proxy=http://user:pass@proxy_host:port go get ...
+</code></pre>
+
+<h2 id="proxy-for-git">Proxy for Git</h2>
+
+<p>In <code>$HOME/.gitconfig</code>:</p>
+
+<pre><code>[https]
+	proxy = proxy_url
+</code></pre>
+
+<h2 id="proxy-for-mercurial">Proxy for Mercurial</h2>
+
+<p>In <code>$HOME/.hgrc</code>:</p>
+
+<pre><code>[http_proxy]
+host = host:port
+user = ...
+passwd = ...
+</code></pre>
+
+                </div>
+            </article>
+        
+            <article class="frontpage">
+                <h1>
+                    <a href="http://h12.io/note/tips-on-ssh/">Tips on SSH</a>
+                    <span class="line"></span>
+                </h1>
+                <span class="time">28 April 2015</span>
+                <div class="article-body hyphenate">
+                    
+
+<h2 id="generate-ssh-keys">Generate SSH keys</h2>
+
+<pre><code class="language-bash">ssh-keygen -C w@h12.io
+</code></pre>
+
+<h2 id="authorize-public-key-at-remote-server">Authorize public key at remote server</h2>
+
+<pre><code class="language-bash">ssh-copy-id user@host
+</code></pre>
+
+<p>On Mac OSX, <code>ssh-copy-id</code> should be installed first.</p>
+
+<pre><code class="language-bash">brew install ssh-copy-id
+</code></pre>
+
+<h2 id="generate-pem">Generate PEM</h2>
+
+<pre><code class="language-bash">ssh-keygen -f ~/.ssh/id_rsa -e -m pem &gt; ~/.ssh/id_rsa.pem
+</code></pre>
+
+<h2 id="copy-file-by-base64">Copy file by base64</h2>
+
+<p>On remote session, run <code>base64 &lt; myfile</code> and copy the output.</p>
+
+<p>On local terminal, run <code>base64 -d &gt; myfile</code>, paste the content and press <code>ctrl+D</code>.</p>
+
+                </div>
+            </article>
+        
+            <article class="frontpage">
+                <h1>
                     <a href="http://h12.io/note/generate-xsd-from-xml/">How to Generate XSD Schema from XML?</a>
                     <span class="line"></span>
                 </h1>
@@ -625,42 +698,6 @@ provider.</li>
 <li>It will not work if you only modify the DNS record without actually assigning
 the custom domain in the Developer Console.</li>
 </ol>
-
-                </div>
-            </article>
-        
-            <article class="frontpage">
-                <h1>
-                    <a href="http://h12.io/note/install-ca-android/">How to install a self-signed CA Certificate to Android 4.4</a>
-                    <span class="line"></span>
-                </h1>
-                <span class="time">17 January 2015</span>
-                <div class="article-body hyphenate">
-                    <p>See this blog <a href="https://samhobbs.co.uk/2013/12/remove-network-may-be-monitored-by-an-unknown-third-party-in-android-4-4-kitkat"><em>Remove &ldquo;Network May Be Monitored by an Unknown Third Party&rdquo; in Android 4.4 KitKat</em></a>.</p>
-
-                </div>
-            </article>
-        
-            <article class="frontpage">
-                <h1>
-                    <a href="http://h12.io/note/new-domain-h12/">A Shorter Domain Name</a>
-                    <span class="line"></span>
-                </h1>
-                <span class="time">16 December 2014</span>
-                <div class="article-body hyphenate">
-                    <p>This year, I decided not to renewal the previous domain name (hailiang.ws) last
-year, but to register a shorter one. There are two reasons:</p>
-
-<ol>
-<li>Both the site URL and the email address will be cleaner.</li>
-<li>A more friendly Go import path will be possible for my repositories on Github.</li>
-</ol>
-
-<p>After comparing various choices on major domain providers, I chose <code>h12.io</code> as
-the new domain. It is the shortest but still meaningful domain that I can afford.
-<code>H</code> is the initial letter of my given name, <code>12</code> is simply the number of letters
-of my full name, and <code>.me</code> is a top level domain quite suitable for a personal
-website.</p>
 
                 </div>
             </article>

@@ -7,28 +7,39 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
     <copyright>Copyright (c) 2012-2018, Hǎi-Liàng &#34;Hal&#34; Wáng; all rights reserved.</copyright>
-    <lastBuildDate>Mon, 30 Nov 2020 17:45:31 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 08 Jan 2021 10:48:26 +0000</lastBuildDate>
     
 	<atom:link href="http://h12.io/tags/pattern/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-      <title>Go Patterns: Context-aware Lock</title>
-      <link>http://h12.io/article/go-patterns-context-aware-lock/</link>
+      <title>Go Anti-pattern: Parent Closer</title>
+      <link>http://h12.io/article/go-anti-patterns-parent-closer/</link>
+      <pubDate>Fri, 08 Jan 2021 10:48:26 +0000</pubDate>
+      
+      <guid>http://h12.io/article/go-anti-patterns-parent-closer/</guid>
+      <description>Imagine you need to wrap multiple objects which implements io.Closer, e.g. three clients to fetch and combine data from different endpoints.
+type Parent struct { child1 Child1 child2 Child2 child3 Child3 }  Parent closer Let&amp;rsquo;s see how we can create and destroy a parent object.
+func NewParent() (*Parent, error) { child1, err := NewChild1() if err != nil { return nil, err } child2, err := NewChild1() if err !</description>
+    </item>
+    
+    <item>
+      <title>Go Pattern: Context-aware Lock</title>
+      <link>http://h12.io/article/go-pattern-context-aware-lock/</link>
       <pubDate>Mon, 30 Nov 2020 17:45:31 +0000</pubDate>
       
-      <guid>http://h12.io/article/go-patterns-context-aware-lock/</guid>
+      <guid>http://h12.io/article/go-pattern-context-aware-lock/</guid>
       <description>We often use Mutex or RWMutex as locks in Go, but sometimes we need a lock that can be cancelled by a context during the lock attempt.
 The pattern is simple - we use a channel with length 1:
 lockChan := make(chan struct{}, 1) lockChan &amp;lt;- struct{}{} // lock &amp;lt;- lockChan // unlock  When multiple goroutines try to obtain the lock, only one of them is able to fill into the only slot, and the rest are blocked until the slot is empty again after a readout.</description>
     </item>
     
     <item>
-      <title>Go Patterns: Buffered Writer</title>
-      <link>http://h12.io/article/go-patterns-buffered-writer/</link>
+      <title>Go Pattern: Buffered Writer</title>
+      <link>http://h12.io/article/go-pattern-buffered-writer/</link>
       <pubDate>Sun, 22 Nov 2020 17:38:34 +0000</pubDate>
       
-      <guid>http://h12.io/article/go-patterns-buffered-writer/</guid>
+      <guid>http://h12.io/article/go-pattern-buffered-writer/</guid>
       <description>A buffered writer is so ubiquitous that we do not usually consider it as a pattern, but sometimes we reinvent it or even do it in an inferior way. Let us look at a real use case first.
 Batch processor What would you do to improve the throughput of a service? The answer is short: batching.
 By processing and sending in a batch of multiple items instead of a single item at a time, you are amortizing the network overhead from the request-response round trip among all the items in the batch.</description>

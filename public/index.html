@@ -76,6 +76,184 @@
         
             <article class="frontpage">
                 <h1>
+                    <a href="http://h12.io/article/go-anti-patterns-parent-closer/">Go Anti-pattern: Parent Closer</a>
+                    <span class="line"></span>
+                </h1>
+                <span class="time">8 January 2021</span>
+                <div class="article-body hyphenate">
+                    
+
+<p>Imagine you need to wrap multiple objects which implements <code>io.Closer</code>, e.g. three clients to fetch and combine data from different endpoints.</p>
+
+<pre><code class="language-go">type Parent struct {
+    child1 Child1
+    child2 Child2
+    child3 Child3
+}
+</code></pre>
+
+<h2 id="parent-closer">Parent closer</h2>
+
+<p>Let&rsquo;s see how we can create and destroy a parent object.</p>
+
+<pre><code class="language-go">func NewParent() (*Parent, error) {
+    child1, err := NewChild1()
+    if err != nil {
+        return nil, err
+    }
+    child2, err := NewChild1()
+    if err != nil {
+        // oops, child1 needs to be closed here
+        child1.Close()
+        return nil, err
+    }
+    child3, err := NewChild1()
+    if err != nil {
+        // oops again, both child1, and child2 needs to be closed here
+        child1.Close()
+        child2.Close()
+        return nil, err
+    }
+    return &amp;Parent{
+        child1: child1,
+        child2: child2,
+        child3: child3,
+    }, nil
+}
+
+func (p *Parent) Close() error {
+    var errs []error
+    if err := p.child1.Close(); err != nil {
+        errs = append(errs, err)
+    }
+    if err := p.child2.Close(); err != nil {
+        errs = append(errs, err)
+    }
+    if err := p.child3.Close(); err != nil {
+        errs = append(errs, err)
+    }
+    return multierr.Combine(errs...)
+}
+</code></pre>
+
+<p>Note the boilerplate code of closing the children. Because the parent creates its children, it must be responsible for calling their <code>Close</code> method whenever needed. If there are any errors during the initialisation, the children already created have to be properly closed, and before the parent exits its scope, it has to close its children too.</p>
+
+<p>Furthermore, the <code>Closer</code> interface is contagious. If we organise our code by wrapping objects layer by layer like above, and any one of the descendants is a <code>Closer</code>, then all the types in the hierarchy are infected and have to implement the <code>Closer</code> interface too.</p>
+
+<h2 id="parent-container">Parent container</h2>
+
+<p>Unlike the parent closer, all of the complexity could have been avoided if the parent is a simple container, <strong>borrowing the references of the children rather than owning them</strong>, as long as the children outlive its parent.</p>
+
+<pre><code class="language-go">
+func NewParent(child1 Child1, child2 Child2, child3 Child3) *Parent {
+    return &amp;Parent{child1: child1, child2: child2, child3: child3}
+}
+
+func run() error {
+    child1, err := NewChild1()
+    if err != nil {
+        return nil, err
+    }
+    defer child1.Close()
+    child2, err := NewChild1()
+    if err != nil {
+        return nil, err
+    }
+    defer child2.Close()
+    child3, err := NewChild1()
+    if err != nil {
+        return nil, err
+    }
+    defer child3.Close()
+
+    parent := NewParent(child1, child2, child3)
+
+    // the parent can be used safely here before func run returns
+}
+</code></pre>
+
+<p>It is usually straightforward to guarantee the children outlive its parent in real cases:</p>
+
+<ul>
+<li>either the parent is created and held by a service during its whole lifetime, and <code>func run</code> could be a function that keeps running until the service terminates</li>
+<li>or the parent is created when handling a request, and <code>func run</code> is the request handler</li>
+</ul>
+
+<p>The key difference between a &ldquo;parent closer&rdquo; and a &ldquo;parent container&rdquo; is that the latter makes it possible to use the <code>defer</code> statements to close the children in either error or normal case, so the duplicated clean-up code can be avoided.</p>
+
+<h2 id="conclusion">Conclusion</h2>
+
+<p><code>io.Closer</code> interfaces are contagious. Usually, we do not want to wrap them to make another <code>io.Closer</code>, instead, we should only wrap them by reference borrowing, without managing their lifetime within the wrapper.</p>
+
+                </div>
+            </article>
+        
+            <article class="frontpage">
+                <h1>
+                    <a href="http://h12.io/note/d-separation/">D Separation</a>
+                    <span class="line"></span>
+                </h1>
+                <span class="time">30 December 2020</span>
+                <div class="article-body hyphenate">
+                    
+
+<p>P(ABC) = P((AB)C) = P(AB)P(C|AB) = P(A)P(B|A)P(C|AB)
+P(ABC) = P(B(AC)) = P(B)P(AC|B) = P(B)P(A|B)P(C|AB)
+P(ABC) = P(A(BC)) = P(A)P(BC|A) = P(A)P(C|A)P(B|AC)</p>
+
+<h3 id="cascade">Cascade</h3>
+
+<p>A-&gt;B-&gt;C</p>
+
+<p>P(ABC) = P(A)P(B|A)P(C|B)</p>
+
+<p>P(C|AB) = P(C|B)</p>
+
+<p>P(C|AB) = P(ABC)/P(AB) = P(B)P(AC|B) / P(B)P(A|B) = P(AC|B)/P(A|B)</p>
+
+<p>P(AC|B)/P(A|B) = P(C|B)
+P(AC|B) = P(A|B)P(C|B)</p>
+
+<p>Given B, A and C are independent</p>
+
+<h3 id="common-parent">Common parent</h3>
+
+<p>A&lt;-B-&gt;C</p>
+
+<p>P(ABC) = P(A|B)P(B)P(C|B)</p>
+
+<p>P(C|AB) = P(C|B)</p>
+
+<p>Given B, A and C are independent</p>
+
+<h3 id="v-structure">V-structure</h3>
+
+<p>A-&gt;B&lt;-C</p>
+
+<p>Consider P(ABC):</p>
+
+<p>P(ABC) = P(A)P(B|AC)P&copy;
+P(C|A) = P&copy;</p>
+
+<p>A, C are independent</p>
+
+<p>Consider P(ABC|B):
+P(ABC|B) = P(AC|B)
+         = P(A|B)P(C|B)</p>
+
+<h3 id="i-equivalence">I-equivalence</h3>
+
+<p>Cascade and common parent are equivalent.</p>
+
+<p>From Prob to Density:</p>
+
+<p>\Pr(t&lt;X&lt;t+dt)=f(t)\,dt.</p>
+
+                </div>
+            </article>
+        
+            <article class="frontpage">
+                <h1>
                     <a href="http://h12.io/article/probability-as-a-generalisation-of-boolean-algebra/">Probability as a Generalisation of Boolean Algebra</a>
                     <span class="line"></span>
                 </h1>
@@ -283,7 +461,7 @@
         
             <article class="frontpage">
                 <h1>
-                    <a href="http://h12.io/article/go-patterns-context-aware-lock/">Go Patterns: Context-aware Lock</a>
+                    <a href="http://h12.io/article/go-pattern-context-aware-lock/">Go Pattern: Context-aware Lock</a>
                     <span class="line"></span>
                 </h1>
                 <span class="time">30 November 2020</span>
@@ -341,7 +519,7 @@ func (mu *CtxMutex) Locked() bool {
         
             <article class="frontpage">
                 <h1>
-                    <a href="http://h12.io/article/go-patterns-buffered-writer/">Go Patterns: Buffered Writer</a>
+                    <a href="http://h12.io/article/go-pattern-buffered-writer/">Go Pattern: Buffered Writer</a>
                     <span class="line"></span>
                 </h1>
                 <span class="time">22 November 2020</span>
@@ -541,127 +719,6 @@ func main() {
 </code></pre>
 
 <p>See <code>a[0]</code> changes because slice <code>a</code> and <code>b</code> shares the same underlying array.</p>
-
-                </div>
-            </article>
-        
-            <article class="frontpage">
-                <h1>
-                    <a href="http://h12.io/note/learn-frontend/">Learning Frontend</a>
-                    <span class="line"></span>
-                </h1>
-                <span class="time">15 February 2019</span>
-                <div class="article-body hyphenate">
-                    <ul>
-<li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript">Vanilla JavaScript</a></li>
-<li><a href="https://reactjs.org/docs/getting-started.html">React</a></li>
-<li><a href="https://emotion.sh/docs/introduction">Emotion</a></li>
-</ul>
-
-                </div>
-            </article>
-        
-            <article class="frontpage">
-                <h1>
-                    <a href="http://h12.io/note/js-surprises/">JavaScript Surprises to a Go Developer</a>
-                    <span class="line"></span>
-                </h1>
-                <span class="time">12 February 2019</span>
-                <div class="article-body hyphenate">
-                    
-
-<h3 id="the-scope-of-var-is-wrong">The scope of <code>var</code> is wrong</h3>
-
-<p>Never use <code>var</code> to declare variables, use <code>let</code> instead.</p>
-
-<p><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Grammar_and_types#Variables">REF</a></p>
-
-<h3 id="is-conversion-and-comparison"><code>==</code> is conversion and comparison</h3>
-
-<p>What you really need is <code>===</code>, which is similar to comparing two interface{}.</p>
-
-<h3 id="is-shallow"><code>===</code> is shallow</h3>
-
-<p><code>{a:1}==={a:1}</code> is <code>false</code>, while Go struct with string are compared by contents (but not for slice).</p>
-
-<p>Also this affects map key comparison. So object key is not so useful in JS as
-struct key in Go. The equality test is always on the references rather than the contents.</p>
-
-<p><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Comparison_Operators#Inequality">REF</a></p>
-
-<h3 id="const-works-for-objects-but-the-contents-are-modifiable"><code>const</code> works for objects, but the contents are modifiable</h3>
-
-<p><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Grammar_and_types#Constants">REF</a></p>
-
-<h3 id="single-and-double-quotes-are-the-same">Single and double quotes are the same</h3>
-
-<p><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Grammar_and_types#String_literals">REF</a></p>
-
-<h3 id="back-quotes-are-like-text-template">Back quotes are like text/template</h3>
-
-<p>Escapes also works in back quotes and more template related features.</p>
-
-<p><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals">REF</a></p>
-
-<h3 id="switch-cases-fall-through-by-default">Switch cases fall through by default</h3>
-
-<h3 id="access-undeclared-object-property-returns-undefined">Access undeclared object property returns <code>undefined</code></h3>
-
-<p>Trying to access undeclared variables throws an exception but accessing undeclared
-object properties return a value called <code>undefined</code>.</p>
-
-<p>Use <code>'property' in obj</code> to check if a property is declared or not.</p>
-
-<h3 id="only-float64-is-supported">Only float64 is supported</h3>
-
-<h3 id="object-is-like-map-string-interface">Object is like map[string]interface{}</h3>
-
-<h3 id="array-is-like-map-int-interface">Array is like map[int]interface{}</h3>
-
-<h3 id="map-is-like-map-interface-interface">Map is like map[interface{}]interface{}</h3>
-
-<h3 id="for-in-traverses-properties-recursively"><code>for...in</code> traverses properties recursively</h3>
-
-<h3 id="for-of-is-like-for-range-in-go"><code>for...of</code> is like <code>for...range</code> in Go</h3>
-
-<h3 id="object-constructor-prototype">object.constructor.prototype</h3>
-
-<pre><code>    console.log({}.constructor === {}['__proto__'].constructor);
-    console.log({}.constructor.prototype === {}['__proto__']);
-</code></pre>
-
-<h3 id="promise-can-be-chained-and-composed">Promise can be chained and composed</h3>
-
-<p>It is quite impressive how JS do concurrency differently and efficiently.</p>
-
-<p><code>Promise.then(onFulfilled)</code> where <code>onFufilled</code> can return another Promise.</p>
-
-<pre><code>Promise.all([func1(), func2(), func3()])
-.then(([result1, result2, result3]) =&gt; { /* use result1, result2 and result3 */ });
-</code></pre>
-
-<h3 id="computed-property-name">Computed property name</h3>
-
-<pre><code>{
-    [prop]: 42,
-}
-</code></pre>
-
-<h3 id="there-are-two-types-of-generator-method-syntax">There are two types of generator method syntax</h3>
-
-<pre><code>{
-    *gen() {
-
-    }
-}
-</code></pre>
-
-<pre><code>{
-    gen: function*() {
-
-    }
-}
-</code></pre>
 
                 </div>
             </article>

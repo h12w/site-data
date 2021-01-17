@@ -48,17 +48,27 @@
   </url>
   
   <url>
+    <loc>http://h12.io/article/go-anti-patterns-parent-closer/</loc>
+    <lastmod>2021-01-08T10:48:26+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://h12.io/note/d-separation/</loc>
+    <lastmod>2020-12-30T17:19:06+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>http://h12.io/article/probability-as-a-generalisation-of-boolean-algebra/</loc>
     <lastmod>2020-12-14T10:46:33+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://h12.io/article/go-patterns-context-aware-lock/</loc>
+    <loc>http://h12.io/article/go-pattern-context-aware-lock/</loc>
     <lastmod>2020-11-30T17:45:31+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://h12.io/article/go-patterns-buffered-writer/</loc>
+    <loc>http://h12.io/article/go-pattern-buffered-writer/</loc>
     <lastmod>2020-11-22T17:38:34+00:00</lastmod>
   </url>
   
@@ -428,6 +438,12 @@
   </url>
   
   <url>
+    <loc>http://h12.io/tags/</loc>
+    <lastmod>2020-12-30T17:19:06+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>http://h12.io/tags/301/</loc>
     <lastmod>2014-07-25T03:39:05+00:00</lastmod>
     <priority>0</priority>
@@ -446,6 +462,12 @@
   </url>
   
   <url>
+    <loc>http://h12.io/tags/anti-pattern/</loc>
+    <lastmod>2021-01-08T10:48:26+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>http://h12.io/tags/app-engine/</loc>
     <lastmod>2014-07-06T06:39:27+00:00</lastmod>
     <priority>0</priority>
@@ -453,7 +475,7 @@
   
   <url>
     <loc>http://h12.io/article/</loc>
-    <lastmod>2020-12-14T10:46:33+00:00</lastmod>
+    <lastmod>2021-01-08T10:48:26+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -532,6 +554,12 @@
   <url>
     <loc>http://h12.io/tags/china/</loc>
     <lastmod>2015-02-14T09:30:55+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://h12.io/tags/closer/</loc>
+    <lastmod>2021-01-08T10:48:26+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -723,7 +751,7 @@
   
   <url>
     <loc>http://h12.io/tags/go/</loc>
-    <lastmod>2020-11-30T17:45:31+00:00</lastmod>
+    <lastmod>2021-01-08T10:48:26+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -939,7 +967,7 @@
   
   <url>
     <loc>http://h12.io/note/</loc>
-    <lastmod>2019-09-27T13:58:41+01:00</lastmod>
+    <lastmod>2020-12-30T17:19:06+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -1005,7 +1033,7 @@
   
   <url>
     <loc>http://h12.io/tags/pattern/</loc>
-    <lastmod>2020-11-30T17:45:31+00:00</lastmod>
+    <lastmod>2021-01-08T10:48:26+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -1179,7 +1207,7 @@
   
   <url>
     <loc>http://h12.io/tags/</loc>
-    <lastmod>2014-07-25T03:39:05+00:00</lastmod>
+    <lastmod>2020-12-30T17:19:06+00:00</lastmod>
     <priority>0</priority>
   </url>
   

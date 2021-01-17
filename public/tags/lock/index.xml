@@ -13,11 +13,11 @@
     
     
     <item>
-      <title>Go Patterns: Context-aware Lock</title>
-      <link>http://h12.io/article/go-patterns-context-aware-lock/</link>
+      <title>Go Pattern: Context-aware Lock</title>
+      <link>http://h12.io/article/go-pattern-context-aware-lock/</link>
       <pubDate>Mon, 30 Nov 2020 17:45:31 +0000</pubDate>
       
-      <guid>http://h12.io/article/go-patterns-context-aware-lock/</guid>
+      <guid>http://h12.io/article/go-pattern-context-aware-lock/</guid>
       <description>We often use Mutex or RWMutex as locks in Go, but sometimes we need a lock that can be cancelled by a context during the lock attempt.
 The pattern is simple - we use a channel with length 1:
 lockChan := make(chan struct{}, 1) lockChan &amp;lt;- struct{}{} // lock &amp;lt;- lockChan // unlock  When multiple goroutines try to obtain the lock, only one of them is able to fill into the only slot, and the rest are blocked until the slot is empty again after a readout.</description>

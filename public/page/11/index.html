@@ -76,6 +76,240 @@
         
             <article class="frontpage">
                 <h1>
+                    <a href="http://h12.io/project/gosweep/">gosweep: A shell script to do various checks on Go code</a>
+                    <span class="line"></span>
+                </h1>
+                <span class="time">5 June 2014</span>
+                <div class="article-body hyphenate">
+                    
+
+<p>This script performs the build, test and automatic checking of a Go package and its sub-packages using:</p>
+
+<ol>
+<li><a href="http://golang.org/cmd/gofmt/" title="gofmt">gofmt</a></li>
+<li><a href="https://godoc.org/golang.org/x/tools/cmd/goimports" title="golang.org/x/tools/cmd/goimports">goimports</a></li>
+<li><a href="https://github.com/golang/lint" title="golang/lint">golint</a></li>
+<li><a href="http://golang.org/cmd/vet" title="go vet">go vet</a></li>
+<li><a href="https://github.com/gordonklaus/ineffassign" title="ineffassign">ineffassign</a></li>
+<li><a href="http://blog.golang.org/race-detector" title="race detector">race detector</a></li>
+<li><a href="http://blog.golang.org/cover" title="test coverage">test coverage</a> on package and its sub-packages, <code>/vendor</code> directories excluded</li>
+<li><a href="https://github.com/mattn/goveralls" title="mattn/goveralls">goveralls</a></li>
+<li><a href="https://github.com/fzipp/gocyclo" title="gocyclo">gocyclo</a></li>
+<li><a href="https://github.com/client9/misspell" title="misspell">misspell</a></li>
+</ol>
+
+<p>Migrated from my <a href="https://gist.github.com/h12w/0f22736320abe6be71ce">Gist</a>.</p>
+
+<h2 id="dependencies">Dependencies</h2>
+
+<p>To setup all the dependencies need to run the script do:</p>
+
+<pre><code>$ go get -v github.com/client9/misspell/cmd/misspell
+$ go get -v github.com/fzipp/gocyclo
+$ go get -v github.com/golang/lint/golint
+$ go get -v github.com/gordonklaus/ineffassign
+$ go get -v github.com/h12w/gosweep
+$ go get -v github.com/mattn/goveralls
+$ go get -v golang.org/x/tools/cmd/goimports
+</code></pre>
+
+<h2 id="environment-variables">Environment variables</h2>
+
+<ul>
+<li><strong>GOCYCLO_COMPLEXITY</strong>: maximum allowed function complexity threshold (default: <code>5</code>).</li>
+<li><strong>MISSPELL_LOCALE</strong>: English locale (default: <code>US</code>).</li>
+</ul>
+
+<p>If you wish to set this for a project you can create a <code>.gosweep</code> file.
+For example:</p>
+
+<pre><code class="language-bash">$ cat .gosweep
+GOCYCLO_COMPLEXITY=5
+MISSPELL_LOCALE='US'
+</code></pre>
+
+<h2 id="continuous-integration">Continuous Integration</h2>
+
+<h3 id="travis-ci">travis-ci</h3>
+
+<p>Example of <code>.travis.yml</code> file for Go:</p>
+
+<pre><code class="language-yaml">language: go
+cache:
+  directories:
+    - ${GOPATH}/src/github.com/${TRAVIS_REPO_SLUG}/vendor
+    - ${GOPATH}/src/github.com/fzipp
+    - ${GOPATH}/src/github.com/golang
+    - ${GOPATH}/src/github.com/gordonklaus
+    - ${GOPATH}/src/github.com/h12w
+    - ${GOPATH}/src/github.com/mattn
+go:
+  - tip
+  - 1.8
+  - 1.7
+  - 1.6
+sudo: false
+
+env:
+    CI_SERVICE=travis-ci
+
+install:
+  - go get -v github.com/client9/misspell/cmd/misspell
+  - go get -v github.com/fzipp/gocyclo
+  - go get -v github.com/golang/lint/golint
+  - go get -v github.com/gordonklaus/ineffassign
+  - go get -v github.com/h12w/gosweep
+  - go get -v github.com/mattn/goveralls
+  - go get -v -u golang.org/x/tools/cmd/goimports
+
+script:
+  - bash ${GOPATH}/src/github.com/h12w/gosweep/gosweep.sh
+</code></pre>
+
+                </div>
+            </article>
+        
+            <article class="frontpage">
+                <h1>
+                    <a href="http://h12.io/project/getgo/">Getgo: a concurrent, simple and extensible web scraping framework</a>
+                    <span class="line"></span>
+                </h1>
+                <span class="time">2 June 2014</span>
+                <div class="article-body hyphenate">
+                    
+
+<p><a href="https://godoc.org/github.com/h12w/getgo"><img src="https://godoc.org/github.com/h12w/getgo?status.png" alt="GoDoc" /></a>
+<a href="https://travis-ci.org/h12w/getgo"><img src="https://travis-ci.org/h12w/getgo.svg?branch=master" alt="Build Status" /></a></p>
+
+<p>Getgo is a concurrent, simple and extensible web scraping framework written in <a href="http://golang.org">Go</a>.</p>
+
+<h2 id="quick-start">Quick start</h2>
+
+<h3 id="get-getgo">Get Getgo</h3>
+
+<pre><code class="language-bash">go get -u github.com/h12w/getgo
+</code></pre>
+
+<h3 id="define-a-task">Define a task</h3>
+
+<p>This example is under the examples/goblog directory. To use Getgo to scrap structured
+data from a web page, just define the structured data as a Go struct (golangBlogEntry),
+and define a corresponding task (golangBlogIndexTask).</p>
+
+<pre><code class="language-go">type golangBlogEntry struct {
+	Title string
+	URL   string
+	Tags  *string
+}
+
+type golangBlogIndexTask struct {
+	// Variables in task URL, e.g. page number
+}
+
+func (t golangBlogIndexTask) Request() *http.Request {
+	return getReq(`http://blog.golang.org/index`)
+}
+
+func (t golangBlogIndexTask) Handle(root *query.Node, s getgo.Storer) (err error) {
+	root.Div(_Id(&quot;content&quot;)).Children(_Class(&quot;blogtitle&quot;)).For(func(item *query.Node) {
+		title := item.Ahref().Text()
+		url := item.Ahref().Href()
+		tags := item.Span(_Class(&quot;tags&quot;)).Text()
+		if url != nil &amp;&amp; title != nil {
+			store(&amp;golangBlogEntry{Title: *title, URL: *url, Tags: tags}, s, &amp;err)
+		}
+	})
+	return
+}
+</code></pre>
+
+<h3 id="run-the-task">Run the task</h3>
+
+<p>Use util.Run to run the task and print all the result to standard output.</p>
+
+<pre><code class="language-go">	util.Run(golangBlogIndexTask{})
+</code></pre>
+
+<p>To store the parsed result to a database, a storage backend satisfying getgo.Tx
+interface should be provided to the getgo.Run method.</p>
+
+<h2 id="understand-getgo">Understand Getgo</h2>
+
+<p>A getgo.Task is an interface to represent an HTTP crawler task that provides an
+HTTP request and a method to handle the HTTP response.</p>
+
+<pre><code class="language-go">type Task interface {
+	Requester
+	Handle(resp *http.Response) error
+}
+
+type Requester interface {
+	Request() *http.Request
+}
+</code></pre>
+
+<p>A getgo.Runner is responsible to run a getgo.Task. There are two concrete runners
+provided: SequentialRunner and ConcurrentRunner.</p>
+
+<pre><code class="language-go">type Runner interface {
+	Run(task Task) error // Run runs a task
+	Close()              // Close closes the runner
+}
+</code></pre>
+
+<p>A task that stores data into a storage backend should satisfy getgo.StorableTask
+interface.</p>
+
+<pre><code class="language-go">type StorableTask interface {
+	Requester
+	Handle(resp *http.Response, s Storer) error
+}
+</code></pre>
+
+<p>A storage backend is simply an object satisfying getgo.Tx interface.</p>
+
+<pre><code class="language-go">type Storer interface {
+	Store(v interface{}) error
+}
+
+type Tx interface {
+	Storer
+	Commit() error
+	Rollback() error
+}
+</code></pre>
+
+<p>See getgo.Run method to understand how a StorableTask is combined with a storage
+backend and adapted to become a normal Task to allow a Runner to run it.</p>
+
+<p>There are currently a PostgreSQL storage backend provided by Getgo, and it is
+not hard to support more backends (See getgo/db package for details).</p>
+
+<p>The easier way to define a task for an HTML page is to define a task satisfying
+getgo.HTMLTask rather than getgo.Task, there are adapters to convert internally
+an HTMLTask to a Task so that a Runner can run an HTMLTask. The Handle method of
+HTMLTask provides an already parsed HTML DOM object (by html-query package).</p>
+
+<pre><code class="language-go">type HTMLTask interface {
+	Requester
+	Handle(root *query.Node, s Storer) error
+}
+</code></pre>
+
+<p>Similarly, a task for retrieving a JSON page should satisfy getgo.TextTask
+interface. An io.Reader is provided to be decoded by the encoding/json package.</p>
+
+<pre><code class="language-go">type TextTask interface {
+	Requester
+	Handle(r io.Reader, s Storer) error
+}
+</code></pre>
+
+                </div>
+            </article>
+        
+            <article class="frontpage">
+                <h1>
                     <a href="http://h12.io/project/gspec/">GSpec: a productive Go test framework</a>
                     <span class="line"></span>
                 </h1>

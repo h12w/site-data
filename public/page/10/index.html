@@ -76,6 +76,143 @@
         
             <article class="frontpage">
                 <h1>
+                    <a href="http://h12.io/article/optimal-font-scale/">Finding Optimal Typographic Scale</a>
+                    <span class="line"></span>
+                </h1>
+                <span class="time">5 July 2014</span>
+                <div class="article-body hyphenate">
+                    
+
+<p>During the construction of this site, there are many important design decisions
+that need to be made. One of them is to decide the font size for each level of
+headings, i.e., typographic scale.</p>
+
+<h2 id="investigation">Investigation</h2>
+
+<p>The first thing I did was to read <a href="https://www.google.com/?#newwindow=1&amp;q=typographic+scale">everything online</a>
+about typographic scale. I will just skip the details and jump to my opinions:</p>
+
+<ul>
+<li>Modular scale should be followed</li>
+<li>Traditional scale is obsolete</li>
+<li>Golden ratio or double-stranded scale do not make any sense</li>
+<li>Vertical rhythm should be considered</li>
+</ul>
+
+<p>Then a little explanation.</p>
+
+<p>Modular scale (geometric series) is the way how our visual perception understands
+relative size. When a page is zoomed in or out, the perceived aboslue length
+changes, but the ratio remains the same. Rather than choosing modular scale, we
+actually think in terms of modular scale.  There is no hard rule that the ratio
+of modular scale must be a constant, but a constant modular ratio is the simplest
+and provides consistency.</p>
+
+<p>Traditional scale is actually modular scale of ratio 2 for size 6 7 8 9, with some
+extra and missing sizes. There is no reason why we restraint ourselves to
+irrelevant factors, instead, we should consider the constraints from our
+<em>real problem</em>. The same reason applies to the golden ratio and double-stranded
+scale.</p>
+
+<h2 id="problem-constraints">Problem &amp; constraints</h2>
+
+<p>What is a good typographic scale? For a Blog article, it should at least meet the
+following requirements:</p>
+
+<ul>
+<li>Discrimination: different headings can be easily distingushed</li>
+<li>Consistency: all the headings looks consistent by the same principle</li>
+</ul>
+
+<p>Besides font size, line height of each level of headings should also be adjusted
+to meet the requirement of vertical rhythm. Line height affects the appearance
+of a heading, especially when the heading is wrapped and takes up multiple lines.</p>
+
+<p>Modular scale solves part of the problem, but we still have to determine the
+value of the modular ratio and to make the line height as consistent as possible
+while maintaining vertical rhythm.</p>
+
+<p>The typographic scale should also satisfy these constraints:</p>
+
+<ul>
+<li>The line height of each heading must be an integral multiple of the line height
+of body copy (vertical rhythm)</li>
+<li>The smallest heading must not smaller than the body copy</li>
+<li>The number of heading levels</li>
+<li>The maximum acceptable size of the top heading</li>
+</ul>
+
+<h2 id="optimization">Optimization</h2>
+
+<p>Design is a process exploring all the possible solutions (the design space) to
+find an optimal one, i.e. an <a href="http://en.wikipedia.org/wiki/Optimization_problem">optimization problem</a>.
+If we can express the problem in a mathematical form, we can solve it by
+computation.</p>
+
+<p>The constraints are already listed. The next thing is to express the objective
+function, which is the inconsistency of headings from each other. What is it?</p>
+
+<p>Short answer: the standard deviation of relative line height.</p>
+
+<p>Long answer: The line height of each heading is different, but the relative line
+height (line height divided by font size) of different headings can be the same,
+and when they are the same, the headings look consistent. To compare two numbers,
+you can just use the absolute value of the difference of the two numbers, but for
+a list of numbers, standard deviation is an effective measure for their inconsistency.</p>
+
+<p>The caculation is easy for a computer, and can be done with brute force. The
+program just needs to exhaustively tries each possible heading sizes that
+satisifies all the constraints and evaluates the inconsistency. Finally, it
+sorts all the solutions by the inconsistency and find the best solution.</p>
+
+<p>Here is the code (runable online):
+<a href="http://play.golang.org/p/rP09HJDUcz">a Go program to calculate optimal typographic scale</a>.</p>
+
+<h2 id="example">Example</h2>
+
+<p>In this site, I need to use maximum three levels of headings: H1, H2 &amp; H3. I
+choose 19px/30px as body copy. The search range for H3 is from 1.2*19px to
+1.5*19px, and the range for H3 is from 35 to 50.
+Finally the solution is:</p>
+
+<pre><code>Ratio: 1.3079
+H3: 23px/1.3
+H2: 30px/1.0
+H1: 39px/1.5
+</code></pre>
+
+<p>Though the line height of H2 is still not ideal, it is already the best solution
+given the restrictions by vertical rhythm.</p>
+
+<h2 id="conclusion">Conclusion</h2>
+
+<p>The approach can sccessfully find the optimal typographic scale under the
+precise problem definition in this article. It does not rely on any mysterious
+process or magic numbers, but only reasoning and computation.</p>
+
+                </div>
+            </article>
+        
+            <article class="frontpage">
+                <h1>
+                    <a href="http://h12.io/note/site-test/">A List of Website Testing Services</a>
+                    <span class="line"></span>
+                </h1>
+                <span class="time">3 July 2014</span>
+                <div class="article-body hyphenate">
+                    <ul>
+<li><a href="http://validator.w3.org/">The W3C Markup Validation Service</a></li>
+<li><a href="http://developers.google.com/speed/pagespeed/insights/">Google PageSpeed Insights</a></li>
+<li><a href="http://tools.pingdom.com/fpt/">Pingdom Website Speed Test</a></li>
+<li><a href="http://nibbler.silktide.com">Nibbler</a></li>
+<li><a href="http://www.browserstack.com/screenshots">BrowserStack</a></li>
+</ul>
+
+                </div>
+            </article>
+        
+            <article class="frontpage">
+                <h1>
                     <a href="http://h12.io/note/narrow-fonts/">A List of Narrow Fonts for Titles</a>
                     <span class="line"></span>
                 </h1>
@@ -154,240 +291,6 @@ when you are typing?</p>
 just an annoying redundant thing. Here is the one-liner to disable it:</p>
 
 <pre><code class="language-bash">xinput list | grep TouchPad | grep -Po 'id=\K([0-9]+)' | xargs xinput disable
-</code></pre>
-
-                </div>
-            </article>
-        
-            <article class="frontpage">
-                <h1>
-                    <a href="http://h12.io/project/gosweep/">gosweep: A shell script to do various checks on Go code</a>
-                    <span class="line"></span>
-                </h1>
-                <span class="time">5 June 2014</span>
-                <div class="article-body hyphenate">
-                    
-
-<p>This script performs the build, test and automatic checking of a Go package and its sub-packages using:</p>
-
-<ol>
-<li><a href="http://golang.org/cmd/gofmt/" title="gofmt">gofmt</a></li>
-<li><a href="https://godoc.org/golang.org/x/tools/cmd/goimports" title="golang.org/x/tools/cmd/goimports">goimports</a></li>
-<li><a href="https://github.com/golang/lint" title="golang/lint">golint</a></li>
-<li><a href="http://golang.org/cmd/vet" title="go vet">go vet</a></li>
-<li><a href="https://github.com/gordonklaus/ineffassign" title="ineffassign">ineffassign</a></li>
-<li><a href="http://blog.golang.org/race-detector" title="race detector">race detector</a></li>
-<li><a href="http://blog.golang.org/cover" title="test coverage">test coverage</a> on package and its sub-packages, <code>/vendor</code> directories excluded</li>
-<li><a href="https://github.com/mattn/goveralls" title="mattn/goveralls">goveralls</a></li>
-<li><a href="https://github.com/fzipp/gocyclo" title="gocyclo">gocyclo</a></li>
-<li><a href="https://github.com/client9/misspell" title="misspell">misspell</a></li>
-</ol>
-
-<p>Migrated from my <a href="https://gist.github.com/h12w/0f22736320abe6be71ce">Gist</a>.</p>
-
-<h2 id="dependencies">Dependencies</h2>
-
-<p>To setup all the dependencies need to run the script do:</p>
-
-<pre><code>$ go get -v github.com/client9/misspell/cmd/misspell
-$ go get -v github.com/fzipp/gocyclo
-$ go get -v github.com/golang/lint/golint
-$ go get -v github.com/gordonklaus/ineffassign
-$ go get -v github.com/h12w/gosweep
-$ go get -v github.com/mattn/goveralls
-$ go get -v golang.org/x/tools/cmd/goimports
-</code></pre>
-
-<h2 id="environment-variables">Environment variables</h2>
-
-<ul>
-<li><strong>GOCYCLO_COMPLEXITY</strong>: maximum allowed function complexity threshold (default: <code>5</code>).</li>
-<li><strong>MISSPELL_LOCALE</strong>: English locale (default: <code>US</code>).</li>
-</ul>
-
-<p>If you wish to set this for a project you can create a <code>.gosweep</code> file.
-For example:</p>
-
-<pre><code class="language-bash">$ cat .gosweep
-GOCYCLO_COMPLEXITY=5
-MISSPELL_LOCALE='US'
-</code></pre>
-
-<h2 id="continuous-integration">Continuous Integration</h2>
-
-<h3 id="travis-ci">travis-ci</h3>
-
-<p>Example of <code>.travis.yml</code> file for Go:</p>
-
-<pre><code class="language-yaml">language: go
-cache:
-  directories:
-    - ${GOPATH}/src/github.com/${TRAVIS_REPO_SLUG}/vendor
-    - ${GOPATH}/src/github.com/fzipp
-    - ${GOPATH}/src/github.com/golang
-    - ${GOPATH}/src/github.com/gordonklaus
-    - ${GOPATH}/src/github.com/h12w
-    - ${GOPATH}/src/github.com/mattn
-go:
-  - tip
-  - 1.8
-  - 1.7
-  - 1.6
-sudo: false
-
-env:
-    CI_SERVICE=travis-ci
-
-install:
-  - go get -v github.com/client9/misspell/cmd/misspell
-  - go get -v github.com/fzipp/gocyclo
-  - go get -v github.com/golang/lint/golint
-  - go get -v github.com/gordonklaus/ineffassign
-  - go get -v github.com/h12w/gosweep
-  - go get -v github.com/mattn/goveralls
-  - go get -v -u golang.org/x/tools/cmd/goimports
-
-script:
-  - bash ${GOPATH}/src/github.com/h12w/gosweep/gosweep.sh
-</code></pre>
-
-                </div>
-            </article>
-        
-            <article class="frontpage">
-                <h1>
-                    <a href="http://h12.io/project/getgo/">Getgo: a concurrent, simple and extensible web scraping framework</a>
-                    <span class="line"></span>
-                </h1>
-                <span class="time">2 June 2014</span>
-                <div class="article-body hyphenate">
-                    
-
-<p><a href="https://godoc.org/github.com/h12w/getgo"><img src="https://godoc.org/github.com/h12w/getgo?status.png" alt="GoDoc" /></a>
-<a href="https://travis-ci.org/h12w/getgo"><img src="https://travis-ci.org/h12w/getgo.svg?branch=master" alt="Build Status" /></a></p>
-
-<p>Getgo is a concurrent, simple and extensible web scraping framework written in <a href="http://golang.org">Go</a>.</p>
-
-<h2 id="quick-start">Quick start</h2>
-
-<h3 id="get-getgo">Get Getgo</h3>
-
-<pre><code class="language-bash">go get -u github.com/h12w/getgo
-</code></pre>
-
-<h3 id="define-a-task">Define a task</h3>
-
-<p>This example is under the examples/goblog directory. To use Getgo to scrap structured
-data from a web page, just define the structured data as a Go struct (golangBlogEntry),
-and define a corresponding task (golangBlogIndexTask).</p>
-
-<pre><code class="language-go">type golangBlogEntry struct {
-	Title string
-	URL   string
-	Tags  *string
-}
-
-type golangBlogIndexTask struct {
-	// Variables in task URL, e.g. page number
-}
-
-func (t golangBlogIndexTask) Request() *http.Request {
-	return getReq(`http://blog.golang.org/index`)
-}
-
-func (t golangBlogIndexTask) Handle(root *query.Node, s getgo.Storer) (err error) {
-	root.Div(_Id(&quot;content&quot;)).Children(_Class(&quot;blogtitle&quot;)).For(func(item *query.Node) {
-		title := item.Ahref().Text()
-		url := item.Ahref().Href()
-		tags := item.Span(_Class(&quot;tags&quot;)).Text()
-		if url != nil &amp;&amp; title != nil {
-			store(&amp;golangBlogEntry{Title: *title, URL: *url, Tags: tags}, s, &amp;err)
-		}
-	})
-	return
-}
-</code></pre>
-
-<h3 id="run-the-task">Run the task</h3>
-
-<p>Use util.Run to run the task and print all the result to standard output.</p>
-
-<pre><code class="language-go">	util.Run(golangBlogIndexTask{})
-</code></pre>
-
-<p>To store the parsed result to a database, a storage backend satisfying getgo.Tx
-interface should be provided to the getgo.Run method.</p>
-
-<h2 id="understand-getgo">Understand Getgo</h2>
-
-<p>A getgo.Task is an interface to represent an HTTP crawler task that provides an
-HTTP request and a method to handle the HTTP response.</p>
-
-<pre><code class="language-go">type Task interface {
-	Requester
-	Handle(resp *http.Response) error
-}
-
-type Requester interface {
-	Request() *http.Request
-}
-</code></pre>
-
-<p>A getgo.Runner is responsible to run a getgo.Task. There are two concrete runners
-provided: SequentialRunner and ConcurrentRunner.</p>
-
-<pre><code class="language-go">type Runner interface {
-	Run(task Task) error // Run runs a task
-	Close()              // Close closes the runner
-}
-</code></pre>
-
-<p>A task that stores data into a storage backend should satisfy getgo.StorableTask
-interface.</p>
-
-<pre><code class="language-go">type StorableTask interface {
-	Requester
-	Handle(resp *http.Response, s Storer) error
-}
-</code></pre>
-
-<p>A storage backend is simply an object satisfying getgo.Tx interface.</p>
-
-<pre><code class="language-go">type Storer interface {
-	Store(v interface{}) error
-}
-
-type Tx interface {
-	Storer
-	Commit() error
-	Rollback() error
-}
-</code></pre>
-
-<p>See getgo.Run method to understand how a StorableTask is combined with a storage
-backend and adapted to become a normal Task to allow a Runner to run it.</p>
-
-<p>There are currently a PostgreSQL storage backend provided by Getgo, and it is
-not hard to support more backends (See getgo/db package for details).</p>
-
-<p>The easier way to define a task for an HTML page is to define a task satisfying
-getgo.HTMLTask rather than getgo.Task, there are adapters to convert internally
-an HTMLTask to a Task so that a Runner can run an HTMLTask. The Handle method of
-HTMLTask provides an already parsed HTML DOM object (by html-query package).</p>
-
-<pre><code class="language-go">type HTMLTask interface {
-	Requester
-	Handle(root *query.Node, s Storer) error
-}
-</code></pre>
-
-<p>Similarly, a task for retrieving a JSON page should satisfy getgo.TextTask
-interface. An io.Reader is provided to be decoded by the encoding/json package.</p>
-
-<pre><code class="language-go">type TextTask interface {
-	Requester
-	Handle(r io.Reader, s Storer) error
-}
 </code></pre>
 
                 </div>
