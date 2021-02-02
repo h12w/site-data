@@ -48,6 +48,7 @@ packages:
   html-query:
   httpauth:
   httpdump:
+  json2csv:
   json-schema:
   kpax: ["v1", "v2"]
   macro-expand:
