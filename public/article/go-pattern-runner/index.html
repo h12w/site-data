@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title> Articles </title>
+        <title> Go Pattern: Runner </title>
         <link rel="shortcut icon" href="/img/favicon.png" />
 
         <style>
@@ -71,96 +71,88 @@
         </header>
 
         <main class="container">
-        <h1 class="list">Articles</h1>
-            
-            <article class="list">
-                <h2>
-                    <a href="http://h12.io/article/go-pattern-runner/">Go Pattern: Runner</a><br>
-                </h2>
-                <span class="time">22 February 2022</span>
-                <span class="tags"></span>
+            <article class="single">
+                <h1>Go Pattern: Runner</h1>
+                <div class="article-body hyphenate">
+                
+
+<p>Again and again, a concurrent pattern emerges from the need to control goroutine lifecycles and handle their errors, and I call it the &ldquo;Runner Pattern&rdquo;.</p>
+
+<h2 id="the-runner-interface">The runner interface</h2>
+
+<p>The pattern is as simple as a single-method interface:</p>
+
+<pre><code class="language-go">// Runner defines the Run method to be executed within a goroutine
+type Runner interface {
+	Run(ctx context.Context) error
+}
+</code></pre>
+
+<p>The <code>Run</code> method will block until one of the following occurs:</p>
+
+<ul>
+<li>it completes successfully and returns nil</li>
+<li>it fails and returns an error</li>
+<li>it returns the context error as soon as the context gets cancelled</li>
+</ul>
+
+<p>The contract of a <code>Runner</code> also implies that:</p>
+
+<ul>
+<li>all the resources it uses must be released when the <code>Run</code> method returns</li>
+<li>the <code>Run</code> method either can be called concurrently or returns an error if it cannot</li>
+<li>the <code>Run</code> method does not spawn its own goroutine unless there are nested <code>Runner</code>s within it</li>
+</ul>
+
+<h2 id="a-group-of-runners">A group of runners</h2>
+
+<p>To manage multiple runners as a group, it would be straightforward to implement a runner group as below, with some of the sync primitives like <code>WaitGroup</code> and <code>Once</code> (<a href="https://github.com/h12w/run/blob/master/simple.go">a reference implementation</a>):</p>
+
+<pre><code class="language-go">type Group interface {
+	Go(r Runner)
+	Wait() error
+}
+
+func NewGroup(ctx context.Context) Group
+</code></pre>
+
+<p>With this simple group API, we could add multiple runners to a group and wait for all of them to complete. By default,
+<code>Wait</code> method returns the first error that occurred in any of the runners, or nil if all runners completed successfully.</p>
+
+<h2 id="rationale">Rationale</h2>
+
+<p>Go&rsquo;s CSP-style concurrency model enables us writing synchronous code intuitively but under the hood, schedules them off the thread when they block and resumes them when they unblock.</p>
+
+<p>We should make full use of the unique ability of Go, controlling lifecycles and handling errors in an intuitively synchronous way rather than fighting against CSP and writing asynchronous-style code everywhere (e.g. callbacks, future/promise, async/await etc).</p>
+
+<p>With the runner pattern, we abstracts away the boilerplate code of goroutine spawning and error handling, so that each piece of concurrent code can focus on its own business logic.</p>
+
+<h2 id="implementation-tips-of-a-runner">Implementation tips of a runner</h2>
+
+<p>Here are a few tips to make a runner correct and efficient:</p>
+
+<ul>
+<li>options, input/output channels and other dependencies can all be arguments passed into the constructor function of a runner</li>
+<li>a runner object should not contain any state mutable after initialisation, instead, mutable state and other resources should be scoped within the <code>Run</code> method</li>
+<li>the error handling logic of returning the first error can be overridden by handling a specific type of error within the <code>Run</code> method</li>
+<li>remember passing the context into wherever it is needed, and monitor if it gets cancelled, especially within loops</li>
+</ul>
+
+                </div>
+                <div>
+                    <div id="article-time">22 February 2022</div>
+                    <ul id="tags">
+  
+    <li><a href="/tags/go">Go</a> </li>
+  
+    <li><a href="/tags/pattern">pattern</a> </li>
+  
+    <li><a href="/tags/runner">runner</a> </li>
+  
+</ul>
+
+                </div>
             </article>
-            
-            <article class="list">
-                <h2>
-                    <a href="http://h12.io/article/go-anti-patterns-parent-closer/">Go Anti-pattern: Parent Closer</a><br>
-                </h2>
-                <span class="time">8 January 2021</span>
-                <span class="tags"></span>
-            </article>
-            
-            <article class="list">
-                <h2>
-                    <a href="http://h12.io/article/probability-as-a-generalisation-of-boolean-algebra/">Probability as a Generalisation of Boolean Algebra</a><br>
-                </h2>
-                <span class="time">14 December 2020</span>
-                <span class="tags"></span>
-            </article>
-            
-            <article class="list">
-                <h2>
-                    <a href="http://h12.io/article/go-pattern-context-aware-lock/">Go Pattern: Context-aware Lock</a><br>
-                </h2>
-                <span class="time">30 November 2020</span>
-                <span class="tags"></span>
-            </article>
-            
-            <article class="list">
-                <h2>
-                    <a href="http://h12.io/article/go-pattern-buffered-writer/">Go Pattern: Buffered Writer</a><br>
-                </h2>
-                <span class="time">22 November 2020</span>
-                <span class="tags"></span>
-            </article>
-            
-            <article class="list">
-                <h2>
-                    <a href="http://h12.io/article/value-vs-pointer-receivers/">Value vs Pointer Receivers</a><br>
-                </h2>
-                <span class="time">19 June 2020</span>
-                <span class="tags"></span>
-            </article>
-            
-            <article class="list">
-                <h2>
-                    <a href="http://h12.io/article/password-management/">A Developer&#39;s Guide to Password Management</a><br>
-                </h2>
-                <span class="time">18 February 2015</span>
-                <span class="tags"></span>
-            </article>
-            
-            <article class="list">
-                <h2>
-                    <a href="http://h12.io/article/scientific-web-surfing/">A Brief Note on Scientific Web Surfing</a><br>
-                </h2>
-                <span class="time">14 February 2015</span>
-                <span class="tags"></span>
-            </article>
-            
-            <article class="list">
-                <h2>
-                    <a href="http://h12.io/article/learn-haskell/">Learning Haskell the Hard Way</a><br>
-                </h2>
-                <span class="time">26 July 2014</span>
-                <span class="tags"></span>
-            </article>
-            
-            <article class="list">
-                <h2>
-                    <a href="http://h12.io/article/pagespeed-insights/">How to Achieve a Perfect PageSpeed Insights Score</a><br>
-                </h2>
-                <span class="time">24 July 2014</span>
-                <span class="tags"></span>
-            </article>
-            
-            <article class="list">
-                <h2>
-                    <a href="http://h12.io/article/optimal-font-scale/">Finding Optimal Typographic Scale</a><br>
-                </h2>
-                <span class="time">5 July 2014</span>
-                <span class="tags"></span>
-            </article>
-            
         </main>
         <footer id="site-footer">
             <hr>

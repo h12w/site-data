@@ -100,6 +100,17 @@ This Site Tools  Container: Docker CSS: Sass, Compass &amp;amp; Susy Font: Googl
     </item>
     
     <item>
+      <title>Go Pattern: Runner</title>
+      <link>http://h12.io/article/go-pattern-runner/</link>
+      <pubDate>Tue, 22 Feb 2022 14:46:35 +0000</pubDate>
+      
+      <guid>http://h12.io/article/go-pattern-runner/</guid>
+      <description>Again and again, a concurrent pattern emerges from the need to control goroutine lifecycles and handle their errors, and I call it the &amp;ldquo;Runner Pattern&amp;rdquo;.
+The runner interface The pattern is as simple as a single-method interface:
+// Runner defines the Run method to be executed within a goroutine type Runner interface { Run(ctx context.Context) error }  The Run method will block until one of the following occurs:</description>
+    </item>
+    
+    <item>
       <title>Go Anti-pattern: Parent Closer</title>
       <link>http://h12.io/article/go-anti-patterns-parent-closer/</link>
       <pubDate>Fri, 08 Jan 2021 10:48:26 +0000</pubDate>

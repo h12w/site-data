@@ -76,6 +76,22 @@
         
             <article class="frontpage">
                 <h1>
+                    <a href="http://h12.io/note/learn-frontend/">Learning Frontend</a>
+                    <span class="line"></span>
+                </h1>
+                <span class="time">15 February 2019</span>
+                <div class="article-body hyphenate">
+                    <ul>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript">Vanilla JavaScript</a></li>
+<li><a href="https://reactjs.org/docs/getting-started.html">React</a></li>
+<li><a href="https://emotion.sh/docs/introduction">Emotion</a></li>
+</ul>
+
+                </div>
+            </article>
+        
+            <article class="frontpage">
+                <h1>
                     <a href="http://h12.io/note/js-surprises/">JavaScript Surprises to a Go Developer</a>
                     <span class="line"></span>
                 </h1>
@@ -370,26 +386,6 @@ vimdiff aa.json bb.json
 <ul>
 <li><a href="https://skelia.com/articles/pagination-with-dynamic-data-loading-2/">Pagination with Dynamic Data Loading</a></li>
 </ul>
-
-                </div>
-            </article>
-        
-            <article class="frontpage">
-                <h1>
-                    <a href="http://h12.io/project/buid/">buid: Bipartite Unique Identifier</a>
-                    <span class="line"></span>
-                </h1>
-                <span class="time">15 November 2017</span>
-                <div class="article-body hyphenate">
-                    <p>A BUID is a 128-bit unique ID composed of two 64-bit parts: shard and key.</p>
-
-<p>It is not only a unique ID, but also contains the sharding information, so that the messages with the same BUID could be stored together within the same DB shard.</p>
-
-<p>Also, when a message is stored in a shard, the shard part of the BUID can be trimmed off to save the space, and only the key part needs to be stored as the primary key.</p>
-
-<p>Bigendian is chosen to make each part byte-wise lexicographic sortable.</p>
-
-<p>The string representation uses <a href="https://github.com/eknkc/basex">basex</a> 62 encoding.</p>
 
                 </div>
             </article>

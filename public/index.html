@@ -76,6 +76,80 @@
         
             <article class="frontpage">
                 <h1>
+                    <a href="http://h12.io/article/go-pattern-runner/">Go Pattern: Runner</a>
+                    <span class="line"></span>
+                </h1>
+                <span class="time">22 February 2022</span>
+                <div class="article-body hyphenate">
+                    
+
+<p>Again and again, a concurrent pattern emerges from the need to control goroutine lifecycles and handle their errors, and I call it the &ldquo;Runner Pattern&rdquo;.</p>
+
+<h2 id="the-runner-interface">The runner interface</h2>
+
+<p>The pattern is as simple as a single-method interface:</p>
+
+<pre><code class="language-go">// Runner defines the Run method to be executed within a goroutine
+type Runner interface {
+	Run(ctx context.Context) error
+}
+</code></pre>
+
+<p>The <code>Run</code> method will block until one of the following occurs:</p>
+
+<ul>
+<li>it completes successfully and returns nil</li>
+<li>it fails and returns an error</li>
+<li>it returns the context error as soon as the context gets cancelled</li>
+</ul>
+
+<p>The contract of a <code>Runner</code> also implies that:</p>
+
+<ul>
+<li>all the resources it uses must be released when the <code>Run</code> method returns</li>
+<li>the <code>Run</code> method either can be called concurrently or returns an error if it cannot</li>
+<li>the <code>Run</code> method does not spawn its own goroutine unless there are nested <code>Runner</code>s within it</li>
+</ul>
+
+<h2 id="a-group-of-runners">A group of runners</h2>
+
+<p>To manage multiple runners as a group, it would be straightforward to implement a runner group as below, with some of the sync primitives like <code>WaitGroup</code> and <code>Once</code> (<a href="https://github.com/h12w/run/blob/master/simple.go">a reference implementation</a>):</p>
+
+<pre><code class="language-go">type Group interface {
+	Go(r Runner)
+	Wait() error
+}
+
+func NewGroup(ctx context.Context) Group
+</code></pre>
+
+<p>With this simple group API, we could add multiple runners to a group and wait for all of them to complete. By default,
+<code>Wait</code> method returns the first error that occurred in any of the runners, or nil if all runners completed successfully.</p>
+
+<h2 id="rationale">Rationale</h2>
+
+<p>Go&rsquo;s CSP-style concurrency model enables us writing synchronous code intuitively but under the hood, schedules them off the thread when they block and resumes them when they unblock.</p>
+
+<p>We should make full use of the unique ability of Go, controlling lifecycles and handling errors in an intuitively synchronous way rather than fighting against CSP and writing asynchronous-style code everywhere (e.g. callbacks, future/promise, async/await etc).</p>
+
+<p>With the runner pattern, we abstracts away the boilerplate code of goroutine spawning and error handling, so that each piece of concurrent code can focus on its own business logic.</p>
+
+<h2 id="implementation-tips-of-a-runner">Implementation tips of a runner</h2>
+
+<p>Here are a few tips to make a runner correct and efficient:</p>
+
+<ul>
+<li>options, input/output channels and other dependencies can all be arguments passed into the constructor function of a runner</li>
+<li>a runner object should not contain any state mutable after initialisation, instead, mutable state and other resources should be scoped within the <code>Run</code> method</li>
+<li>the error handling logic of returning the first error can be overridden by handling a specific type of error within the <code>Run</code> method</li>
+<li>remember passing the context into wherever it is needed, and monitor if it gets cancelled, especially within loops</li>
+</ul>
+
+                </div>
+            </article>
+        
+            <article class="frontpage">
+                <h1>
                     <a href="http://h12.io/article/go-anti-patterns-parent-closer/">Go Anti-pattern: Parent Closer</a>
                     <span class="line"></span>
                 </h1>
@@ -655,22 +729,6 @@ func main() {
 </code></pre>
 
 <p>See <code>a[0]</code> changes because slice <code>a</code> and <code>b</code> shares the same underlying array.</p>
-
-                </div>
-            </article>
-        
-            <article class="frontpage">
-                <h1>
-                    <a href="http://h12.io/note/learn-frontend/">Learning Frontend</a>
-                    <span class="line"></span>
-                </h1>
-                <span class="time">15 February 2019</span>
-                <div class="article-body hyphenate">
-                    <ul>
-<li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript">Vanilla JavaScript</a></li>
-<li><a href="https://reactjs.org/docs/getting-started.html">React</a></li>
-<li><a href="https://emotion.sh/docs/introduction">Emotion</a></li>
-</ul>
 
                 </div>
             </article>
