@@ -78,7 +78,7 @@
 
 <p>Again and again, a concurrent pattern emerges from the need to control goroutine lifecycles and handle their errors, and I call it the &ldquo;Runner Pattern&rdquo;.</p>
 
-<h2 id="the-runner-interface">The runner interface</h2>
+<h2 id="the-runner-interface-and-its-contract">The runner interface and its contract</h2>
 
 <p>The pattern is as simple as a single-method interface:</p>
 
@@ -88,7 +88,9 @@ type Runner interface {
 }
 </code></pre>
 
-<p>The <code>Run</code> method will block until one of the following occurs:</p>
+<p>The contract of the interface covers two aspects.</p>
+
+<p>On the goroutine lifecycle, the <code>Run</code> method will block until one of the following occurs:</p>
 
 <ul>
 <li>it completes successfully and returns nil</li>
@@ -96,12 +98,13 @@ type Runner interface {
 <li>it returns the context error as soon as the context gets cancelled</li>
 </ul>
 
-<p>The contract of a <code>Runner</code> also implies that:</p>
+<p>On the error handling, The contract of a <code>Runner</code> also implies that:</p>
 
 <ul>
-<li>all the resources it uses must be released when the <code>Run</code> method returns</li>
+<li>all the errors that need to be handled by the caller are returned by the <code>Run</code> method</li>
 <li>the <code>Run</code> method either can be called concurrently or returns an error if it cannot</li>
-<li>the <code>Run</code> method does not spawn its own goroutine unless there are nested <code>Runner</code>s within it</li>
+<li>the <code>Run</code> method does not spawn its own goroutine directly unless there are nested <code>Runner</code>s,
+whose errors need to be returned by the <code>Run</code> method too</li>
 </ul>
 
 <h2 id="a-group-of-runners">A group of runners</h2>
@@ -127,6 +130,12 @@ func NewGroup(ctx context.Context) Group
 
 <p>With the runner pattern, we abstracts away the boilerplate code of goroutine spawning and error handling, so that each piece of concurrent code can focus on its own business logic.</p>
 
+<h2 id="is-that-just-an-error-group">Is that just an error group?</h2>
+
+<p>The <a href="https://pkg.go.dev/golang.org/x/sync/errgroup">error group</a> could be used to implement the runner pattern. In a sense,
+you could even call it an error group pattern. However, the runner pattern is more about the interface contract
+rather than the group implementation, and the contract is not only about error handling but also about the goroutine lifecycle.</p>
+
 <h2 id="implementation-tips-of-a-runner">Implementation tips of a runner</h2>
 
 <p>Here are a few tips to make a runner correct and efficient:</p>
@@ -136,6 +145,7 @@ func NewGroup(ctx context.Context) Group
 <li>a runner object should not contain any state mutable after initialisation, instead, mutable state and other resources should be scoped within the <code>Run</code> method</li>
 <li>the error handling logic of returning the first error can be overridden by handling a specific type of error within the <code>Run</code> method</li>
 <li>remember passing the context into wherever it is needed, and monitor if it gets cancelled, especially within loops</li>
+<li>all the resources allocated within the <code>Run</code> method must be released when it returns</li>
 </ul>
 
                 </div>
