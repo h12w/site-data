@@ -79,6 +79,28 @@
         
             <article class="frontpage">
                 <h1>
+                    <a href="http://h12.io/note/less-is-more-dag/">Less Is More: Directed Acyclic Graph</a>
+                    <span class="line"></span>
+                </h1>
+                <span class="time">12 May 2022</span>
+                <div class="article-body hyphenate">
+                    <p>A directed acyclic graph or <a href="https://en.wikipedia.org/wiki/Directed_acyclic_graph">DAG</a> is a directed graph with no directed cycles.</p>
+
+<p>An arbitrary directed graph may also be transformed into a DAG, called its <a href="https://en.wikipedia.org/wiki/Strongly_connected_component#Definitions">condensation</a>, by contracting each of its strongly connected components into a single super vertex.</p>
+
+<p>Go&rsquo;s <a href="https://go.dev/ref/spec#Import_declarations">import declaration</a> declares a dependency relation between the importing and imported package. It is illegal for a package to import itself, directly or indirectly, or to directly import a package without referring to any of its exported identifiers.</p>
+
+<p>&ldquo;Allowing cycles enables laziness, poor dependency management, and slow builds&rdquo; - <a href="https://github.com/golang/go/issues/30247#issuecomment-463940936">Rob Pike</a>.</p>
+
+<p>So, definitions strongly connected to each other so much so that they form cycles should be &ldquo;condensed&rdquo; into one package, period.</p>
+
+<p>Less is more.</p>
+
+                </div>
+            </article>
+        
+            <article class="frontpage">
+                <h1>
                     <a href="http://h12.io/article/go-pattern-runner/">Go Pattern: Runner</a>
                     <span class="line"></span>
                 </h1>
@@ -690,58 +712,6 @@ func (s *S) ByPointer() *S {
 <h3 id="conclusion">Conclusion</h3>
 
 <p>From the benchmark results, value receivers should be preferred if the methods are inlined and the struct size is equal to or smaller than 9 words (<code>1 word == 64 bit</code>), but this might not be the end of the story, the more complex a method is, the less likely it is inlined, but also the less proportion the copying overhead to the whole method logic. The overhead of copying from a value receiver might not be significant to the overall running time, so at the end of the day, the choice depends on the frequency of the method calls, the business logic and the performance requirements. When in doubt, benchmark it!</p>
-
-                </div>
-            </article>
-        
-            <article class="frontpage">
-                <h1>
-                    <a href="http://h12.io/note/go-vs-python/">Go vs Python</a>
-                    <span class="line"></span>
-                </h1>
-                <span class="time">27 September 2019</span>
-                <div class="article-body hyphenate">
-                    
-
-<h3 id="slices">Slices</h3>
-
-<p>Go slice and Python slice have very similar syntax, but Python slice is a shallow copy of part of the original list, while Go slice is just a new range within the same underlying array of the original slice.</p>
-
-<p>Let&rsquo;s try:</p>
-
-<pre><code class="language-python">a = [1, 2, 3]
-b = a[:2]
-b[0] = 9
-print(a)
-print(b)
-
-# output:
-# [1, 2, 3]
-# [9, 2]
-</code></pre>
-
-<p>See <code>a[0]</code> remains the same.</p>
-
-<pre><code class="language-go">package main
-
-import (
-    &quot;fmt&quot;
-)
-
-func main() {
-	a := []int{1, 2, 3}
-	b := a[:2]
-	b[0] = 9
-	fmt.Println(a)
-	fmt.Println(b)
-
-	# output:
-	# [9 2 3]
-	# [9 2]
-}
-</code></pre>
-
-<p>See <code>a[0]</code> changes because slice <code>a</code> and <code>b</code> shares the same underlying array.</p>
 
                 </div>
             </article>

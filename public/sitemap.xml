@@ -48,6 +48,11 @@
   </url>
   
   <url>
+    <loc>http://h12.io/note/less-is-more-dag/</loc>
+    <lastmod>2022-05-12T21:24:39+01:00</lastmod>
+  </url>
+  
+  <url>
     <loc>http://h12.io/article/go-pattern-runner/</loc>
     <lastmod>2022-02-22T14:46:35+00:00</lastmod>
   </url>
@@ -618,6 +623,12 @@
   </url>
   
   <url>
+    <loc>http://h12.io/tags/dag/</loc>
+    <lastmod>2022-05-12T21:24:39+01:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>http://h12.io/tags/database/</loc>
     <lastmod>2015-05-19T18:00:00+08:00</lastmod>
     <priority>0</priority>
@@ -745,7 +756,7 @@
   
   <url>
     <loc>http://h12.io/tags/go/</loc>
-    <lastmod>2022-02-22T14:46:35+00:00</lastmod>
+    <lastmod>2022-05-12T21:24:39+01:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -822,6 +833,12 @@
   </url>
   
   <url>
+    <loc>http://h12.io/tags/import/</loc>
+    <lastmod>2022-05-12T21:24:39+01:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>http://h12.io/tags/ipa/</loc>
     <lastmod>2015-06-30T12:43:19+08:00</lastmod>
     <priority>0</priority>
@@ -872,6 +889,12 @@
   <url>
     <loc>http://h12.io/tags/kafka/</loc>
     <lastmod>2015-11-14T13:57:09+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://h12.io/tags/less-is-more/</loc>
+    <lastmod>2022-05-12T21:24:39+01:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -961,7 +984,7 @@
   
   <url>
     <loc>http://h12.io/note/</loc>
-    <lastmod>2019-09-27T13:58:41+01:00</lastmod>
+    <lastmod>2022-05-12T21:24:39+01:00</lastmod>
     <priority>0</priority>
   </url>
   
