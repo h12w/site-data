@@ -1,10 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-	<meta name="generator" content="Hugo 0.53" />
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title> Hai-Liang &#34;Hal&#34; Wang </title>
+        <title> Hybrid Runner </title>
         <link rel="shortcut icon" href="/img/favicon.png" />
 
         <style>
@@ -75,205 +74,16 @@
 
 
         <main class="container">
-        
-        
-            <article class="frontpage">
-                <h1>
-                    <a href="http://h12.io/note/go-build-failure/">Go 1.4.1 Build Failure and Solution</a>
-                    <span class="line"></span>
-                </h1>
-                <span class="time">29 January 2015</span>
-                <div class="article-body hyphenate">
-                    <p>Today I tried to build Go 1.4.1 from source but it failed with this error:</p>
-
-<pre><code>    go/src/liblink/anames9.c:6:29: fatal error: ../cmd/9l/9.out.h: No such file or directory
-</code></pre>
-
-<p>At first I thought the building routine might have be changed so I opened and read
-<a href="http://golang.org/doc/install/source"><em>Installing Go from Source</em></a> again, carefully,
-and found nothing special.</p>
-
-<p>Then I searched for the error source and it turned out that I should deleted
-<code>anames*.c</code>, manually. There is no document and no automatic cleaning script, and
-you would have to figure it out yourself if no one ever mentioned it (<a href="https://groups.google.com/d/msg/golang-nuts/wQoQqXOnOTo/QbubO2UebpUJ">source</a>).</p>
-
-                </div>
-            </article>
-        
-            <article class="frontpage">
-                <h1>
-                    <a href="http://h12.io/note/gae-custom-domain/">How to configure a custom domain name in GAE?</a>
-                    <span class="line"></span>
-                </h1>
-                <span class="time">19 January 2015</span>
-                <div class="article-body hyphenate">
-                    <p>Steps:</p>
-
-<ol>
-<li>Visit <a href="https://console.developers.google.com">Developers Console</a>.</li>
-<li>In your project: Compute -&gt; App Engine -&gt; Settings.</li>
-<li>On the tab labelled CUSTOM DOMAINS, you can verify your domain and assign it
-and/or its subdomains to your GAE project.</li>
-<li>Add the DNS settings provided by Google into the DNS server of your domain
-provider.</li>
-</ol>
-
-<p>Notes:</p>
-
-<ol>
-<li>Only HTTP is supported, HTTPS is not.</li>
-<li>It will not work if you only modify the DNS record without actually assigning
-the custom domain in the Developer Console.</li>
-</ol>
-
-                </div>
-            </article>
-        
-            <article class="frontpage">
-                <h1>
-                    <a href="http://h12.io/note/install-ca-android/">How to install a self-signed CA Certificate to Android 4.4</a>
-                    <span class="line"></span>
-                </h1>
-                <span class="time">17 January 2015</span>
-                <div class="article-body hyphenate">
-                    <p>See this blog <a href="https://samhobbs.co.uk/2013/12/remove-network-may-be-monitored-by-an-unknown-third-party-in-android-4-4-kitkat"><em>Remove &ldquo;Network May Be Monitored by an Unknown Third Party&rdquo; in Android 4.4 KitKat</em></a>.</p>
-
-                </div>
-            </article>
-        
-            <article class="frontpage">
-                <h1>
-                    <a href="http://h12.io/note/new-domain-h12/">A Shorter Domain Name</a>
-                    <span class="line"></span>
-                </h1>
-                <span class="time">16 December 2014</span>
-                <div class="article-body hyphenate">
-                    <p>This year, I decided not to renewal the previous domain name (hailiang.ws) last
-year, but to register a shorter one. There are two reasons:</p>
-
-<ol>
-<li>Both the site URL and the email address will be cleaner.</li>
-<li>A more friendly Go import path will be possible for my repositories on Github.</li>
-</ol>
-
-<p>After comparing various choices on major domain providers, I chose <code>h12.io</code> as
-the new domain. It is the shortest but still meaningful domain that I can afford.
-<code>H</code> is the initial letter of my given name, <code>12</code> is simply the number of letters
-of my full name, and <code>.me</code> is a top level domain quite suitable for a personal
-website.</p>
-
-                </div>
-            </article>
-        
-            <article class="frontpage">
-                <h1>
-                    <a href="http://h12.io/project/gombi/">Gombi: Creating Your Own Parser is Easier than Regular Expressions</a>
-                    <span class="line"></span>
-                </h1>
-                <span class="time">7 August 2014</span>
-                <div class="article-body hyphenate">
-                    
-
-<p>Gombi is a combinator-style scanner &amp; parser library written in Go. It is
-practical, reasonably fast and extremely easy to use.</p>
-
-<h2 id="quick-start">Quick start</h2>
-
-<pre><code class="language-bash">go get -u h12.io/gombi
-</code></pre>
-
-<h2 id="design">Design</h2>
-
-<p><a href="http://en.wikipedia.org/wiki/Parser_combinator">Combinator parsers</a> are
-straightforward to construct, modular and easily maintainable, compared to
-parser generators like Lex/Yacc.</p>
-
-<ul>
-<li>Internal DSL
-
-<ul>
-<li>no additional code generation and compilation.</li>
-</ul></li>
-<li>Composable
-
-<ul>
-<li>a subset of the syntax tree is also a parser.</li>
-<li>a language can be easily embedded into another one.</li>
-</ul></li>
-</ul>
-
-<p>Gombi is inspired by but not limited to parser combinators. Unlike a combinator
-parser, Gombi neither limits its API to functional only, nor limits its
-implementation to functional combinators. Go is not a pure functional language
-as Haskell, so cloning a combinator parser like Parsec to Go will only lead to
-an implementaion much worse than Parsec. Instead, Gombi is free to choose any Go
-language structures that are suitable for a modular and convenient API, and any
-algorithms that can be efficiently implemented in Go.</p>
-
-<p><em>Under development</em></p>
-
-                </div>
-            </article>
-        
-            <article class="frontpage">
-                <h1>
-                    <a href="http://h12.io/note/parser-combinator-links/">Learning Resources on Parser Combinator</a>
-                    <span class="line"></span>
-                </h1>
-                <span class="time">4 August 2014</span>
-                <div class="article-body hyphenate">
-                    <ul>
-<li><a href="http://eprints.nottingham.ac.uk/237/"><em>Monadic Parser Combinators</em></a></li>
-<li><a href="http://legacy.cs.uu.nl/daan/pubs.html#parsec"><em>Parsec: Direct Style Monadic Parser Combinators for the Real World</em></a></li>
-<li><a href="http://www.cs.tufts.edu/~nr/cs257/archive/doaitse-swierstra/combinator-parsing-tutorial.pdf"><em>Combinator Parsing: A Short Tutorial</em></a></li>
-</ul>
-
-                </div>
-            </article>
-        
-            <article class="frontpage">
-                <h1>
-                    <a href="http://h12.io/note/hyphen-res/">Resources on Offline Hyphenation</a>
-                    <span class="line"></span>
-                </h1>
-                <span class="time">30 July 2014</span>
-                <div class="article-body hyphenate">
-                    <p><a href="http://caniuse.com/css-hyphens">CSS hyphenation</a> is supported by latest version
-of Firefox, Safari &amp; IE. However, Chrome does not support it. Though
-<a href="https://code.google.com/p/hyphenator/">Hyphenator.js</a> can solve this problem,
-it runs in the browser and affects the rendering speed of above-the-fold content.
-So there is only one option left: soft hyphen (<code>U+00AD</code>, <code>&amp;shy;</code>).</p>
-
-<p>Here is a list of resources that leads to its implementation:</p>
-
-<ul>
-<li>An <a href="https://code.google.com/p/hyphenator/wiki/en_CSS3Hyphenation">article</a> about CSS3 hyphenation by Hyphenator.js</li>
-<li><a href="http://hunspell.sourceforge.net/">Hunspell</a>: the spell checker &amp; hyphenator
-used by LibreOffice</li>
-<li><a href="http://extensions.libreoffice.org/extension-center/american-british-canadian-spelling-hyphen-thesaurus-dictionaries">English Dictionary</a> of LibreOffice</li>
-<li><a href="https://github.com/Kozea/Pyphen">Pyphen</a>: A Python hyphenator using Hunspell
-dictionary file</li>
-<li>A test <a href="http://clagnut.com/sandbox/softhyphen/">page</a> for soft hyphen</li>
-</ul>
-
-                </div>
-            </article>
-        
-        <nav class="pagination">
-            <span>- 8 -</span>
-            <ul>
-                <li>
+        <h1 class="list">Hybrid Runner</h1>
             
-                    <a href="/page/7">« Prev</a>
+            <article class="list">
+                <h2>
+                    <a href="http://h12.io/article/go-pattern-hybrid-handler/">Go Pattern: Hybrid Handler</a><br>
+                </h2>
+                <span class="time">22 April 2023</span>
+                <span class="tags"></span>
+            </article>
             
-                </li>
-                <li>
-            
-                    <a href="/page/9">Next »</a>
-            
-                </li>
-            </ul>
-        </nav>
         </main>
         <footer id="site-footer">
             <hr>

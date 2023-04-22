@@ -79,6 +79,179 @@
         
             <article class="frontpage">
                 <h1>
+                    <a href="http://h12.io/article/go-pattern-hybrid-handler/">Go Pattern: Hybrid Handler</a>
+                    <span class="line"></span>
+                </h1>
+                <span class="time">22 April 2023</span>
+                <div class="article-body hyphenate">
+                    
+
+<h2 id="overview">Overview</h2>
+
+<p>In today&rsquo;s high-performance and concurrent computing environments, effectively processing a stream of messages using a mix of purely computational functions and remote procedure calls has become a significant challenge. The Go programming language is designed to handle concurrency well, but when it comes to managing a hybrid load, even Go can struggle to achieve optimal CPU utilization. In this article, we will discuss the Hybrid Handler pattern, an efficient and unified approach to address this challenge.</p>
+
+<h2 id="the-problem">The problem</h2>
+
+<p>Assuming we have a stream of incoming messages and we need to process them with a list of handlers, aggregate the results and send the output downstream.</p>
+
+<p>If all the handlers are only purely local computations, then an implementation like below already meets the basic functional and performance requirements.</p>
+
+<pre><code class="language-go">type Processor struct {
+    handlers SyncHandler
+}
+
+type SyncHandler interface {
+    Handle(ctx context.Context, message Message) (Result, error)
+}
+
+func (p *Processor) ProcessMessage(ctx context.Context, message Message) error {
+    output := NewOutput()
+    for _, handler := range p.handlers {
+        result, err := handler.Handle(ctx, message)
+        if err != nil {
+            return err
+        }
+        output.Add(result)
+    }
+    return p.SendOutput(output)
+}
+</code></pre>
+
+<p>e.g. With an 8-core CPU, we can simply initialise 8 <code>Processor</code> objects and run them in 8 goroutines, which can make full use of the hardware easily. (error handling is omitted here)</p>
+
+<pre><code class="language-go">for i := 0; i &lt; numCPU; i++ {
+    go func() {
+        processor := NewProcessor()
+        for message := range inputChan {
+            processor.ProcessMessage(ctx, message)
+        }
+    }()
+}
+</code></pre>
+
+<p>However, if the processing logic involves a mix of local computations and remote procedure calls, it becomes more difficult to process a high volume of messages in a timely and efficient manner. If the processor still handles messages one by one, it must wait for all handlers to complete before outputting the corresponding result. However, The added I/O roundtrip delay for each message will be so high that the CPU cores stay idle most of the time.</p>
+
+<p>To mitigate this issue, one could attempt to saturate the CPU with brute force, parallelizing the processors with even more goroutines, as in most microservices written in Go, where one goroutine is used to handle one incoming request. While this might work well enough for an IO-bound application or when the traffic is low, it can penalize the performance significantly when all or most of the handlers are pure computations due to the relative costs of channel message passing and goroutine scheduling compared to the computations themselves.</p>
+
+<p>Another feasible but more ad-hoc solution is just to separate purely computational handlers from remote handlers into two groups, and execute them differently, which could potentially remove the penalty on pure computations. However, how to wait for all the results is still a problem and two separate groups add more complexity to both the start and finish of those functions.</p>
+
+<p>What we need here is an abstraction that unifies local and remote handlers without the overhead of goroutines and channels. This would allow purely computational handlers to achieve bare metal speed while remote handlers don&rsquo;t block unnecessarily.</p>
+
+<h2 id="the-hybrid-handler-pattern">The Hybrid Handler pattern</h2>
+
+<pre><code class="language-go">type Handler interface {
+    Handle(
+        ctx          context.Context,
+        message      Message,
+        returnResult ReturnResultFunc,
+    ) error
+
+type ReturnResultFunc func(ctx context.Context, result Result) error
+}
+
+func (s Server) HandleMessage(ctx context.Context, message Message) error {
+    for _, handler := range s.Handlers {
+        handler.Handle(ctx, message, )
+    }
+}
+</code></pre>
+
+<p>The key to addressing these challenges lies in an interface method that provides a callback parameter <code>returnResult</code> for returning the result, which allows the implementation of the interface to be either a synchronous pure computation or an asynchronous IO operation without introducing much overhead.</p>
+
+<p>Is it just a function with a callback?</p>
+
+<p>Yes, at first glance, it might look not only trivial but also unidiomatic in Go, but looking closely, we will find that it is a simple and natural solution to the problem at hand and makes a lot of sense.</p>
+
+<h2 id="the-new-processor">The new processor</h2>
+
+<p>With the <code>Handler</code> interface above, the <code>Processor</code> can be re-implemented as below.</p>
+
+<p>On arrival of each result, the output can decrement a counter atomically to determine if it&rsquo;s ready to be sent downstream. This operation adds much less overhead than the brute force way of adding many goroutines.</p>
+
+<pre><code class="language-go">type Processor struct {
+    handlers Handler
+}
+
+type Output struct {
+    handlerCount int64
+    processor *Processor
+}
+
+func (p *Processor) NewOutput(handlerCount int) *Output {
+    return &amp;Output{
+        HandlerCount: handlerCount,
+        processor:    p,
+    }
+}
+
+func (p *Processor) ProcessMessage(ctx context.Context, message Message) error {
+    output := p.NewOutput(len(p.handlers))
+    for _, handler := range p.handlers {
+        result, err := handler.Handle(ctx, message, output.Add)
+        if err != nil {
+            return err
+        }
+    }
+    return nil
+}
+
+func (o *Output) Add(ctx context.Context, result Result) error
+    // add the result to the output
+    // ......
+
+    // check if it's the result of the the last handler
+	if atomic.AddInt64(&amp;h.row.pendingCategories, -1) &gt; 0 {
+		return nil // not the last one
+	}
+
+    // is the last one
+    return p.processor.SendOutput(o)
+}
+
+</code></pre>
+
+<h2 id="synchronous-handlers">Synchronous handlers</h2>
+
+<p>It is almost trivial to write an adapter from any synchronous handler to the <code>Handler</code> interface above, and the overhead is just one extra interface method call.</p>
+
+<pre><code class="language-go">type SyncHandler interface {
+    Handle(ctx context.Context, message Message) (Result, error)
+}
+
+type SyncHandlerAdapter struct {
+    syncHandler SyncHandler
+}
+
+func (a SyncHandlerAdapter) Handle(
+    ctx          context.Context,
+    message      Message,
+    returnResult ReturnResultFunc,
+) error {
+    result, err := a.syncHandler.Handle(ctx, message)
+    if err != nil {
+        return err
+    }
+    return returnResult(ctx, result)
+}
+</code></pre>
+
+<h2 id="asynchronous-handlers">Asynchronous handlers</h2>
+
+<p>There are various techniques to wrap a remote procedure call in an asynchronous handler efficiently, e.g. a batch or a streaming API. I do not intend to cover the details here, but regardless of the implementations, the <code>Handler</code> interface allows the Handle method to return immediately without blocking the processing of the next message while a background goroutine can send the result back with the <code>returnResult</code> callback function when the result is ready later.</p>
+
+<p>A hybrid handler is also possible, returning the result immediately for some inputs while doing it asynchronously for others.</p>
+
+<p>We might need to pay more attention to the error handling in the asynchronous handlers. The handler must ensure a result is returned so that the output can decrement the count correctly. So one possible way is to embed the error in the result to be passed back.</p>
+
+<h2 id="conclusion">Conclusion</h2>
+
+<p>In conclusion, the Hybrid Handler pattern allows synchronous and asynchronous handlers to coexist without incurring significant overhead, resulting in improved CPU utilization and reduced complexity. By implementing the Hybrid Handler pattern, developers can optimize performance in high-performance computing systems while maintaining the flexibility to handle various types of workloads.</p>
+
+                </div>
+            </article>
+        
+            <article class="frontpage">
+                <h1>
                     <a href="http://h12.io/note/less-is-more-dag/">Less Is More: Directed Acyclic Graph</a>
                     <span class="line"></span>
                 </h1>
@@ -654,64 +827,6 @@ func (mu *CtxMutex) Locked() bool {
 <h2 id="conclusion">Conclusion</h2>
 
 <p>Whenever we want to process and send multiple items, consider this Buffered Writer Pattern and its variants and see if it can better suit our needs.</p>
-
-                </div>
-            </article>
-        
-            <article class="frontpage">
-                <h1>
-                    <a href="http://h12.io/article/value-vs-pointer-receivers/">Value vs Pointer Receivers</a>
-                    <span class="line"></span>
-                </h1>
-                <span class="time">19 June 2020</span>
-                <div class="article-body hyphenate">
-                    
-
-<p>Should I use value receivers or pointer receivers?</p>
-
-<p>Value receivers have some benefits include immutability, concurrent safety and clean logic (not always, often true). But to what extend can I use value receivers without an issue or performance penalty?</p>
-
-<p>In the <a href="https://golang.org/doc/faq#methods_on_values_or_pointers">Go FAQ</a>, there
-are 3 rules:</p>
-
-<ol>
-<li>most important, does the method need to modify the receiver? If it does, the receiver must be a pointer</li>
-<li>if the receiver is large, a big struct for instance, it will be much cheaper to use a pointer receiver</li>
-<li>if some of the methods of the type must have pointer receivers, the rest should too, so the method set is consistent regardless of how the type is used</li>
-</ol>
-
-<p>Let&rsquo;s look at rule 1. In many cases, an object needs to be modified by a method after its initialization, but it doesn’t mean the modification has to be done in place, an alternative and often a better way is to get a modified copy of the object, which is usually called a <a href="https://en.wikipedia.org/wiki/Fluent_interface">Fluent Interface</a>. Basically it means a method with a value receiver and a return value of the same type. It’s just pure (no side effect) functional programming style under another name.</p>
-
-<p>Then rule 2 tells us to choose based on the struct size, but how big is a big struct? We know that <a href="https://golang.org/pkg/time/#Time"><code>time.Time</code></a> is 3-words large with value receivers, but how about 4-words, 5-words or bigger structs? To answer this question, I did some <a href="https://github.com/h12w/go-benchmark/blob/master/receiver_all_bench.bash">benchmarks</a>.</p>
-
-<p>The benchmarks are based on the idea that a type with value receivers would need to implement fluent interface, so it should compare the performance between two fluent methods with value and pointer receivers:</p>
-
-<pre><code class="language-go">func (s S) ByValue() S {
-    // ...
-	return s
-}
-
-func (s *S) ByPointer() *S {
-    // ...
-	return s
-}
-</code></pre>
-
-<p>It turned out inlining is critical to the overhead of value copying.</p>
-
-<p>When inlining is disabled (<code>gcflags=-l</code>), for a struct of 1 word, value receiver has the same performance as the pointer receiver, but for structs larger than 2 words, value receivers begin to show more and more overhead.</p>
-
-<p><img src="/img/no_inline.png" alt="Without Inline" /></p>
-
-<p>However, when inlining is enabled (the default option), value receivers have almost the same performance as pointer receivers for struct size from 1 up to 9 words! Overhead of value copying starts to rise for structs of 10 words or more.</p>
-
-<p><img src="/img/with_inline.png" alt="With Inline" /></p>
-
-<p>These results were tested on a Macbook Pro with <code>go1.14.3</code>.</p>
-
-<h3 id="conclusion">Conclusion</h3>
-
-<p>From the benchmark results, value receivers should be preferred if the methods are inlined and the struct size is equal to or smaller than 9 words (<code>1 word == 64 bit</code>), but this might not be the end of the story, the more complex a method is, the less likely it is inlined, but also the less proportion the copying overhead to the whole method logic. The overhead of copying from a value receiver might not be significant to the overall running time, so at the end of the day, the choice depends on the frequency of the method calls, the business logic and the performance requirements. When in doubt, benchmark it!</p>
 
                 </div>
             </article>

@@ -100,6 +100,15 @@ This Site Tools  CSS: Sass, Compass &amp;amp; Susy Font: Google Fonts Icon: Font
     </item>
     
     <item>
+      <title>Go Pattern: Hybrid Handler</title>
+      <link>http://h12.io/article/go-pattern-hybrid-handler/</link>
+      <pubDate>Sat, 22 Apr 2023 17:50:04 +0100</pubDate>
+      
+      <guid>http://h12.io/article/go-pattern-hybrid-handler/</guid>
+      <description>Overview In today&amp;rsquo;s high-performance and concurrent computing environments, effectively processing a stream of messages using a mix of purely computational functions and remote procedure calls has become a significant challenge. The Go programming language is designed to handle concurrency well, but when it comes to managing a hybrid load, even Go can struggle to achieve optimal CPU utilization. In this article, we will discuss the Hybrid Handler pattern, an efficient and unified approach to address this challenge.</description>
+    </item>
+    
+    <item>
       <title>Less Is More: Directed Acyclic Graph</title>
       <link>http://h12.io/note/less-is-more-dag/</link>
       <pubDate>Thu, 12 May 2022 21:24:39 +0100</pubDate>

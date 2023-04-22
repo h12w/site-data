@@ -79,6 +79,64 @@
         
             <article class="frontpage">
                 <h1>
+                    <a href="http://h12.io/article/value-vs-pointer-receivers/">Value vs Pointer Receivers</a>
+                    <span class="line"></span>
+                </h1>
+                <span class="time">19 June 2020</span>
+                <div class="article-body hyphenate">
+                    
+
+<p>Should I use value receivers or pointer receivers?</p>
+
+<p>Value receivers have some benefits include immutability, concurrent safety and clean logic (not always, often true). But to what extend can I use value receivers without an issue or performance penalty?</p>
+
+<p>In the <a href="https://golang.org/doc/faq#methods_on_values_or_pointers">Go FAQ</a>, there
+are 3 rules:</p>
+
+<ol>
+<li>most important, does the method need to modify the receiver? If it does, the receiver must be a pointer</li>
+<li>if the receiver is large, a big struct for instance, it will be much cheaper to use a pointer receiver</li>
+<li>if some of the methods of the type must have pointer receivers, the rest should too, so the method set is consistent regardless of how the type is used</li>
+</ol>
+
+<p>Let&rsquo;s look at rule 1. In many cases, an object needs to be modified by a method after its initialization, but it doesn’t mean the modification has to be done in place, an alternative and often a better way is to get a modified copy of the object, which is usually called a <a href="https://en.wikipedia.org/wiki/Fluent_interface">Fluent Interface</a>. Basically it means a method with a value receiver and a return value of the same type. It’s just pure (no side effect) functional programming style under another name.</p>
+
+<p>Then rule 2 tells us to choose based on the struct size, but how big is a big struct? We know that <a href="https://golang.org/pkg/time/#Time"><code>time.Time</code></a> is 3-words large with value receivers, but how about 4-words, 5-words or bigger structs? To answer this question, I did some <a href="https://github.com/h12w/go-benchmark/blob/master/receiver_all_bench.bash">benchmarks</a>.</p>
+
+<p>The benchmarks are based on the idea that a type with value receivers would need to implement fluent interface, so it should compare the performance between two fluent methods with value and pointer receivers:</p>
+
+<pre><code class="language-go">func (s S) ByValue() S {
+    // ...
+	return s
+}
+
+func (s *S) ByPointer() *S {
+    // ...
+	return s
+}
+</code></pre>
+
+<p>It turned out inlining is critical to the overhead of value copying.</p>
+
+<p>When inlining is disabled (<code>gcflags=-l</code>), for a struct of 1 word, value receiver has the same performance as the pointer receiver, but for structs larger than 2 words, value receivers begin to show more and more overhead.</p>
+
+<p><img src="/img/no_inline.png" alt="Without Inline" /></p>
+
+<p>However, when inlining is enabled (the default option), value receivers have almost the same performance as pointer receivers for struct size from 1 up to 9 words! Overhead of value copying starts to rise for structs of 10 words or more.</p>
+
+<p><img src="/img/with_inline.png" alt="With Inline" /></p>
+
+<p>These results were tested on a Macbook Pro with <code>go1.14.3</code>.</p>
+
+<h3 id="conclusion">Conclusion</h3>
+
+<p>From the benchmark results, value receivers should be preferred if the methods are inlined and the struct size is equal to or smaller than 9 words (<code>1 word == 64 bit</code>), but this might not be the end of the story, the more complex a method is, the less likely it is inlined, but also the less proportion the copying overhead to the whole method logic. The overhead of copying from a value receiver might not be significant to the overall running time, so at the end of the day, the choice depends on the frequency of the method calls, the business logic and the performance requirements. When in doubt, benchmark it!</p>
+
+                </div>
+            </article>
+        
+            <article class="frontpage">
+                <h1>
                     <a href="http://h12.io/note/go-vs-python/">Go vs Python</a>
                     <span class="line"></span>
                 </h1>
@@ -390,25 +448,6 @@ cancelled when the task is cancelled).</p>
 <h3 id="attach-to-a-session-with-iterm2-integration">Attach to a session with iTerm2 integration</h3>
 
 <pre><code class="language-bash">tmux -CC attach -t [session-name]
-</code></pre>
-
-                </div>
-            </article>
-        
-            <article class="frontpage">
-                <h1>
-                    <a href="http://h12.io/note/how-to-diff-json-files/">How to Diff two JSON Files</a>
-                    <span class="line"></span>
-                </h1>
-                <span class="time">10 April 2018</span>
-                <div class="article-body hyphenate">
-                    <p>Just sort the keys first!</p>
-
-<p>Example:</p>
-
-<pre><code class="language-bash">cat a.json | jq --sort-keys . &gt; aa.json
-cat b.json | jq --sort-keys . &gt; bb.json
-vimdiff aa.json bb.json
 </code></pre>
 
                 </div>

@@ -79,6 +79,37 @@
         
             <article class="frontpage">
                 <h1>
+                    <a href="http://h12.io/note/ebook-tools/">Ebook Manipulation Tools</a>
+                    <span class="line"></span>
+                </h1>
+                <span class="time">4 June 2015</span>
+                <div class="article-body hyphenate">
+                    <ul>
+<li>Ebook manager: <a href="http://calibre-ebook.com/">Calibre</a></li>
+<li>Kindle PDF optimizer: <a href="http://www.willus.com/k2pdfopt/">k2pdfopt</a></li>
+<li>PDF Border Cropper <a href="http://sourceforge.net/projects/briss/">Briss</a></li>
+<li>CHM File Extractor <a href="https://github.com/dottedmag/archmage">archmage</a></li>
+
+<li><p>PDF editing <a href="http://xournal.sourceforge.net">Xournal</a></p></li>
+
+<li><p>convert images to PDF</p>
+
+<pre><code class="language-bash">	sudo apt-get install imagemagick
+	convert *.jpg pictures.pdf
+</code></pre></li>
+
+<li><p>convert between different formats:</p>
+
+<pre><code class="language-bash">    sudo apt-get install calibre
+    ebook-convert xxx.mobi xxx.txt --unsmarten-punctuation
+</code></pre></li>
+</ul>
+
+                </div>
+            </article>
+        
+            <article class="frontpage">
+                <h1>
                     <a href="http://h12.io/project/schemata/">Schemata: database scheme extractor &amp; code generator in Go</a>
                     <span class="line"></span>
                 </h1>
@@ -666,29 +697,6 @@ scp ignore.list root@192.168.2.1:/etc/shadowsocks/ignore.list
 <h2 id="android-client">Android Client</h2>
 
 <p><a href="https://github.com/shadowsocks/shadowsocks-android/releases">shadowsocks-android</a>.</p>
-
-                </div>
-            </article>
-        
-            <article class="frontpage">
-                <h1>
-                    <a href="http://h12.io/note/go-build-failure/">Go 1.4.1 Build Failure and Solution</a>
-                    <span class="line"></span>
-                </h1>
-                <span class="time">29 January 2015</span>
-                <div class="article-body hyphenate">
-                    <p>Today I tried to build Go 1.4.1 from source but it failed with this error:</p>
-
-<pre><code>    go/src/liblink/anames9.c:6:29: fatal error: ../cmd/9l/9.out.h: No such file or directory
-</code></pre>
-
-<p>At first I thought the building routine might have be changed so I opened and read
-<a href="http://golang.org/doc/install/source"><em>Installing Go from Source</em></a> again, carefully,
-and found nothing special.</p>
-
-<p>Then I searched for the error source and it turned out that I should deleted
-<code>anames*.c</code>, manually. There is no document and no automatic cleaning script, and
-you would have to figure it out yourself if no one ever mentioned it (<a href="https://groups.google.com/d/msg/golang-nuts/wQoQqXOnOTo/QbubO2UebpUJ">source</a>).</p>
 
                 </div>
             </article>

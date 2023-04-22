@@ -79,6 +79,105 @@
         
             <article class="frontpage">
                 <h1>
+                    <a href="http://h12.io/project/aliyun-oss-go-sdk/">Aliyun OSS Go SDK</a>
+                    <span class="line"></span>
+                </h1>
+                <span class="time">22 October 2015</span>
+                <div class="article-body hyphenate">
+                    
+
+<p><a href="https://drone.io/github.com/h12w/aliyun-oss-go-sdk/latest"><img src="https://drone.io/github.com/h12w/aliyun-oss-go-sdk/status.png" alt="Build
+Status" /></a>
+<a href="https://coveralls.io/github/h12w/aliyun-oss-go-sdk?branch=master"><img src="https://coveralls.io/repos/h12w/aliyun-oss-go-sdk/badge.svg?branch=master&amp;service=github" alt="Coverage
+Status" /></a>
+<a href="https://godoc.org/github.com/aliyun/aliyun-oss-go-sdk/oss"><img src="https://godoc.org/github.com/aliyun/aliyun-oss-go-sdk/oss?status.svg" alt="GoDoc" /></a></p>
+
+<p>Aliyun OSS (Object Storage Service) Go SDK is a client SDK to access Aliyun OSS
+API, implemented in the Go programming language.</p>
+
+<h2 id="installation">Installation</h2>
+
+<pre><code class="language-bash">go get -u github.com/aliyun/aliyun-oss-go-sdk/oss
+go test -v -cover github.com/aliyun/aliyun-oss-go-sdk/oss
+</code></pre>
+
+<h2 id="highlights">Highlights</h2>
+
+<ul>
+<li>Complete set of Aliyun OSS API</li>
+<li>Thouroughly tested
+
+<ul>
+<li>100% test coverage</li>
+<li>intuitive table driven tests</li>
+<li>full test suite completes within 2 seconds</li>
+</ul></li>
+<li>Lint clean
+
+<ul>
+<li>golint</li>
+<li>go fmt</li>
+<li>goimports</li>
+<li>go vet</li>
+<li>race detector</li>
+</ul></li>
+<li>Idiomatic &amp; elegant
+
+<ul>
+<li>response is returned as a parsed object</li>
+<li>error is returned as a Go error</li>
+<li>named options for setting headers &amp; parameters</li>
+</ul></li>
+<li>Great extensibility
+
+<ul>
+<li>clean and orthogonal implementation</li>
+<li>users can easily extend the SDK when a new API method is supported</li>
+</ul></li>
+<li>No third party dependencies</li>
+</ul>
+
+<h2 id="documentation">Documentation</h2>
+
+<ul>
+<li><a href="doc/overview.md">Overview</a></li>
+<li><a href="doc/api-object.md">API Object</a></li>
+<li><a href="doc/bucket.md">Bucket</a></li>
+<li><a href="doc/object.md">Object</a></li>
+<li><a href="doc/options.md">Optional Headers and Parameters</a></li>
+<li><a href="doc/upload.md">Multipart Upload</a></li>
+<li><a href="doc/cors.md">Cross-Origin Resource Sharing (CORS)</a></li>
+<li><a href="doc/lifecycle.md">Object Lifecycle Management</a></li>
+<li><a href="doc/extend.md">Extending the SDK</a></li>
+</ul>
+
+<h2 id="differences-with-python-sdk">Differences with Python SDK</h2>
+
+<ul>
+<li>HTTP header User-Agent, e.g. aliyun-sdk-go/0.1.1 (Linux/3.16.0-51-generic/x86_64;go1.5.1)</li>
+<li>Go HTTP client does not support 100-Continue (will be supported after Go 1.6, see <a href="https://github.com/golang/go/issues/3665">https://github.com/golang/go/issues/3665</a>)</li>
+<li>HTTP header keys are automatically converted into canonical format, e.g.
+x-oss-acl becomes X-Oss-Acl</li>
+<li>Go GET request does not have redundant &ldquo;Content-Length: 0&rdquo; header</li>
+<li>Parameters will be omitted if the argument is not set</li>
+<li>Go always sends URL parameters and headers in canonical order</li>
+</ul>
+
+<h2 id="license">License</h2>
+
+<p>licensed under the <a href="https://www.apache.org/licenses/LICENSE-2.0.html">Apache License 2.0</a></p>
+
+<h2 id="references">References</h2>
+
+<ul>
+<li><a href="https://docs.aliyun.com/#/pub/oss">OSS Document (Chinese)</a></li>
+</ul>
+
+                </div>
+            </article>
+        
+            <article class="frontpage">
+                <h1>
                     <a href="http://h12.io/note/remove-all-exited-docker-containers/">How to Remove All Exited Containers &amp; Dangling Images for Docker?</a>
                     <span class="line"></span>
                 </h1>
@@ -460,37 +559,6 @@ if v.Kind() == reflect.String {
 </code></pre>
 
 <p>Just use slice literal instead!</p>
-
-                </div>
-            </article>
-        
-            <article class="frontpage">
-                <h1>
-                    <a href="http://h12.io/note/ebook-tools/">Ebook Manipulation Tools</a>
-                    <span class="line"></span>
-                </h1>
-                <span class="time">4 June 2015</span>
-                <div class="article-body hyphenate">
-                    <ul>
-<li>Ebook manager: <a href="http://calibre-ebook.com/">Calibre</a></li>
-<li>Kindle PDF optimizer: <a href="http://www.willus.com/k2pdfopt/">k2pdfopt</a></li>
-<li>PDF Border Cropper <a href="http://sourceforge.net/projects/briss/">Briss</a></li>
-<li>CHM File Extractor <a href="https://github.com/dottedmag/archmage">archmage</a></li>
-
-<li><p>PDF editing <a href="http://xournal.sourceforge.net">Xournal</a></p></li>
-
-<li><p>convert images to PDF</p>
-
-<pre><code class="language-bash">	sudo apt-get install imagemagick
-	convert *.jpg pictures.pdf
-</code></pre></li>
-
-<li><p>convert between different formats:</p>
-
-<pre><code class="language-bash">    sudo apt-get install calibre
-    ebook-convert xxx.mobi xxx.txt --unsmarten-punctuation
-</code></pre></li>
-</ul>
 
                 </div>
             </article>

@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Runner on Hai-Liang &#34;Hal&#34; Wang</title>
-    <link>http://h12.io/tags/runner/</link>
-    <description>Recent content in Runner on Hai-Liang &#34;Hal&#34; Wang</description>
+    <title>Hybrid Runner on Hai-Liang &#34;Hal&#34; Wang</title>
+    <link>http://h12.io/tags/hybrid-runner/</link>
+    <description>Recent content in Hybrid Runner on Hai-Liang &#34;Hal&#34; Wang</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
     <copyright>Copyright (c) 2012-2018, Hǎi-Liàng &#34;Hal&#34; Wáng; all rights reserved.</copyright>
     <lastBuildDate>Sat, 22 Apr 2023 17:50:04 +0100</lastBuildDate>
     
-	<atom:link href="http://h12.io/tags/runner/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="http://h12.io/tags/hybrid-runner/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
@@ -19,17 +19,6 @@
       
       <guid>http://h12.io/article/go-pattern-hybrid-handler/</guid>
       <description>Overview In today&amp;rsquo;s high-performance and concurrent computing environments, effectively processing a stream of messages using a mix of purely computational functions and remote procedure calls has become a significant challenge. The Go programming language is designed to handle concurrency well, but when it comes to managing a hybrid load, even Go can struggle to achieve optimal CPU utilization. In this article, we will discuss the Hybrid Handler pattern, an efficient and unified approach to address this challenge.</description>
-    </item>
-    
-    <item>
-      <title>Go Pattern: Runner</title>
-      <link>http://h12.io/article/go-pattern-runner/</link>
-      <pubDate>Tue, 22 Feb 2022 14:46:35 +0000</pubDate>
-      
-      <guid>http://h12.io/article/go-pattern-runner/</guid>
-      <description>Again and again, a concurrent pattern emerges from the need to control goroutine lifecycles and handle their errors, and I call it the &amp;ldquo;Runner Pattern&amp;rdquo;.
-The runner interface and its contract The pattern is as simple as a single-method interface:
-// Runner defines the Run method to be executed within a goroutine type Runner interface { Run(ctx context.Context) error }  The contract of the interface covers two aspects.</description>
     </item>
     
   </channel>
