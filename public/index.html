@@ -147,13 +147,6 @@ func (p *Processor) ProcessMessage(ctx context.Context, message Message) error {
     ) error
 
 type ReturnResultFunc func(ctx context.Context, result Result) error
-}
-
-func (s Server) HandleMessage(ctx context.Context, message Message) error {
-    for _, handler := range s.Handlers {
-        handler.Handle(ctx, message, )
-    }
-}
 </code></pre>
 
 <p>The key to addressing these challenges lies in an interface method that provides a callback parameter <code>returnResult</code> for returning the result, which allows the implementation of the interface to be either a synchronous pure computation or an asynchronous IO operation without introducing much overhead.</p>
