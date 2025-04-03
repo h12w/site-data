@@ -1,36 +1,62 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
-    <title>Mongodb on Hai-Liang &#34;Hal&#34; Wang</title>
+    <title>MongoDB on @h12</title>
     <link>http://h12.io/tags/mongodb/</link>
-    <description>Recent content in Mongodb on Hai-Liang &#34;Hal&#34; Wang</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en-US</language>
-    <copyright>Copyright (c) 2012-2018, Hǎi-Liàng &#34;Hal&#34; Wáng; all rights reserved.</copyright>
+    <description>Recent content in MongoDB on @h12</description>
+    <generator>Hugo -- 0.145.0</generator>
+    <language>en-us</language>
+    <copyright>2012-2025, Hǎi-Liàng &amp;ldquo;Hal&amp;rdquo; Wáng.</copyright>
     <lastBuildDate>Fri, 02 Sep 2016 15:40:41 +0800</lastBuildDate>
-    
-	<atom:link href="http://h12.io/tags/mongodb/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <atom:link href="http://h12.io/tags/mongodb/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>One-liner to check MongoDB Connections</title>
       <link>http://h12.io/note/mongodb-conn/</link>
       <pubDate>Fri, 02 Sep 2016 15:40:41 +0800</pubDate>
-      
       <guid>http://h12.io/note/mongodb-conn/</guid>
-      <description>mongo --eval &amp;quot;JSON.stringify(db.currentOp(true))&amp;quot; | \ tail -n +3 | \ jq -r .inprog[].client | \ sed &#39;s/\(.*\):.*/\1/&#39; \ | sort | uniq -c | sort -nr   dump connection information in standard JSON format remove MongoDB header extract IP:port as a list trim port sort IPs by freqencies  </description>
+      <description>&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;mongo --eval &amp;#34;JSON.stringify(db.currentOp(true))&amp;#34; | \
+tail -n +3 | \
+jq -r .inprog[].client | \
+sed &amp;#39;s/\(.*\):.*/\1/&amp;#39; \
+| sort | uniq -c | sort -nr
+&lt;/code&gt;&lt;/pre&gt;&lt;ul&gt;
+&lt;li&gt;dump connection information in standard JSON format&lt;/li&gt;
+&lt;li&gt;remove MongoDB header&lt;/li&gt;
+&lt;li&gt;extract IP:port as a list&lt;/li&gt;
+&lt;li&gt;trim port&lt;/li&gt;
+&lt;li&gt;sort IPs by freqencies&lt;/li&gt;
+&lt;/ul&gt;</description>
     </item>
-    
     <item>
       <title>RealTest: real test environment for Go</title>
       <link>http://h12.io/project/realtest/</link>
       <pubDate>Sat, 14 Nov 2015 13:57:09 +0800</pubDate>
-      
       <guid>http://h12.io/project/realtest/</guid>
-      <description>h12.io/realtest provides real test environment for Go unit testing, based on Docker.
-Includes:
- Queue  Kafka cluster (with zookeeper)  Database:  MySQL MongoDB  Cache  Redis  Configuration service  ZooKeeper   </description>
+      <description>&lt;p&gt;h12.io/realtest provides real test environment for Go unit testing, based on Docker.&lt;/p&gt;
+&lt;p&gt;Includes:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Queue
+&lt;ul&gt;
+&lt;li&gt;Kafka cluster (with zookeeper)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Database:
+&lt;ul&gt;
+&lt;li&gt;MySQL&lt;/li&gt;
+&lt;li&gt;MongoDB&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Cache
+&lt;ul&gt;
+&lt;li&gt;Redis&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Configuration service
+&lt;ul&gt;
+&lt;li&gt;ZooKeeper&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;</description>
     </item>
-    
   </channel>
 </rss>

@@ -1,44 +1,43 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
-    <title>Tests on Hai-Liang &#34;Hal&#34; Wang</title>
+    <title>Tests on @h12</title>
     <link>http://h12.io/test/</link>
-    <description>Recent content in Tests on Hai-Liang &#34;Hal&#34; Wang</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en-US</language>
-    <copyright>Copyright (c) 2012-2018, Hǎi-Liàng &#34;Hal&#34; Wáng; all rights reserved.</copyright>
+    <description>Recent content in Tests on @h12</description>
+    <generator>Hugo -- 0.145.0</generator>
+    <language>en-us</language>
+    <copyright>2012-2025, Hǎi-Liàng &amp;ldquo;Hal&amp;rdquo; Wáng.</copyright>
     <lastBuildDate>Thu, 10 Jul 2014 03:06:35 +0000</lastBuildDate>
-    
-	<atom:link href="http://h12.io/test/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <atom:link href="http://h12.io/test/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Font size test for body copy</title>
       <link>http://h12.io/test/size_test/</link>
       <pubDate>Thu, 10 Jul 2014 03:06:35 +0000</pubDate>
-      
       <guid>http://h12.io/test/size_test/</guid>
-      <description>24px A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I enjoy with my whole heart. I am alone, and feel the charm of existence in this spot, which was created for the bliss of souls like mine. I am so happy, my dear friend, so absorbed in the exquisite sense of mere tranquil existence, that I neglect my talents. I should be incapable of drawing a single stroke at the present moment; and yet I feel that I never was a greater artist than now.</description>
+      <description>&lt;h3 id=&#34;24px&#34;&gt;24px&lt;/h3&gt;
+&lt;p&gt;&lt;span style=&#34;font-size: 24px; line-height: 1.5&#34;&gt;A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I enjoy with my whole heart. I am alone, and feel the charm of existence in this spot, which was created for the bliss of souls like mine. I am so happy, my dear friend, so absorbed in the exquisite sense of mere tranquil existence, that I neglect my talents. I should be incapable of drawing a single stroke at the present moment; and yet I feel that I never was a greater artist than now. When, while the lovely valley teems with vapour around me, and the meridian sun strikes the upper surface of the impenetrable foliage of my trees, and but a few stray gleams steal into the inner sanctuary, I throw myself down among the tall grass by the trickling stream; and, as I lie close to the earth, a thousand unknown plants are noticed by me: when I hear the buzz of the little world among the stalks, and grow familiar with the countless indescribable forms of the insects and flies, then I feel the presence of the Almighty, who formed us in his own image.&lt;/span&gt;&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Line height test for body copy</title>
       <link>http://h12.io/test/height_test/</link>
       <pubDate>Thu, 10 Jul 2014 03:06:35 +0000</pubDate>
-      
       <guid>http://h12.io/test/height_test/</guid>
-      <description>1.7 A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I enjoy with my whole heart. I am alone, and feel the charm of existence in this spot, which was created for the bliss of souls like mine. I am so happy, my dear friend, so absorbed in the exquisite sense of mere tranquil existence, that I neglect my talents. I should be incapable of drawing a single stroke at the present moment; and yet I feel that I never was a greater artist than now.</description>
+      <description>&lt;h3 id=&#34;17&#34;&gt;1.7&lt;/h3&gt;
+&lt;p&gt;&lt;span style=&#34;display: inline-block; font-size: 18px; line-height: 1.7&#34;&gt;A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I enjoy with my whole heart. I am alone, and feel the charm of existence in this spot, which was created for the bliss of souls like mine. I am so happy, my dear friend, so absorbed in the exquisite sense of mere tranquil existence, that I neglect my talents. I should be incapable of drawing a single stroke at the present moment; and yet I feel that I never was a greater artist than now. When, while the lovely valley teems with vapour around me, and the meridian sun strikes the upper surface of the impenetrable foliage of my trees, and but a few stray gleams steal into the inner sanctuary, I throw myself down among the tall grass by the trickling stream; and, as I lie close to the earth, a thousand unknown plants are noticed by me: when I hear the buzz of the little world among the stalks, and grow familiar with the countless indescribable forms of the insects and flies, then I feel the presence of the Almighty, who formed us in his own image.&lt;/span&gt;&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Lorem ipsum</title>
       <link>http://h12.io/test/lorem/</link>
       <pubDate>Sat, 05 Jul 2014 03:37:53 +0000</pubDate>
-      
       <guid>http://h12.io/test/lorem/</guid>
-      <description>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim.
- Tortor, suscipit eget, imperdiet nec, imperdiet iaculis, ipsum. Sed aliquam ultrices mauris. Integer ante arcu, accumsan a, consectetuer eget. Posuere ut, mauris. Praesent adipiscing. Phasellus ullamcorper.  Hendrerit id, lorem.</description>
+      <description>&lt;p&gt;Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Tortor, suscipit eget, imperdiet nec, imperdiet iaculis, ipsum.&lt;/li&gt;
+&lt;li&gt;Sed aliquam ultrices mauris. Integer ante arcu, accumsan a, consectetuer eget.&lt;/li&gt;
+&lt;li&gt;Posuere ut, mauris. Praesent adipiscing. Phasellus ullamcorper.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Hendrerit id, lorem. Maecenas nec odio et ante tincidunt tempus. Donec vitae sapien ut libero venenatis faucibus. Nullam quis ante.
+Etiam sit amet orci eget eros faucibus tincidunt. Duis leo. Sed fringilla mauris sit amet nibh. Donec sodales sagittis magna. Sed consequat, leo eget bibendum sodales, augue velit cursus nunc, quis gravida magna mi a libero. Fusce vulputate eleifend sapien. Vestibulum purus quam, scelerisque ut, mollis sed, nonummy id, metus.&lt;/p&gt;</description>
     </item>
-    
   </channel>
 </rss>

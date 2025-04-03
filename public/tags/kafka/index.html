@@ -1,24 +1,94 @@
 <!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title> Kafka </title>
-        <link rel="shortcut icon" href="/img/favicon.png" />
+<html lang="en" dir="auto">
 
-        <style>
-            html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video{margin:0;padding:0;border:0;font:inherit;font-size:100%;vertical-align:baseline}html{line-height:1}ol,ul{list-style:none}table{border-collapse:collapse;border-spacing:0}caption,th,td{text-align:left;font-weight:normal;vertical-align:middle}q,blockquote{quotes:none}q:before,q:after,blockquote:before,blockquote:after{content:"";content:none}a img{border:none}article,aside,details,figcaption,figure,footer,header,hgroup,main,menu,nav,section,summary{display:block}@font-face{font-family:'Alegreya';font-style:normal;font-weight:400;src:url("/font/Alegreya400normal.ttf") format("truetype"),url("/font/Alegreya400normal.woff") format("woff"),url("/font/Alegreya400normal.eot") format("embedded-opentype")}@font-face{font-family:'Alegreya';font-style:italic;font-weight:400;src:url("/font/Alegreya400italic.ttf") format("truetype"),url("/font/Alegreya400italic.woff") format("woff"),url("/font/Alegreya400italic.eot") format("embedded-opentype")}@font-face{font-family:'Alegreya';font-style:normal;font-weight:700;src:url("/font/Alegreya700normal.ttf") format("truetype"),url("/font/Alegreya700normal.woff") format("woff"),url("/font/Alegreya700normal.eot") format("embedded-opentype")}@font-face{font-family:'Open Sans Condensed';font-style:normal;font-weight:300;src:url("/font/OpenSansCondensed300normal.ttf") format("truetype"),url("/font/OpenSansCondensed300normal.woff") format("woff"),url("/font/OpenSansCondensed300normal.eot") format("embedded-opentype")}@font-face{font-family:'Open Sans Condensed';font-style:italic;font-weight:300;src:url("/font/OpenSansCondensed300italic.ttf") format("truetype"),url("/font/OpenSansCondensed300italic.woff") format("woff"),url("/font/OpenSansCondensed300italic.eot") format("embedded-opentype")}html{font-size:118.75%;line-height:1.57895em}*,*:before,*:after{-moz-box-sizing:border-box;-webkit-box-sizing:border-box;box-sizing:border-box}html{font-family:Alegreya,sans-serif;background:#262626;color:#d9d9d9;-webkit-transform:translate3d(0, 0, 0)}.container{max-width:43.75rem;margin-left:auto;margin-right:auto}.container:after{content:" ";display:block;clear:both}h1,h2,h3,h4,h5,h6{font-family:"Open Sans Condensed",sans}a{text-decoration:none}a{color:#75A6C4}a:hover{color:#a9c8da;text-decoration:none}em{font-style:italic}strong{color:#fff}code{font-family:Menlo,Consolas,"Ubuntu Mono",monospace,sans;background-color:#1a1a1a;-moz-border-radius:5px;-webkit-border-radius:5px;border-radius:5px;font-size:.89474rem;line-height:1.57895rem;white-space:pre}p code,li code{padding:0.15rem}pre code{word-wrap:break-word;white-space:pre-wrap;padding-left:0.5rem;padding-right:0.5rem;display:block}code.mathjax{-webkit-font-smoothing:antialiased;background:inherit !important;border:none !important;font-size:100%}table{font-family:Menlo,Consolas,"Ubuntu Mono",monospace,sans;border:1px solid #8c8c8c;margin-left:auto;margin-right:auto}thead,tfoot{border:1px solid #8c8c8c}th,td{padding:0.1rem 0.5rem;text-align:center;background-color:#1a1a1a}#logo{float:left;padding-left:.78947rem;line-height:2.36842rem;height:2.36842rem}@font-face{font-family:'icon';src:url("../font/icon.eot?15086725");src:url("../font/icon.eot?15086725#iefix") format("embedded-opentype"),url("../font/icon.woff2?15086725") format("woff2"),url("../font/icon.woff?15086725") format("woff"),url("../font/icon.ttf?15086725") format("truetype"),url("../font/icon.svg?15086725#icon") format("svg");font-weight:normal;font-style:normal}[class^="icon-"]:before,[class*=" icon-"]:before{font-family:"icon";font-style:normal;font-weight:normal;speak:none;display:inline-block;text-decoration:inherit;width:1em;margin-right:.2em;text-align:center;font-variant:normal;text-transform:none;line-height:1em;margin-left:.2em;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}.icon-article:before{content:'󰀀'}.icon-project:before{content:'󰀁'}.icon-note:before{content:'󰀂'}.icon-slide:before{content:'󰀃'}.icon-about:before{content:'󰀄'}.icon-menu:before{content:'󰀅'}nav{padding-left:.78947rem;padding-right:.78947rem;padding-top:0;padding-bottom:0}#nav-toggle-check{display:none}#nav-toggle-check:checked ~ #nav-toggle-button{color:#fefefe}#nav-toggle-check:checked ~ #nav-content{-moz-transition:all 300ms;-o-transition:all 300ms;-webkit-transition:all 300ms;transition:all 300ms;max-height:12.63158rem}#nav-toggle-button{float:right;font-size:25px;line-height:2.36842rem;height:2.36842rem}@media (min-width: 45em){#nav-toggle-button{display:none}}#nav-toggle-button:hover{color:#fefefe;cursor:pointer}#nav-content{clear:both;max-height:0}@media (min-width: 30em) and (max-width: 45em){#nav-content{text-align:center}}@media (min-width: 45em){#nav-content{clear:none;float:right;-moz-transition:all 300ms;-o-transition:all 300ms;-webkit-transition:all 300ms;transition:all 300ms;max-height:12.63158rem}}#nav-links{display:inline}@media (min-width: 30em){#nav-links{line-height:2.36842rem}}#nav-links h2{display:block;margin-top:0;margin-left:0;margin-right:0}@media (min-width: 30em){#nav-links h2{display:inline;margin-top:0;margin-bottom:0;margin-left:0.5rem;margin-right:0.5rem}}.nav-search-form{padding-bottom:.78947rem;position:relative;top:0}@media (min-width: 30em) and (max-width: 45em){.nav-search-form{margin-left:auto;margin-right:auto}}@media (min-width: 45em){.nav-search-form{display:inline-block;margin-left:0.5rem;padding-bottom:0;top:-0.1rem}}.nav-search-box{min-width:128px;height:1.2rem;background-color:#404040;color:#d9d9d9;font-size:15px;padding:0.2rem 0.4rem;border:1px solid #d9d9d9;outline:0px none;border-radius:3px;background-image:url("/img/cse.png");background-size:119px 16px;background-repeat:no-repeat;background-position:left 0.2rem center}@media (min-width: 45em){.nav-search-box{width:128px}}.nav-search-box:hover,.nav-search-box:focus,.nav-search-box:valid{border-color:#fefefe;background-image:none;box-shadow:0px 1px 1px rgba(0,0,0,0.075) inset,0px 0px 8px #fefefe}#top-header{overflow:hidden;*zoom:1;position:fixed;top:0;z-index:9999;width:100%;background:#404040}#top-header h1{font-size:25px}#top-header h2{font-size:19px;font-family:"Open Sans Condensed",sans}#top-header h1 strong{color:#FF7F00;font-family:Alegreya,sans-serif}#top-header a{color:#d9d9d9}#top-header a:hover{color:#fefefe}main{padding-top:3.15789rem;max-width:43.75rem;margin-left:auto;margin-right:auto;padding-left:.78947rem;padding-right:.78947rem}main:after{content:" ";display:block;clear:both}article ul{list-style:disc outside}article ol{list-style-type:decimal}article ul,article ol{margin-left:2.76316rem;margin-right:2.76316rem}article pre{margin-left:1.57895rem;margin-right:1.57895rem}article p{margin-top:1.57895rem}article .time{display:block;font-size:1rem;line-height:1.57895rem;font-family:"Open Sans Condensed",sans;color:#999}article h1{margin-top:1.57895rem;font-size:2.05263rem;line-height:3.15789rem}article h2{margin-top:1.57895rem;font-size:1.57895rem;line-height:1.57895rem;margin-bottom:1.57895rem}article h3{margin-top:1.57895rem;font-size:1.21053rem;line-height:1.57895rem;margin-bottom:1.57895rem}article h4{font-size:1.05263rem;line-height:1.57895rem}article h5{font-size:1.05263rem;line-height:1.57895rem}article h6{font-size:1.05263rem;line-height:1.57895rem}.hyphenate p,.hyphenate ul,.hyphenate ol{-moz-hyphens:auto;-ms-hyphens:auto;-webkit-hyphens:auto;hyphens:auto}body.css-hyphens .hyphenate p,body.css-hyphens .hyphenate ul,body.css-hyphens .hyphenate ol{text-align:justify}article.single h1{color:#fff;text-align:center;margin-bottom:1.57895rem}article.frontpage .article-body{margin-left:1.57895rem;margin-right:1.57895rem}article.frontpage h1{position:relative}article.frontpage h1 span.line{position:absolute;display:block;width:100%;margin:0;border:0;border-top:0.056rem solid rgba(38,38,38,0.5);border-bottom:0.056rem solid rgba(217,217,217,0.2)}article.frontpage .time{margin-bottom:1.57895rem}article.list h2{margin-top:1.57895rem;font-size:1.31579rem;line-height:1.57895rem;margin-bottom:0rem}h1.list{margin-top:1.57895rem;font-size:1.73684rem;line-height:1.57895rem;margin-bottom:1.57895rem}p#more{font-family:"Open Sans Condensed",sans;font-size:1.31579rem;line-height:1.57895rem;font-style:italic;margin-top:1.57895rem}#site-footer{margin-top:1.57895rem;margin-bottom:.3125rem;text-align:center;font-size:.89474rem;line-height:1.57895rem}#site-footer hr{border:0;height:1px;background-image:url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJvYmplY3RCb3VuZGluZ0JveCIgeDE9IjAuMCIgeTE9IjAuNSIgeDI9IjEuMCIgeTI9IjAuNSI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzI2MjYyNiIvPjxzdG9wIG9mZnNldD0iNTAlIiBzdG9wLWNvbG9yPSIjZDlkOWQ5IiBzdG9wLW9wYWNpdHk9IjAuMzgyIi8+PHN0b3Agb2Zmc2V0PSIxMDAlIiBzdG9wLWNvbG9yPSIjMjYyNjI2Ii8+PC9saW5lYXJHcmFkaWVudD48L2RlZnM+PHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgZmlsbD0idXJsKCNncmFkKSIgLz48L3N2Zz4g');background-size:100%;background-image:-webkit-gradient(linear, 0% 50%, 100% 50%, color-stop(0%, #262626),color-stop(50%, rgba(217,217,217,0.382)),color-stop(100%, #262626));background-image:-moz-linear-gradient(left, #262626,rgba(217,217,217,0.382),#262626);background-image:-webkit-linear-gradient(left, #262626,rgba(217,217,217,0.382),#262626);background-image:linear-gradient(to right, #262626,rgba(217,217,217,0.382),#262626)}div.gsc-adBlock,#discovery-top{display:none !important}.cse .gsc-control-cse,.gsc-control-cse{background-color:#262626 !important;border:none !important}.gs-result .gs-title,.gs-result .gs-title *{color:#75A6C4 !important;text-decoration:none !important}.gs-result .gs-title:hover,.gs-result .gs-title *:hover{text-decoration:underline !important}.gsc-preview-reviews,.gsc-control-cse .gs-snippet,.gsc-control-cse .gs-promotion em,.gsc-control-cse .gs-snippet,.gsc-control-cse .gs-promotion em,.gsc-result-info,.gsc-orderby-label{color:#d9d9d9 !important}.gsc-webResult.gsc-result{border:none !important}.gsc-above-wrapper-area{border-bottom:none !important}.gsc-control-cse,.gsc-control-cse *{box-sizing:content-box}.gsc-result .gs-title{height:auto !important}.gsc-selected-option-container{background-color:#262626 !important;background-image:url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJvYmplY3RCb3VuZGluZ0JveCIgeDE9IjAuNSIgeTE9IjAuMCIgeDI9IjAuNSIgeTI9IjEuMCI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzI2MjYyNiIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iIzQwNDA0MCIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JhZCkiIC8+PC9zdmc+IA==') !important;background-size:100%;background-image:-webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #262626),color-stop(100%, #404040)) !important;background-image:-moz-linear-gradient(top, #262626,#404040) !important;background-image:-webkit-linear-gradient(top, #262626,#404040) !important;background-image:linear-gradient(to bottom, #262626,#404040) !important}.gsc-selected-option-container{color:#d9d9d9 !important}.gsc-control-cse .gsc-option-menu{background:#262626 !important;border:1px solid rgba(38,38,38,0.2);box-shadow:0 2px 4px #262626}.gsc-option-menu-item{color:#d9d9d9 !important}.gsc-option-menu-item-highlighted{background-color:#404040 !important;border-color:#d9d9d9 !important;color:#d9d9d9 !important}.gsc-results .gsc-cursor-box .gsc-cursor-current-page{color:#75A6C4 !important;cursor:pointer !important;background-color:#262626 !important}.gs-result a.gs-visibleUrl,.gs-result .gs-visibleUrl{color:forestgreen !important}.gsc-result-info{padding-top:.78947rem !important;padding-bottom:.78947rem !important}.cse .gsc-control-cse,.gsc-control-cse,.gsc-above-wrapper-area,.gcsc-branding,.gsc-results,.gs-result a.gs-visibleUrl,.gs-result .gs-visibleUrl,.gsc-table-result,.gsc-thumbnail-inside,.gsc-url-top{padding:0 !important}td.gcsc-branding-text div.gcsc-branding-text{margin:0 !important;padding:0 !important}img.gsc-branding-img,img.gsc-branding-img-noclear,img.gcsc-branding-img,img.gcsc-branding-img-noclear{vertical-align:middle !important}.gsc-webResult .gsc-result{background-color:#262626 !important;padding-top:1.57895rem !important;padding-bottom:0 !important}.gsc-results .gsc-cursor-box{margin-top:1.57895rem !important;margin-bottom:1.57895rem !important}.hljs,.hljs-tag,.css .hljs-rules,.css .hljs-value,.css .hljs-function .hljs-preprocessor,.hljs-pragma{color:#d9d9d9}.hljs-strongemphasis,.hljs-strong,.hljs-emphasis{color:#a8a8a2}.hljs-bullet,.hljs-blockquote,.hljs-horizontal_rule,.hljs-number,.hljs-regexp,.alias .hljs-keyword,.hljs-literal,.hljs-hexcolor{color:#ae81ff}.hljs-tag .hljs-value,.hljs-code,.hljs-title,.css .hljs-class,.hljs-class .hljs-title:last-child{color:#a6e22e}.hljs-link_url{font-size:80%}.hljs-strong,.hljs-strongemphasis{font-weight:bold}.hljs-emphasis,.hljs-strongemphasis,.hljs-class .hljs-title:last-child{font-style:italic}.hljs-keyword,.hljs-function,.hljs-change,.hljs-winutils,.hljs-flow,.lisp .hljs-title,.clojure .hljs-built_in,.nginx .hljs-title,.tex .hljs-special,.hljs-header,.hljs-attribute,.hljs-symbol,.hljs-symbol .hljs-string,.hljs-tag .hljs-title,.hljs-value,.alias .hljs-keyword:first-child,.css .hljs-tag,.css .unit,.css .hljs-important{color:#D12060}.hljs-function .hljs-keyword,.hljs-class .hljs-keyword:first-child,.hljs-constant,.css .hljs-attribute{color:#66d9ef}.hljs-variable,.hljs-params,.hljs-class .hljs-title{color:#f8f8f2}.hljs-string,.css .hljs-id,.hljs-subst,.haskell .hljs-type,.ruby .hljs-class .hljs-parent,.hljs-built_in,.django .hljs-template_tag,.django .hljs-variable,.smalltalk .hljs-class,.django .hljs-filter .hljs-argument,.smalltalk .hljs-localvars,.smalltalk .hljs-array,.hljs-attr_selector,.hljs-pseudo,.hljs-addition,.hljs-stream,.hljs-envvar,.apache .hljs-tag,.apache .hljs-cbracket,.tex .hljs-command,.hljs-prompt,.hljs-link_label,.hljs-link_url{color:#e6db74}.hljs-comment,.hljs-javadoc,.java .hljs-annotation,.python .hljs-decorator,.hljs-template_comment,.hljs-pi,.hljs-doctype,.hljs-deletion,.hljs-shebang,.apache .hljs-sqbracket,.tex .hljs-formula{color:#75715e}.coffeescript .javascript,.javascript .xml,.tex .hljs-formula,.xml .javascript,.xml .vbscript,.xml .css,.xml .hljs-cdata,.xml .php,.php .xml{opacity:0.5}ul#tags{font-family:"Open Sans Condensed",sans;clear:both;list-style:none;line-height:3.15789rem;padding:0}@media (min-width: 45em){ul#tags{clear:none}}ul#tags li{float:left;line-height:1.26316rem;margin-top:.94737rem;margin-left:0.4rem}@media (min-width: 45em){ul#tags li{float:right}}ul#tags li a{font-size:17px;color:#000;background:#75A6C4;border-radius:3px;padding-left:0.2rem;padding-right:0.2rem;padding-bottom:0.1rem;cursor:pointer}ul#tags li a:hover{background:#a9c8da;outline:none}#article-time{float:left;font-family:"Open Sans Condensed",sans;font-size:1.31579rem;line-height:3.15789rem;color:#999}#livefyre-comments{padding-top:3.15789rem;font-family:"Open Sans Condensed",sans}#livefyre-comments p{font-family:Alegreya,sans-serif}#livefyre-comments .fyre .fyre-help{display:none}#livefyre-comments .fyre .fyre-login-bar{font-family:inherit}#livefyre-comments .fyre .fyre-comment-article,#livefyre-comments .fyre .fyre-comment-stream{font-family:inherit;font-size:1rem;line-height:1.57895rem;margin:0}#livefyre-comments .fyre .fyre-comment{margin:0}#livefyre-comments .fyre .fyre-comment p{margin-bottom:1.57895rem;line-height:1.57895rem}#livefyre-comments .fyre .fyre-comment p:last-child{margin-bottom:0}#livefyre-comments .fyre .fyre-comment a.fyre-comment-edit{font-size:17px}#livefyre-comments .fyre .fyre-comment-footer{margin:0;padding:0;line-height:1.57895rem;height:1.57895rem;font-family:"Open Sans Condensed",sans}#livefyre-comments .fyre .fyre-comment-actions{margin-top:0;font-size:17px}#livefyre-comments .fyre .fyre-comment-actions a:hover{text-decoration:none}#livefyre-comments .fyre .fyre-comment-like,#livefyre-comments .fyre .fyre-comment-reply,#livefyre-comments .fyre .fyre-comment-like-count,#livefyre-comments .fyre .fyre-comment-like-btn{font-size:17px}#livefyre-comments .fyre .fyre-stream-stats span{line-height:1.57895rem}#livefyre-comments .fyre .fyre-stream-stats .fyre-comment-count{font-family:inherit;font-weight:normal;font-size:1.31579rem;line-height:1.57895rem}#livefyre-comments .fyre .fyre-livecount{top:auto;position:static}#livefyre-comments .fyre .fyre-auth{margin-top:1.57895rem}#livefyre-comments .fyre .fyre-stream-stats,#livefyre-comments .fyre .fyre-box-wrapper a.fyre-user-profile-link,#livefyre-comments .fyre .fyre-stream-livecount,#livefyre-comments .fyre .fyre-comment-stream,#livefyre-comments .fyre .fyre-comment-actions{color:#d9d9d9}#livefyre-comments .fyre .fyre-box-wrapper:hover{background:none}#livefyre-comments .fyre .fyre-box-list{background:none repeat scroll 0% 0% #262626;color:#d9d9d9}#livefyre-comments .fyre .fyre-box-list li a{color:#d9d9d9}#livefyre-comments .fyre .fyre-box-list li a:hover{color:#262626;background-color:#d9d9d9}#livefyre-comments .fyre .fyre-user-loggedout{color:#d9d9d9}#livefyre-comments .fyre .fyre-user-loggedout,#livefyre-comments .fyre .fyre-stream-sort,#livefyre-comments .fyre .fyre-stream-stats,#livefyre-comments .fyre .fyre-stream-livecount{font-family:inherit;font-size:17px;line-height:1.57895rem}#livefyre-comments .fyre .fyre-moderator{display:none}#livefyre-comments .fyre a{color:#75A6C4}#livefyre-comments .fyre a:hover{color:#a9c8da}#livefyre-comments .fyre .fyre-stream-sort{border:none;margin:0;padding-top:.78947rem;padding-bottom:.78947rem;line-height:1.57895rem}#livefyre-comments .fyre .fyre-comment-article{margin-top:1.57895rem}#livefyre-comments .fyre .fyre-comment-head{position:relative}#livefyre-comments .fyre .fyre-comment-head .fyre-comment-username::before{content:"";position:absolute;width:100%;height:0px;background:none;border:0;border-top:0.056rem solid rgba(38,38,38,0.5);border-bottom:0.056rem solid rgba(217,217,217,0.2)}#livefyre-comments .fyre .fyre-comment-divider{display:none}#livefyre-comments .fyre .fyre-comment-wrapper time.fyre-comment-date{font-size:17px}#livefyre-comments .fyre-editor{margin:0;padding-top:2.36842rem}#livefyre-comments .fyre-editor .fyre-editor-container .fyre-editor-editable{color:#d9d9d9;background-color:transparent;font-family:inherit;font-size:1rem;line-height:1.57895rem;overflow:hidden;padding:.78947rem}#livefyre-comments .fyre-editor .fyre-editor-container .fyre-editor-editable p{line-height:1.5}#livefyre-comments .fyre-editor .fyre-editor-toolbar{height:60px}#livefyre-comments .fyre-editor .fyre-editor-toolbar .goog-toolbar>div{color:#d9d9d9;background-image:url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJvYmplY3RCb3VuZGluZ0JveCIgeDE9IjAuNSIgeTE9IjAuMCIgeDI9IjAuNSIgeTI9IjEuMCI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzI2MjYyNiIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iIzNiM2IzYiIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JhZCkiIC8+PC9zdmc+IA==');background-size:100%;background-image:-webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #262626),color-stop(100%, #3b3b3b));background-image:-moz-linear-gradient(top, #262626,#3b3b3b);background-image:-webkit-linear-gradient(top, #262626,#3b3b3b);background-image:linear-gradient(to bottom, #262626,#3b3b3b)}#livefyre-comments .fyre-editor .fyre-editor-toolbar .goog-toolbar>div.fyre-format-button{display:none}#livefyre-comments .fyre-editor .fyre-editor-toolbar .goog-toolbar>div.fyre-mention-button{border-bottom:1px solid #a1a1a1;border-left:1px solid #a1a1a1;-moz-border-radius:0 0 0 5px;-webkit-border-radius:0;border-radius:0 0 0 5px}#livefyre-comments .fyre-editor .fyre-editor-toolbar .goog-toolbar>div.fyre-mention-button>div{background:url("/img/sprites.png") no-repeat scroll 9px -57px transparent}#livefyre-comments .fyre-editor .fyre-editor-toolbar .goog-toolbar>div.fyre-embed-button>div{background:url("/img/sprites.png") no-repeat scroll 8px -121px transparent}#livefyre-comments .fyre-editor .fyre-editor-toolbar .goog-toolbar>div.fyre-button-left .fyre-button-left-outer-box .fyre-button-left-inner-box{text-shadow:none}#livefyre-comments .fyre-editor .fyre-editor-toolbar .goog-toolbar>div.fyre-button-right.fyre-post-button .fyre-button-right-outer-box .fyre-button-right-inner-box{color:#d9d9d9;text-shadow:none}#livefyre-comments .fyre-editor .fyre-editor-toolbar .fyre-share-container{background-color:#262626}#livefyre-comments .fyre-editor .fyre-editor-toolbar .fyre-share-container span>a{color:#d9d9d9}#livefyre-comments .fyre-editor .fyre-editor-toolbar .fyre-share-container span>a:hover{color:#262626;background-color:#d9d9d9}#livefyre-comments .fyre-editor .fyre-editor-toolbar .fyre-format-toolbar{background-color:#262626}#livefyre-comments .fyre-editor .fyre-editor-toolbar .fyre-mention-menu{background-color:#262626}#livefyre-comments .fyre-editor .fyre-editor-toolbar .fyre-mention-menu .fyre-mention-item{height:auto}.my-name{font-family:Constantia,"Lucida Bright",Lucidabright,"Lucida Serif",Lucida,"DejaVu Serif","Bitstream Vera Serif","Liberation Serif",Georgia,serif;font-size:90%}#github-ribbon{position:fixed;width:200px;top:2.36842rem;margin-top:34px;right:-50px;-moz-transform:rotate(45deg);-ms-transform:rotate(45deg);-webkit-transform:rotate(45deg);transform:rotate(45deg);background-color:#FF7F00;background-image:url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJvYmplY3RCb3VuZGluZ0JveCIgeDE9IjAuNSIgeTE9IjAuMCIgeDI9IjAuNSIgeTI9IjEuMCI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzAwMDAwMCIgc3RvcC1vcGFjaXR5PSIwLjAiLz48c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiMwMDAwMDAiIHN0b3Atb3BhY2l0eT0iMC4xNSIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JhZCkiIC8+PC9zdmc+IA==');background-size:100%;background-image:-webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, rgba(0,0,0,0)),color-stop(100%, rgba(0,0,0,0.15)));background-image:-moz-linear-gradient(top, rgba(0,0,0,0),rgba(0,0,0,0.15));background-image:-webkit-linear-gradient(top, rgba(0,0,0,0),rgba(0,0,0,0.15));background-image:linear-gradient(to bottom, rgba(0,0,0,0),rgba(0,0,0,0.15));font-family:HelveticaNeue,"Helvetica Neue",HelveticaNeueRoman,HelveticaNeue-Roman,"Helvetica Neue Roman",TeXGyreHerosRegular,Helvetica,Tahoma,Geneva,Arial,sans-serif;font-weight:bold;font-size:15px;padding:2px 0;z-index:10;pointer-events:auto}#github-ribbon a,#github-ribbon a:hover{color:#404040;text-decoration:none;display:inline-block;text-align:center;width:200px;border-width:1px 0;border-style:dashed;border-color:#404040}.pagination{font-family:"Open Sans Condensed",sans;font-weight:bold;margin-top:3rem;text-align:center}.pagination li{display:inline;margin-left:0.5rem;margin-right:0.5rem}.pagination .disabled{color:#999}
+<head><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="index, follow">
+<title>Kafka | @h12</title>
+<meta name="keywords" content="">
+<meta name="description" content="">
+<meta name="author" content="Hǎi-Liàng &#34;Hal&#34; Wáng">
+<link rel="canonical" href="http://h12.io/tags/kafka/">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.ef93a538cbae171c70c47408f7fccb878c5ffd285cc92b2b46b10dde0f97f53e.css" integrity="sha256-75OlOMuuFxxwxHQI9/zLh4xf/ShcySsrRrEN3g&#43;X9T4=" rel="preload stylesheet" as="style">
+<link rel="icon" href="http://h12.io/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="http://h12.io/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="http://h12.io/favicon-32x32.png">
+<link rel="apple-touch-icon" href="http://h12.io/apple-touch-icon.png">
+<link rel="mask-icon" href="http://h12.io/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<link rel="alternate" type="application/rss+xml" href="http://h12.io/tags/kafka/index.xml">
+<link rel="alternate" hreflang="en" href="http://h12.io/tags/kafka/">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
 
-        </style>
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --code-block-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+            }
 
-        <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.0/highlight.min.js"></script>
+            .list {
+                background: var(--theme);
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-track {
+                background: 0 0;
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-thumb {
+                border-color: var(--theme);
+            }
+        }
+
+    </style>
+</noscript>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+
+
+
+
+<link id="syntax-mode" rel="stylesheet" href="/css/syntax-light.css">
+
 <script>
-    hljs.configure({languages: []}); 
-    hljs.initHighlightingOnLoad();
+    function isDarkMode() {
+        const mode = localStorage.getItem("pref-theme");
+        return (mode && mode === "dark") ||
+            document.body.className.includes("dark") ||
+            false;
+    }
+
+    function syncSyntaxMode() {
+        document.getElementById("syntax-mode").href = isDarkMode() ? "/css/syntax-dark.css" : "/css/syntax-light.css";
+    }
+
+    document.addEventListener("DOMContentLoaded", () => {
+        syncSyntaxMode();
+        const toggleButton = document.getElementById("theme-toggle");
+        if (!toggleButton) {
+            console.log("No toggle button found");
+            return;
+        }
+        toggleButton.addEventListener("click", syncSyntaxMode);
+    });
 </script>
 
-
-        <script>
+<script>
   MathJax = {
     tex: {
       inlineMath: [['$', '$'], ['\\(', '\\)']],
@@ -32,73 +102,184 @@
     }
   };
 </script>
-<script src="//polyfill.io/v3/polyfill.min.js?features=es6"></script>
-<script type="text/javascript" id="MathJax-script" async src="//cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+<meta property="og:url" content="http://h12.io/tags/kafka/">
+  <meta property="og:site_name" content="@h12">
+  <meta property="og:title" content="Kafka">
+  <meta property="og:locale" content="en-us">
+  <meta property="og:type" content="website">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Kafka">
+<meta name="twitter:description" content="">
 
+</head>
 
-    </head>
-    <body>
-        <header id="top-header">
-            <div class="container">
-                <h1 id="logo">
-                    
-                    <a rel="home" id="site-title" href="/"><strong>h12</strong></a>
-                    <a href="https://stand-with-ukraine.pp.ua"><img src="https://raw.githubusercontent.com/vshymanskyy/StandWithUkraine/main/badges/StandWithUkraine.svg" alt="Stand With Ukraine"></a>
-                </h1>
-                <nav>
-                    <input type="checkbox" id="nav-toggle-check">
-                    <label id="nav-toggle-button" for="nav-toggle-check" class="icon-menu"></label>
-                    <div id="nav-content">
-                        <div id="nav-links">
-                            <h2><a href="/article" data-nav="Article">
-                                <i class="icon-article"></i><span>Article</span>
-                            </a></h2>
-                            <h2><a href="/project" data-nav="Project">
-                                <i class="icon-project"></i><span>Project</span>
-                            </a></h2>
-                            <h2><a href="/note" data-nav="Note">
-                                <i class="icon-note"></i><span>Note</span>
-                            </a></h2>
-                            
-                            <h2><a href="/about" data-nav="About">
-                                <i class="icon-about"></i><span>About</span>
-                            </a></h2>
-                        </div>
-                        <form class="nav-search-form" action="/search">
-                            <input type="text" class="nav-search-box" name="q" required="required"/>
-                        </form>
-                    </div>
-                </nav>
+<body class="list" id="top">
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.body.classList.add('dark');
+    } else if (localStorage.getItem("pref-theme") === "light") {
+        document.body.classList.remove('dark')
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.body.classList.add('dark');
+    }
+
+</script>
+
+<header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="http://h12.io/" accesskey="h" title="@h12 (Alt + H)">@h12</a>
+            <div class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)" aria-label="Toggle theme">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
             </div>
-        </header>
+        </div>
+        <ul id="menu">
+            <li>
+                <a href="http://h12.io/article/" title="Articles">
+                    <span><i class="fas fa-newspaper"></i> Articles</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://h12.io/project/" title="Projects">
+                    <span><i class="fab fa-github"></i> Projects</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://h12.io/note/" title="Notes">
+                    <span><i class="fas fa-sticky-note"></i> Notes</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://h12.io/about/" title="About">
+                    <span><i class="fas fa-user"></i> About</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<main class="main"> 
+<header class="page-header">
+  <h1>
+    Kafka
+  </h1>
+</header>
+
+<article class="post-entry tag-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">RealTest: real test environment for Go
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>h12.io/realtest provides real test environment for Go unit testing, based on Docker.
+Includes:
+Queue Kafka cluster (with zookeeper) Database: MySQL MongoDB Cache Redis Configuration service ZooKeeper </p>
+  </div>
+  <footer class="entry-footer"><span title='2015-11-14 13:57:09 +0800 +0800'>November 14, 2015</span></footer>
+  <a class="entry-link" aria-label="post link to RealTest: real test environment for Go" href="http://h12.io/project/realtest/"></a>
+</article>
+
+<article class="post-entry tag-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">kpax: a modular &amp; idiomatic Kafka client in Go
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>
+Install go get -u h12.io/kpax Talk I gave a talk about Kpax at Gopher Meetup Shanghai 2016. See the slides.
+Design The client is built on top of Kafka Wire Protocol (i.e. low-level API). The protocol related types &amp; marshal/unmarshal functions are automatically generated by wipro from the HTML spec).
+(-) means to be done.
+Sub packages model is an abstraction model for request, response, broker and cluster broker is a lazy, asynchronous and recoverable round tripper that talks to a single Kafka broker cluster is a metadata manager that talks to a Kafka cluster proto contains both low level API and a “middle” level facade producer: fault tolerant high-level producer (batching and partitioning strategy) consumer: fault tolerant high-level consumer (consumer group and offset commit) log: replaceable global logger cmd kpax: command line tool to help with Kafka programming Compatibility Compatible with Kafka Server 0.8.2.
+...</p>
+  </div>
+  <footer class="entry-footer"><span title='2015-07-23 13:36:25 +0800 +0800'>July 23, 2015</span></footer>
+  <a class="entry-link" aria-label="post link to kpax: a modular & idiomatic Kafka client in Go" href="http://h12.io/project/kpax/"></a>
+</article>
+    </main>
+    
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a><footer class="footer">
+        <p>&copy; 2012-2025, <span class="my-name">Hǎi-Liàng "Hal" Wáng</span>.</p>
+        <p xmlns:cc="http://creativecommons.org/ns#" xmlns:dct="http://purl.org/dc/terms/"><span property="dct:title">The content of this page</span> is licensed under <a href="https://creativecommons.org/licenses/by/4.0/?ref=chooser-v1" target="_blank" rel="license noopener noreferrer" style="display:inline-flex;align-items:center;">CC BY 4.0<img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/cc.svg?ref=chooser-v1" alt=""><img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/by.svg?ref=chooser-v1" alt=""></a></p>
+    </footer>
 
 
-        <main class="container">
-        <h1 class="list">Kafka</h1>
-            
-            <article class="list">
-                <h2>
-                    <a href="http://h12.io/project/realtest/">RealTest: real test environment for Go</a><br>
-                </h2>
-                <span class="time">14 November 2015</span>
-                <span class="tags"></span>
-            </article>
-            
-            <article class="list">
-                <h2>
-                    <a href="http://h12.io/project/kpax/">kpax: a modular &amp; idiomatic Kafka client in Go</a><br>
-                </h2>
-                <span class="time">23 July 2015</span>
-                <span class="tags"></span>
-            </article>
-            
-        </main>
-        <footer id="site-footer">
-            <hr>
-            <p>&copy; 2012-2023 <span class="my-name">Hǎi-Liàng "Hal" Wáng</span>.<br>
-            The content of this page is licensed under <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>, and code is licensed under a <a rel="license" href="/bsd">BSD license</a>.
-            </p>
-        </footer>
+<script>
+    let menu = document.getElementById('menu')
+    if (menu) {
+        menu.scrollLeft = localStorage.getItem("menu-scroll-position");
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
 
-    </body>
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        if (document.body.className.includes("dark")) {
+            document.body.classList.remove('dark');
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            document.body.classList.add('dark');
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+</body>
+
 </html>

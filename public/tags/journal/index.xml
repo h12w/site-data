@@ -1,26 +1,56 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
-    <title>Journal on Hai-Liang &#34;Hal&#34; Wang</title>
+    <title>Journal on @h12</title>
     <link>http://h12.io/tags/journal/</link>
-    <description>Recent content in Journal on Hai-Liang &#34;Hal&#34; Wang</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en-US</language>
-    <copyright>Copyright (c) 2012-2018, Hǎi-Liàng &#34;Hal&#34; Wáng; all rights reserved.</copyright>
+    <description>Recent content in Journal on @h12</description>
+    <generator>Hugo -- 0.145.0</generator>
+    <language>en-us</language>
+    <copyright>2012-2025, Hǎi-Liàng &amp;ldquo;Hal&amp;rdquo; Wáng.</copyright>
     <lastBuildDate>Sat, 14 Nov 2015 15:00:00 +0800</lastBuildDate>
-    
-	<atom:link href="http://h12.io/tags/journal/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <atom:link href="http://h12.io/tags/journal/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>SEJ: Message Queue Based on Segmented Journals</title>
       <link>http://h12.io/project/sej/</link>
       <pubDate>Sat, 14 Nov 2015 15:00:00 +0800</pubDate>
-      
       <guid>http://h12.io/project/sej/</guid>
-      <description>h12.io/sej provides composable components of distributed, persisted message queue and allows trading off between reliablilty, latency and throughput with minimal devops overhead.
-Package Organization  h12.io/sej: writer, scanner and offset  shard: sharding hub: copying across machines cmd/sej: command line tool   SEJ Directory [root-dir]/ [sej-dir]/ jnl.lck jnl/ 0000000000000000.jnl 000000001f9e521e.jnl ...... ofs/ reader1.ofs reader1.lck reader2.ofs reader2.lck ......  Journal File format segment_file = { message } . message = offset timestamp type key value size .</description>
+      <description>&lt;p&gt;&lt;code&gt;h12.io/sej&lt;/code&gt; provides composable components of distributed, persisted message queue and allows trading off between reliablilty, latency and throughput with minimal devops overhead.&lt;/p&gt;
+&lt;h2 id=&#34;package-organization&#34;&gt;Package Organization&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;h12.io/sej: writer, scanner and offset
+&lt;ul&gt;
+&lt;li&gt;shard: sharding&lt;/li&gt;
+&lt;li&gt;hub: copying across machines&lt;/li&gt;
+&lt;li&gt;cmd/sej: command line tool&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;sej-directory&#34;&gt;SEJ Directory&lt;/h2&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;[root-dir]/
+    [sej-dir]/
+        jnl.lck
+        jnl/
+            0000000000000000.jnl
+            000000001f9e521e.jnl
+            ......
+        ofs/
+            reader1.ofs
+            reader1.lck
+            reader2.ofs
+            reader2.lck
+            ......
+&lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&#34;journal-file-format&#34;&gt;Journal File format&lt;/h2&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;segment_file = { message }                          .
+message      = offset timestamp type key value size .
+offset       = uint64                               .
+timestamp    = int64                                .
+type         = uint8                                .
+key          = key_size { uint8 }                   .
+key_size     = int8                                 .
+value        = value_size { uint8 }                 .
+value_size   = int32                                .
+size         = int32                                .
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;All integers are written in the big endian format.&lt;/p&gt;</description>
     </item>
-    
   </channel>
 </rss>

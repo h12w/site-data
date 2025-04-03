@@ -1,25 +1,21 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
-    <title>Curl on Hai-Liang &#34;Hal&#34; Wang</title>
+    <title>Curl on @h12</title>
     <link>http://h12.io/tags/curl/</link>
-    <description>Recent content in Curl on Hai-Liang &#34;Hal&#34; Wang</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en-US</language>
-    <copyright>Copyright (c) 2012-2018, Hǎi-Liàng &#34;Hal&#34; Wáng; all rights reserved.</copyright>
+    <description>Recent content in Curl on @h12</description>
+    <generator>Hugo -- 0.145.0</generator>
+    <language>en-us</language>
+    <copyright>2012-2025, Hǎi-Liàng &amp;ldquo;Hal&amp;rdquo; Wáng.</copyright>
     <lastBuildDate>Tue, 20 Jun 2017 12:40:10 +0800</lastBuildDate>
-    
-	<atom:link href="http://h12.io/tags/curl/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <atom:link href="http://h12.io/tags/curl/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>How to Measure Response Time with Curl</title>
       <link>http://h12.io/note/measure-response-time-with-curl/</link>
       <pubDate>Tue, 20 Jun 2017 12:40:10 +0800</pubDate>
-      
       <guid>http://h12.io/note/measure-response-time-with-curl/</guid>
-      <description>curl [args] --write-out &amp;quot;%{time_total}s&amp;quot; --output /dev/null --silent [URL]  </description>
+      <description>&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;curl &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;args&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt; --write-out &lt;span class=&#34;s2&#34;&gt;&amp;#34;%{time_total}s&amp;#34;&lt;/span&gt; --output /dev/null --silent &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;URL&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt; 
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
     </item>
-    
   </channel>
 </rss>

@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="en" dir="auto">
+
+<head><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="index, follow">
+<title>Notes | @h12</title>
+<meta name="keywords" content="">
+<meta name="description" content="Notes - @h12">
+<meta name="author" content="Hǎi-Liàng &#34;Hal&#34; Wáng">
+<link rel="canonical" href="http://h12.io/note/">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.ef93a538cbae171c70c47408f7fccb878c5ffd285cc92b2b46b10dde0f97f53e.css" integrity="sha256-75OlOMuuFxxwxHQI9/zLh4xf/ShcySsrRrEN3g&#43;X9T4=" rel="preload stylesheet" as="style">
+<link rel="icon" href="http://h12.io/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="http://h12.io/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="http://h12.io/favicon-32x32.png">
+<link rel="apple-touch-icon" href="http://h12.io/apple-touch-icon.png">
+<link rel="mask-icon" href="http://h12.io/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<link rel="alternate" type="application/rss+xml" href="http://h12.io/note/index.xml">
+<link rel="alternate" hreflang="en" href="http://h12.io/note/">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --code-block-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+            }
+
+            .list {
+                background: var(--theme);
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-track {
+                background: 0 0;
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-thumb {
+                border-color: var(--theme);
+            }
+        }
+
+    </style>
+</noscript>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+
+
+
+
+<link id="syntax-mode" rel="stylesheet" href="/css/syntax-light.css">
+
+<script>
+    function isDarkMode() {
+        const mode = localStorage.getItem("pref-theme");
+        return (mode && mode === "dark") ||
+            document.body.className.includes("dark") ||
+            false;
+    }
+
+    function syncSyntaxMode() {
+        document.getElementById("syntax-mode").href = isDarkMode() ? "/css/syntax-dark.css" : "/css/syntax-light.css";
+    }
+
+    document.addEventListener("DOMContentLoaded", () => {
+        syncSyntaxMode();
+        const toggleButton = document.getElementById("theme-toggle");
+        if (!toggleButton) {
+            console.log("No toggle button found");
+            return;
+        }
+        toggleButton.addEventListener("click", syncSyntaxMode);
+    });
+</script>
+
+<script>
+  MathJax = {
+    tex: {
+      inlineMath: [['$', '$'], ['\\(', '\\)']],
+      displayMath: [['$$','$$'], ['\\[', '\\]']],
+      processEscapes: true,
+      processEnvironments: true
+    },
+    options: {
+      enableMenu: false,
+      skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre']
+    }
+  };
+</script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+<meta property="og:url" content="http://h12.io/note/">
+  <meta property="og:site_name" content="@h12">
+  <meta property="og:title" content="Notes">
+  <meta property="og:locale" content="en-us">
+  <meta property="og:type" content="website">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Notes">
+<meta name="twitter:description" content="">
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position":  1 ,
+      "name": "Notes",
+      "item": "http://h12.io/note/"
+    }
+  ]
+}
+</script>
+</head>
+
+<body class="list" id="top">
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.body.classList.add('dark');
+    } else if (localStorage.getItem("pref-theme") === "light") {
+        document.body.classList.remove('dark')
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.body.classList.add('dark');
+    }
+
+</script>
+
+<header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="http://h12.io/" accesskey="h" title="@h12 (Alt + H)">@h12</a>
+            <div class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)" aria-label="Toggle theme">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <ul id="menu">
+            <li>
+                <a href="http://h12.io/article/" title="Articles">
+                    <span><i class="fas fa-newspaper"></i> Articles</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://h12.io/project/" title="Projects">
+                    <span><i class="fab fa-github"></i> Projects</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://h12.io/note/" title="Notes">
+                    <span class="active"><i class="fas fa-sticky-note"></i> Notes</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://h12.io/about/" title="About">
+                    <span><i class="fas fa-user"></i> About</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<main class="main"> 
+<header class="page-header">
+  <h1>
+    Notes
+  </h1>
+</header>
+
+<article class="post-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">A Single Command to Download a Website
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>wget --recursive --level=2 --no-parent --no-clobber --convert-links --continue [URL] </p>
+  </div>
+  <footer class="entry-footer"><span title='2017-04-09 14:30:03 +0800 +0800'>April 9, 2017</span></footer>
+  <a class="entry-link" aria-label="post link to A Single Command to Download a Website" href="http://h12.io/note/download-website/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">How to Remove Old Kernels in Ubuntu
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>sudo apt install byobu sudo purge-old-kernels Reference:
+Remove Old Kernels (https://help.ubuntu.com/community/Lubuntu/Documentation/RemoveOldKernels) </p>
+  </div>
+  <footer class="entry-footer"><span title='2016-09-10 09:08:10 +0800 +0800'>September 10, 2016</span></footer>
+  <a class="entry-link" aria-label="post link to How to Remove Old Kernels in Ubuntu" href="http://h12.io/note/ubuntu-remove-old-kernels/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">Making Code Block Wrap in Jira
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>It is a hack.
+Set Jira Administration -&gt; System -&gt; Announcement Banner -&gt; Announcement:
+&lt;style type=&#34;text/css&#34;&gt; pre { white-space: pre-wrap!important; } &lt;/style&gt; </p>
+  </div>
+  <footer class="entry-footer"><span title='2016-09-05 10:30:49 +0800 +0800'>September 5, 2016</span></footer>
+  <a class="entry-link" aria-label="post link to Making Code Block Wrap in Jira" href="http://h12.io/note/make-jira-code-wrap/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">One-liner to check MongoDB Connections
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>mongo --eval &#34;JSON.stringify(db.currentOp(true))&#34; | \ tail -n &#43;3 | \ jq -r .inprog[].client | \ sed &#39;s/\(.*\):.*/\1/&#39; \ | sort | uniq -c | sort -nr dump connection information in standard JSON format remove MongoDB header extract IP:port as a list trim port sort IPs by freqencies </p>
+  </div>
+  <footer class="entry-footer"><span title='2016-09-02 15:40:41 +0800 +0800'>September 2, 2016</span></footer>
+  <a class="entry-link" aria-label="post link to One-liner to check MongoDB Connections" href="http://h12.io/note/mongodb-conn/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">Counting Word Frequencies in One Line
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>cat book.txt | \ tr &#39;!()[]{};:&#34;,&lt;.&gt;?“”‘’*/\r&#39; &#39; &#39; | \ tr &#39; &#39; &#39;\n&#39; | \ grep -a -P &#34;^[\p{L}\p{N}\-&#39;]&#43;\$&#34; | \ grep -a -P -v &#34;^[\p{N}\-&#39;]&#43;\$&#34; | \ sed &#34;s/&#39;s\$//&#34; | \ sed &#34;s/^&#39;//&#34; | sed &#34;s/&#39;\$//&#34; &gt; words.txt cat words.txt | \ sort | uniq -c | \ sort -nr | \ cut -c9- &gt; words_desc.txt replace punctuations with space; remove \r from `\r\n&#39;
+one word per line
+keep only words composed of unicode letters, numbers, hyphen and apostrophe
+remove pure numbers
+remove ’s
+remove starting and ending apostrophe
+output words.txt
+sort and count unique words
+...</p>
+  </div>
+  <footer class="entry-footer"><span title='2016-08-09 18:31:04 +0800 +0800'>August 9, 2016</span></footer>
+  <a class="entry-link" aria-label="post link to Counting Word Frequencies in One Line" href="http://h12.io/note/count-word-freq/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">A Note on Mobi Format
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p> Mobi Format Description: http://wiki.mobileread.com/wiki/MOBI Python lib: https://github.com/kroo/mobi-python </p>
+  </div>
+  <footer class="entry-footer"><span title='2016-08-03 08:51:30 +0800 +0800'>August 3, 2016</span></footer>
+  <a class="entry-link" aria-label="post link to A Note on Mobi Format" href="http://h12.io/note/mobi/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">A Manager&#39;s FAQ
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>This is an insightful list from [Henry Ward](Henry Ward):
+How do I get employees to perform better? Tell them what they are doing well. How do I give negative feedback? By being curious. How do I decide what to delegate? Delegate the work you want to do. How should I prioritize? Fix problems. Then prevent problems. How should I grade employees? Don’t. Teach them to self-evaluate. When do I fire somebody? When you know they can’t succeed. How do I fire somebody? By apologizing for our failures. Why can’t I just tell people what to do? Because the more responsibility you have, the less authority you have. How do I know if I am a good manager? Employees ask you for advice. How do I know if I have good management team? Shit rolls uphill. </p>
+  </div>
+  <footer class="entry-footer"><span title='2016-07-03 21:16:34 +0800 +0800'>July 3, 2016</span></footer>
+  <a class="entry-link" aria-label="post link to A Manager&#39;s FAQ" href="http://h12.io/note/manager-faq/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">On Reliable Persistence
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>A short investigation on reliable persistence:
+Crash consistency is hard but possible at a huge performance cost
+Data safty must rely on distributed solution
+Raft Perhaps we should just give up manual fsync and rely on
+OS background flush corruption detection &amp; correction at startup replication </p>
+  </div>
+  <footer class="entry-footer"><span title='2016-07-02 19:03:40 +0800 +0800'>July 2, 2016</span></footer>
+  <a class="entry-link" aria-label="post link to On Reliable Persistence" href="http://h12.io/note/on-reliable-persistence/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">Note on OpenWRT
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>Obtain OpenWRT Find the device model at the Table of Hardware (Huawei HG556a C) Open Device Techdata for Firmware OpenWrt Install URL Open Device Page for Installation instructions Computer - Cable - Router Connect the computer to the router with a cable.
+Install OpenWRT Follow the instructions to install OpenWRT.
+SSH First login:
+telnet 192.168.1.1 Change password to enable SSH:
+passwd exit For public key authentication, add the public key:
+ssh-copy-id root@192.168.1.1 ssh root@192.168.1.1 mv ~/.ssh/authorized_keys /etc/dropbear exit WiFi In /etc/config/wireless:
+...</p>
+  </div>
+  <footer class="entry-footer"><span title='2016-02-27 14:59:54 +0800 +0800'>February 27, 2016</span></footer>
+  <a class="entry-link" aria-label="post link to Note on OpenWRT" href="http://h12.io/note/openwrt-note/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">About Pretty Printing
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>JSON cat xxx.json | jq . XML cat xxx.xml | xmllint --format - </p>
+  </div>
+  <footer class="entry-footer"><span title='2016-02-01 18:11:29 +0800 +0800'>February 1, 2016</span></footer>
+  <a class="entry-link" aria-label="post link to About Pretty Printing" href="http://h12.io/note/about-pretty-print/"></a>
+</article>
+<footer class="page-footer">
+  <nav class="pagination">
+    <a class="prev" href="http://h12.io/note/">
+      «&nbsp;Prev&nbsp;
+    </a>
+    <a class="next" href="http://h12.io/note/page/3/">Next&nbsp;&nbsp;»
+    </a>
+  </nav>
+</footer>
+    </main>
+    
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a><footer class="footer">
+        <p>&copy; 2012-2025, <span class="my-name">Hǎi-Liàng "Hal" Wáng</span>.</p>
+        <p xmlns:cc="http://creativecommons.org/ns#" xmlns:dct="http://purl.org/dc/terms/"><span property="dct:title">The content of this page</span> is licensed under <a href="https://creativecommons.org/licenses/by/4.0/?ref=chooser-v1" target="_blank" rel="license noopener noreferrer" style="display:inline-flex;align-items:center;">CC BY 4.0<img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/cc.svg?ref=chooser-v1" alt=""><img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/by.svg?ref=chooser-v1" alt=""></a></p>
+    </footer>
+
+
+<script>
+    let menu = document.getElementById('menu')
+    if (menu) {
+        menu.scrollLeft = localStorage.getItem("menu-scroll-position");
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        if (document.body.className.includes("dark")) {
+            document.body.classList.remove('dark');
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            document.body.classList.add('dark');
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+</body>
+
+</html>

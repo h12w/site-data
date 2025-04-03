@@ -1,27 +1,27 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
-    <title>Build on Hai-Liang &#34;Hal&#34; Wang</title>
+    <title>Build on @h12</title>
     <link>http://h12.io/tags/build/</link>
-    <description>Recent content in Build on Hai-Liang &#34;Hal&#34; Wang</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en-US</language>
-    <copyright>Copyright (c) 2012-2018, Hǎi-Liàng &#34;Hal&#34; Wáng; all rights reserved.</copyright>
+    <description>Recent content in Build on @h12</description>
+    <generator>Hugo -- 0.145.0</generator>
+    <language>en-us</language>
+    <copyright>2012-2025, Hǎi-Liàng &amp;ldquo;Hal&amp;rdquo; Wáng.</copyright>
     <lastBuildDate>Thu, 29 Jan 2015 03:55:08 +0000</lastBuildDate>
-    
-	<atom:link href="http://h12.io/tags/build/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <atom:link href="http://h12.io/tags/build/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Go 1.4.1 Build Failure and Solution</title>
       <link>http://h12.io/note/go-build-failure/</link>
       <pubDate>Thu, 29 Jan 2015 03:55:08 +0000</pubDate>
-      
       <guid>http://h12.io/note/go-build-failure/</guid>
-      <description>Today I tried to build Go 1.4.1 from source but it failed with this error:
- go/src/liblink/anames9.c:6:29: fatal error: ../cmd/9l/9.out.h: No such file or directory  At first I thought the building routine might have be changed so I opened and read Installing Go from Source again, carefully, and found nothing special.
-Then I searched for the error source and it turned out that I should deleted anames*.c, manually. There is no document and no automatic cleaning script, and you would have to figure it out yourself if no one ever mentioned it (source).</description>
+      <description>&lt;p&gt;Today I tried to build Go 1.4.1 from source but it failed with this error:&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;    go/src/liblink/anames9.c:6:29: fatal error: ../cmd/9l/9.out.h: No such file or directory
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;At first I thought the building routine might have be changed so I opened and read
+&lt;a href=&#34;http://golang.org/doc/install/source&#34;&gt;&lt;em&gt;Installing Go from Source&lt;/em&gt;&lt;/a&gt; again, carefully,
+and found nothing special.&lt;/p&gt;
+&lt;p&gt;Then I searched for the error source and it turned out that I should deleted
+&lt;code&gt;anames*.c&lt;/code&gt;, manually. There is no document and no automatic cleaning script, and
+you would have to figure it out yourself if no one ever mentioned it (&lt;a href=&#34;https://groups.google.com/d/msg/golang-nuts/wQoQqXOnOTo/QbubO2UebpUJ&#34;&gt;source&lt;/a&gt;).&lt;/p&gt;</description>
     </item>
-    
   </channel>
 </rss>

@@ -1,27 +1,25 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
-    <title>Mutex on Hai-Liang &#34;Hal&#34; Wang</title>
+    <title>Mutex on @h12</title>
     <link>http://h12.io/tags/mutex/</link>
-    <description>Recent content in Mutex on Hai-Liang &#34;Hal&#34; Wang</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en-US</language>
-    <copyright>Copyright (c) 2012-2018, Hǎi-Liàng &#34;Hal&#34; Wáng; all rights reserved.</copyright>
+    <description>Recent content in Mutex on @h12</description>
+    <generator>Hugo -- 0.145.0</generator>
+    <language>en-us</language>
+    <copyright>2012-2025, Hǎi-Liàng &amp;ldquo;Hal&amp;rdquo; Wáng.</copyright>
     <lastBuildDate>Mon, 30 Nov 2020 17:45:31 +0000</lastBuildDate>
-    
-	<atom:link href="http://h12.io/tags/mutex/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <atom:link href="http://h12.io/tags/mutex/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Go Pattern: Context-aware Lock</title>
       <link>http://h12.io/article/go-pattern-context-aware-lock/</link>
       <pubDate>Mon, 30 Nov 2020 17:45:31 +0000</pubDate>
-      
       <guid>http://h12.io/article/go-pattern-context-aware-lock/</guid>
-      <description>We often use Mutex or RWMutex as locks in Go, but sometimes we need a lock that can be cancelled by a context during the lock attempt.
-The pattern is simple - we use a channel with length 1:
-lockChan := make(chan struct{}, 1) lockChan &amp;lt;- struct{}{} // lock &amp;lt;- lockChan // unlock  When multiple goroutines try to obtain the lock, only one of them is able to fill into the only slot, and the rest are blocked until the slot is empty again after a readout.</description>
+      <description>&lt;p&gt;We often use &lt;code&gt;Mutex&lt;/code&gt; or &lt;code&gt;RWMutex&lt;/code&gt; as locks in Go, but sometimes we need a lock that can be cancelled by a context during the lock attempt.&lt;/p&gt;
+&lt;p&gt;The pattern is simple - we use a channel with length 1:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-go&#34; data-lang=&#34;go&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nx&#34;&gt;lockChan&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;:=&lt;/span&gt; &lt;span class=&#34;nb&#34;&gt;make&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;kd&#34;&gt;chan&lt;/span&gt; &lt;span class=&#34;kd&#34;&gt;struct&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;{},&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nx&#34;&gt;lockChan&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;&amp;lt;-&lt;/span&gt; &lt;span class=&#34;kd&#34;&gt;struct&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;{}{}&lt;/span&gt; &lt;span class=&#34;c1&#34;&gt;// lock&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;o&#34;&gt;&amp;lt;-&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;lockChan&lt;/span&gt;            &lt;span class=&#34;c1&#34;&gt;// unlock&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;When multiple goroutines try to obtain the lock, only one of them is able to fill into the only slot, and the rest are blocked until the slot is empty again after a readout.&lt;/p&gt;</description>
     </item>
-    
   </channel>
 </rss>

@@ -1,96 +1,142 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
-    <title>One Liner on Hai-Liang &#34;Hal&#34; Wang</title>
+    <title>One-Liner on @h12</title>
     <link>http://h12.io/tags/one-liner/</link>
-    <description>Recent content in One Liner on Hai-Liang &#34;Hal&#34; Wang</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en-US</language>
-    <copyright>Copyright (c) 2012-2018, Hǎi-Liàng &#34;Hal&#34; Wáng; all rights reserved.</copyright>
+    <description>Recent content in One-Liner on @h12</description>
+    <generator>Hugo -- 0.145.0</generator>
+    <language>en-us</language>
+    <copyright>2012-2025, Hǎi-Liàng &amp;ldquo;Hal&amp;rdquo; Wáng.</copyright>
     <lastBuildDate>Sat, 05 May 2018 16:02:07 +0800</lastBuildDate>
-    
-	<atom:link href="http://h12.io/tags/one-liner/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <atom:link href="http://h12.io/tags/one-liner/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>How to Start Godoc on Mac</title>
       <link>http://h12.io/note/start-godoc/</link>
       <pubDate>Sat, 05 May 2018 16:02:07 +0800</pubDate>
-      
       <guid>http://h12.io/note/start-godoc/</guid>
-      <description>Fish:
-godoc -http=:6060 &amp;amp;; disown (pidof godoc)  Bash:
-godoc -http=:6060 &amp;amp;; disown `pidof godoc`  And pidof can be installed with Homebrew.</description>
+      <description>&lt;p&gt;Fish:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fish&#34; data-lang=&#34;fish&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nf&#34;&gt;godoc&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;-http&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;:&lt;span class=&#34;m&#34;&gt;6060&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;&amp;amp;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt; &lt;span class=&#34;nb&#34;&gt;disown&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nf&#34;&gt;pidof&lt;/span&gt; godoc&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Bash:&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;godoc -http=:6060 &amp;amp;; disown `pidof godoc`
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;And pidof can be installed with Homebrew.&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>How to Measure Response Time with Curl</title>
       <link>http://h12.io/note/measure-response-time-with-curl/</link>
       <pubDate>Tue, 20 Jun 2017 12:40:10 +0800</pubDate>
-      
       <guid>http://h12.io/note/measure-response-time-with-curl/</guid>
-      <description>curl [args] --write-out &amp;quot;%{time_total}s&amp;quot; --output /dev/null --silent [URL]  </description>
+      <description>&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;curl &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;args&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt; --write-out &lt;span class=&#34;s2&#34;&gt;&amp;#34;%{time_total}s&amp;#34;&lt;/span&gt; --output /dev/null --silent &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;URL&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt; 
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
     </item>
-    
     <item>
       <title>A Single Command to Download a Website</title>
       <link>http://h12.io/note/download-website/</link>
       <pubDate>Sun, 09 Apr 2017 14:30:03 +0800</pubDate>
-      
       <guid>http://h12.io/note/download-website/</guid>
-      <description>wget --recursive --level=2 --no-parent --no-clobber --convert-links --continue [URL]  </description>
+      <description>&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;wget --recursive --level&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;2&lt;/span&gt; --no-parent --no-clobber --convert-links --continue
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;URL&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
     </item>
-    
     <item>
       <title>One-liner to check MongoDB Connections</title>
       <link>http://h12.io/note/mongodb-conn/</link>
       <pubDate>Fri, 02 Sep 2016 15:40:41 +0800</pubDate>
-      
       <guid>http://h12.io/note/mongodb-conn/</guid>
-      <description>mongo --eval &amp;quot;JSON.stringify(db.currentOp(true))&amp;quot; | \ tail -n +3 | \ jq -r .inprog[].client | \ sed &#39;s/\(.*\):.*/\1/&#39; \ | sort | uniq -c | sort -nr   dump connection information in standard JSON format remove MongoDB header extract IP:port as a list trim port sort IPs by freqencies  </description>
+      <description>&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;mongo --eval &amp;#34;JSON.stringify(db.currentOp(true))&amp;#34; | \
+tail -n +3 | \
+jq -r .inprog[].client | \
+sed &amp;#39;s/\(.*\):.*/\1/&amp;#39; \
+| sort | uniq -c | sort -nr
+&lt;/code&gt;&lt;/pre&gt;&lt;ul&gt;
+&lt;li&gt;dump connection information in standard JSON format&lt;/li&gt;
+&lt;li&gt;remove MongoDB header&lt;/li&gt;
+&lt;li&gt;extract IP:port as a list&lt;/li&gt;
+&lt;li&gt;trim port&lt;/li&gt;
+&lt;li&gt;sort IPs by freqencies&lt;/li&gt;
+&lt;/ul&gt;</description>
     </item>
-    
     <item>
       <title>Counting Word Frequencies in One Line</title>
       <link>http://h12.io/note/count-word-freq/</link>
       <pubDate>Tue, 09 Aug 2016 18:31:04 +0800</pubDate>
-      
       <guid>http://h12.io/note/count-word-freq/</guid>
-      <description>cat book.txt | \ tr &#39;!()[]{};:&amp;quot;,&amp;lt;.&amp;gt;?“”‘’*/\r&#39; &#39; &#39; | \ tr &#39; &#39; &#39;\n&#39; | \ grep -a -P &amp;quot;^[\p{L}\p{N}\-&#39;]+\$&amp;quot; | \ grep -a -P -v &amp;quot;^[\p{N}\-&#39;]+\$&amp;quot; | \ sed &amp;quot;s/&#39;s\$//&amp;quot; | \ sed &amp;quot;s/^&#39;//&amp;quot; | sed &amp;quot;s/&#39;\$//&amp;quot; &amp;gt; words.txt cat words.txt | \ sort | uniq -c | \ sort -nr | \ cut -c9- &amp;gt; words_desc.txt   replace punctuations with space; remove \r from `\r\n&amp;rsquo; one word per line keep only words composed of unicode letters, numbers, hyphen and apostrophe remove pure numbers remove &amp;rsquo;s remove starting and ending apostrophe output words.</description>
+      <description>&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;cat book.txt &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; &lt;span class=&#34;se&#34;&gt;\
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;se&#34;&gt;&lt;/span&gt;tr &lt;span class=&#34;s1&#34;&gt;&amp;#39;!()[]{};:&amp;#34;,&amp;lt;.&amp;gt;?“”‘’*/\r&amp;#39;&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39; &amp;#39;&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; &lt;span class=&#34;se&#34;&gt;\
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;se&#34;&gt;&lt;/span&gt;tr &lt;span class=&#34;s1&#34;&gt;&amp;#39; &amp;#39;&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;\n&amp;#39;&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; &lt;span class=&#34;se&#34;&gt;\
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;se&#34;&gt;&lt;/span&gt;grep -a -P &lt;span class=&#34;s2&#34;&gt;&amp;#34;^[\p{L}\p{N}\-&amp;#39;]+\$&amp;#34;&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; &lt;span class=&#34;se&#34;&gt;\
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;se&#34;&gt;&lt;/span&gt;grep -a -P -v &lt;span class=&#34;s2&#34;&gt;&amp;#34;^[\p{N}\-&amp;#39;]+\$&amp;#34;&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; &lt;span class=&#34;se&#34;&gt;\
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;se&#34;&gt;&lt;/span&gt;sed &lt;span class=&#34;s2&#34;&gt;&amp;#34;s/&amp;#39;s\$//&amp;#34;&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; &lt;span class=&#34;se&#34;&gt;\
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;se&#34;&gt;&lt;/span&gt;sed &lt;span class=&#34;s2&#34;&gt;&amp;#34;s/^&amp;#39;//&amp;#34;&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; sed &lt;span class=&#34;s2&#34;&gt;&amp;#34;s/&amp;#39;\$//&amp;#34;&lt;/span&gt; &amp;gt; words.txt
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;cat words.txt &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; &lt;span class=&#34;se&#34;&gt;\
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;se&#34;&gt;&lt;/span&gt;sort &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; uniq -c &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; &lt;span class=&#34;se&#34;&gt;\
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;se&#34;&gt;&lt;/span&gt;sort -nr &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; &lt;span class=&#34;se&#34;&gt;\
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;se&#34;&gt;&lt;/span&gt;cut -c9- &amp;gt; words_desc.txt
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;replace punctuations with space; remove &lt;code&gt;\r&lt;/code&gt; from `\r\n&#39;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;one word per line&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;keep only words composed of unicode letters, numbers, hyphen and apostrophe&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;remove pure numbers&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;remove &amp;rsquo;s&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;remove starting and ending apostrophe&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;output words.txt&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;sort and count unique words&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>How to Remove All Exited Containers &amp; Dangling Images for Docker?</title>
       <link>http://h12.io/note/remove-all-exited-docker-containers/</link>
       <pubDate>Mon, 03 Aug 2015 16:55:49 +0800</pubDate>
-      
       <guid>http://h12.io/note/remove-all-exited-docker-containers/</guid>
-      <description>Updates at 2020-07-08:
-docker system prune  Old tricks:
-docker ps --quiet --filter=status=exited | xargs docker rm  docker images --no-trunc=true --filter=&amp;quot;dangling=true&amp;quot; --quiet=true | xargs docker rmi  </description>
+      <description>&lt;p&gt;Updates at 2020-07-08:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;docker system prune
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Old tricks:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;docker ps --quiet --filter&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;status&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;exited &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; xargs docker rm
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;docker images --no-trunc&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;true&lt;/span&gt; --filter&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;dangling=true&amp;#34;&lt;/span&gt; --quiet&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;true&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; xargs docker rmi
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
     </item>
-    
     <item>
       <title>Tips on SSH</title>
       <link>http://h12.io/note/tips-on-ssh/</link>
       <pubDate>Tue, 28 Apr 2015 10:59:02 +0800</pubDate>
-      
       <guid>http://h12.io/note/tips-on-ssh/</guid>
-      <description>Generate SSH keys ssh-keygen -C w@h12.io  Authorize public key at remote server ssh-copy-id user@host  On Mac OSX, ssh-copy-id should be installed first.
-brew install ssh-copy-id  Generate PEM ssh-keygen -f ~/.ssh/id_rsa -e -m pem &amp;gt; ~/.ssh/id_rsa.pem  Copy file by base64 On remote session, run base64 &amp;lt; myfile and copy the output.
-On local terminal, run base64 -d &amp;gt; myfile, paste the content and press ctrl+D.</description>
+      <description>&lt;h2 id=&#34;generate-ssh-keys&#34;&gt;Generate SSH keys&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;ssh-keygen -C w@h12.io
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;authorize-public-key-at-remote-server&#34;&gt;Authorize public key at remote server&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;ssh-copy-id user@host
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;On Mac OSX, &lt;code&gt;ssh-copy-id&lt;/code&gt; should be installed first.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;brew install ssh-copy-id
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;generate-pem&#34;&gt;Generate PEM&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;ssh-keygen -f ~/.ssh/id_rsa -e -m pem &amp;gt; ~/.ssh/id_rsa.pem
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;copy-file-by-base64&#34;&gt;Copy file by base64&lt;/h2&gt;
+&lt;p&gt;On remote session, run &lt;code&gt;base64 &amp;lt; myfile&lt;/code&gt; and copy the output.&lt;/p&gt;
+&lt;p&gt;On local terminal, run &lt;code&gt;base64 -d &amp;gt; myfile&lt;/code&gt;, paste the content and press &lt;code&gt;ctrl+D&lt;/code&gt;.&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>How to Disable the Touchpad in Linux?</title>
       <link>http://h12.io/note/disable-touchpad/</link>
       <pubDate>Tue, 10 Jun 2014 23:00:24 +0000</pubDate>
-      
       <guid>http://h12.io/note/disable-touchpad/</guid>
-      <description>Have you ever been annoyed by accidentally touching the touchpad on your laptop when you are typing?
-I am using a Linux laptop with both trackpoint and touchpad so the touchpad is just an annoying redundant thing. Here is the one-liner to disable it:
-xinput list | grep TouchPad | grep -Po &#39;id=\K([0-9]+)&#39; | xargs xinput disable  </description>
+      <description>&lt;p&gt;Have you ever been annoyed by accidentally touching the touchpad on your laptop
+when you are typing?&lt;/p&gt;
+&lt;p&gt;I am using a Linux laptop with both trackpoint and touchpad so the touchpad is
+just an annoying redundant thing. Here is the one-liner to disable it:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;xinput list &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; grep TouchPad &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; grep -Po &lt;span class=&#34;s1&#34;&gt;&amp;#39;id=\K([0-9]+)&amp;#39;&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; xargs xinput disable
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
     </item>
-    
   </channel>
 </rss>

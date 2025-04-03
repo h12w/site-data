@@ -1,26 +1,54 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
-    <title>Vps on Hai-Liang &#34;Hal&#34; Wang</title>
+    <title>VPS on @h12</title>
     <link>http://h12.io/tags/vps/</link>
-    <description>Recent content in Vps on Hai-Liang &#34;Hal&#34; Wang</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en-US</language>
-    <copyright>Copyright (c) 2012-2018, Hǎi-Liàng &#34;Hal&#34; Wáng; all rights reserved.</copyright>
+    <description>Recent content in VPS on @h12</description>
+    <generator>Hugo -- 0.145.0</generator>
+    <language>en-us</language>
+    <copyright>2012-2025, Hǎi-Liàng &amp;ldquo;Hal&amp;rdquo; Wáng.</copyright>
     <lastBuildDate>Sat, 14 Feb 2015 09:30:55 +0000</lastBuildDate>
-    
-	<atom:link href="http://h12.io/tags/vps/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <atom:link href="http://h12.io/tags/vps/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>A Brief Note on Scientific Web Surfing</title>
       <link>http://h12.io/article/scientific-web-surfing/</link>
       <pubDate>Sat, 14 Feb 2015 09:30:55 +0000</pubDate>
-      
       <guid>http://h12.io/article/scientific-web-surfing/</guid>
-      <description>Knowledge is power. Information is liberating. &amp;mdash; by Kofi Annan.
-VPS  CloudsVM Vultr DigitalOcean BandwagonHOST  Client Area -&amp;gt; Services -&amp;gt; Order New Services 64MB RAM is enough for running both ShadowSocks and pdnsd Install Ubuntu LTS 32bit (x86, i686) or CentOS 7.   CentOS Install CentOS 7 (64bit) Shadowsocks cd /etc/yum.repos.d/ wget https://copr.fedorainfracloud.org/coprs/librehat/shadowsocks/repo/epel-7/librehat-shadowsocks-epel-7.repo yum update yum install shadowsocks-libev cd /etc/shadowsocks-libev/ vim config.json # server should be 0.</description>
+      <description>&lt;p&gt;&lt;em&gt;Knowledge is power. Information is liberating. &amp;mdash; by Kofi Annan.&lt;/em&gt;&lt;/p&gt;
+&lt;h2 id=&#34;vps&#34;&gt;VPS&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.cloudsvm.com/billing/aff.php?aff=140&#34;&gt;CloudsVM&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://www.vultr.com/?ref=6837862&#34;&gt;Vultr&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.digitalocean.com/?refcode=56202ab61fb7&#34;&gt;DigitalOcean&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://bandwagonhost.com/aff.php?aff=2128&#34;&gt;BandwagonHOST&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;Client Area -&amp;gt; Services -&amp;gt; Order New Services&lt;/li&gt;
+&lt;li&gt;64MB RAM is enough for running both ShadowSocks and pdnsd&lt;/li&gt;
+&lt;li&gt;Install Ubuntu LTS 32bit (x86, i686) or CentOS 7.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;centos&#34;&gt;CentOS&lt;/h2&gt;
+&lt;h3 id=&#34;install-centos-7-64bit&#34;&gt;Install CentOS 7 (64bit)&lt;/h3&gt;
+&lt;h3 id=&#34;shadowsocks&#34;&gt;Shadowsocks&lt;/h3&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;cd&lt;/span&gt; /etc/yum.repos.d/
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;wget https://copr.fedorainfracloud.org/coprs/librehat/shadowsocks/repo/epel-7/librehat-shadowsocks-epel-7.repo
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;yum update
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;yum install shadowsocks-libev
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;cd&lt;/span&gt; /etc/shadowsocks-libev/
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;vim config.json
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# server should be 0.0.0.0&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;vi /usr/lib/systemd/system/shadowsocks-libev.service
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# replace all $variables to constant values to fix the bug&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;systemctl &lt;span class=&#34;nb&#34;&gt;enable&lt;/span&gt; shadowsocks-libev
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;systemctl start shadowsocks-libev
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;pdnsd&#34;&gt;pdnsd&lt;/h3&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;wget http://members.home.nl/p.a.rombouts/pdnsd/releases/pdnsd-1.2.9a-par_sl6.x86_64.rpm
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;yum localinstall pdnsd-1.2.9a-par_sl6.x86_64.rpm
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;vim /etc/pdnsd.conf
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;pdnsd.conf (replace the port)&lt;/p&gt;</description>
     </item>
-    
   </channel>
 </rss>

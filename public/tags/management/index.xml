@@ -1,26 +1,33 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
-    <title>Management on Hai-Liang &#34;Hal&#34; Wang</title>
+    <title>Management on @h12</title>
     <link>http://h12.io/tags/management/</link>
-    <description>Recent content in Management on Hai-Liang &#34;Hal&#34; Wang</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en-US</language>
-    <copyright>Copyright (c) 2012-2018, Hǎi-Liàng &#34;Hal&#34; Wáng; all rights reserved.</copyright>
+    <description>Recent content in Management on @h12</description>
+    <generator>Hugo -- 0.145.0</generator>
+    <language>en-us</language>
+    <copyright>2012-2025, Hǎi-Liàng &amp;ldquo;Hal&amp;rdquo; Wáng.</copyright>
     <lastBuildDate>Sun, 03 Jul 2016 21:16:34 +0800</lastBuildDate>
-    
-	<atom:link href="http://h12.io/tags/management/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <atom:link href="http://h12.io/tags/management/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>A Manager&#39;s FAQ</title>
       <link>http://h12.io/note/manager-faq/</link>
       <pubDate>Sun, 03 Jul 2016 21:16:34 +0800</pubDate>
-      
       <guid>http://h12.io/note/manager-faq/</guid>
-      <description>This is an insightful list from Henry Ward:
- How do I get employees to perform better? Tell them what they are doing well. How do I give negative feedback? By being curious. How do I decide what to delegate? Delegate the work you want to do. How should I prioritize? Fix problems. Then prevent problems. How should I grade employees? Don’t. Teach them to self-evaluate. When do I fire somebody?</description>
+      <description>&lt;p&gt;This is an &lt;a href=&#34;https://readthink.com/a-managers-faq-35858a229f84#.7a4wlb9qy&#34;&gt;insightful list&lt;/a&gt;
+from [Henry Ward](Henry Ward):&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;How do I get employees to perform better?&lt;/strong&gt; Tell them what they are doing well.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;How do I give negative feedback?&lt;/strong&gt; By being curious.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;How do I decide what to delegate?&lt;/strong&gt; Delegate the work you want to do.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;How should I prioritize?&lt;/strong&gt; Fix problems. Then prevent problems.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;How should I grade employees?&lt;/strong&gt; Don’t. Teach them to self-evaluate.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;When do I fire somebody?&lt;/strong&gt; When you know they can’t succeed.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;How do I fire somebody?&lt;/strong&gt; By apologizing for our failures.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Why can’t I just tell people what to do?&lt;/strong&gt; Because the more responsibility you have, the less authority you have.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;How do I know if I am a good manager?&lt;/strong&gt; Employees ask you for advice.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;How do I know if I have good management team?&lt;/strong&gt; Shit rolls uphill.&lt;/li&gt;
+&lt;/ul&gt;</description>
     </item>
-    
   </channel>
 </rss>

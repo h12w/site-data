@@ -1,25 +1,55 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
-    <title>Word Frequency on Hai-Liang &#34;Hal&#34; Wang</title>
+    <title>Word Frequency on @h12</title>
     <link>http://h12.io/tags/word-frequency/</link>
-    <description>Recent content in Word Frequency on Hai-Liang &#34;Hal&#34; Wang</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en-US</language>
-    <copyright>Copyright (c) 2012-2018, Hǎi-Liàng &#34;Hal&#34; Wáng; all rights reserved.</copyright>
+    <description>Recent content in Word Frequency on @h12</description>
+    <generator>Hugo -- 0.145.0</generator>
+    <language>en-us</language>
+    <copyright>2012-2025, Hǎi-Liàng &amp;ldquo;Hal&amp;rdquo; Wáng.</copyright>
     <lastBuildDate>Tue, 09 Aug 2016 18:31:04 +0800</lastBuildDate>
-    
-	<atom:link href="http://h12.io/tags/word-frequency/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <atom:link href="http://h12.io/tags/word-frequency/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Counting Word Frequencies in One Line</title>
       <link>http://h12.io/note/count-word-freq/</link>
       <pubDate>Tue, 09 Aug 2016 18:31:04 +0800</pubDate>
-      
       <guid>http://h12.io/note/count-word-freq/</guid>
-      <description>cat book.txt | \ tr &#39;!()[]{};:&amp;quot;,&amp;lt;.&amp;gt;?“”‘’*/\r&#39; &#39; &#39; | \ tr &#39; &#39; &#39;\n&#39; | \ grep -a -P &amp;quot;^[\p{L}\p{N}\-&#39;]+\$&amp;quot; | \ grep -a -P -v &amp;quot;^[\p{N}\-&#39;]+\$&amp;quot; | \ sed &amp;quot;s/&#39;s\$//&amp;quot; | \ sed &amp;quot;s/^&#39;//&amp;quot; | sed &amp;quot;s/&#39;\$//&amp;quot; &amp;gt; words.txt cat words.txt | \ sort | uniq -c | \ sort -nr | \ cut -c9- &amp;gt; words_desc.txt   replace punctuations with space; remove \r from `\r\n&amp;rsquo; one word per line keep only words composed of unicode letters, numbers, hyphen and apostrophe remove pure numbers remove &amp;rsquo;s remove starting and ending apostrophe output words.</description>
+      <description>&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;cat book.txt &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; &lt;span class=&#34;se&#34;&gt;\
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;se&#34;&gt;&lt;/span&gt;tr &lt;span class=&#34;s1&#34;&gt;&amp;#39;!()[]{};:&amp;#34;,&amp;lt;.&amp;gt;?“”‘’*/\r&amp;#39;&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39; &amp;#39;&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; &lt;span class=&#34;se&#34;&gt;\
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;se&#34;&gt;&lt;/span&gt;tr &lt;span class=&#34;s1&#34;&gt;&amp;#39; &amp;#39;&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;\n&amp;#39;&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; &lt;span class=&#34;se&#34;&gt;\
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;se&#34;&gt;&lt;/span&gt;grep -a -P &lt;span class=&#34;s2&#34;&gt;&amp;#34;^[\p{L}\p{N}\-&amp;#39;]+\$&amp;#34;&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; &lt;span class=&#34;se&#34;&gt;\
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;se&#34;&gt;&lt;/span&gt;grep -a -P -v &lt;span class=&#34;s2&#34;&gt;&amp;#34;^[\p{N}\-&amp;#39;]+\$&amp;#34;&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; &lt;span class=&#34;se&#34;&gt;\
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;se&#34;&gt;&lt;/span&gt;sed &lt;span class=&#34;s2&#34;&gt;&amp;#34;s/&amp;#39;s\$//&amp;#34;&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; &lt;span class=&#34;se&#34;&gt;\
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;se&#34;&gt;&lt;/span&gt;sed &lt;span class=&#34;s2&#34;&gt;&amp;#34;s/^&amp;#39;//&amp;#34;&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; sed &lt;span class=&#34;s2&#34;&gt;&amp;#34;s/&amp;#39;\$//&amp;#34;&lt;/span&gt; &amp;gt; words.txt
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;cat words.txt &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; &lt;span class=&#34;se&#34;&gt;\
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;se&#34;&gt;&lt;/span&gt;sort &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; uniq -c &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; &lt;span class=&#34;se&#34;&gt;\
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;se&#34;&gt;&lt;/span&gt;sort -nr &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; &lt;span class=&#34;se&#34;&gt;\
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;se&#34;&gt;&lt;/span&gt;cut -c9- &amp;gt; words_desc.txt
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;replace punctuations with space; remove &lt;code&gt;\r&lt;/code&gt; from `\r\n&#39;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;one word per line&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;keep only words composed of unicode letters, numbers, hyphen and apostrophe&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;remove pure numbers&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;remove &amp;rsquo;s&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;remove starting and ending apostrophe&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;output words.txt&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;sort and count unique words&lt;/p&gt;</description>
     </item>
-    
   </channel>
 </rss>

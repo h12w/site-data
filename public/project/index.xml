@@ -1,200 +1,493 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
-    <title>Projects on Hai-Liang &#34;Hal&#34; Wang</title>
+    <title>Projects on @h12</title>
     <link>http://h12.io/project/</link>
-    <description>Recent content in Projects on Hai-Liang &#34;Hal&#34; Wang</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en-US</language>
-    <copyright>Copyright (c) 2012-2018, Hǎi-Liàng &#34;Hal&#34; Wáng; all rights reserved.</copyright>
+    <description>Recent content in Projects on @h12</description>
+    <generator>Hugo -- 0.145.0</generator>
+    <language>en-us</language>
+    <copyright>2012-2025, Hǎi-Liàng &amp;ldquo;Hal&amp;rdquo; Wáng.</copyright>
     <lastBuildDate>Fri, 14 Dec 2018 00:00:00 +0000</lastBuildDate>
-    
-	<atom:link href="http://h12.io/project/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <atom:link href="http://h12.io/project/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Run: Graceful Goroutine Orchestration</title>
       <link>http://h12.io/project/run/</link>
       <pubDate>Fri, 14 Dec 2018 00:00:00 +0000</pubDate>
-      
       <guid>http://h12.io/project/run/</guid>
-      <description>Overview While Go provides goroutines, channels and selects as first-class citizens to support concurrent programming, it is not trivial to combine these elements to address important concerns of goroutine orchestration, e.g. error handling, panic recovery, goroutine leak prevention, goroutine reuse, goroutine throttle and logging.
-The package provides a mini-framework to address those cross-cutting concerns.
-Quick start go get -u h12.io/run  Here is an example illustrating the usage of the goroutine pool and the group.</description>
+      <description>&lt;p&gt;&lt;a href=&#34;https://godoc.org/h12.io/run&#34;&gt;&lt;img alt=&#34;GoDoc&#34; loading=&#34;lazy&#34; src=&#34;https://godoc.org/h12.io/run?status.svg&#34;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&#34;overview&#34;&gt;Overview&lt;/h2&gt;
+&lt;p&gt;While Go provides goroutines, channels and selects as first-class citizens to
+support concurrent programming, it is not trivial to combine these elements
+to address important concerns of goroutine orchestration, e.g. error handling,
+panic recovery, goroutine leak prevention, goroutine reuse, goroutine throttle
+and logging.&lt;/p&gt;
+&lt;p&gt;The package provides a mini-framework to address those cross-cutting concerns.&lt;/p&gt;
+&lt;h2 id=&#34;quick-start&#34;&gt;Quick start&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;go get -u h12.io/run
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Here is an example illustrating the usage of the goroutine pool and the group.
+The task is described in the &amp;ldquo;Google Search 2.0&amp;rdquo; page from &lt;a href=&#34;https://talks.golang.org/2012/concurrency.slide#46&#34;&gt;this slide&lt;/a&gt;.&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>buid: Bipartite Unique Identifier</title>
       <link>http://h12.io/project/buid/</link>
       <pubDate>Wed, 15 Nov 2017 20:00:00 +0800</pubDate>
-      
       <guid>http://h12.io/project/buid/</guid>
-      <description>A BUID is a 128-bit unique ID composed of two 64-bit parts: shard and key.
-It is not only a unique ID, but also contains the sharding information, so that the messages with the same BUID could be stored together within the same DB shard.
-Also, when a message is stored in a shard, the shard part of the BUID can be trimmed off to save the space, and only the key part needs to be stored as the primary key.</description>
+      <description>&lt;p&gt;A BUID is a 128-bit unique ID composed of two 64-bit parts: shard and key.&lt;/p&gt;
+&lt;p&gt;It is not only a unique ID, but also contains the sharding information, so that the messages with the same BUID could be stored together within the same DB shard.&lt;/p&gt;
+&lt;p&gt;Also, when a message is stored in a shard, the shard part of the BUID can be trimmed off to save the space, and only the key part needs to be stored as the primary key.&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>ua: User-Agent parser in Go</title>
       <link>http://h12.io/project/ua/</link>
       <pubDate>Mon, 18 Jul 2016 06:00:00 +0800</pubDate>
-      
       <guid>http://h12.io/project/ua/</guid>
-      <description>Design The UA detection algorithm is a pipeline containing 3 steps:
- Scan: scan products and its corresponding comments from a UA string. Parse: parse device info from products. Detect: detect device model by looking up in a database and get related info, e.g. screen resolution.  Scan The scanner scans the user agent string into products. Each product has its own name, version and comments. e.g.
-For user agent string:</description>
+      <description>&lt;h2 id=&#34;design&#34;&gt;Design&lt;/h2&gt;
+&lt;p&gt;The UA detection algorithm is a pipeline containing 3 steps:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Scan: scan products and its corresponding comments from a UA string.&lt;/li&gt;
+&lt;li&gt;Parse: parse device info from products.&lt;/li&gt;
+&lt;li&gt;Detect: detect device model by looking up in a database and get related info, e.g. screen resolution.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id=&#34;scan&#34;&gt;Scan&lt;/h3&gt;
+&lt;p&gt;The scanner scans the user agent string into products. Each product has its own name, version and comments. e.g.&lt;/p&gt;
+&lt;p&gt;For user agent string:&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;Mozilla/5.0 (Linux; U; Android ROM v3; en-us; ALCATEL ONE TOUCH 991 Build/GRK39F) AppleWebKit/533.1 (KHTML, like Gecko) Version/4.0 Mobile Safari/533.1
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Its products are:&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>SEJ: Message Queue Based on Segmented Journals</title>
       <link>http://h12.io/project/sej/</link>
       <pubDate>Sat, 14 Nov 2015 15:00:00 +0800</pubDate>
-      
       <guid>http://h12.io/project/sej/</guid>
-      <description>h12.io/sej provides composable components of distributed, persisted message queue and allows trading off between reliablilty, latency and throughput with minimal devops overhead.
-Package Organization  h12.io/sej: writer, scanner and offset  shard: sharding hub: copying across machines cmd/sej: command line tool   SEJ Directory [root-dir]/ [sej-dir]/ jnl.lck jnl/ 0000000000000000.jnl 000000001f9e521e.jnl ...... ofs/ reader1.ofs reader1.lck reader2.ofs reader2.lck ......  Journal File format segment_file = { message } . message = offset timestamp type key value size .</description>
+      <description>&lt;p&gt;&lt;code&gt;h12.io/sej&lt;/code&gt; provides composable components of distributed, persisted message queue and allows trading off between reliablilty, latency and throughput with minimal devops overhead.&lt;/p&gt;
+&lt;h2 id=&#34;package-organization&#34;&gt;Package Organization&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;h12.io/sej: writer, scanner and offset
+&lt;ul&gt;
+&lt;li&gt;shard: sharding&lt;/li&gt;
+&lt;li&gt;hub: copying across machines&lt;/li&gt;
+&lt;li&gt;cmd/sej: command line tool&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;sej-directory&#34;&gt;SEJ Directory&lt;/h2&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;[root-dir]/
+    [sej-dir]/
+        jnl.lck
+        jnl/
+            0000000000000000.jnl
+            000000001f9e521e.jnl
+            ......
+        ofs/
+            reader1.ofs
+            reader1.lck
+            reader2.ofs
+            reader2.lck
+            ......
+&lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&#34;journal-file-format&#34;&gt;Journal File format&lt;/h2&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;segment_file = { message }                          .
+message      = offset timestamp type key value size .
+offset       = uint64                               .
+timestamp    = int64                                .
+type         = uint8                                .
+key          = key_size { uint8 }                   .
+key_size     = int8                                 .
+value        = value_size { uint8 }                 .
+value_size   = int32                                .
+size         = int32                                .
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;All integers are written in the big endian format.&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>RealTest: real test environment for Go</title>
       <link>http://h12.io/project/realtest/</link>
       <pubDate>Sat, 14 Nov 2015 13:57:09 +0800</pubDate>
-      
       <guid>http://h12.io/project/realtest/</guid>
-      <description>h12.io/realtest provides real test environment for Go unit testing, based on Docker.
-Includes:
- Queue  Kafka cluster (with zookeeper)  Database:  MySQL MongoDB  Cache  Redis  Configuration service  ZooKeeper   </description>
+      <description>&lt;p&gt;h12.io/realtest provides real test environment for Go unit testing, based on Docker.&lt;/p&gt;
+&lt;p&gt;Includes:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Queue
+&lt;ul&gt;
+&lt;li&gt;Kafka cluster (with zookeeper)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Database:
+&lt;ul&gt;
+&lt;li&gt;MySQL&lt;/li&gt;
+&lt;li&gt;MongoDB&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Cache
+&lt;ul&gt;
+&lt;li&gt;Redis&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Configuration service
+&lt;ul&gt;
+&lt;li&gt;ZooKeeper&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;</description>
     </item>
-    
     <item>
       <title>JSON Schema parser &amp; code generator</title>
       <link>http://h12.io/project/json-schema/</link>
       <pubDate>Wed, 04 Nov 2015 19:00:00 +0800</pubDate>
-      
       <guid>http://h12.io/project/json-schema/</guid>
-      <description>json-schema generates Go struct from a JSON Schema specification.
-Decimal types are supported for accurate currency calculation.</description>
+      <description>&lt;p&gt;json-schema generates Go struct from a JSON Schema specification.&lt;/p&gt;
+&lt;p&gt;Decimal types are supported for accurate currency calculation.&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Aliyun OSS Go SDK</title>
       <link>http://h12.io/project/aliyun-oss-go-sdk/</link>
       <pubDate>Thu, 22 Oct 2015 15:32:58 +0800</pubDate>
-      
       <guid>http://h12.io/project/aliyun-oss-go-sdk/</guid>
-      <description>Aliyun OSS (Object Storage Service) Go SDK is a client SDK to access Aliyun OSS API, implemented in the Go programming language.
-Installation go get -u github.com/aliyun/aliyun-oss-go-sdk/oss go test -v -cover github.com/aliyun/aliyun-oss-go-sdk/oss  Highlights  Complete set of Aliyun OSS API Thouroughly tested  100% test coverage intuitive table driven tests full test suite completes within 2 seconds  Lint clean  golint go fmt goimports go vet race detector  Idiomatic &amp;amp; elegant  response is returned as a parsed object error is returned as a Go error named options for setting headers &amp;amp; parameters  Great extensibility  clean and orthogonal implementation users can easily extend the SDK when a new API method is supported  No third party dependencies  Documentation  Overview API Object Bucket Object Optional Headers and Parameters Multipart Upload Cross-Origin Resource Sharing (CORS) Object Lifecycle Management Extending the SDK  Differences with Python SDK  HTTP header User-Agent, e.</description>
+      <description>&lt;p&gt;&lt;a href=&#34;https://drone.io/github.com/h12w/aliyun-oss-go-sdk/latest&#34;&gt;&lt;img alt=&#34;Build\nStatus&#34; loading=&#34;lazy&#34; src=&#34;https://drone.io/github.com/h12w/aliyun-oss-go-sdk/status.png&#34;&gt;&lt;/a&gt;
+&lt;a href=&#34;https://coveralls.io/github/h12w/aliyun-oss-go-sdk?branch=master&#34;&gt;&lt;img alt=&#34;Coverage\nStatus&#34; loading=&#34;lazy&#34; src=&#34;https://coveralls.io/repos/h12w/aliyun-oss-go-sdk/badge.svg?branch=master&amp;service=github&#34;&gt;&lt;/a&gt;
+&lt;a href=&#34;https://godoc.org/github.com/aliyun/aliyun-oss-go-sdk/oss&#34;&gt;&lt;img alt=&#34;GoDoc&#34; loading=&#34;lazy&#34; src=&#34;https://godoc.org/github.com/aliyun/aliyun-oss-go-sdk/oss?status.svg&#34;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Aliyun OSS (Object Storage Service) Go SDK is a client SDK to access Aliyun OSS
+API, implemented in the Go programming language.&lt;/p&gt;
+&lt;h2 id=&#34;installation&#34;&gt;Installation&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;go get -u github.com/aliyun/aliyun-oss-go-sdk/oss
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;go &lt;span class=&#34;nb&#34;&gt;test&lt;/span&gt; -v -cover github.com/aliyun/aliyun-oss-go-sdk/oss
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;highlights&#34;&gt;Highlights&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Complete set of Aliyun OSS API&lt;/li&gt;
+&lt;li&gt;Thouroughly tested
+&lt;ul&gt;
+&lt;li&gt;100% test coverage&lt;/li&gt;
+&lt;li&gt;intuitive table driven tests&lt;/li&gt;
+&lt;li&gt;full test suite completes within 2 seconds&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Lint clean
+&lt;ul&gt;
+&lt;li&gt;golint&lt;/li&gt;
+&lt;li&gt;go fmt&lt;/li&gt;
+&lt;li&gt;goimports&lt;/li&gt;
+&lt;li&gt;go vet&lt;/li&gt;
+&lt;li&gt;race detector&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Idiomatic &amp;amp; elegant
+&lt;ul&gt;
+&lt;li&gt;response is returned as a parsed object&lt;/li&gt;
+&lt;li&gt;error is returned as a Go error&lt;/li&gt;
+&lt;li&gt;named options for setting headers &amp;amp; parameters&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Great extensibility
+&lt;ul&gt;
+&lt;li&gt;clean and orthogonal implementation&lt;/li&gt;
+&lt;li&gt;users can easily extend the SDK when a new API method is supported&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;No third party dependencies&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;documentation&#34;&gt;Documentation&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;doc/overview.md&#34;&gt;Overview&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;doc/api-object.md&#34;&gt;API Object&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;doc/bucket.md&#34;&gt;Bucket&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;doc/object.md&#34;&gt;Object&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;doc/options.md&#34;&gt;Optional Headers and Parameters&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;doc/upload.md&#34;&gt;Multipart Upload&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;doc/cors.md&#34;&gt;Cross-Origin Resource Sharing (CORS)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;doc/lifecycle.md&#34;&gt;Object Lifecycle Management&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;doc/extend.md&#34;&gt;Extending the SDK&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;differences-with-python-sdk&#34;&gt;Differences with Python SDK&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;HTTP header User-Agent, e.g. aliyun-sdk-go/0.1.1 (Linux/3.16.0-51-generic/x86_64;go1.5.1)&lt;/li&gt;
+&lt;li&gt;Go HTTP client does not support 100-Continue (will be supported after Go 1.6, see &lt;a href=&#34;https://github.com/golang/go/issues/3665&#34;&gt;https://github.com/golang/go/issues/3665&lt;/a&gt;)&lt;/li&gt;
+&lt;li&gt;HTTP header keys are automatically converted into canonical format, e.g.
+x-oss-acl becomes X-Oss-Acl&lt;/li&gt;
+&lt;li&gt;Go GET request does not have redundant &amp;ldquo;Content-Length: 0&amp;rdquo; header&lt;/li&gt;
+&lt;li&gt;Parameters will be omitted if the argument is not set&lt;/li&gt;
+&lt;li&gt;Go always sends URL parameters and headers in canonical order&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;license&#34;&gt;License&lt;/h2&gt;
+&lt;p&gt;licensed under the &lt;a href=&#34;https://www.apache.org/licenses/LICENSE-2.0.html&#34;&gt;Apache License 2.0&lt;/a&gt;&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>kpax: a modular &amp; idiomatic Kafka client in Go</title>
       <link>http://h12.io/project/kpax/</link>
       <pubDate>Thu, 23 Jul 2015 13:36:25 +0800</pubDate>
-      
       <guid>http://h12.io/project/kpax/</guid>
-      <description>Install go get -u h12.io/kpax  Talk I gave a talk about Kpax at Gopher Meetup Shanghai 2016. See the slides.
-Design The client is built on top of Kafka Wire Protocol (i.e. low-level API). The protocol related types &amp;amp; marshal/unmarshal functions are automatically generated by wipro from the HTML spec).
-(-) means to be done.
-Sub packages  model is an abstraction model for request, response, broker and cluster broker is a lazy, asynchronous and recoverable round tripper that talks to a single Kafka broker cluster is a metadata manager that talks to a Kafka cluster proto contains both low level API and a &amp;ldquo;middle&amp;rdquo; level facade producer: fault tolerant high-level producer (batching and partitioning strategy) consumer: fault tolerant high-level consumer (consumer group and offset commit) log: replaceable global logger cmd  kpax: command line tool to help with Kafka programming   Compatibility Compatible with Kafka Server 0.</description>
+      <description>&lt;p&gt;&lt;a href=&#34;https://godoc.org/h12.io/kpax&#34;&gt;&lt;img alt=&#34;GoDoc&#34; loading=&#34;lazy&#34; src=&#34;https://godoc.org/h12.io/kpax?status.svg&#34;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&#34;install&#34;&gt;Install&lt;/h2&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;go get -u h12.io/kpax
+&lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&#34;talk&#34;&gt;Talk&lt;/h2&gt;
+&lt;p&gt;I gave a talk about Kpax at Gopher Meetup Shanghai 2016. See the &lt;a href=&#34;https://h12.io/slide/kpax&#34;&gt;slides&lt;/a&gt;.&lt;/p&gt;
+&lt;h2 id=&#34;design&#34;&gt;Design&lt;/h2&gt;
+&lt;p&gt;The client is built on top of Kafka Wire Protocol (i.e. low-level API). The protocol related types &amp;amp; marshal/unmarshal functions are automatically generated by &lt;a href=&#34;https://github.com/h12w/wipro&#34;&gt;wipro&lt;/a&gt; from &lt;a href=&#34;https://cwiki.apache.org/confluence/display/KAFKA/A+Guide+To+The+Kafka+Protocol&#34;&gt;the HTML spec&lt;/a&gt;).&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;(-)&lt;/code&gt; means to be done.&lt;/p&gt;
+&lt;h3 id=&#34;sub-packages&#34;&gt;Sub packages&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;model&lt;/strong&gt; is an abstraction model for request, response, broker and cluster&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;broker&lt;/strong&gt; is a lazy, asynchronous and recoverable round tripper that talks to a single Kafka broker&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;cluster&lt;/strong&gt; is a metadata manager that talks to a Kafka cluster&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;proto&lt;/strong&gt; contains both low level API and a &amp;ldquo;middle&amp;rdquo; level facade&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;producer&lt;/strong&gt;: fault tolerant high-level producer (batching and partitioning strategy)&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;consumer&lt;/strong&gt;: fault tolerant high-level consumer (consumer group and offset commit)&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;log&lt;/strong&gt;: replaceable global logger&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;cmd&lt;/strong&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;kpax&lt;/strong&gt;: command line tool to help with Kafka programming&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;compatibility&#34;&gt;Compatibility&lt;/h3&gt;
+&lt;p&gt;Compatible with Kafka Server 0.8.2.&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Schemata: database scheme extractor &amp; code generator in Go</title>
       <link>http://h12.io/project/schemata/</link>
       <pubDate>Tue, 19 May 2015 18:00:00 +0800</pubDate>
-      
       <guid>http://h12.io/project/schemata/</guid>
-      <description>Database scheme extractor &amp;amp; code generator in Go. Supported database:
- MySQL SQLite  </description>
+      <description>&lt;p&gt;Database scheme extractor &amp;amp; code generator in Go. Supported database:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;MySQL&lt;/li&gt;
+&lt;li&gt;SQLite&lt;/li&gt;
+&lt;/ol&gt;</description>
     </item>
-    
     <item>
       <title>Gombi: Creating Your Own Parser is Easier than Regular Expressions</title>
       <link>http://h12.io/project/gombi/</link>
       <pubDate>Thu, 07 Aug 2014 00:00:00 +0800</pubDate>
-      
       <guid>http://h12.io/project/gombi/</guid>
-      <description>Gombi is a combinator-style scanner &amp;amp; parser library written in Go. It is practical, reasonably fast and extremely easy to use.
-Quick start go get -u h12.io/gombi  Design Combinator parsers are straightforward to construct, modular and easily maintainable, compared to parser generators like Lex/Yacc.
- Internal DSL  no additional code generation and compilation.  Composable  a subset of the syntax tree is also a parser. a language can be easily embedded into another one.</description>
+      <description>&lt;p&gt;Gombi is a combinator-style scanner &amp;amp; parser library written in Go. It is
+practical, reasonably fast and extremely easy to use.&lt;/p&gt;
+&lt;h2 id=&#34;quick-start&#34;&gt;Quick start&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;go get -u h12.io/gombi
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;design&#34;&gt;Design&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&#34;http://en.wikipedia.org/wiki/Parser_combinator&#34;&gt;Combinator parsers&lt;/a&gt; are
+straightforward to construct, modular and easily maintainable, compared to
+parser generators like Lex/Yacc.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Internal DSL
+&lt;ul&gt;
+&lt;li&gt;no additional code generation and compilation.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Composable
+&lt;ul&gt;
+&lt;li&gt;a subset of the syntax tree is also a parser.&lt;/li&gt;
+&lt;li&gt;a language can be easily embedded into another one.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Gombi is inspired by but not limited to parser combinators. Unlike a combinator
+parser, Gombi neither limits its API to functional only, nor limits its
+implementation to functional combinators. Go is not a pure functional language
+as Haskell, so cloning a combinator parser like Parsec to Go will only lead to
+an implementaion much worse than Parsec. Instead, Gombi is free to choose any Go
+language structures that are suitable for a modular and convenient API, and any
+algorithms that can be efficiently implemented in Go.&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>gosweep: A shell script to do various checks on Go code</title>
       <link>http://h12.io/project/gosweep/</link>
       <pubDate>Thu, 05 Jun 2014 23:00:00 +0800</pubDate>
-      
       <guid>http://h12.io/project/gosweep/</guid>
-      <description>This script performs the build, test and automatic checking of a Go package and its sub-packages using:
- gofmt goimports golint go vet ineffassign race detector test coverage on package and its sub-packages, /vendor directories excluded goveralls gocyclo misspell  Migrated from my Gist.
-Dependencies To setup all the dependencies need to run the script do:
-$ go get -v github.com/client9/misspell/cmd/misspell $ go get -v github.com/fzipp/gocyclo $ go get -v github.</description>
+      <description>&lt;p&gt;This script performs the build, test and automatic checking of a Go package and its sub-packages using:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;a href=&#34;http://golang.org/cmd/gofmt/&#34; title=&#34;gofmt&#34;&gt;gofmt&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://godoc.org/golang.org/x/tools/cmd/goimports&#34; title=&#34;golang.org/x/tools/cmd/goimports&#34;&gt;goimports&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/golang/lint&#34; title=&#34;golang/lint&#34;&gt;golint&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://golang.org/cmd/vet&#34; title=&#34;go vet&#34;&gt;go vet&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/gordonklaus/ineffassign&#34; title=&#34;ineffassign&#34;&gt;ineffassign&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://blog.golang.org/race-detector&#34; title=&#34;race detector&#34;&gt;race detector&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://blog.golang.org/cover&#34; title=&#34;test coverage&#34;&gt;test coverage&lt;/a&gt; on package and its sub-packages, &lt;code&gt;/vendor&lt;/code&gt; directories excluded&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/mattn/goveralls&#34; title=&#34;mattn/goveralls&#34;&gt;goveralls&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/fzipp/gocyclo&#34; title=&#34;gocyclo&#34;&gt;gocyclo&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/client9/misspell&#34; title=&#34;misspell&#34;&gt;misspell&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Migrated from my &lt;a href=&#34;https://gist.github.com/h12w/0f22736320abe6be71ce&#34;&gt;Gist&lt;/a&gt;.&lt;/p&gt;
+&lt;h2 id=&#34;dependencies&#34;&gt;Dependencies&lt;/h2&gt;
+&lt;p&gt;To setup all the dependencies need to run the script do:&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;$ go get -v github.com/client9/misspell/cmd/misspell
+$ go get -v github.com/fzipp/gocyclo
+$ go get -v github.com/golang/lint/golint
+$ go get -v github.com/gordonklaus/ineffassign
+$ go get -v github.com/h12w/gosweep
+$ go get -v github.com/mattn/goveralls
+$ go get -v golang.org/x/tools/cmd/goimports
+&lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&#34;environment-variables&#34;&gt;Environment variables&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;GOCYCLO_COMPLEXITY&lt;/strong&gt;: maximum allowed function complexity threshold (default: &lt;code&gt;5&lt;/code&gt;).&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;MISSPELL_LOCALE&lt;/strong&gt;: English locale (default: &lt;code&gt;US&lt;/code&gt;).&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;If you wish to set this for a project you can create a &lt;code&gt;.gosweep&lt;/code&gt; file.
+For example:&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Getgo: a concurrent, simple and extensible web scraping framework</title>
       <link>http://h12.io/project/getgo/</link>
       <pubDate>Mon, 02 Jun 2014 01:21:00 +0000</pubDate>
-      
       <guid>http://h12.io/project/getgo/</guid>
-      <description>Getgo is a concurrent, simple and extensible web scraping framework written in Go.
-Quick start Get Getgo go get -u github.com/h12w/getgo  Define a task This example is under the examples/goblog directory. To use Getgo to scrap structured data from a web page, just define the structured data as a Go struct (golangBlogEntry), and define a corresponding task (golangBlogIndexTask).
-type golangBlogEntry struct { Title string URL string Tags *string } type golangBlogIndexTask struct { // Variables in task URL, e.</description>
+      <description>&lt;p&gt;&lt;a href=&#34;https://godoc.org/github.com/h12w/getgo&#34;&gt;&lt;img alt=&#34;GoDoc&#34; loading=&#34;lazy&#34; src=&#34;https://godoc.org/github.com/h12w/getgo?status.png&#34;&gt;&lt;/a&gt;
+&lt;a href=&#34;https://travis-ci.org/h12w/getgo&#34;&gt;&lt;img alt=&#34;Build Status&#34; loading=&#34;lazy&#34; src=&#34;https://travis-ci.org/h12w/getgo.svg?branch=master&#34;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Getgo is a concurrent, simple and extensible web scraping framework written in &lt;a href=&#34;http://golang.org&#34;&gt;Go&lt;/a&gt;.&lt;/p&gt;
+&lt;h2 id=&#34;quick-start&#34;&gt;Quick start&lt;/h2&gt;
+&lt;h3 id=&#34;get-getgo&#34;&gt;Get Getgo&lt;/h3&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;go get -u github.com/h12w/getgo
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;define-a-task&#34;&gt;Define a task&lt;/h3&gt;
+&lt;p&gt;This example is under the examples/goblog directory. To use Getgo to scrap structured
+data from a web page, just define the structured data as a Go struct (golangBlogEntry),
+and define a corresponding task (golangBlogIndexTask).&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-go&#34; data-lang=&#34;go&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;kd&#34;&gt;type&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;golangBlogEntry&lt;/span&gt; &lt;span class=&#34;kd&#34;&gt;struct&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	&lt;span class=&#34;nx&#34;&gt;Title&lt;/span&gt; &lt;span class=&#34;kt&#34;&gt;string&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	&lt;span class=&#34;nx&#34;&gt;URL&lt;/span&gt;   &lt;span class=&#34;kt&#34;&gt;string&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	&lt;span class=&#34;nx&#34;&gt;Tags&lt;/span&gt;  &lt;span class=&#34;o&#34;&gt;*&lt;/span&gt;&lt;span class=&#34;kt&#34;&gt;string&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;kd&#34;&gt;type&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;golangBlogIndexTask&lt;/span&gt; &lt;span class=&#34;kd&#34;&gt;struct&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	&lt;span class=&#34;c1&#34;&gt;// Variables in task URL, e.g. page number&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;kd&#34;&gt;func&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;t&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;golangBlogIndexTask&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;Request&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;()&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;*&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;http&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;Request&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	&lt;span class=&#34;k&#34;&gt;return&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;getReq&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;`http://blog.golang.org/index`&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;kd&#34;&gt;func&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;t&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;golangBlogIndexTask&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;Handle&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;root&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;*&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;query&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;Node&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;s&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;getgo&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;Storer&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;err&lt;/span&gt; &lt;span class=&#34;kt&#34;&gt;error&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	&lt;span class=&#34;nx&#34;&gt;root&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nf&#34;&gt;Div&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nf&#34;&gt;_Id&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;content&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)).&lt;/span&gt;&lt;span class=&#34;nf&#34;&gt;Children&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nf&#34;&gt;_Class&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;blogtitle&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)).&lt;/span&gt;&lt;span class=&#34;nf&#34;&gt;For&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;kd&#34;&gt;func&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;item&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;*&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;query&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;Node&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;		&lt;span class=&#34;nx&#34;&gt;title&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;:=&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;item&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nf&#34;&gt;Ahref&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;().&lt;/span&gt;&lt;span class=&#34;nf&#34;&gt;Text&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;()&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;		&lt;span class=&#34;nx&#34;&gt;url&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;:=&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;item&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nf&#34;&gt;Ahref&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;().&lt;/span&gt;&lt;span class=&#34;nf&#34;&gt;Href&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;()&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;		&lt;span class=&#34;nx&#34;&gt;tags&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;:=&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;item&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nf&#34;&gt;Span&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nf&#34;&gt;_Class&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;tags&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)).&lt;/span&gt;&lt;span class=&#34;nf&#34;&gt;Text&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;()&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;		&lt;span class=&#34;k&#34;&gt;if&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;url&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;!=&lt;/span&gt; &lt;span class=&#34;kc&#34;&gt;nil&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;title&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;!=&lt;/span&gt; &lt;span class=&#34;kc&#34;&gt;nil&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;			&lt;span class=&#34;nf&#34;&gt;store&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;amp;&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;golangBlogEntry&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;Title&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;*&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;title&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;URL&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;*&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;url&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;Tags&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;tags&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;},&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;s&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;&amp;amp;&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;err&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;		&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	&lt;span class=&#34;p&#34;&gt;})&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	&lt;span class=&#34;k&#34;&gt;return&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;run-the-task&#34;&gt;Run the task&lt;/h3&gt;
+&lt;p&gt;Use util.Run to run the task and print all the result to standard output.&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>GSpec: a productive Go test framework</title>
       <link>http://h12.io/project/gspec/</link>
       <pubDate>Wed, 28 May 2014 00:00:00 +0000</pubDate>
-      
       <guid>http://h12.io/project/gspec/</guid>
-      <description>&lt;p&gt;&lt;a href=&#34;https://app.wercker.com/project/bykey/d5ed30f0d03d4a5210f65659ead13888&#34;&gt;&lt;img src=&#34;https://app.wercker.com/status/d5ed30f0d03d4a5210f65659ead13888/s&#34; alt=&#34;wercker status&#34; title=&#34;wercker status&#34; /&gt;&lt;/a&gt;
-&lt;a href=&#34;https://godoc.org/h12.io/gspec&#34;&gt;&lt;img src=&#34;https://godoc.org/h12.io/gspec?status.png&#34; alt=&#34;GoDoc&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
-
+      <description>&lt;p&gt;&lt;a href=&#34;https://app.wercker.com/project/bykey/d5ed30f0d03d4a5210f65659ead13888&#34;&gt;&lt;img alt=&#34;wercker status&#34; loading=&#34;lazy&#34; src=&#34;https://app.wercker.com/status/d5ed30f0d03d4a5210f65659ead13888/s&#34; title=&#34;wercker status&#34;&gt;&lt;/a&gt;
+&lt;a href=&#34;https://godoc.org/h12.io/gspec&#34;&gt;&lt;img alt=&#34;GoDoc&#34; loading=&#34;lazy&#34; src=&#34;https://godoc.org/h12.io/gspec?status.png&#34;&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;GSpec is an &lt;em&gt;expressive, reliable, concurrent and extensible&lt;/em&gt; Go test framework
 that makes it productive to organize and verify the mind model of software.&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>html-query: a fluent and functional approach to querying HTML DOM</title>
       <link>http://h12.io/project/html-query/</link>
       <pubDate>Mon, 20 Jan 2014 01:49:08 +0000</pubDate>
-      
       <guid>http://h12.io/project/html-query/</guid>
-      <description>html-query is a Go package that provides a fluent and functional interface for querying HTML DOM. It is based on go.net/html.
-Examples  A simple example (under &amp;ldquo;examples&amp;rdquo; directory)
-r := get(`http://blog.golang.org/index`) defer r.Close() root, err := query.Parse(r) checkError(err) root.Div(Id(&amp;quot;content&amp;quot;)).Children(Class(&amp;quot;blogtitle&amp;quot;)).For(func(item *query.Node) { href := item.Ahref().Href() date := item.Span(Class(&amp;quot;date&amp;quot;)).Text() tags := item.Span(Class(&amp;quot;tags&amp;quot;)).Text() // ...... })  Generator of html-query (under &amp;ldquo;gen&amp;rdquo; directory)
-  A large part of html-query is automatically generated from HTML spec.</description>
+      <description>&lt;p&gt;html-query is a Go package that provides a fluent and functional interface for
+querying HTML DOM. It is based on &lt;a href=&#34;http://code.google.com/p/go.net/html&#34;&gt;go.net/html&lt;/a&gt;.&lt;/p&gt;
+&lt;h2 id=&#34;examples&#34;&gt;Examples&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;A simple example (under &amp;ldquo;examples&amp;rdquo; directory)&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-go&#34; data-lang=&#34;go&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nx&#34;&gt;r&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;:=&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;get&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;`http://blog.golang.org/index`&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;defer&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;r&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nf&#34;&gt;Close&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;()&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nx&#34;&gt;root&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;err&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;:=&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;query&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nf&#34;&gt;Parse&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;r&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nf&#34;&gt;checkError&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;err&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nx&#34;&gt;root&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nf&#34;&gt;Div&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nf&#34;&gt;Id&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;content&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)).&lt;/span&gt;&lt;span class=&#34;nf&#34;&gt;Children&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nf&#34;&gt;Class&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;blogtitle&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)).&lt;/span&gt;&lt;span class=&#34;nf&#34;&gt;For&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;kd&#34;&gt;func&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;item&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;*&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;query&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;Node&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;nx&#34;&gt;href&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;:=&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;item&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nf&#34;&gt;Ahref&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;().&lt;/span&gt;&lt;span class=&#34;nf&#34;&gt;Href&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;()&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;nx&#34;&gt;date&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;:=&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;item&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nf&#34;&gt;Span&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nf&#34;&gt;Class&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;date&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)).&lt;/span&gt;&lt;span class=&#34;nf&#34;&gt;Text&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;()&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;nx&#34;&gt;tags&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;:=&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;item&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nf&#34;&gt;Span&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nf&#34;&gt;Class&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;tags&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)).&lt;/span&gt;&lt;span class=&#34;nf&#34;&gt;Text&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;()&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;c1&#34;&gt;// ......&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;})&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Generator of html-query (under &amp;ldquo;gen&amp;rdquo; directory)&lt;/p&gt;
+&lt;p&gt;A large part of html-query is automatically generated from HTML spec. The
+spec is in HTML format, so the generator parses it using html-query itself.&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Cwrap: wraps C libraries in Go</title>
       <link>http://h12.io/project/cwrap/</link>
       <pubDate>Wed, 01 Jan 2014 01:30:04 +0000</pubDate>
-      
       <guid>http://h12.io/project/cwrap/</guid>
-      <description>Cwrap is a Go wrapper generator for C libraries.
-Features  No Cgo types exposed out of the wrapper package, and uses as less allocation/copy as possible. C name prefix mapped to Go packages, and a wrapper package can import another wrapper package. Follows Go naming conventions. C union. Use Go language features when possible:  string and bool. Multiple return values. Slice, slice of slice and slice of string.</description>
+      <description>&lt;p&gt;Cwrap is a Go wrapper generator for C libraries.&lt;/p&gt;
+&lt;h2 id=&#34;features&#34;&gt;Features&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;No Cgo types exposed out of the wrapper package, and uses as less allocation/copy as possible.&lt;/li&gt;
+&lt;li&gt;C name prefix mapped to Go packages, and a wrapper package can import another wrapper package.&lt;/li&gt;
+&lt;li&gt;Follows Go naming conventions.&lt;/li&gt;
+&lt;li&gt;C union.&lt;/li&gt;
+&lt;li&gt;Use Go language features when possible:
+&lt;ul&gt;
+&lt;li&gt;string and bool.&lt;/li&gt;
+&lt;li&gt;Multiple return values.&lt;/li&gt;
+&lt;li&gt;Slice, slice of slice and slice of string.&lt;/li&gt;
+&lt;li&gt;struct with methods.&lt;/li&gt;
+&lt;li&gt;Go closures as callbacks.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Stay out of the way when you need to do it manually for specified declarations.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;usage&#34;&gt;Usage&lt;/h2&gt;
+&lt;p&gt;Cwrap itself is a Go package rather than an executable program. Just fill a cwrap.Package struct literal and call its Wrap method to generate your wrapper package under $GOPATH. Here is a simple example:&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>xsd: XML tagged struct generator for Go</title>
       <link>http://h12.io/project/xsd/</link>
       <pubDate>Wed, 01 Jan 2014 00:00:00 +0800</pubDate>
-      
       <guid>http://h12.io/project/xsd/</guid>
-      <description>xsd is a Go package that generates tagged struct from XML Schema (xsd). When only the XML file is available, an xsd file can be automatically generated by a XML Schema learner, such as &amp;ldquo;github.com/kore/XML-Schema-learner&amp;rdquo;.</description>
+      <description>&lt;p&gt;xsd is a Go package that generates tagged struct from XML Schema (xsd). When only
+the XML file is available, an xsd file can be automatically generated by a XML
+Schema learner, such as &amp;ldquo;github.com/kore/XML-Schema-learner&amp;rdquo;.&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>SOCKS: a SOCKS Proxy Package for Go</title>
       <link>http://h12.io/project/socks/</link>
       <pubDate>Wed, 01 Aug 2012 23:57:54 +0000</pubDate>
-      
       <guid>http://h12.io/project/socks/</guid>
-      <description>SOCKS is a SOCKS4, SOCKS4A and SOCKS5 proxy package for Go.
-Quick Start Get the package go get -u &amp;quot;h12.io/socks&amp;quot;  Import the package import &amp;quot;h12.io/socks&amp;quot;  Create a SOCKS proxy dialling function dialSocksProxy := socks.Dial(&amp;quot;socks5://127.0.0.1:1080?timeout=5s&amp;quot;) tr := &amp;amp;http.Transport{Dial: dialSocksProxy} httpClient := &amp;amp;http.Client{Transport: tr}  User/password authentication dialSocksProxy := socks.Dial(&amp;quot;socks5://user:password@127.0.0.1:1080?timeout=5s&amp;quot;)  Example package main import ( &amp;quot;fmt&amp;quot; &amp;quot;io/ioutil&amp;quot; &amp;quot;log&amp;quot; &amp;quot;net/http&amp;quot; &amp;quot;h12.io/socks&amp;quot; ) func main() { dialSocksProxy := socks.Dial(&amp;quot;socks5://127.0.0.1:1080?timeout=5s&amp;quot;) tr := &amp;amp;http.</description>
+      <description>&lt;p&gt;&lt;a href=&#34;https://godoc.org/h12.io/socks&#34;&gt;&lt;img alt=&#34;GoDoc&#34; loading=&#34;lazy&#34; src=&#34;https://godoc.org/h12.io/socks?status.svg&#34;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;SOCKS is a SOCKS4, SOCKS4A and SOCKS5 proxy package for Go.&lt;/p&gt;
+&lt;h2 id=&#34;quick-start&#34;&gt;Quick Start&lt;/h2&gt;
+&lt;h3 id=&#34;get-the-package&#34;&gt;Get the package&lt;/h3&gt;
+&lt;pre&gt;&lt;code&gt;go get -u &amp;quot;h12.io/socks&amp;quot;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id=&#34;import-the-package&#34;&gt;Import the package&lt;/h3&gt;
+&lt;pre&gt;&lt;code&gt;import &amp;quot;h12.io/socks&amp;quot;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id=&#34;create-a-socks-proxy-dialling-function&#34;&gt;Create a SOCKS proxy dialling function&lt;/h3&gt;
+&lt;pre&gt;&lt;code&gt;dialSocksProxy := socks.Dial(&amp;quot;socks5://127.0.0.1:1080?timeout=5s&amp;quot;)
+tr := &amp;amp;http.Transport{Dial: dialSocksProxy}
+httpClient := &amp;amp;http.Client{Transport: tr}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id=&#34;userpassword-authentication&#34;&gt;User/password authentication&lt;/h3&gt;
+&lt;pre&gt;&lt;code&gt;dialSocksProxy := socks.Dial(&amp;quot;socks5://user:password@127.0.0.1:1080?timeout=5s&amp;quot;)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2 id=&#34;example&#34;&gt;Example&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-go&#34; data-lang=&#34;go&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;kn&#34;&gt;package&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;main&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;kn&#34;&gt;import&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	&lt;span class=&#34;s&#34;&gt;&amp;#34;fmt&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	&lt;span class=&#34;s&#34;&gt;&amp;#34;io/ioutil&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	&lt;span class=&#34;s&#34;&gt;&amp;#34;log&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	&lt;span class=&#34;s&#34;&gt;&amp;#34;net/http&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	&lt;span class=&#34;s&#34;&gt;&amp;#34;h12.io/socks&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;kd&#34;&gt;func&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;main&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;()&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	&lt;span class=&#34;nx&#34;&gt;dialSocksProxy&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;:=&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;socks&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nf&#34;&gt;Dial&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;socks5://127.0.0.1:1080?timeout=5s&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	&lt;span class=&#34;nx&#34;&gt;tr&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;:=&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;&amp;amp;&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;http&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;Transport&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;Dial&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;dialSocksProxy&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	&lt;span class=&#34;nx&#34;&gt;httpClient&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;:=&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;&amp;amp;&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;http&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;Client&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;Transport&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;tr&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	&lt;span class=&#34;nx&#34;&gt;resp&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;err&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;:=&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;httpClient&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nf&#34;&gt;Get&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;http://www.google.com&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	&lt;span class=&#34;k&#34;&gt;if&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;err&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;!=&lt;/span&gt; &lt;span class=&#34;kc&#34;&gt;nil&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;		&lt;span class=&#34;nx&#34;&gt;log&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nf&#34;&gt;Fatal&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;err&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	&lt;span class=&#34;k&#34;&gt;defer&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;resp&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;Body&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nf&#34;&gt;Close&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;()&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	&lt;span class=&#34;k&#34;&gt;if&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;resp&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;StatusCode&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;!=&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;http&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;StatusOK&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;		&lt;span class=&#34;nx&#34;&gt;log&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nf&#34;&gt;Fatal&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;resp&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;StatusCode&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	&lt;span class=&#34;nx&#34;&gt;buf&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;err&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;:=&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;ioutil&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nf&#34;&gt;ReadAll&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;resp&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;Body&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	&lt;span class=&#34;k&#34;&gt;if&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;err&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;!=&lt;/span&gt; &lt;span class=&#34;kc&#34;&gt;nil&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;		&lt;span class=&#34;nx&#34;&gt;log&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nf&#34;&gt;Fatal&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;err&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	&lt;span class=&#34;nx&#34;&gt;fmt&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nf&#34;&gt;Println&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;string&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;buf&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;))&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
     </item>
-    
   </channel>
 </rss>

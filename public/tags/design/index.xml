@@ -1,35 +1,36 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
-    <title>Design on Hai-Liang &#34;Hal&#34; Wang</title>
+    <title>Design on @h12</title>
     <link>http://h12.io/tags/design/</link>
-    <description>Recent content in Design on Hai-Liang &#34;Hal&#34; Wang</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en-US</language>
-    <copyright>Copyright (c) 2012-2018, Hǎi-Liàng &#34;Hal&#34; Wáng; all rights reserved.</copyright>
+    <description>Recent content in Design on @h12</description>
+    <generator>Hugo -- 0.145.0</generator>
+    <language>en-us</language>
+    <copyright>2012-2025, Hǎi-Liàng &amp;ldquo;Hal&amp;rdquo; Wáng.</copyright>
     <lastBuildDate>Mon, 29 Jun 2015 16:34:59 +0800</lastBuildDate>
-    
-	<atom:link href="http://h12.io/tags/design/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <atom:link href="http://h12.io/tags/design/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Notes on the Design of Go</title>
       <link>http://h12.io/note/go-design/</link>
       <pubDate>Mon, 29 Jun 2015 16:34:59 +0800</pubDate>
-      
       <guid>http://h12.io/note/go-design/</guid>
-      <description>Refusing new features Avoid leaky abstraction as much as possible. If an abstraction is not solid enough, you’d rather not use them at all. Go is designed like this, the features are carefully selected. If a feature is not solid enough, it will not be allowed to enter Go.
-No implicit string concatenation Rob: That used to be in the language but was dropped when the semicolon insertion rules went in.</description>
+      <description>&lt;h3 id=&#34;refusing-new-features&#34;&gt;Refusing new features&lt;/h3&gt;
+&lt;p&gt;Avoid &lt;a href=&#34;https://en.wikipedia.org/wiki/Leaky_abstraction&#34;&gt;leaky abstraction&lt;/a&gt; as much as possible. If an abstraction is not solid enough, you’d rather not use them at all. Go is designed like this, the features are carefully selected. If a feature is not solid enough, it will not be allowed to enter Go.&lt;/p&gt;
+&lt;h3 id=&#34;no-implicit-string-concatenation&#34;&gt;No implicit string concatenation&lt;/h3&gt;
+&lt;p&gt;&lt;a href=&#34;https://groups.google.com/d/msg/golang-nuts/S6a3bg65TBE/ikyNMzUSnXsJ&#34;&gt;Rob&lt;/a&gt;:
+That used to be in the language but was dropped when the semicolon insertion rules went in. You need the + to be able to span lines, and if you can&amp;rsquo;t span lines operatorless concatenation is close to pointless.&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>A List of URLs about Web Design</title>
       <link>http://h12.io/note/web-design-site/</link>
       <pubDate>Thu, 10 Jul 2014 04:04:00 +0000</pubDate>
-      
       <guid>http://h12.io/note/web-design-site/</guid>
-      <description> The Elements of Typographic Style Applied to the Web Smashing Magazine Trentwalton Inkwell  </description>
+      <description>&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;http://webtypography.net/&#34;&gt;The Elements of Typographic Style Applied to the Web&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://www.smashingmagazine.com/&#34;&gt;Smashing Magazine&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://trentwalton.com/&#34;&gt;Trentwalton&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://www.inkwell.ie/&#34;&gt;Inkwell&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</description>
     </item>
-    
   </channel>
 </rss>

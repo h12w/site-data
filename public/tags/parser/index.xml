@@ -1,57 +1,82 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
-    <title>Parser on Hai-Liang &#34;Hal&#34; Wang</title>
+    <title>Parser on @h12</title>
     <link>http://h12.io/tags/parser/</link>
-    <description>Recent content in Parser on Hai-Liang &#34;Hal&#34; Wang</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en-US</language>
-    <copyright>Copyright (c) 2012-2018, Hǎi-Liàng &#34;Hal&#34; Wáng; all rights reserved.</copyright>
+    <description>Recent content in Parser on @h12</description>
+    <generator>Hugo -- 0.145.0</generator>
+    <language>en-us</language>
+    <copyright>2012-2025, Hǎi-Liàng &amp;ldquo;Hal&amp;rdquo; Wáng.</copyright>
     <lastBuildDate>Mon, 18 Jul 2016 06:00:00 +0800</lastBuildDate>
-    
-	<atom:link href="http://h12.io/tags/parser/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <atom:link href="http://h12.io/tags/parser/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>ua: User-Agent parser in Go</title>
       <link>http://h12.io/project/ua/</link>
       <pubDate>Mon, 18 Jul 2016 06:00:00 +0800</pubDate>
-      
       <guid>http://h12.io/project/ua/</guid>
-      <description>Design The UA detection algorithm is a pipeline containing 3 steps:
- Scan: scan products and its corresponding comments from a UA string. Parse: parse device info from products. Detect: detect device model by looking up in a database and get related info, e.g. screen resolution.  Scan The scanner scans the user agent string into products. Each product has its own name, version and comments. e.g.
-For user agent string:</description>
+      <description>&lt;h2 id=&#34;design&#34;&gt;Design&lt;/h2&gt;
+&lt;p&gt;The UA detection algorithm is a pipeline containing 3 steps:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Scan: scan products and its corresponding comments from a UA string.&lt;/li&gt;
+&lt;li&gt;Parse: parse device info from products.&lt;/li&gt;
+&lt;li&gt;Detect: detect device model by looking up in a database and get related info, e.g. screen resolution.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id=&#34;scan&#34;&gt;Scan&lt;/h3&gt;
+&lt;p&gt;The scanner scans the user agent string into products. Each product has its own name, version and comments. e.g.&lt;/p&gt;
+&lt;p&gt;For user agent string:&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;Mozilla/5.0 (Linux; U; Android ROM v3; en-us; ALCATEL ONE TOUCH 991 Build/GRK39F) AppleWebKit/533.1 (KHTML, like Gecko) Version/4.0 Mobile Safari/533.1
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Its products are:&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>JSON Schema parser &amp; code generator</title>
       <link>http://h12.io/project/json-schema/</link>
       <pubDate>Wed, 04 Nov 2015 19:00:00 +0800</pubDate>
-      
       <guid>http://h12.io/project/json-schema/</guid>
-      <description>json-schema generates Go struct from a JSON Schema specification.
-Decimal types are supported for accurate currency calculation.</description>
+      <description>&lt;p&gt;json-schema generates Go struct from a JSON Schema specification.&lt;/p&gt;
+&lt;p&gt;Decimal types are supported for accurate currency calculation.&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Gombi: Creating Your Own Parser is Easier than Regular Expressions</title>
       <link>http://h12.io/project/gombi/</link>
       <pubDate>Thu, 07 Aug 2014 00:00:00 +0800</pubDate>
-      
       <guid>http://h12.io/project/gombi/</guid>
-      <description>Gombi is a combinator-style scanner &amp;amp; parser library written in Go. It is practical, reasonably fast and extremely easy to use.
-Quick start go get -u h12.io/gombi  Design Combinator parsers are straightforward to construct, modular and easily maintainable, compared to parser generators like Lex/Yacc.
- Internal DSL  no additional code generation and compilation.  Composable  a subset of the syntax tree is also a parser. a language can be easily embedded into another one.</description>
+      <description>&lt;p&gt;Gombi is a combinator-style scanner &amp;amp; parser library written in Go. It is
+practical, reasonably fast and extremely easy to use.&lt;/p&gt;
+&lt;h2 id=&#34;quick-start&#34;&gt;Quick start&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;go get -u h12.io/gombi
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;design&#34;&gt;Design&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&#34;http://en.wikipedia.org/wiki/Parser_combinator&#34;&gt;Combinator parsers&lt;/a&gt; are
+straightforward to construct, modular and easily maintainable, compared to
+parser generators like Lex/Yacc.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Internal DSL
+&lt;ul&gt;
+&lt;li&gt;no additional code generation and compilation.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Composable
+&lt;ul&gt;
+&lt;li&gt;a subset of the syntax tree is also a parser.&lt;/li&gt;
+&lt;li&gt;a language can be easily embedded into another one.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Gombi is inspired by but not limited to parser combinators. Unlike a combinator
+parser, Gombi neither limits its API to functional only, nor limits its
+implementation to functional combinators. Go is not a pure functional language
+as Haskell, so cloning a combinator parser like Parsec to Go will only lead to
+an implementaion much worse than Parsec. Instead, Gombi is free to choose any Go
+language structures that are suitable for a modular and convenient API, and any
+algorithms that can be efficiently implemented in Go.&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>xsd: XML tagged struct generator for Go</title>
       <link>http://h12.io/project/xsd/</link>
       <pubDate>Wed, 01 Jan 2014 00:00:00 +0800</pubDate>
-      
       <guid>http://h12.io/project/xsd/</guid>
-      <description>xsd is a Go package that generates tagged struct from XML Schema (xsd). When only the XML file is available, an xsd file can be automatically generated by a XML Schema learner, such as &amp;ldquo;github.com/kore/XML-Schema-learner&amp;rdquo;.</description>
+      <description>&lt;p&gt;xsd is a Go package that generates tagged struct from XML Schema (xsd). When only
+the XML file is available, an xsd file can be automatically generated by a XML
+Schema learner, such as &amp;ldquo;github.com/kore/XML-Schema-learner&amp;rdquo;.&lt;/p&gt;</description>
     </item>
-    
   </channel>
 </rss>

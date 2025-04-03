@@ -1,27 +1,34 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
-    <title>Susy on Hai-Liang &#34;Hal&#34; Wang</title>
+    <title>Susy on @h12</title>
     <link>http://h12.io/tags/susy/</link>
-    <description>Recent content in Susy on Hai-Liang &#34;Hal&#34; Wang</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en-US</language>
-    <copyright>Copyright (c) 2012-2018, Hǎi-Liàng &#34;Hal&#34; Wáng; all rights reserved.</copyright>
+    <description>Recent content in Susy on @h12</description>
+    <generator>Hugo -- 0.145.0</generator>
+    <language>en-us</language>
+    <copyright>2012-2025, Hǎi-Liàng &amp;ldquo;Hal&amp;rdquo; Wáng.</copyright>
     <lastBuildDate>Thu, 17 Jul 2014 02:29:57 +0000</lastBuildDate>
-    
-	<atom:link href="http://h12.io/tags/susy/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <atom:link href="http://h12.io/tags/susy/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Installing Susy</title>
       <link>http://h12.io/note/install-susy/</link>
       <pubDate>Thu, 17 Jul 2014 02:29:57 +0000</pubDate>
-      
       <guid>http://h12.io/note/install-susy/</guid>
-      <description>The script:
-sudo apt-get install ruby sudo apt-get install ruby-dev sudo gem install susy -V sudo gem install compass --pre -V sudo gem lnstall breakpoint -V  Notes:
- The current version of Susy uses a higher version of Sass than Compass, so the corresponding Compass version has to be a prerelease (&amp;ndash;pre). The installing process is slow and it feels better to print it out (-V). You may have to run &amp;ldquo;compass watch&amp;rdquo; with sudo (issue 1497).</description>
+      <description>&lt;p&gt;The script:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sudo apt-get install ruby
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sudo apt-get install ruby-dev
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sudo gem install susy -V
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sudo gem install compass --pre -V
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sudo gem lnstall breakpoint -V
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Notes:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;The current version of Susy uses a higher version of Sass than Compass, so the
+corresponding Compass version has to be a prerelease (&amp;ndash;pre).&lt;/li&gt;
+&lt;li&gt;The installing process is slow and it feels better to print it out (-V).&lt;/li&gt;
+&lt;li&gt;You may have to run &amp;ldquo;compass watch&amp;rdquo; with sudo (&lt;a href=&#34;https://github.com/Compass/compass/issues/1497&#34;&gt;issue 1497&lt;/a&gt;).&lt;/li&gt;
+&lt;li&gt;An alternative &lt;a href=&#34;https://ruby.taobao.org/&#34;&gt;RubyGems source&lt;/a&gt; that is close to
+your location might help.&lt;/li&gt;
+&lt;/ul&gt;</description>
     </item>
-    
   </channel>
 </rss>

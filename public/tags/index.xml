@@ -1,1330 +1,1035 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
-    <title>Tags on Hai-Liang &#34;Hal&#34; Wang</title>
+    <title>Tags on @h12</title>
     <link>http://h12.io/tags/</link>
-    <description>Recent content in Tags on Hai-Liang &#34;Hal&#34; Wang</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en-US</language>
-    <copyright>Copyright (c) 2012-2018, Hǎi-Liàng &#34;Hal&#34; Wáng; all rights reserved.</copyright>
-    <lastBuildDate>Fri, 25 Jul 2014 03:39:05 +0000</lastBuildDate>
-    
-	<atom:link href="http://h12.io/tags/index.xml" rel="self" type="application/rss+xml" />
-    
-    
-    <item>
-      <title>301</title>
-      <link>http://h12.io/tags/301/</link>
-      <pubDate>Fri, 25 Jul 2014 03:39:05 +0000</pubDate>
-      
-      <guid>http://h12.io/tags/301/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Aliyun Oss</title>
-      <link>http://h12.io/tags/aliyun-oss/</link>
-      <pubDate>Thu, 22 Oct 2015 15:32:58 +0800</pubDate>
-      
-      <guid>http://h12.io/tags/aliyun-oss/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Android</title>
-      <link>http://h12.io/tags/android/</link>
-      <pubDate>Sat, 17 Jan 2015 18:13:09 +0000</pubDate>
-      
-      <guid>http://h12.io/tags/android/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Anti Pattern</title>
-      <link>http://h12.io/tags/anti-pattern/</link>
-      <pubDate>Fri, 08 Jan 2021 10:48:26 +0000</pubDate>
-      
-      <guid>http://h12.io/tags/anti-pattern/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>App Engine</title>
-      <link>http://h12.io/tags/app-engine/</link>
-      <pubDate>Sun, 06 Jul 2014 06:39:27 +0000</pubDate>
-      
-      <guid>http://h12.io/tags/app-engine/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Atlassian</title>
-      <link>http://h12.io/tags/atlassian/</link>
-      <pubDate>Mon, 05 Sep 2016 10:30:49 +0800</pubDate>
-      
-      <guid>http://h12.io/tags/atlassian/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Automatic Deployment</title>
-      <link>http://h12.io/tags/automatic-deployment/</link>
-      <pubDate>Thu, 17 Jul 2014 14:54:26 +0000</pubDate>
-      
-      <guid>http://h12.io/tags/automatic-deployment/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Bash</title>
-      <link>http://h12.io/tags/bash/</link>
-      <pubDate>Thu, 05 Jun 2014 23:00:00 +0800</pubDate>
-      
-      <guid>http://h12.io/tags/bash/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Batch</title>
-      <link>http://h12.io/tags/batch/</link>
-      <pubDate>Sun, 22 Nov 2020 17:38:34 +0000</pubDate>
-      
-      <guid>http://h12.io/tags/batch/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Benchmark</title>
-      <link>http://h12.io/tags/benchmark/</link>
-      <pubDate>Fri, 19 Jun 2020 13:58:46 +0100</pubDate>
-      
-      <guid>http://h12.io/tags/benchmark/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Boolean Algebra</title>
-      <link>http://h12.io/tags/boolean-algebra/</link>
-      <pubDate>Mon, 14 Dec 2020 10:46:33 +0000</pubDate>
-      
-      <guid>http://h12.io/tags/boolean-algebra/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Buffered Writer</title>
-      <link>http://h12.io/tags/buffered-writer/</link>
-      <pubDate>Sun, 22 Nov 2020 17:38:34 +0000</pubDate>
-      
-      <guid>http://h12.io/tags/buffered-writer/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Build</title>
-      <link>http://h12.io/tags/build/</link>
-      <pubDate>Thu, 29 Jan 2015 03:55:08 +0000</pubDate>
-      
-      <guid>http://h12.io/tags/build/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Builder</title>
-      <link>http://h12.io/tags/builder/</link>
-      <pubDate>Sun, 22 Nov 2020 17:38:34 +0000</pubDate>
-      
-      <guid>http://h12.io/tags/builder/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Ca Certificate</title>
-      <link>http://h12.io/tags/ca-certificate/</link>
-      <pubDate>Sat, 17 Jan 2015 18:13:09 +0000</pubDate>
-      
-      <guid>http://h12.io/tags/ca-certificate/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Cgo</title>
-      <link>http://h12.io/tags/cgo/</link>
-      <pubDate>Wed, 01 Jan 2014 01:30:04 +0000</pubDate>
-      
-      <guid>http://h12.io/tags/cgo/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Cheatsheet</title>
-      <link>http://h12.io/tags/cheatsheet/</link>
-      <pubDate>Fri, 20 Apr 2018 10:14:06 +0800</pubDate>
-      
-      <guid>http://h12.io/tags/cheatsheet/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>China</title>
-      <link>http://h12.io/tags/china/</link>
-      <pubDate>Sat, 14 Feb 2015 09:30:55 +0000</pubDate>
-      
-      <guid>http://h12.io/tags/china/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Closer</title>
-      <link>http://h12.io/tags/closer/</link>
-      <pubDate>Fri, 08 Jan 2021 10:48:26 +0000</pubDate>
-      
-      <guid>http://h12.io/tags/closer/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Code Block</title>
-      <link>http://h12.io/tags/code-block/</link>
-      <pubDate>Mon, 05 Sep 2016 10:30:49 +0800</pubDate>
-      
-      <guid>http://h12.io/tags/code-block/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Combinator</title>
-      <link>http://h12.io/tags/combinator/</link>
-      <pubDate>Mon, 20 Jan 2014 01:49:08 +0000</pubDate>
-      
-      <guid>http://h12.io/tags/combinator/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Compass</title>
-      <link>http://h12.io/tags/compass/</link>
-      <pubDate>Thu, 17 Jul 2014 02:29:57 +0000</pubDate>
-      
-      <guid>http://h12.io/tags/compass/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Connection Leak</title>
-      <link>http://h12.io/tags/connection-leak/</link>
-      <pubDate>Fri, 02 Sep 2016 15:40:41 +0800</pubDate>
-      
-      <guid>http://h12.io/tags/connection-leak/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Context</title>
-      <link>http://h12.io/tags/context/</link>
-      <pubDate>Mon, 30 Nov 2020 17:45:31 +0000</pubDate>
-      
-      <guid>http://h12.io/tags/context/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Continuous Integration</title>
-      <link>http://h12.io/tags/continuous-integration/</link>
-      <pubDate>Thu, 17 Jul 2014 14:54:26 +0000</pubDate>
-      
-      <guid>http://h12.io/tags/continuous-integration/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Crawler</title>
-      <link>http://h12.io/tags/crawler/</link>
-      <pubDate>Sun, 09 Apr 2017 14:30:03 +0800</pubDate>
-      
-      <guid>http://h12.io/tags/crawler/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Css</title>
-      <link>http://h12.io/tags/css/</link>
-      <pubDate>Mon, 05 Sep 2016 10:30:49 +0800</pubDate>
-      
-      <guid>http://h12.io/tags/css/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Curl</title>
-      <link>http://h12.io/tags/curl/</link>
-      <pubDate>Tue, 20 Jun 2017 12:40:10 +0800</pubDate>
-      
-      <guid>http://h12.io/tags/curl/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Custom Domain</title>
-      <link>http://h12.io/tags/custom-domain/</link>
-      <pubDate>Mon, 19 Jan 2015 09:32:04 +0000</pubDate>
-      
-      <guid>http://h12.io/tags/custom-domain/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Dag</title>
-      <link>http://h12.io/tags/dag/</link>
-      <pubDate>Thu, 12 May 2022 21:24:39 +0100</pubDate>
-      
-      <guid>http://h12.io/tags/dag/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Database</title>
-      <link>http://h12.io/tags/database/</link>
-      <pubDate>Tue, 19 May 2015 18:00:00 +0800</pubDate>
-      
-      <guid>http://h12.io/tags/database/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Design</title>
-      <link>http://h12.io/tags/design/</link>
-      <pubDate>Mon, 29 Jun 2015 16:34:59 +0800</pubDate>
-      
-      <guid>http://h12.io/tags/design/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Dictionary</title>
-      <link>http://h12.io/tags/dictionary/</link>
-      <pubDate>Tue, 30 Jun 2015 12:43:19 +0800</pubDate>
-      
-      <guid>http://h12.io/tags/dictionary/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Diff</title>
-      <link>http://h12.io/tags/diff/</link>
-      <pubDate>Tue, 10 Apr 2018 12:07:27 +0800</pubDate>
-      
-      <guid>http://h12.io/tags/diff/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Docker</title>
-      <link>http://h12.io/tags/docker/</link>
-      <pubDate>Sat, 14 Nov 2015 13:57:09 +0800</pubDate>
-      
-      <guid>http://h12.io/tags/docker/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Domain Name</title>
-      <link>http://h12.io/tags/domain-name/</link>
-      <pubDate>Tue, 16 Dec 2014 09:43:40 +0000</pubDate>
-      
-      <guid>http://h12.io/tags/domain-name/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Ebook</title>
-      <link>http://h12.io/tags/ebook/</link>
-      <pubDate>Tue, 09 Aug 2016 18:31:04 +0800</pubDate>
-      
-      <guid>http://h12.io/tags/ebook/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Email</title>
-      <link>http://h12.io/tags/email/</link>
-      <pubDate>Sun, 31 Jan 2016 20:31:06 +0800</pubDate>
-      
-      <guid>http://h12.io/tags/email/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>End to End Principle</title>
-      <link>http://h12.io/tags/end-to-end-principle/</link>
-      <pubDate>Sun, 22 Nov 2020 17:38:34 +0000</pubDate>
-      
-      <guid>http://h12.io/tags/end-to-end-principle/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Failure</title>
-      <link>http://h12.io/tags/failure/</link>
-      <pubDate>Thu, 29 Jan 2015 03:55:08 +0000</pubDate>
-      
-      <guid>http://h12.io/tags/failure/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>File Io</title>
-      <link>http://h12.io/tags/file-io/</link>
-      <pubDate>Sat, 02 Jul 2016 19:03:40 +0800</pubDate>
-      
-      <guid>http://h12.io/tags/file-io/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Firewall</title>
-      <link>http://h12.io/tags/firewall/</link>
-      <pubDate>Sat, 14 Feb 2015 09:30:55 +0000</pubDate>
-      
-      <guid>http://h12.io/tags/firewall/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Font</title>
-      <link>http://h12.io/tags/font/</link>
-      <pubDate>Thu, 17 Jul 2014 03:19:18 +0000</pubDate>
-      
-      <guid>http://h12.io/tags/font/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Frontend</title>
-      <link>http://h12.io/tags/frontend/</link>
-      <pubDate>Fri, 15 Feb 2019 14:08:01 +0000</pubDate>
-      
-      <guid>http://h12.io/tags/frontend/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Fsync</title>
-      <link>http://h12.io/tags/fsync/</link>
-      <pubDate>Sat, 02 Jul 2016 19:03:40 +0800</pubDate>
-      
-      <guid>http://h12.io/tags/fsync/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Functional</title>
-      <link>http://h12.io/tags/functional/</link>
-      <pubDate>Mon, 20 Jan 2014 01:49:08 +0000</pubDate>
-      
-      <guid>http://h12.io/tags/functional/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Functional Programming</title>
-      <link>http://h12.io/tags/functional-programming/</link>
-      <pubDate>Mon, 04 Aug 2014 15:12:55 +0000</pubDate>
-      
-      <guid>http://h12.io/tags/functional-programming/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Gae</title>
-      <link>http://h12.io/tags/gae/</link>
-      <pubDate>Wed, 08 Jul 2015 07:58:34 +0000</pubDate>
-      
-      <guid>http://h12.io/tags/gae/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Generator</title>
-      <link>http://h12.io/tags/generator/</link>
-      <pubDate>Wed, 04 Nov 2015 19:00:00 +0800</pubDate>
-      
-      <guid>http://h12.io/tags/generator/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Git</title>
-      <link>http://h12.io/tags/git/</link>
-      <pubDate>Fri, 09 Jun 2017 13:41:44 +0800</pubDate>
-      
-      <guid>http://h12.io/tags/git/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Gmail</title>
-      <link>http://h12.io/tags/gmail/</link>
-      <pubDate>Sun, 31 Jan 2016 20:31:06 +0800</pubDate>
-      
-      <guid>http://h12.io/tags/gmail/</guid>
-      <description></description>
-    </item>
-    
+    <description>Recent content in Tags on @h12</description>
+    <generator>Hugo -- 0.145.0</generator>
+    <language>en-us</language>
+    <copyright>2012-2025, Hǎi-Liàng &amp;ldquo;Hal&amp;rdquo; Wáng.</copyright>
+    <lastBuildDate>Sat, 22 Apr 2023 17:50:04 +0100</lastBuildDate>
+    <atom:link href="http://h12.io/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Go</title>
       <link>http://h12.io/tags/go/</link>
       <pubDate>Sat, 22 Apr 2023 17:50:04 +0100</pubDate>
-      
       <guid>http://h12.io/tags/go/</guid>
       <description></description>
     </item>
-    
-    <item>
-      <title>Go Get</title>
-      <link>http://h12.io/tags/go-get/</link>
-      <pubDate>Wed, 06 May 2015 12:01:11 +0800</pubDate>
-      
-      <guid>http://h12.io/tags/go-get/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Godoc</title>
-      <link>http://h12.io/tags/godoc/</link>
-      <pubDate>Sat, 05 May 2018 16:02:07 +0800</pubDate>
-      
-      <guid>http://h12.io/tags/godoc/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Golang</title>
-      <link>http://h12.io/tags/golang/</link>
-      <pubDate>Fri, 14 Dec 2018 00:00:00 +0000</pubDate>
-      
-      <guid>http://h12.io/tags/golang/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Goroutine</title>
-      <link>http://h12.io/tags/goroutine/</link>
-      <pubDate>Fri, 14 Dec 2018 00:00:00 +0000</pubDate>
-      
-      <guid>http://h12.io/tags/goroutine/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Haskell</title>
-      <link>http://h12.io/tags/haskell/</link>
-      <pubDate>Sat, 26 Jul 2014 08:12:39 +0000</pubDate>
-      
-      <guid>http://h12.io/tags/haskell/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Htc One</title>
-      <link>http://h12.io/tags/htc-one/</link>
-      <pubDate>Wed, 11 Jun 2014 12:24:00 +0000</pubDate>
-      
-      <guid>http://h12.io/tags/htc-one/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Html</title>
-      <link>http://h12.io/tags/html/</link>
-      <pubDate>Thu, 04 Jun 2015 14:19:38 +0800</pubDate>
-      
-      <guid>http://h12.io/tags/html/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Html Dom</title>
-      <link>http://h12.io/tags/html-dom/</link>
-      <pubDate>Mon, 20 Jan 2014 01:49:08 +0000</pubDate>
-      
-      <guid>http://h12.io/tags/html-dom/</guid>
-      <description></description>
-    </item>
-    
     <item>
       <title>Hybrid Runner</title>
       <link>http://h12.io/tags/hybrid-runner/</link>
       <pubDate>Sat, 22 Apr 2023 17:50:04 +0100</pubDate>
-      
       <guid>http://h12.io/tags/hybrid-runner/</guid>
       <description></description>
     </item>
-    
-    <item>
-      <title>Hyphenation</title>
-      <link>http://h12.io/tags/hyphenation/</link>
-      <pubDate>Wed, 30 Jul 2014 08:29:57 +0000</pubDate>
-      
-      <guid>http://h12.io/tags/hyphenation/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Id Generator</title>
-      <link>http://h12.io/tags/id-generator/</link>
-      <pubDate>Wed, 15 Nov 2017 20:00:00 +0800</pubDate>
-      
-      <guid>http://h12.io/tags/id-generator/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Ie</title>
-      <link>http://h12.io/tags/ie/</link>
-      <pubDate>Wed, 09 Jul 2014 05:42:42 +0000</pubDate>
-      
-      <guid>http://h12.io/tags/ie/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Import</title>
-      <link>http://h12.io/tags/import/</link>
-      <pubDate>Thu, 12 May 2022 21:24:39 +0100</pubDate>
-      
-      <guid>http://h12.io/tags/import/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Ipa</title>
-      <link>http://h12.io/tags/ipa/</link>
-      <pubDate>Tue, 30 Jun 2015 12:43:19 +0800</pubDate>
-      
-      <guid>http://h12.io/tags/ipa/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Iterm2</title>
-      <link>http://h12.io/tags/iterm2/</link>
-      <pubDate>Fri, 20 Apr 2018 10:14:06 +0800</pubDate>
-      
-      <guid>http://h12.io/tags/iterm2/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Javascript</title>
-      <link>http://h12.io/tags/javascript/</link>
-      <pubDate>Fri, 15 Feb 2019 14:08:01 +0000</pubDate>
-      
-      <guid>http://h12.io/tags/javascript/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Jira</title>
-      <link>http://h12.io/tags/jira/</link>
-      <pubDate>Mon, 05 Sep 2016 10:30:49 +0800</pubDate>
-      
-      <guid>http://h12.io/tags/jira/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Journal</title>
-      <link>http://h12.io/tags/journal/</link>
-      <pubDate>Sat, 14 Nov 2015 15:00:00 +0800</pubDate>
-      
-      <guid>http://h12.io/tags/journal/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Jq</title>
-      <link>http://h12.io/tags/jq/</link>
-      <pubDate>Tue, 10 Apr 2018 12:07:27 +0800</pubDate>
-      
-      <guid>http://h12.io/tags/jq/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Json</title>
-      <link>http://h12.io/tags/json/</link>
-      <pubDate>Tue, 10 Apr 2018 12:07:27 +0800</pubDate>
-      
-      <guid>http://h12.io/tags/json/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Json Schema</title>
-      <link>http://h12.io/tags/json-schema/</link>
-      <pubDate>Wed, 04 Nov 2015 19:00:00 +0800</pubDate>
-      
-      <guid>http://h12.io/tags/json-schema/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Kafka</title>
-      <link>http://h12.io/tags/kafka/</link>
-      <pubDate>Sat, 14 Nov 2015 13:57:09 +0800</pubDate>
-      
-      <guid>http://h12.io/tags/kafka/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Less Is More</title>
-      <link>http://h12.io/tags/less-is-more/</link>
-      <pubDate>Thu, 12 May 2022 21:24:39 +0100</pubDate>
-      
-      <guid>http://h12.io/tags/less-is-more/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Lexer</title>
-      <link>http://h12.io/tags/lexer/</link>
-      <pubDate>Thu, 07 Aug 2014 00:00:00 +0800</pubDate>
-      
-      <guid>http://h12.io/tags/lexer/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Linter</title>
-      <link>http://h12.io/tags/linter/</link>
-      <pubDate>Thu, 05 Jun 2014 23:00:00 +0800</pubDate>
-      
-      <guid>http://h12.io/tags/linter/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Linux</title>
-      <link>http://h12.io/tags/linux/</link>
-      <pubDate>Sat, 10 Sep 2016 09:08:10 +0800</pubDate>
-      
-      <guid>http://h12.io/tags/linux/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Lock</title>
-      <link>http://h12.io/tags/lock/</link>
-      <pubDate>Mon, 30 Nov 2020 17:45:31 +0000</pubDate>
-      
-      <guid>http://h12.io/tags/lock/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Mac</title>
-      <link>http://h12.io/tags/mac/</link>
-      <pubDate>Sat, 05 May 2018 16:02:07 +0800</pubDate>
-      
-      <guid>http://h12.io/tags/mac/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Management</title>
-      <link>http://h12.io/tags/management/</link>
-      <pubDate>Sun, 03 Jul 2016 21:16:34 +0800</pubDate>
-      
-      <guid>http://h12.io/tags/management/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Math</title>
-      <link>http://h12.io/tags/math/</link>
-      <pubDate>Mon, 14 Dec 2020 10:46:33 +0000</pubDate>
-      
-      <guid>http://h12.io/tags/math/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Mercurial</title>
-      <link>http://h12.io/tags/mercurial/</link>
-      <pubDate>Wed, 06 May 2015 12:01:11 +0800</pubDate>
-      
-      <guid>http://h12.io/tags/mercurial/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Message Queue</title>
-      <link>http://h12.io/tags/message-queue/</link>
-      <pubDate>Sat, 14 Nov 2015 15:00:00 +0800</pubDate>
-      
-      <guid>http://h12.io/tags/message-queue/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Messaging System</title>
-      <link>http://h12.io/tags/messaging-system/</link>
-      <pubDate>Thu, 23 Jul 2015 13:36:25 +0800</pubDate>
-      
-      <guid>http://h12.io/tags/messaging-system/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Mobi</title>
-      <link>http://h12.io/tags/mobi/</link>
-      <pubDate>Wed, 03 Aug 2016 08:51:30 +0800</pubDate>
-      
-      <guid>http://h12.io/tags/mobi/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Mongodb</title>
-      <link>http://h12.io/tags/mongodb/</link>
-      <pubDate>Fri, 02 Sep 2016 15:40:41 +0800</pubDate>
-      
-      <guid>http://h12.io/tags/mongodb/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Mutex</title>
-      <link>http://h12.io/tags/mutex/</link>
-      <pubDate>Mon, 30 Nov 2020 17:45:31 +0000</pubDate>
-      
-      <guid>http://h12.io/tags/mutex/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Mysql</title>
-      <link>http://h12.io/tags/mysql/</link>
-      <pubDate>Sat, 14 Nov 2015 13:57:09 +0800</pubDate>
-      
-      <guid>http://h12.io/tags/mysql/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>One Liner</title>
-      <link>http://h12.io/tags/one-liner/</link>
-      <pubDate>Sat, 05 May 2018 16:02:07 +0800</pubDate>
-      
-      <guid>http://h12.io/tags/one-liner/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Openpgp</title>
-      <link>http://h12.io/tags/openpgp/</link>
-      <pubDate>Wed, 18 Feb 2015 17:23:24 +0000</pubDate>
-      
-      <guid>http://h12.io/tags/openpgp/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Openwrt</title>
-      <link>http://h12.io/tags/openwrt/</link>
-      <pubDate>Sat, 27 Feb 2016 14:59:54 +0800</pubDate>
-      
-      <guid>http://h12.io/tags/openwrt/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Orchestration</title>
-      <link>http://h12.io/tags/orchestration/</link>
-      <pubDate>Fri, 14 Dec 2018 00:00:00 +0000</pubDate>
-      
-      <guid>http://h12.io/tags/orchestration/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Osx</title>
-      <link>http://h12.io/tags/osx/</link>
-      <pubDate>Sat, 05 May 2018 16:02:07 +0800</pubDate>
-      
-      <guid>http://h12.io/tags/osx/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Pagespeed Insights</title>
-      <link>http://h12.io/tags/pagespeed-insights/</link>
-      <pubDate>Thu, 24 Jul 2014 03:42:01 +0000</pubDate>
-      
-      <guid>http://h12.io/tags/pagespeed-insights/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Pagination</title>
-      <link>http://h12.io/tags/pagination/</link>
-      <pubDate>Wed, 28 Feb 2018 13:38:45 +0800</pubDate>
-      
-      <guid>http://h12.io/tags/pagination/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Parser</title>
-      <link>http://h12.io/tags/parser/</link>
-      <pubDate>Mon, 18 Jul 2016 06:00:00 +0800</pubDate>
-      
-      <guid>http://h12.io/tags/parser/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Parser Combinator</title>
-      <link>http://h12.io/tags/parser-combinator/</link>
-      <pubDate>Mon, 04 Aug 2014 15:12:55 +0000</pubDate>
-      
-      <guid>http://h12.io/tags/parser-combinator/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Password Management</title>
-      <link>http://h12.io/tags/password-management/</link>
-      <pubDate>Wed, 18 Feb 2015 17:23:24 +0000</pubDate>
-      
-      <guid>http://h12.io/tags/password-management/</guid>
-      <description></description>
-    </item>
-    
     <item>
       <title>Pattern</title>
       <link>http://h12.io/tags/pattern/</link>
       <pubDate>Sat, 22 Apr 2023 17:50:04 +0100</pubDate>
-      
       <guid>http://h12.io/tags/pattern/</guid>
       <description></description>
     </item>
-    
-    <item>
-      <title>Pdf</title>
-      <link>http://h12.io/tags/pdf/</link>
-      <pubDate>Thu, 04 Jun 2015 14:19:38 +0800</pubDate>
-      
-      <guid>http://h12.io/tags/pdf/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Persistence</title>
-      <link>http://h12.io/tags/persistence/</link>
-      <pubDate>Sat, 02 Jul 2016 19:03:40 +0800</pubDate>
-      
-      <guid>http://h12.io/tags/persistence/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Phonetic Notation</title>
-      <link>http://h12.io/tags/phonetic-notation/</link>
-      <pubDate>Tue, 30 Jun 2015 12:43:19 +0800</pubDate>
-      
-      <guid>http://h12.io/tags/phonetic-notation/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Pointer</title>
-      <link>http://h12.io/tags/pointer/</link>
-      <pubDate>Fri, 19 Jun 2020 13:58:46 +0100</pubDate>
-      
-      <guid>http://h12.io/tags/pointer/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Pretty Print</title>
-      <link>http://h12.io/tags/pretty-print/</link>
-      <pubDate>Mon, 01 Feb 2016 18:11:29 +0800</pubDate>
-      
-      <guid>http://h12.io/tags/pretty-print/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Probability</title>
-      <link>http://h12.io/tags/probability/</link>
-      <pubDate>Mon, 14 Dec 2020 10:46:33 +0000</pubDate>
-      
-      <guid>http://h12.io/tags/probability/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Proxy</title>
-      <link>http://h12.io/tags/proxy/</link>
-      <pubDate>Wed, 08 Jul 2015 07:58:34 +0000</pubDate>
-      
-      <guid>http://h12.io/tags/proxy/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Python</title>
-      <link>http://h12.io/tags/python/</link>
-      <pubDate>Fri, 27 Sep 2019 13:58:41 +0100</pubDate>
-      
-      <guid>http://h12.io/tags/python/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Query</title>
-      <link>http://h12.io/tags/query/</link>
-      <pubDate>Mon, 20 Jan 2014 01:49:08 +0000</pubDate>
-      
-      <guid>http://h12.io/tags/query/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>React</title>
-      <link>http://h12.io/tags/react/</link>
-      <pubDate>Fri, 15 Feb 2019 14:08:01 +0000</pubDate>
-      
-      <guid>http://h12.io/tags/react/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Receivers</title>
-      <link>http://h12.io/tags/receivers/</link>
-      <pubDate>Fri, 19 Jun 2020 13:58:46 +0100</pubDate>
-      
-      <guid>http://h12.io/tags/receivers/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Redirection</title>
-      <link>http://h12.io/tags/redirection/</link>
-      <pubDate>Fri, 25 Jul 2014 03:39:05 +0000</pubDate>
-      
-      <guid>http://h12.io/tags/redirection/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Redis</title>
-      <link>http://h12.io/tags/redis/</link>
-      <pubDate>Sat, 14 Nov 2015 13:57:09 +0800</pubDate>
-      
-      <guid>http://h12.io/tags/redis/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Reliability</title>
-      <link>http://h12.io/tags/reliability/</link>
-      <pubDate>Sat, 02 Jul 2016 19:03:40 +0800</pubDate>
-      
-      <guid>http://h12.io/tags/reliability/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Rom</title>
-      <link>http://h12.io/tags/rom/</link>
-      <pubDate>Wed, 11 Jun 2014 12:24:00 +0000</pubDate>
-      
-      <guid>http://h12.io/tags/rom/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Router</title>
-      <link>http://h12.io/tags/router/</link>
-      <pubDate>Sat, 27 Feb 2016 14:59:54 +0800</pubDate>
-      
-      <guid>http://h12.io/tags/router/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Rsa</title>
-      <link>http://h12.io/tags/rsa/</link>
-      <pubDate>Wed, 18 Feb 2015 17:23:24 +0000</pubDate>
-      
-      <guid>http://h12.io/tags/rsa/</guid>
-      <description></description>
-    </item>
-    
     <item>
       <title>Runner</title>
       <link>http://h12.io/tags/runner/</link>
       <pubDate>Sat, 22 Apr 2023 17:50:04 +0100</pubDate>
-      
       <guid>http://h12.io/tags/runner/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>Scale</title>
-      <link>http://h12.io/tags/scale/</link>
-      <pubDate>Sat, 05 Jul 2014 15:03:04 +0000</pubDate>
-      
-      <guid>http://h12.io/tags/scale/</guid>
+      <title>DAG</title>
+      <link>http://h12.io/tags/dag/</link>
+      <pubDate>Thu, 12 May 2022 21:24:39 +0100</pubDate>
+      <guid>http://h12.io/tags/dag/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>Schema</title>
-      <link>http://h12.io/tags/schema/</link>
-      <pubDate>Tue, 19 May 2015 18:00:00 +0800</pubDate>
-      
-      <guid>http://h12.io/tags/schema/</guid>
+      <title>Import</title>
+      <link>http://h12.io/tags/import/</link>
+      <pubDate>Thu, 12 May 2022 21:24:39 +0100</pubDate>
+      <guid>http://h12.io/tags/import/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>Scientific Web Surfing</title>
-      <link>http://h12.io/tags/scientific-web-surfing/</link>
-      <pubDate>Sat, 14 Feb 2015 09:30:55 +0000</pubDate>
-      
-      <guid>http://h12.io/tags/scientific-web-surfing/</guid>
+      <title>Less Is More</title>
+      <link>http://h12.io/tags/less-is-more/</link>
+      <pubDate>Thu, 12 May 2022 21:24:39 +0100</pubDate>
+      <guid>http://h12.io/tags/less-is-more/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>Scraping</title>
-      <link>http://h12.io/tags/scraping/</link>
-      <pubDate>Mon, 02 Jun 2014 01:21:00 +0000</pubDate>
-      
-      <guid>http://h12.io/tags/scraping/</guid>
+      <title>Anti-Pattern</title>
+      <link>http://h12.io/tags/anti-pattern/</link>
+      <pubDate>Fri, 08 Jan 2021 10:48:26 +0000</pubDate>
+      <guid>http://h12.io/tags/anti-pattern/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>Security</title>
-      <link>http://h12.io/tags/security/</link>
-      <pubDate>Wed, 18 Feb 2015 17:23:24 +0000</pubDate>
-      
-      <guid>http://h12.io/tags/security/</guid>
+      <title>Closer</title>
+      <link>http://h12.io/tags/closer/</link>
+      <pubDate>Fri, 08 Jan 2021 10:48:26 +0000</pubDate>
+      <guid>http://h12.io/tags/closer/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>Socks Protocol</title>
-      <link>http://h12.io/tags/socks-protocol/</link>
-      <pubDate>Wed, 01 Aug 2012 23:57:54 +0000</pubDate>
-      
-      <guid>http://h12.io/tags/socks-protocol/</guid>
+      <title>Boolean Algebra</title>
+      <link>http://h12.io/tags/boolean-algebra/</link>
+      <pubDate>Mon, 14 Dec 2020 10:46:33 +0000</pubDate>
+      <guid>http://h12.io/tags/boolean-algebra/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>Source Code Pro</title>
-      <link>http://h12.io/tags/source-code-pro/</link>
-      <pubDate>Thu, 17 Jul 2014 03:19:18 +0000</pubDate>
-      
-      <guid>http://h12.io/tags/source-code-pro/</guid>
+      <title>Math</title>
+      <link>http://h12.io/tags/math/</link>
+      <pubDate>Mon, 14 Dec 2020 10:46:33 +0000</pubDate>
+      <guid>http://h12.io/tags/math/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>Ssh</title>
-      <link>http://h12.io/tags/ssh/</link>
-      <pubDate>Tue, 28 Apr 2015 10:59:02 +0800</pubDate>
-      
-      <guid>http://h12.io/tags/ssh/</guid>
+      <title>Probability</title>
+      <link>http://h12.io/tags/probability/</link>
+      <pubDate>Mon, 14 Dec 2020 10:46:33 +0000</pubDate>
+      <guid>http://h12.io/tags/probability/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>Susy</title>
-      <link>http://h12.io/tags/susy/</link>
-      <pubDate>Thu, 17 Jul 2014 02:29:57 +0000</pubDate>
-      
-      <guid>http://h12.io/tags/susy/</guid>
+      <title>Context</title>
+      <link>http://h12.io/tags/context/</link>
+      <pubDate>Mon, 30 Nov 2020 17:45:31 +0000</pubDate>
+      <guid>http://h12.io/tags/context/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>Test</title>
-      <link>http://h12.io/tags/test/</link>
-      <pubDate>Sat, 14 Nov 2015 13:57:09 +0800</pubDate>
-      
-      <guid>http://h12.io/tags/test/</guid>
+      <title>Lock</title>
+      <link>http://h12.io/tags/lock/</link>
+      <pubDate>Mon, 30 Nov 2020 17:45:31 +0000</pubDate>
+      <guid>http://h12.io/tags/lock/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>Tmux</title>
-      <link>http://h12.io/tags/tmux/</link>
-      <pubDate>Fri, 20 Apr 2018 10:14:06 +0800</pubDate>
-      
-      <guid>http://h12.io/tags/tmux/</guid>
+      <title>Mutex</title>
+      <link>http://h12.io/tags/mutex/</link>
+      <pubDate>Mon, 30 Nov 2020 17:45:31 +0000</pubDate>
+      <guid>http://h12.io/tags/mutex/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>Touchpad</title>
-      <link>http://h12.io/tags/touchpad/</link>
-      <pubDate>Tue, 10 Jun 2014 23:00:24 +0000</pubDate>
-      
-      <guid>http://h12.io/tags/touchpad/</guid>
+      <title>Batch</title>
+      <link>http://h12.io/tags/batch/</link>
+      <pubDate>Sun, 22 Nov 2020 17:38:34 +0000</pubDate>
+      <guid>http://h12.io/tags/batch/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>Tutorial</title>
-      <link>http://h12.io/tags/tutorial/</link>
-      <pubDate>Thu, 24 Jul 2014 03:42:01 +0000</pubDate>
-      
-      <guid>http://h12.io/tags/tutorial/</guid>
+      <title>Buffered Writer</title>
+      <link>http://h12.io/tags/buffered-writer/</link>
+      <pubDate>Sun, 22 Nov 2020 17:38:34 +0000</pubDate>
+      <guid>http://h12.io/tags/buffered-writer/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>Typography</title>
-      <link>http://h12.io/tags/typography/</link>
-      <pubDate>Wed, 30 Jul 2014 08:29:57 +0000</pubDate>
-      
-      <guid>http://h12.io/tags/typography/</guid>
+      <title>Builder</title>
+      <link>http://h12.io/tags/builder/</link>
+      <pubDate>Sun, 22 Nov 2020 17:38:34 +0000</pubDate>
+      <guid>http://h12.io/tags/builder/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>Ubuntu</title>
-      <link>http://h12.io/tags/ubuntu/</link>
-      <pubDate>Sat, 10 Sep 2016 09:08:10 +0800</pubDate>
-      
-      <guid>http://h12.io/tags/ubuntu/</guid>
+      <title>End-to-End Principle</title>
+      <link>http://h12.io/tags/end-to-end-principle/</link>
+      <pubDate>Sun, 22 Nov 2020 17:38:34 +0000</pubDate>
+      <guid>http://h12.io/tags/end-to-end-principle/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>Unit of Work</title>
       <link>http://h12.io/tags/unit-of-work/</link>
       <pubDate>Sun, 22 Nov 2020 17:38:34 +0000</pubDate>
-      
       <guid>http://h12.io/tags/unit-of-work/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>User Agent</title>
-      <link>http://h12.io/tags/user-agent/</link>
-      <pubDate>Mon, 18 Jul 2016 06:00:00 +0800</pubDate>
-      
-      <guid>http://h12.io/tags/user-agent/</guid>
+      <title>Benchmark</title>
+      <link>http://h12.io/tags/benchmark/</link>
+      <pubDate>Fri, 19 Jun 2020 13:58:46 +0100</pubDate>
+      <guid>http://h12.io/tags/benchmark/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>Uuid</title>
-      <link>http://h12.io/tags/uuid/</link>
-      <pubDate>Wed, 15 Nov 2017 20:00:00 +0800</pubDate>
-      
-      <guid>http://h12.io/tags/uuid/</guid>
+      <title>Pointer</title>
+      <link>http://h12.io/tags/pointer/</link>
+      <pubDate>Fri, 19 Jun 2020 13:58:46 +0100</pubDate>
+      <guid>http://h12.io/tags/pointer/</guid>
       <description></description>
     </item>
-    
+    <item>
+      <title>Receivers</title>
+      <link>http://h12.io/tags/receivers/</link>
+      <pubDate>Fri, 19 Jun 2020 13:58:46 +0100</pubDate>
+      <guid>http://h12.io/tags/receivers/</guid>
+      <description></description>
+    </item>
     <item>
       <title>Value</title>
       <link>http://h12.io/tags/value/</link>
       <pubDate>Fri, 19 Jun 2020 13:58:46 +0100</pubDate>
-      
       <guid>http://h12.io/tags/value/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>Vps</title>
-      <link>http://h12.io/tags/vps/</link>
-      <pubDate>Sat, 14 Feb 2015 09:30:55 +0000</pubDate>
-      
-      <guid>http://h12.io/tags/vps/</guid>
+      <title>Python</title>
+      <link>http://h12.io/tags/python/</link>
+      <pubDate>Fri, 27 Sep 2019 13:58:41 +0100</pubDate>
+      <guid>http://h12.io/tags/python/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>Web</title>
-      <link>http://h12.io/tags/web/</link>
-      <pubDate>Wed, 08 Jul 2015 07:58:34 +0000</pubDate>
-      
-      <guid>http://h12.io/tags/web/</guid>
+      <title>Frontend</title>
+      <link>http://h12.io/tags/frontend/</link>
+      <pubDate>Fri, 15 Feb 2019 14:08:01 +0000</pubDate>
+      <guid>http://h12.io/tags/frontend/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>Word Frequency</title>
-      <link>http://h12.io/tags/word-frequency/</link>
-      <pubDate>Tue, 09 Aug 2016 18:31:04 +0800</pubDate>
-      
-      <guid>http://h12.io/tags/word-frequency/</guid>
+      <title>Javascript</title>
+      <link>http://h12.io/tags/javascript/</link>
+      <pubDate>Fri, 15 Feb 2019 14:08:01 +0000</pubDate>
+      <guid>http://h12.io/tags/javascript/</guid>
       <description></description>
     </item>
-    
+    <item>
+      <title>React</title>
+      <link>http://h12.io/tags/react/</link>
+      <pubDate>Fri, 15 Feb 2019 14:08:01 +0000</pubDate>
+      <guid>http://h12.io/tags/react/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Golang</title>
+      <link>http://h12.io/tags/golang/</link>
+      <pubDate>Fri, 14 Dec 2018 00:00:00 +0000</pubDate>
+      <guid>http://h12.io/tags/golang/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Goroutine</title>
+      <link>http://h12.io/tags/goroutine/</link>
+      <pubDate>Fri, 14 Dec 2018 00:00:00 +0000</pubDate>
+      <guid>http://h12.io/tags/goroutine/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Orchestration</title>
+      <link>http://h12.io/tags/orchestration/</link>
+      <pubDate>Fri, 14 Dec 2018 00:00:00 +0000</pubDate>
+      <guid>http://h12.io/tags/orchestration/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Godoc</title>
+      <link>http://h12.io/tags/godoc/</link>
+      <pubDate>Sat, 05 May 2018 16:02:07 +0800</pubDate>
+      <guid>http://h12.io/tags/godoc/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Mac</title>
+      <link>http://h12.io/tags/mac/</link>
+      <pubDate>Sat, 05 May 2018 16:02:07 +0800</pubDate>
+      <guid>http://h12.io/tags/mac/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>One-Liner</title>
+      <link>http://h12.io/tags/one-liner/</link>
+      <pubDate>Sat, 05 May 2018 16:02:07 +0800</pubDate>
+      <guid>http://h12.io/tags/one-liner/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>OSX</title>
+      <link>http://h12.io/tags/osx/</link>
+      <pubDate>Sat, 05 May 2018 16:02:07 +0800</pubDate>
+      <guid>http://h12.io/tags/osx/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Cheatsheet</title>
+      <link>http://h12.io/tags/cheatsheet/</link>
+      <pubDate>Fri, 20 Apr 2018 10:14:06 +0800</pubDate>
+      <guid>http://h12.io/tags/cheatsheet/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>ITerm2</title>
+      <link>http://h12.io/tags/iterm2/</link>
+      <pubDate>Fri, 20 Apr 2018 10:14:06 +0800</pubDate>
+      <guid>http://h12.io/tags/iterm2/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Tmux</title>
+      <link>http://h12.io/tags/tmux/</link>
+      <pubDate>Fri, 20 Apr 2018 10:14:06 +0800</pubDate>
+      <guid>http://h12.io/tags/tmux/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Diff</title>
+      <link>http://h12.io/tags/diff/</link>
+      <pubDate>Tue, 10 Apr 2018 12:07:27 +0800</pubDate>
+      <guid>http://h12.io/tags/diff/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Jq</title>
+      <link>http://h12.io/tags/jq/</link>
+      <pubDate>Tue, 10 Apr 2018 12:07:27 +0800</pubDate>
+      <guid>http://h12.io/tags/jq/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>JSON</title>
+      <link>http://h12.io/tags/json/</link>
+      <pubDate>Tue, 10 Apr 2018 12:07:27 +0800</pubDate>
+      <guid>http://h12.io/tags/json/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Pagination</title>
+      <link>http://h12.io/tags/pagination/</link>
+      <pubDate>Wed, 28 Feb 2018 13:38:45 +0800</pubDate>
+      <guid>http://h12.io/tags/pagination/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Id Generator</title>
+      <link>http://h12.io/tags/id-generator/</link>
+      <pubDate>Wed, 15 Nov 2017 20:00:00 +0800</pubDate>
+      <guid>http://h12.io/tags/id-generator/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Uuid</title>
+      <link>http://h12.io/tags/uuid/</link>
+      <pubDate>Wed, 15 Nov 2017 20:00:00 +0800</pubDate>
+      <guid>http://h12.io/tags/uuid/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Curl</title>
+      <link>http://h12.io/tags/curl/</link>
+      <pubDate>Tue, 20 Jun 2017 12:40:10 +0800</pubDate>
+      <guid>http://h12.io/tags/curl/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Git</title>
+      <link>http://h12.io/tags/git/</link>
+      <pubDate>Fri, 09 Jun 2017 13:41:44 +0800</pubDate>
+      <guid>http://h12.io/tags/git/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Crawler</title>
+      <link>http://h12.io/tags/crawler/</link>
+      <pubDate>Sun, 09 Apr 2017 14:30:03 +0800</pubDate>
+      <guid>http://h12.io/tags/crawler/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Linux</title>
+      <link>http://h12.io/tags/linux/</link>
+      <pubDate>Sat, 10 Sep 2016 09:08:10 +0800</pubDate>
+      <guid>http://h12.io/tags/linux/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Ubuntu</title>
+      <link>http://h12.io/tags/ubuntu/</link>
+      <pubDate>Sat, 10 Sep 2016 09:08:10 +0800</pubDate>
+      <guid>http://h12.io/tags/ubuntu/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Atlassian</title>
+      <link>http://h12.io/tags/atlassian/</link>
+      <pubDate>Mon, 05 Sep 2016 10:30:49 +0800</pubDate>
+      <guid>http://h12.io/tags/atlassian/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Code Block</title>
+      <link>http://h12.io/tags/code-block/</link>
+      <pubDate>Mon, 05 Sep 2016 10:30:49 +0800</pubDate>
+      <guid>http://h12.io/tags/code-block/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>CSS</title>
+      <link>http://h12.io/tags/css/</link>
+      <pubDate>Mon, 05 Sep 2016 10:30:49 +0800</pubDate>
+      <guid>http://h12.io/tags/css/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Jira</title>
+      <link>http://h12.io/tags/jira/</link>
+      <pubDate>Mon, 05 Sep 2016 10:30:49 +0800</pubDate>
+      <guid>http://h12.io/tags/jira/</guid>
+      <description></description>
+    </item>
     <item>
       <title>Wrap</title>
       <link>http://h12.io/tags/wrap/</link>
       <pubDate>Mon, 05 Sep 2016 10:30:49 +0800</pubDate>
-      
       <guid>http://h12.io/tags/wrap/</guid>
       <description></description>
     </item>
-    
+    <item>
+      <title>Connection Leak</title>
+      <link>http://h12.io/tags/connection-leak/</link>
+      <pubDate>Fri, 02 Sep 2016 15:40:41 +0800</pubDate>
+      <guid>http://h12.io/tags/connection-leak/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>MongoDB</title>
+      <link>http://h12.io/tags/mongodb/</link>
+      <pubDate>Fri, 02 Sep 2016 15:40:41 +0800</pubDate>
+      <guid>http://h12.io/tags/mongodb/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Ebook</title>
+      <link>http://h12.io/tags/ebook/</link>
+      <pubDate>Tue, 09 Aug 2016 18:31:04 +0800</pubDate>
+      <guid>http://h12.io/tags/ebook/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Word Frequency</title>
+      <link>http://h12.io/tags/word-frequency/</link>
+      <pubDate>Tue, 09 Aug 2016 18:31:04 +0800</pubDate>
+      <guid>http://h12.io/tags/word-frequency/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Mobi</title>
+      <link>http://h12.io/tags/mobi/</link>
+      <pubDate>Wed, 03 Aug 2016 08:51:30 +0800</pubDate>
+      <guid>http://h12.io/tags/mobi/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Parser</title>
+      <link>http://h12.io/tags/parser/</link>
+      <pubDate>Mon, 18 Jul 2016 06:00:00 +0800</pubDate>
+      <guid>http://h12.io/tags/parser/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>User Agent</title>
+      <link>http://h12.io/tags/user-agent/</link>
+      <pubDate>Mon, 18 Jul 2016 06:00:00 +0800</pubDate>
+      <guid>http://h12.io/tags/user-agent/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Management</title>
+      <link>http://h12.io/tags/management/</link>
+      <pubDate>Sun, 03 Jul 2016 21:16:34 +0800</pubDate>
+      <guid>http://h12.io/tags/management/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>File IO</title>
+      <link>http://h12.io/tags/file-io/</link>
+      <pubDate>Sat, 02 Jul 2016 19:03:40 +0800</pubDate>
+      <guid>http://h12.io/tags/file-io/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Fsync</title>
+      <link>http://h12.io/tags/fsync/</link>
+      <pubDate>Sat, 02 Jul 2016 19:03:40 +0800</pubDate>
+      <guid>http://h12.io/tags/fsync/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Persistence</title>
+      <link>http://h12.io/tags/persistence/</link>
+      <pubDate>Sat, 02 Jul 2016 19:03:40 +0800</pubDate>
+      <guid>http://h12.io/tags/persistence/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Reliability</title>
+      <link>http://h12.io/tags/reliability/</link>
+      <pubDate>Sat, 02 Jul 2016 19:03:40 +0800</pubDate>
+      <guid>http://h12.io/tags/reliability/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>OpenWRT</title>
+      <link>http://h12.io/tags/openwrt/</link>
+      <pubDate>Sat, 27 Feb 2016 14:59:54 +0800</pubDate>
+      <guid>http://h12.io/tags/openwrt/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Router</title>
+      <link>http://h12.io/tags/router/</link>
+      <pubDate>Sat, 27 Feb 2016 14:59:54 +0800</pubDate>
+      <guid>http://h12.io/tags/router/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Pretty Print</title>
+      <link>http://h12.io/tags/pretty-print/</link>
+      <pubDate>Mon, 01 Feb 2016 18:11:29 +0800</pubDate>
+      <guid>http://h12.io/tags/pretty-print/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>XML</title>
+      <link>http://h12.io/tags/xml/</link>
+      <pubDate>Mon, 01 Feb 2016 18:11:29 +0800</pubDate>
+      <guid>http://h12.io/tags/xml/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Email</title>
+      <link>http://h12.io/tags/email/</link>
+      <pubDate>Sun, 31 Jan 2016 20:31:06 +0800</pubDate>
+      <guid>http://h12.io/tags/email/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Gmail</title>
+      <link>http://h12.io/tags/gmail/</link>
+      <pubDate>Sun, 31 Jan 2016 20:31:06 +0800</pubDate>
+      <guid>http://h12.io/tags/gmail/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Journal</title>
+      <link>http://h12.io/tags/journal/</link>
+      <pubDate>Sat, 14 Nov 2015 15:00:00 +0800</pubDate>
+      <guid>http://h12.io/tags/journal/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Message Queue</title>
+      <link>http://h12.io/tags/message-queue/</link>
+      <pubDate>Sat, 14 Nov 2015 15:00:00 +0800</pubDate>
+      <guid>http://h12.io/tags/message-queue/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Docker</title>
+      <link>http://h12.io/tags/docker/</link>
+      <pubDate>Sat, 14 Nov 2015 13:57:09 +0800</pubDate>
+      <guid>http://h12.io/tags/docker/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Kafka</title>
+      <link>http://h12.io/tags/kafka/</link>
+      <pubDate>Sat, 14 Nov 2015 13:57:09 +0800</pubDate>
+      <guid>http://h12.io/tags/kafka/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>MySQL</title>
+      <link>http://h12.io/tags/mysql/</link>
+      <pubDate>Sat, 14 Nov 2015 13:57:09 +0800</pubDate>
+      <guid>http://h12.io/tags/mysql/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Redis</title>
+      <link>http://h12.io/tags/redis/</link>
+      <pubDate>Sat, 14 Nov 2015 13:57:09 +0800</pubDate>
+      <guid>http://h12.io/tags/redis/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Test</title>
+      <link>http://h12.io/tags/test/</link>
+      <pubDate>Sat, 14 Nov 2015 13:57:09 +0800</pubDate>
+      <guid>http://h12.io/tags/test/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>ZooKeeper</title>
+      <link>http://h12.io/tags/zookeeper/</link>
+      <pubDate>Sat, 14 Nov 2015 13:57:09 +0800</pubDate>
+      <guid>http://h12.io/tags/zookeeper/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Generator</title>
+      <link>http://h12.io/tags/generator/</link>
+      <pubDate>Wed, 04 Nov 2015 19:00:00 +0800</pubDate>
+      <guid>http://h12.io/tags/generator/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>JSON Schema</title>
+      <link>http://h12.io/tags/json-schema/</link>
+      <pubDate>Wed, 04 Nov 2015 19:00:00 +0800</pubDate>
+      <guid>http://h12.io/tags/json-schema/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Aliyun OSS</title>
+      <link>http://h12.io/tags/aliyun-oss/</link>
+      <pubDate>Thu, 22 Oct 2015 15:32:58 +0800</pubDate>
+      <guid>http://h12.io/tags/aliyun-oss/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Messaging System</title>
+      <link>http://h12.io/tags/messaging-system/</link>
+      <pubDate>Thu, 23 Jul 2015 13:36:25 +0800</pubDate>
+      <guid>http://h12.io/tags/messaging-system/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>GAE</title>
+      <link>http://h12.io/tags/gae/</link>
+      <pubDate>Wed, 08 Jul 2015 07:58:34 +0000</pubDate>
+      <guid>http://h12.io/tags/gae/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Proxy</title>
+      <link>http://h12.io/tags/proxy/</link>
+      <pubDate>Wed, 08 Jul 2015 07:58:34 +0000</pubDate>
+      <guid>http://h12.io/tags/proxy/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Web</title>
+      <link>http://h12.io/tags/web/</link>
+      <pubDate>Wed, 08 Jul 2015 07:58:34 +0000</pubDate>
+      <guid>http://h12.io/tags/web/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Dictionary</title>
+      <link>http://h12.io/tags/dictionary/</link>
+      <pubDate>Tue, 30 Jun 2015 12:43:19 +0800</pubDate>
+      <guid>http://h12.io/tags/dictionary/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>IPA</title>
+      <link>http://h12.io/tags/ipa/</link>
+      <pubDate>Tue, 30 Jun 2015 12:43:19 +0800</pubDate>
+      <guid>http://h12.io/tags/ipa/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Phonetic Notation</title>
+      <link>http://h12.io/tags/phonetic-notation/</link>
+      <pubDate>Tue, 30 Jun 2015 12:43:19 +0800</pubDate>
+      <guid>http://h12.io/tags/phonetic-notation/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Design</title>
+      <link>http://h12.io/tags/design/</link>
+      <pubDate>Mon, 29 Jun 2015 16:34:59 +0800</pubDate>
+      <guid>http://h12.io/tags/design/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>HTML</title>
+      <link>http://h12.io/tags/html/</link>
+      <pubDate>Thu, 04 Jun 2015 14:19:38 +0800</pubDate>
+      <guid>http://h12.io/tags/html/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>PDF</title>
+      <link>http://h12.io/tags/pdf/</link>
+      <pubDate>Thu, 04 Jun 2015 14:19:38 +0800</pubDate>
+      <guid>http://h12.io/tags/pdf/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Database</title>
+      <link>http://h12.io/tags/database/</link>
+      <pubDate>Tue, 19 May 2015 18:00:00 +0800</pubDate>
+      <guid>http://h12.io/tags/database/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Schema</title>
+      <link>http://h12.io/tags/schema/</link>
+      <pubDate>Tue, 19 May 2015 18:00:00 +0800</pubDate>
+      <guid>http://h12.io/tags/schema/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Go Get</title>
+      <link>http://h12.io/tags/go-get/</link>
+      <pubDate>Wed, 06 May 2015 12:01:11 +0800</pubDate>
+      <guid>http://h12.io/tags/go-get/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Mercurial</title>
+      <link>http://h12.io/tags/mercurial/</link>
+      <pubDate>Wed, 06 May 2015 12:01:11 +0800</pubDate>
+      <guid>http://h12.io/tags/mercurial/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>SSH</title>
+      <link>http://h12.io/tags/ssh/</link>
+      <pubDate>Tue, 28 Apr 2015 10:59:02 +0800</pubDate>
+      <guid>http://h12.io/tags/ssh/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>XMLBeans</title>
+      <link>http://h12.io/tags/xmlbeans/</link>
+      <pubDate>Thu, 23 Apr 2015 15:41:12 +0800</pubDate>
+      <guid>http://h12.io/tags/xmlbeans/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>XSD</title>
+      <link>http://h12.io/tags/xsd/</link>
+      <pubDate>Thu, 23 Apr 2015 15:41:12 +0800</pubDate>
+      <guid>http://h12.io/tags/xsd/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>OpenPGP</title>
+      <link>http://h12.io/tags/openpgp/</link>
+      <pubDate>Wed, 18 Feb 2015 17:23:24 +0000</pubDate>
+      <guid>http://h12.io/tags/openpgp/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Password Management</title>
+      <link>http://h12.io/tags/password-management/</link>
+      <pubDate>Wed, 18 Feb 2015 17:23:24 +0000</pubDate>
+      <guid>http://h12.io/tags/password-management/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>RSA</title>
+      <link>http://h12.io/tags/rsa/</link>
+      <pubDate>Wed, 18 Feb 2015 17:23:24 +0000</pubDate>
+      <guid>http://h12.io/tags/rsa/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Security</title>
+      <link>http://h12.io/tags/security/</link>
+      <pubDate>Wed, 18 Feb 2015 17:23:24 +0000</pubDate>
+      <guid>http://h12.io/tags/security/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>China</title>
+      <link>http://h12.io/tags/china/</link>
+      <pubDate>Sat, 14 Feb 2015 09:30:55 +0000</pubDate>
+      <guid>http://h12.io/tags/china/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Firewall</title>
+      <link>http://h12.io/tags/firewall/</link>
+      <pubDate>Sat, 14 Feb 2015 09:30:55 +0000</pubDate>
+      <guid>http://h12.io/tags/firewall/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Scientific Web Surfing</title>
+      <link>http://h12.io/tags/scientific-web-surfing/</link>
+      <pubDate>Sat, 14 Feb 2015 09:30:55 +0000</pubDate>
+      <guid>http://h12.io/tags/scientific-web-surfing/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>VPS</title>
+      <link>http://h12.io/tags/vps/</link>
+      <pubDate>Sat, 14 Feb 2015 09:30:55 +0000</pubDate>
+      <guid>http://h12.io/tags/vps/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Build</title>
+      <link>http://h12.io/tags/build/</link>
+      <pubDate>Thu, 29 Jan 2015 03:55:08 +0000</pubDate>
+      <guid>http://h12.io/tags/build/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Failure</title>
+      <link>http://h12.io/tags/failure/</link>
+      <pubDate>Thu, 29 Jan 2015 03:55:08 +0000</pubDate>
+      <guid>http://h12.io/tags/failure/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Custom Domain</title>
+      <link>http://h12.io/tags/custom-domain/</link>
+      <pubDate>Mon, 19 Jan 2015 09:32:04 +0000</pubDate>
+      <guid>http://h12.io/tags/custom-domain/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Android</title>
+      <link>http://h12.io/tags/android/</link>
+      <pubDate>Sat, 17 Jan 2015 18:13:09 +0000</pubDate>
+      <guid>http://h12.io/tags/android/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>CA Certificate</title>
+      <link>http://h12.io/tags/ca-certificate/</link>
+      <pubDate>Sat, 17 Jan 2015 18:13:09 +0000</pubDate>
+      <guid>http://h12.io/tags/ca-certificate/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Domain Name</title>
+      <link>http://h12.io/tags/domain-name/</link>
+      <pubDate>Tue, 16 Dec 2014 09:43:40 +0000</pubDate>
+      <guid>http://h12.io/tags/domain-name/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Lexer</title>
+      <link>http://h12.io/tags/lexer/</link>
+      <pubDate>Thu, 07 Aug 2014 00:00:00 +0800</pubDate>
+      <guid>http://h12.io/tags/lexer/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Functional Programming</title>
+      <link>http://h12.io/tags/functional-programming/</link>
+      <pubDate>Mon, 04 Aug 2014 15:12:55 +0000</pubDate>
+      <guid>http://h12.io/tags/functional-programming/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Parser Combinator</title>
+      <link>http://h12.io/tags/parser-combinator/</link>
+      <pubDate>Mon, 04 Aug 2014 15:12:55 +0000</pubDate>
+      <guid>http://h12.io/tags/parser-combinator/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Hyphenation</title>
+      <link>http://h12.io/tags/hyphenation/</link>
+      <pubDate>Wed, 30 Jul 2014 08:29:57 +0000</pubDate>
+      <guid>http://h12.io/tags/hyphenation/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Typography</title>
+      <link>http://h12.io/tags/typography/</link>
+      <pubDate>Wed, 30 Jul 2014 08:29:57 +0000</pubDate>
+      <guid>http://h12.io/tags/typography/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Haskell</title>
+      <link>http://h12.io/tags/haskell/</link>
+      <pubDate>Sat, 26 Jul 2014 08:12:39 +0000</pubDate>
+      <guid>http://h12.io/tags/haskell/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>301</title>
+      <link>http://h12.io/tags/301/</link>
+      <pubDate>Fri, 25 Jul 2014 03:39:05 +0000</pubDate>
+      <guid>http://h12.io/tags/301/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Redirection</title>
+      <link>http://h12.io/tags/redirection/</link>
+      <pubDate>Fri, 25 Jul 2014 03:39:05 +0000</pubDate>
+      <guid>http://h12.io/tags/redirection/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>PageSpeed Insights</title>
+      <link>http://h12.io/tags/pagespeed-insights/</link>
+      <pubDate>Thu, 24 Jul 2014 03:42:01 +0000</pubDate>
+      <guid>http://h12.io/tags/pagespeed-insights/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Tutorial</title>
+      <link>http://h12.io/tags/tutorial/</link>
+      <pubDate>Thu, 24 Jul 2014 03:42:01 +0000</pubDate>
+      <guid>http://h12.io/tags/tutorial/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Automatic Deployment</title>
+      <link>http://h12.io/tags/automatic-deployment/</link>
+      <pubDate>Thu, 17 Jul 2014 14:54:26 +0000</pubDate>
+      <guid>http://h12.io/tags/automatic-deployment/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Continuous Integration</title>
+      <link>http://h12.io/tags/continuous-integration/</link>
+      <pubDate>Thu, 17 Jul 2014 14:54:26 +0000</pubDate>
+      <guid>http://h12.io/tags/continuous-integration/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Font</title>
+      <link>http://h12.io/tags/font/</link>
+      <pubDate>Thu, 17 Jul 2014 03:19:18 +0000</pubDate>
+      <guid>http://h12.io/tags/font/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Source Code Pro</title>
+      <link>http://h12.io/tags/source-code-pro/</link>
+      <pubDate>Thu, 17 Jul 2014 03:19:18 +0000</pubDate>
+      <guid>http://h12.io/tags/source-code-pro/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Compass</title>
+      <link>http://h12.io/tags/compass/</link>
+      <pubDate>Thu, 17 Jul 2014 02:29:57 +0000</pubDate>
+      <guid>http://h12.io/tags/compass/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Susy</title>
+      <link>http://h12.io/tags/susy/</link>
+      <pubDate>Thu, 17 Jul 2014 02:29:57 +0000</pubDate>
+      <guid>http://h12.io/tags/susy/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>IE</title>
+      <link>http://h12.io/tags/ie/</link>
+      <pubDate>Wed, 09 Jul 2014 05:42:42 +0000</pubDate>
+      <guid>http://h12.io/tags/ie/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>App Engine</title>
+      <link>http://h12.io/tags/app-engine/</link>
+      <pubDate>Sun, 06 Jul 2014 06:39:27 +0000</pubDate>
+      <guid>http://h12.io/tags/app-engine/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Scale</title>
+      <link>http://h12.io/tags/scale/</link>
+      <pubDate>Sat, 05 Jul 2014 15:03:04 +0000</pubDate>
+      <guid>http://h12.io/tags/scale/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>HTC One</title>
+      <link>http://h12.io/tags/htc-one/</link>
+      <pubDate>Wed, 11 Jun 2014 12:24:00 +0000</pubDate>
+      <guid>http://h12.io/tags/htc-one/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>ROM</title>
+      <link>http://h12.io/tags/rom/</link>
+      <pubDate>Wed, 11 Jun 2014 12:24:00 +0000</pubDate>
+      <guid>http://h12.io/tags/rom/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Touchpad</title>
+      <link>http://h12.io/tags/touchpad/</link>
+      <pubDate>Tue, 10 Jun 2014 23:00:24 +0000</pubDate>
+      <guid>http://h12.io/tags/touchpad/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Bash</title>
+      <link>http://h12.io/tags/bash/</link>
+      <pubDate>Thu, 05 Jun 2014 23:00:00 +0800</pubDate>
+      <guid>http://h12.io/tags/bash/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Linter</title>
+      <link>http://h12.io/tags/linter/</link>
+      <pubDate>Thu, 05 Jun 2014 23:00:00 +0800</pubDate>
+      <guid>http://h12.io/tags/linter/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Scraping</title>
+      <link>http://h12.io/tags/scraping/</link>
+      <pubDate>Mon, 02 Jun 2014 01:21:00 +0000</pubDate>
+      <guid>http://h12.io/tags/scraping/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Combinator</title>
+      <link>http://h12.io/tags/combinator/</link>
+      <pubDate>Mon, 20 Jan 2014 01:49:08 +0000</pubDate>
+      <guid>http://h12.io/tags/combinator/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Functional</title>
+      <link>http://h12.io/tags/functional/</link>
+      <pubDate>Mon, 20 Jan 2014 01:49:08 +0000</pubDate>
+      <guid>http://h12.io/tags/functional/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>HTML DOM</title>
+      <link>http://h12.io/tags/html-dom/</link>
+      <pubDate>Mon, 20 Jan 2014 01:49:08 +0000</pubDate>
+      <guid>http://h12.io/tags/html-dom/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Query</title>
+      <link>http://h12.io/tags/query/</link>
+      <pubDate>Mon, 20 Jan 2014 01:49:08 +0000</pubDate>
+      <guid>http://h12.io/tags/query/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Cgo</title>
+      <link>http://h12.io/tags/cgo/</link>
+      <pubDate>Wed, 01 Jan 2014 01:30:04 +0000</pubDate>
+      <guid>http://h12.io/tags/cgo/</guid>
+      <description></description>
+    </item>
     <item>
       <title>Wrapper Generator</title>
       <link>http://h12.io/tags/wrapper-generator/</link>
       <pubDate>Wed, 01 Jan 2014 01:30:04 +0000</pubDate>
-      
       <guid>http://h12.io/tags/wrapper-generator/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>Xml</title>
-      <link>http://h12.io/tags/xml/</link>
-      <pubDate>Mon, 01 Feb 2016 18:11:29 +0800</pubDate>
-      
-      <guid>http://h12.io/tags/xml/</guid>
+      <title>SOCKS Protocol</title>
+      <link>http://h12.io/tags/socks-protocol/</link>
+      <pubDate>Wed, 01 Aug 2012 23:57:54 +0000</pubDate>
+      <guid>http://h12.io/tags/socks-protocol/</guid>
       <description></description>
     </item>
-    
-    <item>
-      <title>Xmlbeans</title>
-      <link>http://h12.io/tags/xmlbeans/</link>
-      <pubDate>Thu, 23 Apr 2015 15:41:12 +0800</pubDate>
-      
-      <guid>http://h12.io/tags/xmlbeans/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Xsd</title>
-      <link>http://h12.io/tags/xsd/</link>
-      <pubDate>Thu, 23 Apr 2015 15:41:12 +0800</pubDate>
-      
-      <guid>http://h12.io/tags/xsd/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Zookeeper</title>
-      <link>http://h12.io/tags/zookeeper/</link>
-      <pubDate>Sat, 14 Nov 2015 13:57:09 +0800</pubDate>
-      
-      <guid>http://h12.io/tags/zookeeper/</guid>
-      <description></description>
-    </item>
-    
   </channel>
 </rss>

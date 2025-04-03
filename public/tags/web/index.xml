@@ -1,170 +1,328 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
-    <title>Web on Hai-Liang &#34;Hal&#34; Wang</title>
+    <title>Web on @h12</title>
     <link>http://h12.io/tags/web/</link>
-    <description>Recent content in Web on Hai-Liang &#34;Hal&#34; Wang</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en-US</language>
-    <copyright>Copyright (c) 2012-2018, Hǎi-Liàng &#34;Hal&#34; Wáng; all rights reserved.</copyright>
+    <description>Recent content in Web on @h12</description>
+    <generator>Hugo -- 0.145.0</generator>
+    <language>en-us</language>
+    <copyright>2012-2025, Hǎi-Liàng &amp;ldquo;Hal&amp;rdquo; Wáng.</copyright>
     <lastBuildDate>Wed, 08 Jul 2015 07:58:34 +0000</lastBuildDate>
-    
-	<atom:link href="http://h12.io/tags/web/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <atom:link href="http://h12.io/tags/web/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>A Comprehensive Note about Proxy Settings</title>
       <link>http://h12.io/note/proxy-notes/</link>
       <pubDate>Wed, 08 Jul 2015 07:58:34 +0000</pubDate>
-      
       <guid>http://h12.io/note/proxy-notes/</guid>
-      <description> Git &amp;gt; cat ~/.gitconfig [http] proxy = socks5://[host]:[port] [https] proxy = socks5://[host]:[port]  Curl (Homebrew) &amp;gt; cat ~/.curlrc socks5 = &amp;quot;[host]:[port]&amp;quot;  Docker pull env HTTP_PROXY=http://xxx docker pull yyy  GAE  Set proxy
-export HTTP_PROXY http://[host]:[port] export HTTPS_PROXY http://[host]:[port]  Delete cacerts.txt under GAE SDK installation to disable SSL verification ( make sure the proxy is safe before this step).
- Deploy.
-appcfg.py . --email=[address] --passin   </description>
+      <description>&lt;h2 id=&#34;git&#34;&gt;Git&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&amp;gt; cat ~/.gitconfig
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;http&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	&lt;span class=&#34;nv&#34;&gt;proxy&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; socks5://&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;host&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;:&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;port&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;https&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	&lt;span class=&#34;nv&#34;&gt;proxy&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; socks5://&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;host&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;:&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;port&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;curl-homebrew&#34;&gt;Curl (Homebrew)&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&amp;gt; cat ~/.curlrc
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nv&#34;&gt;socks5&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;[host]:[port]&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;docker-pull&#34;&gt;Docker pull&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fish&#34; data-lang=&#34;fish&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nf&#34;&gt;env&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;HTTP_PROXY&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;http://xxx &lt;span class=&#34;nf&#34;&gt;docker&lt;/span&gt; pull yyy
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;gae&#34;&gt;GAE&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;Set proxy&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;export&lt;/span&gt; HTTP_PROXY http://&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;host&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;:&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;port&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;export&lt;/span&gt; HTTPS_PROXY http://&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;host&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;:&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;port&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Delete cacerts.txt under GAE SDK installation to disable SSL verification (
+make sure the proxy is safe before this step).&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Deploy.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;appcfg.py . --email&lt;span class=&#34;o&#34;&gt;=[&lt;/span&gt;address&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt; --passin
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/li&gt;
+&lt;/ol&gt;</description>
     </item>
-    
     <item>
       <title>A Brief Note on Scientific Web Surfing</title>
       <link>http://h12.io/article/scientific-web-surfing/</link>
       <pubDate>Sat, 14 Feb 2015 09:30:55 +0000</pubDate>
-      
       <guid>http://h12.io/article/scientific-web-surfing/</guid>
-      <description>Knowledge is power. Information is liberating. &amp;mdash; by Kofi Annan.
-VPS  CloudsVM Vultr DigitalOcean BandwagonHOST  Client Area -&amp;gt; Services -&amp;gt; Order New Services 64MB RAM is enough for running both ShadowSocks and pdnsd Install Ubuntu LTS 32bit (x86, i686) or CentOS 7.   CentOS Install CentOS 7 (64bit) Shadowsocks cd /etc/yum.repos.d/ wget https://copr.fedorainfracloud.org/coprs/librehat/shadowsocks/repo/epel-7/librehat-shadowsocks-epel-7.repo yum update yum install shadowsocks-libev cd /etc/shadowsocks-libev/ vim config.json # server should be 0.</description>
+      <description>&lt;p&gt;&lt;em&gt;Knowledge is power. Information is liberating. &amp;mdash; by Kofi Annan.&lt;/em&gt;&lt;/p&gt;
+&lt;h2 id=&#34;vps&#34;&gt;VPS&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.cloudsvm.com/billing/aff.php?aff=140&#34;&gt;CloudsVM&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://www.vultr.com/?ref=6837862&#34;&gt;Vultr&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.digitalocean.com/?refcode=56202ab61fb7&#34;&gt;DigitalOcean&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://bandwagonhost.com/aff.php?aff=2128&#34;&gt;BandwagonHOST&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;Client Area -&amp;gt; Services -&amp;gt; Order New Services&lt;/li&gt;
+&lt;li&gt;64MB RAM is enough for running both ShadowSocks and pdnsd&lt;/li&gt;
+&lt;li&gt;Install Ubuntu LTS 32bit (x86, i686) or CentOS 7.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;centos&#34;&gt;CentOS&lt;/h2&gt;
+&lt;h3 id=&#34;install-centos-7-64bit&#34;&gt;Install CentOS 7 (64bit)&lt;/h3&gt;
+&lt;h3 id=&#34;shadowsocks&#34;&gt;Shadowsocks&lt;/h3&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;cd&lt;/span&gt; /etc/yum.repos.d/
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;wget https://copr.fedorainfracloud.org/coprs/librehat/shadowsocks/repo/epel-7/librehat-shadowsocks-epel-7.repo
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;yum update
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;yum install shadowsocks-libev
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;cd&lt;/span&gt; /etc/shadowsocks-libev/
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;vim config.json
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# server should be 0.0.0.0&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;vi /usr/lib/systemd/system/shadowsocks-libev.service
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# replace all $variables to constant values to fix the bug&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;systemctl &lt;span class=&#34;nb&#34;&gt;enable&lt;/span&gt; shadowsocks-libev
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;systemctl start shadowsocks-libev
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;pdnsd&#34;&gt;pdnsd&lt;/h3&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;wget http://members.home.nl/p.a.rombouts/pdnsd/releases/pdnsd-1.2.9a-par_sl6.x86_64.rpm
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;yum localinstall pdnsd-1.2.9a-par_sl6.x86_64.rpm
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;vim /etc/pdnsd.conf
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;pdnsd.conf (replace the port)&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>A Shorter Domain Name</title>
       <link>http://h12.io/note/new-domain-h12/</link>
       <pubDate>Tue, 16 Dec 2014 09:43:40 +0000</pubDate>
-      
       <guid>http://h12.io/note/new-domain-h12/</guid>
-      <description>This year, I decided not to renewal the previous domain name (hailiang.ws) last year, but to register a shorter one. There are two reasons:
- Both the site URL and the email address will be cleaner. A more friendly Go import path will be possible for my repositories on Github.  After comparing various choices on major domain providers, I chose h12.io as the new domain. It is the shortest but still meaningful domain that I can afford.</description>
+      <description>&lt;p&gt;This year, I decided not to renewal the previous domain name (hailiang.ws) last
+year, but to register a shorter one. There are two reasons:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Both the site URL and the email address will be cleaner.&lt;/li&gt;
+&lt;li&gt;A more friendly Go import path will be possible for my repositories on Github.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;After comparing various choices on major domain providers, I chose &lt;code&gt;h12.io&lt;/code&gt; as
+the new domain. It is the shortest but still meaningful domain that I can afford.
+&lt;code&gt;H&lt;/code&gt; is the initial letter of my given name, &lt;code&gt;12&lt;/code&gt; is simply the number of letters
+of my full name, and &lt;code&gt;.me&lt;/code&gt; is a top level domain quite suitable for a personal
+website.&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Resources on Offline Hyphenation</title>
       <link>http://h12.io/note/hyphen-res/</link>
       <pubDate>Wed, 30 Jul 2014 08:29:57 +0000</pubDate>
-      
       <guid>http://h12.io/note/hyphen-res/</guid>
-      <description>CSS hyphenation is supported by latest version of Firefox, Safari &amp;amp; IE. However, Chrome does not support it. Though Hyphenator.js can solve this problem, it runs in the browser and affects the rendering speed of above-the-fold content. So there is only one option left: soft hyphen (U+00AD, &amp;amp;shy;).
-Here is a list of resources that leads to its implementation:
- An article about CSS3 hyphenation by Hyphenator.js Hunspell: the spell checker &amp;amp; hyphenator used by LibreOffice English Dictionary of LibreOffice Pyphen: A Python hyphenator using Hunspell dictionary file A test page for soft hyphen  </description>
+      <description>&lt;p&gt;&lt;a href=&#34;http://caniuse.com/css-hyphens&#34;&gt;CSS hyphenation&lt;/a&gt; is supported by latest version
+of Firefox, Safari &amp;amp; IE. However, Chrome does not support it. Though
+&lt;a href=&#34;https://code.google.com/p/hyphenator/&#34;&gt;Hyphenator.js&lt;/a&gt; can solve this problem,
+it runs in the browser and affects the rendering speed of above-the-fold content.
+So there is only one option left: soft hyphen (&lt;code&gt;U+00AD&lt;/code&gt;, &lt;code&gt;&amp;amp;shy;&lt;/code&gt;).&lt;/p&gt;
+&lt;p&gt;Here is a list of resources that leads to its implementation:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;An &lt;a href=&#34;https://code.google.com/p/hyphenator/wiki/en_CSS3Hyphenation&#34;&gt;article&lt;/a&gt; about CSS3 hyphenation by Hyphenator.js&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://hunspell.sourceforge.net/&#34;&gt;Hunspell&lt;/a&gt;: the spell checker &amp;amp; hyphenator
+used by LibreOffice&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://extensions.libreoffice.org/extension-center/american-british-canadian-spelling-hyphen-thesaurus-dictionaries&#34;&gt;English Dictionary&lt;/a&gt; of LibreOffice&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/Kozea/Pyphen&#34;&gt;Pyphen&lt;/a&gt;: A Python hyphenator using Hunspell
+dictionary file&lt;/li&gt;
+&lt;li&gt;A test &lt;a href=&#34;http://clagnut.com/sandbox/softhyphen/&#34;&gt;page&lt;/a&gt; for soft hyphen&lt;/li&gt;
+&lt;/ul&gt;</description>
     </item>
-    
     <item>
       <title>About 301 Moved Permanently</title>
       <link>http://h12.io/note/301-redirect/</link>
       <pubDate>Fri, 25 Jul 2014 03:39:05 +0000</pubDate>
-      
       <guid>http://h12.io/note/301-redirect/</guid>
-      <description>When building a website, there is one inevitable thing: 301 permanent redirection. The cases that have to involve 301 includes:
- Redirection from www subdomain to naked domain or vise versa. Redirection from slashed pretty URL to unslashed URL or vise versa.  301 is easy to implement with Go:
-func redirect301(w http.ResponseWriter, url string) { w.Header().Set(&amp;quot;Location&amp;quot;, url) w.WriteHeader(http.StatusMovedPermanently) }  There is one more thing that needs attention: The root path of a domain always contains a slash (GET / in HTTP request), regardless the user enters the slash or not, so the root path needs no redirection.</description>
+      <description>&lt;p&gt;When building a website, there is one inevitable thing:
+&lt;a href=&#34;http://en.wikipedia.org/wiki/HTTP_301&#34;&gt;301 permanent redirection&lt;/a&gt;. The cases
+that have to involve 301 includes:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Redirection from www subdomain to naked domain or vise versa.&lt;/li&gt;
+&lt;li&gt;Redirection from slashed pretty URL to unslashed URL or vise versa.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;301 is easy to implement with Go:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-go&#34; data-lang=&#34;go&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;kd&#34;&gt;func&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;redirect301&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;w&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;http&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;ResponseWriter&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;url&lt;/span&gt; &lt;span class=&#34;kt&#34;&gt;string&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;nx&#34;&gt;w&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nf&#34;&gt;Header&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;().&lt;/span&gt;&lt;span class=&#34;nf&#34;&gt;Set&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;Location&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;url&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;nx&#34;&gt;w&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nf&#34;&gt;WriteHeader&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;http&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;StatusMovedPermanently&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;There is one more thing that needs attention: The root path of a domain always
+contains a slash (GET / in HTTP request), regardless the user enters the slash
+or not, so the root path needs no redirection.&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>How to Achieve a Perfect PageSpeed Insights Score</title>
       <link>http://h12.io/article/pagespeed-insights/</link>
       <pubDate>Thu, 24 Jul 2014 03:42:01 +0000</pubDate>
-      
       <guid>http://h12.io/article/pagespeed-insights/</guid>
-      <description>Indtroduction PageSpeed Insights is an online tool by Google to measure the performance of an web page for mobile and desktop devices. It has a set of heuristic rules considering the network-independent aspects of page performance. Each rule has a weight and the total score ranges from 0 to 100 points. The desktop and mobile tests have the same set of rules for performance and mobile test has some extra rules about user experience.</description>
+      <description>&lt;h2 id=&#34;indtroduction&#34;&gt;Indtroduction&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&#34;https://developers.google.com/speed/pagespeed/insights/&#34;&gt;PageSpeed Insights&lt;/a&gt; is
+an online tool by Google to measure the performance of an web page for mobile
+and desktop devices. It has a set of heuristic rules considering the
+network-independent aspects of page performance. Each rule has a weight and the
+total score ranges from 0 to 100 points. The desktop and mobile tests have the
+same set of rules for performance and mobile test has some extra rules
+about user experience.&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Installing Susy</title>
       <link>http://h12.io/note/install-susy/</link>
       <pubDate>Thu, 17 Jul 2014 02:29:57 +0000</pubDate>
-      
       <guid>http://h12.io/note/install-susy/</guid>
-      <description>The script:
-sudo apt-get install ruby sudo apt-get install ruby-dev sudo gem install susy -V sudo gem install compass --pre -V sudo gem lnstall breakpoint -V  Notes:
- The current version of Susy uses a higher version of Sass than Compass, so the corresponding Compass version has to be a prerelease (&amp;ndash;pre). The installing process is slow and it feels better to print it out (-V). You may have to run &amp;ldquo;compass watch&amp;rdquo; with sudo (issue 1497).</description>
+      <description>&lt;p&gt;The script:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sudo apt-get install ruby
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sudo apt-get install ruby-dev
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sudo gem install susy -V
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sudo gem install compass --pre -V
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sudo gem lnstall breakpoint -V
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Notes:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;The current version of Susy uses a higher version of Sass than Compass, so the
+corresponding Compass version has to be a prerelease (&amp;ndash;pre).&lt;/li&gt;
+&lt;li&gt;The installing process is slow and it feels better to print it out (-V).&lt;/li&gt;
+&lt;li&gt;You may have to run &amp;ldquo;compass watch&amp;rdquo; with sudo (&lt;a href=&#34;https://github.com/Compass/compass/issues/1497&#34;&gt;issue 1497&lt;/a&gt;).&lt;/li&gt;
+&lt;li&gt;An alternative &lt;a href=&#34;https://ruby.taobao.org/&#34;&gt;RubyGems source&lt;/a&gt; that is close to
+your location might help.&lt;/li&gt;
+&lt;/ul&gt;</description>
     </item>
-    
     <item>
       <title>A List of URLs about Web Design</title>
       <link>http://h12.io/note/web-design-site/</link>
       <pubDate>Thu, 10 Jul 2014 04:04:00 +0000</pubDate>
-      
       <guid>http://h12.io/note/web-design-site/</guid>
-      <description> The Elements of Typographic Style Applied to the Web Smashing Magazine Trentwalton Inkwell  </description>
+      <description>&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;http://webtypography.net/&#34;&gt;The Elements of Typographic Style Applied to the Web&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://www.smashingmagazine.com/&#34;&gt;Smashing Magazine&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://trentwalton.com/&#34;&gt;Trentwalton&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://www.inkwell.ie/&#34;&gt;Inkwell&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</description>
     </item>
-    
     <item>
       <title>Why My Web Font Looks Ugly on IE?</title>
       <link>http://h12.io/note/ugly-font/</link>
       <pubDate>Wed, 09 Jul 2014 05:42:42 +0000</pubDate>
-      
       <guid>http://h12.io/note/ugly-font/</guid>
-      <description>Windows needs hand-tuned hinting which is missing in many web fonts. To solve this problem, there is a tool called ttfautohint which can automatically add hinting to font files.
-There is a tutorial, and an online tool called Fontie.</description>
+      <description>&lt;p&gt;Windows needs hand-tuned hinting which is missing in many web fonts. To solve this
+problem, there is a tool called &lt;a href=&#34;http://www.freetype.org/ttfautohint/index.html&#34;&gt;ttfautohint&lt;/a&gt;
+which can automatically add hinting to font files.&lt;/p&gt;
+&lt;p&gt;There is a &lt;a href=&#34;http://pixelsvsbytes.com/blog/2013/11/how-to-create-perfect-web-fonts-in-3-steps/&#34;&gt;tutorial&lt;/a&gt;,
+and an online tool called &lt;a href=&#34;http://fontie.flowyapps.com/&#34;&gt;Fontie&lt;/a&gt;.&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Serving Static Pages on App Engine with Go</title>
       <link>http://h12.io/note/serve-static/</link>
       <pubDate>Sun, 06 Jul 2014 06:39:27 +0000</pubDate>
-      
       <guid>http://h12.io/note/serve-static/</guid>
-      <description>It is straightforward to serve static pages with Go or config file on App Engine, but how to serve static pages on App Engine with Go?
-I got the following error when I tried to customize the 404 page with Go:
-No such file or directory  The solution turns out to be simple: do not do both.
-The file will not be accessible to Go if there is already a rule for it in config.</description>
+      <description>&lt;p&gt;It is straightforward to serve static pages with &lt;a href=&#34;http://golang.org/pkg/net/http/&#34;&gt;Go&lt;/a&gt;
+or &lt;a href=&#34;https://developers.google.com/appengine/docs/go/config/appconfig&#34;&gt;config file&lt;/a&gt;
+on App Engine, but how to serve static pages on App Engine with Go?&lt;/p&gt;
+&lt;p&gt;I got the following error when I tried to customize the 404 page with Go:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;No such file or directory
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;The solution turns out to be simple: do not do both.&lt;/p&gt;
+&lt;p&gt;The file will not be accessible to Go if there is already a rule for it in
+config.yaml. Remove the rule from config.yaml and the file will be available to
+Go again (source:
+&lt;a href=&#34;https://groups.google.com/d/msg/google-appengine-go/DmfDPUBkmrg/SvJ1dwjC0_EJ&#34;&gt;google-appengine-go&lt;/a&gt;).&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Finding Optimal Typographic Scale</title>
       <link>http://h12.io/article/optimal-font-scale/</link>
       <pubDate>Sat, 05 Jul 2014 15:03:04 +0000</pubDate>
-      
       <guid>http://h12.io/article/optimal-font-scale/</guid>
-      <description>During the construction of this site, there are many important design decisions that need to be made. One of them is to decide the font size for each level of headings, i.e., typographic scale.
-Investigation The first thing I did was to read everything online about typographic scale. I will just skip the details and jump to my opinions:
- Modular scale should be followed Traditional scale is obsolete Golden ratio or double-stranded scale do not make any sense Vertical rhythm should be considered  Then a little explanation.</description>
+      <description>&lt;p&gt;During the construction of this site, there are many important design decisions
+that need to be made. One of them is to decide the font size for each level of
+headings, i.e., typographic scale.&lt;/p&gt;
+&lt;h2 id=&#34;investigation&#34;&gt;Investigation&lt;/h2&gt;
+&lt;p&gt;The first thing I did was to read &lt;a href=&#34;https://www.google.com/?#newwindow=1&amp;amp;q=typographic+scale&#34;&gt;everything online&lt;/a&gt;
+about typographic scale. I will just skip the details and jump to my opinions:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Modular scale should be followed&lt;/li&gt;
+&lt;li&gt;Traditional scale is obsolete&lt;/li&gt;
+&lt;li&gt;Golden ratio or double-stranded scale do not make any sense&lt;/li&gt;
+&lt;li&gt;Vertical rhythm should be considered&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Then a little explanation.&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>A List of Website Testing Services</title>
       <link>http://h12.io/note/site-test/</link>
       <pubDate>Thu, 03 Jul 2014 06:21:58 +0000</pubDate>
-      
       <guid>http://h12.io/note/site-test/</guid>
-      <description> The W3C Markup Validation Service Google PageSpeed Insights Pingdom Website Speed Test Nibbler BrowserStack  </description>
+      <description>&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;http://validator.w3.org/&#34;&gt;The W3C Markup Validation Service&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://developers.google.com/speed/pagespeed/insights/&#34;&gt;Google PageSpeed Insights&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://tools.pingdom.com/fpt/&#34;&gt;Pingdom Website Speed Test&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://nibbler.silktide.com&#34;&gt;Nibbler&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://www.browserstack.com/screenshots&#34;&gt;BrowserStack&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</description>
     </item>
-    
     <item>
       <title>A List of Narrow Fonts for Titles</title>
       <link>http://h12.io/note/narrow-fonts/</link>
       <pubDate>Tue, 01 Jul 2014 08:39:42 +0000</pubDate>
-      
       <guid>http://h12.io/note/narrow-fonts/</guid>
-      <description> Economica Fjalla One League Gothic Medula One Open Sans Condensed Oswald Pathway Gothic One PT Sans Narrow Rationale Six Caps Tulpen One Yanone Kaffeesatz  </description>
+      <description>&lt;ul&gt;
+&lt;li&gt;Economica&lt;/li&gt;
+&lt;li&gt;Fjalla One&lt;/li&gt;
+&lt;li&gt;League Gothic&lt;/li&gt;
+&lt;li&gt;Medula One&lt;/li&gt;
+&lt;li&gt;Open Sans Condensed&lt;/li&gt;
+&lt;li&gt;Oswald&lt;/li&gt;
+&lt;li&gt;Pathway Gothic One&lt;/li&gt;
+&lt;li&gt;PT Sans Narrow&lt;/li&gt;
+&lt;li&gt;Rationale&lt;/li&gt;
+&lt;li&gt;Six Caps&lt;/li&gt;
+&lt;li&gt;Tulpen One&lt;/li&gt;
+&lt;li&gt;Yanone Kaffeesatz&lt;/li&gt;
+&lt;/ul&gt;</description>
     </item>
-    
     <item>
       <title>Links about Font Choosing</title>
       <link>http://h12.io/note/font-links/</link>
       <pubDate>Sun, 22 Jun 2014 14:09:45 +0000</pubDate>
-      
       <guid>http://h12.io/note/font-links/</guid>
-      <description> The Best Font Styles for Blogging Size Doesn’t Matter, and What Does Using Media Queries To Improve Readability 8 Definitive Web Font Stacks  </description>
+      <description>&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;http://www.snapily.com/blog/the-best-font-styles-for-blogging/&#34;&gt;The Best Font Styles for Blogging&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://www.bigbrandsystem.com/best-font-size/&#34;&gt;Size Doesn’t Matter, and What Does&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://blog.mailchimp.com/using-media-queries-to-improve-readability/&#34;&gt;Using Media Queries To Improve Readability&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://www.sitepoint.com/eight-definitive-font-stacks/&#34;&gt;8 Definitive Web Font Stacks&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</description>
     </item>
-    
     <item>
       <title>Getgo: a concurrent, simple and extensible web scraping framework</title>
       <link>http://h12.io/project/getgo/</link>
       <pubDate>Mon, 02 Jun 2014 01:21:00 +0000</pubDate>
-      
       <guid>http://h12.io/project/getgo/</guid>
-      <description>Getgo is a concurrent, simple and extensible web scraping framework written in Go.
-Quick start Get Getgo go get -u github.com/h12w/getgo  Define a task This example is under the examples/goblog directory. To use Getgo to scrap structured data from a web page, just define the structured data as a Go struct (golangBlogEntry), and define a corresponding task (golangBlogIndexTask).
-type golangBlogEntry struct { Title string URL string Tags *string } type golangBlogIndexTask struct { // Variables in task URL, e.</description>
+      <description>&lt;p&gt;&lt;a href=&#34;https://godoc.org/github.com/h12w/getgo&#34;&gt;&lt;img alt=&#34;GoDoc&#34; loading=&#34;lazy&#34; src=&#34;https://godoc.org/github.com/h12w/getgo?status.png&#34;&gt;&lt;/a&gt;
+&lt;a href=&#34;https://travis-ci.org/h12w/getgo&#34;&gt;&lt;img alt=&#34;Build Status&#34; loading=&#34;lazy&#34; src=&#34;https://travis-ci.org/h12w/getgo.svg?branch=master&#34;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Getgo is a concurrent, simple and extensible web scraping framework written in &lt;a href=&#34;http://golang.org&#34;&gt;Go&lt;/a&gt;.&lt;/p&gt;
+&lt;h2 id=&#34;quick-start&#34;&gt;Quick start&lt;/h2&gt;
+&lt;h3 id=&#34;get-getgo&#34;&gt;Get Getgo&lt;/h3&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;go get -u github.com/h12w/getgo
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;define-a-task&#34;&gt;Define a task&lt;/h3&gt;
+&lt;p&gt;This example is under the examples/goblog directory. To use Getgo to scrap structured
+data from a web page, just define the structured data as a Go struct (golangBlogEntry),
+and define a corresponding task (golangBlogIndexTask).&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-go&#34; data-lang=&#34;go&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;kd&#34;&gt;type&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;golangBlogEntry&lt;/span&gt; &lt;span class=&#34;kd&#34;&gt;struct&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	&lt;span class=&#34;nx&#34;&gt;Title&lt;/span&gt; &lt;span class=&#34;kt&#34;&gt;string&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	&lt;span class=&#34;nx&#34;&gt;URL&lt;/span&gt;   &lt;span class=&#34;kt&#34;&gt;string&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	&lt;span class=&#34;nx&#34;&gt;Tags&lt;/span&gt;  &lt;span class=&#34;o&#34;&gt;*&lt;/span&gt;&lt;span class=&#34;kt&#34;&gt;string&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;kd&#34;&gt;type&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;golangBlogIndexTask&lt;/span&gt; &lt;span class=&#34;kd&#34;&gt;struct&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	&lt;span class=&#34;c1&#34;&gt;// Variables in task URL, e.g. page number&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;kd&#34;&gt;func&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;t&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;golangBlogIndexTask&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;Request&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;()&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;*&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;http&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;Request&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	&lt;span class=&#34;k&#34;&gt;return&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;getReq&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;`http://blog.golang.org/index`&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;kd&#34;&gt;func&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;t&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;golangBlogIndexTask&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;Handle&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;root&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;*&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;query&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;Node&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;s&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;getgo&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;Storer&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;err&lt;/span&gt; &lt;span class=&#34;kt&#34;&gt;error&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	&lt;span class=&#34;nx&#34;&gt;root&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nf&#34;&gt;Div&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nf&#34;&gt;_Id&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;content&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)).&lt;/span&gt;&lt;span class=&#34;nf&#34;&gt;Children&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nf&#34;&gt;_Class&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;blogtitle&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)).&lt;/span&gt;&lt;span class=&#34;nf&#34;&gt;For&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;kd&#34;&gt;func&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;item&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;*&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;query&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;Node&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;		&lt;span class=&#34;nx&#34;&gt;title&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;:=&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;item&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nf&#34;&gt;Ahref&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;().&lt;/span&gt;&lt;span class=&#34;nf&#34;&gt;Text&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;()&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;		&lt;span class=&#34;nx&#34;&gt;url&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;:=&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;item&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nf&#34;&gt;Ahref&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;().&lt;/span&gt;&lt;span class=&#34;nf&#34;&gt;Href&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;()&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;		&lt;span class=&#34;nx&#34;&gt;tags&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;:=&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;item&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nf&#34;&gt;Span&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nf&#34;&gt;_Class&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;tags&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)).&lt;/span&gt;&lt;span class=&#34;nf&#34;&gt;Text&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;()&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;		&lt;span class=&#34;k&#34;&gt;if&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;url&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;!=&lt;/span&gt; &lt;span class=&#34;kc&#34;&gt;nil&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;title&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;!=&lt;/span&gt; &lt;span class=&#34;kc&#34;&gt;nil&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;			&lt;span class=&#34;nf&#34;&gt;store&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;amp;&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;golangBlogEntry&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;Title&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;*&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;title&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;URL&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;*&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;url&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;Tags&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;tags&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;},&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;s&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;&amp;amp;&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;err&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;		&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	&lt;span class=&#34;p&#34;&gt;})&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	&lt;span class=&#34;k&#34;&gt;return&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;run-the-task&#34;&gt;Run the task&lt;/h3&gt;
+&lt;p&gt;Use util.Run to run the task and print all the result to standard output.&lt;/p&gt;</description>
     </item>
-    
   </channel>
 </rss>

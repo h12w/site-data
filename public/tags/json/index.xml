@@ -1,46 +1,44 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
-    <title>Json on Hai-Liang &#34;Hal&#34; Wang</title>
+    <title>JSON on @h12</title>
     <link>http://h12.io/tags/json/</link>
-    <description>Recent content in Json on Hai-Liang &#34;Hal&#34; Wang</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en-US</language>
-    <copyright>Copyright (c) 2012-2018, Hǎi-Liàng &#34;Hal&#34; Wáng; all rights reserved.</copyright>
+    <description>Recent content in JSON on @h12</description>
+    <generator>Hugo -- 0.145.0</generator>
+    <language>en-us</language>
+    <copyright>2012-2025, Hǎi-Liàng &amp;ldquo;Hal&amp;rdquo; Wáng.</copyright>
     <lastBuildDate>Tue, 10 Apr 2018 12:07:27 +0800</lastBuildDate>
-    
-	<atom:link href="http://h12.io/tags/json/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <atom:link href="http://h12.io/tags/json/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>How to Diff two JSON Files</title>
       <link>http://h12.io/note/how-to-diff-json-files/</link>
       <pubDate>Tue, 10 Apr 2018 12:07:27 +0800</pubDate>
-      
       <guid>http://h12.io/note/how-to-diff-json-files/</guid>
-      <description>Just sort the keys first!
-Example:
-cat a.json | jq --sort-keys . &amp;gt; aa.json cat b.json | jq --sort-keys . &amp;gt; bb.json vimdiff aa.json bb.json  </description>
+      <description>&lt;p&gt;Just sort the keys first!&lt;/p&gt;
+&lt;p&gt;Example:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;cat a.json &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; jq --sort-keys . &amp;gt; aa.json
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;cat b.json &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; jq --sort-keys . &amp;gt; bb.json
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;vimdiff aa.json bb.json
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
     </item>
-    
     <item>
       <title>About Pretty Printing</title>
       <link>http://h12.io/note/about-pretty-print/</link>
       <pubDate>Mon, 01 Feb 2016 18:11:29 +0800</pubDate>
-      
       <guid>http://h12.io/note/about-pretty-print/</guid>
-      <description> JSON cat xxx.json | jq .  XML cat xxx.xml | xmllint --format -  </description>
+      <description>&lt;h2 id=&#34;json&#34;&gt;JSON&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;cat xxx.json &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; jq .
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;xml&#34;&gt;XML&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;cat xxx.xml &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; xmllint --format -
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
     </item>
-    
     <item>
       <title>JSON Schema parser &amp; code generator</title>
       <link>http://h12.io/project/json-schema/</link>
       <pubDate>Wed, 04 Nov 2015 19:00:00 +0800</pubDate>
-      
       <guid>http://h12.io/project/json-schema/</guid>
-      <description>json-schema generates Go struct from a JSON Schema specification.
-Decimal types are supported for accurate currency calculation.</description>
+      <description>&lt;p&gt;json-schema generates Go struct from a JSON Schema specification.&lt;/p&gt;
+&lt;p&gt;Decimal types are supported for accurate currency calculation.&lt;/p&gt;</description>
     </item>
-    
   </channel>
 </rss>

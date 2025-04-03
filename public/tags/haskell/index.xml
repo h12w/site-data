@@ -1,25 +1,24 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
-    <title>Haskell on Hai-Liang &#34;Hal&#34; Wang</title>
+    <title>Haskell on @h12</title>
     <link>http://h12.io/tags/haskell/</link>
-    <description>Recent content in Haskell on Hai-Liang &#34;Hal&#34; Wang</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en-US</language>
-    <copyright>Copyright (c) 2012-2018, Hǎi-Liàng &#34;Hal&#34; Wáng; all rights reserved.</copyright>
+    <description>Recent content in Haskell on @h12</description>
+    <generator>Hugo -- 0.145.0</generator>
+    <language>en-us</language>
+    <copyright>2012-2025, Hǎi-Liàng &amp;ldquo;Hal&amp;rdquo; Wáng.</copyright>
     <lastBuildDate>Sat, 26 Jul 2014 08:12:39 +0000</lastBuildDate>
-    
-	<atom:link href="http://h12.io/tags/haskell/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <atom:link href="http://h12.io/tags/haskell/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Learning Haskell the Hard Way</title>
       <link>http://h12.io/article/learn-haskell/</link>
       <pubDate>Sat, 26 Jul 2014 08:12:39 +0000</pubDate>
-      
       <guid>http://h12.io/article/learn-haskell/</guid>
-      <description>When I was reading the collection of learning resources on Haskell and tried to find a good start, I quickly realized that none of the books or tutorials are suitable for me: the easier a tutorial claims to be, the harder to really understand Haskell by reading it. What I need is a terse documentation that introduces the syntax and semantics of Haskell systematically and clearly, but unfortunately none was found.</description>
+      <description>&lt;p&gt;When I was reading the &lt;a href=&#34;http://www.haskell.org/haskellwiki/Learning_Haskell&#34;&gt;collection&lt;/a&gt; of learning resources on Haskell and tried to find a good start, I quickly realized that
+none of the books or tutorials are suitable for me: the easier a tutorial claims
+to be, the harder to really understand Haskell by reading it. What I need is a
+terse documentation that introduces the syntax and semantics of Haskell
+systematically and clearly, but unfortunately none was found.&lt;/p&gt;</description>
     </item>
-    
   </channel>
 </rss>

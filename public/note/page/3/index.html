@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="en" dir="auto">
+
+<head><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="index, follow">
+<title>Notes | @h12</title>
+<meta name="keywords" content="">
+<meta name="description" content="Notes - @h12">
+<meta name="author" content="Hǎi-Liàng &#34;Hal&#34; Wáng">
+<link rel="canonical" href="http://h12.io/note/">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.ef93a538cbae171c70c47408f7fccb878c5ffd285cc92b2b46b10dde0f97f53e.css" integrity="sha256-75OlOMuuFxxwxHQI9/zLh4xf/ShcySsrRrEN3g&#43;X9T4=" rel="preload stylesheet" as="style">
+<link rel="icon" href="http://h12.io/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="http://h12.io/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="http://h12.io/favicon-32x32.png">
+<link rel="apple-touch-icon" href="http://h12.io/apple-touch-icon.png">
+<link rel="mask-icon" href="http://h12.io/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<link rel="alternate" type="application/rss+xml" href="http://h12.io/note/index.xml">
+<link rel="alternate" hreflang="en" href="http://h12.io/note/">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --code-block-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+            }
+
+            .list {
+                background: var(--theme);
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-track {
+                background: 0 0;
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-thumb {
+                border-color: var(--theme);
+            }
+        }
+
+    </style>
+</noscript>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+
+
+
+
+<link id="syntax-mode" rel="stylesheet" href="/css/syntax-light.css">
+
+<script>
+    function isDarkMode() {
+        const mode = localStorage.getItem("pref-theme");
+        return (mode && mode === "dark") ||
+            document.body.className.includes("dark") ||
+            false;
+    }
+
+    function syncSyntaxMode() {
+        document.getElementById("syntax-mode").href = isDarkMode() ? "/css/syntax-dark.css" : "/css/syntax-light.css";
+    }
+
+    document.addEventListener("DOMContentLoaded", () => {
+        syncSyntaxMode();
+        const toggleButton = document.getElementById("theme-toggle");
+        if (!toggleButton) {
+            console.log("No toggle button found");
+            return;
+        }
+        toggleButton.addEventListener("click", syncSyntaxMode);
+    });
+</script>
+
+<script>
+  MathJax = {
+    tex: {
+      inlineMath: [['$', '$'], ['\\(', '\\)']],
+      displayMath: [['$$','$$'], ['\\[', '\\]']],
+      processEscapes: true,
+      processEnvironments: true
+    },
+    options: {
+      enableMenu: false,
+      skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre']
+    }
+  };
+</script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+<meta property="og:url" content="http://h12.io/note/">
+  <meta property="og:site_name" content="@h12">
+  <meta property="og:title" content="Notes">
+  <meta property="og:locale" content="en-us">
+  <meta property="og:type" content="website">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Notes">
+<meta name="twitter:description" content="">
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position":  1 ,
+      "name": "Notes",
+      "item": "http://h12.io/note/"
+    }
+  ]
+}
+</script>
+</head>
+
+<body class="list" id="top">
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.body.classList.add('dark');
+    } else if (localStorage.getItem("pref-theme") === "light") {
+        document.body.classList.remove('dark')
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.body.classList.add('dark');
+    }
+
+</script>
+
+<header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="http://h12.io/" accesskey="h" title="@h12 (Alt + H)">@h12</a>
+            <div class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)" aria-label="Toggle theme">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <ul id="menu">
+            <li>
+                <a href="http://h12.io/article/" title="Articles">
+                    <span><i class="fas fa-newspaper"></i> Articles</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://h12.io/project/" title="Projects">
+                    <span><i class="fab fa-github"></i> Projects</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://h12.io/note/" title="Notes">
+                    <span class="active"><i class="fas fa-sticky-note"></i> Notes</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://h12.io/about/" title="About">
+                    <span><i class="fas fa-user"></i> About</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<main class="main"> 
+<header class="page-header">
+  <h1>
+    Notes
+  </h1>
+</header>
+
+<article class="post-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">Sending Email from Gmail using Go
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p> Turn on “2-Step Verification” so that an “App password” can be generated
+go get gopkg.in/gomail.v2
+Send your Email like the example below:
+package main import ( &#34;gopkg.in/gomail.v2&#34; ) func main() { m := gomail.NewMessage() m.SetHeader(&#34;From&#34;, &#34;from_address@gmail.com&#34;) m.SetAddressHeader(&#34;To&#34;, &#34;to_adress@xxx&#34;, &#34;to_name&#34;) m.SetAddressHeader(&#34;Cc&#34;, &#34;cc_adress@xxx&#34;, &#34;cc_name&#34;) m.SetHeader(&#34;Subject&#34;, &#34;Hello! TEST!&#34;) m.SetBody(&#34;text/html&#34;, &#34;Hello! &lt;b&gt;TEST&lt;/b&gt;!&#34;) d := gomail.NewPlainDialer(&#34;smtp.gmail.com&#34;, 587, &#34;from_address@gmail.com&#34;, &#34;the App password&#34;) if err := d.DialAndSend(m); err != nil { panic(err) } } </p>
+  </div>
+  <footer class="entry-footer"><span title='2016-01-31 20:31:06 +0800 +0800'>January 31, 2016</span></footer>
+  <a class="entry-link" aria-label="post link to Sending Email from Gmail using Go" href="http://h12.io/note/send-email-from-gmail/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">SSH Resources in Go
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p> golang.org/x/crypto/ssh github.com/YuriyNasretdinov/GoSSHa Articles:
+SSH Client connection in Golang Using Go to Execute Commands on Hundreds of Servers with SSH </p>
+  </div>
+  <footer class="entry-footer"><span title='2016-01-31 14:49:01 +0800 +0800'>January 31, 2016</span></footer>
+  <a class="entry-link" aria-label="post link to SSH Resources in Go" href="http://h12.io/note/go-ssh-resources/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">How to Remove All Exited Containers &amp; Dangling Images for Docker?
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>Updates at 2020-07-08:
+docker system prune Old tricks:
+docker ps --quiet --filter=status=exited | xargs docker rm docker images --no-trunc=true --filter=&#34;dangling=true&#34; --quiet=true | xargs docker rmi </p>
+  </div>
+  <footer class="entry-footer"><span title='2015-08-03 16:55:49 +0800 +0800'>August 3, 2015</span></footer>
+  <a class="entry-link" aria-label="post link to How to Remove All Exited Containers & Dangling Images for Docker?" href="http://h12.io/note/remove-all-exited-docker-containers/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">A Comprehensive Note about Proxy Settings
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>Git &gt; cat ~/.gitconfig [http] proxy = socks5://[host]:[port] [https] proxy = socks5://[host]:[port] Curl (Homebrew) &gt; cat ~/.curlrc socks5 = &#34;[host]:[port]&#34; Docker pull env HTTP_PROXY=http://xxx docker pull yyy GAE Set proxy
+export HTTP_PROXY http://[host]:[port] export HTTPS_PROXY http://[host]:[port] Delete cacerts.txt under GAE SDK installation to disable SSL verification ( make sure the proxy is safe before this step).
+Deploy.
+appcfg.py . --email=[address] --passin </p>
+  </div>
+  <footer class="entry-footer"><span title='2015-07-08 07:58:34 +0000 UTC'>July 8, 2015</span></footer>
+  <a class="entry-link" aria-label="post link to A Comprehensive Note about Proxy Settings" href="http://h12.io/note/proxy-notes/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">Phonetic Notations
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>Google Dictionary Google dictionary uses a phonetic notation same as NORD (New Oxford American Dictionary).
+To figure out an unknown phonetic notation, the simple way is to look up a few words that you know how to pronounce: church, hat, which, judge, game, thing, ship, thin, this, yes, pleasure cat, pay, care, father, arm, let, see, here, city, my, pot, no, caught, war, force, boy, put, tour, boot, out, cut, word, item, rabbit, winner, pupil
+...</p>
+  </div>
+  <footer class="entry-footer"><span title='2015-06-30 12:43:19 +0800 +0800'>June 30, 2015</span></footer>
+  <a class="entry-link" aria-label="post link to Phonetic Notations" href="http://h12.io/note/phonetic-notations/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">Notes on the Design of Go
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>Refusing new features Avoid leaky abstraction as much as possible. If an abstraction is not solid enough, you’d rather not use them at all. Go is designed like this, the features are carefully selected. If a feature is not solid enough, it will not be allowed to enter Go.
+No implicit string concatenation Rob: That used to be in the language but was dropped when the semicolon insertion rules went in. You need the &#43; to be able to span lines, and if you can’t span lines operatorless concatenation is close to pointless.
+...</p>
+  </div>
+  <footer class="entry-footer"><span title='2015-06-29 16:34:59 +0800 +0800'>June 29, 2015</span></footer>
+  <a class="entry-link" aria-label="post link to Notes on the Design of Go" href="http://h12.io/note/go-design/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">What Go cannot Do
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>This is a list about the corner cases that Go cannot do, and their work arounds.
+Run all deferred functions of other goroutines when a goroutine panics Uncaught panicking of one goroutine will exit the program without executing deferred functions of other goroutines.
+Workaround: this is the standard behavior, C&#43;&#43; with RAII also has the same problem. Persist your data in a way that crashing will not cause data integrity issue.
+...</p>
+  </div>
+  <footer class="entry-footer"><span title='2015-06-16 00:00:00 +0000 UTC'>June 16, 2015</span></footer>
+  <a class="entry-link" aria-label="post link to What Go cannot Do" href="http://h12.io/note/what-go-cannot-do/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">Ebook Manipulation Tools
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p> Ebook manager: Calibre
+Kindle PDF optimizer: k2pdfopt
+PDF Border Cropper Briss
+CHM File Extractor archmage
+PDF editing Xournal
+convert images to PDF
+sudo apt-get install imagemagick convert *.jpg pictures.pdf convert between different formats:
+sudo apt-get install calibre ebook-convert xxx.mobi xxx.txt --unsmarten-punctuation </p>
+  </div>
+  <footer class="entry-footer"><span title='2015-06-04 14:19:38 +0800 +0800'>June 4, 2015</span></footer>
+  <a class="entry-link" aria-label="post link to Ebook Manipulation Tools" href="http://h12.io/note/ebook-tools/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">How to &#34;go get&#34; Behind a Proxy
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>Proxy for “go get” https_proxy=http://user:pass@proxy_host:port go get ... Proxy for Git In $HOME/.gitconfig:
+[https] proxy = proxy_url Proxy for Mercurial In $HOME/.hgrc:
+[http_proxy] host = host:port user = ... passwd = ... </p>
+  </div>
+  <footer class="entry-footer"><span title='2015-05-06 12:01:11 +0800 +0800'>May 6, 2015</span></footer>
+  <a class="entry-link" aria-label="post link to How to &#34;go get&#34; Behind a Proxy" href="http://h12.io/note/go-get-behind-proxy/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">Tips on SSH
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>Generate SSH keys ssh-keygen -C w@h12.io Authorize public key at remote server ssh-copy-id user@host On Mac OSX, ssh-copy-id should be installed first.
+brew install ssh-copy-id Generate PEM ssh-keygen -f ~/.ssh/id_rsa -e -m pem &gt; ~/.ssh/id_rsa.pem Copy file by base64 On remote session, run base64 &lt; myfile and copy the output.
+On local terminal, run base64 -d &gt; myfile, paste the content and press ctrl&#43;D.
+</p>
+  </div>
+  <footer class="entry-footer"><span title='2015-04-28 10:59:02 +0800 +0800'>April 28, 2015</span></footer>
+  <a class="entry-link" aria-label="post link to Tips on SSH" href="http://h12.io/note/tips-on-ssh/"></a>
+</article>
+<footer class="page-footer">
+  <nav class="pagination">
+    <a class="prev" href="http://h12.io/note/page/2/">
+      «&nbsp;Prev&nbsp;
+    </a>
+    <a class="next" href="http://h12.io/note/page/4/">Next&nbsp;&nbsp;»
+    </a>
+  </nav>
+</footer>
+    </main>
+    
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a><footer class="footer">
+        <p>&copy; 2012-2025, <span class="my-name">Hǎi-Liàng "Hal" Wáng</span>.</p>
+        <p xmlns:cc="http://creativecommons.org/ns#" xmlns:dct="http://purl.org/dc/terms/"><span property="dct:title">The content of this page</span> is licensed under <a href="https://creativecommons.org/licenses/by/4.0/?ref=chooser-v1" target="_blank" rel="license noopener noreferrer" style="display:inline-flex;align-items:center;">CC BY 4.0<img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/cc.svg?ref=chooser-v1" alt=""><img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/by.svg?ref=chooser-v1" alt=""></a></p>
+    </footer>
+
+
+<script>
+    let menu = document.getElementById('menu')
+    if (menu) {
+        menu.scrollLeft = localStorage.getItem("menu-scroll-position");
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        if (document.body.className.includes("dark")) {
+            document.body.classList.remove('dark');
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            document.body.classList.add('dark');
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+</body>
+
+</html>

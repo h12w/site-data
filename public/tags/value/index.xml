@@ -1,28 +1,29 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
-    <title>Value on Hai-Liang &#34;Hal&#34; Wang</title>
+    <title>Value on @h12</title>
     <link>http://h12.io/tags/value/</link>
-    <description>Recent content in Value on Hai-Liang &#34;Hal&#34; Wang</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en-US</language>
-    <copyright>Copyright (c) 2012-2018, Hǎi-Liàng &#34;Hal&#34; Wáng; all rights reserved.</copyright>
+    <description>Recent content in Value on @h12</description>
+    <generator>Hugo -- 0.145.0</generator>
+    <language>en-us</language>
+    <copyright>2012-2025, Hǎi-Liàng &amp;ldquo;Hal&amp;rdquo; Wáng.</copyright>
     <lastBuildDate>Fri, 19 Jun 2020 13:58:46 +0100</lastBuildDate>
-    
-	<atom:link href="http://h12.io/tags/value/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <atom:link href="http://h12.io/tags/value/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Value vs Pointer Receivers</title>
       <link>http://h12.io/article/value-vs-pointer-receivers/</link>
       <pubDate>Fri, 19 Jun 2020 13:58:46 +0100</pubDate>
-      
       <guid>http://h12.io/article/value-vs-pointer-receivers/</guid>
-      <description>Should I use value receivers or pointer receivers?
-Value receivers have some benefits include immutability, concurrent safety and clean logic (not always, often true). But to what extend can I use value receivers without an issue or performance penalty?
-In the Go FAQ, there are 3 rules:
- most important, does the method need to modify the receiver? If it does, the receiver must be a pointer if the receiver is large, a big struct for instance, it will be much cheaper to use a pointer receiver if some of the methods of the type must have pointer receivers, the rest should too, so the method set is consistent regardless of how the type is used  Let&amp;rsquo;s look at rule 1.</description>
+      <description>&lt;p&gt;Should I use value receivers or pointer receivers?&lt;/p&gt;
+&lt;p&gt;Value receivers have some benefits include immutability, concurrent safety and clean logic (not always, often true). But to what extend can I use value receivers without an issue or performance penalty?&lt;/p&gt;
+&lt;p&gt;In the &lt;a href=&#34;https://golang.org/doc/faq#methods_on_values_or_pointers&#34;&gt;Go FAQ&lt;/a&gt;, there
+are 3 rules:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;most important, does the method need to modify the receiver? If it does, the receiver must be a pointer&lt;/li&gt;
+&lt;li&gt;if the receiver is large, a big struct for instance, it will be much cheaper to use a pointer receiver&lt;/li&gt;
+&lt;li&gt;if some of the methods of the type must have pointer receivers, the rest should too, so the method set is consistent regardless of how the type is used&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Let&amp;rsquo;s look at rule 1. In many cases, an object needs to be modified by a method after its initialization, but it doesn’t mean the modification has to be done in place, an alternative and often a better way is to get a modified copy of the object, which is usually called a &lt;a href=&#34;https://en.wikipedia.org/wiki/Fluent_interface&#34;&gt;Fluent Interface&lt;/a&gt;. Basically it means a method with a value receiver and a return value of the same type. It’s just pure (no side effect) functional programming style under another name.&lt;/p&gt;</description>
     </item>
-    
   </channel>
 </rss>

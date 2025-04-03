@@ -1,37 +1,56 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
-    <title>Mobi on Hai-Liang &#34;Hal&#34; Wang</title>
+    <title>Mobi on @h12</title>
     <link>http://h12.io/tags/mobi/</link>
-    <description>Recent content in Mobi on Hai-Liang &#34;Hal&#34; Wang</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en-US</language>
-    <copyright>Copyright (c) 2012-2018, Hǎi-Liàng &#34;Hal&#34; Wáng; all rights reserved.</copyright>
+    <description>Recent content in Mobi on @h12</description>
+    <generator>Hugo -- 0.145.0</generator>
+    <language>en-us</language>
+    <copyright>2012-2025, Hǎi-Liàng &amp;ldquo;Hal&amp;rdquo; Wáng.</copyright>
     <lastBuildDate>Wed, 03 Aug 2016 08:51:30 +0800</lastBuildDate>
-    
-	<atom:link href="http://h12.io/tags/mobi/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <atom:link href="http://h12.io/tags/mobi/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>A Note on Mobi Format</title>
       <link>http://h12.io/note/mobi/</link>
       <pubDate>Wed, 03 Aug 2016 08:51:30 +0800</pubDate>
-      
       <guid>http://h12.io/note/mobi/</guid>
-      <description> Mobi Format Description: http://wiki.mobileread.com/wiki/MOBI Python lib: https://github.com/kroo/mobi-python  </description>
+      <description>&lt;ul&gt;
+&lt;li&gt;Mobi Format Description: &lt;a href=&#34;http://wiki.mobileread.com/wiki/MOBI&#34;&gt;http://wiki.mobileread.com/wiki/MOBI&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Python lib: &lt;a href=&#34;https://github.com/kroo/mobi-python&#34;&gt;https://github.com/kroo/mobi-python&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</description>
     </item>
-    
     <item>
       <title>Ebook Manipulation Tools</title>
       <link>http://h12.io/note/ebook-tools/</link>
       <pubDate>Thu, 04 Jun 2015 14:19:38 +0800</pubDate>
-      
       <guid>http://h12.io/note/ebook-tools/</guid>
-      <description> Ebook manager: Calibre Kindle PDF optimizer: k2pdfopt PDF Border Cropper Briss CHM File Extractor archmage PDF editing Xournal
- convert images to PDF
-sudo apt-get install imagemagick convert *.jpg pictures.pdf  convert between different formats:
-sudo apt-get install calibre ebook-convert xxx.mobi xxx.txt --unsmarten-punctuation   </description>
+      <description>&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Ebook manager: &lt;a href=&#34;http://calibre-ebook.com/&#34;&gt;Calibre&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Kindle PDF optimizer: &lt;a href=&#34;http://www.willus.com/k2pdfopt/&#34;&gt;k2pdfopt&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;PDF Border Cropper &lt;a href=&#34;http://sourceforge.net/projects/briss/&#34;&gt;Briss&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;CHM File Extractor &lt;a href=&#34;https://github.com/dottedmag/archmage&#34;&gt;archmage&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;PDF editing &lt;a href=&#34;http://xournal.sourceforge.net&#34;&gt;Xournal&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;convert images to PDF&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  sudo apt-get install imagemagick
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  convert *.jpg pictures.pdf
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;convert between different formats:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;      sudo apt-get install calibre
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;      ebook-convert xxx.mobi xxx.txt --unsmarten-punctuation
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/li&gt;
+&lt;/ul&gt;</description>
     </item>
-    
   </channel>
 </rss>

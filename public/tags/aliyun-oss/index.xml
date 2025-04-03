@@ -1,26 +1,85 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
-    <title>Aliyun Oss on Hai-Liang &#34;Hal&#34; Wang</title>
+    <title>Aliyun OSS on @h12</title>
     <link>http://h12.io/tags/aliyun-oss/</link>
-    <description>Recent content in Aliyun Oss on Hai-Liang &#34;Hal&#34; Wang</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en-US</language>
-    <copyright>Copyright (c) 2012-2018, Hǎi-Liàng &#34;Hal&#34; Wáng; all rights reserved.</copyright>
+    <description>Recent content in Aliyun OSS on @h12</description>
+    <generator>Hugo -- 0.145.0</generator>
+    <language>en-us</language>
+    <copyright>2012-2025, Hǎi-Liàng &amp;ldquo;Hal&amp;rdquo; Wáng.</copyright>
     <lastBuildDate>Thu, 22 Oct 2015 15:32:58 +0800</lastBuildDate>
-    
-	<atom:link href="http://h12.io/tags/aliyun-oss/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <atom:link href="http://h12.io/tags/aliyun-oss/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Aliyun OSS Go SDK</title>
       <link>http://h12.io/project/aliyun-oss-go-sdk/</link>
       <pubDate>Thu, 22 Oct 2015 15:32:58 +0800</pubDate>
-      
       <guid>http://h12.io/project/aliyun-oss-go-sdk/</guid>
-      <description>Aliyun OSS (Object Storage Service) Go SDK is a client SDK to access Aliyun OSS API, implemented in the Go programming language.
-Installation go get -u github.com/aliyun/aliyun-oss-go-sdk/oss go test -v -cover github.com/aliyun/aliyun-oss-go-sdk/oss  Highlights  Complete set of Aliyun OSS API Thouroughly tested  100% test coverage intuitive table driven tests full test suite completes within 2 seconds  Lint clean  golint go fmt goimports go vet race detector  Idiomatic &amp;amp; elegant  response is returned as a parsed object error is returned as a Go error named options for setting headers &amp;amp; parameters  Great extensibility  clean and orthogonal implementation users can easily extend the SDK when a new API method is supported  No third party dependencies  Documentation  Overview API Object Bucket Object Optional Headers and Parameters Multipart Upload Cross-Origin Resource Sharing (CORS) Object Lifecycle Management Extending the SDK  Differences with Python SDK  HTTP header User-Agent, e.</description>
+      <description>&lt;p&gt;&lt;a href=&#34;https://drone.io/github.com/h12w/aliyun-oss-go-sdk/latest&#34;&gt;&lt;img alt=&#34;Build\nStatus&#34; loading=&#34;lazy&#34; src=&#34;https://drone.io/github.com/h12w/aliyun-oss-go-sdk/status.png&#34;&gt;&lt;/a&gt;
+&lt;a href=&#34;https://coveralls.io/github/h12w/aliyun-oss-go-sdk?branch=master&#34;&gt;&lt;img alt=&#34;Coverage\nStatus&#34; loading=&#34;lazy&#34; src=&#34;https://coveralls.io/repos/h12w/aliyun-oss-go-sdk/badge.svg?branch=master&amp;service=github&#34;&gt;&lt;/a&gt;
+&lt;a href=&#34;https://godoc.org/github.com/aliyun/aliyun-oss-go-sdk/oss&#34;&gt;&lt;img alt=&#34;GoDoc&#34; loading=&#34;lazy&#34; src=&#34;https://godoc.org/github.com/aliyun/aliyun-oss-go-sdk/oss?status.svg&#34;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Aliyun OSS (Object Storage Service) Go SDK is a client SDK to access Aliyun OSS
+API, implemented in the Go programming language.&lt;/p&gt;
+&lt;h2 id=&#34;installation&#34;&gt;Installation&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;go get -u github.com/aliyun/aliyun-oss-go-sdk/oss
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;go &lt;span class=&#34;nb&#34;&gt;test&lt;/span&gt; -v -cover github.com/aliyun/aliyun-oss-go-sdk/oss
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;highlights&#34;&gt;Highlights&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Complete set of Aliyun OSS API&lt;/li&gt;
+&lt;li&gt;Thouroughly tested
+&lt;ul&gt;
+&lt;li&gt;100% test coverage&lt;/li&gt;
+&lt;li&gt;intuitive table driven tests&lt;/li&gt;
+&lt;li&gt;full test suite completes within 2 seconds&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Lint clean
+&lt;ul&gt;
+&lt;li&gt;golint&lt;/li&gt;
+&lt;li&gt;go fmt&lt;/li&gt;
+&lt;li&gt;goimports&lt;/li&gt;
+&lt;li&gt;go vet&lt;/li&gt;
+&lt;li&gt;race detector&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Idiomatic &amp;amp; elegant
+&lt;ul&gt;
+&lt;li&gt;response is returned as a parsed object&lt;/li&gt;
+&lt;li&gt;error is returned as a Go error&lt;/li&gt;
+&lt;li&gt;named options for setting headers &amp;amp; parameters&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Great extensibility
+&lt;ul&gt;
+&lt;li&gt;clean and orthogonal implementation&lt;/li&gt;
+&lt;li&gt;users can easily extend the SDK when a new API method is supported&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;No third party dependencies&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;documentation&#34;&gt;Documentation&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;doc/overview.md&#34;&gt;Overview&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;doc/api-object.md&#34;&gt;API Object&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;doc/bucket.md&#34;&gt;Bucket&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;doc/object.md&#34;&gt;Object&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;doc/options.md&#34;&gt;Optional Headers and Parameters&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;doc/upload.md&#34;&gt;Multipart Upload&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;doc/cors.md&#34;&gt;Cross-Origin Resource Sharing (CORS)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;doc/lifecycle.md&#34;&gt;Object Lifecycle Management&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;doc/extend.md&#34;&gt;Extending the SDK&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;differences-with-python-sdk&#34;&gt;Differences with Python SDK&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;HTTP header User-Agent, e.g. aliyun-sdk-go/0.1.1 (Linux/3.16.0-51-generic/x86_64;go1.5.1)&lt;/li&gt;
+&lt;li&gt;Go HTTP client does not support 100-Continue (will be supported after Go 1.6, see &lt;a href=&#34;https://github.com/golang/go/issues/3665&#34;&gt;https://github.com/golang/go/issues/3665&lt;/a&gt;)&lt;/li&gt;
+&lt;li&gt;HTTP header keys are automatically converted into canonical format, e.g.
+x-oss-acl becomes X-Oss-Acl&lt;/li&gt;
+&lt;li&gt;Go GET request does not have redundant &amp;ldquo;Content-Length: 0&amp;rdquo; header&lt;/li&gt;
+&lt;li&gt;Parameters will be omitted if the argument is not set&lt;/li&gt;
+&lt;li&gt;Go always sends URL parameters and headers in canonical order&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;license&#34;&gt;License&lt;/h2&gt;
+&lt;p&gt;licensed under the &lt;a href=&#34;https://www.apache.org/licenses/LICENSE-2.0.html&#34;&gt;Apache License 2.0&lt;/a&gt;&lt;/p&gt;</description>
     </item>
-    
   </channel>
 </rss>

@@ -1,27 +1,45 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
-    <title>Probability on Hai-Liang &#34;Hal&#34; Wang</title>
+    <title>Probability on @h12</title>
     <link>http://h12.io/tags/probability/</link>
-    <description>Recent content in Probability on Hai-Liang &#34;Hal&#34; Wang</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en-US</language>
-    <copyright>Copyright (c) 2012-2018, Hǎi-Liàng &#34;Hal&#34; Wáng; all rights reserved.</copyright>
+    <description>Recent content in Probability on @h12</description>
+    <generator>Hugo -- 0.145.0</generator>
+    <language>en-us</language>
+    <copyright>2012-2025, Hǎi-Liàng &amp;ldquo;Hal&amp;rdquo; Wáng.</copyright>
     <lastBuildDate>Mon, 14 Dec 2020 10:46:33 +0000</lastBuildDate>
-    
-	<atom:link href="http://h12.io/tags/probability/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <atom:link href="http://h12.io/tags/probability/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Probability as a Generalisation of Boolean Algebra</title>
       <link>http://h12.io/article/probability-as-a-generalisation-of-boolean-algebra/</link>
       <pubDate>Mon, 14 Dec 2020 10:46:33 +0000</pubDate>
-      
       <guid>http://h12.io/article/probability-as-a-generalisation-of-boolean-algebra/</guid>
-      <description>A summary of Boolean algebra Given the following notations:
- a proposition is denoted as a lowercase letter, e.g. $p$, $q$ the truth value of a proposition $p$ is denoted as $ B(p) \in \set{0, 1} $, where $B(p)=1$ if $p$ is true or $B(p)=0$ if $p$ is false  Negation (not, $¬$), conjunction (and, $∧$) and disjunction (or, $∨$) are defined by the truth tables below:
-   $B(p)$ $B(¬p)$     0 1   1 0</description>
+      <description>&lt;h2 id=&#34;a-summary-of-boolean-algebra&#34;&gt;A summary of Boolean algebra&lt;/h2&gt;
+&lt;p&gt;Given the following notations:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;a proposition is denoted as a lowercase letter, e.g. $p$, $q$&lt;/li&gt;
+&lt;li&gt;the truth value of a proposition $p$ is denoted as $ B(p) \in \set{0, 1} $, where $B(p)=1$ if $p$ is true or $B(p)=0$ if $p$ is false&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Negation (&lt;code&gt;not&lt;/code&gt;, $¬$), conjunction (&lt;code&gt;and&lt;/code&gt;, $∧$) and disjunction (&lt;code&gt;or&lt;/code&gt;, $∨$) are defined by the truth tables below:&lt;/p&gt;
+&lt;table&gt;
+  &lt;thead&gt;
+      &lt;tr&gt;
+          &lt;th&gt;$B(p)$&lt;/th&gt;
+          &lt;th&gt;$B(¬p)$&lt;/th&gt;
+      &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+      &lt;tr&gt;
+          &lt;td&gt;0&lt;/td&gt;
+          &lt;td&gt;1&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;1&lt;/td&gt;
+          &lt;td&gt;0&lt;/td&gt;
+      &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;&lt;/p&gt;</description>
     </item>
-    
   </channel>
 </rss>

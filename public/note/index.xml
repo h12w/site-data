@@ -1,532 +1,823 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
-    <title>Notes on Hai-Liang &#34;Hal&#34; Wang</title>
+    <title>Notes on @h12</title>
     <link>http://h12.io/note/</link>
-    <description>Recent content in Notes on Hai-Liang &#34;Hal&#34; Wang</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en-US</language>
-    <copyright>Copyright (c) 2012-2018, Hǎi-Liàng &#34;Hal&#34; Wáng; all rights reserved.</copyright>
+    <description>Recent content in Notes on @h12</description>
+    <generator>Hugo -- 0.145.0</generator>
+    <language>en-us</language>
+    <copyright>2012-2025, Hǎi-Liàng &amp;ldquo;Hal&amp;rdquo; Wáng.</copyright>
     <lastBuildDate>Thu, 12 May 2022 21:24:39 +0100</lastBuildDate>
-    
-	<atom:link href="http://h12.io/note/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <atom:link href="http://h12.io/note/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Less Is More: Directed Acyclic Graph</title>
       <link>http://h12.io/note/less-is-more-dag/</link>
       <pubDate>Thu, 12 May 2022 21:24:39 +0100</pubDate>
-      
       <guid>http://h12.io/note/less-is-more-dag/</guid>
-      <description>A directed acyclic graph or DAG is a directed graph with no directed cycles.
-An arbitrary directed graph may also be transformed into a DAG, called its condensation, by contracting each of its strongly connected components into a single super vertex.
-Go&amp;rsquo;s import declaration declares a dependency relation between the importing and imported package. It is illegal for a package to import itself, directly or indirectly, or to directly import a package without referring to any of its exported identifiers.</description>
+      <description>&lt;p&gt;A directed acyclic graph or &lt;a href=&#34;https://en.wikipedia.org/wiki/Directed_acyclic_graph&#34;&gt;DAG&lt;/a&gt; is a directed graph with no directed cycles.&lt;/p&gt;
+&lt;p&gt;An arbitrary directed graph may also be transformed into a DAG, called its &lt;a href=&#34;https://en.wikipedia.org/wiki/Strongly_connected_component#Definitions&#34;&gt;condensation&lt;/a&gt;, by contracting each of its strongly connected components into a single super vertex.&lt;/p&gt;
+&lt;p&gt;Go&amp;rsquo;s &lt;a href=&#34;https://go.dev/ref/spec#Import_declarations&#34;&gt;import declaration&lt;/a&gt; declares a dependency relation between the importing and imported package. It is illegal for a package to import itself, directly or indirectly, or to directly import a package without referring to any of its exported identifiers.&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Go vs Python</title>
       <link>http://h12.io/note/go-vs-python/</link>
       <pubDate>Fri, 27 Sep 2019 13:58:41 +0100</pubDate>
-      
       <guid>http://h12.io/note/go-vs-python/</guid>
-      <description>Slices Go slice and Python slice have very similar syntax, but Python slice is a shallow copy of part of the original list, while Go slice is just a new range within the same underlying array of the original slice.
-Let&amp;rsquo;s try:
-a = [1, 2, 3] b = a[:2] b[0] = 9 print(a) print(b) # output: # [1, 2, 3] # [9, 2]  See a[0] remains the same.</description>
+      <description>&lt;h3 id=&#34;slices&#34;&gt;Slices&lt;/h3&gt;
+&lt;p&gt;Go slice and Python slice have very similar syntax, but Python slice is a shallow copy of part of the original list, while Go slice is just a new range within the same underlying array of the original slice.&lt;/p&gt;
+&lt;p&gt;Let&amp;rsquo;s try:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;a&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;2&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;3&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;b&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;a&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[:&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;2&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;b&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;9&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;print&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;a&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;print&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;b&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# output:&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# [1, 2, 3]&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# [9, 2]&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;See &lt;code&gt;a[0]&lt;/code&gt; remains the same.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-go&#34; data-lang=&#34;go&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;kn&#34;&gt;package&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;main&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;kn&#34;&gt;import&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;s&#34;&gt;&amp;#34;fmt&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;kd&#34;&gt;func&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;main&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;()&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	&lt;span class=&#34;nx&#34;&gt;a&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;:=&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;[]&lt;/span&gt;&lt;span class=&#34;kt&#34;&gt;int&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;2&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;3&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	&lt;span class=&#34;nx&#34;&gt;b&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;:=&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;a&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[:&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;2&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	&lt;span class=&#34;nx&#34;&gt;b&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;9&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	&lt;span class=&#34;nx&#34;&gt;fmt&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nf&#34;&gt;Println&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;a&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	&lt;span class=&#34;nx&#34;&gt;fmt&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nf&#34;&gt;Println&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;b&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	&lt;span class=&#34;err&#34;&gt;#&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;output&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	&lt;span class=&#34;err&#34;&gt;#&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;9&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;2&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;3&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	&lt;span class=&#34;err&#34;&gt;#&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;9&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;2&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;See &lt;code&gt;a[0]&lt;/code&gt; changes because slice &lt;code&gt;a&lt;/code&gt; and &lt;code&gt;b&lt;/code&gt; shares the same underlying array.&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Learning Frontend</title>
       <link>http://h12.io/note/learn-frontend/</link>
       <pubDate>Fri, 15 Feb 2019 14:08:01 +0000</pubDate>
-      
       <guid>http://h12.io/note/learn-frontend/</guid>
-      <description> Vanilla JavaScript React Emotion  </description>
+      <description>&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://developer.mozilla.org/en-US/docs/Web/JavaScript&#34;&gt;Vanilla JavaScript&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://reactjs.org/docs/getting-started.html&#34;&gt;React&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://emotion.sh/docs/introduction&#34;&gt;Emotion&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</description>
     </item>
-    
     <item>
       <title>JavaScript Surprises to a Go Developer</title>
       <link>http://h12.io/note/js-surprises/</link>
       <pubDate>Tue, 12 Feb 2019 11:32:07 +0000</pubDate>
-      
       <guid>http://h12.io/note/js-surprises/</guid>
-      <description>The scope of var is wrong Never use var to declare variables, use let instead.
-REF
-== is conversion and comparison What you really need is ===, which is similar to comparing two interface{}.
-=== is shallow {a:1}==={a:1} is false, while Go struct with string are compared by contents (but not for slice).
-Also this affects map key comparison. So object key is not so useful in JS as struct key in Go.</description>
+      <description>&lt;h3 id=&#34;the-scope-of-var-is-wrong&#34;&gt;The scope of &lt;code&gt;var&lt;/code&gt; is wrong&lt;/h3&gt;
+&lt;p&gt;Never use &lt;code&gt;var&lt;/code&gt; to declare variables, use &lt;code&gt;let&lt;/code&gt; instead.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Grammar_and_types#Variables&#34;&gt;REF&lt;/a&gt;&lt;/p&gt;
+&lt;h3 id=&#34;-is-conversion-and-comparison&#34;&gt;&lt;code&gt;==&lt;/code&gt; is conversion and comparison&lt;/h3&gt;
+&lt;p&gt;What you really need is &lt;code&gt;===&lt;/code&gt;, which is similar to comparing two interface{}.&lt;/p&gt;
+&lt;h3 id=&#34;-is-shallow&#34;&gt;&lt;code&gt;===&lt;/code&gt; is shallow&lt;/h3&gt;
+&lt;p&gt;&lt;code&gt;{a:1}==={a:1}&lt;/code&gt; is &lt;code&gt;false&lt;/code&gt;, while Go struct with string are compared by contents (but not for slice).&lt;/p&gt;
+&lt;p&gt;Also this affects map key comparison. So object key is not so useful in JS as
+struct key in Go. The equality test is always on the references rather than the contents.&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>How to Start Godoc on Mac</title>
       <link>http://h12.io/note/start-godoc/</link>
       <pubDate>Sat, 05 May 2018 16:02:07 +0800</pubDate>
-      
       <guid>http://h12.io/note/start-godoc/</guid>
-      <description>Fish:
-godoc -http=:6060 &amp;amp;; disown (pidof godoc)  Bash:
-godoc -http=:6060 &amp;amp;; disown `pidof godoc`  And pidof can be installed with Homebrew.</description>
+      <description>&lt;p&gt;Fish:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fish&#34; data-lang=&#34;fish&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nf&#34;&gt;godoc&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;-http&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;:&lt;span class=&#34;m&#34;&gt;6060&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;&amp;amp;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt; &lt;span class=&#34;nb&#34;&gt;disown&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nf&#34;&gt;pidof&lt;/span&gt; godoc&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Bash:&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;godoc -http=:6060 &amp;amp;; disown `pidof godoc`
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;And pidof can be installed with Homebrew.&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Tmux Cheatsheet on Mac</title>
       <link>http://h12.io/note/tmux-cheatsheet/</link>
       <pubDate>Fri, 20 Apr 2018 10:14:06 +0800</pubDate>
-      
       <guid>http://h12.io/note/tmux-cheatsheet/</guid>
-      <description> Create a new session with iTerm2 integration tmux -CC new -s [session-name]  Attach to a session with iTerm2 integration tmux -CC attach -t [session-name]  </description>
+      <description>&lt;h3 id=&#34;create-a-new-session-with-iterm2-integration&#34;&gt;Create a new session with iTerm2 integration&lt;/h3&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;tmux -CC new -s &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;session-name&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;attach-to-a-session-with-iterm2-integration&#34;&gt;Attach to a session with iTerm2 integration&lt;/h3&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;tmux -CC attach -t &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;session-name&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
     </item>
-    
     <item>
       <title>How to Diff two JSON Files</title>
       <link>http://h12.io/note/how-to-diff-json-files/</link>
       <pubDate>Tue, 10 Apr 2018 12:07:27 +0800</pubDate>
-      
       <guid>http://h12.io/note/how-to-diff-json-files/</guid>
-      <description>Just sort the keys first!
-Example:
-cat a.json | jq --sort-keys . &amp;gt; aa.json cat b.json | jq --sort-keys . &amp;gt; bb.json vimdiff aa.json bb.json  </description>
+      <description>&lt;p&gt;Just sort the keys first!&lt;/p&gt;
+&lt;p&gt;Example:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;cat a.json &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; jq --sort-keys . &amp;gt; aa.json
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;cat b.json &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; jq --sort-keys . &amp;gt; bb.json
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;vimdiff aa.json bb.json
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
     </item>
-    
     <item>
       <title>Pagination Done Right</title>
       <link>http://h12.io/note/pagination-done-right/</link>
       <pubDate>Wed, 28 Feb 2018 13:38:45 +0800</pubDate>
-      
       <guid>http://h12.io/note/pagination-done-right/</guid>
-      <description>Server side pagination is intrinsically not accurate, as long as the data is dynamic.
-The data items could be inserted, deleted or changed on the server side while the user goes forward and backward among the pages.
-However, there is an algorithm that can keep the pagination as stable as possible:
- encode the id and sorting fields of last value in a page as the continue-token return the continue-token along with each page the client must pass the continue-token to fetch the next page the next page starts with value &amp;gt; continue-token || (value == continue-token &amp;amp;&amp;amp; value.</description>
+      <description>&lt;p&gt;Server side pagination is intrinsically not accurate, as long as the data is dynamic.&lt;/p&gt;
+&lt;p&gt;The data items could be inserted, deleted or changed on the server side while the user goes forward and backward among the pages.&lt;/p&gt;
+&lt;p&gt;However, there is an algorithm that can keep the pagination as stable as possible:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;encode the id and sorting fields of last value in a page as the continue-token&lt;/li&gt;
+&lt;li&gt;return the continue-token along with each page&lt;/li&gt;
+&lt;li&gt;the client must pass the continue-token to fetch the next page&lt;/li&gt;
+&lt;li&gt;the next page starts with value &amp;gt; continue-token || (value == continue-token &amp;amp;&amp;amp; value.id &amp;gt; continue-token.id)&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id=&#34;reference&#34;&gt;Reference&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://skelia.com/articles/pagination-with-dynamic-data-loading-2/&#34;&gt;Pagination with Dynamic Data Loading&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</description>
     </item>
-    
     <item>
       <title>How to Measure Response Time with Curl</title>
       <link>http://h12.io/note/measure-response-time-with-curl/</link>
       <pubDate>Tue, 20 Jun 2017 12:40:10 +0800</pubDate>
-      
       <guid>http://h12.io/note/measure-response-time-with-curl/</guid>
-      <description>curl [args] --write-out &amp;quot;%{time_total}s&amp;quot; --output /dev/null --silent [URL]  </description>
+      <description>&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;curl &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;args&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt; --write-out &lt;span class=&#34;s2&#34;&gt;&amp;#34;%{time_total}s&amp;#34;&lt;/span&gt; --output /dev/null --silent &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;URL&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt; 
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
     </item>
-    
     <item>
       <title>How to Delete a Git Branch</title>
       <link>http://h12.io/note/delete-git-branch/</link>
       <pubDate>Fri, 09 Jun 2017 13:41:44 +0800</pubDate>
-      
       <guid>http://h12.io/note/delete-git-branch/</guid>
-      <description>git fetch --prune origin git branch --delete [branch-name] git push origin --delete [branch-name]  </description>
+      <description>&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;git fetch       --prune  origin
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;git branch      --delete &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;branch-name&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;git push origin --delete &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;branch-name&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
     </item>
-    
     <item>
       <title>A Single Command to Download a Website</title>
       <link>http://h12.io/note/download-website/</link>
       <pubDate>Sun, 09 Apr 2017 14:30:03 +0800</pubDate>
-      
       <guid>http://h12.io/note/download-website/</guid>
-      <description>wget --recursive --level=2 --no-parent --no-clobber --convert-links --continue [URL]  </description>
+      <description>&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;wget --recursive --level&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;2&lt;/span&gt; --no-parent --no-clobber --convert-links --continue
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;URL&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
     </item>
-    
     <item>
       <title>How to Remove Old Kernels in Ubuntu</title>
       <link>http://h12.io/note/ubuntu-remove-old-kernels/</link>
       <pubDate>Sat, 10 Sep 2016 09:08:10 +0800</pubDate>
-      
       <guid>http://h12.io/note/ubuntu-remove-old-kernels/</guid>
-      <description>sudo apt install byobu sudo purge-old-kernels  Reference:
- Remove Old Kernels (https://help.ubuntu.com/community/Lubuntu/Documentation/RemoveOldKernels)  </description>
+      <description>&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sudo apt install byobu
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sudo purge-old-kernels
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Reference:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Remove Old Kernels (&lt;a href=&#34;https://help.ubuntu.com/community/Lubuntu/Documentation/RemoveOldKernels&#34;&gt;https://help.ubuntu.com/community/Lubuntu/Documentation/RemoveOldKernels&lt;/a&gt;)&lt;/li&gt;
+&lt;/ul&gt;</description>
     </item>
-    
     <item>
       <title>Making Code Block Wrap in Jira</title>
       <link>http://h12.io/note/make-jira-code-wrap/</link>
       <pubDate>Mon, 05 Sep 2016 10:30:49 +0800</pubDate>
-      
       <guid>http://h12.io/note/make-jira-code-wrap/</guid>
-      <description>It is a hack.
-Set Jira Administration -&amp;gt; System -&amp;gt; Announcement Banner -&amp;gt; Announcement:
-&amp;lt;style type=&amp;quot;text/css&amp;quot;&amp;gt; pre { white-space: pre-wrap!important; } &amp;lt;/style&amp;gt;  </description>
+      <description>&lt;p&gt;It is a hack.&lt;/p&gt;
+&lt;p&gt;Set Jira Administration -&amp;gt; System -&amp;gt; Announcement Banner -&amp;gt; Announcement:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-css&#34; data-lang=&#34;css&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;o&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;style&lt;/span&gt; &lt;span class=&#34;nt&#34;&gt;type&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;text/css&amp;#34;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nt&#34;&gt;pre&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;k&#34;&gt;white-space&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;kc&#34;&gt;pre-wrap&lt;/span&gt;&lt;span class=&#34;cp&#34;&gt;!important&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;o&#34;&gt;&amp;lt;/&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;style&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
     </item>
-    
     <item>
       <title>One-liner to check MongoDB Connections</title>
       <link>http://h12.io/note/mongodb-conn/</link>
       <pubDate>Fri, 02 Sep 2016 15:40:41 +0800</pubDate>
-      
       <guid>http://h12.io/note/mongodb-conn/</guid>
-      <description>mongo --eval &amp;quot;JSON.stringify(db.currentOp(true))&amp;quot; | \ tail -n +3 | \ jq -r .inprog[].client | \ sed &#39;s/\(.*\):.*/\1/&#39; \ | sort | uniq -c | sort -nr   dump connection information in standard JSON format remove MongoDB header extract IP:port as a list trim port sort IPs by freqencies  </description>
+      <description>&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;mongo --eval &amp;#34;JSON.stringify(db.currentOp(true))&amp;#34; | \
+tail -n +3 | \
+jq -r .inprog[].client | \
+sed &amp;#39;s/\(.*\):.*/\1/&amp;#39; \
+| sort | uniq -c | sort -nr
+&lt;/code&gt;&lt;/pre&gt;&lt;ul&gt;
+&lt;li&gt;dump connection information in standard JSON format&lt;/li&gt;
+&lt;li&gt;remove MongoDB header&lt;/li&gt;
+&lt;li&gt;extract IP:port as a list&lt;/li&gt;
+&lt;li&gt;trim port&lt;/li&gt;
+&lt;li&gt;sort IPs by freqencies&lt;/li&gt;
+&lt;/ul&gt;</description>
     </item>
-    
     <item>
       <title>Counting Word Frequencies in One Line</title>
       <link>http://h12.io/note/count-word-freq/</link>
       <pubDate>Tue, 09 Aug 2016 18:31:04 +0800</pubDate>
-      
       <guid>http://h12.io/note/count-word-freq/</guid>
-      <description>cat book.txt | \ tr &#39;!()[]{};:&amp;quot;,&amp;lt;.&amp;gt;?“”‘’*/\r&#39; &#39; &#39; | \ tr &#39; &#39; &#39;\n&#39; | \ grep -a -P &amp;quot;^[\p{L}\p{N}\-&#39;]+\$&amp;quot; | \ grep -a -P -v &amp;quot;^[\p{N}\-&#39;]+\$&amp;quot; | \ sed &amp;quot;s/&#39;s\$//&amp;quot; | \ sed &amp;quot;s/^&#39;//&amp;quot; | sed &amp;quot;s/&#39;\$//&amp;quot; &amp;gt; words.txt cat words.txt | \ sort | uniq -c | \ sort -nr | \ cut -c9- &amp;gt; words_desc.txt   replace punctuations with space; remove \r from `\r\n&amp;rsquo; one word per line keep only words composed of unicode letters, numbers, hyphen and apostrophe remove pure numbers remove &amp;rsquo;s remove starting and ending apostrophe output words.</description>
+      <description>&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;cat book.txt &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; &lt;span class=&#34;se&#34;&gt;\
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;se&#34;&gt;&lt;/span&gt;tr &lt;span class=&#34;s1&#34;&gt;&amp;#39;!()[]{};:&amp;#34;,&amp;lt;.&amp;gt;?“”‘’*/\r&amp;#39;&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39; &amp;#39;&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; &lt;span class=&#34;se&#34;&gt;\
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;se&#34;&gt;&lt;/span&gt;tr &lt;span class=&#34;s1&#34;&gt;&amp;#39; &amp;#39;&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;\n&amp;#39;&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; &lt;span class=&#34;se&#34;&gt;\
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;se&#34;&gt;&lt;/span&gt;grep -a -P &lt;span class=&#34;s2&#34;&gt;&amp;#34;^[\p{L}\p{N}\-&amp;#39;]+\$&amp;#34;&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; &lt;span class=&#34;se&#34;&gt;\
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;se&#34;&gt;&lt;/span&gt;grep -a -P -v &lt;span class=&#34;s2&#34;&gt;&amp;#34;^[\p{N}\-&amp;#39;]+\$&amp;#34;&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; &lt;span class=&#34;se&#34;&gt;\
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;se&#34;&gt;&lt;/span&gt;sed &lt;span class=&#34;s2&#34;&gt;&amp;#34;s/&amp;#39;s\$//&amp;#34;&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; &lt;span class=&#34;se&#34;&gt;\
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;se&#34;&gt;&lt;/span&gt;sed &lt;span class=&#34;s2&#34;&gt;&amp;#34;s/^&amp;#39;//&amp;#34;&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; sed &lt;span class=&#34;s2&#34;&gt;&amp;#34;s/&amp;#39;\$//&amp;#34;&lt;/span&gt; &amp;gt; words.txt
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;cat words.txt &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; &lt;span class=&#34;se&#34;&gt;\
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;se&#34;&gt;&lt;/span&gt;sort &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; uniq -c &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; &lt;span class=&#34;se&#34;&gt;\
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;se&#34;&gt;&lt;/span&gt;sort -nr &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; &lt;span class=&#34;se&#34;&gt;\
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;se&#34;&gt;&lt;/span&gt;cut -c9- &amp;gt; words_desc.txt
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;replace punctuations with space; remove &lt;code&gt;\r&lt;/code&gt; from `\r\n&#39;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;one word per line&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;keep only words composed of unicode letters, numbers, hyphen and apostrophe&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;remove pure numbers&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;remove &amp;rsquo;s&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;remove starting and ending apostrophe&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;output words.txt&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;sort and count unique words&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>A Note on Mobi Format</title>
       <link>http://h12.io/note/mobi/</link>
       <pubDate>Wed, 03 Aug 2016 08:51:30 +0800</pubDate>
-      
       <guid>http://h12.io/note/mobi/</guid>
-      <description> Mobi Format Description: http://wiki.mobileread.com/wiki/MOBI Python lib: https://github.com/kroo/mobi-python  </description>
+      <description>&lt;ul&gt;
+&lt;li&gt;Mobi Format Description: &lt;a href=&#34;http://wiki.mobileread.com/wiki/MOBI&#34;&gt;http://wiki.mobileread.com/wiki/MOBI&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Python lib: &lt;a href=&#34;https://github.com/kroo/mobi-python&#34;&gt;https://github.com/kroo/mobi-python&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</description>
     </item>
-    
     <item>
       <title>A Manager&#39;s FAQ</title>
       <link>http://h12.io/note/manager-faq/</link>
       <pubDate>Sun, 03 Jul 2016 21:16:34 +0800</pubDate>
-      
       <guid>http://h12.io/note/manager-faq/</guid>
-      <description>This is an insightful list from Henry Ward:
- How do I get employees to perform better? Tell them what they are doing well. How do I give negative feedback? By being curious. How do I decide what to delegate? Delegate the work you want to do. How should I prioritize? Fix problems. Then prevent problems. How should I grade employees? Don’t. Teach them to self-evaluate. When do I fire somebody?</description>
+      <description>&lt;p&gt;This is an &lt;a href=&#34;https://readthink.com/a-managers-faq-35858a229f84#.7a4wlb9qy&#34;&gt;insightful list&lt;/a&gt;
+from [Henry Ward](Henry Ward):&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;How do I get employees to perform better?&lt;/strong&gt; Tell them what they are doing well.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;How do I give negative feedback?&lt;/strong&gt; By being curious.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;How do I decide what to delegate?&lt;/strong&gt; Delegate the work you want to do.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;How should I prioritize?&lt;/strong&gt; Fix problems. Then prevent problems.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;How should I grade employees?&lt;/strong&gt; Don’t. Teach them to self-evaluate.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;When do I fire somebody?&lt;/strong&gt; When you know they can’t succeed.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;How do I fire somebody?&lt;/strong&gt; By apologizing for our failures.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Why can’t I just tell people what to do?&lt;/strong&gt; Because the more responsibility you have, the less authority you have.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;How do I know if I am a good manager?&lt;/strong&gt; Employees ask you for advice.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;How do I know if I have good management team?&lt;/strong&gt; Shit rolls uphill.&lt;/li&gt;
+&lt;/ul&gt;</description>
     </item>
-    
     <item>
       <title>On Reliable Persistence</title>
       <link>http://h12.io/note/on-reliable-persistence/</link>
       <pubDate>Sat, 02 Jul 2016 19:03:40 +0800</pubDate>
-      
       <guid>http://h12.io/note/on-reliable-persistence/</guid>
-      <description>A short investigation on reliable persistence:
- Crash consistency is hard but possible at a huge performance cost
- Data safty must rely on distributed solution
- Raft  Perhaps we should just give up manual fsync and rely on
- OS background flush corruption detection &amp;amp; correction at startup replication   </description>
+      <description>&lt;p&gt;A short investigation on reliable persistence:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Crash consistency is &lt;a href=&#34;http://danluu.com/file-consistency/&#34;&gt;hard&lt;/a&gt; but
+&lt;a href=&#34;https://www.flamingspork.com/talks/&#34;&gt;possible&lt;/a&gt; at a huge performance
+&lt;a href=&#34;https://www.google.com/#q=fsync+performance&#34;&gt;cost&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Data safty must rely on distributed solution&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://raft.github.io&#34;&gt;Raft&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Perhaps we should just give up manual fsync and rely on&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;OS background flush&lt;/li&gt;
+&lt;li&gt;corruption detection &amp;amp; correction at startup&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://kafka.apache.org/08/ops.html&#34;&gt;replication&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;</description>
     </item>
-    
     <item>
       <title>Note on OpenWRT</title>
       <link>http://h12.io/note/openwrt-note/</link>
       <pubDate>Sat, 27 Feb 2016 14:59:54 +0800</pubDate>
-      
       <guid>http://h12.io/note/openwrt-note/</guid>
-      <description>Obtain OpenWRT  Find the device model at the Table of Hardware (Huawei HG556a C) Open Device Techdata for Firmware OpenWrt Install URL Open Device Page for Installation instructions  Computer - Cable - Router Connect the computer to the router with a cable.
-Install OpenWRT Follow the instructions to install OpenWRT.
-SSH First login:
-telnet 192.168.1.1  Change password to enable SSH:
-passwd exit  For public key authentication, add the public key:</description>
+      <description>&lt;h2 id=&#34;obtain-openwrt&#34;&gt;Obtain OpenWRT&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Find the device model at the &lt;a href=&#34;https://wiki.openwrt.org/toh/start&#34;&gt;Table of Hardware&lt;/a&gt; (Huawei HG556a C)&lt;/li&gt;
+&lt;li&gt;Open &lt;em&gt;Device Techdata&lt;/em&gt; for &lt;em&gt;Firmware OpenWrt Install URL&lt;/em&gt;&lt;/li&gt;
+&lt;li&gt;Open &lt;em&gt;Device Page&lt;/em&gt; for &lt;em&gt;Installation&lt;/em&gt; instructions&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;computer---cable---router&#34;&gt;Computer - Cable - Router&lt;/h2&gt;
+&lt;p&gt;Connect the computer to the router with a cable.&lt;/p&gt;
+&lt;h2 id=&#34;install-openwrt&#34;&gt;Install OpenWRT&lt;/h2&gt;
+&lt;p&gt;Follow the instructions to install OpenWRT.&lt;/p&gt;
+&lt;h2 id=&#34;ssh&#34;&gt;SSH&lt;/h2&gt;
+&lt;p&gt;First login:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;telnet 192.168.1.1
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Change password to enable SSH:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;passwd
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;exit&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;For public key authentication, add the public key:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;ssh-copy-id root@192.168.1.1
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;ssh root@192.168.1.1
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;mv ~/.ssh/authorized_keys /etc/dropbear
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;exit&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;wifi&#34;&gt;WiFi&lt;/h2&gt;
+&lt;p&gt;In &lt;code&gt;/etc/config/wireless&lt;/code&gt;:&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>About Pretty Printing</title>
       <link>http://h12.io/note/about-pretty-print/</link>
       <pubDate>Mon, 01 Feb 2016 18:11:29 +0800</pubDate>
-      
       <guid>http://h12.io/note/about-pretty-print/</guid>
-      <description> JSON cat xxx.json | jq .  XML cat xxx.xml | xmllint --format -  </description>
+      <description>&lt;h2 id=&#34;json&#34;&gt;JSON&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;cat xxx.json &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; jq .
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;xml&#34;&gt;XML&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;cat xxx.xml &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; xmllint --format -
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
     </item>
-    
     <item>
       <title>Sending Email from Gmail using Go</title>
       <link>http://h12.io/note/send-email-from-gmail/</link>
       <pubDate>Sun, 31 Jan 2016 20:31:06 +0800</pubDate>
-      
       <guid>http://h12.io/note/send-email-from-gmail/</guid>
-      <description> Turn on &amp;ldquo;2-Step Verification&amp;rdquo; so that an &amp;ldquo;App password&amp;rdquo; can be generated
- go get gopkg.in/gomail.v2
- Send your Email like the example below:
-  package main import ( &amp;quot;gopkg.in/gomail.v2&amp;quot; ) func main() { m := gomail.NewMessage() m.SetHeader(&amp;quot;From&amp;quot;, &amp;quot;from_address@gmail.com&amp;quot;) m.SetAddressHeader(&amp;quot;To&amp;quot;, &amp;quot;to_adress@xxx&amp;quot;, &amp;quot;to_name&amp;quot;) m.SetAddressHeader(&amp;quot;Cc&amp;quot;, &amp;quot;cc_adress@xxx&amp;quot;, &amp;quot;cc_name&amp;quot;) m.SetHeader(&amp;quot;Subject&amp;quot;, &amp;quot;Hello! TEST!&amp;quot;) m.SetBody(&amp;quot;text/html&amp;quot;, &amp;quot;Hello! &amp;lt;b&amp;gt;TEST&amp;lt;/b&amp;gt;!&amp;quot;) d := gomail.NewPlainDialer(&amp;quot;smtp.gmail.com&amp;quot;, 587, &amp;quot;from_address@gmail.com&amp;quot;, &amp;quot;the App password&amp;quot;) if err := d.DialAndSend(m); err != nil { panic(err) } }  </description>
+      <description>&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;Turn on &lt;a href=&#34;http://accounts.google.com/SmsAuthConfig&#34;&gt;&amp;ldquo;2-Step Verification&amp;rdquo;&lt;/a&gt; so
+that an &lt;a href=&#34;https://security.google.com/settings/security/apppasswords&#34;&gt;&amp;ldquo;App password&amp;rdquo;&lt;/a&gt; can be generated&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;go get gopkg.in/gomail.v2&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Send your Email like the example below:&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-go&#34; data-lang=&#34;go&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;kn&#34;&gt;package&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;main&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;kn&#34;&gt;import&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	&lt;span class=&#34;s&#34;&gt;&amp;#34;gopkg.in/gomail.v2&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;kd&#34;&gt;func&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;main&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;()&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	&lt;span class=&#34;nx&#34;&gt;m&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;:=&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;gomail&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nf&#34;&gt;NewMessage&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;()&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	&lt;span class=&#34;nx&#34;&gt;m&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nf&#34;&gt;SetHeader&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;From&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;#34;from_address@gmail.com&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	&lt;span class=&#34;nx&#34;&gt;m&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nf&#34;&gt;SetAddressHeader&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;To&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;#34;to_adress@xxx&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;#34;to_name&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	&lt;span class=&#34;nx&#34;&gt;m&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nf&#34;&gt;SetAddressHeader&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;Cc&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;#34;cc_adress@xxx&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;#34;cc_name&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	&lt;span class=&#34;nx&#34;&gt;m&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nf&#34;&gt;SetHeader&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;Subject&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;#34;Hello! TEST!&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	&lt;span class=&#34;nx&#34;&gt;m&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nf&#34;&gt;SetBody&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;text/html&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;#34;Hello! &amp;lt;b&amp;gt;TEST&amp;lt;/b&amp;gt;!&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	&lt;span class=&#34;nx&#34;&gt;d&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;:=&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;gomail&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nf&#34;&gt;NewPlainDialer&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;smtp.gmail.com&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;587&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;#34;from_address@gmail.com&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;#34;the App password&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	&lt;span class=&#34;k&#34;&gt;if&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;err&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;:=&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;d&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nf&#34;&gt;DialAndSend&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;m&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;err&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;!=&lt;/span&gt; &lt;span class=&#34;kc&#34;&gt;nil&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;		&lt;span class=&#34;nb&#34;&gt;panic&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;err&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
     </item>
-    
     <item>
       <title>SSH Resources in Go</title>
       <link>http://h12.io/note/go-ssh-resources/</link>
       <pubDate>Sun, 31 Jan 2016 14:49:01 +0800</pubDate>
-      
       <guid>http://h12.io/note/go-ssh-resources/</guid>
-      <description> golang.org/x/crypto/ssh github.com/YuriyNasretdinov/GoSSHa  Articles:
- SSH Client connection in Golang Using Go to Execute Commands on Hundreds of Servers with SSH  </description>
+      <description>&lt;ul&gt;
+&lt;li&gt;golang.org/x/crypto/ssh&lt;/li&gt;
+&lt;li&gt;github.com/YuriyNasretdinov/GoSSHa&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Articles:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;http://blog.ralch.com/tutorial/golang-ssh-connection/&#34;&gt;SSH Client connection in Golang&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://kukuruku.co/hub/golang/ssh-commands-execution-on-hundreds-of-servers-via-go&#34;&gt;Using Go to Execute Commands on Hundreds of Servers with SSH&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</description>
     </item>
-    
     <item>
       <title>How to Remove All Exited Containers &amp; Dangling Images for Docker?</title>
       <link>http://h12.io/note/remove-all-exited-docker-containers/</link>
       <pubDate>Mon, 03 Aug 2015 16:55:49 +0800</pubDate>
-      
       <guid>http://h12.io/note/remove-all-exited-docker-containers/</guid>
-      <description>Updates at 2020-07-08:
-docker system prune  Old tricks:
-docker ps --quiet --filter=status=exited | xargs docker rm  docker images --no-trunc=true --filter=&amp;quot;dangling=true&amp;quot; --quiet=true | xargs docker rmi  </description>
+      <description>&lt;p&gt;Updates at 2020-07-08:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;docker system prune
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Old tricks:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;docker ps --quiet --filter&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;status&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;exited &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; xargs docker rm
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;docker images --no-trunc&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;true&lt;/span&gt; --filter&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;dangling=true&amp;#34;&lt;/span&gt; --quiet&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;true&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; xargs docker rmi
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
     </item>
-    
     <item>
       <title>A Comprehensive Note about Proxy Settings</title>
       <link>http://h12.io/note/proxy-notes/</link>
       <pubDate>Wed, 08 Jul 2015 07:58:34 +0000</pubDate>
-      
       <guid>http://h12.io/note/proxy-notes/</guid>
-      <description> Git &amp;gt; cat ~/.gitconfig [http] proxy = socks5://[host]:[port] [https] proxy = socks5://[host]:[port]  Curl (Homebrew) &amp;gt; cat ~/.curlrc socks5 = &amp;quot;[host]:[port]&amp;quot;  Docker pull env HTTP_PROXY=http://xxx docker pull yyy  GAE  Set proxy
-export HTTP_PROXY http://[host]:[port] export HTTPS_PROXY http://[host]:[port]  Delete cacerts.txt under GAE SDK installation to disable SSL verification ( make sure the proxy is safe before this step).
- Deploy.
-appcfg.py . --email=[address] --passin   </description>
+      <description>&lt;h2 id=&#34;git&#34;&gt;Git&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&amp;gt; cat ~/.gitconfig
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;http&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	&lt;span class=&#34;nv&#34;&gt;proxy&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; socks5://&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;host&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;:&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;port&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;https&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	&lt;span class=&#34;nv&#34;&gt;proxy&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; socks5://&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;host&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;:&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;port&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;curl-homebrew&#34;&gt;Curl (Homebrew)&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&amp;gt; cat ~/.curlrc
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nv&#34;&gt;socks5&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;[host]:[port]&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;docker-pull&#34;&gt;Docker pull&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fish&#34; data-lang=&#34;fish&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nf&#34;&gt;env&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;HTTP_PROXY&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;http://xxx &lt;span class=&#34;nf&#34;&gt;docker&lt;/span&gt; pull yyy
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;gae&#34;&gt;GAE&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;Set proxy&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;export&lt;/span&gt; HTTP_PROXY http://&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;host&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;:&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;port&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;export&lt;/span&gt; HTTPS_PROXY http://&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;host&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;:&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;port&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Delete cacerts.txt under GAE SDK installation to disable SSL verification (
+make sure the proxy is safe before this step).&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Deploy.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;appcfg.py . --email&lt;span class=&#34;o&#34;&gt;=[&lt;/span&gt;address&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt; --passin
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/li&gt;
+&lt;/ol&gt;</description>
     </item>
-    
     <item>
       <title>Phonetic Notations</title>
       <link>http://h12.io/note/phonetic-notations/</link>
       <pubDate>Tue, 30 Jun 2015 12:43:19 +0800</pubDate>
-      
       <guid>http://h12.io/note/phonetic-notations/</guid>
-      <description>Google Dictionary Google dictionary uses a phonetic notation same as NORD (New Oxford American Dictionary).
-To figure out an unknown phonetic notation, the simple way is to look up a few words that you know how to pronounce: church, hat, which, judge, game, thing, ship, thin, this, yes, pleasure cat, pay, care, father, arm, let, see, here, city, my, pot, no, caught, war, force, boy, put, tour, boot, out, cut, word, item, rabbit, winner, pupil</description>
+      <description>&lt;h2 id=&#34;google-dictionary&#34;&gt;Google Dictionary&lt;/h2&gt;
+&lt;p&gt;Google dictionary uses a phonetic notation same as &lt;a href=&#34;http://en.wikipedia.org/wiki/Pronunciation_respelling_for_English&#34;&gt;NORD (New Oxford American Dictionary)&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;To figure out an unknown phonetic notation, the simple way is to look up a few words that you know how to pronounce:
+church, hat, which, judge, game, thing, ship, thin, this, yes, pleasure
+cat, pay, care, father, arm, let, see, here, city, my, pot, no, caught, war, force, boy, put, tour, boot, out, cut, word, item, rabbit, winner, pupil&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Notes on the Design of Go</title>
       <link>http://h12.io/note/go-design/</link>
       <pubDate>Mon, 29 Jun 2015 16:34:59 +0800</pubDate>
-      
       <guid>http://h12.io/note/go-design/</guid>
-      <description>Refusing new features Avoid leaky abstraction as much as possible. If an abstraction is not solid enough, you’d rather not use them at all. Go is designed like this, the features are carefully selected. If a feature is not solid enough, it will not be allowed to enter Go.
-No implicit string concatenation Rob: That used to be in the language but was dropped when the semicolon insertion rules went in.</description>
+      <description>&lt;h3 id=&#34;refusing-new-features&#34;&gt;Refusing new features&lt;/h3&gt;
+&lt;p&gt;Avoid &lt;a href=&#34;https://en.wikipedia.org/wiki/Leaky_abstraction&#34;&gt;leaky abstraction&lt;/a&gt; as much as possible. If an abstraction is not solid enough, you’d rather not use them at all. Go is designed like this, the features are carefully selected. If a feature is not solid enough, it will not be allowed to enter Go.&lt;/p&gt;
+&lt;h3 id=&#34;no-implicit-string-concatenation&#34;&gt;No implicit string concatenation&lt;/h3&gt;
+&lt;p&gt;&lt;a href=&#34;https://groups.google.com/d/msg/golang-nuts/S6a3bg65TBE/ikyNMzUSnXsJ&#34;&gt;Rob&lt;/a&gt;:
+That used to be in the language but was dropped when the semicolon insertion rules went in. You need the + to be able to span lines, and if you can&amp;rsquo;t span lines operatorless concatenation is close to pointless.&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>What Go cannot Do</title>
       <link>http://h12.io/note/what-go-cannot-do/</link>
       <pubDate>Tue, 16 Jun 2015 00:00:00 +0000</pubDate>
-      
       <guid>http://h12.io/note/what-go-cannot-do/</guid>
-      <description>This is a list about the corner cases that Go cannot do, and their work arounds.
-Run all deferred functions of other goroutines when a goroutine panics Uncaught panicking of one goroutine will exit the program without executing deferred functions of other goroutines.
-Workaround: this is the standard behavior, C++ with RAII also has the same problem. Persist your data in a way that crashing will not cause data integrity issue.</description>
+      <description>&lt;p&gt;This is a list about the corner cases that Go cannot do, and their work arounds.&lt;/p&gt;
+&lt;h2 id=&#34;run-all-deferred-functions-of-other-goroutines-when-a-goroutine-panics&#34;&gt;Run all deferred functions of other goroutines when a goroutine panics&lt;/h2&gt;
+&lt;p&gt;Uncaught panicking of one goroutine will exit the program without executing deferred functions of other goroutines.&lt;/p&gt;
+&lt;p&gt;Workaround: this is the standard behavior, C++ with RAII also has the same problem. Persist your data in a way that crashing will not cause data integrity issue.&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Ebook Manipulation Tools</title>
       <link>http://h12.io/note/ebook-tools/</link>
       <pubDate>Thu, 04 Jun 2015 14:19:38 +0800</pubDate>
-      
       <guid>http://h12.io/note/ebook-tools/</guid>
-      <description> Ebook manager: Calibre Kindle PDF optimizer: k2pdfopt PDF Border Cropper Briss CHM File Extractor archmage PDF editing Xournal
- convert images to PDF
-sudo apt-get install imagemagick convert *.jpg pictures.pdf  convert between different formats:
-sudo apt-get install calibre ebook-convert xxx.mobi xxx.txt --unsmarten-punctuation   </description>
+      <description>&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Ebook manager: &lt;a href=&#34;http://calibre-ebook.com/&#34;&gt;Calibre&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Kindle PDF optimizer: &lt;a href=&#34;http://www.willus.com/k2pdfopt/&#34;&gt;k2pdfopt&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;PDF Border Cropper &lt;a href=&#34;http://sourceforge.net/projects/briss/&#34;&gt;Briss&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;CHM File Extractor &lt;a href=&#34;https://github.com/dottedmag/archmage&#34;&gt;archmage&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;PDF editing &lt;a href=&#34;http://xournal.sourceforge.net&#34;&gt;Xournal&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;convert images to PDF&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  sudo apt-get install imagemagick
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  convert *.jpg pictures.pdf
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;convert between different formats:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;      sudo apt-get install calibre
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;      ebook-convert xxx.mobi xxx.txt --unsmarten-punctuation
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/li&gt;
+&lt;/ul&gt;</description>
     </item>
-    
     <item>
       <title>How to &#34;go get&#34; Behind a Proxy</title>
       <link>http://h12.io/note/go-get-behind-proxy/</link>
       <pubDate>Wed, 06 May 2015 12:01:11 +0800</pubDate>
-      
       <guid>http://h12.io/note/go-get-behind-proxy/</guid>
-      <description> Proxy for &amp;ldquo;go get&amp;rdquo; https_proxy=http://user:pass@proxy_host:port go get ...  Proxy for Git In $HOME/.gitconfig:
-[https] proxy = proxy_url  Proxy for Mercurial In $HOME/.hgrc:
-[http_proxy] host = host:port user = ... passwd = ...  </description>
+      <description>&lt;h2 id=&#34;proxy-for-go-get&#34;&gt;Proxy for &amp;ldquo;go get&amp;rdquo;&lt;/h2&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;https_proxy=http://user:pass@proxy_host:port go get ...
+&lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&#34;proxy-for-git&#34;&gt;Proxy for Git&lt;/h2&gt;
+&lt;p&gt;In &lt;code&gt;$HOME/.gitconfig&lt;/code&gt;:&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;[https]
+	proxy = proxy_url
+&lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&#34;proxy-for-mercurial&#34;&gt;Proxy for Mercurial&lt;/h2&gt;
+&lt;p&gt;In &lt;code&gt;$HOME/.hgrc&lt;/code&gt;:&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;[http_proxy]
+host = host:port
+user = ...
+passwd = ...
+&lt;/code&gt;&lt;/pre&gt;</description>
     </item>
-    
     <item>
       <title>Tips on SSH</title>
       <link>http://h12.io/note/tips-on-ssh/</link>
       <pubDate>Tue, 28 Apr 2015 10:59:02 +0800</pubDate>
-      
       <guid>http://h12.io/note/tips-on-ssh/</guid>
-      <description>Generate SSH keys ssh-keygen -C w@h12.io  Authorize public key at remote server ssh-copy-id user@host  On Mac OSX, ssh-copy-id should be installed first.
-brew install ssh-copy-id  Generate PEM ssh-keygen -f ~/.ssh/id_rsa -e -m pem &amp;gt; ~/.ssh/id_rsa.pem  Copy file by base64 On remote session, run base64 &amp;lt; myfile and copy the output.
-On local terminal, run base64 -d &amp;gt; myfile, paste the content and press ctrl+D.</description>
+      <description>&lt;h2 id=&#34;generate-ssh-keys&#34;&gt;Generate SSH keys&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;ssh-keygen -C w@h12.io
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;authorize-public-key-at-remote-server&#34;&gt;Authorize public key at remote server&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;ssh-copy-id user@host
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;On Mac OSX, &lt;code&gt;ssh-copy-id&lt;/code&gt; should be installed first.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;brew install ssh-copy-id
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;generate-pem&#34;&gt;Generate PEM&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;ssh-keygen -f ~/.ssh/id_rsa -e -m pem &amp;gt; ~/.ssh/id_rsa.pem
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;copy-file-by-base64&#34;&gt;Copy file by base64&lt;/h2&gt;
+&lt;p&gt;On remote session, run &lt;code&gt;base64 &amp;lt; myfile&lt;/code&gt; and copy the output.&lt;/p&gt;
+&lt;p&gt;On local terminal, run &lt;code&gt;base64 -d &amp;gt; myfile&lt;/code&gt;, paste the content and press &lt;code&gt;ctrl+D&lt;/code&gt;.&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>How to Generate XSD Schema from XML?</title>
       <link>http://h12.io/note/generate-xsd-from-xml/</link>
       <pubDate>Thu, 23 Apr 2015 15:41:12 +0800</pubDate>
-      
       <guid>http://h12.io/note/generate-xsd-from-xml/</guid>
-      <description>Apache XMLBeans is an old tool but still functioning. Download and uncompress the latest binary release, then run inst2xsd under bin folder (needs JDK).
-inst2xsd xxx.xml  </description>
+      <description>&lt;p&gt;&lt;a href=&#34;http://archive.apache.org/dist/xmlbeans/binaries&#34;&gt;Apache XMLBeans&lt;/a&gt; is an old tool but still functioning. Download and uncompress the latest binary release, then run inst2xsd under bin folder (needs JDK).&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;inst2xsd xxx.xml
+&lt;/code&gt;&lt;/pre&gt;</description>
     </item>
-    
     <item>
       <title>Go 1.4.1 Build Failure and Solution</title>
       <link>http://h12.io/note/go-build-failure/</link>
       <pubDate>Thu, 29 Jan 2015 03:55:08 +0000</pubDate>
-      
       <guid>http://h12.io/note/go-build-failure/</guid>
-      <description>Today I tried to build Go 1.4.1 from source but it failed with this error:
- go/src/liblink/anames9.c:6:29: fatal error: ../cmd/9l/9.out.h: No such file or directory  At first I thought the building routine might have be changed so I opened and read Installing Go from Source again, carefully, and found nothing special.
-Then I searched for the error source and it turned out that I should deleted anames*.c, manually. There is no document and no automatic cleaning script, and you would have to figure it out yourself if no one ever mentioned it (source).</description>
+      <description>&lt;p&gt;Today I tried to build Go 1.4.1 from source but it failed with this error:&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;    go/src/liblink/anames9.c:6:29: fatal error: ../cmd/9l/9.out.h: No such file or directory
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;At first I thought the building routine might have be changed so I opened and read
+&lt;a href=&#34;http://golang.org/doc/install/source&#34;&gt;&lt;em&gt;Installing Go from Source&lt;/em&gt;&lt;/a&gt; again, carefully,
+and found nothing special.&lt;/p&gt;
+&lt;p&gt;Then I searched for the error source and it turned out that I should deleted
+&lt;code&gt;anames*.c&lt;/code&gt;, manually. There is no document and no automatic cleaning script, and
+you would have to figure it out yourself if no one ever mentioned it (&lt;a href=&#34;https://groups.google.com/d/msg/golang-nuts/wQoQqXOnOTo/QbubO2UebpUJ&#34;&gt;source&lt;/a&gt;).&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>How to configure a custom domain name in GAE?</title>
       <link>http://h12.io/note/gae-custom-domain/</link>
       <pubDate>Mon, 19 Jan 2015 09:32:04 +0000</pubDate>
-      
       <guid>http://h12.io/note/gae-custom-domain/</guid>
-      <description>Steps:
- Visit Developers Console. In your project: Compute -&amp;gt; App Engine -&amp;gt; Settings. On the tab labelled CUSTOM DOMAINS, you can verify your domain and assign it and/or its subdomains to your GAE project. Add the DNS settings provided by Google into the DNS server of your domain provider.  Notes:
- Only HTTP is supported, HTTPS is not. It will not work if you only modify the DNS record without actually assigning the custom domain in the Developer Console.</description>
+      <description>&lt;p&gt;Steps:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Visit &lt;a href=&#34;https://console.developers.google.com&#34;&gt;Developers Console&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;In your project: Compute -&amp;gt; App Engine -&amp;gt; Settings.&lt;/li&gt;
+&lt;li&gt;On the tab labelled CUSTOM DOMAINS, you can verify your domain and assign it
+and/or its subdomains to your GAE project.&lt;/li&gt;
+&lt;li&gt;Add the DNS settings provided by Google into the DNS server of your domain
+provider.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Notes:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Only HTTP is supported, HTTPS is not.&lt;/li&gt;
+&lt;li&gt;It will not work if you only modify the DNS record without actually assigning
+the custom domain in the Developer Console.&lt;/li&gt;
+&lt;/ol&gt;</description>
     </item>
-    
     <item>
       <title>How to install a self-signed CA Certificate to Android 4.4</title>
       <link>http://h12.io/note/install-ca-android/</link>
       <pubDate>Sat, 17 Jan 2015 18:13:09 +0000</pubDate>
-      
       <guid>http://h12.io/note/install-ca-android/</guid>
-      <description>See this blog Remove &amp;ldquo;Network May Be Monitored by an Unknown Third Party&amp;rdquo; in Android 4.4 KitKat.</description>
+      <description>&lt;p&gt;See this blog &lt;a href=&#34;https://samhobbs.co.uk/2013/12/remove-network-may-be-monitored-by-an-unknown-third-party-in-android-4-4-kitkat&#34;&gt;&lt;em&gt;Remove &amp;ldquo;Network May Be Monitored by an Unknown Third Party&amp;rdquo; in Android 4.4 KitKat&lt;/em&gt;&lt;/a&gt;.&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>A Shorter Domain Name</title>
       <link>http://h12.io/note/new-domain-h12/</link>
       <pubDate>Tue, 16 Dec 2014 09:43:40 +0000</pubDate>
-      
       <guid>http://h12.io/note/new-domain-h12/</guid>
-      <description>This year, I decided not to renewal the previous domain name (hailiang.ws) last year, but to register a shorter one. There are two reasons:
- Both the site URL and the email address will be cleaner. A more friendly Go import path will be possible for my repositories on Github.  After comparing various choices on major domain providers, I chose h12.io as the new domain. It is the shortest but still meaningful domain that I can afford.</description>
+      <description>&lt;p&gt;This year, I decided not to renewal the previous domain name (hailiang.ws) last
+year, but to register a shorter one. There are two reasons:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Both the site URL and the email address will be cleaner.&lt;/li&gt;
+&lt;li&gt;A more friendly Go import path will be possible for my repositories on Github.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;After comparing various choices on major domain providers, I chose &lt;code&gt;h12.io&lt;/code&gt; as
+the new domain. It is the shortest but still meaningful domain that I can afford.
+&lt;code&gt;H&lt;/code&gt; is the initial letter of my given name, &lt;code&gt;12&lt;/code&gt; is simply the number of letters
+of my full name, and &lt;code&gt;.me&lt;/code&gt; is a top level domain quite suitable for a personal
+website.&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Learning Resources on Parser Combinator</title>
       <link>http://h12.io/note/parser-combinator-links/</link>
       <pubDate>Mon, 04 Aug 2014 15:12:55 +0000</pubDate>
-      
       <guid>http://h12.io/note/parser-combinator-links/</guid>
-      <description> Monadic Parser Combinators Parsec: Direct Style Monadic Parser Combinators for the Real World Combinator Parsing: A Short Tutorial  </description>
+      <description>&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;http://eprints.nottingham.ac.uk/237/&#34;&gt;&lt;em&gt;Monadic Parser Combinators&lt;/em&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://legacy.cs.uu.nl/daan/pubs.html#parsec&#34;&gt;&lt;em&gt;Parsec: Direct Style Monadic Parser Combinators for the Real World&lt;/em&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://www.cs.tufts.edu/~nr/cs257/archive/doaitse-swierstra/combinator-parsing-tutorial.pdf&#34;&gt;&lt;em&gt;Combinator Parsing: A Short Tutorial&lt;/em&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</description>
     </item>
-    
     <item>
       <title>Resources on Offline Hyphenation</title>
       <link>http://h12.io/note/hyphen-res/</link>
       <pubDate>Wed, 30 Jul 2014 08:29:57 +0000</pubDate>
-      
       <guid>http://h12.io/note/hyphen-res/</guid>
-      <description>CSS hyphenation is supported by latest version of Firefox, Safari &amp;amp; IE. However, Chrome does not support it. Though Hyphenator.js can solve this problem, it runs in the browser and affects the rendering speed of above-the-fold content. So there is only one option left: soft hyphen (U+00AD, &amp;amp;shy;).
-Here is a list of resources that leads to its implementation:
- An article about CSS3 hyphenation by Hyphenator.js Hunspell: the spell checker &amp;amp; hyphenator used by LibreOffice English Dictionary of LibreOffice Pyphen: A Python hyphenator using Hunspell dictionary file A test page for soft hyphen  </description>
+      <description>&lt;p&gt;&lt;a href=&#34;http://caniuse.com/css-hyphens&#34;&gt;CSS hyphenation&lt;/a&gt; is supported by latest version
+of Firefox, Safari &amp;amp; IE. However, Chrome does not support it. Though
+&lt;a href=&#34;https://code.google.com/p/hyphenator/&#34;&gt;Hyphenator.js&lt;/a&gt; can solve this problem,
+it runs in the browser and affects the rendering speed of above-the-fold content.
+So there is only one option left: soft hyphen (&lt;code&gt;U+00AD&lt;/code&gt;, &lt;code&gt;&amp;amp;shy;&lt;/code&gt;).&lt;/p&gt;
+&lt;p&gt;Here is a list of resources that leads to its implementation:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;An &lt;a href=&#34;https://code.google.com/p/hyphenator/wiki/en_CSS3Hyphenation&#34;&gt;article&lt;/a&gt; about CSS3 hyphenation by Hyphenator.js&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://hunspell.sourceforge.net/&#34;&gt;Hunspell&lt;/a&gt;: the spell checker &amp;amp; hyphenator
+used by LibreOffice&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://extensions.libreoffice.org/extension-center/american-british-canadian-spelling-hyphen-thesaurus-dictionaries&#34;&gt;English Dictionary&lt;/a&gt; of LibreOffice&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/Kozea/Pyphen&#34;&gt;Pyphen&lt;/a&gt;: A Python hyphenator using Hunspell
+dictionary file&lt;/li&gt;
+&lt;li&gt;A test &lt;a href=&#34;http://clagnut.com/sandbox/softhyphen/&#34;&gt;page&lt;/a&gt; for soft hyphen&lt;/li&gt;
+&lt;/ul&gt;</description>
     </item>
-    
     <item>
       <title>About 301 Moved Permanently</title>
       <link>http://h12.io/note/301-redirect/</link>
       <pubDate>Fri, 25 Jul 2014 03:39:05 +0000</pubDate>
-      
       <guid>http://h12.io/note/301-redirect/</guid>
-      <description>When building a website, there is one inevitable thing: 301 permanent redirection. The cases that have to involve 301 includes:
- Redirection from www subdomain to naked domain or vise versa. Redirection from slashed pretty URL to unslashed URL or vise versa.  301 is easy to implement with Go:
-func redirect301(w http.ResponseWriter, url string) { w.Header().Set(&amp;quot;Location&amp;quot;, url) w.WriteHeader(http.StatusMovedPermanently) }  There is one more thing that needs attention: The root path of a domain always contains a slash (GET / in HTTP request), regardless the user enters the slash or not, so the root path needs no redirection.</description>
+      <description>&lt;p&gt;When building a website, there is one inevitable thing:
+&lt;a href=&#34;http://en.wikipedia.org/wiki/HTTP_301&#34;&gt;301 permanent redirection&lt;/a&gt;. The cases
+that have to involve 301 includes:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Redirection from www subdomain to naked domain or vise versa.&lt;/li&gt;
+&lt;li&gt;Redirection from slashed pretty URL to unslashed URL or vise versa.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;301 is easy to implement with Go:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-go&#34; data-lang=&#34;go&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;kd&#34;&gt;func&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;redirect301&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;w&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;http&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;ResponseWriter&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;url&lt;/span&gt; &lt;span class=&#34;kt&#34;&gt;string&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;nx&#34;&gt;w&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nf&#34;&gt;Header&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;().&lt;/span&gt;&lt;span class=&#34;nf&#34;&gt;Set&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;Location&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;url&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;nx&#34;&gt;w&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nf&#34;&gt;WriteHeader&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;http&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;StatusMovedPermanently&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;There is one more thing that needs attention: The root path of a domain always
+contains a slash (GET / in HTTP request), regardless the user enters the slash
+or not, so the root path needs no redirection.&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>An Overview of Continuous Integration Services</title>
       <link>http://h12.io/note/ci-overview/</link>
       <pubDate>Thu, 17 Jul 2014 14:54:26 +0000</pubDate>
-      
       <guid>http://h12.io/note/ci-overview/</guid>
-      <description>After reviewing many continuous integration services below, there is no doubt that Wercker is the winner. The Wercker Box (virtual container) is based on Ubuntu and any packages can be easily installed with &amp;ldquo;apt-get&amp;rdquo;. This flexibility basically allows running any test suites and deploying to any cloud platforms. Furthermore, a Wercker Box can inherit from another box and can be stored and published in Wercker directories as the starting point for any projects, increasing the performance significantly.</description>
+      <description>&lt;p&gt;After reviewing many continuous integration services below, there is no doubt
+that Wercker is the winner. The Wercker Box (virtual container) is based on
+Ubuntu and any packages can be easily installed with &amp;ldquo;apt-get&amp;rdquo;. This flexibility
+basically allows running any test suites and deploying to any cloud platforms.
+Furthermore, a Wercker Box can inherit from another box and can be stored and
+published in Wercker directories as the starting point for any projects,
+increasing the performance significantly.&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Installing Source Code Pro</title>
       <link>http://h12.io/note/install-scp/</link>
       <pubDate>Thu, 17 Jul 2014 03:19:18 +0000</pubDate>
-      
       <guid>http://h12.io/note/install-scp/</guid>
-      <description>Source Code Pro is one of the best monospace fonts and it is open sourced.
-Here is the script for installing it on Linux.</description>
+      <description>&lt;p&gt;&lt;em&gt;Source Code Pro&lt;/em&gt; is one of the best monospace fonts and it is &lt;a href=&#34;https://github.com/adobe/source-code-pro&#34;&gt;open sourced&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Here is the &lt;a href=&#34;https://github.com/h12w/linux/blob/master/install_scp.sh&#34;&gt;script&lt;/a&gt; for installing it on Linux.&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Installing Susy</title>
       <link>http://h12.io/note/install-susy/</link>
       <pubDate>Thu, 17 Jul 2014 02:29:57 +0000</pubDate>
-      
       <guid>http://h12.io/note/install-susy/</guid>
-      <description>The script:
-sudo apt-get install ruby sudo apt-get install ruby-dev sudo gem install susy -V sudo gem install compass --pre -V sudo gem lnstall breakpoint -V  Notes:
- The current version of Susy uses a higher version of Sass than Compass, so the corresponding Compass version has to be a prerelease (&amp;ndash;pre). The installing process is slow and it feels better to print it out (-V). You may have to run &amp;ldquo;compass watch&amp;rdquo; with sudo (issue 1497).</description>
+      <description>&lt;p&gt;The script:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sudo apt-get install ruby
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sudo apt-get install ruby-dev
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sudo gem install susy -V
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sudo gem install compass --pre -V
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sudo gem lnstall breakpoint -V
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Notes:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;The current version of Susy uses a higher version of Sass than Compass, so the
+corresponding Compass version has to be a prerelease (&amp;ndash;pre).&lt;/li&gt;
+&lt;li&gt;The installing process is slow and it feels better to print it out (-V).&lt;/li&gt;
+&lt;li&gt;You may have to run &amp;ldquo;compass watch&amp;rdquo; with sudo (&lt;a href=&#34;https://github.com/Compass/compass/issues/1497&#34;&gt;issue 1497&lt;/a&gt;).&lt;/li&gt;
+&lt;li&gt;An alternative &lt;a href=&#34;https://ruby.taobao.org/&#34;&gt;RubyGems source&lt;/a&gt; that is close to
+your location might help.&lt;/li&gt;
+&lt;/ul&gt;</description>
     </item>
-    
     <item>
       <title>A List of URLs about Web Design</title>
       <link>http://h12.io/note/web-design-site/</link>
       <pubDate>Thu, 10 Jul 2014 04:04:00 +0000</pubDate>
-      
       <guid>http://h12.io/note/web-design-site/</guid>
-      <description> The Elements of Typographic Style Applied to the Web Smashing Magazine Trentwalton Inkwell  </description>
+      <description>&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;http://webtypography.net/&#34;&gt;The Elements of Typographic Style Applied to the Web&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://www.smashingmagazine.com/&#34;&gt;Smashing Magazine&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://trentwalton.com/&#34;&gt;Trentwalton&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://www.inkwell.ie/&#34;&gt;Inkwell&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</description>
     </item>
-    
     <item>
       <title>Why My Web Font Looks Ugly on IE?</title>
       <link>http://h12.io/note/ugly-font/</link>
       <pubDate>Wed, 09 Jul 2014 05:42:42 +0000</pubDate>
-      
       <guid>http://h12.io/note/ugly-font/</guid>
-      <description>Windows needs hand-tuned hinting which is missing in many web fonts. To solve this problem, there is a tool called ttfautohint which can automatically add hinting to font files.
-There is a tutorial, and an online tool called Fontie.</description>
+      <description>&lt;p&gt;Windows needs hand-tuned hinting which is missing in many web fonts. To solve this
+problem, there is a tool called &lt;a href=&#34;http://www.freetype.org/ttfautohint/index.html&#34;&gt;ttfautohint&lt;/a&gt;
+which can automatically add hinting to font files.&lt;/p&gt;
+&lt;p&gt;There is a &lt;a href=&#34;http://pixelsvsbytes.com/blog/2013/11/how-to-create-perfect-web-fonts-in-3-steps/&#34;&gt;tutorial&lt;/a&gt;,
+and an online tool called &lt;a href=&#34;http://fontie.flowyapps.com/&#34;&gt;Fontie&lt;/a&gt;.&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Serving Static Pages on App Engine with Go</title>
       <link>http://h12.io/note/serve-static/</link>
       <pubDate>Sun, 06 Jul 2014 06:39:27 +0000</pubDate>
-      
       <guid>http://h12.io/note/serve-static/</guid>
-      <description>It is straightforward to serve static pages with Go or config file on App Engine, but how to serve static pages on App Engine with Go?
-I got the following error when I tried to customize the 404 page with Go:
-No such file or directory  The solution turns out to be simple: do not do both.
-The file will not be accessible to Go if there is already a rule for it in config.</description>
+      <description>&lt;p&gt;It is straightforward to serve static pages with &lt;a href=&#34;http://golang.org/pkg/net/http/&#34;&gt;Go&lt;/a&gt;
+or &lt;a href=&#34;https://developers.google.com/appengine/docs/go/config/appconfig&#34;&gt;config file&lt;/a&gt;
+on App Engine, but how to serve static pages on App Engine with Go?&lt;/p&gt;
+&lt;p&gt;I got the following error when I tried to customize the 404 page with Go:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;No such file or directory
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;The solution turns out to be simple: do not do both.&lt;/p&gt;
+&lt;p&gt;The file will not be accessible to Go if there is already a rule for it in
+config.yaml. Remove the rule from config.yaml and the file will be available to
+Go again (source:
+&lt;a href=&#34;https://groups.google.com/d/msg/google-appengine-go/DmfDPUBkmrg/SvJ1dwjC0_EJ&#34;&gt;google-appengine-go&lt;/a&gt;).&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>A List of Website Testing Services</title>
       <link>http://h12.io/note/site-test/</link>
       <pubDate>Thu, 03 Jul 2014 06:21:58 +0000</pubDate>
-      
       <guid>http://h12.io/note/site-test/</guid>
-      <description> The W3C Markup Validation Service Google PageSpeed Insights Pingdom Website Speed Test Nibbler BrowserStack  </description>
+      <description>&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;http://validator.w3.org/&#34;&gt;The W3C Markup Validation Service&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://developers.google.com/speed/pagespeed/insights/&#34;&gt;Google PageSpeed Insights&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://tools.pingdom.com/fpt/&#34;&gt;Pingdom Website Speed Test&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://nibbler.silktide.com&#34;&gt;Nibbler&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://www.browserstack.com/screenshots&#34;&gt;BrowserStack&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</description>
     </item>
-    
     <item>
       <title>A List of Narrow Fonts for Titles</title>
       <link>http://h12.io/note/narrow-fonts/</link>
       <pubDate>Tue, 01 Jul 2014 08:39:42 +0000</pubDate>
-      
       <guid>http://h12.io/note/narrow-fonts/</guid>
-      <description> Economica Fjalla One League Gothic Medula One Open Sans Condensed Oswald Pathway Gothic One PT Sans Narrow Rationale Six Caps Tulpen One Yanone Kaffeesatz  </description>
+      <description>&lt;ul&gt;
+&lt;li&gt;Economica&lt;/li&gt;
+&lt;li&gt;Fjalla One&lt;/li&gt;
+&lt;li&gt;League Gothic&lt;/li&gt;
+&lt;li&gt;Medula One&lt;/li&gt;
+&lt;li&gt;Open Sans Condensed&lt;/li&gt;
+&lt;li&gt;Oswald&lt;/li&gt;
+&lt;li&gt;Pathway Gothic One&lt;/li&gt;
+&lt;li&gt;PT Sans Narrow&lt;/li&gt;
+&lt;li&gt;Rationale&lt;/li&gt;
+&lt;li&gt;Six Caps&lt;/li&gt;
+&lt;li&gt;Tulpen One&lt;/li&gt;
+&lt;li&gt;Yanone Kaffeesatz&lt;/li&gt;
+&lt;/ul&gt;</description>
     </item>
-    
     <item>
       <title>Links about Font Choosing</title>
       <link>http://h12.io/note/font-links/</link>
       <pubDate>Sun, 22 Jun 2014 14:09:45 +0000</pubDate>
-      
       <guid>http://h12.io/note/font-links/</guid>
-      <description> The Best Font Styles for Blogging Size Doesn’t Matter, and What Does Using Media Queries To Improve Readability 8 Definitive Web Font Stacks  </description>
+      <description>&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;http://www.snapily.com/blog/the-best-font-styles-for-blogging/&#34;&gt;The Best Font Styles for Blogging&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://www.bigbrandsystem.com/best-font-size/&#34;&gt;Size Doesn’t Matter, and What Does&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://blog.mailchimp.com/using-media-queries-to-improve-readability/&#34;&gt;Using Media Queries To Improve Readability&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://www.sitepoint.com/eight-definitive-font-stacks/&#34;&gt;8 Definitive Web Font Stacks&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</description>
     </item>
-    
     <item>
       <title>How to Make Web Pages Searchable by Meta Data?</title>
       <link>http://h12.io/note/searchable-meta-data/</link>
       <pubDate>Sun, 22 Jun 2014 12:34:02 +0000</pubDate>
-      
       <guid>http://h12.io/note/searchable-meta-data/</guid>
-      <description>Providing Structured Data</description>
+      <description>&lt;p&gt;&lt;a href=&#34;https://developers.google.com/custom-search/docs/structured_data&#34;&gt;Providing Structured Data&lt;/a&gt;&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Upgrading 4.4.3 ROM for HTC One</title>
       <link>http://h12.io/note/htc-upgrade/</link>
       <pubDate>Wed, 11 Jun 2014 12:24:00 +0000</pubDate>
-      
       <guid>http://h12.io/note/htc-upgrade/</guid>
-      <description>Upgrade your rooted Google Play Edition</description>
+      <description>&lt;p&gt;&lt;a href=&#34;http://htc-one.wonderhowto.com/how-to/update-your-rooted-google-play-edition-htc-one-4-4-3-without-losing-any-data-0155404/&#34;&gt;Upgrade your rooted Google Play Edition&lt;/a&gt;&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>How to Disable the Touchpad in Linux?</title>
       <link>http://h12.io/note/disable-touchpad/</link>
       <pubDate>Tue, 10 Jun 2014 23:00:24 +0000</pubDate>
-      
       <guid>http://h12.io/note/disable-touchpad/</guid>
-      <description>Have you ever been annoyed by accidentally touching the touchpad on your laptop when you are typing?
-I am using a Linux laptop with both trackpoint and touchpad so the touchpad is just an annoying redundant thing. Here is the one-liner to disable it:
-xinput list | grep TouchPad | grep -Po &#39;id=\K([0-9]+)&#39; | xargs xinput disable  </description>
+      <description>&lt;p&gt;Have you ever been annoyed by accidentally touching the touchpad on your laptop
+when you are typing?&lt;/p&gt;
+&lt;p&gt;I am using a Linux laptop with both trackpoint and touchpad so the touchpad is
+just an annoying redundant thing. Here is the one-liner to disable it:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;xinput list &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; grep TouchPad &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; grep -Po &lt;span class=&#34;s1&#34;&gt;&amp;#39;id=\K([0-9]+)&amp;#39;&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; xargs xinput disable
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
     </item>
-    
   </channel>
 </rss>

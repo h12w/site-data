@@ -1,26 +1,39 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
-    <title>Cgo on Hai-Liang &#34;Hal&#34; Wang</title>
+    <title>Cgo on @h12</title>
     <link>http://h12.io/tags/cgo/</link>
-    <description>Recent content in Cgo on Hai-Liang &#34;Hal&#34; Wang</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en-US</language>
-    <copyright>Copyright (c) 2012-2018, Hǎi-Liàng &#34;Hal&#34; Wáng; all rights reserved.</copyright>
+    <description>Recent content in Cgo on @h12</description>
+    <generator>Hugo -- 0.145.0</generator>
+    <language>en-us</language>
+    <copyright>2012-2025, Hǎi-Liàng &amp;ldquo;Hal&amp;rdquo; Wáng.</copyright>
     <lastBuildDate>Wed, 01 Jan 2014 01:30:04 +0000</lastBuildDate>
-    
-	<atom:link href="http://h12.io/tags/cgo/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <atom:link href="http://h12.io/tags/cgo/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Cwrap: wraps C libraries in Go</title>
       <link>http://h12.io/project/cwrap/</link>
       <pubDate>Wed, 01 Jan 2014 01:30:04 +0000</pubDate>
-      
       <guid>http://h12.io/project/cwrap/</guid>
-      <description>Cwrap is a Go wrapper generator for C libraries.
-Features  No Cgo types exposed out of the wrapper package, and uses as less allocation/copy as possible. C name prefix mapped to Go packages, and a wrapper package can import another wrapper package. Follows Go naming conventions. C union. Use Go language features when possible:  string and bool. Multiple return values. Slice, slice of slice and slice of string.</description>
+      <description>&lt;p&gt;Cwrap is a Go wrapper generator for C libraries.&lt;/p&gt;
+&lt;h2 id=&#34;features&#34;&gt;Features&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;No Cgo types exposed out of the wrapper package, and uses as less allocation/copy as possible.&lt;/li&gt;
+&lt;li&gt;C name prefix mapped to Go packages, and a wrapper package can import another wrapper package.&lt;/li&gt;
+&lt;li&gt;Follows Go naming conventions.&lt;/li&gt;
+&lt;li&gt;C union.&lt;/li&gt;
+&lt;li&gt;Use Go language features when possible:
+&lt;ul&gt;
+&lt;li&gt;string and bool.&lt;/li&gt;
+&lt;li&gt;Multiple return values.&lt;/li&gt;
+&lt;li&gt;Slice, slice of slice and slice of string.&lt;/li&gt;
+&lt;li&gt;struct with methods.&lt;/li&gt;
+&lt;li&gt;Go closures as callbacks.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Stay out of the way when you need to do it manually for specified declarations.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;usage&#34;&gt;Usage&lt;/h2&gt;
+&lt;p&gt;Cwrap itself is a Go package rather than an executable program. Just fill a cwrap.Package struct literal and call its Wrap method to generate your wrapper package under $GOPATH. Here is a simple example:&lt;/p&gt;</description>
     </item>
-    
   </channel>
 </rss>

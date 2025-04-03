@@ -1,36 +1,36 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
-    <title>Runner on Hai-Liang &#34;Hal&#34; Wang</title>
+    <title>Runner on @h12</title>
     <link>http://h12.io/tags/runner/</link>
-    <description>Recent content in Runner on Hai-Liang &#34;Hal&#34; Wang</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en-US</language>
-    <copyright>Copyright (c) 2012-2018, Hǎi-Liàng &#34;Hal&#34; Wáng; all rights reserved.</copyright>
+    <description>Recent content in Runner on @h12</description>
+    <generator>Hugo -- 0.145.0</generator>
+    <language>en-us</language>
+    <copyright>2012-2025, Hǎi-Liàng &amp;ldquo;Hal&amp;rdquo; Wáng.</copyright>
     <lastBuildDate>Sat, 22 Apr 2023 17:50:04 +0100</lastBuildDate>
-    
-	<atom:link href="http://h12.io/tags/runner/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <atom:link href="http://h12.io/tags/runner/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Go Pattern: Hybrid Handler</title>
       <link>http://h12.io/article/go-pattern-hybrid-handler/</link>
       <pubDate>Sat, 22 Apr 2023 17:50:04 +0100</pubDate>
-      
       <guid>http://h12.io/article/go-pattern-hybrid-handler/</guid>
-      <description>Overview In today&amp;rsquo;s high-performance and concurrent computing environments, effectively processing a stream of messages using a mix of purely computational functions and remote procedure calls has become a significant challenge. The Go programming language is designed to handle concurrency well, but when it comes to managing a hybrid load, even Go can struggle to achieve optimal CPU utilization. In this article, we will discuss the Hybrid Handler pattern, an efficient and unified approach to address this challenge.</description>
+      <description>&lt;h2 id=&#34;overview&#34;&gt;Overview&lt;/h2&gt;
+&lt;p&gt;In today&amp;rsquo;s high-performance and concurrent computing environments, effectively processing a stream of messages using a mix of purely computational functions and remote procedure calls has become a significant challenge. The Go programming language is designed to handle concurrency well, but when it comes to managing a hybrid load, even Go can struggle to achieve optimal CPU utilization. In this article, we will discuss the Hybrid Handler pattern, an efficient and unified approach to address this challenge.&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Go Pattern: Runner</title>
       <link>http://h12.io/article/go-pattern-runner/</link>
       <pubDate>Tue, 22 Feb 2022 14:46:35 +0000</pubDate>
-      
       <guid>http://h12.io/article/go-pattern-runner/</guid>
-      <description>Again and again, a concurrent pattern emerges from the need to control goroutine lifecycles and handle their errors, and I call it the &amp;ldquo;Runner Pattern&amp;rdquo;.
-The runner interface and its contract The pattern is as simple as a single-method interface:
-// Runner defines the Run method to be executed within a goroutine type Runner interface { Run(ctx context.Context) error }  The contract of the interface covers two aspects.</description>
+      <description>&lt;p&gt;Again and again, a concurrent pattern emerges from the need to control goroutine lifecycles and handle their errors, and I call it the &amp;ldquo;Runner Pattern&amp;rdquo;.&lt;/p&gt;
+&lt;h2 id=&#34;the-runner-interface-and-its-contract&#34;&gt;The runner interface and its contract&lt;/h2&gt;
+&lt;p&gt;The pattern is as simple as a single-method interface:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-go&#34; data-lang=&#34;go&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;// Runner defines the Run method to be executed within a goroutine&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;kd&#34;&gt;type&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;Runner&lt;/span&gt; &lt;span class=&#34;kd&#34;&gt;interface&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	&lt;span class=&#34;nf&#34;&gt;Run&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;ctx&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;context&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;Context&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;kt&#34;&gt;error&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;The contract of the interface covers two aspects.&lt;/p&gt;
+&lt;p&gt;On the goroutine lifecycle, the &lt;code&gt;Run&lt;/code&gt; method will block until one of the following occurs:&lt;/p&gt;</description>
     </item>
-    
   </channel>
 </rss>

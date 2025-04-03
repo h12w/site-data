@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="en" dir="auto">
+
+<head><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="index, follow">
+<title>Notes | @h12</title>
+<meta name="keywords" content="">
+<meta name="description" content="Notes - @h12">
+<meta name="author" content="Hǎi-Liàng &#34;Hal&#34; Wáng">
+<link rel="canonical" href="http://h12.io/note/">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.ef93a538cbae171c70c47408f7fccb878c5ffd285cc92b2b46b10dde0f97f53e.css" integrity="sha256-75OlOMuuFxxwxHQI9/zLh4xf/ShcySsrRrEN3g&#43;X9T4=" rel="preload stylesheet" as="style">
+<link rel="icon" href="http://h12.io/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="http://h12.io/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="http://h12.io/favicon-32x32.png">
+<link rel="apple-touch-icon" href="http://h12.io/apple-touch-icon.png">
+<link rel="mask-icon" href="http://h12.io/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<link rel="alternate" type="application/rss+xml" href="http://h12.io/note/index.xml">
+<link rel="alternate" hreflang="en" href="http://h12.io/note/">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --code-block-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+            }
+
+            .list {
+                background: var(--theme);
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-track {
+                background: 0 0;
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-thumb {
+                border-color: var(--theme);
+            }
+        }
+
+    </style>
+</noscript>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+
+
+
+
+<link id="syntax-mode" rel="stylesheet" href="/css/syntax-light.css">
+
+<script>
+    function isDarkMode() {
+        const mode = localStorage.getItem("pref-theme");
+        return (mode && mode === "dark") ||
+            document.body.className.includes("dark") ||
+            false;
+    }
+
+    function syncSyntaxMode() {
+        document.getElementById("syntax-mode").href = isDarkMode() ? "/css/syntax-dark.css" : "/css/syntax-light.css";
+    }
+
+    document.addEventListener("DOMContentLoaded", () => {
+        syncSyntaxMode();
+        const toggleButton = document.getElementById("theme-toggle");
+        if (!toggleButton) {
+            console.log("No toggle button found");
+            return;
+        }
+        toggleButton.addEventListener("click", syncSyntaxMode);
+    });
+</script>
+
+<script>
+  MathJax = {
+    tex: {
+      inlineMath: [['$', '$'], ['\\(', '\\)']],
+      displayMath: [['$$','$$'], ['\\[', '\\]']],
+      processEscapes: true,
+      processEnvironments: true
+    },
+    options: {
+      enableMenu: false,
+      skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre']
+    }
+  };
+</script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+<meta property="og:url" content="http://h12.io/note/">
+  <meta property="og:site_name" content="@h12">
+  <meta property="og:title" content="Notes">
+  <meta property="og:locale" content="en-us">
+  <meta property="og:type" content="website">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Notes">
+<meta name="twitter:description" content="">
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position":  1 ,
+      "name": "Notes",
+      "item": "http://h12.io/note/"
+    }
+  ]
+}
+</script>
+</head>
+
+<body class="list" id="top">
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.body.classList.add('dark');
+    } else if (localStorage.getItem("pref-theme") === "light") {
+        document.body.classList.remove('dark')
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.body.classList.add('dark');
+    }
+
+</script>
+
+<header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="http://h12.io/" accesskey="h" title="@h12 (Alt + H)">@h12</a>
+            <div class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)" aria-label="Toggle theme">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <ul id="menu">
+            <li>
+                <a href="http://h12.io/article/" title="Articles">
+                    <span><i class="fas fa-newspaper"></i> Articles</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://h12.io/project/" title="Projects">
+                    <span><i class="fab fa-github"></i> Projects</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://h12.io/note/" title="Notes">
+                    <span class="active"><i class="fas fa-sticky-note"></i> Notes</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://h12.io/about/" title="About">
+                    <span><i class="fas fa-user"></i> About</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<main class="main"> 
+<header class="page-header">
+  <h1>
+    Notes
+  </h1>
+</header>
+
+<article class="post-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">Installing Susy
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>The script:
+sudo apt-get install ruby sudo apt-get install ruby-dev sudo gem install susy -V sudo gem install compass --pre -V sudo gem lnstall breakpoint -V Notes:
+The current version of Susy uses a higher version of Sass than Compass, so the corresponding Compass version has to be a prerelease (–pre). The installing process is slow and it feels better to print it out (-V). You may have to run “compass watch” with sudo (issue 1497). An alternative RubyGems source that is close to your location might help. </p>
+  </div>
+  <footer class="entry-footer"><span title='2014-07-17 02:29:57 +0000 UTC'>July 17, 2014</span></footer>
+  <a class="entry-link" aria-label="post link to Installing Susy" href="http://h12.io/note/install-susy/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">A List of URLs about Web Design
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p> The Elements of Typographic Style Applied to the Web Smashing Magazine Trentwalton Inkwell </p>
+  </div>
+  <footer class="entry-footer"><span title='2014-07-10 04:04:00 +0000 UTC'>July 10, 2014</span></footer>
+  <a class="entry-link" aria-label="post link to A List of URLs about Web Design" href="http://h12.io/note/web-design-site/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">Why My Web Font Looks Ugly on IE?
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>Windows needs hand-tuned hinting which is missing in many web fonts. To solve this problem, there is a tool called ttfautohint which can automatically add hinting to font files.
+There is a tutorial, and an online tool called Fontie.
+</p>
+  </div>
+  <footer class="entry-footer"><span title='2014-07-09 05:42:42 +0000 UTC'>July 9, 2014</span></footer>
+  <a class="entry-link" aria-label="post link to Why My Web Font Looks Ugly on IE?" href="http://h12.io/note/ugly-font/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">Serving Static Pages on App Engine with Go
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>It is straightforward to serve static pages with Go or config file on App Engine, but how to serve static pages on App Engine with Go?
+I got the following error when I tried to customize the 404 page with Go:
+No such file or directory The solution turns out to be simple: do not do both.
+The file will not be accessible to Go if there is already a rule for it in config.yaml. Remove the rule from config.yaml and the file will be available to Go again (source: google-appengine-go).
+...</p>
+  </div>
+  <footer class="entry-footer"><span title='2014-07-06 06:39:27 +0000 UTC'>July 6, 2014</span></footer>
+  <a class="entry-link" aria-label="post link to Serving Static Pages on App Engine with Go" href="http://h12.io/note/serve-static/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">A List of Website Testing Services
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p> The W3C Markup Validation Service Google PageSpeed Insights Pingdom Website Speed Test Nibbler BrowserStack </p>
+  </div>
+  <footer class="entry-footer"><span title='2014-07-03 06:21:58 +0000 UTC'>July 3, 2014</span></footer>
+  <a class="entry-link" aria-label="post link to A List of Website Testing Services" href="http://h12.io/note/site-test/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">A List of Narrow Fonts for Titles
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p> Economica Fjalla One League Gothic Medula One Open Sans Condensed Oswald Pathway Gothic One PT Sans Narrow Rationale Six Caps Tulpen One Yanone Kaffeesatz </p>
+  </div>
+  <footer class="entry-footer"><span title='2014-07-01 08:39:42 +0000 UTC'>July 1, 2014</span></footer>
+  <a class="entry-link" aria-label="post link to A List of Narrow Fonts for Titles" href="http://h12.io/note/narrow-fonts/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">Links about Font Choosing
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p> The Best Font Styles for Blogging Size Doesn’t Matter, and What Does Using Media Queries To Improve Readability 8 Definitive Web Font Stacks </p>
+  </div>
+  <footer class="entry-footer"><span title='2014-06-22 14:09:45 +0000 UTC'>June 22, 2014</span></footer>
+  <a class="entry-link" aria-label="post link to Links about Font Choosing" href="http://h12.io/note/font-links/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">How to Make Web Pages Searchable by Meta Data?
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>Providing Structured Data
+</p>
+  </div>
+  <footer class="entry-footer"><span title='2014-06-22 12:34:02 +0000 UTC'>June 22, 2014</span></footer>
+  <a class="entry-link" aria-label="post link to How to Make Web Pages Searchable by Meta Data?" href="http://h12.io/note/searchable-meta-data/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">Upgrading 4.4.3 ROM for HTC One
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>Upgrade your rooted Google Play Edition
+</p>
+  </div>
+  <footer class="entry-footer"><span title='2014-06-11 12:24:00 +0000 UTC'>June 11, 2014</span></footer>
+  <a class="entry-link" aria-label="post link to Upgrading 4.4.3 ROM for HTC One" href="http://h12.io/note/htc-upgrade/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">How to Disable the Touchpad in Linux?
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>Have you ever been annoyed by accidentally touching the touchpad on your laptop when you are typing?
+I am using a Linux laptop with both trackpoint and touchpad so the touchpad is just an annoying redundant thing. Here is the one-liner to disable it:
+xinput list | grep TouchPad | grep -Po &#39;id=\K([0-9]&#43;)&#39; | xargs xinput disable </p>
+  </div>
+  <footer class="entry-footer"><span title='2014-06-10 23:00:24 +0000 UTC'>June 10, 2014</span></footer>
+  <a class="entry-link" aria-label="post link to How to Disable the Touchpad in Linux?" href="http://h12.io/note/disable-touchpad/"></a>
+</article>
+<footer class="page-footer">
+  <nav class="pagination">
+    <a class="prev" href="http://h12.io/note/page/4/">
+      «&nbsp;Prev&nbsp;
+    </a>
+  </nav>
+</footer>
+    </main>
+    
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a><footer class="footer">
+        <p>&copy; 2012-2025, <span class="my-name">Hǎi-Liàng "Hal" Wáng</span>.</p>
+        <p xmlns:cc="http://creativecommons.org/ns#" xmlns:dct="http://purl.org/dc/terms/"><span property="dct:title">The content of this page</span> is licensed under <a href="https://creativecommons.org/licenses/by/4.0/?ref=chooser-v1" target="_blank" rel="license noopener noreferrer" style="display:inline-flex;align-items:center;">CC BY 4.0<img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/cc.svg?ref=chooser-v1" alt=""><img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/by.svg?ref=chooser-v1" alt=""></a></p>
+    </footer>
+
+
+<script>
+    let menu = document.getElementById('menu')
+    if (menu) {
+        menu.scrollLeft = localStorage.getItem("menu-scroll-position");
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        if (document.body.className.includes("dark")) {
+            document.body.classList.remove('dark');
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            document.body.classList.add('dark');
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+</body>
+
+</html>

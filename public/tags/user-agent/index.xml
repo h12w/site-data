@@ -1,27 +1,31 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
-    <title>User Agent on Hai-Liang &#34;Hal&#34; Wang</title>
+    <title>User Agent on @h12</title>
     <link>http://h12.io/tags/user-agent/</link>
-    <description>Recent content in User Agent on Hai-Liang &#34;Hal&#34; Wang</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en-US</language>
-    <copyright>Copyright (c) 2012-2018, Hǎi-Liàng &#34;Hal&#34; Wáng; all rights reserved.</copyright>
+    <description>Recent content in User Agent on @h12</description>
+    <generator>Hugo -- 0.145.0</generator>
+    <language>en-us</language>
+    <copyright>2012-2025, Hǎi-Liàng &amp;ldquo;Hal&amp;rdquo; Wáng.</copyright>
     <lastBuildDate>Mon, 18 Jul 2016 06:00:00 +0800</lastBuildDate>
-    
-	<atom:link href="http://h12.io/tags/user-agent/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <atom:link href="http://h12.io/tags/user-agent/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>ua: User-Agent parser in Go</title>
       <link>http://h12.io/project/ua/</link>
       <pubDate>Mon, 18 Jul 2016 06:00:00 +0800</pubDate>
-      
       <guid>http://h12.io/project/ua/</guid>
-      <description>Design The UA detection algorithm is a pipeline containing 3 steps:
- Scan: scan products and its corresponding comments from a UA string. Parse: parse device info from products. Detect: detect device model by looking up in a database and get related info, e.g. screen resolution.  Scan The scanner scans the user agent string into products. Each product has its own name, version and comments. e.g.
-For user agent string:</description>
+      <description>&lt;h2 id=&#34;design&#34;&gt;Design&lt;/h2&gt;
+&lt;p&gt;The UA detection algorithm is a pipeline containing 3 steps:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Scan: scan products and its corresponding comments from a UA string.&lt;/li&gt;
+&lt;li&gt;Parse: parse device info from products.&lt;/li&gt;
+&lt;li&gt;Detect: detect device model by looking up in a database and get related info, e.g. screen resolution.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id=&#34;scan&#34;&gt;Scan&lt;/h3&gt;
+&lt;p&gt;The scanner scans the user agent string into products. Each product has its own name, version and comments. e.g.&lt;/p&gt;
+&lt;p&gt;For user agent string:&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;Mozilla/5.0 (Linux; U; Android ROM v3; en-us; ALCATEL ONE TOUCH 991 Build/GRK39F) AppleWebKit/533.1 (KHTML, like Gecko) Version/4.0 Mobile Safari/533.1
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Its products are:&lt;/p&gt;</description>
     </item>
-    
   </channel>
 </rss>

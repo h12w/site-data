@@ -1,36 +1,42 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
-    <title>Git on Hai-Liang &#34;Hal&#34; Wang</title>
+    <title>Git on @h12</title>
     <link>http://h12.io/tags/git/</link>
-    <description>Recent content in Git on Hai-Liang &#34;Hal&#34; Wang</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en-US</language>
-    <copyright>Copyright (c) 2012-2018, Hǎi-Liàng &#34;Hal&#34; Wáng; all rights reserved.</copyright>
+    <description>Recent content in Git on @h12</description>
+    <generator>Hugo -- 0.145.0</generator>
+    <language>en-us</language>
+    <copyright>2012-2025, Hǎi-Liàng &amp;ldquo;Hal&amp;rdquo; Wáng.</copyright>
     <lastBuildDate>Fri, 09 Jun 2017 13:41:44 +0800</lastBuildDate>
-    
-	<atom:link href="http://h12.io/tags/git/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <atom:link href="http://h12.io/tags/git/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>How to Delete a Git Branch</title>
       <link>http://h12.io/note/delete-git-branch/</link>
       <pubDate>Fri, 09 Jun 2017 13:41:44 +0800</pubDate>
-      
       <guid>http://h12.io/note/delete-git-branch/</guid>
-      <description>git fetch --prune origin git branch --delete [branch-name] git push origin --delete [branch-name]  </description>
+      <description>&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;git fetch       --prune  origin
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;git branch      --delete &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;branch-name&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;git push origin --delete &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;branch-name&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
     </item>
-    
     <item>
       <title>How to &#34;go get&#34; Behind a Proxy</title>
       <link>http://h12.io/note/go-get-behind-proxy/</link>
       <pubDate>Wed, 06 May 2015 12:01:11 +0800</pubDate>
-      
       <guid>http://h12.io/note/go-get-behind-proxy/</guid>
-      <description> Proxy for &amp;ldquo;go get&amp;rdquo; https_proxy=http://user:pass@proxy_host:port go get ...  Proxy for Git In $HOME/.gitconfig:
-[https] proxy = proxy_url  Proxy for Mercurial In $HOME/.hgrc:
-[http_proxy] host = host:port user = ... passwd = ...  </description>
+      <description>&lt;h2 id=&#34;proxy-for-go-get&#34;&gt;Proxy for &amp;ldquo;go get&amp;rdquo;&lt;/h2&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;https_proxy=http://user:pass@proxy_host:port go get ...
+&lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&#34;proxy-for-git&#34;&gt;Proxy for Git&lt;/h2&gt;
+&lt;p&gt;In &lt;code&gt;$HOME/.gitconfig&lt;/code&gt;:&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;[https]
+	proxy = proxy_url
+&lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&#34;proxy-for-mercurial&#34;&gt;Proxy for Mercurial&lt;/h2&gt;
+&lt;p&gt;In &lt;code&gt;$HOME/.hgrc&lt;/code&gt;:&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;[http_proxy]
+host = host:port
+user = ...
+passwd = ...
+&lt;/code&gt;&lt;/pre&gt;</description>
     </item>
-    
   </channel>
 </rss>

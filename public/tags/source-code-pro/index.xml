@@ -1,26 +1,21 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
-    <title>Source Code Pro on Hai-Liang &#34;Hal&#34; Wang</title>
+    <title>Source Code Pro on @h12</title>
     <link>http://h12.io/tags/source-code-pro/</link>
-    <description>Recent content in Source Code Pro on Hai-Liang &#34;Hal&#34; Wang</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en-US</language>
-    <copyright>Copyright (c) 2012-2018, Hǎi-Liàng &#34;Hal&#34; Wáng; all rights reserved.</copyright>
+    <description>Recent content in Source Code Pro on @h12</description>
+    <generator>Hugo -- 0.145.0</generator>
+    <language>en-us</language>
+    <copyright>2012-2025, Hǎi-Liàng &amp;ldquo;Hal&amp;rdquo; Wáng.</copyright>
     <lastBuildDate>Thu, 17 Jul 2014 03:19:18 +0000</lastBuildDate>
-    
-	<atom:link href="http://h12.io/tags/source-code-pro/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <atom:link href="http://h12.io/tags/source-code-pro/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Installing Source Code Pro</title>
       <link>http://h12.io/note/install-scp/</link>
       <pubDate>Thu, 17 Jul 2014 03:19:18 +0000</pubDate>
-      
       <guid>http://h12.io/note/install-scp/</guid>
-      <description>Source Code Pro is one of the best monospace fonts and it is open sourced.
-Here is the script for installing it on Linux.</description>
+      <description>&lt;p&gt;&lt;em&gt;Source Code Pro&lt;/em&gt; is one of the best monospace fonts and it is &lt;a href=&#34;https://github.com/adobe/source-code-pro&#34;&gt;open sourced&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Here is the &lt;a href=&#34;https://github.com/h12w/linux/blob/master/install_scp.sh&#34;&gt;script&lt;/a&gt; for installing it on Linux.&lt;/p&gt;</description>
     </item>
-    
   </channel>
 </rss>

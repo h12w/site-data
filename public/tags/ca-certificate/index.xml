@@ -1,25 +1,20 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
-    <title>Ca Certificate on Hai-Liang &#34;Hal&#34; Wang</title>
+    <title>CA Certificate on @h12</title>
     <link>http://h12.io/tags/ca-certificate/</link>
-    <description>Recent content in Ca Certificate on Hai-Liang &#34;Hal&#34; Wang</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en-US</language>
-    <copyright>Copyright (c) 2012-2018, Hǎi-Liàng &#34;Hal&#34; Wáng; all rights reserved.</copyright>
+    <description>Recent content in CA Certificate on @h12</description>
+    <generator>Hugo -- 0.145.0</generator>
+    <language>en-us</language>
+    <copyright>2012-2025, Hǎi-Liàng &amp;ldquo;Hal&amp;rdquo; Wáng.</copyright>
     <lastBuildDate>Sat, 17 Jan 2015 18:13:09 +0000</lastBuildDate>
-    
-	<atom:link href="http://h12.io/tags/ca-certificate/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <atom:link href="http://h12.io/tags/ca-certificate/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>How to install a self-signed CA Certificate to Android 4.4</title>
       <link>http://h12.io/note/install-ca-android/</link>
       <pubDate>Sat, 17 Jan 2015 18:13:09 +0000</pubDate>
-      
       <guid>http://h12.io/note/install-ca-android/</guid>
-      <description>See this blog Remove &amp;ldquo;Network May Be Monitored by an Unknown Third Party&amp;rdquo; in Android 4.4 KitKat.</description>
+      <description>&lt;p&gt;See this blog &lt;a href=&#34;https://samhobbs.co.uk/2013/12/remove-network-may-be-monitored-by-an-unknown-third-party-in-android-4-4-kitkat&#34;&gt;&lt;em&gt;Remove &amp;ldquo;Network May Be Monitored by an Unknown Third Party&amp;rdquo; in Android 4.4 KitKat&lt;/em&gt;&lt;/a&gt;.&lt;/p&gt;</description>
     </item>
-    
   </channel>
 </rss>

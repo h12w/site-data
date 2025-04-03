@@ -1,28 +1,30 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
-    <title>App Engine on Hai-Liang &#34;Hal&#34; Wang</title>
+    <title>App Engine on @h12</title>
     <link>http://h12.io/tags/app-engine/</link>
-    <description>Recent content in App Engine on Hai-Liang &#34;Hal&#34; Wang</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en-US</language>
-    <copyright>Copyright (c) 2012-2018, Hǎi-Liàng &#34;Hal&#34; Wáng; all rights reserved.</copyright>
+    <description>Recent content in App Engine on @h12</description>
+    <generator>Hugo -- 0.145.0</generator>
+    <language>en-us</language>
+    <copyright>2012-2025, Hǎi-Liàng &amp;ldquo;Hal&amp;rdquo; Wáng.</copyright>
     <lastBuildDate>Sun, 06 Jul 2014 06:39:27 +0000</lastBuildDate>
-    
-	<atom:link href="http://h12.io/tags/app-engine/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <atom:link href="http://h12.io/tags/app-engine/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Serving Static Pages on App Engine with Go</title>
       <link>http://h12.io/note/serve-static/</link>
       <pubDate>Sun, 06 Jul 2014 06:39:27 +0000</pubDate>
-      
       <guid>http://h12.io/note/serve-static/</guid>
-      <description>It is straightforward to serve static pages with Go or config file on App Engine, but how to serve static pages on App Engine with Go?
-I got the following error when I tried to customize the 404 page with Go:
-No such file or directory  The solution turns out to be simple: do not do both.
-The file will not be accessible to Go if there is already a rule for it in config.</description>
+      <description>&lt;p&gt;It is straightforward to serve static pages with &lt;a href=&#34;http://golang.org/pkg/net/http/&#34;&gt;Go&lt;/a&gt;
+or &lt;a href=&#34;https://developers.google.com/appengine/docs/go/config/appconfig&#34;&gt;config file&lt;/a&gt;
+on App Engine, but how to serve static pages on App Engine with Go?&lt;/p&gt;
+&lt;p&gt;I got the following error when I tried to customize the 404 page with Go:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;No such file or directory
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;The solution turns out to be simple: do not do both.&lt;/p&gt;
+&lt;p&gt;The file will not be accessible to Go if there is already a rule for it in
+config.yaml. Remove the rule from config.yaml and the file will be available to
+Go again (source:
+&lt;a href=&#34;https://groups.google.com/d/msg/google-appengine-go/DmfDPUBkmrg/SvJ1dwjC0_EJ&#34;&gt;google-appengine-go&lt;/a&gt;).&lt;/p&gt;</description>
     </item>
-    
   </channel>
 </rss>

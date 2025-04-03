@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en" dir="auto">
+
+<head><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="index, follow">
+<title>Golang | @h12</title>
+<meta name="keywords" content="">
+<meta name="description" content="">
+<meta name="author" content="Hǎi-Liàng &#34;Hal&#34; Wáng">
+<link rel="canonical" href="http://h12.io/tags/golang/">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.ef93a538cbae171c70c47408f7fccb878c5ffd285cc92b2b46b10dde0f97f53e.css" integrity="sha256-75OlOMuuFxxwxHQI9/zLh4xf/ShcySsrRrEN3g&#43;X9T4=" rel="preload stylesheet" as="style">
+<link rel="icon" href="http://h12.io/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="http://h12.io/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="http://h12.io/favicon-32x32.png">
+<link rel="apple-touch-icon" href="http://h12.io/apple-touch-icon.png">
+<link rel="mask-icon" href="http://h12.io/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<link rel="alternate" type="application/rss+xml" href="http://h12.io/tags/golang/index.xml">
+<link rel="alternate" hreflang="en" href="http://h12.io/tags/golang/">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --code-block-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+            }
+
+            .list {
+                background: var(--theme);
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-track {
+                background: 0 0;
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-thumb {
+                border-color: var(--theme);
+            }
+        }
+
+    </style>
+</noscript>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+
+
+
+
+<link id="syntax-mode" rel="stylesheet" href="/css/syntax-light.css">
+
+<script>
+    function isDarkMode() {
+        const mode = localStorage.getItem("pref-theme");
+        return (mode && mode === "dark") ||
+            document.body.className.includes("dark") ||
+            false;
+    }
+
+    function syncSyntaxMode() {
+        document.getElementById("syntax-mode").href = isDarkMode() ? "/css/syntax-dark.css" : "/css/syntax-light.css";
+    }
+
+    document.addEventListener("DOMContentLoaded", () => {
+        syncSyntaxMode();
+        const toggleButton = document.getElementById("theme-toggle");
+        if (!toggleButton) {
+            console.log("No toggle button found");
+            return;
+        }
+        toggleButton.addEventListener("click", syncSyntaxMode);
+    });
+</script>
+
+<script>
+  MathJax = {
+    tex: {
+      inlineMath: [['$', '$'], ['\\(', '\\)']],
+      displayMath: [['$$','$$'], ['\\[', '\\]']],
+      processEscapes: true,
+      processEnvironments: true
+    },
+    options: {
+      enableMenu: false,
+      skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre']
+    }
+  };
+</script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+<meta property="og:url" content="http://h12.io/tags/golang/">
+  <meta property="og:site_name" content="@h12">
+  <meta property="og:title" content="Golang">
+  <meta property="og:locale" content="en-us">
+  <meta property="og:type" content="website">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Golang">
+<meta name="twitter:description" content="">
+
+</head>
+
+<body class="list" id="top">
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.body.classList.add('dark');
+    } else if (localStorage.getItem("pref-theme") === "light") {
+        document.body.classList.remove('dark')
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.body.classList.add('dark');
+    }
+
+</script>
+
+<header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="http://h12.io/" accesskey="h" title="@h12 (Alt + H)">@h12</a>
+            <div class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)" aria-label="Toggle theme">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <ul id="menu">
+            <li>
+                <a href="http://h12.io/article/" title="Articles">
+                    <span><i class="fas fa-newspaper"></i> Articles</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://h12.io/project/" title="Projects">
+                    <span><i class="fab fa-github"></i> Projects</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://h12.io/note/" title="Notes">
+                    <span><i class="fas fa-sticky-note"></i> Notes</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://h12.io/about/" title="About">
+                    <span><i class="fas fa-user"></i> About</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<main class="main"> 
+<header class="page-header">
+  <h1>
+    Golang
+  </h1>
+</header>
+
+<article class="post-entry tag-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">gosweep: A shell script to do various checks on Go code
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>This script performs the build, test and automatic checking of a Go package and its sub-packages using:
+gofmt goimports golint go vet ineffassign race detector test coverage on package and its sub-packages, /vendor directories excluded goveralls gocyclo misspell Migrated from my Gist.
+Dependencies To setup all the dependencies need to run the script do:
+$ go get -v github.com/client9/misspell/cmd/misspell $ go get -v github.com/fzipp/gocyclo $ go get -v github.com/golang/lint/golint $ go get -v github.com/gordonklaus/ineffassign $ go get -v github.com/h12w/gosweep $ go get -v github.com/mattn/goveralls $ go get -v golang.org/x/tools/cmd/goimports Environment variables GOCYCLO_COMPLEXITY: maximum allowed function complexity threshold (default: 5). MISSPELL_LOCALE: English locale (default: US). If you wish to set this for a project you can create a .gosweep file. For example:
+...</p>
+  </div>
+  <footer class="entry-footer"><span title='2014-06-05 23:00:00 +0800 +0800'>June 5, 2014</span></footer>
+  <a class="entry-link" aria-label="post link to gosweep: A shell script to do various checks on Go code" href="http://h12.io/project/gosweep/"></a>
+</article>
+
+<article class="post-entry tag-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">Getgo: a concurrent, simple and extensible web scraping framework
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p> Getgo is a concurrent, simple and extensible web scraping framework written in Go.
+Quick start Get Getgo go get -u github.com/h12w/getgo Define a task This example is under the examples/goblog directory. To use Getgo to scrap structured data from a web page, just define the structured data as a Go struct (golangBlogEntry), and define a corresponding task (golangBlogIndexTask).
+type golangBlogEntry struct { Title string URL string Tags *string } type golangBlogIndexTask struct { // Variables in task URL, e.g. page number } func (t golangBlogIndexTask) Request() *http.Request { return getReq(`http://blog.golang.org/index`) } func (t golangBlogIndexTask) Handle(root *query.Node, s getgo.Storer) (err error) { root.Div(_Id(&#34;content&#34;)).Children(_Class(&#34;blogtitle&#34;)).For(func(item *query.Node) { title := item.Ahref().Text() url := item.Ahref().Href() tags := item.Span(_Class(&#34;tags&#34;)).Text() if url != nil &amp;&amp; title != nil { store(&amp;golangBlogEntry{Title: *title, URL: *url, Tags: tags}, s, &amp;err) } }) return } Run the task Use util.Run to run the task and print all the result to standard output.
+...</p>
+  </div>
+  <footer class="entry-footer"><span title='2014-06-02 01:21:00 +0000 UTC'>June 2, 2014</span></footer>
+  <a class="entry-link" aria-label="post link to Getgo: a concurrent, simple and extensible web scraping framework" href="http://h12.io/project/getgo/"></a>
+</article>
+
+<article class="post-entry tag-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">GSpec: a productive Go test framework
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p> GSpec is an expressive, reliable, concurrent and extensible Go test framework that makes it productive to organize and verify the mind model of software.
+...</p>
+  </div>
+  <footer class="entry-footer"><span title='2014-05-28 00:00:00 +0000 UTC'>May 28, 2014</span></footer>
+  <a class="entry-link" aria-label="post link to GSpec: a productive Go test framework" href="http://h12.io/project/gspec/"></a>
+</article>
+
+<article class="post-entry tag-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">html-query: a fluent and functional approach to querying HTML DOM
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>html-query is a Go package that provides a fluent and functional interface for querying HTML DOM. It is based on go.net/html.
+Examples A simple example (under “examples” directory)
+r := get(`http://blog.golang.org/index`) defer r.Close() root, err := query.Parse(r) checkError(err) root.Div(Id(&#34;content&#34;)).Children(Class(&#34;blogtitle&#34;)).For(func(item *query.Node) { href := item.Ahref().Href() date := item.Span(Class(&#34;date&#34;)).Text() tags := item.Span(Class(&#34;tags&#34;)).Text() // ...... }) Generator of html-query (under “gen” directory)
+A large part of html-query is automatically generated from HTML spec. The spec is in HTML format, so the generator parses it using html-query itself.
+...</p>
+  </div>
+  <footer class="entry-footer"><span title='2014-01-20 01:49:08 +0000 UTC'>January 20, 2014</span></footer>
+  <a class="entry-link" aria-label="post link to html-query: a fluent and functional approach to querying HTML DOM" href="http://h12.io/project/html-query/"></a>
+</article>
+
+<article class="post-entry tag-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">Cwrap: wraps C libraries in Go
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>Cwrap is a Go wrapper generator for C libraries.
+Features No Cgo types exposed out of the wrapper package, and uses as less allocation/copy as possible. C name prefix mapped to Go packages, and a wrapper package can import another wrapper package. Follows Go naming conventions. C union. Use Go language features when possible: string and bool. Multiple return values. Slice, slice of slice and slice of string. struct with methods. Go closures as callbacks. Stay out of the way when you need to do it manually for specified declarations. Usage Cwrap itself is a Go package rather than an executable program. Just fill a cwrap.Package struct literal and call its Wrap method to generate your wrapper package under $GOPATH. Here is a simple example:
+...</p>
+  </div>
+  <footer class="entry-footer"><span title='2014-01-01 01:30:04 +0000 UTC'>January 1, 2014</span></footer>
+  <a class="entry-link" aria-label="post link to Cwrap: wraps C libraries in Go" href="http://h12.io/project/cwrap/"></a>
+</article>
+
+<article class="post-entry tag-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">xsd: XML tagged struct generator for Go
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>xsd is a Go package that generates tagged struct from XML Schema (xsd). When only the XML file is available, an xsd file can be automatically generated by a XML Schema learner, such as “github.com/kore/XML-Schema-learner”.
+</p>
+  </div>
+  <footer class="entry-footer"><span title='2014-01-01 00:00:00 +0800 +0800'>January 1, 2014</span></footer>
+  <a class="entry-link" aria-label="post link to xsd: XML tagged struct generator for Go" href="http://h12.io/project/xsd/"></a>
+</article>
+
+<article class="post-entry tag-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">SOCKS: a SOCKS Proxy Package for Go
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>
+SOCKS is a SOCKS4, SOCKS4A and SOCKS5 proxy package for Go.
+Quick Start Get the package go get -u &#34;h12.io/socks&#34; Import the package import &#34;h12.io/socks&#34; Create a SOCKS proxy dialling function dialSocksProxy := socks.Dial(&#34;socks5://127.0.0.1:1080?timeout=5s&#34;) tr := &amp;http.Transport{Dial: dialSocksProxy} httpClient := &amp;http.Client{Transport: tr} User/password authentication dialSocksProxy := socks.Dial(&#34;socks5://user:password@127.0.0.1:1080?timeout=5s&#34;) Example package main import ( &#34;fmt&#34; &#34;io/ioutil&#34; &#34;log&#34; &#34;net/http&#34; &#34;h12.io/socks&#34; ) func main() { dialSocksProxy := socks.Dial(&#34;socks5://127.0.0.1:1080?timeout=5s&#34;) tr := &amp;http.Transport{Dial: dialSocksProxy} httpClient := &amp;http.Client{Transport: tr} resp, err := httpClient.Get(&#34;http://www.google.com&#34;) if err != nil { log.Fatal(err) } defer resp.Body.Close() if resp.StatusCode != http.StatusOK { log.Fatal(resp.StatusCode) } buf, err := ioutil.ReadAll(resp.Body) if err != nil { log.Fatal(err) } fmt.Println(string(buf)) } </p>
+  </div>
+  <footer class="entry-footer"><span title='2012-08-01 23:57:54 +0000 UTC'>August 1, 2012</span></footer>
+  <a class="entry-link" aria-label="post link to SOCKS: a SOCKS Proxy Package for Go" href="http://h12.io/project/socks/"></a>
+</article>
+<footer class="page-footer">
+  <nav class="pagination">
+    <a class="prev" href="http://h12.io/tags/golang/page/2/">
+      «&nbsp;Prev&nbsp;
+    </a>
+  </nav>
+</footer>
+    </main>
+    
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a><footer class="footer">
+        <p>&copy; 2012-2025, <span class="my-name">Hǎi-Liàng "Hal" Wáng</span>.</p>
+        <p xmlns:cc="http://creativecommons.org/ns#" xmlns:dct="http://purl.org/dc/terms/"><span property="dct:title">The content of this page</span> is licensed under <a href="https://creativecommons.org/licenses/by/4.0/?ref=chooser-v1" target="_blank" rel="license noopener noreferrer" style="display:inline-flex;align-items:center;">CC BY 4.0<img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/cc.svg?ref=chooser-v1" alt=""><img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/by.svg?ref=chooser-v1" alt=""></a></p>
+    </footer>
+
+
+<script>
+    let menu = document.getElementById('menu')
+    if (menu) {
+        menu.scrollLeft = localStorage.getItem("menu-scroll-position");
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        if (document.body.className.includes("dark")) {
+            document.body.classList.remove('dark');
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            document.body.classList.add('dark');
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+</body>
+
+</html>

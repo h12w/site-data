@@ -1,25 +1,136 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
-    <title>Slides on Hai-Liang &#34;Hal&#34; Wang</title>
+    <title>Slides on @h12</title>
     <link>http://h12.io/slide/</link>
-    <description>Recent content in Slides on Hai-Liang &#34;Hal&#34; Wang</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en-US</language>
-    <copyright>Copyright (c) 2012-2018, Hǎi-Liàng &#34;Hal&#34; Wáng; all rights reserved.</copyright>
+    <description>Recent content in Slides on @h12</description>
+    <generator>Hugo -- 0.145.0</generator>
+    <language>en-us</language>
+    <copyright>2012-2025, Hǎi-Liàng &amp;ldquo;Hal&amp;rdquo; Wáng.</copyright>
     <lastBuildDate>Sun, 21 Aug 2016 13:00:00 +0000</lastBuildDate>
-    
-	<atom:link href="http://h12.io/slide/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <atom:link href="http://h12.io/slide/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>kpax</title>
       <link>http://h12.io/slide/kpax/</link>
       <pubDate>Sun, 21 Aug 2016 13:00:00 +0000</pubDate>
-      
       <guid>http://h12.io/slide/kpax/</guid>
-      <description>kpax a modular &amp;amp; idiomatic Kafka client in Go 21 August 2016  Hǎi-Liàng &amp;#34;Hal&amp;#34; Wáng  Gopher at Appcoach    Introduction  About Me  Pure Gopher since 2012 Backend Lead at Appcoach https://h12.io   About Appcoach  Global mobile advertising agency founded in 2014 All backend services are written in Go http://www.appcoachs.com    Rationale   Why Kafka?  No resources to build our own messaging system from scratch :-)  Kafka has excellent design and robust implementation:  A distributed, persisted, replicated messaging system Key concepts: topic, partition, offset, retention, replication-factor, partition leader, consumer group, broker/cluster     Why yet another Go client for Kafka?</description>
+      <description>&lt;section class=&#39;slides layout-widescreen&#39;&gt;
+
+      &lt;article&gt;
+        &lt;h1&gt;kpax&lt;/h1&gt;
+        &lt;h3&gt;a modular &amp;amp; idiomatic Kafka client in Go&lt;/h3&gt;
+        &lt;h3&gt;21 August 2016&lt;/h3&gt;
+        
+          &lt;div class=&#34;presenter&#34;&gt;
+            
+  
+  &lt;p&gt;
+    Hǎi-Liàng &amp;#34;Hal&amp;#34; Wáng
+  &lt;/p&gt;
+  
+
+  
+  &lt;p&gt;
+    Gopher at Appcoach
+  &lt;/p&gt;
+  
+
+          &lt;/div&gt;
+        
+      &lt;/article&gt;
+
+  
+  
+      &lt;article&gt;
+      
+        &lt;h3&gt;Introduction&lt;/h3&gt;
+        
+  
+  &lt;p&gt;
+    About Me
+  &lt;/p&gt;
+  
+
+  &lt;ul&gt;
+  
+    &lt;li&gt;Pure Gopher since 2012&lt;/li&gt;
+  
+    &lt;li&gt;Backend Lead at Appcoach&lt;/li&gt;
+  
+    &lt;li&gt;https://h12.io&lt;/li&gt;
+  
+  &lt;/ul&gt;
+
+  
+  &lt;p&gt;
+    About Appcoach
+  &lt;/p&gt;
+  
+
+  &lt;ul&gt;
+  
+    &lt;li&gt;Global mobile advertising agency founded in 2014&lt;/li&gt;
+  
+    &lt;li&gt;All backend services are written in Go&lt;/li&gt;
+  
+    &lt;li&gt;http://www.appcoachs.com&lt;/li&gt;
+  
+  &lt;/ul&gt;
+
+      
+      &lt;/article&gt;
+  
+  
+  
+      &lt;article&gt;
+      
+        &lt;h2&gt;Rationale&lt;/h2&gt;
+      
+      &lt;/article&gt;
+  
+  
+  
+      &lt;article&gt;
+      
+        &lt;h3&gt;Why Kafka?&lt;/h3&gt;
+        
+  
+  &lt;p&gt;
+    No resources to build our own messaging system from scratch :-)
+  &lt;/p&gt;
+  
+
+  
+  &lt;p&gt;
+    Kafka has excellent design and robust implementation:
+  &lt;/p&gt;
+  
+
+  &lt;ul&gt;
+  
+    &lt;li&gt;A distributed, persisted, replicated messaging system&lt;/li&gt;
+  
+    &lt;li&gt;Key concepts: topic, partition, offset, retention, replication-factor, partition leader, consumer group, broker/cluster&lt;/li&gt;
+  
+  &lt;/ul&gt;
+
+&lt;div class=&#34;image&#34;&gt;
+  &lt;img src=&#34;http://h12.io/img/kpax/kafka.png&#34;&gt;
+&lt;/div&gt;
+
+      
+      &lt;/article&gt;
+  
+  
+  
+      &lt;article&gt;
+      
+        &lt;h3&gt;Why yet another Go client for Kafka?&lt;/h3&gt;
+        
+  
+  &lt;p&gt;
+    Disappointed about the unnecessary complexity of
+  &lt;/p&gt;</description>
     </item>
-    
   </channel>
 </rss>

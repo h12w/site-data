@@ -1,38 +1,53 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
-    <title>Typography on Hai-Liang &#34;Hal&#34; Wang</title>
+    <title>Typography on @h12</title>
     <link>http://h12.io/tags/typography/</link>
-    <description>Recent content in Typography on Hai-Liang &#34;Hal&#34; Wang</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en-US</language>
-    <copyright>Copyright (c) 2012-2018, Hǎi-Liàng &#34;Hal&#34; Wáng; all rights reserved.</copyright>
+    <description>Recent content in Typography on @h12</description>
+    <generator>Hugo -- 0.145.0</generator>
+    <language>en-us</language>
+    <copyright>2012-2025, Hǎi-Liàng &amp;ldquo;Hal&amp;rdquo; Wáng.</copyright>
     <lastBuildDate>Wed, 30 Jul 2014 08:29:57 +0000</lastBuildDate>
-    
-	<atom:link href="http://h12.io/tags/typography/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <atom:link href="http://h12.io/tags/typography/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Resources on Offline Hyphenation</title>
       <link>http://h12.io/note/hyphen-res/</link>
       <pubDate>Wed, 30 Jul 2014 08:29:57 +0000</pubDate>
-      
       <guid>http://h12.io/note/hyphen-res/</guid>
-      <description>CSS hyphenation is supported by latest version of Firefox, Safari &amp;amp; IE. However, Chrome does not support it. Though Hyphenator.js can solve this problem, it runs in the browser and affects the rendering speed of above-the-fold content. So there is only one option left: soft hyphen (U+00AD, &amp;amp;shy;).
-Here is a list of resources that leads to its implementation:
- An article about CSS3 hyphenation by Hyphenator.js Hunspell: the spell checker &amp;amp; hyphenator used by LibreOffice English Dictionary of LibreOffice Pyphen: A Python hyphenator using Hunspell dictionary file A test page for soft hyphen  </description>
+      <description>&lt;p&gt;&lt;a href=&#34;http://caniuse.com/css-hyphens&#34;&gt;CSS hyphenation&lt;/a&gt; is supported by latest version
+of Firefox, Safari &amp;amp; IE. However, Chrome does not support it. Though
+&lt;a href=&#34;https://code.google.com/p/hyphenator/&#34;&gt;Hyphenator.js&lt;/a&gt; can solve this problem,
+it runs in the browser and affects the rendering speed of above-the-fold content.
+So there is only one option left: soft hyphen (&lt;code&gt;U+00AD&lt;/code&gt;, &lt;code&gt;&amp;amp;shy;&lt;/code&gt;).&lt;/p&gt;
+&lt;p&gt;Here is a list of resources that leads to its implementation:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;An &lt;a href=&#34;https://code.google.com/p/hyphenator/wiki/en_CSS3Hyphenation&#34;&gt;article&lt;/a&gt; about CSS3 hyphenation by Hyphenator.js&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://hunspell.sourceforge.net/&#34;&gt;Hunspell&lt;/a&gt;: the spell checker &amp;amp; hyphenator
+used by LibreOffice&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://extensions.libreoffice.org/extension-center/american-british-canadian-spelling-hyphen-thesaurus-dictionaries&#34;&gt;English Dictionary&lt;/a&gt; of LibreOffice&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/Kozea/Pyphen&#34;&gt;Pyphen&lt;/a&gt;: A Python hyphenator using Hunspell
+dictionary file&lt;/li&gt;
+&lt;li&gt;A test &lt;a href=&#34;http://clagnut.com/sandbox/softhyphen/&#34;&gt;page&lt;/a&gt; for soft hyphen&lt;/li&gt;
+&lt;/ul&gt;</description>
     </item>
-    
     <item>
       <title>Finding Optimal Typographic Scale</title>
       <link>http://h12.io/article/optimal-font-scale/</link>
       <pubDate>Sat, 05 Jul 2014 15:03:04 +0000</pubDate>
-      
       <guid>http://h12.io/article/optimal-font-scale/</guid>
-      <description>During the construction of this site, there are many important design decisions that need to be made. One of them is to decide the font size for each level of headings, i.e., typographic scale.
-Investigation The first thing I did was to read everything online about typographic scale. I will just skip the details and jump to my opinions:
- Modular scale should be followed Traditional scale is obsolete Golden ratio or double-stranded scale do not make any sense Vertical rhythm should be considered  Then a little explanation.</description>
+      <description>&lt;p&gt;During the construction of this site, there are many important design decisions
+that need to be made. One of them is to decide the font size for each level of
+headings, i.e., typographic scale.&lt;/p&gt;
+&lt;h2 id=&#34;investigation&#34;&gt;Investigation&lt;/h2&gt;
+&lt;p&gt;The first thing I did was to read &lt;a href=&#34;https://www.google.com/?#newwindow=1&amp;amp;q=typographic+scale&#34;&gt;everything online&lt;/a&gt;
+about typographic scale. I will just skip the details and jump to my opinions:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Modular scale should be followed&lt;/li&gt;
+&lt;li&gt;Traditional scale is obsolete&lt;/li&gt;
+&lt;li&gt;Golden ratio or double-stranded scale do not make any sense&lt;/li&gt;
+&lt;li&gt;Vertical rhythm should be considered&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Then a little explanation.&lt;/p&gt;</description>
     </item>
-    
   </channel>
 </rss>

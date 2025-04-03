@@ -1,27 +1,34 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
-    <title>Custom Domain on Hai-Liang &#34;Hal&#34; Wang</title>
+    <title>Custom Domain on @h12</title>
     <link>http://h12.io/tags/custom-domain/</link>
-    <description>Recent content in Custom Domain on Hai-Liang &#34;Hal&#34; Wang</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en-US</language>
-    <copyright>Copyright (c) 2012-2018, Hǎi-Liàng &#34;Hal&#34; Wáng; all rights reserved.</copyright>
+    <description>Recent content in Custom Domain on @h12</description>
+    <generator>Hugo -- 0.145.0</generator>
+    <language>en-us</language>
+    <copyright>2012-2025, Hǎi-Liàng &amp;ldquo;Hal&amp;rdquo; Wáng.</copyright>
     <lastBuildDate>Mon, 19 Jan 2015 09:32:04 +0000</lastBuildDate>
-    
-	<atom:link href="http://h12.io/tags/custom-domain/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <atom:link href="http://h12.io/tags/custom-domain/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>How to configure a custom domain name in GAE?</title>
       <link>http://h12.io/note/gae-custom-domain/</link>
       <pubDate>Mon, 19 Jan 2015 09:32:04 +0000</pubDate>
-      
       <guid>http://h12.io/note/gae-custom-domain/</guid>
-      <description>Steps:
- Visit Developers Console. In your project: Compute -&amp;gt; App Engine -&amp;gt; Settings. On the tab labelled CUSTOM DOMAINS, you can verify your domain and assign it and/or its subdomains to your GAE project. Add the DNS settings provided by Google into the DNS server of your domain provider.  Notes:
- Only HTTP is supported, HTTPS is not. It will not work if you only modify the DNS record without actually assigning the custom domain in the Developer Console.</description>
+      <description>&lt;p&gt;Steps:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Visit &lt;a href=&#34;https://console.developers.google.com&#34;&gt;Developers Console&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;In your project: Compute -&amp;gt; App Engine -&amp;gt; Settings.&lt;/li&gt;
+&lt;li&gt;On the tab labelled CUSTOM DOMAINS, you can verify your domain and assign it
+and/or its subdomains to your GAE project.&lt;/li&gt;
+&lt;li&gt;Add the DNS settings provided by Google into the DNS server of your domain
+provider.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Notes:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Only HTTP is supported, HTTPS is not.&lt;/li&gt;
+&lt;li&gt;It will not work if you only modify the DNS record without actually assigning
+the custom domain in the Developer Console.&lt;/li&gt;
+&lt;/ol&gt;</description>
     </item>
-    
   </channel>
 </rss>

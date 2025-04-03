@@ -1,25 +1,26 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
-    <title>Automatic Deployment on Hai-Liang &#34;Hal&#34; Wang</title>
+    <title>Automatic Deployment on @h12</title>
     <link>http://h12.io/tags/automatic-deployment/</link>
-    <description>Recent content in Automatic Deployment on Hai-Liang &#34;Hal&#34; Wang</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en-US</language>
-    <copyright>Copyright (c) 2012-2018, Hǎi-Liàng &#34;Hal&#34; Wáng; all rights reserved.</copyright>
+    <description>Recent content in Automatic Deployment on @h12</description>
+    <generator>Hugo -- 0.145.0</generator>
+    <language>en-us</language>
+    <copyright>2012-2025, Hǎi-Liàng &amp;ldquo;Hal&amp;rdquo; Wáng.</copyright>
     <lastBuildDate>Thu, 17 Jul 2014 14:54:26 +0000</lastBuildDate>
-    
-	<atom:link href="http://h12.io/tags/automatic-deployment/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <atom:link href="http://h12.io/tags/automatic-deployment/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>An Overview of Continuous Integration Services</title>
       <link>http://h12.io/note/ci-overview/</link>
       <pubDate>Thu, 17 Jul 2014 14:54:26 +0000</pubDate>
-      
       <guid>http://h12.io/note/ci-overview/</guid>
-      <description>After reviewing many continuous integration services below, there is no doubt that Wercker is the winner. The Wercker Box (virtual container) is based on Ubuntu and any packages can be easily installed with &amp;ldquo;apt-get&amp;rdquo;. This flexibility basically allows running any test suites and deploying to any cloud platforms. Furthermore, a Wercker Box can inherit from another box and can be stored and published in Wercker directories as the starting point for any projects, increasing the performance significantly.</description>
+      <description>&lt;p&gt;After reviewing many continuous integration services below, there is no doubt
+that Wercker is the winner. The Wercker Box (virtual container) is based on
+Ubuntu and any packages can be easily installed with &amp;ldquo;apt-get&amp;rdquo;. This flexibility
+basically allows running any test suites and deploying to any cloud platforms.
+Furthermore, a Wercker Box can inherit from another box and can be stored and
+published in Wercker directories as the starting point for any projects,
+increasing the performance significantly.&lt;/p&gt;</description>
     </item>
-    
   </channel>
 </rss>

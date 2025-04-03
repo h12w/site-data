@@ -1,27 +1,22 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
-    <title>Uuid on Hai-Liang &#34;Hal&#34; Wang</title>
+    <title>Uuid on @h12</title>
     <link>http://h12.io/tags/uuid/</link>
-    <description>Recent content in Uuid on Hai-Liang &#34;Hal&#34; Wang</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en-US</language>
-    <copyright>Copyright (c) 2012-2018, Hǎi-Liàng &#34;Hal&#34; Wáng; all rights reserved.</copyright>
+    <description>Recent content in Uuid on @h12</description>
+    <generator>Hugo -- 0.145.0</generator>
+    <language>en-us</language>
+    <copyright>2012-2025, Hǎi-Liàng &amp;ldquo;Hal&amp;rdquo; Wáng.</copyright>
     <lastBuildDate>Wed, 15 Nov 2017 20:00:00 +0800</lastBuildDate>
-    
-	<atom:link href="http://h12.io/tags/uuid/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <atom:link href="http://h12.io/tags/uuid/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>buid: Bipartite Unique Identifier</title>
       <link>http://h12.io/project/buid/</link>
       <pubDate>Wed, 15 Nov 2017 20:00:00 +0800</pubDate>
-      
       <guid>http://h12.io/project/buid/</guid>
-      <description>A BUID is a 128-bit unique ID composed of two 64-bit parts: shard and key.
-It is not only a unique ID, but also contains the sharding information, so that the messages with the same BUID could be stored together within the same DB shard.
-Also, when a message is stored in a shard, the shard part of the BUID can be trimmed off to save the space, and only the key part needs to be stored as the primary key.</description>
+      <description>&lt;p&gt;A BUID is a 128-bit unique ID composed of two 64-bit parts: shard and key.&lt;/p&gt;
+&lt;p&gt;It is not only a unique ID, but also contains the sharding information, so that the messages with the same BUID could be stored together within the same DB shard.&lt;/p&gt;
+&lt;p&gt;Also, when a message is stored in a shard, the shard part of the BUID can be trimmed off to save the space, and only the key part needs to be stored as the primary key.&lt;/p&gt;</description>
     </item>
-    
   </channel>
 </rss>

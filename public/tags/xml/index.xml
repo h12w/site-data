@@ -1,35 +1,33 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
-    <title>Xml on Hai-Liang &#34;Hal&#34; Wang</title>
+    <title>XML on @h12</title>
     <link>http://h12.io/tags/xml/</link>
-    <description>Recent content in Xml on Hai-Liang &#34;Hal&#34; Wang</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en-US</language>
-    <copyright>Copyright (c) 2012-2018, Hǎi-Liàng &#34;Hal&#34; Wáng; all rights reserved.</copyright>
+    <description>Recent content in XML on @h12</description>
+    <generator>Hugo -- 0.145.0</generator>
+    <language>en-us</language>
+    <copyright>2012-2025, Hǎi-Liàng &amp;ldquo;Hal&amp;rdquo; Wáng.</copyright>
     <lastBuildDate>Mon, 01 Feb 2016 18:11:29 +0800</lastBuildDate>
-    
-	<atom:link href="http://h12.io/tags/xml/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <atom:link href="http://h12.io/tags/xml/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>About Pretty Printing</title>
       <link>http://h12.io/note/about-pretty-print/</link>
       <pubDate>Mon, 01 Feb 2016 18:11:29 +0800</pubDate>
-      
       <guid>http://h12.io/note/about-pretty-print/</guid>
-      <description> JSON cat xxx.json | jq .  XML cat xxx.xml | xmllint --format -  </description>
+      <description>&lt;h2 id=&#34;json&#34;&gt;JSON&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;cat xxx.json &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; jq .
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;xml&#34;&gt;XML&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;cat xxx.xml &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; xmllint --format -
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
     </item>
-    
     <item>
       <title>How to Generate XSD Schema from XML?</title>
       <link>http://h12.io/note/generate-xsd-from-xml/</link>
       <pubDate>Thu, 23 Apr 2015 15:41:12 +0800</pubDate>
-      
       <guid>http://h12.io/note/generate-xsd-from-xml/</guid>
-      <description>Apache XMLBeans is an old tool but still functioning. Download and uncompress the latest binary release, then run inst2xsd under bin folder (needs JDK).
-inst2xsd xxx.xml  </description>
+      <description>&lt;p&gt;&lt;a href=&#34;http://archive.apache.org/dist/xmlbeans/binaries&#34;&gt;Apache XMLBeans&lt;/a&gt; is an old tool but still functioning. Download and uncompress the latest binary release, then run inst2xsd under bin folder (needs JDK).&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;inst2xsd xxx.xml
+&lt;/code&gt;&lt;/pre&gt;</description>
     </item>
-    
   </channel>
 </rss>

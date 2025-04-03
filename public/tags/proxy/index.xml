@@ -1,39 +1,65 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
-    <title>Proxy on Hai-Liang &#34;Hal&#34; Wang</title>
+    <title>Proxy on @h12</title>
     <link>http://h12.io/tags/proxy/</link>
-    <description>Recent content in Proxy on Hai-Liang &#34;Hal&#34; Wang</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en-US</language>
-    <copyright>Copyright (c) 2012-2018, Hǎi-Liàng &#34;Hal&#34; Wáng; all rights reserved.</copyright>
+    <description>Recent content in Proxy on @h12</description>
+    <generator>Hugo -- 0.145.0</generator>
+    <language>en-us</language>
+    <copyright>2012-2025, Hǎi-Liàng &amp;ldquo;Hal&amp;rdquo; Wáng.</copyright>
     <lastBuildDate>Wed, 08 Jul 2015 07:58:34 +0000</lastBuildDate>
-    
-	<atom:link href="http://h12.io/tags/proxy/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <atom:link href="http://h12.io/tags/proxy/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>A Comprehensive Note about Proxy Settings</title>
       <link>http://h12.io/note/proxy-notes/</link>
       <pubDate>Wed, 08 Jul 2015 07:58:34 +0000</pubDate>
-      
       <guid>http://h12.io/note/proxy-notes/</guid>
-      <description> Git &amp;gt; cat ~/.gitconfig [http] proxy = socks5://[host]:[port] [https] proxy = socks5://[host]:[port]  Curl (Homebrew) &amp;gt; cat ~/.curlrc socks5 = &amp;quot;[host]:[port]&amp;quot;  Docker pull env HTTP_PROXY=http://xxx docker pull yyy  GAE  Set proxy
-export HTTP_PROXY http://[host]:[port] export HTTPS_PROXY http://[host]:[port]  Delete cacerts.txt under GAE SDK installation to disable SSL verification ( make sure the proxy is safe before this step).
- Deploy.
-appcfg.py . --email=[address] --passin   </description>
+      <description>&lt;h2 id=&#34;git&#34;&gt;Git&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&amp;gt; cat ~/.gitconfig
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;http&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	&lt;span class=&#34;nv&#34;&gt;proxy&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; socks5://&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;host&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;:&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;port&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;https&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	&lt;span class=&#34;nv&#34;&gt;proxy&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; socks5://&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;host&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;:&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;port&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;curl-homebrew&#34;&gt;Curl (Homebrew)&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&amp;gt; cat ~/.curlrc
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nv&#34;&gt;socks5&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;[host]:[port]&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;docker-pull&#34;&gt;Docker pull&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fish&#34; data-lang=&#34;fish&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nf&#34;&gt;env&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;HTTP_PROXY&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;http://xxx &lt;span class=&#34;nf&#34;&gt;docker&lt;/span&gt; pull yyy
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;gae&#34;&gt;GAE&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;Set proxy&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;export&lt;/span&gt; HTTP_PROXY http://&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;host&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;:&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;port&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;export&lt;/span&gt; HTTPS_PROXY http://&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;host&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;:&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;port&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Delete cacerts.txt under GAE SDK installation to disable SSL verification (
+make sure the proxy is safe before this step).&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Deploy.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;appcfg.py . --email&lt;span class=&#34;o&#34;&gt;=[&lt;/span&gt;address&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt; --passin
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/li&gt;
+&lt;/ol&gt;</description>
     </item>
-    
     <item>
       <title>How to &#34;go get&#34; Behind a Proxy</title>
       <link>http://h12.io/note/go-get-behind-proxy/</link>
       <pubDate>Wed, 06 May 2015 12:01:11 +0800</pubDate>
-      
       <guid>http://h12.io/note/go-get-behind-proxy/</guid>
-      <description> Proxy for &amp;ldquo;go get&amp;rdquo; https_proxy=http://user:pass@proxy_host:port go get ...  Proxy for Git In $HOME/.gitconfig:
-[https] proxy = proxy_url  Proxy for Mercurial In $HOME/.hgrc:
-[http_proxy] host = host:port user = ... passwd = ...  </description>
+      <description>&lt;h2 id=&#34;proxy-for-go-get&#34;&gt;Proxy for &amp;ldquo;go get&amp;rdquo;&lt;/h2&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;https_proxy=http://user:pass@proxy_host:port go get ...
+&lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&#34;proxy-for-git&#34;&gt;Proxy for Git&lt;/h2&gt;
+&lt;p&gt;In &lt;code&gt;$HOME/.gitconfig&lt;/code&gt;:&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;[https]
+	proxy = proxy_url
+&lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&#34;proxy-for-mercurial&#34;&gt;Proxy for Mercurial&lt;/h2&gt;
+&lt;p&gt;In &lt;code&gt;$HOME/.hgrc&lt;/code&gt;:&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;[http_proxy]
+host = host:port
+user = ...
+passwd = ...
+&lt;/code&gt;&lt;/pre&gt;</description>
     </item>
-    
   </channel>
 </rss>

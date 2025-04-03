@@ -1,26 +1,24 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
-    <title>Database on Hai-Liang &#34;Hal&#34; Wang</title>
+    <title>Database on @h12</title>
     <link>http://h12.io/tags/database/</link>
-    <description>Recent content in Database on Hai-Liang &#34;Hal&#34; Wang</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en-US</language>
-    <copyright>Copyright (c) 2012-2018, Hǎi-Liàng &#34;Hal&#34; Wáng; all rights reserved.</copyright>
+    <description>Recent content in Database on @h12</description>
+    <generator>Hugo -- 0.145.0</generator>
+    <language>en-us</language>
+    <copyright>2012-2025, Hǎi-Liàng &amp;ldquo;Hal&amp;rdquo; Wáng.</copyright>
     <lastBuildDate>Tue, 19 May 2015 18:00:00 +0800</lastBuildDate>
-    
-	<atom:link href="http://h12.io/tags/database/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <atom:link href="http://h12.io/tags/database/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Schemata: database scheme extractor &amp; code generator in Go</title>
       <link>http://h12.io/project/schemata/</link>
       <pubDate>Tue, 19 May 2015 18:00:00 +0800</pubDate>
-      
       <guid>http://h12.io/project/schemata/</guid>
-      <description>Database scheme extractor &amp;amp; code generator in Go. Supported database:
- MySQL SQLite  </description>
+      <description>&lt;p&gt;Database scheme extractor &amp;amp; code generator in Go. Supported database:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;MySQL&lt;/li&gt;
+&lt;li&gt;SQLite&lt;/li&gt;
+&lt;/ol&gt;</description>
     </item>
-    
   </channel>
 </rss>

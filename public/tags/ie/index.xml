@@ -1,26 +1,24 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
-    <title>Ie on Hai-Liang &#34;Hal&#34; Wang</title>
+    <title>IE on @h12</title>
     <link>http://h12.io/tags/ie/</link>
-    <description>Recent content in Ie on Hai-Liang &#34;Hal&#34; Wang</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en-US</language>
-    <copyright>Copyright (c) 2012-2018, Hǎi-Liàng &#34;Hal&#34; Wáng; all rights reserved.</copyright>
+    <description>Recent content in IE on @h12</description>
+    <generator>Hugo -- 0.145.0</generator>
+    <language>en-us</language>
+    <copyright>2012-2025, Hǎi-Liàng &amp;ldquo;Hal&amp;rdquo; Wáng.</copyright>
     <lastBuildDate>Wed, 09 Jul 2014 05:42:42 +0000</lastBuildDate>
-    
-	<atom:link href="http://h12.io/tags/ie/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <atom:link href="http://h12.io/tags/ie/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Why My Web Font Looks Ugly on IE?</title>
       <link>http://h12.io/note/ugly-font/</link>
       <pubDate>Wed, 09 Jul 2014 05:42:42 +0000</pubDate>
-      
       <guid>http://h12.io/note/ugly-font/</guid>
-      <description>Windows needs hand-tuned hinting which is missing in many web fonts. To solve this problem, there is a tool called ttfautohint which can automatically add hinting to font files.
-There is a tutorial, and an online tool called Fontie.</description>
+      <description>&lt;p&gt;Windows needs hand-tuned hinting which is missing in many web fonts. To solve this
+problem, there is a tool called &lt;a href=&#34;http://www.freetype.org/ttfautohint/index.html&#34;&gt;ttfautohint&lt;/a&gt;
+which can automatically add hinting to font files.&lt;/p&gt;
+&lt;p&gt;There is a &lt;a href=&#34;http://pixelsvsbytes.com/blog/2013/11/how-to-create-perfect-web-fonts-in-3-steps/&#34;&gt;tutorial&lt;/a&gt;,
+and an online tool called &lt;a href=&#34;http://fontie.flowyapps.com/&#34;&gt;Fontie&lt;/a&gt;.&lt;/p&gt;</description>
     </item>
-    
   </channel>
 </rss>

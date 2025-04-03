@@ -1,27 +1,22 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
-    <title>Dag on Hai-Liang &#34;Hal&#34; Wang</title>
+    <title>DAG on @h12</title>
     <link>http://h12.io/tags/dag/</link>
-    <description>Recent content in Dag on Hai-Liang &#34;Hal&#34; Wang</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en-US</language>
-    <copyright>Copyright (c) 2012-2018, Hǎi-Liàng &#34;Hal&#34; Wáng; all rights reserved.</copyright>
+    <description>Recent content in DAG on @h12</description>
+    <generator>Hugo -- 0.145.0</generator>
+    <language>en-us</language>
+    <copyright>2012-2025, Hǎi-Liàng &amp;ldquo;Hal&amp;rdquo; Wáng.</copyright>
     <lastBuildDate>Thu, 12 May 2022 21:24:39 +0100</lastBuildDate>
-    
-	<atom:link href="http://h12.io/tags/dag/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <atom:link href="http://h12.io/tags/dag/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Less Is More: Directed Acyclic Graph</title>
       <link>http://h12.io/note/less-is-more-dag/</link>
       <pubDate>Thu, 12 May 2022 21:24:39 +0100</pubDate>
-      
       <guid>http://h12.io/note/less-is-more-dag/</guid>
-      <description>A directed acyclic graph or DAG is a directed graph with no directed cycles.
-An arbitrary directed graph may also be transformed into a DAG, called its condensation, by contracting each of its strongly connected components into a single super vertex.
-Go&amp;rsquo;s import declaration declares a dependency relation between the importing and imported package. It is illegal for a package to import itself, directly or indirectly, or to directly import a package without referring to any of its exported identifiers.</description>
+      <description>&lt;p&gt;A directed acyclic graph or &lt;a href=&#34;https://en.wikipedia.org/wiki/Directed_acyclic_graph&#34;&gt;DAG&lt;/a&gt; is a directed graph with no directed cycles.&lt;/p&gt;
+&lt;p&gt;An arbitrary directed graph may also be transformed into a DAG, called its &lt;a href=&#34;https://en.wikipedia.org/wiki/Strongly_connected_component#Definitions&#34;&gt;condensation&lt;/a&gt;, by contracting each of its strongly connected components into a single super vertex.&lt;/p&gt;
+&lt;p&gt;Go&amp;rsquo;s &lt;a href=&#34;https://go.dev/ref/spec#Import_declarations&#34;&gt;import declaration&lt;/a&gt; declares a dependency relation between the importing and imported package. It is illegal for a package to import itself, directly or indirectly, or to directly import a package without referring to any of its exported identifiers.&lt;/p&gt;</description>
     </item>
-    
   </channel>
 </rss>

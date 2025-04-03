@@ -1,28 +1,49 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
-    <title>Linter on Hai-Liang &#34;Hal&#34; Wang</title>
+    <title>Linter on @h12</title>
     <link>http://h12.io/tags/linter/</link>
-    <description>Recent content in Linter on Hai-Liang &#34;Hal&#34; Wang</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en-US</language>
-    <copyright>Copyright (c) 2012-2018, Hǎi-Liàng &#34;Hal&#34; Wáng; all rights reserved.</copyright>
+    <description>Recent content in Linter on @h12</description>
+    <generator>Hugo -- 0.145.0</generator>
+    <language>en-us</language>
+    <copyright>2012-2025, Hǎi-Liàng &amp;ldquo;Hal&amp;rdquo; Wáng.</copyright>
     <lastBuildDate>Thu, 05 Jun 2014 23:00:00 +0800</lastBuildDate>
-    
-	<atom:link href="http://h12.io/tags/linter/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <atom:link href="http://h12.io/tags/linter/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>gosweep: A shell script to do various checks on Go code</title>
       <link>http://h12.io/project/gosweep/</link>
       <pubDate>Thu, 05 Jun 2014 23:00:00 +0800</pubDate>
-      
       <guid>http://h12.io/project/gosweep/</guid>
-      <description>This script performs the build, test and automatic checking of a Go package and its sub-packages using:
- gofmt goimports golint go vet ineffassign race detector test coverage on package and its sub-packages, /vendor directories excluded goveralls gocyclo misspell  Migrated from my Gist.
-Dependencies To setup all the dependencies need to run the script do:
-$ go get -v github.com/client9/misspell/cmd/misspell $ go get -v github.com/fzipp/gocyclo $ go get -v github.</description>
+      <description>&lt;p&gt;This script performs the build, test and automatic checking of a Go package and its sub-packages using:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;a href=&#34;http://golang.org/cmd/gofmt/&#34; title=&#34;gofmt&#34;&gt;gofmt&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://godoc.org/golang.org/x/tools/cmd/goimports&#34; title=&#34;golang.org/x/tools/cmd/goimports&#34;&gt;goimports&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/golang/lint&#34; title=&#34;golang/lint&#34;&gt;golint&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://golang.org/cmd/vet&#34; title=&#34;go vet&#34;&gt;go vet&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/gordonklaus/ineffassign&#34; title=&#34;ineffassign&#34;&gt;ineffassign&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://blog.golang.org/race-detector&#34; title=&#34;race detector&#34;&gt;race detector&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://blog.golang.org/cover&#34; title=&#34;test coverage&#34;&gt;test coverage&lt;/a&gt; on package and its sub-packages, &lt;code&gt;/vendor&lt;/code&gt; directories excluded&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/mattn/goveralls&#34; title=&#34;mattn/goveralls&#34;&gt;goveralls&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/fzipp/gocyclo&#34; title=&#34;gocyclo&#34;&gt;gocyclo&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/client9/misspell&#34; title=&#34;misspell&#34;&gt;misspell&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Migrated from my &lt;a href=&#34;https://gist.github.com/h12w/0f22736320abe6be71ce&#34;&gt;Gist&lt;/a&gt;.&lt;/p&gt;
+&lt;h2 id=&#34;dependencies&#34;&gt;Dependencies&lt;/h2&gt;
+&lt;p&gt;To setup all the dependencies need to run the script do:&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;$ go get -v github.com/client9/misspell/cmd/misspell
+$ go get -v github.com/fzipp/gocyclo
+$ go get -v github.com/golang/lint/golint
+$ go get -v github.com/gordonklaus/ineffassign
+$ go get -v github.com/h12w/gosweep
+$ go get -v github.com/mattn/goveralls
+$ go get -v golang.org/x/tools/cmd/goimports
+&lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&#34;environment-variables&#34;&gt;Environment variables&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;GOCYCLO_COMPLEXITY&lt;/strong&gt;: maximum allowed function complexity threshold (default: &lt;code&gt;5&lt;/code&gt;).&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;MISSPELL_LOCALE&lt;/strong&gt;: English locale (default: &lt;code&gt;US&lt;/code&gt;).&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;If you wish to set this for a project you can create a &lt;code&gt;.gosweep&lt;/code&gt; file.
+For example:&lt;/p&gt;</description>
     </item>
-    
   </channel>
 </rss>
