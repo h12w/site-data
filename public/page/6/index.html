@@ -153,6 +153,11 @@
                 </a>
             </li>
             <li>
+                <a href="http://h12.io/qai/" title="Q&amp;AI">
+                    <span><i class="fas fa-circle-question"></i> Q&amp;AI</span>
+                </a>
+            </li>
+            <li>
                 <a href="http://h12.io/note/" title="Notes">
                     <span><i class="fas fa-sticky-note"></i> Notes</span>
                 </a>
@@ -166,6 +171,21 @@
     </nav>
 </header>
 <main class="main"> 
+
+<article class="post-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">Go 1.4.1 Build Failure and Solution
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>Today I tried to build Go 1.4.1 from source but it failed with this error:
+go/src/liblink/anames9.c:6:29: fatal error: ../cmd/9l/9.out.h: No such file or directory At first I thought the building routine might have be changed so I opened and read Installing Go from Source again, carefully, and found nothing special.
+Then I searched for the error source and it turned out that I should deleted anames*.c, manually. There is no document and no automatic cleaning script, and you would have to figure it out yourself if no one ever mentioned it (source).
+...</p>
+  </div>
+  <footer class="entry-footer"><span title='2015-01-29 03:55:08 +0000 UTC'>January 29, 2015</span></footer>
+  <a class="entry-link" aria-label="post link to Go 1.4.1 Build Failure and Solution" href="http://h12.io/note/go-build-failure/"></a>
+</article>
 
 <article class="post-entry"> 
   <header class="entry-header">
@@ -288,19 +308,6 @@ func redirect301(w http.ResponseWriter, url string) { w.Header().Set(&#34;Locati
   </div>
   <footer class="entry-footer"><span title='2014-07-24 03:42:01 +0000 UTC'>July 24, 2014</span></footer>
   <a class="entry-link" aria-label="post link to How to Achieve a Perfect PageSpeed Insights Score" href="http://h12.io/article/pagespeed-insights/"></a>
-</article>
-
-<article class="post-entry"> 
-  <header class="entry-header">
-    <h2 class="entry-hint-parent">An Overview of Continuous Integration Services
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p>After reviewing many continuous integration services below, there is no doubt that Wercker is the winner. The Wercker Box (virtual container) is based on Ubuntu and any packages can be easily installed with “apt-get”. This flexibility basically allows running any test suites and deploying to any cloud platforms. Furthermore, a Wercker Box can inherit from another box and can be stored and published in Wercker directories as the starting point for any projects, increasing the performance significantly.
-...</p>
-  </div>
-  <footer class="entry-footer"><span title='2014-07-17 14:54:26 +0000 UTC'>July 17, 2014</span></footer>
-  <a class="entry-link" aria-label="post link to An Overview of Continuous Integration Services" href="http://h12.io/note/ci-overview/"></a>
 </article>
 <footer class="page-footer">
   <nav class="pagination">
