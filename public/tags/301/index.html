@@ -10,7 +10,7 @@
 <meta name="description" content="">
 <meta name="author" content="Hǎi-Liàng &#34;Hal&#34; Wáng">
 <link rel="canonical" href="http://h12.io/tags/301/">
-<link crossorigin="anonymous" href="/assets/css/stylesheet.ce070fd93767a8b63ae3f5af1b6969cdffdcbb67b13dabab1ad1e4d21bbfdf55.css" integrity="sha256-zgcP2TdnqLY64/WvG2lpzf/cu2exPaurGtHk0hu/31U=" rel="preload stylesheet" as="style">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.e79680cc8f2e2a0d9f078e6e22c427fd586eec7270ad113adecb066443cb0b97.css" integrity="sha256-55aAzI8uKg2fB45uIsQn/Vhu7HJwrRE63ssGZEPLC5c=" rel="preload stylesheet" as="style">
 <link rel="icon" href="http://h12.io/favicon.ico">
 <link rel="icon" type="image/png" sizes="16x16" href="http://h12.io/favicon-16x16.png">
 <link rel="icon" type="image/png" sizes="32x32" href="http://h12.io/favicon-32x32.png">
@@ -57,54 +57,26 @@
 
     </style>
 </noscript>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=PT+Sans+Narrow&family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/fontawesome.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/regular.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/brands.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
 
 
 
 
-<link id="syntax-mode" rel="stylesheet" href="/css/syntax-light.css">
 
-<script>
-    function isDarkMode() {
-        const mode = localStorage.getItem("pref-theme");
-        return (mode && mode === "dark") ||
-            document.body.className.includes("dark") ||
-            false;
-    }
 
-    function syncSyntaxMode() {
-        document.getElementById("syntax-mode").href = isDarkMode() ? "/css/syntax-dark.css" : "/css/syntax-light.css";
-    }
 
-    document.addEventListener("DOMContentLoaded", () => {
-        syncSyntaxMode();
-        const toggleButton = document.getElementById("theme-toggle");
-        if (!toggleButton) {
-            console.log("No toggle button found");
-            return;
-        }
-        toggleButton.addEventListener("click", syncSyntaxMode);
-    });
-</script>
 
-<script>
-  MathJax = {
-    tex: {
-      inlineMath: [['$', '$'], ['\\(', '\\)']],
-      displayMath: [['$$','$$'], ['\\[', '\\]']],
-      processEscapes: true,
-      processEnvironments: true
-    },
-    options: {
-      enableMenu: false,
-      skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre']
-    }
-  };
-</script>
-<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=PT+Sans+Narrow:wght@400;700&family=PT+Serif:wght@400&display=swap">
+
+
 <meta property="og:url" content="http://h12.io/tags/301/">
   <meta property="og:site_name" content="@h12">
   <meta property="og:title" content="301">
@@ -181,6 +153,10 @@
 </header>
 <main class="main"> 
 <header class="page-header">
+ 
+
+
+
   <h1>
     301
   </h1>
@@ -206,7 +182,8 @@ func redirect301(w http.ResponseWriter, url string) { w.Header().Set(&#34;Locati
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
         <path d="M12 6H0l6-6z" />
     </svg>
-</a><footer class="footer">
+</a>
+<footer class="footer">
         <p>&copy; 2012-2025, <span class="my-name">Hǎi-Liàng "Hal" Wáng</span>.</p>
         <p xmlns:cc="http://creativecommons.org/ns#" xmlns:dct="http://purl.org/dc/terms/"><span property="dct:title">The content of this page</span> is licensed under <a href="https://creativecommons.org/licenses/by/4.0/?ref=chooser-v1" target="_blank" rel="license noopener noreferrer" style="display:inline-flex;align-items:center;">CC BY 4.0<img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/cc.svg?ref=chooser-v1" alt=""><img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/by.svg?ref=chooser-v1" alt=""></a></p>
     </footer>
