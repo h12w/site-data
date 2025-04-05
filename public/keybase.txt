@@ -1,0 +1,56 @@
+==================================================================
+https://keybase.io/h12
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of https://h12.io
+  * I am h12 (https://keybase.io/h12) on keybase.
+  * I have a public key ASAk36t8r7J_CMh-pz7tnId5tDHlYJZRwJ7sFREszZRXrAo
+
+To do so, I am signing this object:
+
+{
+  "body": {
+    "key": {
+      "eldest_kid": "01201c3455658f8820247ef2f6398a4fcd5a3f851146c2be92f63d28bc8f5ed9f92b0a",
+      "host": "keybase.io",
+      "kid": "012024dfab7cafb27f08c87ea73eed9c8779b431e5609651c09eec15112ccd9457ac0a",
+      "uid": "b5529fbc65bf00ae4e0c7e5b3ebb8619",
+      "username": "h12"
+    },
+    "merkle_root": {
+      "ctime": 1549288378,
+      "hash": "8b416722a16eaa1bc1e11aee69569dbb65e90d492b009cae78ade415802f1be302f6295a63f0bff8d93b15d9ac756ae8eb8a9947c362da4cecab9c1efccd6ab7",
+      "hash_meta": "03f3eb1e4ff6f384baa447dad5692bb2865f117977a7107cb4e44c796ffb4d86",
+      "seqno": 4693051
+    },
+    "service": {
+      "entropy": "Sp+Vkvx3CEl0lwkT4WtZIZIP",
+      "hostname": "h12.io",
+      "protocol": "https:"
+    },
+    "type": "web_service_binding",
+    "version": 2
+  },
+  "client": {
+    "name": "keybase.io go client",
+    "version": "2.13.2"
+  },
+  "ctime": 1549288420,
+  "expire_in": 504576000,
+  "prev": "b7bbffcf944a7f1fd5d7d528552611406a1ad2fb8777bf6447d9d0af879dcf72",
+  "seqno": 16,
+  "tag": "signature"
+}
+
+which yields the signature:
+
+hKRib2R5hqhkZXRhY2hlZMOpaGFzaF90eXBlCqNrZXnEIwEgJN+rfK+yfwjIfqc+7ZyHebQx5WCWUcCe7BURLM2UV6wKp3BheWxvYWTESpcCEMQgt7v/z5RKfx/V19UoVSYRQGoa0vuHd79kR9nQr4edz3LEIDbyfpo3ioVYPUUtoH2oAGmqtHry2PRUBrxn9qQ2YuJ1AgHCo3NpZ8RAyH90LqvWJ7pP1/foC2dXnnD7ORXVuRP8apG1KUCMUD1qrOkQwk/XdrJi6c77CVxy9Ntaa3Z+/a6dmuDVywnZCqhzaWdfdHlwZSCkaGFzaIKkdHlwZQildmFsdWXEICIer8ejOrh0ZuPilvEzHHKPaDsSewTNe9EfVtoerERMo3RhZ80CAqd2ZXJzaW9uAQ==
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/h12
+
+==================================================================
