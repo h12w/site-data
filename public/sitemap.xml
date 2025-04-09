@@ -11,10 +11,25 @@
     <loc>http://h12.io/</loc>
     <lastmod>2025-04-05T11:48:19+01:00</lastmod>
   </url><url>
+    <loc>http://h12.io/tags/dark-mode/</loc>
+    <lastmod>2025-04-05T11:48:19+01:00</lastmod>
+  </url><url>
+    <loc>http://h12.io/tags/grok3/</loc>
+    <lastmod>2025-04-05T11:48:19+01:00</lastmod>
+  </url><url>
+    <loc>http://h12.io/tags/hugo/</loc>
+    <lastmod>2025-04-05T11:48:19+01:00</lastmod>
+  </url><url>
+    <loc>http://h12.io/tags/papermod/</loc>
+    <lastmod>2025-04-05T11:48:19+01:00</lastmod>
+  </url><url>
     <loc>http://h12.io/qai/</loc>
     <lastmod>2025-04-05T11:48:19+01:00</lastmod>
   </url><url>
     <loc>http://h12.io/qai/site_overhaul/</loc>
+    <lastmod>2025-04-05T11:48:19+01:00</lastmod>
+  </url><url>
+    <loc>http://h12.io/tags/</loc>
     <lastmod>2025-04-05T11:48:19+01:00</lastmod>
   </url><url>
     <loc>http://h12.io/article/</loc>
@@ -33,9 +48,6 @@
     <lastmod>2023-04-22T17:50:04+01:00</lastmod>
   </url><url>
     <loc>http://h12.io/tags/runner/</loc>
-    <lastmod>2023-04-22T17:50:04+01:00</lastmod>
-  </url><url>
-    <loc>http://h12.io/tags/</loc>
     <lastmod>2023-04-22T17:50:04+01:00</lastmod>
   </url><url>
     <loc>http://h12.io/tags/dag/</loc>

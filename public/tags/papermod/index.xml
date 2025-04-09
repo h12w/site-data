@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>PaperMod on @h12</title>
+    <link>http://h12.io/tags/papermod/</link>
+    <description>Recent content in PaperMod on @h12</description>
+    <generator>Hugo -- 0.145.0</generator>
+    <language>en-us</language>
+    <copyright>2012-2025, Hǎi-Liàng &amp;ldquo;Hal&amp;rdquo; Wáng.</copyright>
+    <lastBuildDate>Sat, 05 Apr 2025 11:48:19 +0100</lastBuildDate>
+    <atom:link href="http://h12.io/tags/papermod/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Site Overhaul in 2025</title>
+      <link>http://h12.io/qai/site_overhaul/</link>
+      <pubDate>Sat, 05 Apr 2025 11:48:19 +0100</pubDate>
+      <guid>http://h12.io/qai/site_overhaul/</guid>
+      <description>&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;Me&lt;/strong&gt;:&lt;/p&gt;
+&lt;p&gt;I have a personal tech blog that&amp;rsquo;s been using some old tools to build. Now I&amp;rsquo;d like to upgrade it to the state of the art, and ideally a better theme that supports dark/light theme switching. Currently, I&amp;rsquo;m using Hugo: v0.53 and the Susy CSS framework. Please advise.&lt;/p&gt;&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;Grok3&lt;/strong&gt;:&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Key Points&lt;/em&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;It seems likely that upgrading Hugo to version 0.145.0 is a good choice, as it’s actively maintained and popular for tech blogs.&lt;/li&gt;
+&lt;li&gt;Research suggests replacing the Susy CSS framework (which is deprecated) with Tailwind CSS, a modern framework supporting dark/light themes.&lt;/li&gt;
+&lt;li&gt;The evidence leans toward using Hugo themes like “Hugo Theme Tailwind” or “TailBliss,” which support dark/light switching and fit your needs.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&amp;hellip;&amp;hellip;&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>
